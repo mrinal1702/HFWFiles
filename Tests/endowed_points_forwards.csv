@@ -1,0 +1,10 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points
+93447,Robert Lewandowski,8634,Barcelona,3,66.0,6,2,18.0
+521148,Jacob Murphy,10261,Newcastle United,3,26.0,0,1,-2.5
+696679,Raphinha,8634,Barcelona,3,90.0,7,2,21.0
+760359,Harvey Barnes,10261,Newcastle United,3,90.0,2,7,6.0
+881771,Ferran Torres,8634,Barcelona,3,24.0,1,0,0.5
+906937,Anthony Gordon,10261,Newcastle United,3,81.0,2,7,6.0
+1050166,Anthony Elanga,10261,Newcastle United,3,64.0,2,6,6.0
+1258092,William Osula,10261,Newcastle United,3,9.0,0,0,-2.5
+1467236,Lamine Yamal,8634,Barcelona,3,90.0,7,2,21.0

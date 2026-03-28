@@ -1,0 +1,10 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points
+535936,Joelinton,10261,Newcastle United,2,64.0,2,6,-3.0
+614834,Dani Olmo,8634,Barcelona,2,24.0,1,0,4.5
+860975,Joseph Willock,10261,Newcastle United,2,35.0,0,3,-3.5
+867414,Sandro Tonali,10261,Newcastle United,2,55.0,2,4,1.0
+1021929,Jacob Ramsey,10261,Newcastle United,2,90.0,2,7,-5.0
+1083323,Pedri,8634,Barcelona,2,90.0,7,2,15.0
+1404415,Fermín López,8634,Barcelona,2,66.0,6,2,13.0
+1573126,Marc Bernal,8634,Barcelona,2,90.0,7,2,15.0
+1815149,Xavi Espart,8634,Barcelona,2,24.0,1,0,4.5

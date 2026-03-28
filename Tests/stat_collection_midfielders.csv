@@ -1,0 +1,17 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,minutes_played,goals,assists,accurate_passes,inaccurate_passes,chances_created,shots_on_target,shots_off_target,dispossessed,tackles,last_man_tackle,clearance_off_the_line,tackles_lost,blocks,clearances,headed_clearance,clearances_total,interceptions,recoveries,dribbled_past,ground_duels_won,ground_duels_lost,aerial_duels_won,aerial_duels_lost,was_fouled,fouls_committed,duels_won,errors_led_to_goal,caught_offside,crosses_completed,crosses_attempted,long_balls_completed,long_balls_attempted,missed_penalty,own_goals,woodwork,dribbles_successful,dribbles_attempted,dribbles_failed,red_cards
+208494,Casemiro,10260,Manchester United,2,90.0,1.0,0.0,52.0,11.0,3.0,1.0,1.0,0.0,3.0,0,0,4.0,1.0,1.0,1.0,2,1.0,8.0,2.0,4.0,4.0,6.0,5.0,,3.0,10.0,0,0,0,1,3,6,0,0,0,1,1,0,0
+422685,Bruno Fernandes,10260,Manchester United,2,90.0,0.0,1.0,66.0,9.0,4.0,0.0,1.0,1.0,0.0,0,0,3.0,0.0,1.0,,1,2.0,6.0,2.0,2.0,3.0,1.0,0.0,2.0,0.0,3.0,0,0,1,1,8,11,0,0,1,0,0,0,0
+750032,Mason Mount,10260,Manchester United,2,,,,,,,,,,,0,0,,,,,0,,,,,,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+751550,Diogo Dalot,10260,Manchester United,2,68.0,0.0,0.0,21.0,3.0,0.0,,,0.0,1.0,0,0,3.0,0.0,3.0,2.0,5,2.0,4.0,0.0,2.0,3.0,1.0,2.0,1.0,1.0,3.0,0,0,0,2,0,1,0,0,0,0,2,2,0
+775539,Noussair Mazraoui,10260,Manchester United,2,13.0,0.0,0.0,10.0,1.0,0.0,,,0.0,0.0,0,0,1.0,0.0,0.0,,0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,,0.0,1.0,0,0,0,0,1,2,0,0,0,1,2,1,0
+775614,Ryan Yates,10203,Nottingham Forest,2,76.0,0.0,1.0,32.0,5.0,1.0,,,0.0,1.0,0,0,2.0,0.0,0.0,,0,1.0,4.0,0.0,2.0,2.0,0.0,2.0,1.0,2.0,2.0,0,0,1,1,1,2,0,0,0,0,0,0,0
+787350,Douglas Luiz,10203,Nottingham Forest,2,14.0,0.0,0.0,7.0,1.0,1.0,,,0.0,0.0,0,0,1.0,0.0,0.0,,0,0.0,2.0,0.0,0.0,1.0,0.0,0.0,,0.0,,0,0,1,2,1,2,0,0,0,0,1,1,0
+789502,Morgan Gibbs-White,10203,Nottingham Forest,2,90.0,1.0,0.0,23.0,12.0,2.0,1.0,0.0,0.0,0.0,0,0,0.0,0.0,0.0,,0,1.0,3.0,0.0,1.0,0.0,4.0,4.0,,0.0,5.0,0,0,0,1,0,0,0,0,0,1,1,0,0
+795371,Ibrahim Sangaré,10203,Nottingham Forest,2,1.0,0.0,0.0,0.0,0.0,0.0,,,0.0,0.0,0,0,1.0,0.0,0.0,,0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,,0.0,,0,0,0,0,0,0,0,0,0,0,0,0,0
+863098,Matheus Cunha,10260,Manchester United,2,90.0,0.0,0.0,33.0,3.0,4.0,1.0,0.0,2.0,1.0,0,0,5.0,0.0,4.0,2.0,6,1.0,7.0,0.0,9.0,5.0,2.0,1.0,5.0,1.0,11.0,0,0,0,0,4,4,0,0,0,3,5,2,0
+1035614,Manuel Ugarte,10260,Manchester United,2,,,,,,,,,,,0,0,,,,,0,,,,,,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+1070052,Amad,10260,Manchester United,2,90.0,1.0,0.0,36.0,8.0,1.0,3.0,1.0,2.0,1.0,0,0,5.0,1.0,2.0,2.0,4,0.0,6.0,1.0,2.0,5.0,2.0,2.0,1.0,0.0,4.0,0,1,2,2,2,3,0,0,0,0,2,2,0
+1089691,Elliot Anderson,10203,Nottingham Forest,2,90.0,0.0,0.0,47.0,16.0,3.0,0.0,1.0,1.0,1.0,0,0,4.0,0.0,0.0,,0,1.0,14.0,1.0,6.0,4.0,1.0,3.0,3.0,2.0,7.0,0,0,2,7,5,10,0,0,0,2,2,0,0
+1107648,James McAtee,10203,Nottingham Forest,2,,,,,,,,,,,0,0,,,,,0,,,,,,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+1292810,Kobbie Mainoo,10260,Manchester United,2,,,,,,,,,,,0,0,,,,,0,,,,,,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+1526560,Patrick Dorgu,10260,Manchester United,2,22.0,0.0,0.0,6.0,1.0,0.0,1.0,1.0,0.0,0.0,0,0,1.0,0.0,0.0,,0,0.0,3.0,0.0,0.0,1.0,0.0,1.0,,0.0,,0,0,0,1,0,0,0,0,0,0,1,1,0

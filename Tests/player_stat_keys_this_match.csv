@@ -1,0 +1,75 @@
+stat_key,stat_label,section_key,section_title
+Offsides,Offsides,attack,Attack
+accurate_crosses,Accurate crosses,attack,Attack
+big_chance_missed_title,Big chances missed,attack,Attack
+corners,Corners,attack,Attack
+dispossessed,Dispossessed,attack,Attack
+dribbles_succeeded,Successful dribbles,attack,Attack
+expected_goals_non_penalty,xG Non-penalty,attack,Attack
+long_balls_accurate,Accurate long balls,attack,Attack
+passes_into_final_third,Passes into final third,attack,Attack
+touches,Touches,attack,Attack
+touches_opp_box,Touches in opposition box,attack,Attack
+clearances,Clearances,defense,Defense
+defensive_actions,Defensive actions,defense,Defense
+dribbled_past,Dribbled past,defense,Defense
+headed_clearance,Headed clearance,defense,Defense
+interceptions,Interceptions,defense,Defense
+matchstats.headers.tackles,Tackles,defense,Defense
+recoveries,Recoveries,defense,Defense
+shot_blocks,Blocks,defense,Defense
+aerials_won,Aerial duels won,duels,Duels
+duel_lost,Duels lost,duels,Duels
+duel_won,Duels won,duels,Duels
+fouls,Fouls committed,duels,Duels
+ground_duels_won,Ground duels won,duels,Duels
+was_fouled,Was fouled,duels,Duels
+physical_metrics_distance_covered,Distance covered,physical_metrics,Physical metrics
+physical_metrics_number_of_sprints,Number of sprints,physical_metrics,Physical metrics
+physical_metrics_running,Running,physical_metrics,Physical metrics
+physical_metrics_sprinting,Sprinting,physical_metrics,Physical metrics
+physical_metrics_topspeed,Top speed,physical_metrics,Physical metrics
+physical_metrics_walking,Walking,physical_metrics,Physical metrics
+ShotsOffTarget,Shots off target,top_stats,Top stats
+ShotsOnTarget,Shots on target,top_stats,Top stats
+accurate_passes,Accurate passes,top_stats,Top stats
+assists,Assists,top_stats,Top stats
+big_chance_created_team_title,Big chances created,top_stats,Top stats
+blocked_shots,Blocked shots,top_stats,Top stats
+chances_created,Chances created,top_stats,Top stats
+clearances,Clearances,top_stats,Top stats
+conceded_penalties,Conceded penalty,top_stats,Top stats
+defensive_actions,Defensive actions,top_stats,Top stats
+duel_won,Duels won,top_stats,Top stats
+errors_led_to_goal,Error led to goal,top_stats,Top stats
+expected_assists,Expected assists (xA),top_stats,Top stats
+expected_goals,Expected goals (xG),top_stats,Top stats
+expected_goals_on_target_faced,xGOT faced,top_stats,Top stats
+expected_goals_on_target_variant,Expected goals on target (xGOT),top_stats,Top stats
+fouls,Fouls committed,top_stats,Top stats
+goals,Goals,top_stats,Top stats
+goals_conceded,Goals conceded,top_stats,Top stats
+goals_prevented,Goals prevented,top_stats,Top stats
+ground_duels_won,Ground duels won,top_stats,Top stats
+interceptions,Interceptions,top_stats,Top stats
+keeper_diving_save,Diving save,top_stats,Top stats
+keeper_high_claim,High claim,top_stats,Top stats
+keeper_sweeper,Acted as sweeper,top_stats,Top stats
+long_balls_accurate,Accurate long balls,top_stats,Top stats
+matchstats.headers.tackles,Tackles,top_stats,Top stats
+minutes_played,Minutes played,top_stats,Top stats
+passes_into_final_third,Passes into final third,top_stats,Top stats
+penalties_won,Penalties won,top_stats,Top stats
+physical_metrics_distance_covered,Distance covered,top_stats,Top stats
+physical_metrics_topspeed,Top speed,top_stats,Top stats
+player_throws,Throws,top_stats,Top stats
+punches,Punches,top_stats,Top stats
+rating_title,FotMob rating,top_stats,Top stats
+recoveries,Recoveries,top_stats,Top stats
+saves,Saves,top_stats,Top stats
+saves_inside_box,Saves inside box,top_stats,Top stats
+shot_accuracy,Shot accuracy,top_stats,Top stats
+touches,Touches,top_stats,Top stats
+was_fouled,Was fouled,top_stats,Top stats
+xg_and_xa,xG + xA,top_stats,Top stats
+,Shotmap,top_stats,Top stats

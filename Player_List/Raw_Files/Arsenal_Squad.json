@@ -1,0 +1,169 @@
+{
+  "team_name": "Arsenal",
+  "team_id": 9825,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/9825/squad/arsenal",
+  "players": [
+    {
+      "player_id": 24011,
+      "player_name": "Mikel Arteta",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/24011/mikel-arteta"
+    },
+    {
+      "player_id": 266520,
+      "player_name": "Christian Nørgaard",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/266520/christian-norgaard"
+    },
+    {
+      "player_id": 317564,
+      "player_name": "Kepa Arrizabalaga",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/317564/kepa-arrizabalaga"
+    },
+    {
+      "player_id": 318615,
+      "player_name": "Leandro Trossard",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/318615/leandro-trossard"
+    },
+    {
+      "player_id": 534670,
+      "player_name": "Martin Ødegaard",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/534670/martin-odegaard"
+    },
+    {
+      "player_id": 562727,
+      "player_name": "David Raya",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/562727/david-raya"
+    },
+    {
+      "player_id": 574645,
+      "player_name": "Mikel Merino",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/574645/mikel-merino"
+    },
+    {
+      "player_id": 576165,
+      "player_name": "Gabriel Jesus",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/576165/gabriel-jesus"
+    },
+    {
+      "player_id": 654096,
+      "player_name": "Declan Rice",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/654096/declan-rice"
+    },
+    {
+      "player_id": 664500,
+      "player_name": "Viktor Gyökeres",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/664500/viktor-gyokeres"
+    },
+    {
+      "player_id": 749736,
+      "player_name": "Kai Havertz",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/749736/kai-havertz"
+    },
+    {
+      "player_id": 776151,
+      "player_name": "Ben White",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/776151/ben-white"
+    },
+    {
+      "player_id": 795179,
+      "player_name": "Gabriel",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/795179/gabriel"
+    },
+    {
+      "player_id": 818975,
+      "player_name": "Eberechi Eze",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/818975/eberechi-eze"
+    },
+    {
+      "player_id": 942381,
+      "player_name": "Jurriën Timber",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/942381/jurrien-timber"
+    },
+    {
+      "player_id": 955406,
+      "player_name": "William Saliba",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/955406/william-saliba"
+    },
+    {
+      "player_id": 961995,
+      "player_name": "Bukayo Saka",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/961995/bukayo-saka"
+    },
+    {
+      "player_id": 1021586,
+      "player_name": "Gabriel Martinelli",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1021586/gabriel-martinelli"
+    },
+    {
+      "player_id": 1031325,
+      "player_name": "Martín Zubimendi",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1031325/martin-zubimendi"
+    },
+    {
+      "player_id": 1084981,
+      "player_name": "Noni Madueke",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1084981/noni-madueke"
+    },
+    {
+      "player_id": 1105912,
+      "player_name": "Riccardo Calafiori",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1105912/riccardo-calafiori"
+    },
+    {
+      "player_id": 1137667,
+      "player_name": "Piero Hincapié",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1137667/piero-hincapie"
+    },
+    {
+      "player_id": 1243239,
+      "player_name": "Tommy Setford",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1243239/tommy-setford"
+    },
+    {
+      "player_id": 1298907,
+      "player_name": "Cristhian Mosquera",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1298907/cristhian-mosquera"
+    },
+    {
+      "player_id": 1406436,
+      "player_name": "Myles Lewis-Skelly",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1406436/myles-lewis-skelly"
+    },
+    {
+      "player_id": 1635773,
+      "player_name": "Max Dowman",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1635773/max-dowman"
+    },
+    {
+      "player_id": 1787525,
+      "player_name": "Marli Salmon",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1787525/marli-salmon"
+    }
+  ]
+}

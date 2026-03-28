@@ -1,0 +1,148 @@
+period,group_title,group_key,stat_title,stat_key,home,away,format,type,highlighted
+All,Top stats,top_stats,Ball possession,BallPossesion,63,37,integer,graph,home
+All,Top stats,top_stats,Expected goals (xG),expected_goals,4.29,1.54,double,text,home
+All,Top stats,top_stats,Total shots,total_shots,18,8,integer,text,home
+All,Top stats,top_stats,Shots on target,ShotsOnTarget,13,5,integer,text,home
+All,Top stats,top_stats,Big chances,big_chance,10,2,integer,text,home
+All,Top stats,top_stats,Big chances missed,big_chance_missed_title,3,0,,text,away
+All,Top stats,top_stats,Accurate passes,accurate_passes,401 (87%),199 (74%),integerWithPercentage,text,home
+All,Top stats,top_stats,Fouls committed,fouls,9,13,integer,text,home
+All,Top stats,top_stats,Corners,corners,6,2,integer,text,home
+All,Shots,shots,Shots,shots,,,,title,equal
+All,Shots,shots,Total shots,total_shots,18,8,integer,text,home
+All,Shots,shots,Shots off target,ShotsOffTarget,2,2,integer,text,equal
+All,Shots,shots,Shots on target,ShotsOnTarget,13,5,integer,text,home
+All,Shots,shots,Blocked shots,blocked_shots,3,1,integer,text,home
+All,Shots,shots,Hit woodwork,shots_woodwork,0,0,integer,text,equal
+All,Shots,shots,Shots inside box,shots_inside_box,16,7,integer,text,home
+All,Shots,shots,Shots outside box,shots_outside_box,2,1,integer,text,home
+All,Expected goals (xG),expected_goals,Expected goals (xG),expected_goals,,,,title,equal
+All,Expected goals (xG),expected_goals,Expected goals (xG),expected_goals,4.29,1.54,double,text,home
+All,Expected goals (xG),expected_goals,xG open play,expected_goals_open_play,2.92,1.39,double,text,home
+All,Expected goals (xG),expected_goals,xG set play,expected_goals_set_play,0.58,0.15,double,text,home
+All,Expected goals (xG),expected_goals,xG non-penalty,expected_goals_non_penalty,3.50,1.54,double,text,home
+All,Expected goals (xG),expected_goals,xG on target (xGOT),expected_goals_on_target,6.78,1.30,double,text,home
+All,Physical performance,physical_metrics,Physical performance,physical_metrics,,,,title,equal
+All,Physical performance,physical_metrics,Distance covered,physical_metrics_distance_covered,107096,107315,distance,text,away
+All,Physical performance,physical_metrics,Walking distance,physical_metrics_walking,33997,33099,distance,text,home
+All,Physical performance,physical_metrics,Running distance,physical_metrics_running,70906,71744,distance,text,away
+All,Physical performance,physical_metrics,Sprinting distance,physical_metrics_sprinting,2193,2472,distance,text,away
+All,Physical performance,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,110,125,integer,text,away
+All,Passes,passes,Passes,passes,,,,title,equal
+All,Passes,passes,Passes,passes,459,269,integer,text,home
+All,Passes,passes,Accurate passes,accurate_passes,401 (87%),199 (74%),integerWithPercentage,text,home
+All,Passes,passes,Own half,own_half_passes,243,122,,text,home
+All,Passes,passes,Opposition half,opposition_half_passes,158,77,,text,home
+All,Passes,passes,Accurate long balls,long_balls_accurate,10 (36%),20 (38%),integerWithPercentage,text,away
+All,Passes,passes,Accurate crosses,accurate_crosses,5 (42%),2 (25%),integerWithPercentage,text,home
+All,Passes,passes,Throws,player_throws,20,14,integer,text,home
+All,Passes,passes,Touches in opposition box,touches_opp_box,29,18,,text,home
+All,Passes,passes,Offsides,Offsides,2,2,integer,text,equal
+All,Defence,defence,Defence,defense,,,,title,equal
+All,Defence,defence,Tackles,matchstats.headers.tackles,11,12,integer,text,away
+All,Defence,defence,Interceptions,interceptions,6,10,integer,text,away
+All,Defence,defence,Blocks,shot_blocks,1,3,integer,text,away
+All,Defence,defence,Clearances,clearances,24,15,integer,text,home
+All,Defence,defence,Keeper saves,keeper_saves,3,6,integer,text,away
+All,Duels,duels,Duels,duels,,,,title,equal
+All,Duels,duels,Duels won,duel_won,44,33,integer,text,home
+All,Duels,duels,Ground duels won,ground_duels_won,30 (57%),23 (43%),integerWithPercentage,text,home
+All,Duels,duels,Aerial duels won,aerials_won,14 (58%),10 (42%),integerWithPercentage,text,home
+All,Duels,duels,Successful dribbles,dribbles_succeeded,6 (50%),3 (38%),integerWithPercentage,text,home
+All,Discipline,discipline,Discipline,discipline,,,,title,equal
+All,Discipline,discipline,Yellow cards,yellow_cards,1,3,integer,text,away
+All,Discipline,discipline,Red cards,red_cards,0,0,integer,text,equal
+FirstHalf,Top stats,top_stats,Ball possession,BallPossesion,56,44,integer,graph,home
+FirstHalf,Top stats,top_stats,Expected goals (xG),expected_goals,1.89,1.36,double,text,home
+FirstHalf,Top stats,top_stats,Total shots,total_shots,9,4,integer,text,home
+FirstHalf,Top stats,top_stats,Shots on target,ShotsOnTarget,5,3,integer,text,home
+FirstHalf,Top stats,top_stats,Big chances,big_chance,5,2,integer,text,home
+FirstHalf,Top stats,top_stats,Big chances missed,big_chance_missed_title,2,0,,text,away
+FirstHalf,Top stats,top_stats,Accurate passes,accurate_passes,161 (81%),112 (71%),integerWithPercentage,text,home
+FirstHalf,Top stats,top_stats,Fouls committed,fouls,7,9,integer,text,home
+FirstHalf,Top stats,top_stats,Corners,corners,5,1,integer,text,home
+FirstHalf,Shots,shots,Shots,shots,,,,title,equal
+FirstHalf,Shots,shots,Total shots,total_shots,9,4,integer,text,home
+FirstHalf,Shots,shots,Shots off target,ShotsOffTarget,2,1,integer,text,home
+FirstHalf,Shots,shots,Shots on target,ShotsOnTarget,5,3,integer,text,home
+FirstHalf,Shots,shots,Blocked shots,blocked_shots,2,0,integer,text,home
+FirstHalf,Shots,shots,Hit woodwork,shots_woodwork,0,0,integer,text,equal
+FirstHalf,Shots,shots,Shots inside box,shots_inside_box,8,4,integer,text,home
+FirstHalf,Shots,shots,Shots outside box,shots_outside_box,1,0,integer,text,home
+FirstHalf,Expected goals (xG),expected_goals,Expected goals (xG),expected_goals,,,,title,equal
+FirstHalf,Expected goals (xG),expected_goals,Expected goals (xG),expected_goals,1.89,1.36,double,text,home
+FirstHalf,Expected goals (xG),expected_goals,xG open play,expected_goals_open_play,0.74,1.31,double,text,away
+FirstHalf,Expected goals (xG),expected_goals,xG set play,expected_goals_set_play,0.35,0.05,double,text,home
+FirstHalf,Expected goals (xG),expected_goals,xG non-penalty,expected_goals_non_penalty,1.10,1.36,double,text,away
+FirstHalf,Expected goals (xG),expected_goals,xG on target (xGOT),expected_goals_on_target,2.53,1.24,double,text,home
+FirstHalf,Passes,passes,Passes,passes,,,,title,equal
+FirstHalf,Passes,passes,Passes,passes,199,157,integer,text,home
+FirstHalf,Passes,passes,Accurate passes,accurate_passes,161 (81%),112 (71%),integerWithPercentage,text,home
+FirstHalf,Passes,passes,Own half,own_half_passes,119,64,,text,home
+FirstHalf,Passes,passes,Opposition half,opposition_half_passes,42,48,,text,away
+FirstHalf,Passes,passes,Accurate long balls,long_balls_accurate,4 (22%),12 (39%),integerWithPercentage,text,away
+FirstHalf,Passes,passes,Accurate crosses,accurate_crosses,3 (50%),1 (17%),integerWithPercentage,text,home
+FirstHalf,Passes,passes,Throws,player_throws,10,7,integer,text,home
+FirstHalf,Passes,passes,Touches in opposition box,touches_opp_box,15,14,,text,home
+FirstHalf,Passes,passes,Offsides,Offsides,0,1,integer,text,home
+FirstHalf,Defence,defence,Defence,defense,,,,title,equal
+FirstHalf,Defence,defence,Tackles,matchstats.headers.tackles,7,5,integer,text,home
+FirstHalf,Defence,defence,Interceptions,interceptions,4,8,integer,text,away
+FirstHalf,Defence,defence,Blocks,shot_blocks,0,2,integer,text,away
+FirstHalf,Defence,defence,Clearances,clearances,18,6,integer,text,home
+FirstHalf,Defence,defence,Keeper saves,keeper_saves,1,2,integer,text,away
+FirstHalf,Duels,duels,Duels,duels,,,,title,equal
+FirstHalf,Duels,duels,Duels won,duel_won,28,19,integer,text,home
+FirstHalf,Duels,duels,Ground duels won,ground_duels_won,20 (65%),11 (35%),integerWithPercentage,text,home
+FirstHalf,Duels,duels,Aerial duels won,aerials_won,8 (50%),8 (50%),integerWithPercentage,text,equal
+FirstHalf,Duels,duels,Successful dribbles,dribbles_succeeded,4 (57%),0 (0%),integerWithPercentage,text,home
+FirstHalf,Discipline,discipline,Discipline,discipline,,,,title,equal
+FirstHalf,Discipline,discipline,Yellow cards,yellow_cards,1,2,integer,text,away
+FirstHalf,Discipline,discipline,Red cards,red_cards,0,0,integer,text,equal
+SecondHalf,Top stats,top_stats,Ball possession,BallPossesion,69,31,integer,graph,home
+SecondHalf,Top stats,top_stats,Expected goals (xG),expected_goals,2.40,0.18,double,text,home
+SecondHalf,Top stats,top_stats,Total shots,total_shots,9,4,integer,text,home
+SecondHalf,Top stats,top_stats,Shots on target,ShotsOnTarget,8,2,integer,text,home
+SecondHalf,Top stats,top_stats,Big chances,big_chance,5,0,integer,text,home
+SecondHalf,Top stats,top_stats,Big chances missed,big_chance_missed_title,1,0,,text,away
+SecondHalf,Top stats,top_stats,Accurate passes,accurate_passes,240 (92%),87 (78%),integerWithPercentage,text,home
+SecondHalf,Top stats,top_stats,Fouls committed,fouls,2,4,integer,text,home
+SecondHalf,Top stats,top_stats,Corners,corners,1,1,integer,text,equal
+SecondHalf,Shots,shots,Shots,shots,,,,title,equal
+SecondHalf,Shots,shots,Total shots,total_shots,9,4,integer,text,home
+SecondHalf,Shots,shots,Shots off target,ShotsOffTarget,0,1,integer,text,away
+SecondHalf,Shots,shots,Shots on target,ShotsOnTarget,8,2,integer,text,home
+SecondHalf,Shots,shots,Blocked shots,blocked_shots,1,1,integer,text,equal
+SecondHalf,Shots,shots,Hit woodwork,shots_woodwork,0,0,integer,text,equal
+SecondHalf,Shots,shots,Shots inside box,shots_inside_box,8,3,integer,text,home
+SecondHalf,Shots,shots,Shots outside box,shots_outside_box,1,1,integer,text,equal
+SecondHalf,Expected goals (xG),expected_goals,Expected goals (xG),expected_goals,,,,title,equal
+SecondHalf,Expected goals (xG),expected_goals,Expected goals (xG),expected_goals,2.40,0.18,double,text,home
+SecondHalf,Expected goals (xG),expected_goals,xG open play,expected_goals_open_play,2.17,0.08,double,text,home
+SecondHalf,Expected goals (xG),expected_goals,xG set play,expected_goals_set_play,0.23,0.10,double,text,home
+SecondHalf,Expected goals (xG),expected_goals,xG non-penalty,expected_goals_non_penalty,2.40,0.18,double,text,home
+SecondHalf,Expected goals (xG),expected_goals,xG on target (xGOT),expected_goals_on_target,4.25,0.06,double,text,home
+SecondHalf,Passes,passes,Passes,passes,,,,title,equal
+SecondHalf,Passes,passes,Passes,passes,260,112,integer,text,home
+SecondHalf,Passes,passes,Accurate passes,accurate_passes,240 (92%),87 (78%),integerWithPercentage,text,home
+SecondHalf,Passes,passes,Own half,own_half_passes,124,58,,text,home
+SecondHalf,Passes,passes,Opposition half,opposition_half_passes,116,29,,text,home
+SecondHalf,Passes,passes,Accurate long balls,long_balls_accurate,6 (60%),8 (36%),integerWithPercentage,text,away
+SecondHalf,Passes,passes,Accurate crosses,accurate_crosses,2 (33%),1 (50%),integerWithPercentage,text,home
+SecondHalf,Passes,passes,Throws,player_throws,10,7,integer,text,home
+SecondHalf,Passes,passes,Touches in opposition box,touches_opp_box,14,4,,text,home
+SecondHalf,Passes,passes,Offsides,Offsides,2,1,integer,text,away
+SecondHalf,Defence,defence,Defence,defense,,,,title,equal
+SecondHalf,Defence,defence,Tackles,matchstats.headers.tackles,4,7,integer,text,away
+SecondHalf,Defence,defence,Interceptions,interceptions,2,2,integer,text,equal
+SecondHalf,Defence,defence,Blocks,shot_blocks,1,1,integer,text,equal
+SecondHalf,Defence,defence,Clearances,clearances,6,9,integer,text,away
+SecondHalf,Defence,defence,Keeper saves,keeper_saves,2,4,integer,text,away
+SecondHalf,Duels,duels,Duels,duels,,,,title,equal
+SecondHalf,Duels,duels,Duels won,duel_won,16,14,integer,text,home
+SecondHalf,Duels,duels,Ground duels won,ground_duels_won,10 (45%),12 (55%),integerWithPercentage,text,away
+SecondHalf,Duels,duels,Aerial duels won,aerials_won,6 (75%),2 (25%),integerWithPercentage,text,home
+SecondHalf,Duels,duels,Successful dribbles,dribbles_succeeded,2 (40%),3 (50%),integerWithPercentage,text,away
+SecondHalf,Discipline,discipline,Discipline,discipline,,,,title,equal
+SecondHalf,Discipline,discipline,Yellow cards,yellow_cards,0,1,integer,text,away
+SecondHalf,Discipline,discipline,Red cards,red_cards,0,0,integer,text,equal

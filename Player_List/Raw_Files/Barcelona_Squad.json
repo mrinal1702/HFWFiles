@@ -1,0 +1,181 @@
+{
+  "team_name": "Barcelona",
+  "team_id": 8634,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8634/squad/barcelona",
+  "players": [
+    {
+      "player_id": 93447,
+      "player_name": "Robert Lewandowski",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/93447/robert-lewandowski"
+    },
+    {
+      "player_id": 131509,
+      "player_name": "Hans-Dieter Flick",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/131509/hans-dieter-flick"
+    },
+    {
+      "player_id": 169718,
+      "player_name": "Wojciech Szczesny",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/169718/wojciech-szczesny"
+    },
+    {
+      "player_id": 361757,
+      "player_name": "João Cancelo",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/361757/joao-cancelo"
+    },
+    {
+      "player_id": 449232,
+      "player_name": "Andreas Christensen",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/449232/andreas-christensen"
+    },
+    {
+      "player_id": 614834,
+      "player_name": "Dani Olmo",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/614834/dani-olmo"
+    },
+    {
+      "player_id": 638622,
+      "player_name": "Frenkie de Jong",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/638622/frenkie-de-jong"
+    },
+    {
+      "player_id": 696365,
+      "player_name": "Marcus Rashford",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/696365/marcus-rashford"
+    },
+    {
+      "player_id": 696679,
+      "player_name": "Raphinha",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/696679/raphinha"
+    },
+    {
+      "player_id": 705450,
+      "player_name": "Jules Koundé",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/705450/jules-kounde"
+    },
+    {
+      "player_id": 881771,
+      "player_name": "Ferran Torres",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/881771/ferran-torres"
+    },
+    {
+      "player_id": 921253,
+      "player_name": "Ronald Araujo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/921253/ronald-araujo"
+    },
+    {
+      "player_id": 940573,
+      "player_name": "Eric García",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/940573/eric-garcia"
+    },
+    {
+      "player_id": 1083323,
+      "player_name": "Pedri",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1083323/pedri"
+    },
+    {
+      "player_id": 1167220,
+      "player_name": "Joan García",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1167220/joan-garcia"
+    },
+    {
+      "player_id": 1254166,
+      "player_name": "Alejandro Balde",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1254166/alejandro-balde"
+    },
+    {
+      "player_id": 1279040,
+      "player_name": "Gavi",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1279040/gavi"
+    },
+    {
+      "player_id": 1315475,
+      "player_name": "Roony Bardghji",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1315475/roony-bardghji"
+    },
+    {
+      "player_id": 1384883,
+      "player_name": "Marc Casadó",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1384883/marc-casado"
+    },
+    {
+      "player_id": 1404415,
+      "player_name": "Fermín López",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1404415/fermin-lopez"
+    },
+    {
+      "player_id": 1467236,
+      "player_name": "Lamine Yamal",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1467236/lamine-yamal"
+    },
+    {
+      "player_id": 1532137,
+      "player_name": "Pau Cubarsí",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1532137/pau-cubarsi"
+    },
+    {
+      "player_id": 1573126,
+      "player_name": "Marc Bernal",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1573126/marc-bernal"
+    },
+    {
+      "player_id": 1598982,
+      "player_name": "Gerard Martín",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1598982/gerard-martin"
+    },
+    {
+      "player_id": 1665438,
+      "player_name": "Toni Fernández",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1665438/toni-fernandez"
+    },
+    {
+      "player_id": 1777474,
+      "player_name": "Tomás Marqués",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1777474/tomas-marques"
+    },
+    {
+      "player_id": 1789791,
+      "player_name": "Jofre Torrents",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1789791/jofre-torrents"
+    },
+    {
+      "player_id": 1815149,
+      "player_name": "Xavi Espart",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1815149/xavi-espart"
+    },
+    {
+      "player_id": 1818299,
+      "player_name": "Eder Aller",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1818299/eder-aller"
+    }
+  ]
+}

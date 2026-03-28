@@ -1,0 +1,12 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,minutes_played,goals,assists,accurate_passes,inaccurate_passes,chances_created,shots_on_target,shots_off_target,dispossessed,tackles,last_man_tackle,clearance_off_the_line,tackles_lost,blocks,clearances,headed_clearance,clearances_total,interceptions,recoveries,dribbled_past,ground_duels_won,ground_duels_lost,aerial_duels_won,aerial_duels_lost,was_fouled,fouls_committed,duels_won,errors_led_to_goal,caught_offside,crosses_completed,crosses_attempted,long_balls_completed,long_balls_attempted,missed_penalty,own_goals,woodwork,dribbles_successful,dribbles_attempted,dribbles_failed,red_cards
+255610,Harry Maguire,10260,Manchester United,1,,,,,,,,,,,0,0,,,,,0,,,,,,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+362694,Luke Shaw,10260,Manchester United,1,90.0,0.0,0.0,65.0,9.0,0.0,,,0.0,2.0,0,0,1.0,3.0,1.0,1.0,2,0.0,1.0,0.0,4.0,1.0,3.0,1.0,1.0,1.0,7.0,0,0,0,0,1,7,0,0,0,1,1,0,0
+766611,Nikola Milenkovic,10203,Nottingham Forest,1,90.0,0.0,0.0,30.0,7.0,0.0,0.0,2.0,0.0,0.0,0,0,,3.0,5.0,4.0,9,0.0,3.0,0.0,,,4.0,1.0,,0.0,4.0,0,0,0,0,4,7,0,0,0,0,0,0,0
+769895,Matthijs de Ligt,10260,Manchester United,1,90.0,0.0,0.0,40.0,7.0,0.0,,,0.0,1.0,0,0,0.0,0.0,5.0,3.0,8,2.0,3.0,0.0,1.0,0.0,10.0,0.0,,0.0,11.0,0,0,0,0,2,3,0,0,0,0,0,0,0
+1053838,Morato,10203,Nottingham Forest,1,,,,,,,,,,,0,0,,,,,0,,,,,,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+1078788,Neco Williams,10203,Nottingham Forest,1,90.0,0.0,0.0,22.0,2.0,0.0,0.0,0.0,0.0,4.0,0,0,1.0,0.0,3.0,3.0,6,1.0,6.0,0.0,4.0,1.0,0.0,0.0,,0.0,4.0,0,0,0,2,3,3,0,0,0,0,1,1,0
+1358581,Leny Yoro,10260,Manchester United,1,77.0,0.0,0.0,46.0,6.0,0.0,,,0.0,3.0,0,0,0.0,1.0,3.0,2.0,5,0.0,1.0,0.0,3.0,0.0,2.0,1.0,,0.0,5.0,0,0,0,0,1,2,0,0,0,0,0,0,0
+1391209,Jair Cunha,10203,Nottingham Forest,1,,,,,,,,,,,0,0,,,,,0,,,,,,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+1458711,Murillo,10203,Nottingham Forest,1,90.0,0.0,0.0,22.0,6.0,0.0,0.0,1.0,0.0,2.0,0,1,0.0,2.0,5.0,3.0,8,6.0,4.0,0.0,2.0,0.0,3.0,2.0,,0.0,5.0,0,0,0,0,0,4,0,0,0,0,0,0,0
+1559639,Ayden Heaven,10260,Manchester United,1,,,,,,,,,,,0,0,,,,,0,,,,,,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+1622290,Nicolo Savona,10203,Nottingham Forest,1,90.0,1.0,0.0,22.0,7.0,0.0,1.0,0.0,0.0,4.0,0,0,4.0,0.0,3.0,1.0,4,0.0,2.0,3.0,4.0,4.0,1.0,1.0,,1.0,5.0,0,0,0,3,0,2,0,0,0,0,0,0,0

@@ -1,0 +1,13 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,minutes_played,goals,assists,accurate_passes,inaccurate_passes,chances_created,shots_on_target,shots_off_target,dispossessed,tackles,tackles_lost,blocks,clearances,headed_clearance,interceptions,recoveries,dribbled_past,ground_duels_won,ground_duels_lost,aerial_duels_won,aerial_duels_lost,was_fouled,fouls_committed,duels_won,crosses_completed,crosses_attempted,long_balls_completed,long_balls_attempted,red_cards
+535936,Joelinton,10261,Newcastle United,2,64.0,0.0,0.0,16.0,5.0,0.0,,,0.0,3.0,4.0,0.0,0.0,,2.0,5.0,0.0,4.0,4.0,2.0,2.0,1.0,3.0,6.0,0,0,0,0,0
+614834,Dani Olmo,8634,Barcelona,2,23.0,0.0,0.0,4.0,1.0,1.0,,,1.0,0.0,2.0,0.0,0.0,,0.0,2.0,0.0,1.0,2.0,0.0,0.0,,0.0,1.0,0,0,1,2,0
+860975,Joseph Willock,10261,Newcastle United,2,35.0,0.0,0.0,9.0,1.0,1.0,,,0.0,1.0,3.0,0.0,0.0,,0.0,3.0,1.0,1.0,3.0,0.0,0.0,,2.0,1.0,0,0,1,1,0
+867414,Sandro Tonali,10261,Newcastle United,2,55.0,0.0,0.0,9.0,3.0,0.0,,,2.0,1.0,3.0,0.0,2.0,,3.0,7.0,0.0,1.0,3.0,0.0,0.0,,1.0,1.0,0,2,1,2,0
+1021929,Jacob Ramsey,10261,Newcastle United,2,90.0,0.0,0.0,29.0,4.0,0.0,0.0,0.0,0.0,3.0,0.0,0.0,0.0,,2.0,4.0,0.0,3.0,0.0,1.0,0.0,,0.0,4.0,0,0,0,0,0
+1083323,Pedri,8634,Barcelona,2,90.0,0.0,0.0,62.0,4.0,2.0,,,1.0,0.0,1.0,0.0,1.0,,0.0,4.0,0.0,3.0,1.0,0.0,1.0,3.0,0.0,3.0,0,0,0,2,0
+1279040,Gavi,8634,Barcelona,2,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0,0
+1384883,Marc Casadó,8634,Barcelona,2,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0,0
+1404415,Fermín López,8634,Barcelona,2,67.0,1.0,1.0,12.0,5.0,1.0,1.0,0.0,1.0,3.0,5.0,0.0,2.0,1.0,1.0,3.0,1.0,3.0,5.0,1.0,0.0,,2.0,4.0,0,1,0,1,0
+1573126,Marc Bernal,8634,Barcelona,2,90.0,1.0,0.0,41.0,5.0,0.0,1.0,0.0,1.0,0.0,5.0,0.0,1.0,,1.0,6.0,1.0,1.0,5.0,1.0,2.0,1.0,1.0,2.0,0,0,2,3,0
+1777474,Tomás Marqués,8634,Barcelona,2,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0,0
+1815149,Xavi Espart,8634,Barcelona,2,24.0,0.0,0.0,15.0,0.0,1.0,,,0.0,1.0,1.0,0.0,0.0,,0.0,1.0,0.0,1.0,1.0,0.0,0.0,,1.0,1.0,1,1,0,0,0

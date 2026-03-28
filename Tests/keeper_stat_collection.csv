@@ -1,0 +1,8 @@
+player_id,player_name,team_id,team_name,is_goalkeeper,minutes_played,saves,accurate_passes,inaccurate_passes,clearances,interceptions,tackles,accurate_long_balls,accurate_long_balls_attempted,punches,high_claim
+40602,John Ruddy,10261,Newcastle United,True,,0,,,0,0,0,0,0,0,0
+169718,Wojciech Szczesny,8634,Barcelona,True,8.0,1,3.0,1.0,0,0,0,0,1,0,0
+280484,Nick Pope,10261,Newcastle United,True,,0,,,0,0,0,0,0,0,0
+746395,Aaron Ramsdale,10261,Newcastle United,True,90.0,6,15.0,21.0,1,0,1,8,29,0,1
+1167220,Joan García,8634,Barcelona,True,82.0,2,24.0,3.0,1,0,0,2,5,0,0
+1529648,Diego Kochen,8634,Barcelona,True,,0,,,0,0,0,0,0,0,0
+1554633,Aidan Harris,10261,Newcastle United,True,,0,,,0,0,0,0,0,0,0

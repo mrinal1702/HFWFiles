@@ -1,0 +1,466 @@
+[
+  {
+    "player_id": 93447,
+    "player_name": "Robert Lewandowski",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Forward",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 131509,
+    "player_name": "Hans-Dieter Flick",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": null,
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 169718,
+    "player_name": "Wojciech Szczesny",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Goalkeeper",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 361757,
+    "player_name": "João Cancelo",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Defender",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 449232,
+    "player_name": "Andreas Christensen",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": null,
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 614834,
+    "player_name": "Dani Olmo",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Midfielder",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 638622,
+    "player_name": "Frenkie de Jong",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": null,
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 696365,
+    "player_name": "Marcus Rashford",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Forward",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 696679,
+    "player_name": "Raphinha",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Forward",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 705450,
+    "player_name": "Jules Koundé",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": null,
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 881771,
+    "player_name": "Ferran Torres",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Forward",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 921253,
+    "player_name": "Ronald Araujo",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Defender",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 940573,
+    "player_name": "Eric García",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Defender",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1083323,
+    "player_name": "Pedri",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Midfielder",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1167220,
+    "player_name": "Joan García",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Goalkeeper",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1254166,
+    "player_name": "Alejandro Balde",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": null,
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1279040,
+    "player_name": "Gavi",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Midfielder",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1315475,
+    "player_name": "Roony Bardghji",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Forward",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1384883,
+    "player_name": "Marc Casadó",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Midfielder",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1404415,
+    "player_name": "Fermín López",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Midfielder",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1467236,
+    "player_name": "Lamine Yamal",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Forward",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1532137,
+    "player_name": "Pau Cubarsí",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Defender",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1573126,
+    "player_name": "Marc Bernal",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Midfielder",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1598982,
+    "player_name": "Gerard Martín",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Defender",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1665438,
+    "player_name": "Toni Fernández",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": null,
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1777474,
+    "player_name": "Tomás Marqués",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Midfielder",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1789791,
+    "player_name": "Jofre Torrents",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": null,
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1815149,
+    "player_name": "Xavi Espart",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": "Midfielder",
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 1818299,
+    "player_name": "Eder Aller",
+    "club_id": 8634,
+    "club_name": "Barcelona",
+    "position": null,
+    "source_file": "Barcelona_Squad.json"
+  },
+  {
+    "player_id": 361717,
+    "player_name": "Rui Silva",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 554283,
+    "player_name": "Nuno Santos",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 732282,
+    "player_name": "Trincão",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 792303,
+    "player_name": "Luis Suárez",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 824655,
+    "player_name": "Ricardo Mangas",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 875133,
+    "player_name": "Pote",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 899701,
+    "player_name": "Fotis Ioannidis",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 915102,
+    "player_name": "Hidemasa Morita",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 950199,
+    "player_name": "Morten Hjulmand",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 953958,
+    "player_name": "Giorgi Kochorashvili",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 959247,
+    "player_name": "João Virgínia",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1014980,
+    "player_name": "Daniel Bragança",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1031656,
+    "player_name": "Maxi Araújo",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1088753,
+    "player_name": "Geny Catamo",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1107257,
+    "player_name": "Souleymane Faye",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1119687,
+    "player_name": "Georgios Vagiannidis",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1135797,
+    "player_name": "Rui Borges",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1156380,
+    "player_name": "Eduardo Quaresma",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1165710,
+    "player_name": "Gonçalo Inácio",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1232172,
+    "player_name": "Zeno Debast",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1325998,
+    "player_name": "Iván Fresneda",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1425182,
+    "player_name": "Ousmane Diomande",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1458757,
+    "player_name": "Luis Guilherme",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1525416,
+    "player_name": "Rafael Nel",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1530314,
+    "player_name": "Geovany Quenda",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1578180,
+    "player_name": "Rayan Lucas",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1663855,
+    "player_name": "João Simões",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1712326,
+    "player_name": "Salvador Blopa",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  },
+  {
+    "player_id": 1918387,
+    "player_name": "Delcio Aurelio",
+    "club_id": 9768,
+    "club_name": "Sporting CP",
+    "position": null,
+    "source_file": "Sporting_CP_Squad.json"
+  }
+]

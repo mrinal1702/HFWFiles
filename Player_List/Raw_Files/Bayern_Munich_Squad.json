@@ -1,0 +1,181 @@
+{
+  "team_name": "Bayern Munich",
+  "team_id": 9823,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/9823/squad/bayern-munchen",
+  "players": [
+    {
+      "player_id": 27299,
+      "player_name": "Manuel Neuer",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/27299/manuel-neuer"
+    },
+    {
+      "player_id": 39027,
+      "player_name": "Vincent Kompany",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/39027/vincent-kompany"
+    },
+    {
+      "player_id": 94841,
+      "player_name": "Sven Ulreich",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/94841/sven-ulreich"
+    },
+    {
+      "player_id": 194165,
+      "player_name": "Harry Kane",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/194165/harry-kane"
+    },
+    {
+      "player_id": 343748,
+      "player_name": "Leon Goretzka",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/343748/leon-goretzka"
+    },
+    {
+      "player_id": 352994,
+      "player_name": "Raphaël Guerreiro",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/352994/raphael-guerreiro"
+    },
+    {
+      "player_id": 385437,
+      "player_name": "Serge Gnabry",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/385437/serge-gnabry"
+    },
+    {
+      "player_id": 460632,
+      "player_name": "Joshua Kimmich",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/460632/joshua-kimmich"
+    },
+    {
+      "player_id": 469700,
+      "player_name": "Jonathan Tah",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/469700/jonathan-tah"
+    },
+    {
+      "player_id": 526827,
+      "player_name": "Konrad Laimer",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/526827/konrad-laimer"
+    },
+    {
+      "player_id": 658554,
+      "player_name": "Dayot Upamecano",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/658554/dayot-upamecano"
+    },
+    {
+      "player_id": 751202,
+      "player_name": "Alphonso Davies",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/751202/alphonso-davies"
+    },
+    {
+      "player_id": 828159,
+      "player_name": "Min-Jae Kim",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/828159/min-jae-kim"
+    },
+    {
+      "player_id": 851626,
+      "player_name": "Hiroki Ito",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/851626/hiroki-ito"
+    },
+    {
+      "player_id": 860914,
+      "player_name": "Luis Díaz",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/860914/luis-diaz"
+    },
+    {
+      "player_id": 950824,
+      "player_name": "Josip Stanisic",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/950824/josip-stanisic"
+    },
+    {
+      "player_id": 1029063,
+      "player_name": "Michael Olise",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1029063/michael-olise"
+    },
+    {
+      "player_id": 1156141,
+      "player_name": "Jamal Musiala",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1156141/jamal-musiala"
+    },
+    {
+      "player_id": 1197347,
+      "player_name": "Nicolas Jackson",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1197347/nicolas-jackson"
+    },
+    {
+      "player_id": 1285872,
+      "player_name": "Jonas Urbig",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1285872/jonas-urbig"
+    },
+    {
+      "player_id": 1286183,
+      "player_name": "Tom Bischof",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1286183/tom-bischof"
+    },
+    {
+      "player_id": 1473580,
+      "player_name": "Aleksandar Pavlovic",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1473580/aleksandar-pavlovic"
+    },
+    {
+      "player_id": 1664982,
+      "player_name": "Leon Klanac",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1664982/leon-klanac"
+    },
+    {
+      "player_id": 1692886,
+      "player_name": "Wisdom Mike",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1692886/wisdom-mike"
+    },
+    {
+      "player_id": 1737700,
+      "player_name": "Lennart Karl",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1737700/lennart-karl"
+    },
+    {
+      "player_id": 1771196,
+      "player_name": "Cassiano Kiala",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1771196/cassiano-kiala"
+    },
+    {
+      "player_id": 1771197,
+      "player_name": "David Santos",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1771197/david-santos"
+    },
+    {
+      "player_id": 1798782,
+      "player_name": "Bara Ndiaye",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1798782/bara-ndiaye"
+    },
+    {
+      "player_id": 1904968,
+      "player_name": "Erblin Osmani",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1904968/erblin-osmani"
+    }
+  ]
+}

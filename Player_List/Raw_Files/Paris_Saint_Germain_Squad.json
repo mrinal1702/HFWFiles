@@ -1,0 +1,187 @@
+{
+  "team_name": "Paris Saint-Germain",
+  "team_id": 9847,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/9847/squad/paris-saint-germain",
+  "players": [
+    {
+      "player_id": 11532,
+      "player_name": "Luis Enrique",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/11532/luis-enrique"
+    },
+    {
+      "player_id": 267365,
+      "player_name": "Marquinhos",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/267365/marquinhos"
+    },
+    {
+      "player_id": 504606,
+      "player_name": "Lucas Hernández",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/504606/lucas-hernandez"
+    },
+    {
+      "player_id": 605654,
+      "player_name": "Fabián Ruiz",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/605654/fabian-ruiz"
+    },
+    {
+      "player_id": 692984,
+      "player_name": "Ousmane Dembélé",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/692984/ousmane-dembele"
+    },
+    {
+      "player_id": 770881,
+      "player_name": "Achraf Hakimi",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/770881/achraf-hakimi"
+    },
+    {
+      "player_id": 800880,
+      "player_name": "Matvey Safonov",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/800880/matvey-safonov"
+    },
+    {
+      "player_id": 900433,
+      "player_name": "Khvicha Kvaratskhelia",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/900433/khvicha-kvaratskhelia"
+    },
+    {
+      "player_id": 940087,
+      "player_name": "Gonçalo Ramos",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/940087/goncalo-ramos"
+    },
+    {
+      "player_id": 940976,
+      "player_name": "Kang-In Lee",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/940976/kang-lee"
+    },
+    {
+      "player_id": 1061249,
+      "player_name": "Vitinha",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1061249/vitinha"
+    },
+    {
+      "player_id": 1137670,
+      "player_name": "Willian Pacho",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1137670/willian-pacho"
+    },
+    {
+      "player_id": 1140003,
+      "player_name": "Ilya Zabarnyi",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1140003/ilya-zabarnyi"
+    },
+    {
+      "player_id": 1158945,
+      "player_name": "Nuno Mendes",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1158945/nuno-mendes"
+    },
+    {
+      "player_id": 1177131,
+      "player_name": "Lucas Chevalier",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1177131/lucas-chevalier"
+    },
+    {
+      "player_id": 1255209,
+      "player_name": "Lucas Beraldo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1255209/lucas-beraldo"
+    },
+    {
+      "player_id": 1297165,
+      "player_name": "Bradley Barcola",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1297165/bradley-barcola"
+    },
+    {
+      "player_id": 1339208,
+      "player_name": "Désiré Doué",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1339208/desire-doue"
+    },
+    {
+      "player_id": 1342757,
+      "player_name": "João Neves",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1342757/joao-neves"
+    },
+    {
+      "player_id": 1367615,
+      "player_name": "Warren Zaïre-Emery",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1367615/warren-zaire-emery"
+    },
+    {
+      "player_id": 1404397,
+      "player_name": "Ilyes Housni",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1404397/ilyes-housni"
+    },
+    {
+      "player_id": 1574189,
+      "player_name": "Senny Mayulu",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1574189/senny-mayulu"
+    },
+    {
+      "player_id": 1593857,
+      "player_name": "Ibrahim Mbaye",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1593857/ibrahim-mbaye"
+    },
+    {
+      "player_id": 1602252,
+      "player_name": "Renato Marin",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1602252/renato-marin"
+    },
+    {
+      "player_id": 1682313,
+      "player_name": "Dro Fernández",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1682313/dro-fernandez"
+    },
+    {
+      "player_id": 1699549,
+      "player_name": "Quentin Ndjantou",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1699549/quentin-ndjantou"
+    },
+    {
+      "player_id": 1819218,
+      "player_name": "Mathis Jangéal",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1819218/mathis-jangeal"
+    },
+    {
+      "player_id": 1830671,
+      "player_name": "Martin James",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1830671/martin-james"
+    },
+    {
+      "player_id": 1830676,
+      "player_name": "Arthur Vignaud",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1830676/arthur-vignaud"
+    },
+    {
+      "player_id": 1830689,
+      "player_name": "David Boly",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1830689/david-boly"
+    }
+  ]
+}

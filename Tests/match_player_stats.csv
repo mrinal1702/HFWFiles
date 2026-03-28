@@ -1,0 +1,1236 @@
+player_id,player_name,team_id,team_name,is_goalkeeper,shirt_number,section_title,section_key,stat_label,stat_key,value,total,stat_type
+40602,John Ruddy,10261,Newcastle United,True,26,,,,,,,
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,FotMob rating,rating_title,9.07,,double
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Minutes played,minutes_played,66.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Goals,goals,2.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Assists,assists,0.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Expected goals (xG),expected_goals,0.87,,double
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Expected goals on target (xGOT),expected_goals_on_target_variant,1.7,,double
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Expected assists (xA),expected_assists,0.14,,double
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,xG + xA,xg_and_xa,1.01,,double
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Top speed,physical_metrics_topspeed,30.700000762939453,,speed
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,7510.0,,distance
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Accurate passes,accurate_passes,9.0,11.0,fractionWithPercentage
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Chances created,chances_created,3.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Big chances created,big_chance_created_team_title,1.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Shots on target,ShotsOnTarget,3.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Shots off target,ShotsOffTarget,0.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Blocked shots,blocked_shots,1.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Shot accuracy,shot_accuracy,3.0,3.0,fractionWithPercentage
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Shotmap,,1.0,,boolean
+93447,Robert Lewandowski,8634,Barcelona,False,9,Top stats,top_stats,Defensive actions,defensive_actions,1.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Attack,attack,Big chances missed,big_chance_missed_title,1.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Attack,attack,Touches,touches,29.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Attack,attack,Touches in opposition box,touches_opp_box,6.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Attack,attack,Dispossessed,dispossessed,1.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Attack,attack,xG Non-penalty,expected_goals_non_penalty,0.87,,double
+93447,Robert Lewandowski,8634,Barcelona,False,9,Defense,defense,Defensive actions,defensive_actions,1.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Defense,defense,Blocks,shot_blocks,0.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Defense,defense,Clearances,clearances,1.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Defense,defense,Headed clearance,headed_clearance,1.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Defense,defense,Interceptions,interceptions,0.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Defense,defense,Recoveries,recoveries,2.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Duels,duels,Ground duels won,ground_duels_won,4.0,5.0,fractionWithPercentage
+93447,Robert Lewandowski,8634,Barcelona,False,9,Duels,duels,Aerial duels won,aerials_won,3.0,5.0,fractionWithPercentage
+93447,Robert Lewandowski,8634,Barcelona,False,9,Duels,duels,Was fouled,was_fouled,4.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Duels,duels,Fouls committed,fouls,0.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Duels,duels,Duels won,duel_won,7.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Duels,duels,Duels lost,duel_lost,3.0,,integer
+93447,Robert Lewandowski,8634,Barcelona,False,9,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,30.700000762939453,,speed
+93447,Robert Lewandowski,8634,Barcelona,False,9,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,7510.0,,distance
+93447,Robert Lewandowski,8634,Barcelona,False,9,Physical metrics,physical_metrics,Walking,physical_metrics_walking,2372.0,7510.0,distanceWithPercentage
+93447,Robert Lewandowski,8634,Barcelona,False,9,Physical metrics,physical_metrics,Running,physical_metrics_running,4932.0,7510.0,distanceWithPercentage
+93447,Robert Lewandowski,8634,Barcelona,False,9,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,206.0,7510.0,distanceWithPercentage
+93447,Robert Lewandowski,8634,Barcelona,False,9,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,10.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Minutes played,minutes_played,8.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Saves,saves,1.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Goals conceded,goals_conceded,0.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,xGOT faced,expected_goals_on_target_faced,0.04,,double
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Goals prevented,goals_prevented,0.04,,double
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Shotmap,,1.0,,boolean
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Accurate passes,accurate_passes,3.0,4.0,fractionWithPercentage
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Accurate long balls,long_balls_accurate,0.0,1.0,fractionWithPercentage
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Diving save,keeper_diving_save,1.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Saves inside box,saves_inside_box,1.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Acted as sweeper,keeper_sweeper,0.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Punches,punches,0.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Throws,player_throws,0.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,High claim,keeper_high_claim,0.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Recoveries,recoveries,1.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Clearances,clearances,0.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Touches,touches,6.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Defensive actions,defensive_actions,0.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Was fouled,was_fouled,,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Fouls committed,fouls,0.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Tackles,matchstats.headers.tackles,0.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Top stats,top_stats,Interceptions,interceptions,0.0,,integer
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,20.100000381469727,,speed
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,685.0,,distance
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Physical metrics,physical_metrics,Walking,physical_metrics_walking,270.0,685.0,distanceWithPercentage
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Physical metrics,physical_metrics,Running,physical_metrics_running,405.0,685.0,distanceWithPercentage
+169718,Wojciech Szczesny,8634,Barcelona,True,25,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,10.0,685.0,distanceWithPercentage
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,FotMob rating,rating_title,4.22,,double
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,Minutes played,minutes_played,90.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,Goals,goals,0.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,Assists,assists,0.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,Expected goals (xG),expected_goals,0.05,,double
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,Expected goals on target (xGOT),expected_goals_on_target_variant,0.05,,double
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,Expected assists (xA),expected_assists,0.01,,double
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,xG + xA,xg_and_xa,0.060000000000000005,,double
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,Top speed,physical_metrics_topspeed,29.5,,speed
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,9627.0,,distance
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,Accurate passes,accurate_passes,17.0,22.0,fractionWithPercentage
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,Chances created,chances_created,0.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,Shots on target,ShotsOnTarget,1.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,Shots off target,ShotsOffTarget,0.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,Shot accuracy,shot_accuracy,1.0,1.0,fractionWithPercentage
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,Shotmap,,1.0,,boolean
+188058,Daniel Burn,10261,Newcastle United,False,33,Top stats,top_stats,Defensive actions,defensive_actions,7.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Attack,attack,Touches,touches,36.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Attack,attack,Touches in opposition box,touches_opp_box,3.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Attack,attack,Passes into final third,passes_into_final_third,3.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Attack,attack,Accurate long balls,long_balls_accurate,2.0,5.0,fractionWithPercentage
+188058,Daniel Burn,10261,Newcastle United,False,33,Attack,attack,Dispossessed,dispossessed,1.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Attack,attack,xG Non-penalty,expected_goals_non_penalty,0.05,,double
+188058,Daniel Burn,10261,Newcastle United,False,33,Defense,defense,Defensive actions,defensive_actions,7.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Defense,defense,Blocks,shot_blocks,1.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Defense,defense,Clearances,clearances,6.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Defense,defense,Headed clearance,headed_clearance,2.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Defense,defense,Interceptions,interceptions,0.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Defense,defense,Recoveries,recoveries,1.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Defense,defense,Dribbled past,dribbled_past,1.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Duels,duels,Ground duels won,ground_duels_won,0.0,4.0,fractionWithPercentage
+188058,Daniel Burn,10261,Newcastle United,False,33,Duels,duels,Aerial duels won,aerials_won,4.0,6.0,fractionWithPercentage
+188058,Daniel Burn,10261,Newcastle United,False,33,Duels,duels,Was fouled,was_fouled,,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Duels,duels,Fouls committed,fouls,2.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Duels,duels,Duels won,duel_won,4.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Duels,duels,Duels lost,duel_lost,6.0,,integer
+188058,Daniel Burn,10261,Newcastle United,False,33,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,29.5,,speed
+188058,Daniel Burn,10261,Newcastle United,False,33,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,9627.0,,distance
+188058,Daniel Burn,10261,Newcastle United,False,33,Physical metrics,physical_metrics,Walking,physical_metrics_walking,3084.0,9627.0,distanceWithPercentage
+188058,Daniel Burn,10261,Newcastle United,False,33,Physical metrics,physical_metrics,Running,physical_metrics_running,6398.0,9627.0,distanceWithPercentage
+188058,Daniel Burn,10261,Newcastle United,False,33,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,145.0,9627.0,distanceWithPercentage
+188058,Daniel Burn,10261,Newcastle United,False,33,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,8.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Top stats,top_stats,FotMob rating,rating_title,5.18,,double
+191869,Kieran Trippier,10261,Newcastle United,False,2,Top stats,top_stats,Minutes played,minutes_played,45.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Top stats,top_stats,Goals,goals,0.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Top stats,top_stats,Assists,assists,0.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Top stats,top_stats,Expected assists (xA),expected_assists,0.11,,double
+191869,Kieran Trippier,10261,Newcastle United,False,2,Top stats,top_stats,xG + xA,xg_and_xa,0.11,,double
+191869,Kieran Trippier,10261,Newcastle United,False,2,Top stats,top_stats,Top speed,physical_metrics_topspeed,29.5,,speed
+191869,Kieran Trippier,10261,Newcastle United,False,2,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,5339.0,,distance
+191869,Kieran Trippier,10261,Newcastle United,False,2,Top stats,top_stats,Accurate passes,accurate_passes,17.0,24.0,fractionWithPercentage
+191869,Kieran Trippier,10261,Newcastle United,False,2,Top stats,top_stats,Chances created,chances_created,0.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Top stats,top_stats,Conceded penalty,conceded_penalties,1.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Top stats,top_stats,Shotmap,,0.0,,boolean
+191869,Kieran Trippier,10261,Newcastle United,False,2,Top stats,top_stats,Defensive actions,defensive_actions,1.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Attack,attack,Touches,touches,30.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Attack,attack,Touches in opposition box,touches_opp_box,1.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Attack,attack,Passes into final third,passes_into_final_third,6.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Attack,attack,Accurate long balls,long_balls_accurate,1.0,2.0,fractionWithPercentage
+191869,Kieran Trippier,10261,Newcastle United,False,2,Attack,attack,Corners,corners,1.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Defense,defense,Defensive actions,defensive_actions,1.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Defense,defense,Blocks,shot_blocks,0.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Defense,defense,Clearances,clearances,0.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Defense,defense,Interceptions,interceptions,1.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Defense,defense,Recoveries,recoveries,3.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Defense,defense,Dribbled past,dribbled_past,2.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Duels,duels,Ground duels won,ground_duels_won,0.0,3.0,fractionWithPercentage
+191869,Kieran Trippier,10261,Newcastle United,False,2,Duels,duels,Aerial duels won,aerials_won,0.0,1.0,fractionWithPercentage
+191869,Kieran Trippier,10261,Newcastle United,False,2,Duels,duels,Was fouled,was_fouled,,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Duels,duels,Fouls committed,fouls,1.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Duels,duels,Duels lost,duel_lost,4.0,,integer
+191869,Kieran Trippier,10261,Newcastle United,False,2,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,29.5,,speed
+191869,Kieran Trippier,10261,Newcastle United,False,2,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,5339.0,,distance
+191869,Kieran Trippier,10261,Newcastle United,False,2,Physical metrics,physical_metrics,Walking,physical_metrics_walking,1435.0,5339.0,distanceWithPercentage
+191869,Kieran Trippier,10261,Newcastle United,False,2,Physical metrics,physical_metrics,Running,physical_metrics_running,3796.0,5339.0,distanceWithPercentage
+191869,Kieran Trippier,10261,Newcastle United,False,2,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,108.0,5339.0,distanceWithPercentage
+191869,Kieran Trippier,10261,Newcastle United,False,2,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,6.0,,integer
+280484,Nick Pope,10261,Newcastle United,True,1,,,,,,,
+361757,João Cancelo,8634,Barcelona,False,2,Top stats,top_stats,FotMob rating,rating_title,6.66,,double
+361757,João Cancelo,8634,Barcelona,False,2,Top stats,top_stats,Minutes played,minutes_played,66.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Top stats,top_stats,Goals,goals,0.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Top stats,top_stats,Assists,assists,0.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Top stats,top_stats,Expected assists (xA),expected_assists,0.25,,double
+361757,João Cancelo,8634,Barcelona,False,2,Top stats,top_stats,xG + xA,xg_and_xa,0.25,,double
+361757,João Cancelo,8634,Barcelona,False,2,Top stats,top_stats,Top speed,physical_metrics_topspeed,30.700000762939453,,speed
+361757,João Cancelo,8634,Barcelona,False,2,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,7516.0,,distance
+361757,João Cancelo,8634,Barcelona,False,2,Top stats,top_stats,Accurate passes,accurate_passes,25.0,31.0,fractionWithPercentage
+361757,João Cancelo,8634,Barcelona,False,2,Top stats,top_stats,Chances created,chances_created,0.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Top stats,top_stats,Shotmap,,0.0,,boolean
+361757,João Cancelo,8634,Barcelona,False,2,Top stats,top_stats,Defensive actions,defensive_actions,3.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Attack,attack,Touches,touches,55.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Attack,attack,Touches in opposition box,touches_opp_box,1.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Attack,attack,Successful dribbles,dribbles_succeeded,3.0,4.0,fractionWithPercentage
+361757,João Cancelo,8634,Barcelona,False,2,Attack,attack,Passes into final third,passes_into_final_third,2.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Attack,attack,Accurate crosses,accurate_crosses,1.0,2.0,fractionWithPercentage
+361757,João Cancelo,8634,Barcelona,False,2,Attack,attack,Corners,corners,2.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Attack,attack,Dispossessed,dispossessed,1.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Defense,defense,Defensive actions,defensive_actions,3.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Defense,defense,Blocks,shot_blocks,0.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Defense,defense,Clearances,clearances,2.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Defense,defense,Headed clearance,headed_clearance,1.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Defense,defense,Interceptions,interceptions,1.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Defense,defense,Recoveries,recoveries,3.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Duels,duels,Ground duels won,ground_duels_won,4.0,6.0,fractionWithPercentage
+361757,João Cancelo,8634,Barcelona,False,2,Duels,duels,Aerial duels won,aerials_won,3.0,4.0,fractionWithPercentage
+361757,João Cancelo,8634,Barcelona,False,2,Duels,duels,Was fouled,was_fouled,1.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Duels,duels,Fouls committed,fouls,0.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Duels,duels,Duels won,duel_won,7.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Duels,duels,Duels lost,duel_lost,3.0,,integer
+361757,João Cancelo,8634,Barcelona,False,2,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,30.700000762939453,,speed
+361757,João Cancelo,8634,Barcelona,False,2,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,7516.0,,distance
+361757,João Cancelo,8634,Barcelona,False,2,Physical metrics,physical_metrics,Walking,physical_metrics_walking,2177.0,7516.0,distanceWithPercentage
+361757,João Cancelo,8634,Barcelona,False,2,Physical metrics,physical_metrics,Running,physical_metrics_running,5210.0,7516.0,distanceWithPercentage
+361757,João Cancelo,8634,Barcelona,False,2,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,129.0,7516.0,distanceWithPercentage
+361757,João Cancelo,8634,Barcelona,False,2,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,6.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Top stats,top_stats,FotMob rating,rating_title,6.22,,double
+521148,Jacob Murphy,10261,Newcastle United,False,23,Top stats,top_stats,Minutes played,minutes_played,26.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Top stats,top_stats,Goals,goals,0.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Top stats,top_stats,Assists,assists,0.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Top stats,top_stats,Expected assists (xA),expected_assists,0.03,,double
+521148,Jacob Murphy,10261,Newcastle United,False,23,Top stats,top_stats,xG + xA,xg_and_xa,0.03,,double
+521148,Jacob Murphy,10261,Newcastle United,False,23,Top stats,top_stats,Top speed,physical_metrics_topspeed,30.5,,speed
+521148,Jacob Murphy,10261,Newcastle United,False,23,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,3195.0,,distance
+521148,Jacob Murphy,10261,Newcastle United,False,23,Top stats,top_stats,Accurate passes,accurate_passes,3.0,3.0,fractionWithPercentage
+521148,Jacob Murphy,10261,Newcastle United,False,23,Top stats,top_stats,Chances created,chances_created,1.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Top stats,top_stats,Shotmap,,0.0,,boolean
+521148,Jacob Murphy,10261,Newcastle United,False,23,Top stats,top_stats,Defensive actions,defensive_actions,1.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Attack,attack,Touches,touches,8.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Attack,attack,Touches in opposition box,touches_opp_box,0.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Attack,attack,Accurate crosses,accurate_crosses,1.0,1.0,fractionWithPercentage
+521148,Jacob Murphy,10261,Newcastle United,False,23,Attack,attack,Corners,corners,1.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Attack,attack,Offsides,Offsides,1.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Defense,defense,Defensive actions,defensive_actions,1.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Defense,defense,Tackles,matchstats.headers.tackles,1.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Defense,defense,Blocks,shot_blocks,0.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Defense,defense,Clearances,clearances,0.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Defense,defense,Interceptions,interceptions,0.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Defense,defense,Recoveries,recoveries,1.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Duels,duels,Ground duels won,ground_duels_won,1.0,2.0,fractionWithPercentage
+521148,Jacob Murphy,10261,Newcastle United,False,23,Duels,duels,Aerial duels won,aerials_won,0.0,1.0,fractionWithPercentage
+521148,Jacob Murphy,10261,Newcastle United,False,23,Duels,duels,Was fouled,was_fouled,,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Duels,duels,Fouls committed,fouls,1.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Duels,duels,Duels won,duel_won,1.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Duels,duels,Duels lost,duel_lost,2.0,,integer
+521148,Jacob Murphy,10261,Newcastle United,False,23,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,30.5,,speed
+521148,Jacob Murphy,10261,Newcastle United,False,23,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,3195.0,,distance
+521148,Jacob Murphy,10261,Newcastle United,False,23,Physical metrics,physical_metrics,Walking,physical_metrics_walking,869.0,3195.0,distanceWithPercentage
+521148,Jacob Murphy,10261,Newcastle United,False,23,Physical metrics,physical_metrics,Running,physical_metrics_running,2220.0,3195.0,distanceWithPercentage
+521148,Jacob Murphy,10261,Newcastle United,False,23,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,106.0,3195.0,distanceWithPercentage
+521148,Jacob Murphy,10261,Newcastle United,False,23,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,5.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Top stats,top_stats,FotMob rating,rating_title,6.62,,double
+535936,Joelinton,10261,Newcastle United,False,7,Top stats,top_stats,Minutes played,minutes_played,64.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Top stats,top_stats,Goals,goals,0.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Top stats,top_stats,Assists,assists,0.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Top stats,top_stats,Expected assists (xA),expected_assists,0.01,,double
+535936,Joelinton,10261,Newcastle United,False,7,Top stats,top_stats,xG + xA,xg_and_xa,0.01,,double
+535936,Joelinton,10261,Newcastle United,False,7,Top stats,top_stats,Top speed,physical_metrics_topspeed,29.399999618530273,,speed
+535936,Joelinton,10261,Newcastle United,False,7,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,7489.0,,distance
+535936,Joelinton,10261,Newcastle United,False,7,Top stats,top_stats,Accurate passes,accurate_passes,16.0,21.0,fractionWithPercentage
+535936,Joelinton,10261,Newcastle United,False,7,Top stats,top_stats,Chances created,chances_created,0.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Top stats,top_stats,Shotmap,,0.0,,boolean
+535936,Joelinton,10261,Newcastle United,False,7,Top stats,top_stats,Defensive actions,defensive_actions,5.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Attack,attack,Touches,touches,32.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Attack,attack,Touches in opposition box,touches_opp_box,0.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Attack,attack,Successful dribbles,dribbles_succeeded,0.0,1.0,fractionWithPercentage
+535936,Joelinton,10261,Newcastle United,False,7,Attack,attack,Passes into final third,passes_into_final_third,3.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Defense,defense,Defensive actions,defensive_actions,5.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Defense,defense,Tackles,matchstats.headers.tackles,3.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Defense,defense,Blocks,shot_blocks,0.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Defense,defense,Clearances,clearances,0.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Defense,defense,Interceptions,interceptions,2.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Defense,defense,Recoveries,recoveries,5.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Duels,duels,Ground duels won,ground_duels_won,4.0,8.0,fractionWithPercentage
+535936,Joelinton,10261,Newcastle United,False,7,Duels,duels,Aerial duels won,aerials_won,2.0,4.0,fractionWithPercentage
+535936,Joelinton,10261,Newcastle United,False,7,Duels,duels,Was fouled,was_fouled,1.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Duels,duels,Fouls committed,fouls,3.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Duels,duels,Duels won,duel_won,6.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Duels,duels,Duels lost,duel_lost,6.0,,integer
+535936,Joelinton,10261,Newcastle United,False,7,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,29.399999618530273,,speed
+535936,Joelinton,10261,Newcastle United,False,7,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,7489.0,,distance
+535936,Joelinton,10261,Newcastle United,False,7,Physical metrics,physical_metrics,Walking,physical_metrics_walking,1961.0,7489.0,distanceWithPercentage
+535936,Joelinton,10261,Newcastle United,False,7,Physical metrics,physical_metrics,Running,physical_metrics_running,5417.0,7489.0,distanceWithPercentage
+535936,Joelinton,10261,Newcastle United,False,7,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,111.0,7489.0,distanceWithPercentage
+535936,Joelinton,10261,Newcastle United,False,7,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,6.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Top stats,top_stats,FotMob rating,rating_title,6.39,,double
+614834,Dani Olmo,8634,Barcelona,False,20,Top stats,top_stats,Minutes played,minutes_played,23.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Top stats,top_stats,Goals,goals,0.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Top stats,top_stats,Assists,assists,0.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Top stats,top_stats,Expected assists (xA),expected_assists,0.39,,double
+614834,Dani Olmo,8634,Barcelona,False,20,Top stats,top_stats,xG + xA,xg_and_xa,0.39,,double
+614834,Dani Olmo,8634,Barcelona,False,20,Top stats,top_stats,Top speed,physical_metrics_topspeed,27.299999237060547,,speed
+614834,Dani Olmo,8634,Barcelona,False,20,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,2668.0,,distance
+614834,Dani Olmo,8634,Barcelona,False,20,Top stats,top_stats,Accurate passes,accurate_passes,4.0,5.0,fractionWithPercentage
+614834,Dani Olmo,8634,Barcelona,False,20,Top stats,top_stats,Chances created,chances_created,1.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Top stats,top_stats,Shotmap,,0.0,,boolean
+614834,Dani Olmo,8634,Barcelona,False,20,Top stats,top_stats,Defensive actions,defensive_actions,0.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Attack,attack,Touches,touches,9.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Attack,attack,Touches in opposition box,touches_opp_box,0.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Attack,attack,Successful dribbles,dribbles_succeeded,1.0,2.0,fractionWithPercentage
+614834,Dani Olmo,8634,Barcelona,False,20,Attack,attack,Passes into final third,passes_into_final_third,3.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Attack,attack,Accurate long balls,long_balls_accurate,1.0,2.0,fractionWithPercentage
+614834,Dani Olmo,8634,Barcelona,False,20,Attack,attack,Dispossessed,dispossessed,1.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Defense,defense,Defensive actions,defensive_actions,0.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Defense,defense,Blocks,shot_blocks,0.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Defense,defense,Clearances,clearances,0.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Defense,defense,Interceptions,interceptions,0.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Defense,defense,Recoveries,recoveries,2.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Duels,duels,Ground duels won,ground_duels_won,1.0,3.0,fractionWithPercentage
+614834,Dani Olmo,8634,Barcelona,False,20,Duels,duels,Aerial duels won,aerials_won,0.0,0.0,fractionWithPercentage
+614834,Dani Olmo,8634,Barcelona,False,20,Duels,duels,Was fouled,was_fouled,,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Duels,duels,Fouls committed,fouls,0.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Duels,duels,Duels won,duel_won,1.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Duels,duels,Duels lost,duel_lost,2.0,,integer
+614834,Dani Olmo,8634,Barcelona,False,20,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,27.299999237060547,,speed
+614834,Dani Olmo,8634,Barcelona,False,20,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,2668.0,,distance
+614834,Dani Olmo,8634,Barcelona,False,20,Physical metrics,physical_metrics,Walking,physical_metrics_walking,825.0,2668.0,distanceWithPercentage
+614834,Dani Olmo,8634,Barcelona,False,20,Physical metrics,physical_metrics,Running,physical_metrics_running,1823.0,2668.0,distanceWithPercentage
+614834,Dani Olmo,8634,Barcelona,False,20,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,20.0,2668.0,distanceWithPercentage
+614834,Dani Olmo,8634,Barcelona,False,20,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,1.0,,integer
+666857,Yoane Wissa,10261,Newcastle United,False,9,,,,,,,
+696365,Marcus Rashford,8634,Barcelona,False,14,,,,,,,
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,FotMob rating,rating_title,9.69,,double
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Minutes played,minutes_played,90.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Goals,goals,2.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Assists,assists,2.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Expected goals (xG),expected_goals,0.92,,double
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Expected goals on target (xGOT),expected_goals_on_target_variant,2.34,,double
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Expected assists (xA),expected_assists,0.69,,double
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,xG + xA,xg_and_xa,1.6099999999999999,,double
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Top speed,physical_metrics_topspeed,32.5,,speed
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,10184.0,,distance
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Accurate passes,accurate_passes,16.0,26.0,fractionWithPercentage
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Chances created,chances_created,5.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Big chances created,big_chance_created_team_title,3.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Penalties won,penalties_won,1.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Shots on target,ShotsOnTarget,5.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Shots off target,ShotsOffTarget,0.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Shot accuracy,shot_accuracy,5.0,5.0,fractionWithPercentage
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Shotmap,,1.0,,boolean
+696679,Raphinha,8634,Barcelona,False,11,Top stats,top_stats,Defensive actions,defensive_actions,1.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Attack,attack,Touches,touches,44.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Attack,attack,Touches in opposition box,touches_opp_box,8.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Attack,attack,Passes into final third,passes_into_final_third,4.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Attack,attack,Accurate crosses,accurate_crosses,3.0,6.0,fractionWithPercentage
+696679,Raphinha,8634,Barcelona,False,11,Attack,attack,Accurate long balls,long_balls_accurate,0.0,1.0,fractionWithPercentage
+696679,Raphinha,8634,Barcelona,False,11,Attack,attack,Corners,corners,4.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Attack,attack,xG Non-penalty,expected_goals_non_penalty,0.92,,double
+696679,Raphinha,8634,Barcelona,False,11,Defense,defense,Defensive actions,defensive_actions,1.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Defense,defense,Tackles,matchstats.headers.tackles,1.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Defense,defense,Blocks,shot_blocks,0.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Defense,defense,Clearances,clearances,0.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Defense,defense,Interceptions,interceptions,0.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Defense,defense,Recoveries,recoveries,3.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Duels,duels,Ground duels won,ground_duels_won,2.0,3.0,fractionWithPercentage
+696679,Raphinha,8634,Barcelona,False,11,Duels,duels,Aerial duels won,aerials_won,1.0,2.0,fractionWithPercentage
+696679,Raphinha,8634,Barcelona,False,11,Duels,duels,Was fouled,was_fouled,1.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Duels,duels,Fouls committed,fouls,1.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Duels,duels,Duels won,duel_won,3.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Duels,duels,Duels lost,duel_lost,2.0,,integer
+696679,Raphinha,8634,Barcelona,False,11,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,32.5,,speed
+696679,Raphinha,8634,Barcelona,False,11,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,10184.0,,distance
+696679,Raphinha,8634,Barcelona,False,11,Physical metrics,physical_metrics,Walking,physical_metrics_walking,3271.0,10184.0,distanceWithPercentage
+696679,Raphinha,8634,Barcelona,False,11,Physical metrics,physical_metrics,Running,physical_metrics_running,6432.0,10184.0,distanceWithPercentage
+696679,Raphinha,8634,Barcelona,False,11,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,481.0,10184.0,distanceWithPercentage
+696679,Raphinha,8634,Barcelona,False,11,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,22.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,FotMob rating,rating_title,6.21,,double
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Minutes played,minutes_played,90.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Saves,saves,6.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Goals conceded,goals_conceded,7.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,xGOT faced,expected_goals_on_target_faced,6.78,,double
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Goals prevented,goals_prevented,-0.22,,double
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Shotmap,,1.0,,boolean
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Accurate passes,accurate_passes,15.0,36.0,fractionWithPercentage
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Accurate long balls,long_balls_accurate,8.0,29.0,fractionWithPercentage
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Diving save,keeper_diving_save,3.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Saves inside box,saves_inside_box,4.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Acted as sweeper,keeper_sweeper,1.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Punches,punches,0.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Throws,player_throws,5.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,High claim,keeper_high_claim,1.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Recoveries,recoveries,8.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Clearances,clearances,1.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Touches,touches,51.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Defensive actions,defensive_actions,2.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Duels won,duel_won,2.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Ground duels won,ground_duels_won,2.0,2.0,fractionWithPercentage
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Was fouled,was_fouled,1.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Fouls committed,fouls,0.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Tackles,matchstats.headers.tackles,1.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Passes into final third,passes_into_final_third,16.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Top stats,top_stats,Interceptions,interceptions,0.0,,integer
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,22.200000762939453,,speed
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,5364.0,,distance
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Physical metrics,physical_metrics,Walking,physical_metrics_walking,3583.0,5364.0,distanceWithPercentage
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Physical metrics,physical_metrics,Running,physical_metrics_running,1779.0,5364.0,distanceWithPercentage
+746395,Aaron Ramsdale,10261,Newcastle United,True,32,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,2.0,5364.0,distanceWithPercentage
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,FotMob rating,rating_title,7.1,,double
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Minutes played,minutes_played,90.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Goals,goals,0.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Assists,assists,1.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Expected goals (xG),expected_goals,0.08,,double
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Expected goals on target (xGOT),expected_goals_on_target_variant,0.02,,double
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Expected assists (xA),expected_assists,0.68,,double
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,xG + xA,xg_and_xa,0.76,,double
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Top speed,physical_metrics_topspeed,30.899999618530273,,speed
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,10045.0,,distance
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Accurate passes,accurate_passes,15.0,17.0,fractionWithPercentage
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Chances created,chances_created,1.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Big chances created,big_chance_created_team_title,1.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Shots on target,ShotsOnTarget,1.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Shots off target,ShotsOffTarget,1.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Shot accuracy,shot_accuracy,1.0,2.0,fractionWithPercentage
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Shotmap,,1.0,,boolean
+760359,Harvey Barnes,10261,Newcastle United,False,11,Top stats,top_stats,Defensive actions,defensive_actions,1.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Attack,attack,Touches,touches,30.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Attack,attack,Touches in opposition box,touches_opp_box,3.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Attack,attack,Successful dribbles,dribbles_succeeded,0.0,1.0,fractionWithPercentage
+760359,Harvey Barnes,10261,Newcastle United,False,11,Attack,attack,Passes into final third,passes_into_final_third,3.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Attack,attack,Accurate crosses,accurate_crosses,0.0,2.0,fractionWithPercentage
+760359,Harvey Barnes,10261,Newcastle United,False,11,Attack,attack,Dispossessed,dispossessed,1.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Attack,attack,xG Non-penalty,expected_goals_non_penalty,0.08,,double
+760359,Harvey Barnes,10261,Newcastle United,False,11,Defense,defense,Defensive actions,defensive_actions,1.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Defense,defense,Tackles,matchstats.headers.tackles,1.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Defense,defense,Blocks,shot_blocks,0.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Defense,defense,Clearances,clearances,0.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Defense,defense,Interceptions,interceptions,0.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Defense,defense,Recoveries,recoveries,4.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Duels,duels,Ground duels won,ground_duels_won,3.0,7.0,fractionWithPercentage
+760359,Harvey Barnes,10261,Newcastle United,False,11,Duels,duels,Aerial duels won,aerials_won,0.0,2.0,fractionWithPercentage
+760359,Harvey Barnes,10261,Newcastle United,False,11,Duels,duels,Was fouled,was_fouled,2.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Duels,duels,Fouls committed,fouls,2.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Duels,duels,Duels won,duel_won,3.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Duels,duels,Duels lost,duel_lost,6.0,,integer
+760359,Harvey Barnes,10261,Newcastle United,False,11,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,30.899999618530273,,speed
+760359,Harvey Barnes,10261,Newcastle United,False,11,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,10045.0,,distance
+760359,Harvey Barnes,10261,Newcastle United,False,11,Physical metrics,physical_metrics,Walking,physical_metrics_walking,3193.0,10045.0,distanceWithPercentage
+760359,Harvey Barnes,10261,Newcastle United,False,11,Physical metrics,physical_metrics,Running,physical_metrics_running,6590.0,10045.0,distanceWithPercentage
+760359,Harvey Barnes,10261,Newcastle United,False,11,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,262.0,10045.0,distanceWithPercentage
+760359,Harvey Barnes,10261,Newcastle United,False,11,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,13.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Top stats,top_stats,FotMob rating,rating_title,6.08,,double
+860975,Joseph Willock,10261,Newcastle United,False,28,Top stats,top_stats,Minutes played,minutes_played,35.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Top stats,top_stats,Goals,goals,0.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Top stats,top_stats,Assists,assists,0.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Top stats,top_stats,Expected assists (xA),expected_assists,0.12,,double
+860975,Joseph Willock,10261,Newcastle United,False,28,Top stats,top_stats,xG + xA,xg_and_xa,0.12,,double
+860975,Joseph Willock,10261,Newcastle United,False,28,Top stats,top_stats,Top speed,physical_metrics_topspeed,27.5,,speed
+860975,Joseph Willock,10261,Newcastle United,False,28,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,4151.0,,distance
+860975,Joseph Willock,10261,Newcastle United,False,28,Top stats,top_stats,Accurate passes,accurate_passes,9.0,10.0,fractionWithPercentage
+860975,Joseph Willock,10261,Newcastle United,False,28,Top stats,top_stats,Chances created,chances_created,1.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Top stats,top_stats,Shotmap,,0.0,,boolean
+860975,Joseph Willock,10261,Newcastle United,False,28,Top stats,top_stats,Defensive actions,defensive_actions,1.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Attack,attack,Touches,touches,15.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Attack,attack,Touches in opposition box,touches_opp_box,0.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Attack,attack,Accurate long balls,long_balls_accurate,1.0,1.0,fractionWithPercentage
+860975,Joseph Willock,10261,Newcastle United,False,28,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Defense,defense,Defensive actions,defensive_actions,1.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Defense,defense,Tackles,matchstats.headers.tackles,1.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Defense,defense,Blocks,shot_blocks,0.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Defense,defense,Clearances,clearances,0.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Defense,defense,Interceptions,interceptions,0.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Defense,defense,Recoveries,recoveries,3.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Defense,defense,Dribbled past,dribbled_past,1.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Duels,duels,Ground duels won,ground_duels_won,1.0,4.0,fractionWithPercentage
+860975,Joseph Willock,10261,Newcastle United,False,28,Duels,duels,Aerial duels won,aerials_won,0.0,0.0,fractionWithPercentage
+860975,Joseph Willock,10261,Newcastle United,False,28,Duels,duels,Was fouled,was_fouled,,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Duels,duels,Fouls committed,fouls,2.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Duels,duels,Duels won,duel_won,1.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Duels,duels,Duels lost,duel_lost,3.0,,integer
+860975,Joseph Willock,10261,Newcastle United,False,28,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,27.5,,speed
+860975,Joseph Willock,10261,Newcastle United,False,28,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,4151.0,,distance
+860975,Joseph Willock,10261,Newcastle United,False,28,Physical metrics,physical_metrics,Walking,physical_metrics_walking,1030.0,4151.0,distanceWithPercentage
+860975,Joseph Willock,10261,Newcastle United,False,28,Physical metrics,physical_metrics,Running,physical_metrics_running,3084.0,4151.0,distanceWithPercentage
+860975,Joseph Willock,10261,Newcastle United,False,28,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,37.0,4151.0,distanceWithPercentage
+860975,Joseph Willock,10261,Newcastle United,False,28,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,2.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Top stats,top_stats,FotMob rating,rating_title,6.61,,double
+867414,Sandro Tonali,10261,Newcastle United,False,8,Top stats,top_stats,Minutes played,minutes_played,55.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Top stats,top_stats,Goals,goals,0.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Top stats,top_stats,Assists,assists,0.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Top stats,top_stats,Top speed,physical_metrics_topspeed,31.5,,speed
+867414,Sandro Tonali,10261,Newcastle United,False,8,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,6544.0,,distance
+867414,Sandro Tonali,10261,Newcastle United,False,8,Top stats,top_stats,Accurate passes,accurate_passes,9.0,12.0,fractionWithPercentage
+867414,Sandro Tonali,10261,Newcastle United,False,8,Top stats,top_stats,Chances created,chances_created,0.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Top stats,top_stats,Shotmap,,0.0,,boolean
+867414,Sandro Tonali,10261,Newcastle United,False,8,Top stats,top_stats,Defensive actions,defensive_actions,6.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Attack,attack,Touches,touches,26.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Attack,attack,Touches in opposition box,touches_opp_box,0.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Attack,attack,Passes into final third,passes_into_final_third,3.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Attack,attack,Accurate crosses,accurate_crosses,0.0,2.0,fractionWithPercentage
+867414,Sandro Tonali,10261,Newcastle United,False,8,Attack,attack,Accurate long balls,long_balls_accurate,1.0,2.0,fractionWithPercentage
+867414,Sandro Tonali,10261,Newcastle United,False,8,Attack,attack,Dispossessed,dispossessed,2.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Defense,defense,Defensive actions,defensive_actions,6.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Defense,defense,Tackles,matchstats.headers.tackles,1.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Defense,defense,Blocks,shot_blocks,0.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Defense,defense,Clearances,clearances,2.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Defense,defense,Interceptions,interceptions,3.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Defense,defense,Recoveries,recoveries,7.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Duels,duels,Ground duels won,ground_duels_won,1.0,4.0,fractionWithPercentage
+867414,Sandro Tonali,10261,Newcastle United,False,8,Duels,duels,Aerial duels won,aerials_won,0.0,0.0,fractionWithPercentage
+867414,Sandro Tonali,10261,Newcastle United,False,8,Duels,duels,Was fouled,was_fouled,,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Duels,duels,Fouls committed,fouls,1.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Duels,duels,Duels won,duel_won,1.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Duels,duels,Duels lost,duel_lost,3.0,,integer
+867414,Sandro Tonali,10261,Newcastle United,False,8,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,31.5,,speed
+867414,Sandro Tonali,10261,Newcastle United,False,8,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,6544.0,,distance
+867414,Sandro Tonali,10261,Newcastle United,False,8,Physical metrics,physical_metrics,Walking,physical_metrics_walking,1725.0,6544.0,distanceWithPercentage
+867414,Sandro Tonali,10261,Newcastle United,False,8,Physical metrics,physical_metrics,Running,physical_metrics_running,4613.0,6544.0,distanceWithPercentage
+867414,Sandro Tonali,10261,Newcastle United,False,8,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,206.0,6544.0,distanceWithPercentage
+867414,Sandro Tonali,10261,Newcastle United,False,8,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,9.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,FotMob rating,rating_title,6.05,,double
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,Minutes played,minutes_played,24.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,Goals,goals,0.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,Assists,assists,0.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,Expected goals (xG),expected_goals,0.16,,double
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,Expected goals on target (xGOT),expected_goals_on_target_variant,,,double
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,xG + xA,xg_and_xa,0.16,,double
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,Top speed,physical_metrics_topspeed,29.299999237060547,,speed
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,2539.0,,distance
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,Accurate passes,accurate_passes,1.0,1.0,fractionWithPercentage
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,Chances created,chances_created,0.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,Shots on target,ShotsOnTarget,0.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,Shots off target,ShotsOffTarget,0.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,Blocked shots,blocked_shots,1.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,Shotmap,,1.0,,boolean
+881771,Ferran Torres,8634,Barcelona,False,7,Top stats,top_stats,Defensive actions,defensive_actions,0.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Attack,attack,Touches,touches,4.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Attack,attack,Touches in opposition box,touches_opp_box,1.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Attack,attack,Offsides,Offsides,2.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Attack,attack,xG Non-penalty,expected_goals_non_penalty,0.16,,double
+881771,Ferran Torres,8634,Barcelona,False,7,Defense,defense,Defensive actions,defensive_actions,0.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Defense,defense,Blocks,shot_blocks,0.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Defense,defense,Clearances,clearances,0.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Defense,defense,Interceptions,interceptions,0.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Defense,defense,Recoveries,recoveries,0.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Duels,duels,Aerial duels won,aerials_won,0.0,0.0,fractionWithPercentage
+881771,Ferran Torres,8634,Barcelona,False,7,Duels,duels,Was fouled,was_fouled,,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Duels,duels,Fouls committed,fouls,0.0,,integer
+881771,Ferran Torres,8634,Barcelona,False,7,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,29.299999237060547,,speed
+881771,Ferran Torres,8634,Barcelona,False,7,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,2539.0,,distance
+881771,Ferran Torres,8634,Barcelona,False,7,Physical metrics,physical_metrics,Walking,physical_metrics_walking,849.0,2539.0,distanceWithPercentage
+881771,Ferran Torres,8634,Barcelona,False,7,Physical metrics,physical_metrics,Running,physical_metrics_running,1631.0,2539.0,distanceWithPercentage
+881771,Ferran Torres,8634,Barcelona,False,7,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,59.0,2539.0,distanceWithPercentage
+881771,Ferran Torres,8634,Barcelona,False,7,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,4.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,FotMob rating,rating_title,6.53,,double
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,Minutes played,minutes_played,81.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,Goals,goals,0.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,Assists,assists,0.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,Expected goals (xG),expected_goals,0.17,,double
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,Expected goals on target (xGOT),expected_goals_on_target_variant,,,double
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,xG + xA,xg_and_xa,0.17,,double
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,Top speed,physical_metrics_topspeed,32.900001525878906,,speed
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,8818.0,,distance
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,Accurate passes,accurate_passes,3.0,4.0,fractionWithPercentage
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,Chances created,chances_created,1.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,Shots on target,ShotsOnTarget,0.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,Shots off target,ShotsOffTarget,1.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,Shot accuracy,shot_accuracy,0.0,1.0,fractionWithPercentage
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,Shotmap,,1.0,,boolean
+906937,Anthony Gordon,10261,Newcastle United,False,10,Top stats,top_stats,Defensive actions,defensive_actions,0.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Attack,attack,Touches,touches,10.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Attack,attack,Touches in opposition box,touches_opp_box,1.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Attack,attack,Successful dribbles,dribbles_succeeded,1.0,2.0,fractionWithPercentage
+906937,Anthony Gordon,10261,Newcastle United,False,10,Attack,attack,Accurate long balls,long_balls_accurate,1.0,1.0,fractionWithPercentage
+906937,Anthony Gordon,10261,Newcastle United,False,10,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Attack,attack,xG Non-penalty,expected_goals_non_penalty,0.17,,double
+906937,Anthony Gordon,10261,Newcastle United,False,10,Defense,defense,Defensive actions,defensive_actions,0.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Defense,defense,Blocks,shot_blocks,0.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Defense,defense,Clearances,clearances,0.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Defense,defense,Interceptions,interceptions,0.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Defense,defense,Recoveries,recoveries,0.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Duels,duels,Ground duels won,ground_duels_won,3.0,4.0,fractionWithPercentage
+906937,Anthony Gordon,10261,Newcastle United,False,10,Duels,duels,Aerial duels won,aerials_won,0.0,0.0,fractionWithPercentage
+906937,Anthony Gordon,10261,Newcastle United,False,10,Duels,duels,Was fouled,was_fouled,2.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Duels,duels,Fouls committed,fouls,0.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Duels,duels,Duels won,duel_won,3.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Duels,duels,Duels lost,duel_lost,1.0,,integer
+906937,Anthony Gordon,10261,Newcastle United,False,10,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,32.900001525878906,,speed
+906937,Anthony Gordon,10261,Newcastle United,False,10,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,8818.0,,distance
+906937,Anthony Gordon,10261,Newcastle United,False,10,Physical metrics,physical_metrics,Walking,physical_metrics_walking,2730.0,8818.0,distanceWithPercentage
+906937,Anthony Gordon,10261,Newcastle United,False,10,Physical metrics,physical_metrics,Running,physical_metrics_running,5833.0,8818.0,distanceWithPercentage
+906937,Anthony Gordon,10261,Newcastle United,False,10,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,255.0,8818.0,distanceWithPercentage
+906937,Anthony Gordon,10261,Newcastle United,False,10,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,13.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,FotMob rating,rating_title,7.23,,double
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Minutes played,minutes_played,68.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Goals,goals,0.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Assists,assists,0.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Expected goals (xG),expected_goals,0.1,,double
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Expected goals on target (xGOT),expected_goals_on_target_variant,,,double
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Expected assists (xA),expected_assists,0.01,,double
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,xG + xA,xg_and_xa,0.11,,double
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Top speed,physical_metrics_topspeed,30.799999237060547,,speed
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,7204.0,,distance
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Accurate passes,accurate_passes,43.0,48.0,fractionWithPercentage
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Chances created,chances_created,0.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Shots on target,ShotsOnTarget,0.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Shots off target,ShotsOffTarget,1.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Blocked shots,blocked_shots,1.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Shot accuracy,shot_accuracy,0.0,1.0,fractionWithPercentage
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Shotmap,,1.0,,boolean
+921253,Ronald Araujo,8634,Barcelona,False,4,Top stats,top_stats,Defensive actions,defensive_actions,8.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Attack,attack,Touches,touches,66.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Attack,attack,Touches in opposition box,touches_opp_box,2.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Attack,attack,Successful dribbles,dribbles_succeeded,1.0,1.0,fractionWithPercentage
+921253,Ronald Araujo,8634,Barcelona,False,4,Attack,attack,Passes into final third,passes_into_final_third,2.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Attack,attack,Accurate crosses,accurate_crosses,0.0,1.0,fractionWithPercentage
+921253,Ronald Araujo,8634,Barcelona,False,4,Attack,attack,Accurate long balls,long_balls_accurate,0.0,1.0,fractionWithPercentage
+921253,Ronald Araujo,8634,Barcelona,False,4,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Attack,attack,xG Non-penalty,expected_goals_non_penalty,0.1,,double
+921253,Ronald Araujo,8634,Barcelona,False,4,Defense,defense,Defensive actions,defensive_actions,8.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Defense,defense,Tackles,matchstats.headers.tackles,2.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Defense,defense,Blocks,shot_blocks,1.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Defense,defense,Clearances,clearances,5.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Defense,defense,Headed clearance,headed_clearance,3.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Defense,defense,Interceptions,interceptions,0.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Defense,defense,Recoveries,recoveries,1.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Duels,duels,Ground duels won,ground_duels_won,3.0,3.0,fractionWithPercentage
+921253,Ronald Araujo,8634,Barcelona,False,4,Duels,duels,Aerial duels won,aerials_won,3.0,3.0,fractionWithPercentage
+921253,Ronald Araujo,8634,Barcelona,False,4,Duels,duels,Was fouled,was_fouled,,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Duels,duels,Fouls committed,fouls,0.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Duels,duels,Duels won,duel_won,6.0,,integer
+921253,Ronald Araujo,8634,Barcelona,False,4,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,30.799999237060547,,speed
+921253,Ronald Araujo,8634,Barcelona,False,4,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,7204.0,,distance
+921253,Ronald Araujo,8634,Barcelona,False,4,Physical metrics,physical_metrics,Walking,physical_metrics_walking,2460.0,7204.0,distanceWithPercentage
+921253,Ronald Araujo,8634,Barcelona,False,4,Physical metrics,physical_metrics,Running,physical_metrics_running,4588.0,7204.0,distanceWithPercentage
+921253,Ronald Araujo,8634,Barcelona,False,4,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,156.0,7204.0,distanceWithPercentage
+921253,Ronald Araujo,8634,Barcelona,False,4,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,8.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Top stats,top_stats,FotMob rating,rating_title,6.1,,double
+940573,Eric García,8634,Barcelona,False,24,Top stats,top_stats,Minutes played,minutes_played,22.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Top stats,top_stats,Goals,goals,0.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Top stats,top_stats,Assists,assists,0.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Top stats,top_stats,Top speed,physical_metrics_topspeed,28.799999237060547,,speed
+940573,Eric García,8634,Barcelona,False,24,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,2255.0,,distance
+940573,Eric García,8634,Barcelona,False,24,Top stats,top_stats,Accurate passes,accurate_passes,5.0,7.0,fractionWithPercentage
+940573,Eric García,8634,Barcelona,False,24,Top stats,top_stats,Chances created,chances_created,0.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Top stats,top_stats,Shotmap,,0.0,,boolean
+940573,Eric García,8634,Barcelona,False,24,Top stats,top_stats,Defensive actions,defensive_actions,0.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Attack,attack,Touches,touches,8.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Attack,attack,Touches in opposition box,touches_opp_box,0.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Attack,attack,Accurate long balls,long_balls_accurate,1.0,2.0,fractionWithPercentage
+940573,Eric García,8634,Barcelona,False,24,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Defense,defense,Defensive actions,defensive_actions,0.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Defense,defense,Blocks,shot_blocks,0.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Defense,defense,Clearances,clearances,0.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Defense,defense,Interceptions,interceptions,0.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Defense,defense,Recoveries,recoveries,1.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Duels,duels,Ground duels won,ground_duels_won,0.0,1.0,fractionWithPercentage
+940573,Eric García,8634,Barcelona,False,24,Duels,duels,Aerial duels won,aerials_won,1.0,1.0,fractionWithPercentage
+940573,Eric García,8634,Barcelona,False,24,Duels,duels,Was fouled,was_fouled,,,integer
+940573,Eric García,8634,Barcelona,False,24,Duels,duels,Fouls committed,fouls,1.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Duels,duels,Duels won,duel_won,1.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Duels,duels,Duels lost,duel_lost,1.0,,integer
+940573,Eric García,8634,Barcelona,False,24,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,28.799999237060547,,speed
+940573,Eric García,8634,Barcelona,False,24,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,2255.0,,distance
+940573,Eric García,8634,Barcelona,False,24,Physical metrics,physical_metrics,Walking,physical_metrics_walking,608.0,2255.0,distanceWithPercentage
+940573,Eric García,8634,Barcelona,False,24,Physical metrics,physical_metrics,Running,physical_metrics_running,1615.0,2255.0,distanceWithPercentage
+940573,Eric García,8634,Barcelona,False,24,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,32.0,2255.0,distanceWithPercentage
+940573,Eric García,8634,Barcelona,False,24,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,2.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Top stats,top_stats,FotMob rating,rating_title,6.06,,double
+956682,Sven Botman,10261,Newcastle United,False,4,Top stats,top_stats,Minutes played,minutes_played,26.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Top stats,top_stats,Goals,goals,0.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Top stats,top_stats,Assists,assists,0.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Top stats,top_stats,Top speed,physical_metrics_topspeed,27.799999237060547,,speed
+956682,Sven Botman,10261,Newcastle United,False,4,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,2666.0,,distance
+956682,Sven Botman,10261,Newcastle United,False,4,Top stats,top_stats,Accurate passes,accurate_passes,9.0,10.0,fractionWithPercentage
+956682,Sven Botman,10261,Newcastle United,False,4,Top stats,top_stats,Chances created,chances_created,0.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Top stats,top_stats,Shotmap,,0.0,,boolean
+956682,Sven Botman,10261,Newcastle United,False,4,Top stats,top_stats,Defensive actions,defensive_actions,0.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Attack,attack,Touches,touches,12.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Attack,attack,Touches in opposition box,touches_opp_box,0.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Attack,attack,Accurate long balls,long_balls_accurate,2.0,2.0,fractionWithPercentage
+956682,Sven Botman,10261,Newcastle United,False,4,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Defense,defense,Defensive actions,defensive_actions,0.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Defense,defense,Blocks,shot_blocks,0.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Defense,defense,Clearances,clearances,0.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Defense,defense,Interceptions,interceptions,0.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Defense,defense,Recoveries,recoveries,1.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Duels,duels,Aerial duels won,aerials_won,0.0,0.0,fractionWithPercentage
+956682,Sven Botman,10261,Newcastle United,False,4,Duels,duels,Was fouled,was_fouled,,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Duels,duels,Fouls committed,fouls,0.0,,integer
+956682,Sven Botman,10261,Newcastle United,False,4,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,27.799999237060547,,speed
+956682,Sven Botman,10261,Newcastle United,False,4,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,2666.0,,distance
+956682,Sven Botman,10261,Newcastle United,False,4,Physical metrics,physical_metrics,Walking,physical_metrics_walking,860.0,2666.0,distanceWithPercentage
+956682,Sven Botman,10261,Newcastle United,False,4,Physical metrics,physical_metrics,Running,physical_metrics_running,1778.0,2666.0,distanceWithPercentage
+956682,Sven Botman,10261,Newcastle United,False,4,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,28.0,2666.0,distanceWithPercentage
+956682,Sven Botman,10261,Newcastle United,False,4,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,2.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,FotMob rating,rating_title,5.88,,double
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Minutes played,minutes_played,90.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Goals,goals,0.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Assists,assists,0.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Expected goals (xG),expected_goals,0.07,,double
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Expected goals on target (xGOT),expected_goals_on_target_variant,,,double
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Expected assists (xA),expected_assists,0.02,,double
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,xG + xA,xg_and_xa,0.09000000000000001,,double
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Top speed,physical_metrics_topspeed,29.899999618530273,,speed
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,11007.0,,distance
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Accurate passes,accurate_passes,29.0,33.0,fractionWithPercentage
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Chances created,chances_created,0.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Error led to goal,errors_led_to_goal,1.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Shots on target,ShotsOnTarget,0.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Shots off target,ShotsOffTarget,0.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Blocked shots,blocked_shots,1.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Shotmap,,1.0,,boolean
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Top stats,top_stats,Defensive actions,defensive_actions,5.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Attack,attack,Touches,touches,43.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Attack,attack,Touches in opposition box,touches_opp_box,1.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Attack,attack,Passes into final third,passes_into_final_third,2.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Attack,attack,xG Non-penalty,expected_goals_non_penalty,0.07,,double
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Defense,defense,Defensive actions,defensive_actions,5.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Defense,defense,Tackles,matchstats.headers.tackles,3.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Defense,defense,Blocks,shot_blocks,0.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Defense,defense,Clearances,clearances,0.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Defense,defense,Interceptions,interceptions,2.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Defense,defense,Recoveries,recoveries,4.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Duels,duels,Ground duels won,ground_duels_won,3.0,3.0,fractionWithPercentage
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Duels,duels,Aerial duels won,aerials_won,1.0,1.0,fractionWithPercentage
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Duels,duels,Was fouled,was_fouled,,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Duels,duels,Fouls committed,fouls,0.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Duels,duels,Duels won,duel_won,4.0,,integer
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,29.899999618530273,,speed
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,11007.0,,distance
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Physical metrics,physical_metrics,Walking,physical_metrics_walking,2878.0,11007.0,distanceWithPercentage
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Physical metrics,physical_metrics,Running,physical_metrics_running,7981.0,11007.0,distanceWithPercentage
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,148.0,11007.0,distanceWithPercentage
+1021929,Jacob Ramsey,10261,Newcastle United,False,41,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,8.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,FotMob rating,rating_title,8.56,,double
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,Minutes played,minutes_played,64.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,Goals,goals,2.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,Assists,assists,0.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,Expected goals (xG),expected_goals,1.14,,double
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,Expected goals on target (xGOT),expected_goals_on_target_variant,1.19,,double
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,Expected assists (xA),expected_assists,0.1,,double
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,xG + xA,xg_and_xa,1.24,,double
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,Top speed,physical_metrics_topspeed,32.70000076293945,,speed
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,7289.0,,distance
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,Accurate passes,accurate_passes,9.0,15.0,fractionWithPercentage
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,Chances created,chances_created,1.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,Shots on target,ShotsOnTarget,2.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,Shots off target,ShotsOffTarget,0.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,Shot accuracy,shot_accuracy,2.0,2.0,fractionWithPercentage
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,Shotmap,,1.0,,boolean
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Top stats,top_stats,Defensive actions,defensive_actions,1.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Attack,attack,Touches,touches,24.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Attack,attack,Touches in opposition box,touches_opp_box,3.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Attack,attack,Passes into final third,passes_into_final_third,1.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Attack,attack,Accurate crosses,accurate_crosses,1.0,2.0,fractionWithPercentage
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Attack,attack,Accurate long balls,long_balls_accurate,0.0,1.0,fractionWithPercentage
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Attack,attack,Offsides,Offsides,1.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Attack,attack,xG Non-penalty,expected_goals_non_penalty,1.14,,double
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Defense,defense,Defensive actions,defensive_actions,1.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Defense,defense,Blocks,shot_blocks,0.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Defense,defense,Clearances,clearances,1.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Defense,defense,Interceptions,interceptions,0.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Defense,defense,Recoveries,recoveries,1.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Defense,defense,Dribbled past,dribbled_past,1.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Duels,duels,Ground duels won,ground_duels_won,0.0,2.0,fractionWithPercentage
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Duels,duels,Aerial duels won,aerials_won,1.0,2.0,fractionWithPercentage
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Duels,duels,Was fouled,was_fouled,,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Duels,duels,Fouls committed,fouls,1.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Duels,duels,Duels won,duel_won,1.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Duels,duels,Duels lost,duel_lost,3.0,,integer
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,32.70000076293945,,speed
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,7289.0,,distance
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Physical metrics,physical_metrics,Walking,physical_metrics_walking,2062.0,7289.0,distanceWithPercentage
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Physical metrics,physical_metrics,Running,physical_metrics_running,5015.0,7289.0,distanceWithPercentage
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,212.0,7289.0,distanceWithPercentage
+1050166,Anthony Elanga,10261,Newcastle United,False,20,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,11.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Top stats,top_stats,FotMob rating,rating_title,6.78,,double
+1083323,Pedri,8634,Barcelona,False,8,Top stats,top_stats,Minutes played,minutes_played,90.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Top stats,top_stats,Goals,goals,0.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Top stats,top_stats,Assists,assists,0.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Top stats,top_stats,Expected assists (xA),expected_assists,0.27,,double
+1083323,Pedri,8634,Barcelona,False,8,Top stats,top_stats,xG + xA,xg_and_xa,0.27,,double
+1083323,Pedri,8634,Barcelona,False,8,Top stats,top_stats,Top speed,physical_metrics_topspeed,28.799999237060547,,speed
+1083323,Pedri,8634,Barcelona,False,8,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,10961.0,,distance
+1083323,Pedri,8634,Barcelona,False,8,Top stats,top_stats,Accurate passes,accurate_passes,62.0,66.0,fractionWithPercentage
+1083323,Pedri,8634,Barcelona,False,8,Top stats,top_stats,Chances created,chances_created,2.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Top stats,top_stats,Big chances created,big_chance_created_team_title,1.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Top stats,top_stats,Shotmap,,0.0,,boolean
+1083323,Pedri,8634,Barcelona,False,8,Top stats,top_stats,Defensive actions,defensive_actions,1.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Attack,attack,Touches,touches,78.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Attack,attack,Touches in opposition box,touches_opp_box,0.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Attack,attack,Passes into final third,passes_into_final_third,9.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Attack,attack,Accurate long balls,long_balls_accurate,0.0,2.0,fractionWithPercentage
+1083323,Pedri,8634,Barcelona,False,8,Attack,attack,Dispossessed,dispossessed,1.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Defense,defense,Defensive actions,defensive_actions,1.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Defense,defense,Blocks,shot_blocks,0.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Defense,defense,Clearances,clearances,1.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Defense,defense,Interceptions,interceptions,0.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Defense,defense,Recoveries,recoveries,4.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Duels,duels,Ground duels won,ground_duels_won,3.0,4.0,fractionWithPercentage
+1083323,Pedri,8634,Barcelona,False,8,Duels,duels,Aerial duels won,aerials_won,0.0,1.0,fractionWithPercentage
+1083323,Pedri,8634,Barcelona,False,8,Duels,duels,Was fouled,was_fouled,3.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Duels,duels,Fouls committed,fouls,0.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Duels,duels,Duels won,duel_won,3.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Duels,duels,Duels lost,duel_lost,2.0,,integer
+1083323,Pedri,8634,Barcelona,False,8,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,28.799999237060547,,speed
+1083323,Pedri,8634,Barcelona,False,8,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,10961.0,,distance
+1083323,Pedri,8634,Barcelona,False,8,Physical metrics,physical_metrics,Walking,physical_metrics_walking,2733.0,10961.0,distanceWithPercentage
+1083323,Pedri,8634,Barcelona,False,8,Physical metrics,physical_metrics,Running,physical_metrics_running,8145.0,10961.0,distanceWithPercentage
+1083323,Pedri,8634,Barcelona,False,8,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,83.0,10961.0,distanceWithPercentage
+1083323,Pedri,8634,Barcelona,False,8,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,4.0,,integer
+1106563,Nick Woltemade,10261,Newcastle United,False,27,,,,,,,
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Top stats,top_stats,FotMob rating,rating_title,5.99,,double
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Top stats,top_stats,Minutes played,minutes_played,45.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Top stats,top_stats,Goals,goals,0.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Top stats,top_stats,Assists,assists,0.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Top stats,top_stats,Top speed,physical_metrics_topspeed,31.899999618530273,,speed
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,5010.0,,distance
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Top stats,top_stats,Accurate passes,accurate_passes,7.0,11.0,fractionWithPercentage
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Top stats,top_stats,Chances created,chances_created,0.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Top stats,top_stats,Shotmap,,0.0,,boolean
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Top stats,top_stats,Defensive actions,defensive_actions,1.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Attack,attack,Touches,touches,18.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Attack,attack,Touches in opposition box,touches_opp_box,0.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Attack,attack,Passes into final third,passes_into_final_third,1.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Attack,attack,Accurate long balls,long_balls_accurate,0.0,2.0,fractionWithPercentage
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Defense,defense,Defensive actions,defensive_actions,1.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Defense,defense,Blocks,shot_blocks,0.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Defense,defense,Clearances,clearances,1.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Defense,defense,Headed clearance,headed_clearance,1.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Defense,defense,Interceptions,interceptions,0.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Defense,defense,Recoveries,recoveries,1.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Duels,duels,Ground duels won,ground_duels_won,1.0,1.0,fractionWithPercentage
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Duels,duels,Aerial duels won,aerials_won,1.0,4.0,fractionWithPercentage
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Duels,duels,Was fouled,was_fouled,1.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Duels,duels,Fouls committed,fouls,0.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Duels,duels,Duels won,duel_won,2.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Duels,duels,Duels lost,duel_lost,3.0,,integer
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,31.899999618530273,,speed
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,5010.0,,distance
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Physical metrics,physical_metrics,Walking,physical_metrics_walking,1339.0,5010.0,distanceWithPercentage
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Physical metrics,physical_metrics,Running,physical_metrics_running,3499.0,5010.0,distanceWithPercentage
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,172.0,5010.0,distanceWithPercentage
+1107910,Valentino Livramento,10261,Newcastle United,False,21,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,8.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Top stats,top_stats,FotMob rating,rating_title,3.48,,double
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Top stats,top_stats,Minutes played,minutes_played,90.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Top stats,top_stats,Goals,goals,0.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Top stats,top_stats,Assists,assists,0.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Top stats,top_stats,Expected assists (xA),expected_assists,0.04,,double
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Top stats,top_stats,xG + xA,xg_and_xa,0.04,,double
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Top stats,top_stats,Top speed,physical_metrics_topspeed,31.0,,speed
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,9476.0,,distance
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Top stats,top_stats,Accurate passes,accurate_passes,25.0,27.0,fractionWithPercentage
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Top stats,top_stats,Chances created,chances_created,1.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Top stats,top_stats,Error led to goal,errors_led_to_goal,1.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Top stats,top_stats,Shotmap,,0.0,,boolean
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Top stats,top_stats,Defensive actions,defensive_actions,6.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Attack,attack,Touches,touches,33.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Attack,attack,Touches in opposition box,touches_opp_box,1.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Attack,attack,Accurate long balls,long_balls_accurate,1.0,1.0,fractionWithPercentage
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Defense,defense,Defensive actions,defensive_actions,6.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Defense,defense,Blocks,shot_blocks,2.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Defense,defense,Clearances,clearances,3.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Defense,defense,Headed clearance,headed_clearance,1.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Defense,defense,Interceptions,interceptions,1.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Defense,defense,Recoveries,recoveries,6.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Duels,duels,Aerial duels won,aerials_won,1.0,3.0,fractionWithPercentage
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Duels,duels,Was fouled,was_fouled,,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Duels,duels,Fouls committed,fouls,0.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Duels,duels,Duels won,duel_won,1.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Duels,duels,Duels lost,duel_lost,2.0,,integer
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,31.0,,speed
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,9476.0,,distance
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Physical metrics,physical_metrics,Walking,physical_metrics_walking,3023.0,9476.0,distanceWithPercentage
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Physical metrics,physical_metrics,Running,physical_metrics_running,6267.0,9476.0,distanceWithPercentage
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,186.0,9476.0,distanceWithPercentage
+1137407,Malick Thiaw,10261,Newcastle United,False,12,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,11.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,FotMob rating,rating_title,6.03,,double
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Minutes played,minutes_played,82.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Saves,saves,2.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Goals conceded,goals_conceded,2.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,xGOT faced,expected_goals_on_target_faced,1.26,,double
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Goals prevented,goals_prevented,-0.74,,double
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Shotmap,,1.0,,boolean
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Accurate passes,accurate_passes,24.0,27.0,fractionWithPercentage
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Accurate long balls,long_balls_accurate,2.0,5.0,fractionWithPercentage
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Diving save,keeper_diving_save,1.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Saves inside box,saves_inside_box,1.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Acted as sweeper,keeper_sweeper,1.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Punches,punches,0.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Throws,player_throws,5.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,High claim,keeper_high_claim,0.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Recoveries,recoveries,10.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Clearances,clearances,1.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Touches,touches,35.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Defensive actions,defensive_actions,1.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Was fouled,was_fouled,,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Fouls committed,fouls,0.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Tackles,matchstats.headers.tackles,0.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Top stats,top_stats,Interceptions,interceptions,0.0,,integer
+1167220,Joan García,8634,Barcelona,True,13,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,25.399999618530273,,speed
+1167220,Joan García,8634,Barcelona,True,13,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,5225.0,,distance
+1167220,Joan García,8634,Barcelona,True,13,Physical metrics,physical_metrics,Walking,physical_metrics_walking,3351.0,5225.0,distanceWithPercentage
+1167220,Joan García,8634,Barcelona,True,13,Physical metrics,physical_metrics,Running,physical_metrics_running,1869.0,5225.0,distanceWithPercentage
+1167220,Joan García,8634,Barcelona,True,13,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,5.0,5225.0,distanceWithPercentage
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,FotMob rating,rating_title,4.61,,double
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Minutes played,minutes_played,90.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Goals,goals,0.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Assists,assists,1.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Expected goals (xG),expected_goals,0.04,,double
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Expected goals on target (xGOT),expected_goals_on_target_variant,0.04,,double
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Expected assists (xA),expected_assists,0.15,,double
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,xG + xA,xg_and_xa,0.19,,double
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Top speed,physical_metrics_topspeed,32.400001525878906,,speed
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,10063.0,,distance
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Accurate passes,accurate_passes,16.0,24.0,fractionWithPercentage
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Chances created,chances_created,1.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Big chances created,big_chance_created_team_title,1.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Error led to goal,errors_led_to_goal,1.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Shots on target,ShotsOnTarget,1.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Shots off target,ShotsOffTarget,0.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Shot accuracy,shot_accuracy,1.0,1.0,fractionWithPercentage
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Shotmap,,1.0,,boolean
+1197655,Lewis Hall,10261,Newcastle United,False,3,Top stats,top_stats,Defensive actions,defensive_actions,3.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Attack,attack,Touches,touches,40.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Attack,attack,Touches in opposition box,touches_opp_box,5.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Attack,attack,Successful dribbles,dribbles_succeeded,2.0,3.0,fractionWithPercentage
+1197655,Lewis Hall,10261,Newcastle United,False,3,Attack,attack,Passes into final third,passes_into_final_third,5.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Attack,attack,Accurate crosses,accurate_crosses,0.0,1.0,fractionWithPercentage
+1197655,Lewis Hall,10261,Newcastle United,False,3,Attack,attack,Accurate long balls,long_balls_accurate,3.0,7.0,fractionWithPercentage
+1197655,Lewis Hall,10261,Newcastle United,False,3,Attack,attack,Dispossessed,dispossessed,2.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Attack,attack,xG Non-penalty,expected_goals_non_penalty,0.04,,double
+1197655,Lewis Hall,10261,Newcastle United,False,3,Defense,defense,Defensive actions,defensive_actions,3.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Defense,defense,Tackles,matchstats.headers.tackles,1.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Defense,defense,Blocks,shot_blocks,0.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Defense,defense,Clearances,clearances,1.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Defense,defense,Interceptions,interceptions,1.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Defense,defense,Recoveries,recoveries,3.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Defense,defense,Dribbled past,dribbled_past,1.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Duels,duels,Ground duels won,ground_duels_won,4.0,8.0,fractionWithPercentage
+1197655,Lewis Hall,10261,Newcastle United,False,3,Duels,duels,Aerial duels won,aerials_won,0.0,0.0,fractionWithPercentage
+1197655,Lewis Hall,10261,Newcastle United,False,3,Duels,duels,Was fouled,was_fouled,1.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Duels,duels,Fouls committed,fouls,0.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Duels,duels,Duels won,duel_won,4.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Duels,duels,Duels lost,duel_lost,4.0,,integer
+1197655,Lewis Hall,10261,Newcastle United,False,3,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,32.400001525878906,,speed
+1197655,Lewis Hall,10261,Newcastle United,False,3,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,10063.0,,distance
+1197655,Lewis Hall,10261,Newcastle United,False,3,Physical metrics,physical_metrics,Walking,physical_metrics_walking,3024.0,10063.0,distanceWithPercentage
+1197655,Lewis Hall,10261,Newcastle United,False,3,Physical metrics,physical_metrics,Running,physical_metrics_running,6618.0,10063.0,distanceWithPercentage
+1197655,Lewis Hall,10261,Newcastle United,False,3,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,421.0,10063.0,distanceWithPercentage
+1197655,Lewis Hall,10261,Newcastle United,False,3,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,21.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Top stats,top_stats,Minutes played,minutes_played,9.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Top stats,top_stats,Goals,goals,0.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Top stats,top_stats,Assists,assists,0.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Top stats,top_stats,Top speed,physical_metrics_topspeed,32.099998474121094,,speed
+1258092,William Osula,10261,Newcastle United,False,18,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,1197.0,,distance
+1258092,William Osula,10261,Newcastle United,False,18,Top stats,top_stats,Accurate passes,accurate_passes,0.0,0.0,fractionWithPercentage
+1258092,William Osula,10261,Newcastle United,False,18,Top stats,top_stats,Chances created,chances_created,0.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Top stats,top_stats,Shotmap,,0.0,,boolean
+1258092,William Osula,10261,Newcastle United,False,18,Top stats,top_stats,Defensive actions,defensive_actions,0.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Attack,attack,Touches,touches,2.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Attack,attack,Touches in opposition box,touches_opp_box,0.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Attack,attack,Successful dribbles,dribbles_succeeded,0.0,1.0,fractionWithPercentage
+1258092,William Osula,10261,Newcastle United,False,18,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Defense,defense,Defensive actions,defensive_actions,0.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Defense,defense,Blocks,shot_blocks,0.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Defense,defense,Clearances,clearances,0.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Defense,defense,Interceptions,interceptions,0.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Defense,defense,Recoveries,recoveries,0.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Duels,duels,Ground duels won,ground_duels_won,0.0,1.0,fractionWithPercentage
+1258092,William Osula,10261,Newcastle United,False,18,Duels,duels,Aerial duels won,aerials_won,0.0,0.0,fractionWithPercentage
+1258092,William Osula,10261,Newcastle United,False,18,Duels,duels,Was fouled,was_fouled,,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Duels,duels,Fouls committed,fouls,0.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Duels,duels,Duels lost,duel_lost,1.0,,integer
+1258092,William Osula,10261,Newcastle United,False,18,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,32.099998474121094,,speed
+1258092,William Osula,10261,Newcastle United,False,18,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,1197.0,,distance
+1258092,William Osula,10261,Newcastle United,False,18,Physical metrics,physical_metrics,Walking,physical_metrics_walking,293.0,1197.0,distanceWithPercentage
+1258092,William Osula,10261,Newcastle United,False,18,Physical metrics,physical_metrics,Running,physical_metrics_running,837.0,1197.0,distanceWithPercentage
+1258092,William Osula,10261,Newcastle United,False,18,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,67.0,1197.0,distanceWithPercentage
+1258092,William Osula,10261,Newcastle United,False,18,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,3.0,,integer
+1279040,Gavi,8634,Barcelona,False,6,,,,,,,
+1315475,Roony Bardghji,8634,Barcelona,False,28,,,,,,,
+1362341,Alex Murphy,10261,Newcastle United,False,37,,,,,,,
+1384883,Marc Casadó,8634,Barcelona,False,17,,,,,,,
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,FotMob rating,rating_title,8.39,,double
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Minutes played,minutes_played,67.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Goals,goals,1.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Assists,assists,1.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Expected goals (xG),expected_goals,0.64,,double
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Expected goals on target (xGOT),expected_goals_on_target_variant,0.85,,double
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Expected assists (xA),expected_assists,0.09,,double
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,xG + xA,xg_and_xa,0.73,,double
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Top speed,physical_metrics_topspeed,32.70000076293945,,speed
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,8060.0,,distance
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Accurate passes,accurate_passes,12.0,17.0,fractionWithPercentage
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Chances created,chances_created,1.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Big chances created,big_chance_created_team_title,1.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Shots on target,ShotsOnTarget,1.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Shots off target,ShotsOffTarget,0.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Shot accuracy,shot_accuracy,1.0,1.0,fractionWithPercentage
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Shotmap,,1.0,,boolean
+1404415,Fermín López,8634,Barcelona,False,16,Top stats,top_stats,Defensive actions,defensive_actions,6.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Attack,attack,Touches,touches,31.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Attack,attack,Touches in opposition box,touches_opp_box,4.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Attack,attack,Successful dribbles,dribbles_succeeded,0.0,1.0,fractionWithPercentage
+1404415,Fermín López,8634,Barcelona,False,16,Attack,attack,Passes into final third,passes_into_final_third,1.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Attack,attack,Accurate crosses,accurate_crosses,0.0,1.0,fractionWithPercentage
+1404415,Fermín López,8634,Barcelona,False,16,Attack,attack,Accurate long balls,long_balls_accurate,0.0,1.0,fractionWithPercentage
+1404415,Fermín López,8634,Barcelona,False,16,Attack,attack,Dispossessed,dispossessed,1.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Attack,attack,xG Non-penalty,expected_goals_non_penalty,0.64,,double
+1404415,Fermín López,8634,Barcelona,False,16,Defense,defense,Defensive actions,defensive_actions,6.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Defense,defense,Tackles,matchstats.headers.tackles,3.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Defense,defense,Blocks,shot_blocks,0.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Defense,defense,Clearances,clearances,2.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Defense,defense,Headed clearance,headed_clearance,1.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Defense,defense,Interceptions,interceptions,1.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Defense,defense,Recoveries,recoveries,3.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Defense,defense,Dribbled past,dribbled_past,1.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Duels,duels,Ground duels won,ground_duels_won,3.0,8.0,fractionWithPercentage
+1404415,Fermín López,8634,Barcelona,False,16,Duels,duels,Aerial duels won,aerials_won,1.0,1.0,fractionWithPercentage
+1404415,Fermín López,8634,Barcelona,False,16,Duels,duels,Was fouled,was_fouled,,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Duels,duels,Fouls committed,fouls,2.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Duels,duels,Duels won,duel_won,4.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Duels,duels,Duels lost,duel_lost,5.0,,integer
+1404415,Fermín López,8634,Barcelona,False,16,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,32.70000076293945,,speed
+1404415,Fermín López,8634,Barcelona,False,16,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,8060.0,,distance
+1404415,Fermín López,8634,Barcelona,False,16,Physical metrics,physical_metrics,Walking,physical_metrics_walking,2215.0,8060.0,distanceWithPercentage
+1404415,Fermín López,8634,Barcelona,False,16,Physical metrics,physical_metrics,Running,physical_metrics_running,5577.0,8060.0,distanceWithPercentage
+1404415,Fermín López,8634,Barcelona,False,16,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,268.0,8060.0,distanceWithPercentage
+1404415,Fermín López,8634,Barcelona,False,16,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,13.0,,integer
+1443841,Sean Neave,10261,Newcastle United,False,62,,,,,,,
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,FotMob rating,rating_title,8.4,,double
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Minutes played,minutes_played,90.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Goals,goals,1.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Assists,assists,1.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Expected goals (xG),expected_goals,1.35,,double
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Expected goals on target (xGOT),expected_goals_on_target_variant,1.17,,double
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Expected assists (xA),expected_assists,0.36,,double
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,xG + xA,xg_and_xa,1.71,,double
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Top speed,physical_metrics_topspeed,31.100000381469727,,speed
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,9341.0,,distance
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Accurate passes,accurate_passes,24.0,28.0,fractionWithPercentage
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Chances created,chances_created,1.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Big chances created,big_chance_created_team_title,1.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Error led to goal,errors_led_to_goal,1.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Shots on target,ShotsOnTarget,3.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Shots off target,ShotsOffTarget,1.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Shot accuracy,shot_accuracy,3.0,4.0,fractionWithPercentage
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Shotmap,,1.0,,boolean
+1467236,Lamine Yamal,8634,Barcelona,False,10,Top stats,top_stats,Defensive actions,defensive_actions,3.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Attack,attack,Big chances missed,big_chance_missed_title,2.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Attack,attack,Touches,touches,44.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Attack,attack,Touches in opposition box,touches_opp_box,4.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Attack,attack,Successful dribbles,dribbles_succeeded,1.0,2.0,fractionWithPercentage
+1467236,Lamine Yamal,8634,Barcelona,False,10,Attack,attack,Passes into final third,passes_into_final_third,4.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Attack,attack,Accurate crosses,accurate_crosses,0.0,1.0,fractionWithPercentage
+1467236,Lamine Yamal,8634,Barcelona,False,10,Attack,attack,Accurate long balls,long_balls_accurate,0.0,1.0,fractionWithPercentage
+1467236,Lamine Yamal,8634,Barcelona,False,10,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Attack,attack,xG Non-penalty,expected_goals_non_penalty,0.56,,double
+1467236,Lamine Yamal,8634,Barcelona,False,10,Defense,defense,Defensive actions,defensive_actions,3.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Defense,defense,Tackles,matchstats.headers.tackles,3.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Defense,defense,Blocks,shot_blocks,0.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Defense,defense,Clearances,clearances,0.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Defense,defense,Interceptions,interceptions,0.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Defense,defense,Recoveries,recoveries,2.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Duels,duels,Ground duels won,ground_duels_won,7.0,9.0,fractionWithPercentage
+1467236,Lamine Yamal,8634,Barcelona,False,10,Duels,duels,Aerial duels won,aerials_won,0.0,0.0,fractionWithPercentage
+1467236,Lamine Yamal,8634,Barcelona,False,10,Duels,duels,Was fouled,was_fouled,3.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Duels,duels,Fouls committed,fouls,1.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Duels,duels,Duels won,duel_won,7.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Duels,duels,Duels lost,duel_lost,2.0,,integer
+1467236,Lamine Yamal,8634,Barcelona,False,10,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,31.100000381469727,,speed
+1467236,Lamine Yamal,8634,Barcelona,False,10,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,9341.0,,distance
+1467236,Lamine Yamal,8634,Barcelona,False,10,Physical metrics,physical_metrics,Walking,physical_metrics_walking,3326.0,9341.0,distanceWithPercentage
+1467236,Lamine Yamal,8634,Barcelona,False,10,Physical metrics,physical_metrics,Running,physical_metrics_running,5774.0,9341.0,distanceWithPercentage
+1467236,Lamine Yamal,8634,Barcelona,False,10,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,241.0,9341.0,distanceWithPercentage
+1467236,Lamine Yamal,8634,Barcelona,False,10,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,15.0,,integer
+1529648,Diego Kochen,8634,Barcelona,True,31,,,,,,,
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Top stats,top_stats,FotMob rating,rating_title,6.45,,double
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Top stats,top_stats,Minutes played,minutes_played,90.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Top stats,top_stats,Goals,goals,0.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Top stats,top_stats,Assists,assists,0.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Top stats,top_stats,Expected assists (xA),expected_assists,0.01,,double
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Top stats,top_stats,xG + xA,xg_and_xa,0.01,,double
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Top stats,top_stats,Top speed,physical_metrics_topspeed,31.600000381469727,,speed
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,9784.0,,distance
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Top stats,top_stats,Accurate passes,accurate_passes,58.0,63.0,fractionWithPercentage
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Top stats,top_stats,Chances created,chances_created,0.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Top stats,top_stats,Shotmap,,0.0,,boolean
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Top stats,top_stats,Defensive actions,defensive_actions,8.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Attack,attack,Touches,touches,72.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Attack,attack,Touches in opposition box,touches_opp_box,0.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Attack,attack,Passes into final third,passes_into_final_third,5.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Attack,attack,Accurate long balls,long_balls_accurate,2.0,6.0,fractionWithPercentage
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Defense,defense,Defensive actions,defensive_actions,8.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Defense,defense,Tackles,matchstats.headers.tackles,1.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Defense,defense,Blocks,shot_blocks,0.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Defense,defense,Clearances,clearances,4.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Defense,defense,Headed clearance,headed_clearance,2.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Defense,defense,Interceptions,interceptions,3.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Defense,defense,Recoveries,recoveries,1.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Duels,duels,Ground duels won,ground_duels_won,1.0,2.0,fractionWithPercentage
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Duels,duels,Aerial duels won,aerials_won,1.0,4.0,fractionWithPercentage
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Duels,duels,Was fouled,was_fouled,,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Duels,duels,Fouls committed,fouls,1.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Duels,duels,Duels won,duel_won,2.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Duels,duels,Duels lost,duel_lost,4.0,,integer
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,31.600000381469727,,speed
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,9784.0,,distance
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Physical metrics,physical_metrics,Walking,physical_metrics_walking,2942.0,9784.0,distanceWithPercentage
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Physical metrics,physical_metrics,Running,physical_metrics_running,6658.0,9784.0,distanceWithPercentage
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,184.0,9784.0,distanceWithPercentage
+1532137,Pau Cubarsí,8634,Barcelona,False,5,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,7.0,,integer
+1554633,Aidan Harris,10261,Newcastle United,True,58,,,,,,,
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,FotMob rating,rating_title,7.45,,double
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,Minutes played,minutes_played,90.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,Goals,goals,1.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,Assists,assists,0.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,Expected goals (xG),expected_goals,0.25,,double
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,Expected goals on target (xGOT),expected_goals_on_target_variant,0.73,,double
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,Expected assists (xA),expected_assists,0.04,,double
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,xG + xA,xg_and_xa,0.29,,double
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,Top speed,physical_metrics_topspeed,29.399999618530273,,speed
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,10336.0,,distance
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,Accurate passes,accurate_passes,41.0,46.0,fractionWithPercentage
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,Chances created,chances_created,0.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,Shots on target,ShotsOnTarget,1.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,Shots off target,ShotsOffTarget,0.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,Shot accuracy,shot_accuracy,1.0,1.0,fractionWithPercentage
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,Shotmap,,1.0,,boolean
+1573126,Marc Bernal,8634,Barcelona,False,22,Top stats,top_stats,Defensive actions,defensive_actions,2.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Attack,attack,Touches,touches,58.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Attack,attack,Touches in opposition box,touches_opp_box,1.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Attack,attack,Successful dribbles,dribbles_succeeded,0.0,2.0,fractionWithPercentage
+1573126,Marc Bernal,8634,Barcelona,False,22,Attack,attack,Passes into final third,passes_into_final_third,4.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Attack,attack,Accurate long balls,long_balls_accurate,2.0,3.0,fractionWithPercentage
+1573126,Marc Bernal,8634,Barcelona,False,22,Attack,attack,Dispossessed,dispossessed,1.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Attack,attack,xG Non-penalty,expected_goals_non_penalty,0.25,,double
+1573126,Marc Bernal,8634,Barcelona,False,22,Defense,defense,Defensive actions,defensive_actions,2.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Defense,defense,Blocks,shot_blocks,0.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Defense,defense,Clearances,clearances,1.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Defense,defense,Interceptions,interceptions,1.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Defense,defense,Recoveries,recoveries,6.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Defense,defense,Dribbled past,dribbled_past,1.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Duels,duels,Ground duels won,ground_duels_won,1.0,6.0,fractionWithPercentage
+1573126,Marc Bernal,8634,Barcelona,False,22,Duels,duels,Aerial duels won,aerials_won,1.0,3.0,fractionWithPercentage
+1573126,Marc Bernal,8634,Barcelona,False,22,Duels,duels,Was fouled,was_fouled,1.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Duels,duels,Fouls committed,fouls,1.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Duels,duels,Duels won,duel_won,2.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Duels,duels,Duels lost,duel_lost,7.0,,integer
+1573126,Marc Bernal,8634,Barcelona,False,22,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,29.399999618530273,,speed
+1573126,Marc Bernal,8634,Barcelona,False,22,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,10336.0,,distance
+1573126,Marc Bernal,8634,Barcelona,False,22,Physical metrics,physical_metrics,Walking,physical_metrics_walking,2869.0,10336.0,distanceWithPercentage
+1573126,Marc Bernal,8634,Barcelona,False,22,Physical metrics,physical_metrics,Running,physical_metrics_running,7366.0,10336.0,distanceWithPercentage
+1573126,Marc Bernal,8634,Barcelona,False,22,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,101.0,10336.0,distanceWithPercentage
+1573126,Marc Bernal,8634,Barcelona,False,22,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,6.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Top stats,top_stats,FotMob rating,rating_title,7.3,,double
+1598982,Gerard Martín,8634,Barcelona,False,18,Top stats,top_stats,Minutes played,minutes_played,90.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Top stats,top_stats,Goals,goals,0.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Top stats,top_stats,Assists,assists,1.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Top stats,top_stats,Expected assists (xA),expected_assists,0.26,,double
+1598982,Gerard Martín,8634,Barcelona,False,18,Top stats,top_stats,xG + xA,xg_and_xa,0.26,,double
+1598982,Gerard Martín,8634,Barcelona,False,18,Top stats,top_stats,Top speed,physical_metrics_topspeed,29.799999237060547,,speed
+1598982,Gerard Martín,8634,Barcelona,False,18,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,9868.0,,distance
+1598982,Gerard Martín,8634,Barcelona,False,18,Top stats,top_stats,Accurate passes,accurate_passes,59.0,64.0,fractionWithPercentage
+1598982,Gerard Martín,8634,Barcelona,False,18,Top stats,top_stats,Chances created,chances_created,1.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Top stats,top_stats,Big chances created,big_chance_created_team_title,1.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Top stats,top_stats,Shotmap,,0.0,,boolean
+1598982,Gerard Martín,8634,Barcelona,False,18,Top stats,top_stats,Defensive actions,defensive_actions,7.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Attack,attack,Touches,touches,77.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Attack,attack,Touches in opposition box,touches_opp_box,1.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Attack,attack,Passes into final third,passes_into_final_third,3.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Attack,attack,Accurate long balls,long_balls_accurate,2.0,3.0,fractionWithPercentage
+1598982,Gerard Martín,8634,Barcelona,False,18,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Defense,defense,Defensive actions,defensive_actions,7.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Defense,defense,Tackles,matchstats.headers.tackles,0.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Defense,defense,Blocks,shot_blocks,0.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Defense,defense,Clearances,clearances,7.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Defense,defense,Headed clearance,headed_clearance,1.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Defense,defense,Interceptions,interceptions,0.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Defense,defense,Recoveries,recoveries,3.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Defense,defense,Dribbled past,dribbled_past,1.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Duels,duels,Ground duels won,ground_duels_won,0.0,1.0,fractionWithPercentage
+1598982,Gerard Martín,8634,Barcelona,False,18,Duels,duels,Aerial duels won,aerials_won,0.0,0.0,fractionWithPercentage
+1598982,Gerard Martín,8634,Barcelona,False,18,Duels,duels,Was fouled,was_fouled,,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Duels,duels,Fouls committed,fouls,1.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Duels,duels,Duels lost,duel_lost,1.0,,integer
+1598982,Gerard Martín,8634,Barcelona,False,18,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,29.799999237060547,,speed
+1598982,Gerard Martín,8634,Barcelona,False,18,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,9868.0,,distance
+1598982,Gerard Martín,8634,Barcelona,False,18,Physical metrics,physical_metrics,Walking,physical_metrics_walking,2964.0,9868.0,distanceWithPercentage
+1598982,Gerard Martín,8634,Barcelona,False,18,Physical metrics,physical_metrics,Running,physical_metrics_running,6775.0,9868.0,distanceWithPercentage
+1598982,Gerard Martín,8634,Barcelona,False,18,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,129.0,9868.0,distanceWithPercentage
+1598982,Gerard Martín,8634,Barcelona,False,18,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,7.0,,integer
+1695867,Álvaro Cortés,8634,Barcelona,False,36,,,,,,,
+1777474,Tomás Marqués,8634,Barcelona,False,43,,,,,,,
+1815149,Xavi Espart,8634,Barcelona,False,42,Top stats,top_stats,FotMob rating,rating_title,6.5,,double
+1815149,Xavi Espart,8634,Barcelona,False,42,Top stats,top_stats,Minutes played,minutes_played,24.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Top stats,top_stats,Goals,goals,0.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Top stats,top_stats,Assists,assists,0.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Top stats,top_stats,Expected assists (xA),expected_assists,0.01,,double
+1815149,Xavi Espart,8634,Barcelona,False,42,Top stats,top_stats,xG + xA,xg_and_xa,0.01,,double
+1815149,Xavi Espart,8634,Barcelona,False,42,Top stats,top_stats,Top speed,physical_metrics_topspeed,29.799999237060547,,speed
+1815149,Xavi Espart,8634,Barcelona,False,42,Top stats,top_stats,Distance covered,physical_metrics_distance_covered,2923.0,,distance
+1815149,Xavi Espart,8634,Barcelona,False,42,Top stats,top_stats,Accurate passes,accurate_passes,15.0,15.0,fractionWithPercentage
+1815149,Xavi Espart,8634,Barcelona,False,42,Top stats,top_stats,Chances created,chances_created,1.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Top stats,top_stats,Shotmap,,0.0,,boolean
+1815149,Xavi Espart,8634,Barcelona,False,42,Top stats,top_stats,Defensive actions,defensive_actions,1.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Attack,attack,Touches,touches,21.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Attack,attack,Touches in opposition box,touches_opp_box,1.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Attack,attack,Passes into final third,passes_into_final_third,1.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Attack,attack,Accurate crosses,accurate_crosses,1.0,1.0,fractionWithPercentage
+1815149,Xavi Espart,8634,Barcelona,False,42,Attack,attack,Dispossessed,dispossessed,0.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Defense,defense,Defensive actions,defensive_actions,1.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Defense,defense,Tackles,matchstats.headers.tackles,1.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Defense,defense,Blocks,shot_blocks,0.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Defense,defense,Clearances,clearances,0.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Defense,defense,Interceptions,interceptions,0.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Defense,defense,Recoveries,recoveries,1.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Defense,defense,Dribbled past,dribbled_past,0.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Duels,duels,Ground duels won,ground_duels_won,1.0,2.0,fractionWithPercentage
+1815149,Xavi Espart,8634,Barcelona,False,42,Duels,duels,Aerial duels won,aerials_won,0.0,0.0,fractionWithPercentage
+1815149,Xavi Espart,8634,Barcelona,False,42,Duels,duels,Was fouled,was_fouled,,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Duels,duels,Fouls committed,fouls,1.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Duels,duels,Duels won,duel_won,1.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Duels,duels,Duels lost,duel_lost,1.0,,integer
+1815149,Xavi Espart,8634,Barcelona,False,42,Physical metrics,physical_metrics,Top speed,physical_metrics_topspeed,29.799999237060547,,speed
+1815149,Xavi Espart,8634,Barcelona,False,42,Physical metrics,physical_metrics,Distance covered,physical_metrics_distance_covered,2923.0,,distance
+1815149,Xavi Espart,8634,Barcelona,False,42,Physical metrics,physical_metrics,Walking,physical_metrics_walking,757.0,2923.0,distanceWithPercentage
+1815149,Xavi Espart,8634,Barcelona,False,42,Physical metrics,physical_metrics,Running,physical_metrics_running,2085.0,2923.0,distanceWithPercentage
+1815149,Xavi Espart,8634,Barcelona,False,42,Physical metrics,physical_metrics,Sprinting,physical_metrics_sprinting,81.0,2923.0,distanceWithPercentage
+1815149,Xavi Espart,8634,Barcelona,False,42,Physical metrics,physical_metrics,Number of sprints,physical_metrics_number_of_sprints,4.0,,integer

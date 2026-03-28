@@ -1,0 +1,164 @@
+player_id,player_name,team_id,team_name,score,gw_id
+974753,Julián Álvarez,9906,Atlético de Madrid,66,1
+609516,Robin Le Normand,9906,Atlético de Madrid,49,1
+1226147,Giuliano Simeone,9906,Atlético de Madrid,37,1
+9906,Atlético de Madrid Keepers,9906,Atlético de Madrid,36,1
+690516,Ademola Lookman,9906,Atlético de Madrid,31,1
+1173678,Johnny Cardoso,9906,Atlético de Madrid,26,1
+726345,Nahuel Molina,9906,Atlético de Madrid,23,1
+727897,Dávid Hancko,9906,Atlético de Madrid,21,1
+184533,Koke,9906,Atlético de Madrid,21,1
+184138,Antoine Griezmann,9906,Atlético de Madrid,21,1
+1051097,Matteo Ruggeri,9906,Atlético de Madrid,18,1
+602563,Marcos Llorente,9906,Atlético de Madrid,9,1
+942372,Álex Baena,9906,Atlético de Madrid,8,1
+841672,Nicolás González,9906,Atlético de Madrid,6,1
+488412,Clément Lenglet,9906,Atlético de Madrid,3,1
+1323897,Marc Pubill,9906,Atlético de Madrid,3,1
+1447089,Julio Díaz,9906,Atlético de Madrid,3,1
+955271,Thiago Almada,9906,Atlético de Madrid,3,1
+1254394,Obed Vargas,9906,Atlético de Madrid,3,1
+440330,Alexander Sørloth,9906,Atlético de Madrid,3,1
+474589,José Giménez,9906,Atlético de Madrid,2,1
+696679,Raphinha,8634,Barcelona,86,1
+93447,Robert Lewandowski,8634,Barcelona,71,1
+1467236,Lamine Yamal,8634,Barcelona,54,1
+1404415,Fermín López,8634,Barcelona,50,1
+921253,Ronald Araujo,8634,Barcelona,37,1
+1573126,Marc Bernal,8634,Barcelona,35,1
+1083323,Pedri,8634,Barcelona,33,1
+1598982,Gerard Martín,8634,Barcelona,28,1
+1532137,Pau Cubarsí,8634,Barcelona,27,1
+361757,João Cancelo,8634,Barcelona,20,1
+8634,Barcelona Keepers,8634,Barcelona,20,1
+1815149,Xavi Espart,8634,Barcelona,16,1
+614834,Dani Olmo,8634,Barcelona,11,1
+696365,Marcus Rashford,8634,Barcelona,5,1
+881771,Ferran Torres,8634,Barcelona,5,1
+1315475,Roony Bardghji,8634,Barcelona,5,1
+940573,Eric García,8634,Barcelona,4,1
+1695867,Álvaro Cortés,8634,Barcelona,3,1
+1279040,Gavi,8634,Barcelona,3,1
+1384883,Marc Casadó,8634,Barcelona,3,1
+1777474,Tomás Marqués,8634,Barcelona,3,1
+8637,Galatasaray Keepers,8637,Galatasaray,37,1
+291399,Abdülkerim Bardakci,8637,Galatasaray,30,1
+421786,Mario Lemina,8637,Galatasaray,30,1
+1034808,Sacha Boey,8637,Galatasaray,26,1
+1027472,Wilfried Singo,8637,Galatasaray,20,1
+592909,Lucas Torreira,8637,Galatasaray,17,1
+890232,Baris Alper Yilmaz,8637,Galatasaray,16,1
+583601,Roland Sallai,8637,Galatasaray,13,1
+530859,Leroy Sané,8637,Galatasaray,12,1
+906945,Ismail Jakobs,8637,Galatasaray,11,1
+837341,Noa Lang,8637,Galatasaray,10,1
+1041660,Eren Elmali,8637,Galatasaray,9,1
+687681,Victor Osimhen,8637,Galatasaray,7,1
+887139,Ahmed Kutucu,8637,Galatasaray,5,1
+1277380,Yáser Asprilla,8637,Galatasaray,5,1
+902710,Gabriel Sara,8637,Galatasaray,4,1
+441164,Kaan Ayhan,8637,Galatasaray,3,1
+1602223,Gökdeniz Gürpüz,8637,Galatasaray,3,1
+178818,Ilkay Gündogan,8637,Galatasaray,3,1
+282770,Mauro Icardi,8637,Galatasaray,3,1
+845991,Yunus Akgün,8637,Galatasaray,3,1
+1152455,Florian Wirtz,8650,Liverpool,63,1
+1197030,Hugo Ekitiké,8650,Liverpool,60,1
+831489,Alexis Mac Allister,8650,Liverpool,58,1
+292462,Mohamed Salah,8650,Liverpool,58,1
+846005,Dominik Szoboszlai,8650,Liverpool,54,1
+956683,Ryan Gravenberch,8650,Liverpool,41,1
+8650,Liverpool Keepers,8650,Liverpool,30,1
+209405,Virgil van Dijk,8650,Liverpool,28,1
+820140,Ibrahima Konaté,8650,Liverpool,27,1
+1195281,Milos Kerkez,8650,Liverpool,25,1
+933768,Curtis Jones,8650,Liverpool,15,1
+1597668,Rio Ngumoha,8650,Liverpool,10,1
+966018,Jeremie Frimpong,8650,Liverpool,8,1
+1436258,Trey Nyoni,8650,Liverpool,7,1
+1439550,Kieran Morrison,8650,Liverpool,5,1
+784510,Federico Chiesa,8650,Liverpool,4,1
+806552,Cody Gakpo,8650,Liverpool,4,1
+357880,Andrew Robertson,8650,Liverpool,3,1
+568571,Joseph Gomez,8650,Liverpool,3,1
+1589629,Amara Nallo,8650,Liverpool,3,1
+675088,Rodri,8456,Manchester City,34,1
+488139,Bernardo Silva,8456,Manchester City,19,1
+933576,Antoine Semenyo,8456,Manchester City,19,1
+8456,Manchester City Keepers,8456,Manchester City,19,1
+614006,Rúben Dias,8456,Manchester City,17,1
+1362998,Abdukodir Khusanov,8456,Manchester City,17,1
+844425,Marc Guéhi,8456,Manchester City,16,1
+942368,Jérémy Doku,8456,Manchester City,16,1
+868344,Tijjani Reijnders,8456,Manchester City,10,1
+933845,Rayan Aït-Nouri,8456,Manchester City,9,1
+1174337,Savinho,8456,Manchester City,9,1
+1104053,Rayan Cherki,8456,Manchester City,8,1
+737066,Erling Haaland,8456,Manchester City,7,1
+839204,Omar Marmoush,8456,Manchester City,5,1
+263653,John Stones,8456,Manchester City,3,1
+417068,Nathan Aké,8456,Manchester City,3,1
+955529,Matheus Nunes,8456,Manchester City,3,1
+1414691,Max Alleyne,8456,Manchester City,3,1
+815006,Phil Foden,8456,Manchester City,3,1
+1280132,Nico González,8456,Manchester City,3,1
+1300526,Nico O'Reilly,8456,Manchester City,-1,1
+1050166,Anthony Elanga,10261,Newcastle United,29,1
+906937,Anthony Gordon,10261,Newcastle United,19,1
+867414,Sandro Tonali,10261,Newcastle United,14,1
+1021929,Jacob Ramsey,10261,Newcastle United,13,1
+535936,Joelinton,10261,Newcastle United,12,1
+760359,Harvey Barnes,10261,Newcastle United,11,1
+521148,Jacob Murphy,10261,Newcastle United,9,1
+956682,Sven Botman,10261,Newcastle United,5,1
+666857,Yoane Wissa,10261,Newcastle United,5,1
+1106563,Nick Woltemade,10261,Newcastle United,5,1
+1443841,Sean Neave,10261,Newcastle United,5,1
+860975,Joseph Willock,10261,Newcastle United,4,1
+10261,Newcastle United Keepers,10261,Newcastle United,4,1
+1362341,Alex Murphy,10261,Newcastle United,3,1
+1258092,William Osula,10261,Newcastle United,1,1
+191869,Kieran Trippier,10261,Newcastle United,-6,1
+1107910,Valentino Livramento,10261,Newcastle United,-9,1
+188058,Daniel Burn,10261,Newcastle United,-10,1
+1137407,Malick Thiaw,10261,Newcastle United,-10,1
+1197655,Lewis Hall,10261,Newcastle United,-10,1
+743533,Federico Valverde,8633,Real Madrid,87,1
+8633,Real Madrid Keepers,8633,Real Madrid,47,1
+276738,Antonio Rüdiger,8633,Real Madrid,38,1
+1253890,Arda Güler,8633,Real Madrid,34,1
+750027,Brahim Díaz,8633,Real Madrid,31,1
+914458,Aurélien Tchouaméni,8633,Real Madrid,30,1
+623537,Ferland Mendy,8633,Real Madrid,28,1
+1367619,Dean Huijsen,8633,Real Madrid,26,1
+760712,Trent Alexander-Arnold,8633,Real Madrid,25,1
+750028,Fran García,8633,Real Madrid,23,1
+846033,Vinícius Júnior,8633,Real Madrid,23,1
+1796908,Thiago Pitarch,8633,Real Madrid,18,1
+1015185,Eduardo Camavinga,8633,Real Madrid,13,1
+282674,Daniel Carvajal,8633,Real Madrid,9,1
+1508427,Manuel Ángel,8633,Real Madrid,7,1
+1413847,Gonzalo García,8633,Real Madrid,5,1
+1580528,Raúl Asencio,8633,Real Madrid,3,1
+1696019,Diego Aguado,8633,Real Madrid,3,1
+1403691,César Palacios,8633,Real Madrid,3,1
+1807277,Jorge Cestero,8633,Real Madrid,3,1
+1607566,Franco Mastantuono,8633,Real Madrid,-2,1
+1173787,Xavi Simons,8586,Tottenham Hotspur,70,1
+1288111,Mathys Tel,8586,Tottenham Hotspur,40,1
+823825,Randal Kolo Muani,8586,Tottenham Hotspur,36,1
+1323305,Archie Gray,8586,Tottenham Hotspur,34,1
+789066,Cristian Romero,8586,Tottenham Hotspur,31,1
+1107280,Pape Sarr,8586,Tottenham Hotspur,31,1
+8586,Tottenham Hotspur Keepers,8586,Tottenham Hotspur,31,1
+1097466,Micky van de Ven,8586,Tottenham Hotspur,25,1
+1203661,Radu Dragusin,8586,Tottenham Hotspur,15,1
+754126,Kevin Danso,8586,Tottenham Hotspur,11,1
+966027,Conor Gallagher,8586,Tottenham Hotspur,10,1
+894803,Djed Spence,8586,Tottenham Hotspur,9,1
+1386775,Lucas Bergvall,8586,Tottenham Hotspur,7,1
+1431275,Callum Olusesi,8586,Tottenham Hotspur,7,1
+941573,Pedro Porro,8586,Tottenham Hotspur,4,1
+1531854,James Rowswell,8586,Tottenham Hotspur,3,1
+1300529,Rio Kyerematen,8586,Tottenham Hotspur,3,1
+1052898,Destiny Udogie,8586,Tottenham Hotspur,2,1

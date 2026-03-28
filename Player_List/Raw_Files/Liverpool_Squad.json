@@ -1,0 +1,181 @@
+{
+  "team_name": "Liverpool",
+  "team_id": 8650,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8650/squad/liverpool",
+  "players": [
+    {
+      "player_id": 26630,
+      "player_name": "Arne Slot",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/26630/arne-slot"
+    },
+    {
+      "player_id": 202643,
+      "player_name": "Wataru Endo",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/202643/wataru-endo"
+    },
+    {
+      "player_id": 209405,
+      "player_name": "Virgil van Dijk",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/209405/virgil-van-dijk"
+    },
+    {
+      "player_id": 292462,
+      "player_name": "Mohamed Salah",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/292462/mohamed-salah"
+    },
+    {
+      "player_id": 319784,
+      "player_name": "Alisson Becker",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/319784/alisson-becker"
+    },
+    {
+      "player_id": 357880,
+      "player_name": "Andrew Robertson",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/357880/andrew-robertson"
+    },
+    {
+      "player_id": 568571,
+      "player_name": "Joseph Gomez",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/568571/joseph-gomez"
+    },
+    {
+      "player_id": 582276,
+      "player_name": "Freddie Woodman",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/582276/freddie-woodman"
+    },
+    {
+      "player_id": 690107,
+      "player_name": "Alexander Isak",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/690107/alexander-isak"
+    },
+    {
+      "player_id": 784510,
+      "player_name": "Federico Chiesa",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/784510/federico-chiesa"
+    },
+    {
+      "player_id": 806552,
+      "player_name": "Cody Gakpo",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/806552/cody-gakpo"
+    },
+    {
+      "player_id": 820140,
+      "player_name": "Ibrahima Konaté",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/820140/ibrahima-konate"
+    },
+    {
+      "player_id": 831489,
+      "player_name": "Alexis Mac Allister",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/831489/alexis-mac-allister"
+    },
+    {
+      "player_id": 846005,
+      "player_name": "Dominik Szoboszlai",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/846005/dominik-szoboszlai"
+    },
+    {
+      "player_id": 933768,
+      "player_name": "Curtis Jones",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/933768/curtis-jones"
+    },
+    {
+      "player_id": 948800,
+      "player_name": "Giorgi Mamardashvili",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/948800/giorgi-mamardashvili"
+    },
+    {
+      "player_id": 956683,
+      "player_name": "Ryan Gravenberch",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/956683/ryan-gravenberch"
+    },
+    {
+      "player_id": 966018,
+      "player_name": "Jeremie Frimpong",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/966018/jeremie-frimpong"
+    },
+    {
+      "player_id": 1076952,
+      "player_name": "Calvin Ramsay",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1076952/calvin-ramsay"
+    },
+    {
+      "player_id": 1081076,
+      "player_name": "Rhys Williams",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1081076/rhys-williams"
+    },
+    {
+      "player_id": 1113690,
+      "player_name": "Conor Bradley",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1113690/conor-bradley"
+    },
+    {
+      "player_id": 1152455,
+      "player_name": "Florian Wirtz",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1152455/florian-wirtz"
+    },
+    {
+      "player_id": 1195281,
+      "player_name": "Milos Kerkez",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1195281/milos-kerkez"
+    },
+    {
+      "player_id": 1197030,
+      "player_name": "Hugo Ekitiké",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1197030/hugo-ekitike"
+    },
+    {
+      "player_id": 1310118,
+      "player_name": "Stefan Bajcetic",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1310118/stefan-bajcetic"
+    },
+    {
+      "player_id": 1366340,
+      "player_name": "Ármin Pécsi",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1366340/armin-pecsi"
+    },
+    {
+      "player_id": 1436258,
+      "player_name": "Trey Nyoni",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1436258/trey-nyoni"
+    },
+    {
+      "player_id": 1597668,
+      "player_name": "Rio Ngumoha",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1597668/rio-ngumoha"
+    },
+    {
+      "player_id": 1609209,
+      "player_name": "Giovanni Leoni",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1609209/giovanni-leoni"
+    }
+  ]
+}

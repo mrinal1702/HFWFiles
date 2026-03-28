@@ -1,0 +1,14 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,minutes_played,goals,assists,accurate_passes,inaccurate_passes,chances_created,shots_on_target,shots_off_target,dispossessed,tackles,tackles_lost,blocks,clearances,headed_clearance,interceptions,recoveries,dribbled_past,ground_duels_won,ground_duels_lost,aerial_duels_won,aerial_duels_lost,was_fouled,fouls_committed,duels_won,crosses_completed,crosses_attempted,long_balls_completed,long_balls_attempted,red_cards
+188058,Daniel Burn,10261,Newcastle United,1,90.0,0.0,0.0,17.0,5.0,0.0,1.0,0.0,1.0,0.0,4.0,1.0,6.0,2.0,0.0,1.0,1.0,0.0,4.0,4.0,2.0,,2.0,4.0,0,0,2,5,0
+191869,Kieran Trippier,10261,Newcastle United,1,45.0,0.0,0.0,17.0,7.0,0.0,,,0.0,0.0,3.0,0.0,0.0,,1.0,3.0,2.0,0.0,3.0,0.0,1.0,,1.0,,0,0,1,2,0
+361757,João Cancelo,8634,Barcelona,1,66.0,0.0,0.0,25.0,6.0,0.0,,,1.0,0.0,2.0,0.0,2.0,1.0,1.0,3.0,0.0,4.0,2.0,3.0,1.0,1.0,0.0,7.0,1,2,0,0,0
+921253,Ronald Araujo,8634,Barcelona,1,68.0,0.0,0.0,43.0,5.0,0.0,0.0,1.0,0.0,2.0,0.0,1.0,5.0,3.0,0.0,1.0,0.0,3.0,0.0,3.0,0.0,,0.0,6.0,0,1,0,1,0
+940573,Eric García,8634,Barcelona,1,22.0,0.0,0.0,5.0,2.0,0.0,,,0.0,0.0,1.0,0.0,0.0,,0.0,1.0,0.0,0.0,1.0,1.0,0.0,,1.0,1.0,0,0,1,2,0
+956682,Sven Botman,10261,Newcastle United,1,26.0,0.0,0.0,9.0,1.0,0.0,,,0.0,0.0,,0.0,0.0,,0.0,1.0,0.0,,,0.0,0.0,,0.0,,0,0,2,2,0
+1107910,Valentino Livramento,10261,Newcastle United,1,45.0,0.0,0.0,7.0,4.0,0.0,,,0.0,0.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,3.0,1.0,0.0,2.0,0,0,0,2,0
+1137407,Malick Thiaw,10261,Newcastle United,1,90.0,0.0,0.0,25.0,2.0,1.0,,,0.0,0.0,,2.0,3.0,1.0,1.0,6.0,0.0,,,1.0,2.0,,0.0,1.0,0,0,1,1,0
+1197655,Lewis Hall,10261,Newcastle United,1,90.0,0.0,1.0,16.0,8.0,1.0,1.0,0.0,2.0,1.0,4.0,0.0,1.0,,1.0,3.0,1.0,4.0,4.0,0.0,0.0,1.0,0.0,4.0,0,1,3,7,0
+1362341,Alex Murphy,10261,Newcastle United,1,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0,0
+1532137,Pau Cubarsí,8634,Barcelona,1,90.0,0.0,0.0,58.0,5.0,0.0,,,0.0,1.0,1.0,0.0,4.0,2.0,3.0,1.0,0.0,1.0,1.0,1.0,3.0,,1.0,2.0,0,0,2,6,0
+1598982,Gerard Martín,8634,Barcelona,1,90.0,0.0,1.0,59.0,5.0,1.0,,,0.0,0.0,1.0,0.0,7.0,1.0,0.0,3.0,1.0,0.0,1.0,0.0,0.0,,1.0,,0,0,2,3,0
+1695867,Álvaro Cortés,8634,Barcelona,1,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0,0

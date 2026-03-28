@@ -1,0 +1,15 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,minutes_played,goals,assists,accurate_passes,inaccurate_passes,chances_created,shots_on_target,shots_off_target,dispossessed,tackles,tackles_lost,blocks,clearances,headed_clearance,interceptions,recoveries,dribbled_past,ground_duels_won,ground_duels_lost,aerial_duels_won,aerial_duels_lost,was_fouled,fouls_committed,duels_won,crosses_completed,crosses_attempted,long_balls_completed,long_balls_attempted,red_cards
+93447,Robert Lewandowski,8634,Barcelona,3,66.0,2.0,0.0,9.0,2.0,3.0,3.0,0.0,1.0,0.0,1.0,0.0,1.0,1.0,0.0,2.0,0.0,4.0,1.0,3.0,2.0,4.0,0.0,7.0,0,0,0,0,0
+521148,Jacob Murphy,10261,Newcastle United,3,26.0,0.0,0.0,3.0,0.0,1.0,,,0.0,1.0,1.0,0.0,0.0,,0.0,1.0,0.0,1.0,1.0,0.0,1.0,,1.0,1.0,1,1,0,0,0
+666857,Yoane Wissa,10261,Newcastle United,3,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0,0
+696365,Marcus Rashford,8634,Barcelona,3,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0,0
+696679,Raphinha,8634,Barcelona,3,90.0,2.0,2.0,16.0,10.0,5.0,5.0,0.0,0.0,1.0,1.0,0.0,0.0,,0.0,3.0,0.0,2.0,1.0,1.0,1.0,1.0,1.0,3.0,3,6,0,1,0
+760359,Harvey Barnes,10261,Newcastle United,3,90.0,0.0,1.0,15.0,2.0,1.0,1.0,1.0,1.0,1.0,4.0,0.0,0.0,,0.0,4.0,0.0,3.0,4.0,0.0,2.0,2.0,2.0,3.0,0,2,0,0,0
+881771,Ferran Torres,8634,Barcelona,3,24.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,,0.0,0.0,,0.0,0.0,0.0,,,0.0,0.0,,0.0,,0,0,0,0,0
+906937,Anthony Gordon,10261,Newcastle United,3,81.0,0.0,0.0,3.0,1.0,1.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,,0.0,0.0,0.0,3.0,1.0,0.0,0.0,2.0,0.0,3.0,0,0,1,1,0
+1050166,Anthony Elanga,10261,Newcastle United,3,64.0,2.0,0.0,9.0,6.0,1.0,2.0,0.0,0.0,0.0,2.0,0.0,1.0,,0.0,1.0,1.0,0.0,2.0,1.0,1.0,,1.0,1.0,1,2,0,1,0
+1106563,Nick Woltemade,10261,Newcastle United,3,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0,0
+1258092,William Osula,10261,Newcastle United,3,9.0,0.0,0.0,0.0,0.0,0.0,,,0.0,0.0,1.0,0.0,0.0,,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,0.0,,0,0,0,0,0
+1315475,Roony Bardghji,8634,Barcelona,3,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0,0
+1443841,Sean Neave,10261,Newcastle United,3,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0,0
+1467236,Lamine Yamal,8634,Barcelona,3,90.0,1.0,1.0,24.0,4.0,1.0,3.0,1.0,0.0,3.0,2.0,0.0,0.0,,0.0,2.0,0.0,7.0,2.0,0.0,0.0,3.0,1.0,7.0,0,1,0,1,0

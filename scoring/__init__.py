@@ -1,0 +1,25 @@
+"""Point scoring configs for player performance models."""
+
+from .defender_points import (
+    DEFENDER_SCORING,
+    EVENT_LEVEL_DEFENSIVE,
+    SCORING_WEIGHTS_STILL_TODO,
+    STATS_IGNORED_FOR_SCORING,
+    STATS_NO_WEIGHT_ASSIGNED,
+    STATS_STILL_MISSING_OR_EXTERNAL,
+)
+from .midfielder_points import MIDFIELDER_SCORING
+from .forward_points import FORWARDS_SCORING
+from .goalkeeper_points import GOALKEEPER_SCORING
+
+__all__ = [
+    "DEFENDER_SCORING",
+    "MIDFIELDER_SCORING",
+    "FORWARDS_SCORING",
+    "GOALKEEPER_SCORING",
+    "EVENT_LEVEL_DEFENSIVE",
+    "SCORING_WEIGHTS_STILL_TODO",
+    "STATS_IGNORED_FOR_SCORING",
+    "STATS_NO_WEIGHT_ASSIGNED",
+    "STATS_STILL_MISSING_OR_EXTERNAL",
+]

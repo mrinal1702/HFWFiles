@@ -1,0 +1,175 @@
+{
+  "team_name": "Atletico Madrid",
+  "team_id": 9906,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/9906/squad/atletico-de-madrid",
+  "players": [
+    {
+      "player_id": 2642,
+      "player_name": "Diego Simeone",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/2642/diego-simeone"
+    },
+    {
+      "player_id": 177126,
+      "player_name": "Jan Oblak",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/177126/jan-oblak"
+    },
+    {
+      "player_id": 184138,
+      "player_name": "Antoine Griezmann",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/184138/antoine-griezmann"
+    },
+    {
+      "player_id": 184533,
+      "player_name": "Koke",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/184533/koke"
+    },
+    {
+      "player_id": 389050,
+      "player_name": "Juan Musso",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/389050/juan-musso"
+    },
+    {
+      "player_id": 440330,
+      "player_name": "Alexander Sørloth",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/440330/alexander-sorloth"
+    },
+    {
+      "player_id": 474589,
+      "player_name": "José Giménez",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/474589/jose-gimenez"
+    },
+    {
+      "player_id": 488412,
+      "player_name": "Clément Lenglet",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/488412/clement-lenglet"
+    },
+    {
+      "player_id": 602563,
+      "player_name": "Marcos Llorente",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/602563/marcos-llorente"
+    },
+    {
+      "player_id": 609516,
+      "player_name": "Robin Le Normand",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/609516/robin-le-normand"
+    },
+    {
+      "player_id": 690516,
+      "player_name": "Ademola Lookman",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/690516/ademola-lookman"
+    },
+    {
+      "player_id": 726345,
+      "player_name": "Nahuel Molina",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/726345/nahuel-molina"
+    },
+    {
+      "player_id": 727897,
+      "player_name": "Dávid Hancko",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/727897/david-hancko"
+    },
+    {
+      "player_id": 841672,
+      "player_name": "Nicolás González",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/841672/nicolas-gonzalez"
+    },
+    {
+      "player_id": 942372,
+      "player_name": "Álex Baena",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/942372/alex-baena"
+    },
+    {
+      "player_id": 955271,
+      "player_name": "Thiago Almada",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/955271/thiago-almada"
+    },
+    {
+      "player_id": 974753,
+      "player_name": "Julián Álvarez",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/974753/julian-alvarez"
+    },
+    {
+      "player_id": 1051097,
+      "player_name": "Matteo Ruggeri",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1051097/matteo-ruggeri"
+    },
+    {
+      "player_id": 1173678,
+      "player_name": "Johnny Cardoso",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1173678/johnny-cardoso"
+    },
+    {
+      "player_id": 1226147,
+      "player_name": "Giuliano Simeone",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/1226147/giuliano-simeone"
+    },
+    {
+      "player_id": 1254394,
+      "player_name": "Obed Vargas",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1254394/obed-vargas"
+    },
+    {
+      "player_id": 1323897,
+      "player_name": "Marc Pubill",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1323897/marc-pubill"
+    },
+    {
+      "player_id": 1338192,
+      "player_name": "Pablo Barrios",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1338192/pablo-barrios"
+    },
+    {
+      "player_id": 1419969,
+      "player_name": "Rodrigo Mendoza",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1419969/rodrigo-mendoza"
+    },
+    {
+      "player_id": 1527038,
+      "player_name": "Aleksa Puric",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1527038/aleksa-puric"
+    },
+    {
+      "player_id": 1664735,
+      "player_name": "Jano Monserrate",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1664735/jano-monserrate"
+    },
+    {
+      "player_id": 1825670,
+      "player_name": "Jorge Rajado",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1825670/jorge-rajado"
+    },
+    {
+      "player_id": 1842319,
+      "player_name": "Álvaro Moreno",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1842319/alvaro-moreno"
+    }
+  ]
+}

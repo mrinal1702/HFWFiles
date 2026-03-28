@@ -1,0 +1,42 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,final_score
+Raphinha,696679,Barcelona,forward,84.16666666666666,21.0,105
+Robert Lewandowski,93447,Barcelona,forward,52.900000000000006,18.0,71
+Lamine Yamal,1467236,Barcelona,forward,46.35,21.0,67
+Fermín López,1404415,Barcelona,midfielder,36.53133333333333,13.0,50
+Anthony Elanga,1050166,Newcastle United,forward,37.53333333333333,6.0,44
+Ronald Araujo,921253,Barcelona,defender,31.596666666666668,5.0,37
+Marc Bernal,1573126,Barcelona,midfielder,20.214,15.0,35
+Pedri,1083323,Barcelona,midfielder,17.908,15.0,33
+Gerard Martín,1598982,Barcelona,defender,27.99,0.0,28
+Harvey Barnes,760359,Newcastle United,forward,20.9,6.0,27
+Pau Cubarsí,1532137,Barcelona,defender,26.88,0.0,27
+João Cancelo,361757,Barcelona,defender,20.33,0.0,20
+Anthony Gordon,906937,Newcastle United,forward,12.775,6.0,19
+Xavi Espart,1815149,Barcelona,midfielder,11.56,4.5,16
+Sandro Tonali,867414,Newcastle United,midfielder,13.439333333333332,1.0,14
+Jacob Ramsey,1021929,Newcastle United,midfielder,18.326,-5.0,13
+Joelinton,535936,Newcastle United,midfielder,14.997333333333332,-3.0,12
+Dani Olmo,614834,Barcelona,midfielder,6.772666666666667,4.5,11
+Jacob Murphy,521148,Newcastle United,forward,11.816666666666666,-2.5,9
+Ferran Torres,881771,Barcelona,forward,4.966666666666667,0.5,5
+Sven Botman,956682,Newcastle United,defender,5.036666666666667,0.0,5
+Yoane Wissa,666857,Newcastle United,forward,5.0,0.0,5
+Marcus Rashford,696365,Barcelona,forward,5.0,0.0,5
+Nick Woltemade,1106563,Newcastle United,forward,5.0,0.0,5
+Roony Bardghji,1315475,Barcelona,forward,5.0,0.0,5
+Sean Neave,1443841,Newcastle United,forward,5.0,0.0,5
+Eric García,940573,Barcelona,defender,3.943333333333333,0.0,4
+Joseph Willock,860975,Newcastle United,midfielder,7.2426666666666675,-3.5,4
+Alex Murphy,1362341,Newcastle United,defender,3.0,0.0,3
+Álvaro Cortés,1695867,Barcelona,defender,3.0,0.0,3
+Gavi,1279040,Barcelona,midfielder,3.0,0.0,3
+Marc Casadó,1384883,Barcelona,midfielder,3.0,0.0,3
+Tomás Marqués,1777474,Barcelona,midfielder,3.0,0.0,3
+William Osula,1258092,Newcastle United,forward,3.3,-2.5,1
+Kieran Trippier,191869,Newcastle United,defender,-0.9700000000000006,-5.0,-6
+Valentino Livramento,1107910,Newcastle United,defender,5.99,-15.0,-9
+Malick Thiaw,1137407,Newcastle United,defender,15.31,-25.0,-10
+Lewis Hall,1197655,Newcastle United,defender,15.0,-25.0,-10
+Daniel Burn,188058,Newcastle United,defender,14.87,-25.0,-10
+Barcelona Keepers,8634,Barcelona,goalkeeper,13.973333333333333,6.0,20
+Newcastle United Keepers,10261,Newcastle United,goalkeeper,28.2,-24.0,4

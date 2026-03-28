@@ -1,0 +1,37 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+208494,Casemiro,10260,Manchester United,2,midfielder,40.798,3.0,3.0,46.798,90.0,2,2,5.0,51.798
+422685,Bruno Fernandes,10260,Manchester United,2,midfielder,37.724000000000004,1.9,3.0,42.624,90.0,2,2,5.0,47.624
+1458711,Murillo,10203,Nottingham Forest,1,defender,40.1,3.0,3.0,46.1,90.0,2,2,0.0,46.1
+863098,Matheus Cunha,10260,Manchester United,2,midfielder,35.002,0.7999999999999998,3.0,38.802,90.0,2,2,5.0,43.802
+769895,Matthijs de Ligt,10260,Manchester United,1,defender,35.160000000000004,3.0,3.0,41.160000000000004,90.0,2,2,0.0,41.160000000000004
+923312,Bryan Mbeumo,10260,Manchester United,3,forward,26.541666666666664,4.1,3.0,33.641666666666666,90.0,2,2,6.0,39.641666666666666
+1070052,Amad,10260,Manchester United,2,midfielder,29.564,0.7999999999999998,3.0,33.364000000000004,90.0,2,2,5.0,38.364000000000004
+846383,Callum Hudson-Odoi,10203,Nottingham Forest,3,forward,23.85,4.1,2.966666666666667,30.91666666666667,90.0,2,2,6.0,36.91666666666667
+789502,Morgan Gibbs-White,10203,Nottingham Forest,2,midfielder,24.422,3.0,3.0,30.422,90.0,2,2,5.0,35.422
+1089691,Elliot Anderson,10203,Nottingham Forest,2,midfielder,20.728,1.9,3.0,25.628,90.0,2,2,5.0,30.628
+766611,Nikola Milenkovic,10203,Nottingham Forest,1,defender,21.76,3.0,3.0,27.76,90.0,2,2,0.0,27.76
+775614,Ryan Yates,10203,Nottingham Forest,2,midfielder,16.978,3.0,2.533333333333333,22.511333333333333,76.0,2,2,5.0,27.511333333333333
+362694,Luke Shaw,10260,Manchester United,1,defender,20.67,3.0,3.0,26.67,90.0,2,2,0.0,26.67
+1358581,Leny Yoro,10260,Manchester United,1,defender,20.84,3.0,2.5666666666666664,26.406666666666666,77.0,1,2,0.0,26.406666666666666
+1078788,Neco Williams,10203,Nottingham Forest,1,defender,20.28,3.0,3.0,26.28,90.0,2,2,0.0,26.28
+1622290,Nicolo Savona,10203,Nottingham Forest,1,defender,18.18,3.0,3.0,24.18,90.0,2,2,0.0,24.18
+751550,Diogo Dalot,10260,Manchester United,2,midfielder,11.154,3.0,2.2666666666666666,16.420666666666666,68.0,1,2,3.0,19.420666666666666
+1082102,Igor Jesus,10203,Nottingham Forest,3,forward,5.533333333333334,4.1,2.6,12.233333333333333,78.0,2,1,6.0,18.233333333333334
+1073977,Benjamin Sesko,10260,Manchester United,3,forward,3.6,5.0,3.0,11.6,90.0,2,2,6.0,17.6
+1022649,Dan Ndoye,10203,Nottingham Forest,3,forward,3.1833333333333345,2.3,3.0,8.483333333333334,90.0,2,2,6.0,14.483333333333334
+775539,Noussair Mazraoui,10260,Manchester United,2,midfielder,5.63,3.0,0.43333333333333335,9.063333333333333,13.0,1,0,4.5,13.563333333333333
+787350,Douglas Luiz,10203,Nottingham Forest,2,midfielder,3.7680000000000002,3.0,0.4666666666666667,7.2346666666666675,14.0,0,0,2.5,9.734666666666667
+1526560,Patrick Dorgu,10260,Manchester United,2,midfielder,0.8640000000000001,3.0,0.7333333333333333,4.597333333333333,22.0,1,0,4.5,9.097333333333333
+643717,Taiwo Awoniyi,10203,Nottingham Forest,3,forward,2.425,5.0,0.4,7.825,12.0,0,1,-2.5,5.325
+950830,Joshua Zirkzee,10260,Manchester United,3,forward,0.0,5.0,0.0,5.0,0.0,0,0,0.0,5.0
+1095445,Arnaud Kalimuendo-Muinga,10203,Nottingham Forest,3,forward,0.0,5.0,0.0,5.0,0.0,0,0,0.0,5.0
+1215652,Omari Hutchinson,10203,Nottingham Forest,3,forward,0.0,5.0,0.0,5.0,0.0,0,0,0.0,5.0
+255610,Harry Maguire,10260,Manchester United,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1053838,Morato,10203,Nottingham Forest,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1391209,Jair Cunha,10203,Nottingham Forest,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1559639,Ayden Heaven,10260,Manchester United,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+750032,Mason Mount,10260,Manchester United,2,midfielder,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1035614,Manuel Ugarte,10260,Manchester United,2,midfielder,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1107648,James McAtee,10203,Nottingham Forest,2,midfielder,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1292810,Kobbie Mainoo,10260,Manchester United,2,midfielder,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+795371,Ibrahim Sangaré,10203,Nottingham Forest,2,midfielder,-1.2,3.0,0.03333333333333333,1.8333333333333335,0.0,0,0,0.0,1.8333333333333335

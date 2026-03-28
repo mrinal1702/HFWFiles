@@ -1,0 +1,40 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,final_score
+Xavi Simons,1173787,Tottenham Hotspur,midfielder,63.214000000000006,7.0,70
+Julián Álvarez,974753,Atlético de Madrid,forward,59.71666666666666,6.0,66
+Robin Le Normand,609516,Atlético de Madrid,defender,53.84,-5.0,49
+Mathys Tel,1288111,Tottenham Hotspur,forward,34.458333333333336,6.0,40
+Giuliano Simeone,1226147,Atlético de Madrid,midfielder,31.802,5.0,37
+Randal Kolo Muani,823825,Tottenham Hotspur,forward,26.975,9.0,36
+Archie Gray,1323305,Tottenham Hotspur,midfielder,29.452,5.0,34
+Cristian Romero,789066,Tottenham Hotspur,defender,31.380000000000003,0.0,31
+Ademola Lookman,690516,Atlético de Madrid,midfielder,28.254,3.0,31
+Pape Sarr,1107280,Tottenham Hotspur,midfielder,24.22,7.0,31
+Johnny Cardoso,1173678,Atlético de Madrid,midfielder,22.682,3.0,26
+Micky van de Ven,1097466,Tottenham Hotspur,defender,24.880000000000003,0.0,25
+Nahuel Molina,726345,Atlético de Madrid,defender,22.583333333333336,0.0,23
+Koke,184533,Atlético de Madrid,midfielder,18.90866666666667,2.5,21
+Antoine Griezmann,184138,Atlético de Madrid,forward,15.15,6.0,21
+Dávid Hancko,727897,Atlético de Madrid,defender,25.66,-5.0,21
+Matteo Ruggeri,1051097,Atlético de Madrid,defender,23.200000000000003,-5.0,18
+Radu Dragusin,1203661,Tottenham Hotspur,defender,10.02,5.0,15
+Kevin Danso,754126,Tottenham Hotspur,defender,6.35,5.0,11
+Conor Gallagher,966027,Tottenham Hotspur,midfielder,5.062,4.5,10
+Djed Spence,894803,Tottenham Hotspur,defender,9.490000000000002,0.0,9
+Marcos Llorente,602563,Atlético de Madrid,defender,13.55,-5.0,9
+Álex Baena,942372,Atlético de Madrid,midfielder,7.544,0.5,8
+Callum Olusesi,1431275,Tottenham Hotspur,midfielder,2.824,4.5,7
+Lucas Bergvall,1386775,Tottenham Hotspur,midfielder,4.703333333333333,2.5,7
+Nicolás González,841672,Atlético de Madrid,midfielder,5.644,0.5,6
+Pedro Porro,941573,Tottenham Hotspur,defender,-0.9033333333333342,5.0,4
+Clément Lenglet,488412,Atlético de Madrid,defender,3.0,0.0,3
+Marc Pubill,1323897,Atlético de Madrid,defender,3.0,0.0,3
+Julio Díaz,1447089,Atlético de Madrid,defender,3.0,0.0,3
+James Rowswell,1531854,Tottenham Hotspur,defender,3.0,0.0,3
+Thiago Almada,955271,Atlético de Madrid,midfielder,3.0,0.0,3
+Obed Vargas,1254394,Atlético de Madrid,midfielder,3.0,0.0,3
+Rio Kyerematen,1300529,Tottenham Hotspur,midfielder,3.0,0.0,3
+Alexander Sørloth,440330,Atlético de Madrid,forward,2.3833333333333324,0.5,3
+José Giménez,474589,Atlético de Madrid,defender,2.39,0.0,2
+Destiny Udogie,1052898,Tottenham Hotspur,defender,2.329999999999999,0.0,2
+Atlético de Madrid Keepers,9906,Atlético de Madrid,goalkeeper,36.16,0.0,36
+Tottenham Hotspur Keepers,8586,Tottenham Hotspur,goalkeeper,24.8,6.0,31
