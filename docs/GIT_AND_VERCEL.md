@@ -33,9 +33,12 @@ git clone https://github.com/YOUR_USER/YOUR_REPO.git
 1. Import the **same GitHub repo** in [Vercel](https://vercel.com).
 
 2. **Root Directory:** set to **`auction-app`** (Project Settings → General → Root Directory).  
-   Vercel must run `npm install` and `next build` **inside** `auction-app`.
+   Vercel must run `npm install` and `next build` **inside** `auction-app`.  
+   **If this is wrong or left blank, the live site often returns 404 on every path.** See **`VERCEL_404_TROUBLESHOOTING.md`**.
 
-3. **Environment variables** (Project → Settings → Environment Variables), for Production (and Preview if you want):
+3. **Smoke test:** after deploy, open `https://YOUR_PROJECT.vercel.app/api/health` — expect **200** and `{ "ok": true, ... }`. If that **404**s, the Next app is not deployed from `auction-app`.
+
+4. **Environment variables** (Project → Settings → Environment Variables), for Production (and Preview if you want):
 
    | Name | Value |
    |------|--------|
@@ -45,7 +48,7 @@ git clone https://github.com/YOUR_USER/YOUR_REPO.git
 
    Optional: `ADMIN_EMAIL` (reserved for future use).
 
-4. Redeploy after changing env vars.
+5. Redeploy after changing env vars.
 
 ## Security reminder
 
