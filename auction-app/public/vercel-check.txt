@@ -1,0 +1,1 @@
+If you can read this file at /vercel-check.txt, Vercel is serving static assets from this Next.js project. If / still 404s, the issue is with the Next.js server output, not the root directory path.
