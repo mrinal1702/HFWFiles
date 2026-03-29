@@ -32,22 +32,25 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="mx-auto max-w-md flex-1 p-6">
-      <h1 className="text-2xl font-semibold tracking-tight">Log in</h1>
-      <p className="mt-2 text-sm text-neutral-500">Email and password (min. 6 characters on signup).</p>
+    <main className="mx-auto flex max-w-md flex-1 flex-col px-4 py-8 sm:px-6 sm:py-10">
+      <p className="text-center text-sm font-medium text-neutral-400">Welcome back</p>
+      <h1 className="mt-2 text-center text-2xl font-semibold tracking-tight sm:text-3xl">Log in</h1>
+      <p className="mt-3 text-center text-sm leading-relaxed text-neutral-500">
+        Enter your email and password to continue.
+      </p>
 
-      <form onSubmit={onSubmit} className="mt-8 flex flex-col gap-4">
-        <label className="flex flex-col gap-1 text-sm">
+      <form onSubmit={onSubmit} className="mt-8 flex flex-col gap-5">
+        <label className="flex flex-col gap-2 text-sm">
           <span className="text-neutral-400">Email</span>
           <input
             name="email"
             type="email"
             autoComplete="email"
             required
-            className="rounded-md border border-neutral-600 bg-neutral-900 px-3 py-2 text-neutral-100"
+            className="min-h-11 rounded-lg border border-neutral-600 bg-neutral-900 px-3 py-2.5 text-base text-neutral-100 sm:text-sm"
           />
         </label>
-        <label className="flex flex-col gap-1 text-sm">
+        <label className="flex flex-col gap-2 text-sm">
           <span className="text-neutral-400">Password</span>
           <input
             name="password"
@@ -55,7 +58,7 @@ export default function LoginPage() {
             autoComplete="current-password"
             required
             minLength={6}
-            className="rounded-md border border-neutral-600 bg-neutral-900 px-3 py-2 text-neutral-100"
+            className="min-h-11 rounded-lg border border-neutral-600 bg-neutral-900 px-3 py-2.5 text-base text-neutral-100 sm:text-sm"
           />
         </label>
         {error && (
@@ -66,21 +69,21 @@ export default function LoginPage() {
         <button
           type="submit"
           disabled={pending}
-          className="rounded-md bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-900 disabled:opacity-50"
+          className="mt-1 min-h-12 rounded-lg bg-neutral-100 px-4 py-3 text-base font-medium text-neutral-900 disabled:opacity-50"
         >
           {pending ? "Signing in…" : "Log in"}
         </button>
       </form>
 
-      <p className="mt-6 text-sm text-neutral-500">
-        No account?{" "}
-        <Link href="/signup" className="text-neutral-300 underline hover:text-white">
-          Sign up
+      <p className="mt-8 text-center text-sm text-neutral-500">
+        New here?{" "}
+        <Link href="/signup" className="font-medium text-neutral-300 underline hover:text-white">
+          Create an account
         </Link>
       </p>
-      <p className="mt-4 text-sm">
+      <p className="mt-6 text-center text-sm">
         <Link href="/" className="text-neutral-400 underline hover:text-neutral-200">
-          ← Home
+          ← Back to home
         </Link>
       </p>
     </main>
