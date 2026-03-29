@@ -20,9 +20,17 @@ function statusLabel(status: string): string {
       return "Sold";
     case "unsold":
       return "Closed (unsold)";
+    case "closed_bidding_after_deadline":
+      return "Closed (auction ended)";
     default:
       return status;
   }
+}
+
+/** After the hard deadline, lots should not read as "ongoing" even if the row is briefly stale. */
+function displayLotStatus(lot: EnrichedLot, biddingClosed: boolean): string {
+  if (biddingClosed && lot.status === "bidding") return "closed_bidding_after_deadline";
+  return lot.status;
 }
 
 function StatusBadge({ status }: { status: string }) {
@@ -93,14 +101,18 @@ export function BiddingRoomClient({
 
   const filtered = useMemo(() => {
     let rows = lots.slice();
-    if (tab === "ongoing") rows = rows.filter((l) => l.status === "bidding");
-    else if (tab === "unsold") rows = rows.filter((l) => l.status === "uninitiated");
-    else if (tab === "sold") rows = rows.filter((l) => l.status === "sold");
+    if (tab === "ongoing") {
+      rows = rows.filter((l) => l.status === "bidding" && !gate.biddingClosed);
+    } else if (tab === "unsold") {
+      rows = rows.filter((l) => l.status === "uninitiated" || l.status === "unsold");
+    } else if (tab === "sold") {
+      rows = rows.filter((l) => l.status === "sold");
+    }
 
     if (club) rows = rows.filter((l) => (l.club ?? "").trim() === club);
     if (position) rows = rows.filter((l) => (l.position ?? "").trim() === position);
     if (statusFilter && tab === "all") {
-      rows = rows.filter((l) => l.status === statusFilter);
+      rows = rows.filter((l) => displayLotStatus(l, gate.biddingClosed) === statusFilter);
     }
     if (bidderFilter && tab === "ongoing") {
       const id = Number(bidderFilter);
@@ -126,7 +138,7 @@ export function BiddingRoomClient({
     }
 
     return rows;
-  }, [lots, tab, club, position, statusFilter, bidderFilter, sort]);
+  }, [lots, tab, club, position, statusFilter, bidderFilter, sort, gate.biddingClosed]);
 
   const showBidCol = tab !== "sold";
   const showDeadlineCol = tab === "ongoing" || tab === "all";
@@ -279,7 +291,7 @@ export function BiddingRoomClient({
                         {(lot.club ?? "—") + " · " + (lot.position ?? "—")}
                       </p>
                     </div>
-                    <StatusBadge status={lot.status} />
+                    <StatusBadge status={displayLotStatus(lot, gate.biddingClosed)} />
                   </div>
                   <dl className="mt-4 space-y-2 text-sm">
                     <div className="flex justify-between gap-3">
@@ -296,7 +308,9 @@ export function BiddingRoomClient({
                       <div className="flex justify-between gap-3">
                         <dt className="text-neutral-500">Lot deadline</dt>
                         <dd className="max-w-[65%] text-right text-xs text-neutral-400">
-                          {lot.status === "bidding" ? formatWhen(lot.expires_at) : "—"}
+                          {lot.status === "bidding" && !gate.biddingClosed
+                            ? formatWhen(lot.expires_at)
+                            : "—"}
                         </dd>
                       </div>
                     )}
@@ -309,7 +323,7 @@ export function BiddingRoomClient({
                   </dl>
                   {showBidCol && (
                     <div className="mt-4 border-t border-neutral-800 pt-4">
-                      {lot.status === "sold" || lot.status === "unsold" ? (
+                      {lot.status === "sold" || lot.status === "unsold" || gate.biddingClosed ? (
                         <span className="text-sm text-neutral-500">—</span>
                       ) : (
                         <BidRowForm
@@ -361,20 +375,24 @@ export function BiddingRoomClient({
                         {lot.club ?? "—"}
                       </td>
                       <td className="px-3 py-3 align-top text-neutral-400">{lot.position ?? "—"}</td>
-                      <td className="px-3 py-3 align-top">{statusLabel(lot.status)}</td>
+                      <td className="px-3 py-3 align-top">
+                        {statusLabel(displayLotStatus(lot, gate.biddingClosed))}
+                      </td>
                       <td className="px-3 py-3 align-top font-mono">{highDisplay}</td>
                       <td className="px-3 py-3 align-top text-neutral-400">
                         {lot.high_bidder_name ?? (lot.high_bidder_id != null ? `#${lot.high_bidder_id}` : "—")}
                       </td>
                       {showDeadlineCol && (
                         <td className="px-3 py-3 align-top text-xs text-neutral-400">
-                          {lot.status === "bidding" ? formatWhen(lot.expires_at) : "—"}
+                          {lot.status === "bidding" && !gate.biddingClosed
+                            ? formatWhen(lot.expires_at)
+                            : "—"}
                         </td>
                       )}
                       {tab === "sold" && <td className="px-3 py-3 align-top text-xs text-neutral-500">—</td>}
                       {showBidCol && (
                         <td className="px-3 py-3 align-top">
-                          {lot.status === "sold" || lot.status === "unsold" ? (
+                          {lot.status === "sold" || lot.status === "unsold" || gate.biddingClosed ? (
                             <span className="text-xs text-neutral-500">—</span>
                           ) : (
                             <BidRowForm

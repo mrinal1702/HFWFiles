@@ -9,6 +9,7 @@ import {
 import { getAuthUser } from "@/lib/auth/get-user";
 import { isGoalkeeperPosition } from "@/lib/bid-ui-messages";
 import type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
+import { finalizeAuctionHardDeadline } from "@/lib/bidding";
 import { createAdminClient } from "@/lib/supabase-server";
 
 export type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
@@ -61,8 +62,41 @@ export const loadAuctionDashboard = cache(
   ]);
 
   const auction = auctionRes.data as AuctionDashboard["auction"];
-  const users = (usersRes.data ?? []) as AuctionUserRow[];
-  const rawLots = lotsRes.data ?? [];
+  let users = (usersRes.data ?? []) as AuctionUserRow[];
+  let rawLots = lotsRes.data ?? [];
+
+  const now = Date.now();
+  const hardMs = auction?.hard_deadline_at ? Date.parse(auction.hard_deadline_at) : NaN;
+  const pastHard = Number.isFinite(hardMs) && now >= hardMs;
+  const needsHardFinalize =
+    pastHard &&
+    auction != null &&
+    rawLots.some((r) => {
+      const s = String((r as { status: unknown }).status);
+      return s === "bidding" || s === "uninitiated";
+    });
+
+  if (needsHardFinalize) {
+    const { data: fin, rpcError } = await finalizeAuctionHardDeadline(admin, { auctionId });
+    if (rpcError) {
+      throw new Error(`finalize_auction_hard_deadline: ${rpcError.message}`);
+    }
+    if (!fin?.ok) {
+      throw new Error(`finalize_auction_hard_deadline: ${fin?.error ?? "unknown"}`);
+    }
+    const [usersAgain, lotsAgain] = await Promise.all([
+      admin
+        .from("auction_users")
+        .select("id,name,budget_remaining,active_budget,user_id")
+        .eq("auction_id", auctionId)
+        .order("id", { ascending: true }),
+      admin.from("auction_lots").select("*").eq("auction_id", auctionId).order("player_id", { ascending: true }),
+    ]);
+    if (usersAgain.error) throw new Error(`auction_users: ${usersAgain.error.message}`);
+    if (lotsAgain.error) throw new Error(`auction_lots: ${lotsAgain.error.message}`);
+    users = (usersAgain.data ?? []) as AuctionUserRow[];
+    rawLots = lotsAgain.data ?? [];
+  }
 
   const userById = new Map(users.map((u) => [u.id, u]));
 
@@ -92,9 +126,6 @@ export const loadAuctionDashboard = cache(
     me = actorUserId != null ? userById.get(actorUserId) ?? null : null;
   }
 
-  const now = Date.now();
-  const hardMs = auction?.hard_deadline_at ? Date.parse(auction.hard_deadline_at) : NaN;
-  const pastHard = Number.isFinite(hardMs) && now >= hardMs;
   const biddingClosed = auction?.is_active === false || pastHard;
   let biddingClosedReason: string | null = null;
   if (auction?.is_active === false) {
@@ -107,6 +138,11 @@ export const loadAuctionDashboard = cache(
   const bidIds = rawLots
     .map((r: { current_high_bid_id: number | null }) => r.current_high_bid_id)
     .filter((id): id is number => id != null);
+
+  const teamsForAuctionP = admin
+    .from("auction_teams")
+    .select("player_id, auction_user_id, purchase_price")
+    .eq("auction_id", auctionId);
 
   let playerRows: Record<string, unknown>[] = [];
   if (playerIds.length) {
@@ -126,12 +162,16 @@ export const loadAuctionDashboard = cache(
     }
   }
 
-  const bidsRes = bidIds.length
-    ? await admin.from("auction_bids").select("id, amount, auction_user_id").in("id", bidIds)
-    : { data: [] as Record<string, unknown>[], error: null };
+  const [teamsForAuction, bidsRes] = await Promise.all([
+    teamsForAuctionP,
+    bidIds.length
+      ? admin.from("auction_bids").select("id, amount, auction_user_id").in("id", bidIds)
+      : Promise.resolve({ data: [] as Record<string, unknown>[], error: null }),
+  ]);
 
   if (usersRes.error) throw new Error(`auction_users: ${usersRes.error.message}`);
   if (lotsRes.error) throw new Error(`auction_lots: ${lotsRes.error.message}`);
+  if (teamsForAuction.error) throw new Error(`auction_teams: ${teamsForAuction.error.message}`);
   if (bidsRes.error) throw new Error(`auction_bids: ${bidsRes.error.message}`);
 
   const playerById = new Map<
@@ -158,9 +198,36 @@ export const loadAuctionDashboard = cache(
     bidById.set(row.id, { amount: row.amount, auction_user_id: row.auction_user_id });
   }
 
+  const winnerByPlayer = new Map<string, { auction_user_id: number; purchase_price: number }>();
+  for (const t of teamsForAuction.data ?? []) {
+    const row = t as { player_id: string; auction_user_id: number; purchase_price: number };
+    winnerByPlayer.set(String(row.player_id), {
+      auction_user_id: row.auction_user_id,
+      purchase_price: row.purchase_price,
+    });
+  }
+
   const lots: EnrichedLot[] = rawLots.map((l: Record<string, unknown>) => {
     const pid = String(l.player_id);
     const meta = playerById.get(pid);
+    const status = String(l.status);
+    const soldTo = status === "sold" ? winnerByPlayer.get(pid) : undefined;
+
+    if (soldTo != null) {
+      const bidderUser = userById.get(soldTo.auction_user_id);
+      return {
+        player_id: pid,
+        player_name: meta?.player_name ?? null,
+        position: meta?.position ?? null,
+        club: meta?.club ?? null,
+        status,
+        expires_at: l.expires_at != null ? String(l.expires_at) : null,
+        high_bidder_id: soldTo.auction_user_id,
+        high_bidder_name: bidderUser?.name ?? null,
+        high_amount: soldTo.purchase_price,
+      };
+    }
+
     const bidId = l.current_high_bid_id as number | null;
     const bid = bidId != null ? bidById.get(bidId) : undefined;
     const bidder = bid ? userById.get(bid.auction_user_id) : undefined;
@@ -169,7 +236,7 @@ export const loadAuctionDashboard = cache(
       player_name: meta?.player_name ?? null,
       position: meta?.position ?? null,
       club: meta?.club ?? null,
-      status: String(l.status),
+      status,
       expires_at: l.expires_at != null ? String(l.expires_at) : null,
       high_bidder_id: bid?.auction_user_id ?? null,
       high_bidder_name: bidder?.name ?? null,

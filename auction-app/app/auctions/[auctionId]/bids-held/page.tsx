@@ -18,17 +18,22 @@ export default async function BidsHeldPage({
     );
   }
 
-  const held = d.lots.filter((l) => l.status === "bidding" && l.high_bidder_id === d.me!.id);
+  const held = d.biddingClosed
+    ? []
+    : d.lots.filter((l) => l.status === "bidding" && l.high_bidder_id === d.me!.id);
 
   return (
     <section className="space-y-4 sm:space-y-5">
       <div>
         <h2 className="text-lg font-semibold sm:text-xl">Bids held</h2>
         <p className="mt-2 text-sm leading-relaxed text-neutral-500">
-          Players where you are currently the high bidder. Past losing bids are not listed.
+          Players where you are currently the high bidder on an open lot. After the hard deadline, leading bids are
+          settled into rosters; check My team for players you won.
         </p>
       </div>
-      {held.length === 0 ? (
+      {d.biddingClosed ? (
+        <p className="text-sm text-neutral-500">Bidding is closed — no open leading bids.</p>
+      ) : held.length === 0 ? (
         <p className="text-sm text-neutral-500">You are not leading on any open lots.</p>
       ) : (
         <>
