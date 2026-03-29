@@ -14,6 +14,18 @@ import { createAdminClient } from "@/lib/supabase-server";
 
 export type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
 
+/** PostgREST / Postgres when `finalize_auction_hard_deadline` was never applied in Supabase. */
+function isMissingFinalizeRpc(message: string | undefined): boolean {
+  if (!message) return false;
+  const m = message.toLowerCase();
+  return (
+    m.includes("could not find the function") ||
+    (m.includes("does not exist") && m.includes("finalize_auction_hard_deadline")) ||
+    m.includes("42883") ||
+    m.includes("pgrst202")
+  );
+}
+
 export type AuctionDashboard = {
   auctionId: number;
   auction: {
@@ -78,24 +90,37 @@ export const loadAuctionDashboard = cache(
 
   if (needsHardFinalize) {
     const { data: fin, rpcError } = await finalizeAuctionHardDeadline(admin, { auctionId });
+
     if (rpcError) {
-      throw new Error(`finalize_auction_hard_deadline: ${rpcError.message}`);
+      if (isMissingFinalizeRpc(rpcError.message)) {
+        console.error(
+          "[auction-dashboard] finalize_auction_hard_deadline missing in DB; run scripts/sql/auction-bidding.sql section 7 in Supabase SQL Editor. PostgREST:",
+          rpcError.message,
+        );
+      } else {
+        throw new Error(`finalize_auction_hard_deadline: ${rpcError.message}`);
+      }
+    } else if (fin?.ok === true) {
+      const [usersAgain, lotsAgain] = await Promise.all([
+        admin
+          .from("auction_users")
+          .select("id,name,budget_remaining,active_budget,user_id")
+          .eq("auction_id", auctionId)
+          .order("id", { ascending: true }),
+        admin.from("auction_lots").select("*").eq("auction_id", auctionId).order("player_id", { ascending: true }),
+      ]);
+      if (usersAgain.error) throw new Error(`auction_users: ${usersAgain.error.message}`);
+      if (lotsAgain.error) throw new Error(`auction_lots: ${lotsAgain.error.message}`);
+      users = (usersAgain.data ?? []) as AuctionUserRow[];
+      rawLots = lotsAgain.data ?? [];
+    } else if (fin && fin.ok === false) {
+      const code = fin.error;
+      if (code === "deadline_not_reached" || code === "hard_deadline_not_set") {
+        console.warn("[auction-dashboard] finalize returned ok=false:", code);
+      } else {
+        throw new Error(`finalize_auction_hard_deadline: ${code}`);
+      }
     }
-    if (!fin?.ok) {
-      throw new Error(`finalize_auction_hard_deadline: ${fin?.error ?? "unknown"}`);
-    }
-    const [usersAgain, lotsAgain] = await Promise.all([
-      admin
-        .from("auction_users")
-        .select("id,name,budget_remaining,active_budget,user_id")
-        .eq("auction_id", auctionId)
-        .order("id", { ascending: true }),
-      admin.from("auction_lots").select("*").eq("auction_id", auctionId).order("player_id", { ascending: true }),
-    ]);
-    if (usersAgain.error) throw new Error(`auction_users: ${usersAgain.error.message}`);
-    if (lotsAgain.error) throw new Error(`auction_lots: ${lotsAgain.error.message}`);
-    users = (usersAgain.data ?? []) as AuctionUserRow[];
-    rawLots = lotsAgain.data ?? [];
   }
 
   const userById = new Map(users.map((u) => [u.id, u]));
