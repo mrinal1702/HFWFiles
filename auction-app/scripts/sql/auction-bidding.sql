@@ -161,7 +161,7 @@ begin
 
     select * into v_prev_bid from public.auction_bids b where b.id = v_lot.current_high_bid_id;
     insert into public.auction_teams (auction_id, auction_user_id, player_id, purchase_price)
-    values (p_auction_id, v_prev_bid.auction_user_id, p_player_id, v_prev_bid.amount);
+    values (p_auction_id, v_prev_bid.auction_user_id, p_player_id::integer, v_prev_bid.amount);
 
     update public.auction_users u
     set budget_remaining = u.budget_remaining - v_prev_bid.amount
@@ -405,7 +405,7 @@ begin
           where t.auction_id = p_auction_id and t.player_id::text = v_lot.player_id::text
         ) then
           insert into public.auction_teams (auction_id, auction_user_id, player_id, purchase_price)
-          values (p_auction_id, v_bid.auction_user_id, v_lot.player_id, v_bid.amount);
+          values (p_auction_id, v_bid.auction_user_id, v_lot.player_id::integer, v_bid.amount);
         end if;
 
         update public.auction_users u
