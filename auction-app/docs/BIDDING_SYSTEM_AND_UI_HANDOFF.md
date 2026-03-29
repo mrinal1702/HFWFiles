@@ -142,10 +142,21 @@ When building the real UI, **reuse** `lib/bidding.ts` and the same RPC contracts
 | `reset-testing-environment.sql` | `reset_testing_environment` |
 | `seed-auction-lots-all-players.sql` | `seed_auction_lots_for_auction` + optional DO block |
 | `testing-auction-helpers.sql` | `create_stacked_test_auction`, `replace_auction_users_fresh_state` |
+| `standalone-finalize-auction-hard-deadline.sql` | **Single paste** for Supabase: only `finalize_auction_hard_deadline` (avoids partial runs of the big script) |
 
 ---
 
-## 9) Checklist for the new bidding UI agent
+## 9) Hard deadline & Supabase (product behavior + pitfalls)
+
+- **Settlement is not a cron at T+0.** On the **first server load** of an auction after `hard_deadline_at`, `loadAuctionDashboard` (`lib/auction-dashboard.ts`) calls `finalize_auction_hard_deadline` if any lot is still `bidding` or `uninitiated`, then refetches lots/users. Any page using that loader (layout, bidding room, My team, Bids held, etc.) triggers it. Idempotent after lots are terminal.
+- **UI:** `biddingClosed` follows browser time vs `hard_deadline_at`; the RPC uses Postgres `clock_timestamp()`. They should match within normal skew.
+- **Sold display:** After finalize, `current_high_bid_id` is cleared on sold lots; the dashboard joins **`auction_teams`** to show winner and price on sold rows.
+- **Resolved production issue:** If `auction_teams.player_id` is **int4** while `auction_lots.player_id` is **text**, the finalize function must use **`t.player_id::text = v_lot.player_id::text`** in the existence check and **`v_lot.player_id::integer`** in the `INSERT`. Use **`standalone-finalize-auction-hard-deadline.sql`** in Supabase so the deployed function matches the repo (partial pastes of `auction-bidding.sql` left an old body in place).
+- If the RPC is **missing**, the app logs and **still loads** (no 500) but rosters stay wrong until SQL is applied.
+
+---
+
+## 10) Checklist for the new bidding UI agent
 
 1. Read **`TESTING_OPERATIONS.md`** so you know how to populate data.  
 2. Always scope reads/writes by **`auction_id`**.  
@@ -154,3 +165,5 @@ When building the real UI, **reuse** `lib/bidding.ts` and the same RPC contracts
 5. Plan auth + RLS before public deployment.  
 
 When in doubt, compare behavior to **`/auction-lab`** and the JSON returned by RPCs.
+
+**New chats:** Point the agent at this file + **`lib/auction-dashboard.ts`** + **`scripts/sql/auction-bidding.sql`** so bidding context does not depend on prior threads.
