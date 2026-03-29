@@ -27,7 +27,6 @@ function statusLabel(status: string): string {
   }
 }
 
-/** After the hard deadline, lots should not read as "ongoing" even if the row is briefly stale. */
 function displayLotStatus(lot: EnrichedLot, biddingClosed: boolean): string {
   if (biddingClosed && lot.status === "bidding") return "closed_bidding_after_deadline";
   return lot.status;
@@ -35,7 +34,7 @@ function displayLotStatus(lot: EnrichedLot, biddingClosed: boolean): string {
 
 function StatusBadge({ status }: { status: string }) {
   return (
-    <span className="inline-flex max-w-[min(100%,14rem)] shrink-0 items-center rounded-full border border-neutral-600 bg-neutral-900/70 px-2.5 py-1 text-left text-xs leading-snug text-neutral-100">
+    <span className="inline-flex max-w-[min(100%,14rem)] shrink-0 items-center rounded-full border border-sky-200 bg-sky-50 px-2.5 py-1 text-left text-xs font-medium leading-snug text-slate-800">
       {statusLabel(status)}
     </span>
   );
@@ -54,6 +53,9 @@ const TAB_DEFS = [
   ["unsold", "Unsold (no bids)"],
   ["sold", "Sold"],
 ] as const;
+
+const selectClass =
+  "min-h-11 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/25 sm:min-h-10 sm:text-sm";
 
 export function BiddingRoomClient({
   auctionId,
@@ -146,12 +148,8 @@ export function BiddingRoomClient({
   const filterFields = (
     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
       <label className="flex flex-col gap-1.5 text-sm">
-        <span className="text-neutral-500">Club</span>
-        <select
-          className="min-h-11 w-full rounded border border-neutral-600 bg-neutral-900 px-3 py-2 text-base text-neutral-100 sm:min-h-10 sm:text-sm"
-          value={club}
-          onChange={(e) => setClub(e.target.value)}
-        >
+        <span className="font-medium text-slate-700">Club</span>
+        <select className={selectClass} value={club} onChange={(e) => setClub(e.target.value)}>
           <option value="">All</option>
           {clubs.map((c) => (
             <option key={c} value={c}>
@@ -161,12 +159,8 @@ export function BiddingRoomClient({
         </select>
       </label>
       <label className="flex flex-col gap-1.5 text-sm">
-        <span className="text-neutral-500">Position</span>
-        <select
-          className="min-h-11 w-full rounded border border-neutral-600 bg-neutral-900 px-3 py-2 text-base text-neutral-100 sm:min-h-10 sm:text-sm"
-          value={position}
-          onChange={(e) => setPosition(e.target.value)}
-        >
+        <span className="font-medium text-slate-700">Position</span>
+        <select className={selectClass} value={position} onChange={(e) => setPosition(e.target.value)}>
           <option value="">All</option>
           {positions.map((p) => (
             <option key={p} value={p}>
@@ -177,12 +171,8 @@ export function BiddingRoomClient({
       </label>
       {tab === "all" && (
         <label className="flex flex-col gap-1.5 text-sm">
-          <span className="text-neutral-500">Lot state</span>
-          <select
-            className="min-h-11 w-full rounded border border-neutral-600 bg-neutral-900 px-3 py-2 text-base text-neutral-100 sm:min-h-10 sm:text-sm"
-            value={statusFilter}
-            onChange={(e) => setStatusFilter(e.target.value)}
-          >
+          <span className="font-medium text-slate-700">Lot state</span>
+          <select className={selectClass} value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
             <option value="">All</option>
             <option value="uninitiated">Unsold (no bids)</option>
             <option value="bidding">Ongoing</option>
@@ -193,12 +183,8 @@ export function BiddingRoomClient({
       )}
       {tab === "ongoing" && (
         <label className="flex flex-col gap-1.5 text-sm">
-          <span className="text-neutral-500">High bidder</span>
-          <select
-            className="min-h-11 w-full rounded border border-neutral-600 bg-neutral-900 px-3 py-2 text-base text-neutral-100 sm:min-h-10 sm:text-sm"
-            value={bidderFilter}
-            onChange={(e) => setBidderFilter(e.target.value)}
-          >
+          <span className="font-medium text-slate-700">High bidder</span>
+          <select className={selectClass} value={bidderFilter} onChange={(e) => setBidderFilter(e.target.value)}>
             <option value="">All</option>
             {bidders.map(([id, name]) => (
               <option key={id} value={String(id)}>
@@ -209,12 +195,8 @@ export function BiddingRoomClient({
         </label>
       )}
       <label className="flex flex-col gap-1.5 text-sm sm:col-span-2 lg:col-span-1">
-        <span className="text-neutral-500">Sort</span>
-        <select
-          className="min-h-11 w-full rounded border border-neutral-600 bg-neutral-900 px-3 py-2 text-base text-neutral-100 sm:min-h-10 sm:text-sm"
-          value={sort}
-          onChange={(e) => setSort(e.target.value as typeof sort)}
-        >
+        <span className="font-medium text-slate-700">Sort</span>
+        <select className={selectClass} value={sort} onChange={(e) => setSort(e.target.value as typeof sort)}>
           <option value="">Player id</option>
           <option value="deadline-asc">Deadline ↑</option>
           <option value="deadline-desc">Deadline ↓</option>
@@ -233,8 +215,10 @@ export function BiddingRoomClient({
             key={k}
             type="button"
             onClick={() => setTab(k)}
-            className={`shrink-0 rounded-lg px-4 py-2.5 text-sm leading-tight sm:py-2 ${
-              tab === k ? "bg-neutral-200 text-neutral-900" : "bg-neutral-800 text-neutral-300 hover:bg-neutral-700"
+            className={`shrink-0 rounded-lg px-4 py-2.5 text-sm font-medium leading-tight sm:py-2 ${
+              tab === k
+                ? "bg-sky-600 text-white shadow-sm"
+                : "bg-slate-100 text-slate-800 hover:bg-sky-100"
             }`}
           >
             {label}
@@ -243,28 +227,27 @@ export function BiddingRoomClient({
       </div>
 
       <div className="lg:hidden">
-        <details className="rounded-lg border border-neutral-800 bg-neutral-900/30 [&_summary::-webkit-details-marker]:hidden">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 text-sm font-medium text-neutral-200 sm:py-2.5">
+        <details className="rounded-lg border border-sky-100 bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 text-sm font-medium text-slate-900 sm:py-2.5">
             <span>Filters &amp; sort</span>
-            <span className="text-xs font-normal text-neutral-500">Tap to expand</span>
+            <span className="text-xs font-normal text-slate-600">Tap to expand</span>
           </summary>
-          <div className="border-t border-neutral-800 px-4 pb-4 pt-3">{filterFields}</div>
+          <div className="border-t border-slate-200 px-4 pb-4 pt-3">{filterFields}</div>
         </details>
       </div>
 
       <div className="hidden lg:block">{filterFields}</div>
 
-      <p className="text-xs text-neutral-500">
+      <p className="text-xs text-slate-600">
         Bids can change quickly; use Refresh after you bid. The server decides if a bid is valid.
       </p>
 
       {filtered.length === 0 ? (
-        <div className="rounded-lg border border-neutral-800 px-4 py-10 text-center text-neutral-500">
+        <div className="rounded-lg border border-slate-200 bg-white px-4 py-10 text-center text-slate-600 shadow-sm">
           No rows match this view.
         </div>
       ) : (
         <>
-          {/* Mobile / narrow: stacked cards */}
           <div className="space-y-3 md:hidden">
             {filtered.map((lot) => {
               const disabledReason = getBidDisabledReason(lot, gate);
@@ -280,14 +263,14 @@ export function BiddingRoomClient({
               return (
                 <article
                   key={lot.player_id}
-                  className="rounded-xl border border-neutral-800 bg-neutral-900/25 px-4 py-4 shadow-sm"
+                  className="rounded-xl border border-sky-100 bg-white px-4 py-4 shadow-sm"
                 >
                   <div className="flex flex-wrap items-start justify-between gap-2 gap-y-3">
                     <div className="min-w-0 flex-1">
-                      <h3 className="text-base font-medium leading-snug text-neutral-100">
+                      <h3 className="text-base font-medium leading-snug text-slate-900">
                         {lot.player_name ?? "—"}
                       </h3>
-                      <p className="mt-1 text-sm text-neutral-400">
+                      <p className="mt-1 text-sm text-slate-600">
                         {(lot.club ?? "—") + " · " + (lot.position ?? "—")}
                       </p>
                     </div>
@@ -295,19 +278,19 @@ export function BiddingRoomClient({
                   </div>
                   <dl className="mt-4 space-y-2 text-sm">
                     <div className="flex justify-between gap-3">
-                      <dt className="text-neutral-500">High bid</dt>
-                      <dd className="font-mono text-neutral-100">{highDisplay}</dd>
+                      <dt className="text-slate-600">High bid</dt>
+                      <dd className="font-mono font-medium text-slate-900">{highDisplay}</dd>
                     </div>
                     <div className="flex justify-between gap-3">
-                      <dt className="text-neutral-500">High bidder</dt>
-                      <dd className="min-w-0 text-right text-neutral-300">
+                      <dt className="text-slate-600">High bidder</dt>
+                      <dd className="min-w-0 text-right text-slate-800">
                         {lot.high_bidder_name ?? (lot.high_bidder_id != null ? `#${lot.high_bidder_id}` : "—")}
                       </dd>
                     </div>
                     {showDeadlineCol && (
                       <div className="flex justify-between gap-3">
-                        <dt className="text-neutral-500">Lot deadline</dt>
-                        <dd className="max-w-[65%] text-right text-xs text-neutral-400">
+                        <dt className="text-slate-600">Lot deadline</dt>
+                        <dd className="max-w-[65%] text-right text-xs text-slate-600">
                           {lot.status === "bidding" && !gate.biddingClosed
                             ? formatWhen(lot.expires_at)
                             : "—"}
@@ -316,15 +299,15 @@ export function BiddingRoomClient({
                     )}
                     {tab === "sold" && (
                       <div className="flex justify-between gap-3">
-                        <dt className="text-neutral-500">Sold at</dt>
-                        <dd className="text-xs text-neutral-500">—</dd>
+                        <dt className="text-slate-600">Sold at</dt>
+                        <dd className="text-xs text-slate-600">—</dd>
                       </div>
                     )}
                   </dl>
                   {showBidCol && (
-                    <div className="mt-4 border-t border-neutral-800 pt-4">
+                    <div className="mt-4 border-t border-slate-200 pt-4">
                       {lot.status === "sold" || lot.status === "unsold" || gate.biddingClosed ? (
-                        <span className="text-sm text-neutral-500">—</span>
+                        <span className="text-sm text-slate-500">—</span>
                       ) : (
                         <BidRowForm
                           auctionId={auctionId}
@@ -340,20 +323,19 @@ export function BiddingRoomClient({
             })}
           </div>
 
-          {/* Tablet+: table */}
-          <div className="hidden overflow-x-auto rounded-lg border border-neutral-800 md:block">
+          <div className="hidden overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm md:block">
             <table className="w-full min-w-[44rem] border-collapse text-left text-sm lg:min-w-[56rem]">
-              <thead className="border-b border-neutral-800 bg-neutral-900/50 text-neutral-400">
+              <thead className="border-b border-slate-200 bg-sky-50 text-slate-700">
                 <tr>
-                  <th className="px-3 py-3 font-medium">Player</th>
-                  <th className="px-3 py-3 font-medium">Club</th>
-                  <th className="px-3 py-3 font-medium">Pos</th>
-                  <th className="px-3 py-3 font-medium">State</th>
-                  <th className="px-3 py-3 font-medium">High bid</th>
-                  <th className="px-3 py-3 font-medium">High bidder</th>
-                  {showDeadlineCol && <th className="px-3 py-3 font-medium">Lot deadline</th>}
-                  {tab === "sold" && <th className="px-3 py-3 font-medium">Sold at (local)</th>}
-                  {showBidCol && <th className="px-3 py-3 font-medium">Bid</th>}
+                  <th className="px-3 py-3 font-semibold">Player</th>
+                  <th className="px-3 py-3 font-semibold">Club</th>
+                  <th className="px-3 py-3 font-semibold">Pos</th>
+                  <th className="px-3 py-3 font-semibold">State</th>
+                  <th className="px-3 py-3 font-semibold">High bid</th>
+                  <th className="px-3 py-3 font-semibold">High bidder</th>
+                  {showDeadlineCol && <th className="px-3 py-3 font-semibold">Lot deadline</th>}
+                  {tab === "sold" && <th className="px-3 py-3 font-semibold">Sold at (local)</th>}
+                  {showBidCol && <th className="px-3 py-3 font-semibold">Bid</th>}
                 </tr>
               </thead>
               <tbody>
@@ -369,31 +351,33 @@ export function BiddingRoomClient({
                           ? String(lot.high_amount)
                           : "—";
                   return (
-                    <tr key={lot.player_id} className="border-b border-neutral-800/80">
-                      <td className="px-3 py-3 align-top">{lot.player_name ?? "—"}</td>
-                      <td className="max-w-[10rem] truncate px-3 py-3 align-top text-neutral-400">
+                    <tr key={lot.player_id} className="border-b border-slate-100">
+                      <td className="px-3 py-3 align-top text-slate-900">{lot.player_name ?? "—"}</td>
+                      <td className="max-w-[10rem] truncate px-3 py-3 align-top text-slate-600">
                         {lot.club ?? "—"}
                       </td>
-                      <td className="px-3 py-3 align-top text-neutral-400">{lot.position ?? "—"}</td>
-                      <td className="px-3 py-3 align-top">
+                      <td className="px-3 py-3 align-top text-slate-600">{lot.position ?? "—"}</td>
+                      <td className="px-3 py-3 align-top text-slate-800">
                         {statusLabel(displayLotStatus(lot, gate.biddingClosed))}
                       </td>
-                      <td className="px-3 py-3 align-top font-mono">{highDisplay}</td>
-                      <td className="px-3 py-3 align-top text-neutral-400">
+                      <td className="px-3 py-3 align-top font-mono font-medium text-slate-900">
+                        {highDisplay}
+                      </td>
+                      <td className="px-3 py-3 align-top text-slate-600">
                         {lot.high_bidder_name ?? (lot.high_bidder_id != null ? `#${lot.high_bidder_id}` : "—")}
                       </td>
                       {showDeadlineCol && (
-                        <td className="px-3 py-3 align-top text-xs text-neutral-400">
+                        <td className="px-3 py-3 align-top text-xs text-slate-600">
                           {lot.status === "bidding" && !gate.biddingClosed
                             ? formatWhen(lot.expires_at)
                             : "—"}
                         </td>
                       )}
-                      {tab === "sold" && <td className="px-3 py-3 align-top text-xs text-neutral-500">—</td>}
+                      {tab === "sold" && <td className="px-3 py-3 align-top text-xs text-slate-600">—</td>}
                       {showBidCol && (
                         <td className="px-3 py-3 align-top">
                           {lot.status === "sold" || lot.status === "unsold" || gate.biddingClosed ? (
-                            <span className="text-xs text-neutral-500">—</span>
+                            <span className="text-xs text-slate-500">—</span>
                           ) : (
                             <BidRowForm
                               auctionId={auctionId}

@@ -16,8 +16,8 @@ export default async function BiddingRoomPage({
   return (
     <section className="space-y-4 sm:space-y-5">
       <div>
-        <h2 className="text-lg font-semibold sm:text-xl">Bidding room</h2>
-        <p className="mt-2 text-sm leading-relaxed text-neutral-500">
+        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Bidding room</h2>
+        <p className="mt-2 text-sm leading-relaxed text-slate-600">
           Full transparency: everyone sees budgets, high bids, and rosters inside this auction.
         </p>
       </div>

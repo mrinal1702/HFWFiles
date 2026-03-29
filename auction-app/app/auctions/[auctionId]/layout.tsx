@@ -39,10 +39,10 @@ export default async function AuctionLayout({
       <header className="mb-5 space-y-4 sm:mb-6">
         <div className="flex flex-wrap items-baseline justify-between gap-2">
           <div className="min-w-0 flex-1">
-            <h1 className="text-xl font-semibold tracking-tight sm:text-2xl">
+            <h1 className="text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
               {d.auction.name ?? `Auction #${auctionId}`}
             </h1>
-            <p className="mt-1 text-sm text-neutral-500">
+            <p className="mt-1 text-sm text-slate-600">
               Hard deadline:{" "}
               {d.auction.hard_deadline_at
                 ? `${new Date(d.auction.hard_deadline_at).toLocaleString()} (local)`
@@ -50,7 +50,7 @@ export default async function AuctionLayout({
             </p>
           </div>
           <div className="flex flex-shrink-0 flex-wrap items-center gap-3">
-            <Link href="/dashboard" className="text-sm text-neutral-400 underline hover:text-neutral-200">
+            <Link href="/dashboard" className="text-sm font-medium text-sky-700 underline hover:text-sky-900">
               Dashboard
             </Link>
             <RefreshButton />
@@ -59,32 +59,29 @@ export default async function AuctionLayout({
 
         {d.biddingClosed && (
           <div
-            className="rounded-lg border border-amber-800 bg-amber-950/40 px-4 py-3 text-sm text-amber-100"
+            className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950"
             role="status"
           >
             <p className="font-medium">Bidding closed</p>
-            <p className="mt-1 text-amber-200/90">{d.biddingClosedReason}</p>
+            <p className="mt-1 text-amber-900">{d.biddingClosedReason}</p>
           </div>
         )}
 
-        {/* Sticky below lg so budget stays visible while scrolling long lists on phones & tablets */}
-        <div
-          className="max-lg:-mx-4 max-lg:border-b max-lg:border-neutral-800 max-lg:bg-[var(--background)] max-lg:px-4 max-lg:py-3 max-lg:shadow-[0_1px_0_0_rgba(255,255,255,0.06)] max-lg:sticky max-lg:top-0 max-lg:z-20"
-        >
+        <div className="max-lg:-mx-4 max-lg:border-b max-lg:border-slate-200 max-lg:bg-slate-50 max-lg:px-4 max-lg:py-3 max-lg:shadow-sm max-lg:sticky max-lg:top-0 max-lg:z-20">
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between">
-            <p className="text-sm text-neutral-500">
-              Playing as <span className="text-neutral-200">{d.me?.name ?? "—"}</span>
+            <p className="text-sm text-slate-600">
+              Playing as <span className="font-medium text-slate-900">{d.me?.name ?? "—"}</span>
             </p>
             <div className="grid grid-cols-2 gap-3 text-sm sm:flex sm:flex-wrap sm:items-baseline sm:gap-x-4 sm:gap-y-1">
-              <div className="min-w-0 rounded-md border border-neutral-800 bg-neutral-900/40 px-3 py-2 sm:border-0 sm:bg-transparent sm:p-0">
-                <div className="text-xs text-neutral-500">Remaining</div>
-                <div className="font-mono text-base text-neutral-100 tabular-nums sm:text-sm">
+              <div className="min-w-0 rounded-lg border border-sky-100 bg-white px-3 py-2 shadow-sm sm:border-0 sm:bg-transparent sm:shadow-none sm:p-0">
+                <div className="text-xs font-medium text-slate-600">Remaining</div>
+                <div className="font-mono text-base tabular-nums text-slate-900 sm:text-sm">
                   {d.me?.budget_remaining ?? "—"}
                 </div>
               </div>
-              <div className="min-w-0 rounded-md border border-neutral-800 bg-neutral-900/40 px-3 py-2 sm:border-0 sm:bg-transparent sm:p-0">
-                <div className="text-xs text-neutral-500">Active</div>
-                <div className="font-mono text-base text-neutral-100 tabular-nums sm:text-sm">
+              <div className="min-w-0 rounded-lg border border-sky-100 bg-white px-3 py-2 shadow-sm sm:border-0 sm:bg-transparent sm:shadow-none sm:p-0">
+                <div className="text-xs font-medium text-slate-600">Active</div>
+                <div className="font-mono text-base tabular-nums text-slate-900 sm:text-sm">
                   {d.me?.active_budget ?? "—"}
                 </div>
               </div>

@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
+/* Prefer light native controls (scrollbars, inputs) */
+html {
+  color-scheme: light;
+}
+
+/* Light theme only: consistent white / slate / sky for legibility */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --surface: #ffffff;
+  --accent: #0284c7;
+  --accent-muted: #e0f2fe;
 }
 
 @theme inline {
@@ -12,15 +21,8 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }

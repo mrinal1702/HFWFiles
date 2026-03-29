@@ -4,6 +4,9 @@ import { useActionState } from "react";
 
 import { submitAuctionBidAction, type AuctionBidState } from "@/app/auctions/actions";
 
+const input =
+  "min-h-11 w-full min-w-0 flex-1 rounded-lg border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/25 sm:max-w-[9rem] sm:text-sm";
+
 export function BidRowForm({
   auctionId,
   playerId,
@@ -21,7 +24,7 @@ export function BidRowForm({
   );
 
   if (disabledReason) {
-    return <span className="text-sm leading-snug text-amber-200/90">{disabledReason}</span>;
+    return <span className="text-sm leading-snug text-amber-800">{disabledReason}</span>;
   }
 
   return (
@@ -39,20 +42,20 @@ export function BidRowForm({
           step={1}
           min={minBid}
           placeholder={`≥ ${minBid}`}
-          className="min-h-11 w-full min-w-0 flex-1 rounded border border-neutral-600 bg-neutral-900 px-3 py-2 text-base text-neutral-100 sm:max-w-[9rem] sm:text-sm"
+          className={input}
           disabled={pending}
         />
         <button
           type="submit"
           disabled={pending}
-          className="min-h-11 shrink-0 rounded-md bg-neutral-200 px-4 py-2 text-sm font-medium text-neutral-900 disabled:opacity-50 sm:min-h-10 sm:min-w-[5rem]"
+          className="min-h-11 shrink-0 rounded-lg bg-sky-600 px-4 py-2 text-sm font-medium text-white hover:bg-sky-700 disabled:opacity-50 sm:min-h-10 sm:min-w-[5rem]"
         >
           {pending ? "…" : "Bid"}
         </button>
       </form>
       {state && (
         <span
-          className={`text-sm leading-snug ${state.ok ? "text-emerald-400/90" : "text-red-400/90"}`}
+          className={`text-sm leading-snug ${state.ok ? "text-emerald-700" : "text-red-700"}`}
           role="status"
         >
           {state.message}
