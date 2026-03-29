@@ -59,18 +59,18 @@ export async function submitAuctionBidAction(
   const amountRaw = formData.get("amount");
 
   if (!Number.isFinite(auctionId) || auctionId <= 0) {
-    return { ok: false, message: "Missing auction." };
+    return { ok: false, message: "Something’s wrong with this page — go back to your dashboard and open the auction again." };
   }
   if (!playerId) {
-    return { ok: false, message: "Missing player." };
+    return { ok: false, message: "Pick a player and enter an amount." };
   }
 
   const amountParsed = typeof amountRaw === "string" ? Number(amountRaw.trim()) : Number(amountRaw);
   if (!Number.isFinite(amountParsed) || amountParsed <= 0) {
-    return { ok: false, message: "Enter a positive whole number." };
+    return { ok: false, message: "Enter a positive whole number for your bid." };
   }
   if (!Number.isInteger(amountParsed)) {
-    return { ok: false, message: "Whole numbers only (no decimals)." };
+    return { ok: false, message: "Use a whole number only — no decimals." };
   }
 
   const authUser = await getAuthUser();
@@ -86,10 +86,10 @@ export async function submitAuctionBidAction(
       .eq("user_id", authUser.id)
       .maybeSingle();
     if (seatErr) {
-      return { ok: false, message: seatErr.message };
+      return { ok: false, message: "We couldn’t load your seat in this auction. Try again in a moment." };
     }
     if (!seat) {
-      return { ok: false, message: "You are not a member of this auction." };
+      return { ok: false, message: "You’re not in this auction yet — join with a code from your commissioner." };
     }
     auctionUserId = Number((seat as { id: number }).id);
   } else {
@@ -99,7 +99,7 @@ export async function submitAuctionBidAction(
       .eq("auction_id", auctionId)
       .order("id", { ascending: true });
     if (userErr) {
-      return { ok: false, message: userErr.message };
+      return { ok: false, message: "We couldn’t load auction managers. Try again in a moment." };
     }
     const ids = (userRows ?? []).map((r: { id: number }) => r.id);
     const cookieStore = await cookies();
@@ -109,7 +109,7 @@ export async function submitAuctionBidAction(
       parseActorCookie(cookieStore.get(AUCTION_ACTOR_COOKIE)?.value),
     );
     if (viewerMode || actorUserId == null) {
-      return { ok: false, message: "You cannot bid (view only or pick a manager in the header)." };
+      return { ok: false, message: "Choose which manager you’re bidding as (in the header), or sign in to your own seat." };
     }
     auctionUserId = actorUserId;
   }
@@ -125,10 +125,10 @@ export async function submitAuctionBidAction(
   revalidatePath(`/auctions/${auctionId}`, "layout");
 
   if (rpcError) {
-    return { ok: false, message: rpcError.message };
+    return { ok: false, message: "We couldn’t complete that bid. Tap Refresh and try again." };
   }
   if (!data) {
-    return { ok: false, message: "No response from place_bid." };
+    return { ok: false, message: "We didn’t get a clear result. Tap Refresh and try your bid again." };
   }
   if (!data.ok) {
     return { ok: false, message: placeBidErrorMessage(data.error) };
@@ -136,6 +136,6 @@ export async function submitAuctionBidAction(
 
   return {
     ok: true,
-    message: "Bid accepted. Tables refresh from the server — use Refresh if values look stale.",
+    message: "Bid placed! Tap Refresh to see the latest high bids and timers.",
   };
 }

@@ -154,9 +154,9 @@ export const loadAuctionDashboard = cache(
   const biddingClosed = auction?.is_active === false || pastHard;
   let biddingClosedReason: string | null = null;
   if (auction?.is_active === false) {
-    biddingClosedReason = "This auction is inactive.";
+    biddingClosedReason = "This auction is paused right now.";
   } else if (pastHard) {
-    biddingClosedReason = "Bidding is closed (hard deadline passed). Times shown in your browser local timezone.";
+    biddingClosedReason = "Bidding has ended — the auction deadline has passed. All times are shown in your local time.";
   }
 
   const playerIds = [...new Set(rawLots.map((r: { player_id: string }) => String(r.player_id)))];

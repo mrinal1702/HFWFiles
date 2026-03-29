@@ -25,8 +25,8 @@ export default async function CompetitorDetailPage({
   }
 
   return (
-    <section className="space-y-8 sm:space-y-10">
-      <div>
+    <section className="space-y-4 sm:space-y-6">
+      <div className="rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
         <Link
           href={`/auctions/${auctionId}/competitors`}
           className="inline-block min-h-10 py-2 text-sm font-medium text-sky-700 underline hover:text-sky-900"
@@ -37,31 +37,33 @@ export default async function CompetitorDetailPage({
           {v.competitor.name ?? `Manager #${competitorUserId}`}
         </h2>
         <div className="mt-3 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:gap-4">
-          <div className="rounded-lg border border-sky-100 bg-white px-3 py-2 shadow-sm">
+          <div className="rounded-lg border border-sky-100 bg-sky-50/50 px-3 py-2">
             <div className="text-xs font-medium text-slate-600">budget_remaining</div>
             <div className="font-mono text-base tabular-nums text-slate-900">{v.competitor.budget_remaining}</div>
           </div>
-          <div className="rounded-lg border border-sky-100 bg-white px-3 py-2 shadow-sm">
+          <div className="rounded-lg border border-sky-100 bg-sky-50/50 px-3 py-2">
             <div className="text-xs font-medium text-slate-600">active_budget</div>
             <div className="font-mono text-base tabular-nums text-slate-900">{v.competitor.active_budget}</div>
           </div>
         </div>
       </div>
 
-      <div>
-        <h3 className="text-base font-semibold text-slate-900">Drafted team (sold)</h3>
+      <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm sm:p-5">
+        <h3 className="text-base font-semibold text-slate-900">Roster</h3>
         <p className="mt-1 text-sm leading-relaxed text-slate-600">
-          Players won by this manager in this auction only.
+          Players they&apos;ve won in this auction.
         </p>
         {v.sold.length === 0 ? (
-          <p className="mt-3 text-sm text-slate-600">No sold players yet.</p>
+          <p className="mt-3 text-sm text-slate-600">Nobody on their roster yet.</p>
         ) : (
           <>
             <ul className="mt-4 space-y-3 md:hidden">
-              {v.sold.map((l) => (
+              {v.sold.map((l, i) => (
                 <li
                   key={l.player_id}
-                  className="rounded-xl border border-sky-100 bg-white px-4 py-4 shadow-sm"
+                  className={`rounded-xl border border-sky-100 px-4 py-4 shadow-sm ${
+                    i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
+                  }`}
                 >
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
                     <span className="text-base font-medium text-slate-900">{l.player_name ?? "—"}</span>
@@ -84,8 +86,11 @@ export default async function CompetitorDetailPage({
                   </tr>
                 </thead>
                 <tbody>
-                  {v.sold.map((l) => (
-                    <tr key={l.player_id} className="border-b border-slate-100">
+                  {v.sold.map((l, i) => (
+                    <tr
+                      key={l.player_id}
+                      className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
+                    >
                       <td className="px-3 py-3 text-slate-900">{l.player_name ?? "—"}</td>
                       <td className="px-3 py-3 text-slate-600">{l.club ?? "—"}</td>
                       <td className="px-3 py-3 text-slate-600">{l.position ?? "—"}</td>
@@ -99,20 +104,22 @@ export default async function CompetitorDetailPage({
         )}
       </div>
 
-      <div>
-        <h3 className="text-base font-semibold text-slate-900">Leading bids</h3>
+      <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm sm:p-5">
+        <h3 className="text-base font-semibold text-slate-900">Bids they&apos;re winning</h3>
         <p className="mt-1 text-sm leading-relaxed text-slate-600">
-          Open lots where this manager is the high bidder.
+          High bidder for now — someone else can still raise until the timer or auction deadline.
         </p>
         {v.leading.length === 0 ? (
           <p className="mt-3 text-sm text-slate-600">None right now.</p>
         ) : (
           <>
             <ul className="mt-4 space-y-3 md:hidden">
-              {v.leading.map((l) => (
+              {v.leading.map((l, i) => (
                 <li
                   key={l.player_id}
-                  className="rounded-xl border border-sky-100 bg-white px-4 py-4 shadow-sm"
+                  className={`rounded-xl border border-sky-100 px-4 py-4 shadow-sm ${
+                    i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
+                  }`}
                 >
                   <h4 className="text-base font-medium text-slate-900">{l.player_name ?? "—"}</h4>
                   <p className="mt-1 text-sm text-slate-600">
@@ -124,7 +131,7 @@ export default async function CompetitorDetailPage({
                       <dd className="font-mono font-medium text-slate-900">{l.high_amount ?? "—"}</dd>
                     </div>
                     <div className="flex justify-between gap-3">
-                      <dt className="text-slate-600">Deadline</dt>
+                      <dt className="text-slate-600">Timer</dt>
                       <dd className="max-w-[70%] text-right text-xs text-slate-600">
                         {l.expires_at ? new Date(l.expires_at).toLocaleString() : "—"}
                       </dd>
@@ -141,12 +148,15 @@ export default async function CompetitorDetailPage({
                     <th className="px-3 py-3 font-semibold">Club</th>
                     <th className="px-3 py-3 font-semibold">Pos</th>
                     <th className="px-3 py-3 font-semibold">Bid</th>
-                    <th className="px-3 py-3 font-semibold">Deadline (local)</th>
+                    <th className="px-3 py-3 font-semibold">Timer (local)</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {v.leading.map((l) => (
-                    <tr key={l.player_id} className="border-b border-slate-100">
+                  {v.leading.map((l, i) => (
+                    <tr
+                      key={l.player_id}
+                      className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
+                    >
                       <td className="px-3 py-3 text-slate-900">{l.player_name ?? "—"}</td>
                       <td className="px-3 py-3 text-slate-600">{l.club ?? "—"}</td>
                       <td className="px-3 py-3 text-slate-600">{l.position ?? "—"}</td>

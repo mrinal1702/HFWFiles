@@ -238,8 +238,10 @@ export function BiddingRoomClient({
 
       <div className="hidden lg:block">{filterFields}</div>
 
-      <p className="text-xs text-slate-600">
-        Bids can change quickly; use Refresh after you bid. The server decides if a bid is valid.
+      <p className="text-xs leading-relaxed text-slate-600">
+        High bids and timers update when anyone bids. After yours goes through, tap{" "}
+        <span className="font-medium text-slate-800">Refresh</span> at the top so you&apos;re looking at
+        the latest numbers.
       </p>
 
       {filtered.length === 0 ? (
@@ -249,7 +251,7 @@ export function BiddingRoomClient({
       ) : (
         <>
           <div className="space-y-3 md:hidden">
-            {filtered.map((lot) => {
+            {filtered.map((lot, i) => {
               const disabledReason = getBidDisabledReason(lot, gate);
               const minBid = nextMinimumBidAmount(lot.high_amount);
               const highDisplay =
@@ -263,7 +265,9 @@ export function BiddingRoomClient({
               return (
                 <article
                   key={lot.player_id}
-                  className="rounded-xl border border-sky-100 bg-white px-4 py-4 shadow-sm"
+                  className={`rounded-xl border border-sky-100 px-4 py-4 shadow-sm ${
+                    i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
+                  }`}
                 >
                   <div className="flex flex-wrap items-start justify-between gap-2 gap-y-3">
                     <div className="min-w-0 flex-1">
@@ -339,7 +343,7 @@ export function BiddingRoomClient({
                 </tr>
               </thead>
               <tbody>
-                {filtered.map((lot) => {
+                {filtered.map((lot, i) => {
                   const disabledReason = getBidDisabledReason(lot, gate);
                   const minBid = nextMinimumBidAmount(lot.high_amount);
                   const highDisplay =
@@ -351,7 +355,10 @@ export function BiddingRoomClient({
                           ? String(lot.high_amount)
                           : "—";
                   return (
-                    <tr key={lot.player_id} className="border-b border-slate-100">
+                    <tr
+                      key={lot.player_id}
+                      className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
+                    >
                       <td className="px-3 py-3 align-top text-slate-900">{lot.player_name ?? "—"}</td>
                       <td className="max-w-[10rem] truncate px-3 py-3 align-top text-slate-600">
                         {lot.club ?? "—"}

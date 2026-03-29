@@ -1,25 +1,30 @@
 import type { PlaceBidErrorCode } from "@/lib/bidding";
 
+/** User-facing copy for place_bid JSON error codes (see auction-bidding.sql). */
 const MESSAGES: Record<PlaceBidErrorCode, string> = {
-  amount_must_be_integer: "Use a whole number (no decimals).",
-  below_minimum_opening_bid: "Minimum opening bid is 5.",
-  auction_not_found: "Auction not found.",
-  hard_deadline_not_set: "This auction has no deadline configured.",
-  auction_deadline_passed: "Bidding is closed (auction deadline passed).",
-  lot_not_found: "This player lot was not found.",
-  lot_not_biddable: "This lot is not open for bidding.",
-  bid_too_low: "Bid must be higher than the current bid.",
-  bid_increment_too_small: "From 50 and up, bids must increase by at least 5.",
-  bidder_not_in_auction: "You are not a bidder in this auction.",
-  roster_full: "Roster is full (18 players including leading bids).",
-  goalkeeper_cap: "You already have a goalkeeper (sold or leading bid).",
-  outfield_cap: "Outfield player limit reached for your roster.",
-  insufficient_active_budget: "Insufficient active budget for this bid.",
+  amount_must_be_integer: "Please enter a whole number — no decimals.",
+  below_minimum_opening_bid: "The first bid on a player must be at least 5.",
+  auction_not_found: "We couldn’t find this auction.",
+  hard_deadline_not_set: "This auction isn’t open for bidding yet.",
+  auction_deadline_passed: "The auction deadline has passed — no more bids.",
+  lot_not_found: "We couldn’t find this player in the auction.",
+  lot_not_biddable: "This player isn’t taking bids right now.",
+  bid_too_low:
+    "That amount isn’t high enough anymore — someone may have just outbid you. Tap Refresh, check the current high bid, and try again.",
+  bid_increment_too_small:
+    "After the high bid reaches 50, each raise must be at least 5 higher (for example: 55 or more if the high bid is 50).",
+  bidder_not_in_auction: "You need to be in this auction as a manager to bid.",
+  roster_full:
+    "Your roster is full (18 players, including anyone you’re currently winning a bid on).",
+  goalkeeper_cap: "You can only roster one goalkeeper.",
+  outfield_cap: "You’ve hit the outfield player limit for your roster.",
+  insufficient_active_budget:
+    "That bid is more than your available budget right now (winning bids count against what you can spend until things settle).",
 };
 
 export function placeBidErrorMessage(code: string): string {
   if (code in MESSAGES) return MESSAGES[code as PlaceBidErrorCode];
-  return `Bid rejected: ${code}`;
+  return "We couldn’t place that bid. Tap Refresh and try again, or pick a different amount.";
 }
 
 /** Minimum next bid amount (strictly greater than currentHigh), or opening minimum 5. */
