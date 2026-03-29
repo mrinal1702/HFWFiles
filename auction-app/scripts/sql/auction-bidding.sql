@@ -399,9 +399,10 @@ begin
           raise exception 'missing_bid_for_lot: %', v_lot.player_id;
         end if;
 
+        -- auction_lots.player_id is text; auction_teams.player_id may be int/bigint in older DBs — compare as text.
         if not exists (
           select 1 from public.auction_teams t
-          where t.auction_id = p_auction_id and t.player_id = v_lot.player_id
+          where t.auction_id = p_auction_id and t.player_id::text = v_lot.player_id::text
         ) then
           insert into public.auction_teams (auction_id, auction_user_id, player_id, purchase_price)
           values (p_auction_id, v_bid.auction_user_id, v_lot.player_id, v_bid.amount);
