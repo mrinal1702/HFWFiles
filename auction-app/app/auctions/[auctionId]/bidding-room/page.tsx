@@ -14,10 +14,10 @@ export default async function BiddingRoomPage({
   const gate = toBidGateContext(d);
 
   return (
-    <section className="space-y-4">
+    <section className="space-y-4 sm:space-y-5">
       <div>
-        <h2 className="text-lg font-semibold">Bidding room</h2>
-        <p className="mt-1 text-sm text-neutral-500">
+        <h2 className="text-lg font-semibold sm:text-xl">Bidding room</h2>
+        <p className="mt-2 text-sm leading-relaxed text-neutral-500">
           Full transparency: everyone sees budgets, high bids, and rosters inside this auction.
         </p>
       </div>
