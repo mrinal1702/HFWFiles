@@ -34,6 +34,13 @@ function displayLotStatus(lot: EnrichedLot, biddingClosed: boolean): string {
   return lot.status;
 }
 
+/** Parsed bid deadline in ms, or null if none / invalid. */
+function bidDeadlineMs(lot: EnrichedLot): number | null {
+  if (!lot.expires_at) return null;
+  const t = Date.parse(lot.expires_at);
+  return Number.isNaN(t) ? null : t;
+}
+
 function StatusBadge({ status }: { status: string }) {
   return (
     <span className="inline-flex max-w-[min(100%,14rem)] shrink-0 items-center rounded-full border border-sky-200 bg-sky-50 px-2.5 py-1 text-left text-xs font-medium leading-snug text-slate-800">
@@ -147,7 +154,15 @@ export function BiddingRoomClient({
         return sort === "bid-high" ? vb - va : va - vb;
       });
     } else {
-      rows.sort((a, b) => a.player_id.localeCompare(b.player_id));
+      // Default: earliest active deadline first; lots without a deadline by player id.
+      rows.sort((a, b) => {
+        const da = bidDeadlineMs(a);
+        const db = bidDeadlineMs(b);
+        if (da != null && db != null) return da - db;
+        if (da != null && db == null) return -1;
+        if (da == null && db != null) return 1;
+        return a.player_id.localeCompare(b.player_id);
+      });
     }
 
     return rows;
@@ -208,7 +223,7 @@ export function BiddingRoomClient({
       <label className="flex flex-col gap-1.5 text-sm sm:col-span-2 lg:col-span-1">
         <span className="font-medium text-slate-700">Sort</span>
         <select className={selectClass} value={sort} onChange={(e) => setSort(e.target.value as typeof sort)}>
-          <option value="">Player id</option>
+          <option value="">Default (deadline first, then id)</option>
           <option value="deadline-asc">Deadline ↑</option>
           <option value="deadline-desc">Deadline ↓</option>
           <option value="bid-high">Bid high → low</option>
