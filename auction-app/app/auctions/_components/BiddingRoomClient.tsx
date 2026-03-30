@@ -5,6 +5,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 
 import { getBidDisabledReason } from "@/lib/auction-bid-gates";
+import { lotRowAnchorId } from "@/lib/lot-row-anchor";
 import { nextMinimumBidAmount, positionSortRank } from "@/lib/bid-ui-messages";
 import type { BidGateContext, EnrichedLot } from "@/lib/auction-types";
 
@@ -427,7 +428,8 @@ export function BiddingRoomClient({
               return (
                 <article
                   key={lot.player_id}
-                  className={`rounded-xl border border-sky-100 px-4 py-4 shadow-sm ${
+                  id={lotRowAnchorId(lot.player_id)}
+                  className={`scroll-mt-28 rounded-xl border border-sky-100 px-4 py-4 shadow-sm ${
                     i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
                   }`}
                 >
@@ -521,7 +523,8 @@ export function BiddingRoomClient({
                   return (
                     <tr
                       key={lot.player_id}
-                      className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
+                      id={lotRowAnchorId(lot.player_id)}
+                      className={`scroll-mt-28 border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
                     >
                       <td className="px-3 py-3 align-top text-slate-900">
                         <Link

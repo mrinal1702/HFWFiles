@@ -1,5 +1,7 @@
 "use client";
 
+import { lotRowAnchorId } from "@/lib/lot-row-anchor";
+
 const SCROLL_KEY_PREFIX = "hfw:scroll-restore:";
 const MAX_AGE_MS = 5 * 60 * 1000;
 
@@ -31,5 +33,35 @@ export function consumeSavedScrollForCurrentLocation(): number | null {
   } catch {
     return null;
   }
+}
+
+/**
+ * After a successful bid, revalidatePath refreshes the tree without changing the URL, so we must
+ * restore here (not in a layout effect keyed only on pathname).
+ * Prefer scrolling the bid row into view so default sort reorder does not strand the viewport.
+ */
+export function restoreScrollAfterBid(playerId: string): void {
+  const y = consumeSavedScrollForCurrentLocation();
+  const anchorId = lotRowAnchorId(playerId);
+  let attempts = 0;
+  const maxAttempts = 48;
+
+  const tick = () => {
+    const el = document.getElementById(anchorId);
+    if (el) {
+      el.scrollIntoView({ block: "nearest", behavior: "auto" });
+      return;
+    }
+    attempts += 1;
+    if (attempts < maxAttempts) {
+      requestAnimationFrame(tick);
+    } else if (y != null) {
+      window.scrollTo({ top: Math.max(0, y), left: 0, behavior: "auto" });
+    }
+  };
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(tick);
+  });
 }
 

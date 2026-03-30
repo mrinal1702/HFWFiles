@@ -6,6 +6,7 @@ import { getBidDisabledReason } from "@/lib/auction-bid-gates";
 import { nextMinimumBidAmount } from "@/lib/bid-ui-messages";
 
 import { BidRowForm } from "@/app/auctions/_components/BidRowForm";
+import { lotRowAnchorId } from "@/lib/lot-row-anchor";
 
 export const dynamic = "force-dynamic";
 
@@ -127,7 +128,10 @@ export default async function PlayerDetailPage({
           </div>
         </div>
 
-        <div className="mt-5 rounded-lg border border-slate-200 bg-slate-50/70 p-4 sm:p-5">
+        <div
+          className="mt-5 scroll-mt-28 rounded-lg border border-slate-200 bg-slate-50/70 p-4 sm:p-5"
+          id={lotRowAnchorId(lot.player_id)}
+        >
           <div className="flex flex-wrap items-baseline justify-between gap-3">
             <h3 className="text-base font-semibold text-slate-900">Place a bid</h3>
             {disabledReason ? (
