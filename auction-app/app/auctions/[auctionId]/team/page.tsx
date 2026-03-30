@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { createAdminClient } from "@/lib/supabase-server";
 import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
 
@@ -11,6 +13,7 @@ export default async function MyTeamPage({
   const { auctionId: raw } = await params;
   const auctionId = Number(raw);
   const d = await loadAuctionDashboardForViewer(auctionId);
+  const returnTo = `/auctions/${auctionId}/team`;
 
   if (!d.me) {
     return (
@@ -64,7 +67,16 @@ export default async function MyTeamPage({
                     }`}
                   >
                     <div className="flex flex-wrap items-baseline justify-between gap-2">
-                      <h3 className="text-base font-medium text-slate-900">{meta?.player_name ?? "—"}</h3>
+                      <h3 className="text-base font-medium text-slate-900">
+                        <Link
+                          href={`/auctions/${auctionId}/players/${t.player_id}?returnTo=${encodeURIComponent(
+                            returnTo,
+                          )}`}
+                          className="hover:underline"
+                        >
+                          {meta?.player_name ?? "—"}
+                        </Link>
+                      </h3>
                       <span className="font-mono text-sm font-medium text-slate-900">{t.purchase_price}</span>
                     </div>
                     <p className="mt-1 text-sm text-slate-600">
@@ -92,7 +104,16 @@ export default async function MyTeamPage({
                         key={t.player_id}
                         className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
                       >
-                        <td className="px-3 py-3 text-slate-900">{meta?.player_name ?? "—"}</td>
+                        <td className="px-3 py-3 text-slate-900">
+                          <Link
+                            href={`/auctions/${auctionId}/players/${t.player_id}?returnTo=${encodeURIComponent(
+                              returnTo,
+                            )}`}
+                            className="hover:underline"
+                          >
+                            {meta?.player_name ?? "—"}
+                          </Link>
+                        </td>
                         <td className="px-3 py-3 text-slate-600">{meta?.club ?? "—"}</td>
                         <td className="px-3 py-3 text-slate-600">{meta?.position ?? "—"}</td>
                         <td className="px-3 py-3 font-mono font-medium text-slate-900">{t.purchase_price}</td>

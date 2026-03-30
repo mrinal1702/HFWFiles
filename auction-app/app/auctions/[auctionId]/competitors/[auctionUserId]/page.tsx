@@ -24,6 +24,8 @@ export default async function CompetitorDetailPage({
     notFound();
   }
 
+  const returnTo = `/auctions/${auctionId}/competitors/${competitorUserId}`;
+
   return (
     <section className="space-y-4 sm:space-y-6">
       <div className="rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
@@ -66,7 +68,14 @@ export default async function CompetitorDetailPage({
                   }`}
                 >
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
-                    <span className="text-base font-medium text-slate-900">{l.player_name ?? "—"}</span>
+                    <Link
+                      href={`/auctions/${auctionId}/players/${l.player_id}?returnTo=${encodeURIComponent(
+                        returnTo,
+                      )}`}
+                      className="text-base font-medium text-slate-900 underline-offset-2 hover:underline"
+                    >
+                      {l.player_name ?? "—"}
+                    </Link>
                     <span className="font-mono text-sm font-medium text-slate-900">{l.high_amount ?? "—"}</span>
                   </div>
                   <p className="mt-1 text-sm text-slate-600">
@@ -91,7 +100,16 @@ export default async function CompetitorDetailPage({
                       key={l.player_id}
                       className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
                     >
-                      <td className="px-3 py-3 text-slate-900">{l.player_name ?? "—"}</td>
+                      <td className="px-3 py-3 text-slate-900">
+                        <Link
+                          href={`/auctions/${auctionId}/players/${l.player_id}?returnTo=${encodeURIComponent(
+                            returnTo,
+                          )}`}
+                          className="hover:underline"
+                        >
+                          {l.player_name ?? "—"}
+                        </Link>
+                      </td>
                       <td className="px-3 py-3 text-slate-600">{l.club ?? "—"}</td>
                       <td className="px-3 py-3 text-slate-600">{l.position ?? "—"}</td>
                       <td className="px-3 py-3 font-mono font-medium text-slate-900">{l.high_amount ?? "—"}</td>
@@ -121,7 +139,16 @@ export default async function CompetitorDetailPage({
                     i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
                   }`}
                 >
-                  <h4 className="text-base font-medium text-slate-900">{l.player_name ?? "—"}</h4>
+                  <h4 className="text-base font-medium text-slate-900">
+                    <Link
+                      href={`/auctions/${auctionId}/players/${l.player_id}?returnTo=${encodeURIComponent(
+                        returnTo,
+                      )}`}
+                      className="hover:underline"
+                    >
+                      {l.player_name ?? "—"}
+                    </Link>
+                  </h4>
                   <p className="mt-1 text-sm text-slate-600">
                     {(l.club ?? "—") + " · " + (l.position ?? "—")}
                   </p>
@@ -157,7 +184,16 @@ export default async function CompetitorDetailPage({
                       key={l.player_id}
                       className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
                     >
-                      <td className="px-3 py-3 text-slate-900">{l.player_name ?? "—"}</td>
+                      <td className="px-3 py-3 text-slate-900">
+                        <Link
+                          href={`/auctions/${auctionId}/players/${l.player_id}?returnTo=${encodeURIComponent(
+                            returnTo,
+                          )}`}
+                          className="hover:underline"
+                        >
+                          {l.player_name ?? "—"}
+                        </Link>
+                      </td>
                       <td className="px-3 py-3 text-slate-600">{l.club ?? "—"}</td>
                       <td className="px-3 py-3 text-slate-600">{l.position ?? "—"}</td>
                       <td className="px-3 py-3 font-mono font-medium text-slate-900">{l.high_amount ?? "—"}</td>

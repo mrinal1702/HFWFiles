@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
 
 export const dynamic = "force-dynamic";
@@ -9,6 +11,7 @@ export default async function BidsHeldPage({
 }) {
   const { auctionId: raw } = await params;
   const d = await loadAuctionDashboardForViewer(Number(raw));
+  const returnTo = `/auctions/${Number(raw)}/bids-held`;
 
   if (!d.me) {
     return (
@@ -51,7 +54,16 @@ export default async function BidsHeldPage({
                     i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
                   }`}
                 >
-                  <h3 className="text-base font-medium text-slate-900">{l.player_name ?? "—"}</h3>
+                  <h3 className="text-base font-medium text-slate-900">
+                    <Link
+                      href={`/auctions/${Number(raw)}/players/${l.player_id}?returnTo=${encodeURIComponent(
+                        returnTo,
+                      )}`}
+                      className="hover:underline"
+                    >
+                      {l.player_name ?? "—"}
+                    </Link>
+                  </h3>
                   <p className="mt-1 text-sm text-slate-600">
                     {(l.club ?? "—") + " · " + (l.position ?? "—")}
                   </p>
@@ -87,7 +99,16 @@ export default async function BidsHeldPage({
                       key={l.player_id}
                       className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
                     >
-                      <td className="px-3 py-3 text-slate-900">{l.player_name ?? "—"}</td>
+                      <td className="px-3 py-3 text-slate-900">
+                        <Link
+                          href={`/auctions/${Number(raw)}/players/${l.player_id}?returnTo=${encodeURIComponent(
+                            returnTo,
+                          )}`}
+                          className="hover:underline"
+                        >
+                          {l.player_name ?? "—"}
+                        </Link>
+                      </td>
                       <td className="px-3 py-3 text-slate-600">{l.club ?? "—"}</td>
                       <td className="px-3 py-3 text-slate-600">{l.position ?? "—"}</td>
                       <td className="px-3 py-3 font-mono font-medium text-slate-900">{l.high_amount ?? "—"}</td>

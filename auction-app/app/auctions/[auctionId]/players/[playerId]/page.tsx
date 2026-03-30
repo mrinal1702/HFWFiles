@@ -11,8 +11,10 @@ export const dynamic = "force-dynamic";
 
 export default async function PlayerDetailPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ auctionId: string; playerId: string }>;
+  searchParams?: Promise<{ returnTo?: string }>;
 }) {
   const { auctionId: aRaw, playerId: pRaw } = await params;
   const auctionId = Number(aRaw);
@@ -63,6 +65,12 @@ export default async function PlayerDetailPage({
   const minBid = nextMinimumBidAmount(lot.high_amount);
   const disabledReason = getBidDisabledReason(lot, gate);
 
+  const returnToRaw = searchParams ? (await searchParams).returnTo : undefined;
+  const backHref =
+    typeof returnToRaw === "string" && returnToRaw.startsWith("/")
+      ? returnToRaw
+      : `/auctions/${auctionId}/bidding-room`;
+
   return (
     <section className="space-y-4 sm:space-y-5">
       <div className="rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
@@ -98,10 +106,11 @@ export default async function PlayerDetailPage({
 
         <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <Link
-            href={`/auctions/${auctionId}/bidding-room`}
+            href={backHref}
+            aria-label="Back to previous page"
             className="min-h-11 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-center text-sm font-medium text-slate-800 shadow-sm hover:bg-sky-50/50"
           >
-            ← Back to bidding room
+            ← Back
           </Link>
           <div className="text-xs text-slate-600">
             Tip: if the timer or high bid looks stale, tap <span className="font-medium text-slate-800">Refresh</span>.

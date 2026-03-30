@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 
 import { getBidDisabledReason } from "@/lib/auction-bid-gates";
@@ -75,6 +76,12 @@ export function BiddingRoomClient({
   const [bidderFilter, setBidderFilter] = useState("");
   const [sort, setSort] = useState<"" | "deadline-asc" | "deadline-desc" | "bid-high" | "bid-low">("");
   const [searchQuery, setSearchQuery] = useState("");
+
+  const pathname = usePathname();
+  const sp = useSearchParams();
+  const returnTo = sp.toString() ? `${pathname}?${sp.toString()}` : pathname;
+  const playerHref = (playerId: string) =>
+    `/auctions/${auctionId}/players/${playerId}?returnTo=${encodeURIComponent(returnTo)}`;
 
   const clubs = useMemo(() => {
     const s = new Set<string>();
@@ -308,7 +315,7 @@ export function BiddingRoomClient({
                 {suggestions.map((l, i) => (
                   <li key={l.player_id}>
                     <Link
-                      href={`/auctions/${auctionId}/players/${l.player_id}`}
+                      href={playerHref(l.player_id)}
                       className={`block rounded-xl border border-sky-100 px-4 py-3 shadow-sm ${
                         i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
                       }`}
@@ -385,7 +392,9 @@ export function BiddingRoomClient({
                   <div className="flex flex-wrap items-start justify-between gap-2 gap-y-3">
                     <div className="min-w-0 flex-1">
                       <h3 className="text-base font-medium leading-snug text-slate-900">
-                        {lot.player_name ?? "—"}
+                        <Link href={playerHref(lot.player_id)} className="hover:underline">
+                          {lot.player_name ?? `Player #${lot.player_id}`}
+                        </Link>
                       </h3>
                       <p className="mt-1 text-sm text-slate-600">
                         {(lot.club ?? "—") + " · " + (lot.position ?? "—")}
@@ -472,7 +481,14 @@ export function BiddingRoomClient({
                       key={lot.player_id}
                       className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
                     >
-                      <td className="px-3 py-3 align-top text-slate-900">{lot.player_name ?? "—"}</td>
+                      <td className="px-3 py-3 align-top text-slate-900">
+                        <Link
+                          href={playerHref(lot.player_id)}
+                          className="block truncate hover:underline"
+                        >
+                          {lot.player_name ?? `Player #${lot.player_id}`}
+                        </Link>
+                      </td>
                       <td className="max-w-[10rem] truncate px-3 py-3 align-top text-slate-600">
                         {lot.club ?? "—"}
                       </td>
