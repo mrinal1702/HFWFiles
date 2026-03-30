@@ -173,7 +173,7 @@ export const loadAuctionDashboard = cache(
   if (playerIds.length) {
     const withClub = await admin
       .from("players")
-      .select("player_id, player_name, position, team_name")
+      .select("player_id, player_name, position, team_name, team_id")
       .in("player_id", playerIds);
     if (withClub.error) {
       const basic = await admin
@@ -201,7 +201,7 @@ export const loadAuctionDashboard = cache(
 
   const playerById = new Map<
     string,
-    { player_name: string | null; position: string | null; club: string | null }
+    { player_name: string | null; position: string | null; club: string | null; team_id: number | null }
   >();
   for (const p of playerRows) {
     const row = p as {
@@ -209,11 +209,20 @@ export const loadAuctionDashboard = cache(
       player_name: string | null;
       position: string | null;
       team_name?: string | null;
+      team_id?: number | null;
     };
+    const tid = row.team_id;
+    const teamId =
+      typeof tid === "number" && Number.isFinite(tid)
+        ? tid
+        : tid != null && String(tid).trim() !== ""
+          ? Number(tid)
+          : null;
     playerById.set(String(row.player_id), {
       player_name: row.player_name ?? null,
       position: row.position ?? null,
       club: row.team_name ?? null,
+      team_id: teamId != null && Number.isFinite(teamId) ? teamId : null,
     });
   }
 
@@ -245,6 +254,7 @@ export const loadAuctionDashboard = cache(
         player_name: meta?.player_name ?? null,
         position: meta?.position ?? null,
         club: meta?.club ?? null,
+        team_id: meta?.team_id ?? null,
         status,
         expires_at: l.expires_at != null ? String(l.expires_at) : null,
         high_bidder_id: soldTo.auction_user_id,
@@ -261,6 +271,7 @@ export const loadAuctionDashboard = cache(
       player_name: meta?.player_name ?? null,
       position: meta?.position ?? null,
       club: meta?.club ?? null,
+      team_id: meta?.team_id ?? null,
       status,
       expires_at: l.expires_at != null ? String(l.expires_at) : null,
       high_bidder_id: bid?.auction_user_id ?? null,

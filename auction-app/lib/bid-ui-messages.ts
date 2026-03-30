@@ -38,3 +38,13 @@ export function isGoalkeeperPosition(position: string | null | undefined): boole
   const p = (position ?? "").trim().toLowerCase();
   return p === "gk" || p === "goalkeeper";
 }
+
+/** Default list order: goalkeeper → defender → midfielder → forward → unknown. Lower sorts first. */
+export function positionSortRank(position: string | null | undefined): number {
+  const p = (position ?? "").trim().toLowerCase();
+  if (p === "gk" || p.includes("goalkeeper")) return 0;
+  if (p.includes("defend")) return 1;
+  if (p.includes("midfield")) return 2;
+  if (p.includes("forward")) return 3;
+  return 4;
+}

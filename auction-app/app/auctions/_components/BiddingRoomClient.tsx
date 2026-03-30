@@ -5,7 +5,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 
 import { getBidDisabledReason } from "@/lib/auction-bid-gates";
-import { nextMinimumBidAmount } from "@/lib/bid-ui-messages";
+import { nextMinimumBidAmount, positionSortRank } from "@/lib/bid-ui-messages";
 import type { BidGateContext, EnrichedLot } from "@/lib/auction-types";
 
 import { BidRowForm } from "./BidRowForm";
@@ -39,6 +39,13 @@ function bidDeadlineMs(lot: EnrichedLot): number | null {
   if (!lot.expires_at) return null;
   const t = Date.parse(lot.expires_at);
   return Number.isNaN(t) ? null : t;
+}
+
+/** Default sort: 0 = active bidding, 1 = unsold (incl. closed bidding), 2 = sold. */
+function defaultSortTier(lot: EnrichedLot, biddingClosed: boolean): 0 | 1 | 2 {
+  if (lot.status === "bidding" && !biddingClosed) return 0;
+  if (lot.status === "sold") return 2;
+  return 1;
 }
 
 function StatusBadge({ status }: { status: string }) {
@@ -154,13 +161,27 @@ export function BiddingRoomClient({
         return sort === "bid-high" ? vb - va : va - vb;
       });
     } else {
-      // Default: earliest active deadline first; lots without a deadline by player id.
+      // Default: ongoing (latest deadline first) → unsold → sold; then team_id, position, player_id.
       rows.sort((a, b) => {
-        const da = bidDeadlineMs(a);
-        const db = bidDeadlineMs(b);
-        if (da != null && db != null) return da - db;
-        if (da != null && db == null) return -1;
-        if (da == null && db != null) return 1;
+        const ta = defaultSortTier(a, gate.biddingClosed);
+        const tb = defaultSortTier(b, gate.biddingClosed);
+        if (ta !== tb) return ta - tb;
+
+        if (ta === 0) {
+          const da = bidDeadlineMs(a);
+          const db = bidDeadlineMs(b);
+          if (da != null && db != null) return db - da;
+          if (da != null && db == null) return -1;
+          if (da == null && db != null) return 1;
+          return a.player_id.localeCompare(b.player_id);
+        }
+
+        const teamA = a.team_id ?? Number.MAX_SAFE_INTEGER;
+        const teamB = b.team_id ?? Number.MAX_SAFE_INTEGER;
+        if (teamA !== teamB) return teamA - teamB;
+        const pa = positionSortRank(a.position);
+        const pb = positionSortRank(b.position);
+        if (pa !== pb) return pa - pb;
         return a.player_id.localeCompare(b.player_id);
       });
     }
@@ -223,7 +244,7 @@ export function BiddingRoomClient({
       <label className="flex flex-col gap-1.5 text-sm sm:col-span-2 lg:col-span-1">
         <span className="font-medium text-slate-700">Sort</span>
         <select className={selectClass} value={sort} onChange={(e) => setSort(e.target.value as typeof sort)}>
-          <option value="">Default (deadline first, then id)</option>
+          <option value="">Default (ongoing → unsold → sold)</option>
           <option value="deadline-asc">Deadline ↑</option>
           <option value="deadline-desc">Deadline ↓</option>
           <option value="bid-high">Bid high → low</option>

@@ -12,6 +12,8 @@ export type EnrichedLot = {
   player_name: string | null;
   position: string | null;
   club: string | null;
+  /** Real-world club id from `players.team_id` when present; used for default list ordering. */
+  team_id: number | null;
   status: string;
   expires_at: string | null;
   high_bidder_id: number | null;
