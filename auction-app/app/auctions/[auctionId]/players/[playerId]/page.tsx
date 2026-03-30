@@ -2,6 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { loadAuctionDashboardForViewer, toBidGateContext } from "@/lib/auction-dashboard";
+import { getBidDisabledReason } from "@/lib/auction-bid-gates";
+import { nextMinimumBidAmount } from "@/lib/bid-ui-messages";
+
+import { BidRowForm } from "@/app/auctions/_components/BidRowForm";
 
 export const dynamic = "force-dynamic";
 
@@ -56,6 +60,9 @@ export default async function PlayerDetailPage({
   const timerDisplay =
     lot.status === "bidding" && !gate.biddingClosed ? (lot.expires_at ? new Date(lot.expires_at).toLocaleString() : "—") : "—";
 
+  const minBid = nextMinimumBidAmount(lot.high_amount);
+  const disabledReason = getBidDisabledReason(lot, gate);
+
   return (
     <section className="space-y-4 sm:space-y-5">
       <div className="rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
@@ -98,6 +105,25 @@ export default async function PlayerDetailPage({
           </Link>
           <div className="text-xs text-slate-600">
             Tip: if the timer or high bid looks stale, tap <span className="font-medium text-slate-800">Refresh</span>.
+          </div>
+        </div>
+
+        <div className="mt-5 rounded-lg border border-slate-200 bg-slate-50/70 p-4 sm:p-5">
+          <div className="flex flex-wrap items-baseline justify-between gap-3">
+            <h3 className="text-base font-semibold text-slate-900">Place a bid</h3>
+            {disabledReason ? (
+              <div className="text-xs font-medium text-slate-600">Not available right now</div>
+            ) : (
+              <div className="text-xs font-medium text-slate-600">Next bid starts at {minBid}</div>
+            )}
+          </div>
+          <div className="mt-3">
+            <BidRowForm
+              auctionId={auctionId}
+              playerId={lot.player_id}
+              minBid={minBid}
+              disabledReason={disabledReason}
+            />
           </div>
         </div>
       </div>
