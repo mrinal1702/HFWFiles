@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { getAuthUser } from "@/lib/auth/get-user";
 
@@ -9,6 +10,16 @@ export default async function Home() {
 
   return (
     <main className="mx-auto flex max-w-lg flex-1 flex-col px-4 py-10 sm:px-6 sm:py-14">
+      <div className="mx-auto mb-6 w-full max-w-sm">
+        <Image
+          src="/hfw-auction-logo.png"
+          alt="HFW Auction logo"
+          width={768}
+          height={768}
+          priority
+          className="h-auto w-full"
+        />
+      </div>
       <h1 className="text-center text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
         HFW Fantasy Auction
       </h1>

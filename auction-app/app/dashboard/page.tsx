@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadMyAuctionsForUser } from "@/lib/auction-dashboard";
@@ -30,6 +31,15 @@ export default async function DashboardPage({
 
   return (
     <main className="mx-auto max-w-lg flex-1 px-4 py-8 sm:max-w-3xl sm:px-6 sm:py-10">
+      <div className="mb-6 flex justify-center sm:mb-8">
+        <Image
+          src="/hfw-auction-logo.png"
+          alt="HFW Auction logo"
+          width={768}
+          height={768}
+          className="h-auto w-full max-w-xs sm:max-w-sm"
+        />
+      </div>
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <h1 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">Dashboard</h1>
         <form action={signOutAction}>
