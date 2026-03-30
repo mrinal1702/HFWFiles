@@ -6,6 +6,25 @@ import { loadCompetitorView } from "@/lib/auction-dashboard";
 
 export const dynamic = "force-dynamic";
 
+type SectionId = "gk" | "def" | "mid" | "fwd" | "other";
+
+const SECTION_ORDER: Array<{ id: SectionId; label: string }> = [
+  { id: "gk", label: "Goalkeepers" },
+  { id: "def", label: "Defenders" },
+  { id: "mid", label: "Midfielders" },
+  { id: "fwd", label: "Forwards" },
+  { id: "other", label: "Other" },
+];
+
+function sectionForPosition(position: string | null | undefined): SectionId {
+  const p = (position ?? "").trim().toLowerCase();
+  if (p === "gk" || p.includes("goalkeeper")) return "gk";
+  if (p.includes("defend")) return "def";
+  if (p.includes("midfield")) return "mid";
+  if (p.includes("forward")) return "fwd";
+  return "other";
+}
+
 export default async function CompetitorDetailPage({
   params,
 }: {
@@ -25,6 +44,20 @@ export default async function CompetitorDetailPage({
   }
 
   const returnTo = `/auctions/${auctionId}/competitors/${competitorUserId}`;
+  const soldGrouped = SECTION_ORDER.map((section) => {
+    const rows = v.sold
+      .filter((l) => sectionForPosition(l.position) === section.id)
+      .sort((a, b) => {
+        const clubA = (a.club ?? "").toLowerCase();
+        const clubB = (b.club ?? "").toLowerCase();
+        if (clubA !== clubB) return clubA.localeCompare(clubB);
+        const nameA = (a.player_name ?? "").toLowerCase();
+        const nameB = (b.player_name ?? "").toLowerCase();
+        if (nameA !== nameB) return nameA.localeCompare(nameB);
+        return a.player_id.localeCompare(b.player_id);
+      });
+    return { ...section, rows };
+  }).filter((s) => s.rows.length > 0);
 
   return (
     <section className="space-y-4 sm:space-y-6">
@@ -51,7 +84,7 @@ export default async function CompetitorDetailPage({
       </div>
 
       <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm sm:p-5">
-        <h3 className="text-base font-semibold text-slate-900">Roster</h3>
+        <h3 className="text-base font-semibold text-slate-900">View Team</h3>
         <p className="mt-1 text-sm leading-relaxed text-slate-600">
           Players they&apos;ve won in this auction.
         </p>
@@ -59,31 +92,42 @@ export default async function CompetitorDetailPage({
           <p className="mt-3 text-sm text-slate-600">Nobody on their roster yet.</p>
         ) : (
           <>
-            <ul className="mt-4 space-y-3 md:hidden">
-              {v.sold.map((l, i) => (
-                <li
-                  key={l.player_id}
-                  className={`rounded-xl border border-sky-100 px-4 py-4 shadow-sm ${
-                    i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
-                  }`}
-                >
-                  <div className="flex flex-wrap items-baseline justify-between gap-2">
-                    <Link
-                      href={`/auctions/${auctionId}/players/${l.player_id}?returnTo=${encodeURIComponent(
-                        returnTo,
-                      )}`}
-                      className="text-base font-medium text-slate-900 underline-offset-2 hover:underline"
-                    >
-                      {l.player_name ?? "—"}
-                    </Link>
-                    <span className="font-mono text-sm font-medium text-slate-900">{l.high_amount ?? "—"}</span>
-                  </div>
-                  <p className="mt-1 text-sm text-slate-600">
-                    {(l.club ?? "—") + " · " + (l.position ?? "—")}
-                  </p>
-                </li>
+            <div className="mt-4 space-y-4 md:hidden">
+              {soldGrouped.map((group, groupIdx) => (
+                <div key={group.id} className={groupIdx > 0 ? "pt-2" : ""}>
+                  <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-700">
+                    {group.label} ({group.rows.length})
+                  </h4>
+                  <ul className="mt-2 space-y-3">
+                    {group.rows.map((l, i) => (
+                      <li
+                        key={`${group.id}-${l.player_id}`}
+                        className={`rounded-xl border border-sky-100 px-4 py-4 shadow-sm ${
+                          i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
+                        }`}
+                      >
+                        <div className="flex flex-wrap items-baseline justify-between gap-2">
+                          <Link
+                            href={`/auctions/${auctionId}/players/${l.player_id}?returnTo=${encodeURIComponent(
+                              returnTo,
+                            )}`}
+                            className="text-base font-medium text-slate-900 underline-offset-2 hover:underline"
+                          >
+                            {l.player_name ?? "—"}
+                          </Link>
+                          <span className="font-mono text-sm font-medium text-slate-900">
+                            {l.high_amount ?? "—"}
+                          </span>
+                        </div>
+                        <p className="mt-1 text-sm text-slate-600">
+                          {(l.club ?? "—") + " · " + (l.position ?? "—")}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
             <div className="mt-4 hidden overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm md:block">
               <table className="w-full min-w-[28rem] border-collapse text-left text-sm">
                 <thead className="border-b border-slate-200 bg-sky-50 text-slate-700">
@@ -95,26 +139,39 @@ export default async function CompetitorDetailPage({
                   </tr>
                 </thead>
                 <tbody>
-                  {v.sold.map((l, i) => (
-                    <tr
-                      key={l.player_id}
-                      className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
-                    >
-                      <td className="px-3 py-3 text-slate-900">
-                        <Link
-                          href={`/auctions/${auctionId}/players/${l.player_id}?returnTo=${encodeURIComponent(
-                            returnTo,
-                          )}`}
-                          className="hover:underline"
-                        >
-                          {l.player_name ?? "—"}
-                        </Link>
-                      </td>
-                      <td className="px-3 py-3 text-slate-600">{l.club ?? "—"}</td>
-                      <td className="px-3 py-3 text-slate-600">{l.position ?? "—"}</td>
-                      <td className="px-3 py-3 font-mono font-medium text-slate-900">{l.high_amount ?? "—"}</td>
-                    </tr>
-                  ))}
+                  {soldGrouped.flatMap((group, groupIdx) => {
+                    const rows = group.rows.map((l, i) => (
+                      <tr
+                        key={`${group.id}-${l.player_id}`}
+                        className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
+                      >
+                        <td className="px-3 py-3 text-slate-900">
+                          <Link
+                            href={`/auctions/${auctionId}/players/${l.player_id}?returnTo=${encodeURIComponent(
+                              returnTo,
+                            )}`}
+                            className="hover:underline"
+                          >
+                            {l.player_name ?? "—"}
+                          </Link>
+                        </td>
+                        <td className="px-3 py-3 text-slate-600">{l.club ?? "—"}</td>
+                        <td className="px-3 py-3 text-slate-600">{l.position ?? "—"}</td>
+                        <td className="px-3 py-3 font-mono font-medium text-slate-900">{l.high_amount ?? "—"}</td>
+                      </tr>
+                    ));
+                    return [
+                      <tr
+                        key={`${group.id}-header`}
+                        className={groupIdx === 0 ? "bg-slate-100/70" : "border-t-2 border-slate-200 bg-slate-100/70"}
+                      >
+                        <td colSpan={4} className="px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-700">
+                          {group.label} ({group.rows.length})
+                        </td>
+                      </tr>,
+                      ...rows,
+                    ];
+                  })}
                 </tbody>
               </table>
             </div>

@@ -18,7 +18,7 @@ export default async function CompetitorsPage({
       <div className="rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
         <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Competitors</h2>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          Everyone can see each other&apos;s budgets. Tap a manager to view their roster and the bids
+          Everyone can see each other&apos;s budgets. Tap a manager to view their team and the bids
           they&apos;re winning.
         </p>
       </div>
