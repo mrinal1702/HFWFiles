@@ -1,6 +1,6 @@
 # Bidding system & UI handoff
 
-This document is the **single handoff** for anyone (or any Cursor agent) building the **user-facing bidding UI** on top of the existing **Supabase + Next.js** stack. It matches the code and SQL in **`auction-app`** as of its last update.
+This document is the **technical handoff** for the **Supabase + Next.js** bidding stack. For the **current product UI** (routes, bidding room, sorting, deployment pointers), read **`USER_UI_AND_DEPLOYMENT.md`** in the same folder. This file matches the code and SQL in **`auction-app`** as of its last update.
 
 ---
 
@@ -55,7 +55,7 @@ Roster of **sold** players: `auction_id`, `auction_user_id`, `player_id`, `purch
 
 ### `players`
 
-Global pool: at least `player_id`, `player_name`, `position` (GK vs outfield for caps). **`auction_lots`** reference `player_id` as text.
+Global pool: at least `player_id`, `player_name`, `position` (GK vs outfield for caps), and typically **`team_id`** / **`team_name`** for club display and default list ordering in the bidding room UI. **`auction_lots`** reference `player_id` as text.
 
 ---
 
@@ -117,12 +117,13 @@ Surface **`budget_remaining`**, **`active_budget`**, **current high bid**, **lot
 
 ---
 
-## 6) Existing UI entry points (for reference)
+## 6) UI entry points (for reference)
 
+- **Product UI** — See **`USER_UI_AND_DEPLOYMENT.md`**: bidding room (`app/auctions/.../bidding-room`), dashboard, team, bids held, player detail pages, etc. Loaders use **`lib/auction-dashboard.ts`** and **`lib/bidding.ts`**.
 - **`app/auction-lab/page.tsx`** — Server Component: reads auction, users, lots (+ joins `players`, `auction_bids` for display).  
 - **`app/auction-lab/BidForm.tsx`** — Client form + `useActionState` → **`app/auction-lab/actions.ts`** → `placeBid` + `revalidatePath`.  
 
-When building the real UI, **reuse** `lib/bidding.ts` and the same RPC contracts; replace layout/navigation/auth as needed.
+Reuse **`lib/bidding.ts`** and the same RPC contracts everywhere; Auction Lab remains a dev/integration surface.
 
 ---
 
