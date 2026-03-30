@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 
 import { getBidDisabledReason } from "@/lib/auction-bid-gates";
@@ -8,7 +9,7 @@ import type { BidGateContext, EnrichedLot } from "@/lib/auction-types";
 
 import { BidRowForm } from "./BidRowForm";
 
-type Tab = "all" | "ongoing" | "unsold" | "sold";
+type Tab = "all" | "ongoing" | "unsold" | "sold" | "search";
 
 function statusLabel(status: string): string {
   switch (status) {
@@ -52,6 +53,7 @@ const TAB_DEFS = [
   ["ongoing", "Ongoing bids"],
   ["unsold", "Unsold (no bids)"],
   ["sold", "Sold"],
+  ["search", "Search player"],
 ] as const;
 
 const selectClass =
@@ -72,6 +74,7 @@ export function BiddingRoomClient({
   const [statusFilter, setStatusFilter] = useState("");
   const [bidderFilter, setBidderFilter] = useState("");
   const [sort, setSort] = useState<"" | "deadline-asc" | "deadline-desc" | "bid-high" | "bid-low">("");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const clubs = useMemo(() => {
     const s = new Set<string>();
@@ -102,6 +105,7 @@ export function BiddingRoomClient({
   }, [lots]);
 
   const filtered = useMemo(() => {
+    if (tab === "search") return [];
     let rows = lots.slice();
     if (tab === "ongoing") {
       rows = rows.filter((l) => l.status === "bidding" && !gate.biddingClosed);
@@ -207,6 +211,27 @@ export function BiddingRoomClient({
     </div>
   );
 
+  const searchParts = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return [];
+    return q.split(/\s+/).filter(Boolean);
+  }, [searchQuery]);
+
+  const suggestions = useMemo(() => {
+    if (tab !== "search") return [];
+    if (searchParts.length === 0) return [];
+
+    const results = lots.filter((l) => {
+      const name = (l.player_name ?? "").trim();
+      if (!name) return false;
+      const tokens = name.split(/\s+/).map((t) => t.toLowerCase());
+      return searchParts.every((qPart) => tokens.some((t) => t.startsWith(qPart)));
+    });
+
+    results.sort((a, b) => (a.player_name ?? "").localeCompare(b.player_name ?? ""));
+    return results.slice(0, 10);
+  }, [lots, searchParts, tab]);
+
   return (
     <div className="space-y-4 sm:space-y-5">
       <div className="-mx-1 flex gap-2 overflow-x-auto overflow-y-hidden px-1 pb-1 [scrollbar-width:thin]">
@@ -226,7 +251,95 @@ export function BiddingRoomClient({
         ))}
       </div>
 
-      <div className="lg:hidden">
+      {tab === "search" ? (
+        <div className="rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div className="min-w-0">
+              <h3 className="text-base font-semibold text-slate-900 sm:text-lg">Search player</h3>
+              <p className="mt-1 text-sm leading-relaxed text-slate-600">
+                Start typing a first or last name. Suggestions update as you type.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                setSearchQuery("");
+                setTab("all");
+              }}
+              className="min-h-11 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-slate-800 shadow-sm hover:bg-sky-50/50"
+            >
+              Back to list
+            </button>
+          </div>
+
+          <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-stretch">
+            <label className="flex-1">
+              <span className="sr-only">Search by player name</span>
+              <input
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="e.g. Alv or Jul…"
+                className={selectClass}
+              />
+            </label>
+            <button
+              type="button"
+              disabled={!searchQuery.trim()}
+              onClick={() => setSearchQuery("")}
+              className="min-h-11 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-slate-800 shadow-sm disabled:opacity-50 hover:bg-sky-50/50 sm:px-5"
+            >
+              Clear
+            </button>
+          </div>
+
+          {searchParts.length === 0 ? (
+            <p className="mt-3 text-sm text-slate-600">
+              Tip: try a last-name prefix like <span className="font-medium text-slate-800">Alv</span> or
+              a first-name prefix like <span className="font-medium text-slate-800">Jul</span>.
+            </p>
+          ) : suggestions.length === 0 ? (
+            <p className="mt-3 text-sm text-slate-600">No matches found.</p>
+          ) : (
+            <div className="mt-4">
+              <p className="mb-2 text-xs font-medium text-slate-600">
+                Suggestions ({suggestions.length})
+              </p>
+              <ul className="space-y-2">
+                {suggestions.map((l, i) => (
+                  <li key={l.player_id}>
+                    <Link
+                      href={`/auctions/${auctionId}/players/${l.player_id}`}
+                      className={`block rounded-xl border border-sky-100 px-4 py-3 shadow-sm ${
+                        i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
+                      }`}
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="min-w-0">
+                          <div className="truncate text-sm font-semibold text-slate-900">
+                            {l.player_name ?? `Player #${l.player_id}`}
+                          </div>
+                          <div className="mt-1 text-xs text-slate-600">
+                            {(l.club ?? "—") + " · " + (l.position ?? "—")}
+                          </div>
+                          <div className="mt-2 text-xs font-medium text-slate-600">
+                            High bid:{" "}
+                            <span className="font-mono text-slate-900">
+                              {l.high_amount != null ? l.high_amount : "—"}
+                            </span>
+                          </div>
+                        </div>
+                        <StatusBadge status={displayLotStatus(l, gate.biddingClosed)} />
+                      </div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      ) : (
+        <>
+          <div className="lg:hidden">
         <details className="rounded-lg border border-sky-100 bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 text-sm font-medium text-slate-900 sm:py-2.5">
             <span>Filters &amp; sort</span>
@@ -401,6 +514,8 @@ export function BiddingRoomClient({
               </tbody>
             </table>
           </div>
+        </>
+      )}
         </>
       )}
     </div>

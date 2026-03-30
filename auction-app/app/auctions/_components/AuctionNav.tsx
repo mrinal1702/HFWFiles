@@ -27,7 +27,9 @@ export function AuctionNav({ auctionId }: { auctionId: number }) {
       aria-label="Auction sections"
     >
       {links(auctionId).map(({ href, label, match }) => {
-        const active = isActive(pathname, href, match);
+        const active =
+          isActive(pathname, href, match) ||
+          (href.endsWith("/bidding-room") && pathname.startsWith(`/auctions/${auctionId}/players/`));
         return (
           <Link
             key={href}
