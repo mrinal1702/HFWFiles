@@ -83,7 +83,12 @@ export function BiddingRoomClient({
   lots: EnrichedLot[];
   gate: BidGateContext;
 }) {
-  const [tab, setTab] = useState<Tab>("all");
+  const pathname = usePathname();
+  const sp = useSearchParams();
+  const tabParam = sp.get("tab");
+  const initialTab: Tab = tabParam === "search" ? "search" : "all";
+
+  const [tab, setTab] = useState<Tab>(initialTab);
   const [club, setClub] = useState("");
   const [position, setPosition] = useState("");
   const [statusFilter, setStatusFilter] = useState("");
@@ -91,11 +96,12 @@ export function BiddingRoomClient({
   const [sort, setSort] = useState<"" | "deadline-asc" | "deadline-desc" | "bid-high" | "bid-low">("");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const pathname = usePathname();
-  const sp = useSearchParams();
   const returnTo = sp.toString() ? `${pathname}?${sp.toString()}` : pathname;
+  const searchReturnTo = `/auctions/${auctionId}/bidding-room?tab=search`;
   const playerHref = (playerId: string) =>
-    `/auctions/${auctionId}/players/${playerId}?returnTo=${encodeURIComponent(returnTo)}`;
+    `/auctions/${auctionId}/players/${playerId}?returnTo=${encodeURIComponent(
+      tab === "search" ? searchReturnTo : returnTo,
+    )}`;
 
   const clubs = useMemo(() => {
     const s = new Set<string>();

@@ -70,6 +70,7 @@ export default async function PlayerDetailPage({
     typeof returnToRaw === "string" && returnToRaw.startsWith("/")
       ? returnToRaw
       : `/auctions/${auctionId}/bidding-room`;
+  const backToSearchHref = `/auctions/${auctionId}/bidding-room?tab=search`;
 
   return (
     <section className="space-y-4 sm:space-y-5">
@@ -105,13 +106,22 @@ export default async function PlayerDetailPage({
         </div>
 
         <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-          <Link
-            href={backHref}
-            aria-label="Back to previous page"
-            className="min-h-11 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-center text-sm font-medium text-slate-800 shadow-sm hover:bg-sky-50/50"
-          >
-            ← Back
-          </Link>
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+            <Link
+              href={backHref}
+              aria-label="Back to previous page"
+              className="min-h-11 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-center text-sm font-medium text-slate-800 shadow-sm hover:bg-sky-50/50"
+            >
+              ← Back
+            </Link>
+            <Link
+              href={backToSearchHref}
+              aria-label="Back to player search"
+              className="min-h-11 rounded-lg border border-sky-200 bg-sky-50 px-4 py-2.5 text-center text-sm font-medium text-sky-800 shadow-sm hover:bg-sky-100"
+            >
+              Back to search
+            </Link>
+          </div>
           <div className="text-xs text-slate-600">
             Tip: if the timer or high bid looks stale, tap <span className="font-medium text-slate-800">Refresh</span>.
           </div>
