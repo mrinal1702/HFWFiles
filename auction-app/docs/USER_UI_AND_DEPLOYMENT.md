@@ -60,7 +60,9 @@ Navigation highlights the bidding experience (including when viewing a player un
 - **Theme:** Light **white + sky** palette, mobile-first layout (e.g. sticky budget context on small screens).
 - **Filters:** Club, position, status (on “All”), bidder (on “Ongoing”), plus **Sort** (see below).
 - **Player names** link to the **player detail** URL; **Back** respects `returnTo` when present so users return to bidding room, competitor view, etc., not always the room.
+- **Search loop:** player detail has **Back to search**, returning to bidding room search tab (`?tab=search`) for quick multi-player bidding.
 - **Bid errors:** User-facing copy is centralized (`lib/bid-ui-messages.ts`, `lib/auction-bid-gates.ts`, server actions) so messages match product rules (minimum bid, increments, budget, roster caps, etc.).
+- **Scroll continuity after bid:** before bid submit, the app stores scroll position and restores it after the server refresh (auction pages). This keeps users near where they were browsing instead of jumping to the top.
 
 ---
 

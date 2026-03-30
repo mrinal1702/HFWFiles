@@ -3,6 +3,7 @@ import { notFound, redirect } from "next/navigation";
 
 import { AuctionNav } from "@/app/auctions/_components/AuctionNav";
 import { RefreshButton } from "@/app/auctions/_components/RefreshButton";
+import { ScrollRestoreOnRefresh } from "@/app/auctions/_components/ScrollRestoreOnRefresh";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadAuctionDashboard } from "@/lib/auction-dashboard";
 
@@ -36,6 +37,7 @@ export default async function AuctionLayout({
 
   return (
     <div className="mx-auto max-w-6xl flex-1 px-4 py-4 sm:px-6 sm:py-6">
+      <ScrollRestoreOnRefresh />
       <header className="mb-5 space-y-4 sm:mb-6">
         <div className="flex flex-wrap items-baseline justify-between gap-2">
           <div className="min-w-0 flex-1">

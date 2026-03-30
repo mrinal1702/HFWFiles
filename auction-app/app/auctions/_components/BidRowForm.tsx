@@ -3,6 +3,7 @@
 import { useActionState } from "react";
 
 import { submitAuctionBidAction, type AuctionBidState } from "@/app/auctions/actions";
+import { saveScrollForCurrentLocation } from "@/app/auctions/_components/scroll-restore";
 
 const input =
   "min-h-11 w-full min-w-0 flex-1 rounded-lg border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/25 sm:max-w-[9rem] sm:text-sm";
@@ -31,6 +32,7 @@ export function BidRowForm({
     <div className="flex w-full min-w-0 max-w-md flex-col gap-2">
       <form
         action={formAction}
+        onSubmitCapture={() => saveScrollForCurrentLocation()}
         className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-stretch sm:gap-2"
       >
         <input type="hidden" name="auction_id" value={auctionId} />
