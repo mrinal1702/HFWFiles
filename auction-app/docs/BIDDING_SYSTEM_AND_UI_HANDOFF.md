@@ -144,6 +144,7 @@ Reuse **`lib/bidding.ts`** and the same RPC contracts everywhere; Auction Lab re
 | `seed-auction-lots-all-players.sql` | `seed_auction_lots_for_auction` + optional DO block |
 | `testing-auction-helpers.sql` | `create_stacked_test_auction`, `replace_auction_users_fresh_state` |
 | `standalone-finalize-auction-hard-deadline.sql` | **Single paste** for Supabase: only `finalize_auction_hard_deadline` (avoids partial runs of the big script) |
+| `standalone-finalize-expired-lots.sql` | **Single paste** for Supabase: `finalize_expired_lots` (rolling 24h expiry settlement on refresh) |
 
 ---
 

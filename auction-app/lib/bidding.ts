@@ -57,6 +57,22 @@ export type FinalizeAuctionFailure = {
 
 export type FinalizeAuctionResult = FinalizeAuctionSuccess | FinalizeAuctionFailure;
 
+export type FinalizeExpiredLotsErrorCode = "auction_not_found" | "hard_deadline_not_set";
+
+export type FinalizeExpiredLotsSuccess = {
+  ok: true;
+  lots_sold: number;
+  lots_unsold: number;
+  processed_at: string;
+};
+
+export type FinalizeExpiredLotsFailure = {
+  ok: false;
+  error: FinalizeExpiredLotsErrorCode;
+};
+
+export type FinalizeExpiredLotsResult = FinalizeExpiredLotsSuccess | FinalizeExpiredLotsFailure;
+
 function isRecord(v: unknown): v is Record<string, unknown> {
   return typeof v === "object" && v !== null && !Array.isArray(v);
 }
@@ -137,6 +153,44 @@ export async function finalizeAuctionHardDeadline(
       lots_sold: Number(data.lots_sold ?? 0),
       lots_unsold: Number(data.lots_unsold ?? 0),
       hard_deadline_at: String(data.hard_deadline_at ?? ""),
+    },
+    rpcError: null,
+  };
+}
+
+/**
+ * Pre-hard-deadline rolling settlement: finalizes only lots whose expires_at is in the past.
+ * Safe to call on refresh; it is idempotent for already-finalized lots.
+ */
+export async function finalizeExpiredLots(
+  supabase: SupabaseClient,
+  params: { auctionId: number },
+): Promise<{ data: FinalizeExpiredLotsResult | null; rpcError: Error | null }> {
+  const { data, error } = await supabase.rpc("finalize_expired_lots", {
+    p_auction_id: params.auctionId,
+  });
+
+  if (error) {
+    return { data: null, rpcError: error };
+  }
+
+  if (!isRecord(data)) {
+    return { data: null, rpcError: new Error("finalize_expired_lots returned non-object") };
+  }
+
+  if (data.ok !== true) {
+    return {
+      data: { ok: false, error: String(data.error ?? "unknown") as FinalizeExpiredLotsErrorCode },
+      rpcError: null,
+    };
+  }
+
+  return {
+    data: {
+      ok: true,
+      lots_sold: Number(data.lots_sold ?? 0),
+      lots_unsold: Number(data.lots_unsold ?? 0),
+      processed_at: String(data.processed_at ?? ""),
     },
     rpcError: null,
   };

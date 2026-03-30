@@ -9,18 +9,18 @@ import {
 import { getAuthUser } from "@/lib/auth/get-user";
 import { isGoalkeeperPosition } from "@/lib/bid-ui-messages";
 import type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
-import { finalizeAuctionHardDeadline } from "@/lib/bidding";
+import { finalizeAuctionHardDeadline, finalizeExpiredLots } from "@/lib/bidding";
 import { createAdminClient } from "@/lib/supabase-server";
 
 export type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
 
-/** PostgREST / Postgres when `finalize_auction_hard_deadline` was never applied in Supabase. */
-function isMissingFinalizeRpc(message: string | undefined): boolean {
+/** PostgREST / Postgres when an expected RPC was never applied in Supabase. */
+function isMissingRpc(message: string | undefined, rpcName: string): boolean {
   if (!message) return false;
   const m = message.toLowerCase();
   return (
     m.includes("could not find the function") ||
-    (m.includes("does not exist") && m.includes("finalize_auction_hard_deadline")) ||
+    (m.includes("does not exist") && m.includes(rpcName.toLowerCase())) ||
     m.includes("42883") ||
     m.includes("pgrst202")
   );
@@ -76,10 +76,56 @@ export const loadAuctionDashboard = cache(
   const auction = auctionRes.data as AuctionDashboard["auction"];
   let users = (usersRes.data ?? []) as AuctionUserRow[];
   let rawLots = lotsRes.data ?? [];
+  const refetchAuctionState = async (): Promise<void> => {
+    const [usersAgain, lotsAgain] = await Promise.all([
+      admin
+        .from("auction_users")
+        .select("id,name,budget_remaining,active_budget,user_id")
+        .eq("auction_id", auctionId)
+        .order("id", { ascending: true }),
+      admin.from("auction_lots").select("*").eq("auction_id", auctionId).order("player_id", { ascending: true }),
+    ]);
+    if (usersAgain.error) throw new Error(`auction_users: ${usersAgain.error.message}`);
+    if (lotsAgain.error) throw new Error(`auction_lots: ${lotsAgain.error.message}`);
+    users = (usersAgain.data ?? []) as AuctionUserRow[];
+    rawLots = lotsAgain.data ?? [];
+  };
 
   const now = Date.now();
   const hardMs = auction?.hard_deadline_at ? Date.parse(auction.hard_deadline_at) : NaN;
   const pastHard = Number.isFinite(hardMs) && now >= hardMs;
+  const needsRollingFinalize =
+    !pastHard &&
+    rawLots.some((r) => {
+      const row = r as { status: unknown; expires_at?: unknown };
+      if (String(row.status) !== "bidding" || row.expires_at == null) return false;
+      const exp = Date.parse(String(row.expires_at));
+      return Number.isFinite(exp) && exp <= now;
+    });
+
+  if (needsRollingFinalize) {
+    const { data: fin, rpcError } = await finalizeExpiredLots(admin, { auctionId });
+    if (rpcError) {
+      if (isMissingRpc(rpcError.message, "finalize_expired_lots")) {
+        console.error(
+          "[auction-dashboard] finalize_expired_lots missing in DB; run scripts/sql/auction-bidding.sql section 8 in Supabase SQL Editor. PostgREST:",
+          rpcError.message,
+        );
+      } else {
+        throw new Error(`finalize_expired_lots: ${rpcError.message}`);
+      }
+    } else if (fin?.ok === true) {
+      await refetchAuctionState();
+    } else if (fin && fin.ok === false) {
+      const code = fin.error;
+      if (code === "auction_not_found" || code === "hard_deadline_not_set") {
+        console.warn("[auction-dashboard] rolling finalize returned ok=false:", code);
+      } else {
+        throw new Error(`finalize_expired_lots: ${code}`);
+      }
+    }
+  }
+
   const needsHardFinalize =
     pastHard &&
     auction != null &&
@@ -92,7 +138,7 @@ export const loadAuctionDashboard = cache(
     const { data: fin, rpcError } = await finalizeAuctionHardDeadline(admin, { auctionId });
 
     if (rpcError) {
-      if (isMissingFinalizeRpc(rpcError.message)) {
+      if (isMissingRpc(rpcError.message, "finalize_auction_hard_deadline")) {
         console.error(
           "[auction-dashboard] finalize_auction_hard_deadline missing in DB; run scripts/sql/auction-bidding.sql section 7 in Supabase SQL Editor. PostgREST:",
           rpcError.message,
@@ -101,18 +147,7 @@ export const loadAuctionDashboard = cache(
         throw new Error(`finalize_auction_hard_deadline: ${rpcError.message}`);
       }
     } else if (fin?.ok === true) {
-      const [usersAgain, lotsAgain] = await Promise.all([
-        admin
-          .from("auction_users")
-          .select("id,name,budget_remaining,active_budget,user_id")
-          .eq("auction_id", auctionId)
-          .order("id", { ascending: true }),
-        admin.from("auction_lots").select("*").eq("auction_id", auctionId).order("player_id", { ascending: true }),
-      ]);
-      if (usersAgain.error) throw new Error(`auction_users: ${usersAgain.error.message}`);
-      if (lotsAgain.error) throw new Error(`auction_lots: ${lotsAgain.error.message}`);
-      users = (usersAgain.data ?? []) as AuctionUserRow[];
-      rawLots = lotsAgain.data ?? [];
+      await refetchAuctionState();
     } else if (fin && fin.ok === false) {
       const code = fin.error;
       if (code === "deadline_not_reached" || code === "hard_deadline_not_set") {
