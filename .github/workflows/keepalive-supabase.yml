@@ -11,29 +11,24 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Ping Supabase Health Endpoint
-        env:
-          SUPABASE_ANON_KEY: "sb_publishable_ydw-1nDVFrYckICINYml3Q_Agl46hqz"
+      - name: Ping Supabase via JS SDK
         run: |
-          set -euo pipefail
-          echo "Trying auth health endpoint (no auth)..."
-          curl -v "https://ealowpaiiwsrbwucgkng.supabase.co/auth/v1/health" 2>&1 || true
-          echo "---"
-          echo "Trying REST root with apikey query param..."
-          curl -v "https://ealowpaiiwsrbwucgkng.supabase.co/rest/v1/?apikey=${SUPABASE_ANON_KEY}" 2>&1 || true
-          echo "---"
-          echo "Trying plain health with apikey header..."
-          curl -v "https://ealowpaiiwsrbwucgkng.supabase.co/health" \
-            -H "apikey: ${SUPABASE_ANON_KEY}" \
-            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}" 2>&1 || true
-          echo "Done diagnosing"
+          npm install --quiet @supabase/supabase-js
+          node -e "
+          const { createClient } = require('@supabase/supabase-js');
+          const supabase = createClient(
+            'https://ealowpaiiwsrbwucgkng.supabase.co',
+            'sb_publishable_ydw-1nDVFrYckICINYml3Q_Agl46hqz'
+          );
+          supabase.from('players').select('id').limit(1).then(({ data, error }) => {
+            if (error) { console.error('Supabase error:', error.message); process.exit(1); }
+            console.log('Supabase ping OK, got', data.length, 'row(s)');
+          });
+          "
 
-      - name: Ping deployed app health endpoint (optional)
-        env:
-          # Replace with your public app URL (not the Vercel dashboard URL)
-          APP_HEALTH_URL: "https://hfwauction.vercel.app/api/health"
+      - name: Ping deployed app health endpoint
         run: |
           set -euo pipefail
           echo "Pinging app health endpoint..."
-          curl -fsS "${APP_HEALTH_URL}" -o /tmp/app_health_response.json
+          curl -fsS "https://hfwauction.vercel.app/api/health" -o /tmp/app_health_response.json
           echo "App health ping OK"
