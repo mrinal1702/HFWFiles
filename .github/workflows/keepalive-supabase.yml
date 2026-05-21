@@ -1,0 +1,36 @@
+name: Keepalive (Supabase + App)
+
+on:
+  schedule:
+    # Every 12 hours
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Ping Supabase REST API
+        env:
+          SUPABASE_REST_URL: "https://ealowpaiiwsrbwucgkng.supabase.co/rest/v1/"
+          SUPABASE_PUBLISHABLE_KEY: "sb_publishable_ydw-1nDVFrYckICINYml3Q_Agl46hqz"
+        run: |
+          set -euo pipefail
+          echo "Pinging Supabase..."
+          curl -fsS "${SUPABASE_REST_URL}" \
+            -H "apikey: ${SUPABASE_PUBLISHABLE_KEY}" \
+            -H "Authorization: Bearer ${SUPABASE_PUBLISHABLE_KEY}" \
+            -H "Accept: application/json" \
+            -o /tmp/supabase_response.json
+          echo "Supabase ping OK"
+
+      - name: Ping deployed app health endpoint (optional)
+        env:
+          # Replace with your public app URL (not the Vercel dashboard URL)
+          APP_HEALTH_URL: "https://hfwauction.vercel.app/api/health"
+        run: |
+          set -euo pipefail
+          echo "Pinging app health endpoint..."
+          curl -fsS "${APP_HEALTH_URL}" -o /tmp/app_health_response.json
+          echo "App health ping OK"
