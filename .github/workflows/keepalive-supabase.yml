@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
       - name: Ping Supabase via JS SDK
         run: |
           npm install --quiet @supabase/supabase-js
