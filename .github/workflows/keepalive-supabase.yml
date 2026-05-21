@@ -12,13 +12,21 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Ping Supabase Health Endpoint
+        env:
+          SUPABASE_ANON_KEY: "sb_publishable_ydw-1nDVFrYckICINYml3Q_Agl46hqz"
         run: |
           set -euo pipefail
-          echo "Pinging Supabase..."
-          curl -fsS "https://ealowpaiiwsrbwucgkng.supabase.co/health" \
-            -o /tmp/supabase_response.json
-          cat /tmp/supabase_response.json
-          echo "Supabase ping OK"
+          echo "Trying auth health endpoint (no auth)..."
+          curl -v "https://ealowpaiiwsrbwucgkng.supabase.co/auth/v1/health" 2>&1 || true
+          echo "---"
+          echo "Trying REST root with apikey query param..."
+          curl -v "https://ealowpaiiwsrbwucgkng.supabase.co/rest/v1/?apikey=${SUPABASE_ANON_KEY}" 2>&1 || true
+          echo "---"
+          echo "Trying plain health with apikey header..."
+          curl -v "https://ealowpaiiwsrbwucgkng.supabase.co/health" \
+            -H "apikey: ${SUPABASE_ANON_KEY}" \
+            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}" 2>&1 || true
+          echo "Done diagnosing"
 
       - name: Ping deployed app health endpoint (optional)
         env:
