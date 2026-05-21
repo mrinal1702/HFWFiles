@@ -11,18 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Ping Supabase REST API
-        env:
-          SUPABASE_REST_URL: "https://ealowpaiiwsrbwucgkng.supabase.co/rest/v1/"
-          SUPABASE_PUBLISHABLE_KEY: "sb_publishable_ydw-1nDVFrYckICINYml3Q_Agl46hqz"
+      - name: Ping Supabase Health Endpoint
         run: |
           set -euo pipefail
           echo "Pinging Supabase..."
-          curl -fsS "${SUPABASE_REST_URL}" \
-            -H "apikey: ${SUPABASE_PUBLISHABLE_KEY}" \
-            -H "Authorization: Bearer ${SUPABASE_PUBLISHABLE_KEY}" \
-            -H "Accept: application/json" \
+          curl -fsS "https://ealowpaiiwsrbwucgkng.supabase.co/health" \
             -o /tmp/supabase_response.json
+          cat /tmp/supabase_response.json
           echo "Supabase ping OK"
 
       - name: Ping deployed app health endpoint (optional)
