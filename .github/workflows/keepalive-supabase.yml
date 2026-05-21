@@ -20,7 +20,7 @@ jobs:
             'https://ealowpaiiwsrbwucgkng.supabase.co',
             'sb_publishable_ydw-1nDVFrYckICINYml3Q_Agl46hqz'
           );
-          supabase.from('players').select('id').limit(1).then(({ data, error }) => {
+          supabase.from('players').select('player_id').limit(1).then(({ data, error }) => {
             if (error) { console.error('Supabase error:', error.message); process.exit(1); }
             console.log('Supabase ping OK, got', data.length, 'row(s)');
           });
