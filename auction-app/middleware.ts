@@ -31,7 +31,11 @@ export async function middleware(request: NextRequest) {
 
   const path = request.nextUrl.pathname;
   const needsAuth =
-    path === "/dashboard" || path === "/auctions" || /^\/auctions\/[^/]+/.test(path);
+    path === "/dashboard" ||
+    path === "/auctions" ||
+    /^\/auctions\/[^/]+/.test(path) ||
+    path === "/live-auction" ||
+    /^\/live-auction\/[^/]+/.test(path);
 
   if (!user && needsAuth) {
     const redirectUrl = request.nextUrl.clone();
@@ -44,5 +48,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/dashboard", "/auctions", "/auctions/:path*"],
+  matcher: ["/dashboard", "/auctions", "/auctions/:path*", "/live-auction", "/live-auction/:path*"],
 };
