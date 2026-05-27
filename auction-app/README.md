@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is the HFW Auction App — a fantasy football auction platform for a private group.
+
+**For agents / new contributors: read [`docs/AGENT_HANDOFF.md`](./docs/AGENT_HANDOFF.md) first.** It covers the full project context, architecture, conventions, and current state of all modules.
+
+---
 
 ## Getting Started
 
