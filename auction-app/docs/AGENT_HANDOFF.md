@@ -1,6 +1,6 @@
 # HFW Auction App — Agent Handoff Document
 
-Last updated: May 2026
+Last updated: May 2026 (updated after live auction UI redesign)
 
 This document is written for an AI agent picking up this project. Read it fully before making any changes.
 
@@ -16,7 +16,7 @@ The app has two distinct auction modes:
 
 An asynchronous online bidding system. Participants place bids on players through the app over a rolling time window. Built and working. Do not break this.
 
-### 2. Live Auction (`/live-auction/*`) — newly built, MVP complete
+### 2. Live Auction (`/live-auction/*`) — fully built, UI redesigned May 2026
 
 A real-time tracking interface for verbal auctions conducted on Zoom or in person. Bidding happens offline (verbally) — the app is only used by an admin/auctioneer to record completed sales, and by participants to view squads and budgets live. **This module is fully isolated from the online auction pipeline.**
 
@@ -46,7 +46,24 @@ HFWFiles/                          ← git repo root
 ├── auction-app/                   ← Next.js app (Vercel root dir)
 │   ├── app/                       ← App Router pages
 │   │   ├── auctions/              ← Online auction (DO NOT BREAK)
-│   │   ├── live-auction/          ← Live auction module (newly built)
+│   │   ├── live-auction/          ← Live auction module
+│   │   │   ├── [auctionId]/
+│   │   │   │   ├── _components/
+│   │   │   │   │   └── AuctionTabs.tsx       ← Tabbed participant view (client)
+│   │   │   │   ├── admin/
+│   │   │   │   │   ├── _components/
+│   │   │   │   │   │   ├── AdminSaleSection.tsx  ← Mode toggle wrapper (client)
+│   │   │   │   │   │   ├── SaleForm.tsx          ← Search mode (client)
+│   │   │   │   │   │   ├── SalesLog.tsx          ← Sales log with void/edit (client)
+│   │   │   │   │   │   └── TeamBrowseForm.tsx    ← Browse-by-team mode (client)
+│   │   │   │   │   ├── actions.ts            ← Server actions: record/void/edit/markUnsold
+│   │   │   │   │   └── page.tsx              ← Admin page (server)
+│   │   │   │   ├── team/[participantId]/
+│   │   │   │   │   └── page.tsx              ← Squad page (server)
+│   │   │   │   ├── layout.tsx                ← Auction header + auth guard
+│   │   │   │   └── page.tsx                  ← Participant overview (server → AuctionTabs)
+│   │   │   ├── layout.tsx                    ← Live auction auth guard
+│   │   │   └── page.tsx                      ← Auction list
 │   │   ├── dashboard/             ← User dashboard (join by code)
 │   │   ├── login/ signup/         ← Auth pages
 │   │   └── api/health/            ← Health check endpoint
@@ -116,7 +133,7 @@ Key RPCs: `place_bid`, `finalize_auction_hard_deadline`, `finalize_expired_lots`
 
 ---
 
-## Database: Live Auction tables (newly built)
+## Database: Live Auction tables
 
 All four tables created by `scripts/sql/live-auction-schema.sql`.
 
@@ -131,18 +148,53 @@ All four tables created by `scripts/sql/live-auction-schema.sql`.
 
 **`live_auction_players.fotmob_player_id`** (text) = matches `players.player_id` (integer, cast to string). This is the bridge for future pipeline import.
 
+**Admin/participant dual role:** A person with `role = 'admin'` in `live_auction_participants` is simultaneously the auctioneer AND a participant. They appear in "My Team", have a budget, and can be assigned players — while also having full access to the admin recording panel. The schema enforces `UNIQUE(auction_id, user_id)` so one row per person per auction.
+
 ---
 
 ## Live Auction routes
 
 | Route | Who can access | What it does |
 |-------|---------------|-------------|
-| `/live-auction` | Any logged-in user | Lists all live auctions |
-| `/live-auction/[auctionId]` | Any participant | Overview: budgets, participants, recent sales |
-| `/live-auction/[auctionId]/team/[participantId]` | Any logged-in user | Participant's squad grouped by position |
-| `/live-auction/[auctionId]/admin` | Admin role only | Record/void/edit sales, live budget view |
+| `/live-auction` | Any logged-in user | Lists all live auctions with status badges |
+| `/live-auction/[auctionId]` | Any participant | Tabbed view: My Team / All Teams / Unsold Players + Refresh button |
+| `/live-auction/[auctionId]/team/[participantId]` | Any logged-in user | Full squad page: position groups sorted by price desc, budget bar |
+| `/live-auction/[auctionId]/admin` | Admin role only | Record sales (Search or Browse-by-team), budget view, sales log with void/edit |
 
-**Admin access:** Checked via `live_auction_participants.role = 'admin'` for the logged-in user's `user_id`. Redirect to overview if not admin.
+**Admin access:** Checked server-side via `live_auction_participants WHERE auction_id = X AND user_id = auth_user_id AND role = 'admin'`. Redirects to overview if check fails.
+
+---
+
+## Live Auction: participant overview tabs (`AuctionTabs.tsx`)
+
+The overview page is a server component that fetches all data in parallel, then passes it to `AuctionTabs` (a client component) for tab switching. Data is never re-fetched on tab switch — all three tabs receive their data as props on initial load.
+
+**My Team tab:** Budget progress bar + slots remaining. Squad grouped GK → DEF → MID → FWD, sorted by price descending within each group. Shows "not a participant" message if the logged-in user has no participant row.
+
+**All Teams tab:** One card per participant. Each card shows budget bar + `N GK · N DEF · N MID · N FWD` breakdown. Clicking a card navigates to `/team/[participantId]`.
+
+**Unsold Players tab:** All players with status `available` or `unsold` (no distinction shown), grouped by team name alphabetically, with a total count header.
+
+**Refresh button:** Calls `router.refresh()` — triggers a server-side re-render with fresh data. No polling; manual only.
+
+---
+
+## Live Auction: admin page (`admin/page.tsx`)
+
+### Record a Sale — two modes (toggled via `AdminSaleSection.tsx`)
+
+**Search player mode (default):** Free-text combobox searches all available players by name/team. Select player → select participant → enter price → Confirm Sale. Handles the soft budget warning flow with a checkbox acknowledgment.
+
+**Browse by team mode:** Dropdown selects a team. Shows the full player list for that team:
+- Available players: inline owner `<select>` + price `<input>` + Sell button per row. Same warning flow as search mode.
+- Sold players: greyed row showing owner + price + ✓ Sold badge + Edit button (opens inline edit form).
+- Passed/unsold players: greyed with strikethrough.
+
+### Budget table
+Read-only server component showing all participants' current remaining budgets. Computed from non-voided sales passed in from the page.
+
+### Sales log (`SalesLog.tsx`)
+Last 30 sales (including voided). Each non-voided row has Edit and Void buttons that open inline panels. Void requires optional reason text.
 
 ---
 
@@ -166,6 +218,44 @@ Implemented in `app/live-auction/[auctionId]/admin/actions.ts`.
 
 ---
 
+## Live Auction: data functions (`lib/live-auction-data.ts`)
+
+| Function | Purpose |
+|----------|---------|
+| `getLiveAuctions()` | All live auction rows |
+| `getLiveAuction(id)` | Single auction by ID |
+| `getLiveAuctionParticipants(id)` | All participants for an auction |
+| `getParticipantSummaries(id, budget)` | Participants with total_spent + budget_remaining + players_count |
+| `getParticipantSummariesWithPositions(id, budget)` | Above + per-position player counts (GK/DEF/MID/FWD) |
+| `getParticipantPositionBreakdowns(id)` | Map of participantId → PositionBreakdown |
+| `getRecentSales(id, limit)` | Sales with player + participant names; includes voided |
+| `getRecentSalesPublic(id, limit)` | Non-voided sales only |
+| `getAvailablePlayers(id)` | Players with status = available |
+| `getAllPlayersWithSaleInfo(id)` | All players joined with their active sale (for admin team browse) |
+| `getUnsoldPlayers(id)` | Players with status = available or unsold (for Unsold tab) |
+| `getParticipantSquad(id, participantId)` | Non-voided sales as SquadPlayer array |
+| `getParticipantByUserId(id, userId)` | Participant row for the logged-in user |
+| `getParticipantById(participantId)` | Participant row by participant ID |
+
+Position categorisation (`categorizePosition`) lives at the top of `live-auction-data.ts` and is also inlined in client components (`AuctionTabs.tsx`, squad page) since `live-auction-data.ts` is server-only.
+
+---
+
+## Live Auction: TypeScript types (`lib/live-auction-types.ts`)
+
+Key types beyond the raw DB shapes:
+
+| Type | Purpose |
+|------|---------|
+| `ParticipantSummary` | Participant + total_spent + budget_remaining + players_count |
+| `PositionBreakdown` | `{ gk, def, mid, fwd, other }` counts |
+| `ParticipantSummaryWithPositions` | ParticipantSummary + positions: PositionBreakdown |
+| `PlayerWithSaleInfo` | LiveAuctionPlayer + sale_id / sale_price / sold_to_name / sold_to_participant_id (null if unsold) |
+| `SaleWithDetails` | Sale row + player_name + participant_name |
+| `SquadPlayer` | Joined sale + player data for squad display |
+
+---
+
 ## Live Auction: current test data
 
 As of May 2026 there is one test auction in the database:
@@ -178,10 +268,30 @@ As of May 2026 there is one test auction in the database:
 | Budget | £350 |
 | Squad size | 18 |
 | Min bid | £5 |
-| Admin participant | Mrinal (`trivedi.mrinal.dinesh@gmail.com`) |
+| Admin participant | Mrinal (`trivedi.mrinal.dinesh@gmail.com`, user_id `785ab229-1c9e-4208-b20f-76506968d4be`) |
 | Players seeded | 82 (Arsenal 26, Barcelona 28, Real Madrid 28) |
 
-**Admin login:** `trivedi.mrinal.dinesh@gmail.com` / `HFW2026temp!` (change this)
+**Note:** This is a test auction with club squads. The actual World Cup 2026 auction will be a new `live_auctions` row with national team squads.
+
+---
+
+## Adding participants to a live auction
+
+No UI exists for this yet. Use the Supabase SQL Editor:
+
+```sql
+-- Step 1: find the user's UUID (look up by email in Authentication → Users)
+-- Step 2: insert the participant row
+INSERT INTO live_auction_participants (auction_id, user_id, display_name, role)
+VALUES (
+  '<auction_uuid>',
+  '<auth_user_uuid>',
+  'Display Name',
+  'participant'   -- or 'admin'
+);
+```
+
+If the person hasn't signed up yet, create their account first via Supabase Dashboard → Authentication → Users → Add user, then use the UUID from that.
 
 ---
 
@@ -198,49 +308,21 @@ node scripts/seed-live-auction-players.mjs \
 - Does NOT reset players already marked `sold` or `unsold`
 - Use `--dry-run` to preview without writing
 
-Note: The current `players` table contains club squads (Arsenal, Barcelona, Real Madrid, etc.). Before the actual World Cup auction, the player list will be refreshed with national team squads.
-
----
-
-## Adding participants to a live auction
-
-There is currently no UI for this — do it via Node script using the service role key:
-
-```javascript
-const { createClient } = require('@supabase/supabase-js');
-// ... load env
-const sb = createClient(url, key);
-
-// Create account if needed
-const { data } = await sb.auth.admin.createUser({
-  email: 'user@example.com',
-  password: 'TempPass123!',
-  email_confirm: true,
-  user_metadata: { display_name: 'DisplayName' }
-});
-
-// Add as participant
-await sb.from('live_auction_participants').insert({
-  auction_id: '<auction_id>',
-  user_id: data.user.id,
-  display_name: 'DisplayName',
-  role: 'participant'  // or 'admin'
-});
-```
+**Important:** The `players` table currently contains club squads (Arsenal, Barcelona, Real Madrid). Before the actual World Cup auction, it needs to be refreshed with national team squads.
 
 ---
 
 ## What is NOT built yet (planned next steps)
 
-1. **UI to add/manage participants** in a live auction (currently done via script)
-2. **UI to create a live auction** (currently done manually in Supabase)
-3. **UI to add players to the pool** (currently done via seed script)
-4. **Marking a player as unsold via UI** (action exists, UI button not added)
-5. **Refresh button / auto-refresh** on the overview page (currently manual browser refresh)
-6. **Link to live auction from the main dashboard** (not yet added)
+1. **UI to add/manage participants** — currently done via SQL (see above)
+2. **UI to create a live auction** — currently done manually in Supabase
+3. **UI to add players to the pool** — currently done via seed script
+4. **"Mark as unsold" button** in the Browse-by-team view (the server action `markUnsoldAction` exists in `actions.ts` but no UI button in browse mode)
+5. **Forgot password page** — password resets are done manually via Supabase Dashboard → Authentication → Users → Send password reset email
+6. **Link to live auction from the main dashboard** — not yet added
 7. **Transfer/import** of live auction squads into the main online auction pipeline
 8. **Scoring** for live auction squads
-9. **World Cup national team player list** — the `players` table needs refreshing before the actual live auction; it currently contains club squads from the CL season
+9. **World Cup national team player list** — `players` table needs refreshing before the actual live auction
 
 ---
 
