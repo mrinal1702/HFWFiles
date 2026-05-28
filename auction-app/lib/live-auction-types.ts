@@ -89,6 +89,32 @@ export interface SquadPlayer {
   position: string | null;
 }
 
+/** Counts of players by position bucket for one participant's squad. */
+export interface PositionBreakdown {
+  gk: number;
+  def: number;
+  mid: number;
+  fwd: number;
+  other: number;
+}
+
+/** ParticipantSummary enriched with a per-position player count. */
+export interface ParticipantSummaryWithPositions extends ParticipantSummary {
+  positions: PositionBreakdown;
+}
+
+/**
+ * A player row enriched with its current sale details (if sold).
+ * Used by the admin team-browse view so all players are shown with their status.
+ */
+export interface PlayerWithSaleInfo extends LiveAuctionPlayer {
+  /** null when the player has not been sold (status available/unsold). */
+  sale_id: string | null;
+  sale_price: number | null;
+  sold_to_name: string | null;
+  sold_to_participant_id: string | null;
+}
+
 // ─── Server action state types ────────────────────────────────────────────────
 
 export type RecordSaleState = {

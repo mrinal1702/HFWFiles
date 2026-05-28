@@ -6,9 +6,23 @@ import type {
   LiveAuctionParticipant,
   LiveAuctionPlayer,
   ParticipantSummary,
+  ParticipantSummaryWithPositions,
+  PlayerWithSaleInfo,
+  PositionBreakdown,
   SaleWithDetails,
   SquadPlayer,
 } from "@/lib/live-auction-types";
+
+// ─── Position helper (shared between data functions) ──────────────────────────
+
+function categorizePosition(position: string | null | undefined): keyof PositionBreakdown {
+  const p = (position ?? "").trim().toLowerCase();
+  if (p === "gk" || p.includes("goalkeeper")) return "gk";
+  if (p.includes("defend")) return "def";
+  if (p.includes("midfield")) return "mid";
+  if (p.includes("forward") || p.includes("attack") || p.includes("striker")) return "fwd";
+  return "other";
+}
 
 export async function getLiveAuctions(): Promise<LiveAuction[]> {
   const supabase = createAdminClient();
@@ -230,4 +244,139 @@ export async function getParticipantById(
     .maybeSingle();
   if (error) throw new Error(error.message);
   return data;
+}
+
+/**
+ * All players that are not yet assigned to a participant — status `available`
+ * or formally `unsold`. Sorted by team name then player name; used for the
+ * "Unsold Players" tab on the participant overview.
+ */
+export async function getUnsoldPlayers(auctionId: string): Promise<LiveAuctionPlayer[]> {
+  const supabase = createAdminClient();
+  const { data, error } = await supabase
+    .from("live_auction_players")
+    .select("*")
+    .eq("auction_id", auctionId)
+    .in("status", ["available", "unsold"])
+    .order("team_name", { nullsFirst: false })
+    .order("player_name");
+  if (error) throw new Error(error.message);
+  return data ?? [];
+}
+
+/**
+ * Every player in the auction joined with their sale info (if sold).
+ * Used by the admin team-browse view so the full team list is visible
+ * with available players shown as actionable and sold ones shown as read-only.
+ * Ordered by team name then player name.
+ */
+export async function getAllPlayersWithSaleInfo(
+  auctionId: string,
+): Promise<PlayerWithSaleInfo[]> {
+  const supabase = createAdminClient();
+
+  const [{ data: players, error: pErr }, { data: sales, error: sErr }] = await Promise.all([
+    supabase
+      .from("live_auction_players")
+      .select("*")
+      .eq("auction_id", auctionId)
+      .order("team_name", { nullsFirst: false })
+      .order("player_name"),
+    supabase
+      .from("live_auction_sales")
+      .select(
+        `id, player_id, participant_id, price, live_auction_participants!participant_id(display_name)`,
+      )
+      .eq("auction_id", auctionId)
+      .eq("is_voided", false),
+  ]);
+
+  if (pErr) throw new Error(pErr.message);
+  if (sErr) throw new Error(sErr.message);
+
+  // Build player_id → sale info map (only non-voided sales)
+  const saleMap: Record<
+    string,
+    { sale_id: string; sale_price: number; sold_to_name: string; sold_to_participant_id: string }
+  > = {};
+  for (const sale of sales ?? []) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    saleMap[sale.player_id] = {
+      sale_id: sale.id,
+      sale_price: sale.price,
+      sold_to_name: (sale as any).live_auction_participants?.display_name ?? "Unknown",
+      sold_to_participant_id: sale.participant_id,
+    };
+  }
+
+  return (players ?? []).map((p) => ({
+    ...p,
+    sale_id: saleMap[p.id]?.sale_id ?? null,
+    sale_price: saleMap[p.id]?.sale_price ?? null,
+    sold_to_name: saleMap[p.id]?.sold_to_name ?? null,
+    sold_to_participant_id: saleMap[p.id]?.sold_to_participant_id ?? null,
+  }));
+}
+
+/**
+ * Per-participant position breakdown derived from non-voided sales.
+ * Returns a map of participant_id → { gk, def, mid, fwd, other }.
+ * Used by the "All Teams" tab to show squad composition at a glance.
+ */
+export async function getParticipantPositionBreakdowns(
+  auctionId: string,
+): Promise<Record<string, PositionBreakdown>> {
+  const supabase = createAdminClient();
+
+  const [{ data: sales, error: sErr }, { data: players, error: pErr }] = await Promise.all([
+    supabase
+      .from("live_auction_sales")
+      .select("participant_id, player_id")
+      .eq("auction_id", auctionId)
+      .eq("is_voided", false),
+    supabase
+      .from("live_auction_players")
+      .select("id, position")
+      .eq("auction_id", auctionId),
+  ]);
+
+  if (sErr) throw new Error(sErr.message);
+  if (pErr) throw new Error(pErr.message);
+
+  const positionMap: Record<string, string | null> = {};
+  for (const p of players ?? []) {
+    positionMap[p.id] = p.position;
+  }
+
+  const breakdown: Record<string, PositionBreakdown> = {};
+  for (const sale of sales ?? []) {
+    if (!breakdown[sale.participant_id]) {
+      breakdown[sale.participant_id] = { gk: 0, def: 0, mid: 0, fwd: 0, other: 0 };
+    }
+    const cat = categorizePosition(positionMap[sale.player_id]);
+    breakdown[sale.participant_id][cat]++;
+  }
+
+  return breakdown;
+}
+
+/**
+ * Participant summaries enriched with per-position player counts.
+ * Combines `getParticipantSummaries` and `getParticipantPositionBreakdowns`
+ * in a single call; used by the "All Teams" tab.
+ */
+export async function getParticipantSummariesWithPositions(
+  auctionId: string,
+  startingBudget: number,
+): Promise<ParticipantSummaryWithPositions[]> {
+  const [summaries, breakdowns] = await Promise.all([
+    getParticipantSummaries(auctionId, startingBudget),
+    getParticipantPositionBreakdowns(auctionId),
+  ]);
+
+  const empty: PositionBreakdown = { gk: 0, def: 0, mid: 0, fwd: 0, other: 0 };
+  return summaries.map((s) => ({
+    ...s,
+    positions: breakdowns[s.id] ?? { ...empty },
+  }));
 }

@@ -11,9 +11,9 @@ import type { SquadPlayer } from "@/lib/live-auction-types";
 
 export const dynamic = "force-dynamic";
 
-type SectionId = "gk" | "def" | "mid" | "fwd" | "other";
+type PositionSection = "gk" | "def" | "mid" | "fwd" | "other";
 
-const SECTION_ORDER: Array<{ id: SectionId; label: string }> = [
+const SECTION_ORDER: Array<{ id: PositionSection; label: string }> = [
   { id: "gk", label: "Goalkeepers" },
   { id: "def", label: "Defenders" },
   { id: "mid", label: "Midfielders" },
@@ -21,7 +21,7 @@ const SECTION_ORDER: Array<{ id: SectionId; label: string }> = [
   { id: "other", label: "Other" },
 ];
 
-function sectionForPosition(position: string | null | undefined): SectionId {
+function categorizePosition(position: string | null | undefined): PositionSection {
   const p = (position ?? "").trim().toLowerCase();
   if (p === "gk" || p.includes("goalkeeper")) return "gk";
   if (p.includes("defend")) return "def";
@@ -47,30 +47,37 @@ export default async function ParticipantSquadPage({
     notFound();
   }
 
-  // Compute budget from the summaries helper (re-uses the same query pattern)
   const summaries = await getParticipantSummaries(auctionId, auction.starting_budget);
   const mySummary = summaries.find((s) => s.id === participantId);
   const totalSpent = mySummary?.total_spent ?? 0;
   const budgetRemaining = mySummary?.budget_remaining ?? auction.starting_budget;
+  const slotsUsed = mySummary?.players_count ?? 0;
+  const slotsLeft = auction.squad_size - slotsUsed;
+  const spentPct = auction.starting_budget > 0
+    ? Math.min(100, (totalSpent / auction.starting_budget) * 100)
+    : 0;
+  const budgetLow = budgetRemaining < 20;
 
-  // Group squad by position
-  const enriched = squad.map((p) => ({ ...p, section: sectionForPosition(p.position) }));
+  // Group by position, sort by price desc within each group
   const grouped = SECTION_ORDER.map((section) => ({
     ...section,
-    rows: enriched
-      .filter((p) => p.section === section.id)
-      .sort((a, b) => a.player_name.localeCompare(b.player_name)),
+    rows: squad
+      .filter((p) => categorizePosition(p.position) === section.id)
+      .sort((a, b) => b.price - a.price),
   })).filter((s) => s.rows.length > 0);
 
   return (
     <div className="space-y-5">
-      {/* Participant header */}
+      {/* Header card */}
       <section className="rounded-xl border border-sky-100 bg-white p-5 shadow-sm">
-        <div className="flex flex-wrap items-baseline justify-between gap-3">
+        <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
             <h2 className="text-lg font-semibold text-slate-900">{participant.display_name}</h2>
             <p className="mt-0.5 text-sm text-slate-500">
-              {squad.length} player{squad.length !== 1 ? "s" : ""}
+              {slotsUsed} player{slotsUsed !== 1 ? "s" : ""} signed ·{" "}
+              <span className={slotsLeft === 0 ? "font-medium text-green-700" : ""}>
+                {slotsLeft} slot{slotsLeft !== 1 ? "s" : ""} remaining
+              </span>
             </p>
           </div>
           <Link
@@ -81,123 +88,104 @@ export default async function ParticipantSquadPage({
           </Link>
         </div>
 
-        {/* Budget stats */}
-        <div className="mt-4 grid grid-cols-3 divide-x divide-slate-100 rounded-lg border border-slate-100 bg-slate-50 text-center text-sm">
-          <div className="px-4 py-3">
-            <div className="text-xs font-medium text-slate-500">Starting</div>
-            <div className="mt-0.5 font-mono font-semibold text-slate-900">
-              £{auction.starting_budget}
-            </div>
+        {/* Budget bar */}
+        <div className="mt-4">
+          <div className="mb-1 flex items-baseline justify-between text-xs">
+            <span className="text-slate-500">
+              Spent £{totalSpent} of £{auction.starting_budget}
+            </span>
+            <span className={`font-mono font-semibold ${budgetLow ? "text-red-700" : "text-slate-900"}`}>
+              £{budgetRemaining} left
+            </span>
           </div>
-          <div className="px-4 py-3">
-            <div className="text-xs font-medium text-slate-500">Spent</div>
-            <div className="mt-0.5 font-mono font-semibold text-slate-900">£{totalSpent}</div>
-          </div>
-          <div className="px-4 py-3">
-            <div className="text-xs font-medium text-slate-500">Remaining</div>
+          <div className="h-2 w-full overflow-hidden rounded-full bg-slate-100">
             <div
-              className={`mt-0.5 font-mono font-semibold ${
-                budgetRemaining < 20 ? "text-red-700" : "text-slate-900"
-              }`}
-            >
-              £{budgetRemaining}
-            </div>
+              className={`h-2 rounded-full transition-all ${budgetLow ? "bg-red-500" : "bg-sky-500"}`}
+              style={{ width: `${spentPct}%` }}
+            />
           </div>
         </div>
       </section>
 
       {/* Squad */}
-      <section className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm sm:p-5">
-        {squad.length === 0 ? (
-          <p className="text-sm text-slate-500">No players yet.</p>
-        ) : (
-          <>
-            {/* Mobile: cards */}
-            <div className="space-y-5 md:hidden">
-              {grouped.map((group, groupIdx) => (
-                <div key={group.id} className={groupIdx > 0 ? "pt-1" : ""}>
-                  <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-600">
-                    {group.label} ({group.rows.length})
-                  </h3>
-                  <ul className="mt-2 space-y-2">
-                    {group.rows.map((player) => (
-                      <li
-                        key={player.sale_id}
-                        className="rounded-xl border border-sky-100 bg-white px-4 py-3 shadow-sm"
-                      >
-                        <div className="flex items-baseline justify-between gap-2">
-                          <span className="font-medium text-slate-900">{player.player_name}</span>
-                          <span className="font-mono text-sm font-medium text-slate-900">
-                            £{player.price}
-                          </span>
-                        </div>
-                        <p className="mt-0.5 text-xs text-slate-500">
-                          {[player.team_name ?? player.nation, player.position]
-                            .filter(Boolean)
-                            .join(" · ")}
-                        </p>
-                        <p className="mt-0.5 text-xs text-slate-400">
-                          FotMob ID: {player.fotmob_player_id}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-
-            {/* Desktop: table */}
-            <div className="hidden overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm md:block">
-              <table className="w-full min-w-[36rem] border-collapse text-left text-sm">
-                <thead className="border-b border-slate-200 bg-sky-50 text-slate-700">
-                  <tr>
-                    <th className="px-4 py-3 font-semibold">Player</th>
-                    <th className="px-4 py-3 font-semibold">Club / Nation</th>
-                    <th className="px-4 py-3 font-semibold">Position</th>
-                    <th className="px-4 py-3 font-semibold">FotMob ID</th>
-                    <th className="px-4 py-3 text-right font-semibold">Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {grouped.flatMap((group, groupIdx) => [
-                    <tr
-                      key={`${group.id}-hdr`}
-                      className={`bg-slate-100/70 ${groupIdx > 0 ? "border-t-2 border-slate-200" : ""}`}
+      {squad.length === 0 ? (
+        <div className="rounded-xl border border-slate-200 bg-white p-10 text-center shadow-sm">
+          <p className="text-sm text-slate-500">No players signed yet.</p>
+        </div>
+      ) : (
+        <>
+          {/* Mobile: cards */}
+          <div className="space-y-5 md:hidden">
+            {grouped.map((group, groupIdx) => (
+              <div key={group.id} className={groupIdx > 0 ? "pt-1" : ""}>
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-600">
+                  {group.label} ({group.rows.length})
+                </h3>
+                <ul className="mt-2 space-y-2">
+                  {group.rows.map((player) => (
+                    <li
+                      key={player.sale_id}
+                      className="rounded-xl border border-sky-100 bg-white px-4 py-3 shadow-sm"
                     >
-                      <td
-                        colSpan={5}
-                        className="px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-600"
-                      >
-                        {group.label} ({group.rows.length})
-                      </td>
-                    </tr>,
-                    ...group.rows.map((player: SquadPlayer, i) => (
-                      <tr
-                        key={player.sale_id}
-                        className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
-                      >
-                        <td className="px-4 py-3 font-medium text-slate-900">
-                          {player.player_name}
-                        </td>
-                        <td className="px-4 py-3 text-slate-600">
-                          {player.team_name ?? player.nation ?? "—"}
-                        </td>
-                        <td className="px-4 py-3 text-slate-600">{player.position ?? "—"}</td>
-                        <td className="px-4 py-3 font-mono text-xs text-slate-500">
-                          {player.fotmob_player_id}
-                        </td>
-                        <td className="px-4 py-3 text-right font-mono font-medium text-slate-900">
+                      <div className="flex items-baseline justify-between gap-2">
+                        <span className="font-medium text-slate-900">{player.player_name}</span>
+                        <span className="font-mono text-sm font-semibold text-slate-900">
                           £{player.price}
-                        </td>
-                      </tr>
-                    )),
-                  ])}
-                </tbody>
-              </table>
-            </div>
-          </>
-        )}
-      </section>
+                        </span>
+                      </div>
+                      <p className="mt-0.5 text-xs text-slate-500">
+                        {[player.team_name ?? player.nation, player.position]
+                          .filter(Boolean)
+                          .join(" · ")}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: table */}
+          <div className="hidden overflow-hidden rounded-xl border border-sky-100 bg-white shadow-sm md:block">
+            {grouped.map((group, groupIdx) => (
+              <div key={group.id}>
+                <div
+                  className={`border-b border-slate-100 bg-slate-50 px-5 py-2.5 ${
+                    groupIdx > 0 ? "border-t-2 border-slate-200" : ""
+                  }`}
+                >
+                  <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                    {group.label} ({group.rows.length})
+                  </span>
+                </div>
+                {group.rows.map((player: SquadPlayer, i) => (
+                  <div
+                    key={player.sale_id}
+                    className={`flex items-center border-b border-slate-100 px-5 py-3 last:border-b-0 ${
+                      i % 2 === 1 ? "bg-sky-50/40" : "bg-white"
+                    }`}
+                  >
+                    <div className="flex-1">
+                      <span className="text-sm font-medium text-slate-900">
+                        {player.player_name}
+                      </span>
+                    </div>
+                    <div className="w-40 text-sm text-slate-500">
+                      {player.team_name ?? player.nation ?? "—"}
+                    </div>
+                    <div className="w-28 text-sm text-slate-500">
+                      {player.position ?? "—"}
+                    </div>
+                    <div className="w-20 text-right font-mono text-sm font-semibold text-slate-900">
+                      £{player.price}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }

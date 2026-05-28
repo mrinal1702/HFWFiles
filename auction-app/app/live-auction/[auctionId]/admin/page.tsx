@@ -5,12 +5,13 @@ import { getAuthUser } from "@/lib/auth/get-user";
 import {
   getLiveAuction,
   getAvailablePlayers,
+  getAllPlayersWithSaleInfo,
   getLiveAuctionParticipants,
   getRecentSales,
   getParticipantByUserId,
 } from "@/lib/live-auction-data";
 import { recordSaleAction, voidSaleAction, editSaleAction } from "./actions";
-import { SaleForm } from "./_components/SaleForm";
+import { AdminSaleSection } from "./_components/AdminSaleSection";
 import { SalesLog } from "./_components/SalesLog";
 
 export const dynamic = "force-dynamic";
@@ -33,9 +34,10 @@ export default async function LiveAuctionAdminPage({
     redirect(`/live-auction/${auctionId}`);
   }
 
-  const [auction, availablePlayers, participants, recentSales] = await Promise.all([
+  const [auction, availablePlayers, allPlayers, participants, recentSales] = await Promise.all([
     getLiveAuction(auctionId),
     getAvailablePlayers(auctionId),
+    getAllPlayersWithSaleInfo(auctionId),
     getLiveAuctionParticipants(auctionId),
     getRecentSales(auctionId, 30),
   ]);
@@ -69,20 +71,16 @@ export default async function LiveAuctionAdminPage({
 
       {/* Two-column layout on desktop, stacked on mobile */}
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        {/* Left: Sale form */}
+        {/* Left: Sale form (search or team-browse) */}
         <section className="rounded-xl border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
           <h3 className="mb-4 text-base font-semibold text-slate-900">Record a Sale</h3>
-          {availablePlayers.length === 0 ? (
-            <p className="text-sm text-slate-500">
-              No players available — all have been sold or marked as unsold.
-            </p>
-          ) : (
-            <SaleForm
-              players={availablePlayers}
-              participants={participants}
-              recordSale={boundRecordSale}
-            />
-          )}
+          <AdminSaleSection
+            availablePlayers={availablePlayers}
+            allPlayers={allPlayers}
+            participants={participants}
+            recordSale={boundRecordSale}
+            editSale={boundEditSale}
+          />
         </section>
 
         {/* Right: Budgets at a glance */}
