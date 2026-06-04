@@ -333,6 +333,17 @@ node scripts/seed-live-auction-players.mjs \
 
 ---
 
+## Feature documentation
+
+| Doc | What it covers |
+|-----|---------------|
+| `docs/PLAYER_RELEASE_SYSTEM.md` | Release types (paid/free), GW windows, refund logic, DB schema, RPC, commissioner SQL ops |
+| `docs/LIVE_AUCTION_COMMISSIONER_GUIDE.md` | Live auction setup, seeding, admin workflow, troubleshooting |
+| `docs/BIDDING_SYSTEM_AND_UI_HANDOFF.md` | Online auction bidding flow, deadlines, budget columns |
+| `docs/TESTING_OPERATIONS.md` | Reset/seed scripts, multi-auction test setup |
+
+---
+
 ## What is NOT built yet (planned next steps)
 
 1. **UI to add/manage participants** — currently done via SQL (see above)
