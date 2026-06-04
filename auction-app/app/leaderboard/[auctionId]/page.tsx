@@ -3,6 +3,7 @@ import {
   getLeaderboardData,
   getActiveGameWeek,
   getGameweekSquadData,
+  getCurrentSquads,
 } from "@/lib/leaderboard-data";
 import { LeaderboardTabs } from "./_components/LeaderboardTabs";
 
@@ -22,14 +23,18 @@ export default async function LeaderboardPage({
     getActiveGameWeek(),
   ]);
 
-  const squads = activeGw ? await getGameweekSquadData(auctionId, activeGw.id) : null;
+  // Try locked snapshot first; fall back to live auction_teams
+  const lockedSquads = activeGw ? await getGameweekSquadData(auctionId, activeGw.id) : null;
+  const squads = lockedSquads ?? (await getCurrentSquads(auctionId));
+  const squadsAreLocked = lockedSquads !== null;
 
   return (
     <LeaderboardTabs
       standings={standings}
       gameWeeks={gameWeeks}
       activeGw={activeGw}
-      squads={squads}
+      squads={squads.length > 0 ? squads : null}
+      squadsAreLocked={squadsAreLocked}
       myUserId={d.me?.id ?? null}
     />
   );

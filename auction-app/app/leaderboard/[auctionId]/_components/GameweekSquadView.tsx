@@ -24,7 +24,7 @@ function sectionForPosition(pos: string | null): SectionId {
   return "other";
 }
 
-// ─── Squad display ────────────────────────────────────────────────────────────
+// ─── Player row ───────────────────────────────────────────────────────────────
 
 function PlayerRow({ player }: { player: GwSquadPlayer }) {
   const hasScore = player.score !== null;
@@ -60,6 +60,8 @@ function PlayerRow({ player }: { player: GwSquadPlayer }) {
     </div>
   );
 }
+
+// ─── Squad display ────────────────────────────────────────────────────────────
 
 function SquadDisplay({ players }: { players: GwSquadPlayer[] }) {
   const hasBestXiData = players.some((p) => p.isBestXi !== null);
@@ -107,7 +109,7 @@ function SquadDisplay({ players }: { players: GwSquadPlayer[] }) {
     );
   }
 
-  // Formation logic not run yet — group by position
+  // No Best XI data yet — group by position
   const grouped = SECTION_ORDER.map((section) => ({
     ...section,
     rows: players.filter((p) => sectionForPosition(p.position) === section.id),
@@ -141,31 +143,25 @@ function SquadDisplay({ players }: { players: GwSquadPlayer[] }) {
 interface GameweekSquadViewProps {
   activeGw: GwInfo | null;
   squads: ParticipantGwSquad[] | null;
+  /** True = locked snapshot; false = live auction_teams fallback */
+  squadsAreLocked: boolean;
   myUserId: number | null;
 }
 
-export function GameweekSquadView({ activeGw, squads, myUserId }: GameweekSquadViewProps) {
+export function GameweekSquadView({
+  activeGw,
+  squads,
+  squadsAreLocked,
+  myUserId,
+}: GameweekSquadViewProps) {
   const defaultId =
     squads?.find((s) => s.userId === myUserId)?.userId ?? squads?.[0]?.userId ?? null;
   const [selectedUserId, setSelectedUserId] = useState<number | null>(defaultId);
 
-  if (!activeGw) {
-    return (
-      <div className="rounded-xl border border-slate-200 bg-white p-6 text-center shadow-sm">
-        <p className="text-sm text-slate-500">No active gameweek is set.</p>
-      </div>
-    );
-  }
-
   if (!squads) {
     return (
-      <div className="rounded-xl border border-amber-100 bg-amber-50 p-6 text-center shadow-sm">
-        <p className="text-sm font-medium text-amber-900">
-          {activeGw.name} squads haven&apos;t been locked yet.
-        </p>
-        <p className="mt-1 text-xs text-amber-700">
-          Squads are recorded at the hard deadline. Check back after bidding closes.
-        </p>
+      <div className="rounded-xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+        <p className="text-sm text-slate-500">No squads found for this auction.</p>
       </div>
     );
   }
@@ -176,12 +172,18 @@ export function GameweekSquadView({ activeGw, squads, myUserId }: GameweekSquadV
 
   return (
     <div className="space-y-4">
-      {/* GW name + lock status */}
+      {/* Status banner */}
       <div className="flex flex-wrap items-center gap-2">
-        <span className="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-800">
-          {activeGw.name} — Locked
-        </span>
-        {!scoresUploaded && (
+        {squadsAreLocked && activeGw ? (
+          <span className="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-800">
+            {activeGw.name} — Locked
+          </span>
+        ) : (
+          <span className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800">
+            Live squad — not yet locked for this gameweek
+          </span>
+        )}
+        {squadsAreLocked && !scoresUploaded && (
           <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-500">
             Scores not yet uploaded
           </span>
@@ -208,18 +210,22 @@ export function GameweekSquadView({ activeGw, squads, myUserId }: GameweekSquadV
         ))}
       </div>
 
-      {/* Score summary */}
+      {/* Score summary (only shown once scores are published) */}
       {totalScore !== null && (
         <div className="rounded-lg border border-slate-100 bg-slate-50 px-4 py-3">
           <span className="text-sm text-slate-600">
-            {selected.name}&apos;s {activeGw.name} score:{" "}
+            {selected.name}&apos;s{activeGw ? ` ${activeGw.name}` : ""} score:{" "}
           </span>
           <span className="font-mono text-lg font-bold text-slate-900">{totalScore} pts</span>
         </div>
       )}
 
       {/* Squad */}
-      <SquadDisplay players={selected.players} />
+      {selected.players.length === 0 ? (
+        <p className="py-4 text-center text-sm text-slate-400">No players in this squad yet.</p>
+      ) : (
+        <SquadDisplay players={selected.players} />
+      )}
     </div>
   );
 }

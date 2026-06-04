@@ -12,6 +12,7 @@ interface LeaderboardTabsProps {
   gameWeeks: GwInfo[];
   activeGw: GwInfo | null;
   squads: ParticipantGwSquad[] | null;
+  squadsAreLocked: boolean;
   myUserId: number | null;
 }
 
@@ -20,16 +21,14 @@ export function LeaderboardTabs({
   gameWeeks,
   activeGw,
   squads,
+  squadsAreLocked,
   myUserId,
 }: LeaderboardTabsProps) {
   const [activeTab, setActiveTab] = useState<TabId>("standings");
 
   const tabs: Array<{ id: TabId; label: string }> = [
     { id: "standings", label: "Standings" },
-    {
-      id: "this-gameweek",
-      label: activeGw ? `This Gameweek · ${activeGw.name}` : "This Gameweek",
-    },
+    { id: "this-gameweek", label: "This Gameweek" },
   ];
 
   return (
@@ -55,7 +54,12 @@ export function LeaderboardTabs({
       )}
 
       {activeTab === "this-gameweek" && (
-        <GameweekSquadView activeGw={activeGw} squads={squads} myUserId={myUserId} />
+        <GameweekSquadView
+          activeGw={activeGw}
+          squads={squads}
+          squadsAreLocked={squadsAreLocked}
+          myUserId={myUserId}
+        />
       )}
     </div>
   );

@@ -60,18 +60,7 @@ export async function getLeaderboardData(auctionId: number): Promise<Leaderboard
   ]);
 
   if (usersRes.error) throw new Error(`auction_users: ${usersRes.error.message}`);
-  // auction_leaderboard may not exist yet — treat as empty rather than crashing
-  if (lbRes.error) {
-    const users = (usersRes.data ?? []) as Array<{ id: number; name: string | null }>;
-    const standings: StandingEntry[] = users.map((u, idx) => ({
-      userId: u.id,
-      name: u.name ?? "—",
-      scoresByGwId: {},
-      total: 0,
-      rank: idx + 1,
-    }));
-    return { standings, gameWeeks: [] };
-  }
+  if (lbRes.error) throw new Error(`auction_leaderboard: ${lbRes.error.message}`);
 
   const users = (usersRes.data ?? []) as Array<{ id: number; name: string | null }>;
   const lbRows = (lbRes.data ?? []) as Array<{
@@ -135,7 +124,81 @@ export async function getLeaderboardData(auctionId: number): Promise<Leaderboard
   return { standings: corrected, gameWeeks };
 }
 
-/** Active gameweek from Game_Weeks where Is_Active = true. Returns null if none set. */
+/**
+ * Current live squads from auction_teams — used as a fallback when no
+ * gameweek snapshot has been locked yet.
+ */
+export async function getCurrentSquads(auctionId: number): Promise<ParticipantGwSquad[]> {
+  const admin = createAdminClient();
+
+  const [usersRes, teamsRes] = await Promise.all([
+    admin
+      .from("auction_users")
+      .select("id, name")
+      .eq("auction_id", auctionId)
+      .order("id", { ascending: true }),
+    admin
+      .from("auction_teams")
+      .select("auction_user_id, player_id, purchase_price")
+      .eq("auction_id", auctionId),
+  ]);
+
+  if (usersRes.error) throw new Error(`auction_users: ${usersRes.error.message}`);
+  if (teamsRes.error) throw new Error(`auction_teams: ${teamsRes.error.message}`);
+
+  const users = (usersRes.data ?? []) as Array<{ id: number; name: string | null }>;
+  const teams = (teamsRes.data ?? []) as Array<{
+    auction_user_id: number;
+    player_id: string;
+    purchase_price: number;
+  }>;
+
+  const playerIds = [...new Set(teams.map((t) => String(t.player_id)))];
+  let playerById = new Map<string, { player_name: string | null; position: string | null; team_name: string | null }>();
+
+  if (playerIds.length > 0) {
+    const playersRes = await admin
+      .from("players")
+      .select("player_id, player_name, position, team_name")
+      .in("player_id", playerIds);
+    if (!playersRes.error) {
+      playerById = new Map(
+        (playersRes.data ?? []).map((p) => [
+          String(p.player_id),
+          p as { player_name: string | null; position: string | null; team_name: string | null },
+        ]),
+      );
+    }
+  }
+
+  const byUser = new Map<number, typeof teams>();
+  for (const row of teams) {
+    if (!byUser.has(row.auction_user_id)) byUser.set(row.auction_user_id, []);
+    byUser.get(row.auction_user_id)!.push(row);
+  }
+
+  return users
+    .filter((u) => byUser.has(u.id))
+    .map((u) => ({
+      userId: u.id,
+      name: u.name ?? "—",
+      totalGwScore: null,
+      players: (byUser.get(u.id) ?? []).map((row) => {
+        const meta = playerById.get(String(row.player_id));
+        return {
+          playerId: String(row.player_id),
+          playerName: meta?.player_name ?? null,
+          position: meta?.position ?? null,
+          club: meta?.team_name ?? null,
+          purchasePrice: row.purchase_price,
+          score: null,
+          isBestXi: null,
+        };
+      }),
+    }));
+}
+
+/** Active gameweek from Game_Weeks where Is_Active = true. */
 export async function getActiveGameWeek(): Promise<GwInfo | null> {
   const admin = createAdminClient();
   const { data, error } = await admin
@@ -143,8 +206,8 @@ export async function getActiveGameWeek(): Promise<GwInfo | null> {
     .select("id, GW_Name")
     .eq("Is_Active", true)
     .maybeSingle();
-  // Treat any error (missing table, no rows, etc.) as "no active GW"
-  if (error || !data) return null;
+  if (error) throw new Error(`Game_Weeks: ${error.message}`);
+  if (!data) return null;
   return { id: data.id as number, name: data.GW_Name as string };
 }
 
@@ -183,8 +246,9 @@ export async function getGameweekSquadData(
   ]);
 
   if (usersRes.error) throw new Error(`auction_users: ${usersRes.error.message}`);
-  // gameweek_squads / auction_score_breakdown may not exist yet — return null (not locked)
-  if (squadsRes.error || scoresRes.error || lbRes.error) return null;
+  if (squadsRes.error) throw new Error(`gameweek_squads: ${squadsRes.error.message}`);
+  if (scoresRes.error) throw new Error(`auction_score_breakdown: ${scoresRes.error.message}`);
+  if (lbRes.error) throw new Error(`auction_leaderboard: ${lbRes.error.message}`);
 
   const squads = squadsRes.data ?? [];
   if (squads.length === 0) return null;
