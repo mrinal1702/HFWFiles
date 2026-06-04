@@ -60,7 +60,18 @@ export async function getLeaderboardData(auctionId: number): Promise<Leaderboard
   ]);
 
   if (usersRes.error) throw new Error(`auction_users: ${usersRes.error.message}`);
-  if (lbRes.error) throw new Error(`auction_leaderboard: ${lbRes.error.message}`);
+  // auction_leaderboard may not exist yet — treat as empty rather than crashing
+  if (lbRes.error) {
+    const users = (usersRes.data ?? []) as Array<{ id: number; name: string | null }>;
+    const standings: StandingEntry[] = users.map((u, idx) => ({
+      userId: u.id,
+      name: u.name ?? "—",
+      scoresByGwId: {},
+      total: 0,
+      rank: idx + 1,
+    }));
+    return { standings, gameWeeks: [] };
+  }
 
   const users = (usersRes.data ?? []) as Array<{ id: number; name: string | null }>;
   const lbRows = (lbRes.data ?? []) as Array<{
@@ -124,7 +135,7 @@ export async function getLeaderboardData(auctionId: number): Promise<Leaderboard
   return { standings: corrected, gameWeeks };
 }
 
-/** Active gameweek from Game_Weeks where Is_Active = true. */
+/** Active gameweek from Game_Weeks where Is_Active = true. Returns null if none set. */
 export async function getActiveGameWeek(): Promise<GwInfo | null> {
   const admin = createAdminClient();
   const { data, error } = await admin
@@ -132,8 +143,8 @@ export async function getActiveGameWeek(): Promise<GwInfo | null> {
     .select("id, GW_Name")
     .eq("Is_Active", true)
     .maybeSingle();
-  if (error) throw new Error(`Game_Weeks: ${error.message}`);
-  if (!data) return null;
+  // Treat any error (missing table, no rows, etc.) as "no active GW"
+  if (error || !data) return null;
   return { id: data.id as number, name: data.GW_Name as string };
 }
 
@@ -172,9 +183,8 @@ export async function getGameweekSquadData(
   ]);
 
   if (usersRes.error) throw new Error(`auction_users: ${usersRes.error.message}`);
-  if (squadsRes.error) throw new Error(`gameweek_squads: ${squadsRes.error.message}`);
-  if (scoresRes.error) throw new Error(`auction_score_breakdown: ${scoresRes.error.message}`);
-  if (lbRes.error) throw new Error(`auction_leaderboard: ${lbRes.error.message}`);
+  // gameweek_squads / auction_score_breakdown may not exist yet — return null (not locked)
+  if (squadsRes.error || scoresRes.error || lbRes.error) return null;
 
   const squads = squadsRes.data ?? [];
   if (squads.length === 0) return null;
