@@ -6,6 +6,7 @@ import { getBidDisabledReason } from "@/lib/auction-bid-gates";
 import { nextMinimumBidAmount } from "@/lib/bid-ui-messages";
 
 import { BidRowForm } from "@/app/auctions/_components/BidRowForm";
+import { LocalTime } from "@/app/auctions/_components/LocalTime";
 import { lotRowAnchorId } from "@/lib/lot-row-anchor";
 
 export const dynamic = "force-dynamic";
@@ -60,8 +61,7 @@ export default async function PlayerDetailPage({
           : "—";
 
   const highBidderDisplay = lot.high_bidder_name ?? (lot.high_bidder_id != null ? `#${lot.high_bidder_id}` : "—");
-  const timerDisplay =
-    lot.status === "bidding" && !gate.biddingClosed ? (lot.expires_at ? new Date(lot.expires_at).toLocaleString() : "—") : "—";
+  const showTimer = lot.status === "bidding" && !gate.biddingClosed && lot.expires_at != null;
 
   const minBid = nextMinimumBidAmount(lot.high_amount, gate.raiseModeActive);
   const disabledReason = getBidDisabledReason(lot, gate);
@@ -99,7 +99,9 @@ export default async function PlayerDetailPage({
           </div>
           <div className="rounded-lg border border-slate-200 bg-white px-3 py-3 shadow-sm sm:col-span-2">
             <div className="text-xs font-medium text-slate-600">Timer</div>
-            <div className="mt-1 text-sm text-slate-800">{timerDisplay}</div>
+            <div className="mt-1 text-sm text-slate-800">
+              {showTimer ? <LocalTime iso={lot.expires_at} /> : "—"}
+            </div>
             <p className="mt-1 text-xs text-slate-600">
               Bids end at the auction hard deadline.
             </p>

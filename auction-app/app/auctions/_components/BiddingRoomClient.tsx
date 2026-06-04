@@ -10,6 +10,7 @@ import { nextMinimumBidAmount, positionSortRank } from "@/lib/bid-ui-messages";
 import type { BidGateContext, EnrichedLot } from "@/lib/auction-types";
 
 import { BidRowForm } from "./BidRowForm";
+import { LocalTime } from "./LocalTime";
 
 type Tab = "all" | "ongoing" | "unsold" | "sold" | "search";
 
@@ -57,12 +58,6 @@ function StatusBadge({ status }: { status: string }) {
   );
 }
 
-function formatWhen(iso: string | null): string {
-  if (!iso) return "—";
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return iso;
-  return `${d.toLocaleString()} (local)`;
-}
 
 const TAB_DEFS = [
   ["all", "All players"],
@@ -462,7 +457,7 @@ export function BiddingRoomClient({
                         <dt className="text-slate-600">Lot deadline</dt>
                         <dd className="max-w-[65%] text-right text-xs text-slate-600">
                           {lot.status === "bidding" && !gate.biddingClosed
-                            ? formatWhen(lot.expires_at)
+                            ? <LocalTime iso={lot.expires_at} />
                             : "—"}
                         </dd>
                       </div>
@@ -550,7 +545,7 @@ export function BiddingRoomClient({
                       {showDeadlineCol && (
                         <td className="px-3 py-3 align-top text-xs text-slate-600">
                           {lot.status === "bidding" && !gate.biddingClosed
-                            ? formatWhen(lot.expires_at)
+                            ? <LocalTime iso={lot.expires_at} />
                             : "—"}
                         </td>
                       )}
