@@ -41,6 +41,7 @@ export type EnrichedTransfer = AuctionTransfer & {
 
 export type TransferErrorCode =
   | "auction_not_found"
+  | "transfer_window_closed"
   | "transfer_deadline_passed"
   | "proposer_not_in_auction"
   | "recipient_not_in_auction"

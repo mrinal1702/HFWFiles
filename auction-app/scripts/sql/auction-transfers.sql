@@ -3,13 +3,19 @@
 -- Adds peer-to-peer transfer system with state machine + atomic execution.
 
 -- ---------------------------------------------------------------------------
--- 1. Auctions: admin approval toggle
+-- 1. Auctions: admin approval toggle + transfer window flag
 -- ---------------------------------------------------------------------------
 alter table public."Auctions"
   add column if not exists transfers_require_admin_approval boolean not null default false;
 
 comment on column public."Auctions".transfers_require_admin_approval is
   'When true, all transfers need admin approval before executing. Cash-only transfers always require admin regardless.';
+
+alter table public."Auctions"
+  add column if not exists transfer_window_open boolean not null default false;
+
+comment on column public."Auctions".transfer_window_open is
+  'Controls whether the transfer window is open. Automatically set to false by void_expired_transfers when the hard deadline is reached. Must be manually re-opened by the admin (UPDATE "Auctions" SET transfer_window_open = true WHERE id = <id>).';
 
 -- ---------------------------------------------------------------------------
 -- 2. auction_transfers table
@@ -84,11 +90,12 @@ security invoker
 set search_path = public
 as $$
 declare
-  v_now          timestamptz := clock_timestamp();
-  v_hard         timestamptz;
-  v_pids         text[];
-  v_pid          text;
-  v_transfer_id  uuid;
+  v_now            timestamptz := clock_timestamp();
+  v_hard           timestamptz;
+  v_window_open    boolean;
+  v_pids           text[];
+  v_pid            text;
+  v_transfer_id    uuid;
 begin
   v_pids := coalesce(p_proposer_player_ids, '{}');
 
@@ -104,11 +111,16 @@ begin
     return jsonb_build_object('ok', false, 'error', 'cannot_transfer_to_self');
   end if;
 
-  select a.hard_deadline_at into v_hard
+  select a.hard_deadline_at, a.transfer_window_open
+  into v_hard, v_window_open
   from public."Auctions" a where a.id = p_auction_id;
 
   if not found then
     return jsonb_build_object('ok', false, 'error', 'auction_not_found');
+  end if;
+
+  if not coalesce(v_window_open, false) then
+    return jsonb_build_object('ok', false, 'error', 'transfer_window_closed');
   end if;
 
   if v_hard is not null and v_now >= v_hard then
@@ -179,6 +191,7 @@ as $$
 declare
   v_now              timestamptz := clock_timestamp();
   v_hard             timestamptz;
+  v_window_open      boolean;
   v_transfer         record;
   v_proposer_budget  integer;
   v_recipient_budget integer;
@@ -211,8 +224,13 @@ begin
     return jsonb_build_object('ok', false, 'error', 'must_offer_something');
   end if;
 
-  select a.hard_deadline_at into v_hard
+  select a.hard_deadline_at, a.transfer_window_open
+  into v_hard, v_window_open
   from public."Auctions" a where a.id = v_transfer.auction_id;
+
+  if not coalesce(v_window_open, false) then
+    return jsonb_build_object('ok', false, 'error', 'transfer_window_closed');
+  end if;
 
   if v_hard is not null and v_now >= v_hard then
     return jsonb_build_object('ok', false, 'error', 'transfer_deadline_passed');
@@ -767,6 +785,11 @@ begin
     update public.auction_transfers set status = 'cancelled' where id = v_transfer.id;
     v_voided := v_voided + 1;
   end loop;
+
+  -- Close the transfer window now that the hard deadline has been reached
+  update public."Auctions"
+  set transfer_window_open = false
+  where id = p_auction_id;
 
   return jsonb_build_object('ok', true, 'voided', v_voided);
 end;

@@ -2,6 +2,8 @@ import type { TransferErrorCode } from "@/lib/transfers";
 
 export function transferErrorMessage(code: TransferErrorCode): string {
   switch (code) {
+    case "transfer_window_closed":
+      return "The transfer window is currently closed.";
     case "transfer_deadline_passed":
       return "The transfer deadline has passed — no new transfers can be made.";
     case "must_offer_something":

@@ -8,7 +8,7 @@ const links = (auctionId: number) =>
     { href: `/auctions/${auctionId}/bidding-room`, label: "Bidding room", match: "exact" as const },
     { href: `/auctions/${auctionId}/team`, label: "My team", match: "exact" as const },
     { href: `/auctions/${auctionId}/bids-held`, label: "Bids held", match: "exact" as const },
-    { href: `/auctions/${auctionId}/transfers`, label: "Transfers", match: "prefix" as const },
+    { href: `/auctions/${auctionId}/transfers`, label: "Transfer Room", match: "prefix" as const },
     { href: `/auctions/${auctionId}/points`, label: "My points", match: "exact" as const },
     { href: `/leaderboard/${auctionId}`, label: "Leaderboard", match: "exact" as const },
     { href: `/auctions/${auctionId}/competitors`, label: "Competitors", match: "prefix" as const },

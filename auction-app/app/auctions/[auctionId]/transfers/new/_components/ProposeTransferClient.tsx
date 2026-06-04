@@ -16,18 +16,33 @@ type SquadPlayer = {
 type OtherTeam = {
   id: number;
   name: string | null;
+  budget_remaining: number;
+  active_budget: number;
+  squad: {
+    player_id: string;
+    player_name: string | null;
+    position: string | null;
+    club: string | null;
+  }[];
 };
 
 export function ProposeTransferClient({
   auctionId,
   mySquad,
+  myBudget,
+  myName,
   otherTeams,
 }: {
   auctionId: number;
   mySquad: SquadPlayer[];
+  myBudget: { budget_remaining: number; active_budget: number };
+  myName: string;
   otherTeams: OtherTeam[];
 }) {
   const router = useRouter();
+
+  const [step, setStep] = useState<"pick" | "deal">("pick");
+  const [selectedTeam, setSelectedTeam] = useState<OtherTeam | null>(null);
   const [selectedPlayerIds, setSelectedPlayerIds] = useState<Set<string>>(new Set());
   const [cash, setCash] = useState("");
 
@@ -42,6 +57,18 @@ export function ProposeTransferClient({
     null,
   );
 
+  function pickTeam(team: OtherTeam) {
+    setSelectedTeam(team);
+    setSelectedPlayerIds(new Set());
+    setCash("");
+    setStep("deal");
+  }
+
+  function backToPicker() {
+    setStep("pick");
+    setSelectedTeam(null);
+  }
+
   function togglePlayer(pid: string) {
     setSelectedPlayerIds((prev) => {
       const next = new Set(prev);
@@ -51,130 +78,325 @@ export function ProposeTransferClient({
     });
   }
 
-  const inputCls =
-    "min-h-10 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/25";
+  const offeredPlayers = mySquad.filter((p) => selectedPlayerIds.has(p.player_id));
+  const cashNum = Math.max(0, parseInt(cash || "0", 10) || 0);
+  const hasOffer = offeredPlayers.length > 0 || cashNum > 0;
+
+  // ── Step 1: Manager picker ────────────────────────────────────────────────
+  if (step === "pick") {
+    return (
+      <section className="space-y-4 sm:space-y-5">
+        <div className="rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
+          <div className="flex items-center gap-3">
+            <a
+              href={`/auctions/${auctionId}/transfers`}
+              className="text-sm font-medium text-sky-600 hover:text-sky-800"
+            >
+              ← Transfer Room
+            </a>
+          </div>
+          <h2 className="mt-3 text-lg font-semibold text-slate-900">Who do you want to deal with?</h2>
+          <p className="mt-1 text-sm text-slate-500">
+            Agree terms first, then formalise the deal here. Select a manager to continue.
+          </p>
+        </div>
+
+        {otherTeams.length === 0 ? (
+          <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-8 text-center">
+            <p className="text-sm text-slate-500">No other participants in this auction yet.</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {otherTeams.map((team) => (
+              <button
+                key={team.id}
+                type="button"
+                onClick={() => pickTeam(team)}
+                className="rounded-xl border border-slate-200 bg-white p-4 text-left transition-colors hover:border-sky-300 hover:bg-sky-50/50 sm:p-5"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-100 text-sm font-bold text-slate-600">
+                    {(team.name ?? "?")[0].toUpperCase()}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-slate-900">{team.name ?? `Team #${team.id}`}</p>
+                    <p className="text-xs text-slate-400">{team.squad.length} players</p>
+                  </div>
+                </div>
+                <div className="mt-3 flex gap-5 border-t border-slate-100 pt-3">
+                  <div>
+                    <p className="text-xs text-slate-400">Total budget</p>
+                    <p className="text-sm font-bold text-slate-800">£{team.budget_remaining}m</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-400">Available</p>
+                    <p className="text-sm font-bold text-sky-600">£{team.active_budget}m</p>
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
+        )}
+      </section>
+    );
+  }
+
+  // ── Step 2: Side-by-side deal builder ────────────────────────────────────
+  if (!selectedTeam) return null;
 
   return (
-    <form action={formAction} className="space-y-5">
-      <input type="hidden" name="auction_id" value={auctionId} />
-
-      {/* Hidden inputs for selected players */}
-      {Array.from(selectedPlayerIds).map((pid) => (
-        <input key={pid} type="hidden" name="proposer_player_ids" value={pid} />
-      ))}
-
-      {/* Team selection */}
-      <div>
-        <label htmlFor="recipient_id" className="block text-sm font-medium text-slate-700">
-          Propose to
-        </label>
-        <select
-          id="recipient_id"
-          name="recipient_id"
-          required
-          defaultValue=""
-          className={`mt-1 ${inputCls}`}
-        >
-          <option value="" disabled>
-            Select a manager…
-          </option>
-          {otherTeams.map((t) => (
-            <option key={t.id} value={t.id}>
-              {t.name ?? `Team #${t.id}`}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {/* Player selection */}
-      <div>
-        <p className="text-sm font-medium text-slate-700">
-          Your players to offer{" "}
-          <span className="text-slate-400 font-normal">(select any, or none if cash-only)</span>
+    <section className="space-y-4 sm:space-y-5">
+      {/* Header */}
+      <div className="rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
+        <div className="flex items-center gap-2 text-sm">
+          <a
+            href={`/auctions/${auctionId}/transfers`}
+            className="font-medium text-sky-600 hover:text-sky-800"
+          >
+            Transfer Room
+          </a>
+          <span className="text-slate-400">/</span>
+          <button
+            type="button"
+            onClick={backToPicker}
+            className="font-medium text-sky-600 hover:text-sky-800"
+          >
+            Choose manager
+          </button>
+          <span className="text-slate-400">/</span>
+          <span className="font-medium text-slate-700">Deal with {selectedTeam.name}</span>
+        </div>
+        <p className="mt-2 text-sm text-slate-500">
+          Select players from your squad and/or add cash to build your offer. The other manager
+          will respond with what they want in return.
         </p>
-        {mySquad.length === 0 ? (
-          <p className="mt-2 text-sm text-slate-500">You have no players in your squad yet.</p>
-        ) : (
-          <ul className="mt-2 space-y-1.5">
-            {mySquad.map((p) => {
-              const checked = selectedPlayerIds.has(p.player_id);
-              return (
-                <li key={p.player_id}>
-                  <label
-                    className={`flex cursor-pointer items-center gap-3 rounded-lg border px-3 py-2.5 text-sm transition-colors ${
-                      p.locked
-                        ? "cursor-not-allowed border-slate-100 bg-slate-50 text-slate-400"
-                        : checked
-                        ? "border-sky-300 bg-sky-50 text-slate-900"
-                        : "border-slate-200 bg-white text-slate-800 hover:border-sky-200 hover:bg-sky-50/50"
-                    }`}
-                  >
-                    <input
-                      type="checkbox"
-                      disabled={p.locked}
-                      checked={checked}
-                      onChange={() => togglePlayer(p.player_id)}
-                      className="h-4 w-4 rounded border-slate-300 text-sky-600"
-                    />
-                    <span className="flex-1 font-medium">{p.player_name ?? "—"}</span>
-                    <span className="text-xs text-slate-400">
-                      {[p.position, p.club].filter(Boolean).join(" · ")}
-                    </span>
-                    {p.locked && (
-                      <span className="rounded bg-amber-100 px-1.5 py-0.5 text-xs text-amber-700">
-                        In transfer
-                      </span>
-                    )}
-                  </label>
-                </li>
-              );
-            })}
-          </ul>
-        )}
       </div>
 
-      {/* Cash */}
-      <div>
-        <label htmlFor="proposer_cash" className="block text-sm font-medium text-slate-700">
-          Cash to offer{" "}
-          <span className="text-slate-400 font-normal">(£m, whole number — leave blank for none)</span>
-        </label>
-        <input
-          id="proposer_cash"
-          name="proposer_cash"
-          type="number"
-          inputMode="numeric"
-          step={1}
-          min={0}
-          value={cash}
-          onChange={(e) => setCash(e.target.value)}
-          placeholder="0"
-          className={`mt-1 max-w-[10rem] ${inputCls}`}
+      {/* Budget strip */}
+      <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-3">
+        <BudgetCard
+          label={`${myName} (You)`}
+          total={myBudget.budget_remaining}
+          available={myBudget.active_budget}
+        />
+        <div className="text-center text-xl text-slate-300 select-none">⇄</div>
+        <BudgetCard
+          label={selectedTeam.name ?? `Team #${selectedTeam.id}`}
+          total={selectedTeam.budget_remaining}
+          available={selectedTeam.active_budget}
         />
       </div>
 
-      {/* Submit */}
-      <div className="flex gap-3">
-        <button
-          type="submit"
-          disabled={pending}
-          className="rounded-lg bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-sky-700 disabled:opacity-50"
-        >
-          {pending ? "Proposing…" : "Propose transfer"}
-        </button>
-        <a
-          href={`/auctions/${auctionId}/transfers`}
-          className="rounded-lg border border-slate-200 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
-        >
-          Cancel
-        </a>
-      </div>
+      {/* Squad panels */}
+      <form action={formAction}>
+        <input type="hidden" name="auction_id" value={auctionId} />
+        <input type="hidden" name="recipient_id" value={selectedTeam.id} />
+        {Array.from(selectedPlayerIds).map((pid) => (
+          <input key={pid} type="hidden" name="proposer_player_ids" value={pid} />
+        ))}
 
-      {state && !state.ok && (
-        <p role="status" className="text-sm text-red-700">
-          {state.message}
-        </p>
-      )}
-    </form>
+        {/* Side-by-side grid: stack on mobile, 3-col on md+ */}
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr_32px_1fr]">
+          {/* Left: my squad */}
+          <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+            <div className="mb-3 flex items-center justify-between border-b border-slate-100 pb-3">
+              <span className="font-semibold text-slate-900">{myName} — Your squad</span>
+              {selectedPlayerIds.size > 0 && (
+                <span className="text-xs font-medium text-sky-600">
+                  {selectedPlayerIds.size} selected
+                </span>
+              )}
+            </div>
+
+            {mySquad.length === 0 ? (
+              <p className="py-4 text-center text-sm text-slate-400">
+                You have no players in your squad.
+              </p>
+            ) : (
+              <ul className="space-y-1.5">
+                {mySquad.map((p) => {
+                  const checked = selectedPlayerIds.has(p.player_id);
+                  const disabled = p.locked;
+                  return (
+                    <li key={p.player_id}>
+                      <label
+                        className={`flex cursor-pointer items-center gap-3 rounded-lg border px-3 py-2 text-sm transition-colors ${
+                          disabled
+                            ? "cursor-not-allowed border-slate-100 bg-slate-50 opacity-50"
+                            : checked
+                            ? "border-sky-300 bg-sky-50"
+                            : "border-slate-200 bg-white hover:border-sky-200 hover:bg-sky-50/40"
+                        }`}
+                      >
+                        <input
+                          type="checkbox"
+                          disabled={disabled}
+                          checked={checked}
+                          onChange={() => !disabled && togglePlayer(p.player_id)}
+                          className="h-4 w-4 shrink-0 rounded border-slate-300 text-sky-600"
+                        />
+                        <span className="flex-1 font-medium text-slate-900">
+                          {p.player_name ?? "—"}
+                        </span>
+                        <span className="shrink-0 text-xs text-slate-400">
+                          {[p.position, p.club].filter(Boolean).join(" · ")}
+                        </span>
+                        {p.locked && (
+                          <span className="shrink-0 rounded bg-amber-100 px-1.5 py-0.5 text-xs font-medium text-amber-700">
+                            In deal
+                          </span>
+                        )}
+                      </label>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+
+            {/* Cash input */}
+            <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-3">
+              <label htmlFor="proposer_cash" className="block text-xs font-semibold uppercase tracking-wide text-slate-500">
+                Cash to offer (£m)
+              </label>
+              <div className="mt-1.5 flex items-center gap-1.5">
+                <span className="text-sm text-slate-400">£</span>
+                <input
+                  id="proposer_cash"
+                  name="proposer_cash"
+                  type="number"
+                  inputMode="numeric"
+                  step={1}
+                  min={0}
+                  value={cash}
+                  onChange={(e) => setCash(e.target.value)}
+                  placeholder="0"
+                  className="w-24 rounded-md border border-slate-300 bg-white px-2.5 py-1.5 text-sm text-slate-900 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/30"
+                />
+                <span className="text-xs text-slate-400">million</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Centre arrow (hidden on mobile, shown on md+) */}
+          <div className="hidden items-start justify-center pt-8 md:flex">
+            <span className="text-2xl text-slate-200 select-none">⇄</span>
+          </div>
+
+          {/* Right: their squad (reference) */}
+          <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+            <div className="mb-3 border-b border-slate-100 pb-3">
+              <span className="font-semibold text-slate-900">
+                {selectedTeam.name} — Their squad
+              </span>
+            </div>
+
+            {selectedTeam.squad.length === 0 ? (
+              <p className="py-4 text-center text-sm text-slate-400">
+                {selectedTeam.name} has no players yet.
+              </p>
+            ) : (
+              <ul className="space-y-1.5">
+                {selectedTeam.squad.map((p) => (
+                  <li
+                    key={p.player_id}
+                    className="flex items-center gap-3 rounded-lg border border-slate-100 bg-slate-50 px-3 py-2 text-sm"
+                  >
+                    <span className="flex-1 font-medium text-slate-800">
+                      {p.player_name ?? "—"}
+                    </span>
+                    <span className="shrink-0 text-xs text-slate-400">
+                      {[p.position, p.club].filter(Boolean).join(" · ")}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {/* Note */}
+            <div className="mt-4 rounded-lg border border-slate-100 bg-slate-50 p-3">
+              <p className="text-xs text-slate-400 italic">
+                {selectedTeam.name} will specify what they want in return when they respond.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Proposal summary + submit */}
+        <div className="mt-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+          {hasOffer ? (
+            <div className="mb-4 rounded-lg border border-sky-100 bg-sky-50 px-3 py-2.5">
+              <p className="text-xs font-semibold uppercase tracking-wide text-sky-700">
+                Your offer to {selectedTeam.name}
+              </p>
+              <p className="mt-1 text-sm font-medium text-slate-900">
+                {[
+                  offeredPlayers.length > 0
+                    ? offeredPlayers.map((p) => p.player_name ?? "—").join(", ")
+                    : null,
+                  cashNum > 0 ? `£${cashNum}m cash` : null,
+                ]
+                  .filter(Boolean)
+                  .join(" + ")}
+              </p>
+              <p className="mt-0.5 text-xs text-slate-400">
+                {selectedTeam.name} will counter-propose what they want in return
+              </p>
+            </div>
+          ) : (
+            <p className="mb-4 text-sm italic text-slate-400">
+              Select players from your squad and/or add cash to build your offer.
+            </p>
+          )}
+
+          <div className="flex flex-wrap gap-3">
+            <button
+              type="submit"
+              disabled={!hasOffer || pending}
+              className="rounded-lg bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-sky-700 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              {pending ? "Proposing…" : "Propose transfer"}
+            </button>
+            <a
+              href={`/auctions/${auctionId}/transfers`}
+              className="rounded-lg border border-slate-200 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
+            >
+              Cancel
+            </a>
+          </div>
+
+          {state && !state.ok && (
+            <p role="status" className="mt-3 text-sm text-red-700">
+              {state.message}
+            </p>
+          )}
+        </div>
+      </form>
+    </section>
+  );
+}
+
+function BudgetCard({
+  label,
+  total,
+  available,
+}: {
+  label: string;
+  total: number;
+  available: number;
+}) {
+  return (
+    <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-sm sm:p-4">
+      <p className="mb-2 text-xs text-slate-400 truncate">{label}</p>
+      <div className="flex gap-4">
+        <div>
+          <p className="text-base font-bold text-slate-800">£{total}m</p>
+          <p className="text-xs text-slate-400">total</p>
+        </div>
+        <div>
+          <p className="text-base font-bold text-sky-600">£{available}m</p>
+          <p className="text-xs text-slate-400">available</p>
+        </div>
+      </div>
+    </div>
   );
 }

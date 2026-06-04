@@ -1,10 +1,38 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 
 import { ProposeTransferClient } from "@/app/auctions/[auctionId]/transfers/new/_components/ProposeTransferClient";
 import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
 import { createAdminClient } from "@/lib/supabase-server";
 
 export const dynamic = "force-dynamic";
+
+const POS_ORDER: Record<string, number> = {
+  gk: 0,
+  goalkeeper: 0,
+  defender: 1,
+  cb: 1,
+  lb: 1,
+  rb: 1,
+  midfielder: 2,
+  cm: 2,
+  am: 2,
+  dm: 2,
+  forward: 3,
+  st: 3,
+  lw: 3,
+  rw: 3,
+};
+
+function sortByPosition<T extends { position: string | null; player_name: string | null }>(
+  players: T[],
+): T[] {
+  return [...players].sort((a, b) => {
+    const pa = POS_ORDER[a.position?.toLowerCase() ?? ""] ?? 4;
+    const pb = POS_ORDER[b.position?.toLowerCase() ?? ""] ?? 4;
+    if (pa !== pb) return pa - pb;
+    return (a.player_name ?? "").localeCompare(b.player_name ?? "");
+  });
+}
 
 export default async function NewTransferPage({
   params,
@@ -15,43 +43,44 @@ export default async function NewTransferPage({
   const auctionId = Number(raw);
 
   const d = await loadAuctionDashboardForViewer(auctionId);
-
   if (!d.me) notFound();
 
-  // Block if past hard deadline
+  const admin = createAdminClient();
+
+  // Check transfer window
+  const { data: auctionRow } = await admin
+    .from("Auctions")
+    .select("transfer_window_open, hard_deadline_at")
+    .eq("id", auctionId)
+    .maybeSingle();
+
+  const transferWindowOpen =
+    (auctionRow as { transfer_window_open?: boolean } | null)?.transfer_window_open ?? false;
   const pastHard = d.auction?.hard_deadline_at
     ? Date.now() >= Date.parse(d.auction.hard_deadline_at)
     : false;
 
-  if (pastHard) {
-    return (
-      <section className="rounded-xl border border-amber-100 bg-amber-50 p-4 sm:p-5">
-        <p className="font-medium text-amber-900">Transfer deadline has passed</p>
-        <p className="mt-1 text-sm text-amber-800">No new transfers can be proposed.</p>
-      </section>
-    );
+  if (!transferWindowOpen || pastHard) {
+    redirect(`/auctions/${auctionId}/transfers`);
   }
 
-  const admin = createAdminClient();
-
-  // Load my squad
-  const { data: teamRows, error: teamErr } = await admin
+  // ── Load all team rosters for this auction in one query ──────────────────
+  const { data: allTeamRows, error: teamErr } = await admin
     .from("auction_teams")
-    .select("player_id")
-    .eq("auction_id", auctionId)
-    .eq("auction_user_id", d.me.id);
+    .select("player_id, auction_user_id")
+    .eq("auction_id", auctionId);
 
   if (teamErr) throw new Error(teamErr.message);
 
-  const myPlayerIds = (teamRows ?? []).map((r: { player_id: string }) => String(r.player_id));
+  const allPlayerIds = [...new Set((allTeamRows ?? []).map((r: { player_id: string }) => String(r.player_id)))];
 
-  // Load player metadata
+  // Batch-load player metadata for all players
   const playerMeta: Record<string, { player_name: string | null; position: string | null; club: string | null }> = {};
-  if (myPlayerIds.length > 0) {
+  if (allPlayerIds.length > 0) {
     const { data: playerRows, error: playerErr } = await admin
       .from("players")
       .select("player_id, player_name, position, team_name")
-      .in("player_id", myPlayerIds);
+      .in("player_id", allPlayerIds);
     if (playerErr) throw new Error(playerErr.message);
     for (const p of playerRows ?? []) {
       const row = p as { player_id: string; player_name: string | null; position: string | null; team_name: string | null };
@@ -63,60 +92,73 @@ export default async function NewTransferPage({
     }
   }
 
-  // Find which players are locked in active transfers
+  // Find my locked players (in an active transfer as proposer or recipient)
   const { data: activeTransfers } = await admin
     .from("auction_transfers")
-    .select("proposer_player_ids")
+    .select("proposer_player_ids, recipient_player_ids, proposer_id, recipient_id")
     .eq("auction_id", auctionId)
-    .not("status", "in", '("completed","rejected","cancelled")')
-    .eq("proposer_id", d.me.id);
+    .not("status", "in", '("completed","rejected","cancelled")');
 
   const lockedPlayerIds = new Set<string>(
-    (activeTransfers ?? []).flatMap(
-      (t: { proposer_player_ids: string[] }) => t.proposer_player_ids,
-    ),
+    (activeTransfers ?? []).flatMap((t: { proposer_player_ids: string[]; recipient_player_ids: string[]; proposer_id: number; recipient_id: number }) => {
+      const ids: string[] = [];
+      if (t.proposer_id === d.me!.id) ids.push(...t.proposer_player_ids);
+      if (t.recipient_id === d.me!.id) ids.push(...t.recipient_player_ids);
+      return ids;
+    }),
   );
 
-  const mySquad = myPlayerIds.map((pid) => ({
-    player_id: pid,
-    player_name: playerMeta[pid]?.player_name ?? null,
-    position: playerMeta[pid]?.position ?? null,
-    club: playerMeta[pid]?.club ?? null,
-    locked: lockedPlayerIds.has(pid),
-  }));
+  // Build my squad
+  const myRawIds = (allTeamRows ?? [])
+    .filter((r: { auction_user_id: number }) => r.auction_user_id === d.me!.id)
+    .map((r: { player_id: string }) => String(r.player_id));
 
-  // Sort by position then name
-  const posOrder: Record<string, number> = { gk: 0, goalkeeper: 0, defender: 1, midfielder: 2, forward: 3 };
-  mySquad.sort((a, b) => {
-    const pa = posOrder[a.position?.toLowerCase() ?? ""] ?? 4;
-    const pb = posOrder[b.position?.toLowerCase() ?? ""] ?? 4;
-    if (pa !== pb) return pa - pb;
-    return (a.player_name ?? "").localeCompare(b.player_name ?? "");
-  });
+  const mySquad = sortByPosition(
+    myRawIds.map((pid) => ({
+      player_id: pid,
+      player_name: playerMeta[pid]?.player_name ?? null,
+      position: playerMeta[pid]?.position ?? null,
+      club: playerMeta[pid]?.club ?? null,
+      locked: lockedPlayerIds.has(pid),
+    })),
+  );
 
-  // Other teams in this auction (excluding me)
+  // Build other teams' squads (all participants except me)
   const otherTeams = d.users
     .filter((u) => u.id !== d.me!.id)
-    .map((u) => ({ id: u.id, name: u.name }));
+    .map((u) => {
+      const squad = sortByPosition(
+        (allTeamRows ?? [])
+          .filter((r: { auction_user_id: number }) => r.auction_user_id === u.id)
+          .map((r: { player_id: string }) => {
+            const pid = String(r.player_id);
+            return {
+              player_id: pid,
+              player_name: playerMeta[pid]?.player_name ?? null,
+              position: playerMeta[pid]?.position ?? null,
+              club: playerMeta[pid]?.club ?? null,
+            };
+          }),
+      );
+      return {
+        id: u.id,
+        name: u.name,
+        budget_remaining: u.budget_remaining,
+        active_budget: u.active_budget,
+        squad,
+      };
+    });
 
   return (
-    <section className="space-y-4 sm:space-y-5">
-      <div className="rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
-        <h2 className="text-lg font-semibold text-slate-900">Propose a transfer</h2>
-        <p className="mt-1 text-sm text-slate-600">
-          Select which manager you&apos;re dealing with, choose your players and cash to offer.
-          The other manager will then fill in their side of the deal, and both parties confirm
-          before it executes.
-        </p>
-      </div>
-
-      <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
-        <ProposeTransferClient
-          auctionId={auctionId}
-          mySquad={mySquad}
-          otherTeams={otherTeams}
-        />
-      </div>
-    </section>
+    <ProposeTransferClient
+      auctionId={auctionId}
+      mySquad={mySquad}
+      myBudget={{
+        budget_remaining: d.me.budget_remaining,
+        active_budget: d.me.active_budget,
+      }}
+      myName={d.me.name ?? "You"}
+      otherTeams={otherTeams}
+    />
   );
 }
