@@ -1,6 +1,6 @@
 # HFW Auction App — Agent Handoff Document
 
-Last updated: May 2026 (updated after live auction UI redesign)
+Last updated: May 2026 (updated after live auction validation hardening + admin UX improvements)
 
 This document is written for an AI agent picking up this project. Read it fully before making any changes.
 
@@ -53,9 +53,10 @@ HFWFiles/                          ← git repo root
 │   │   │   │   ├── admin/
 │   │   │   │   │   ├── _components/
 │   │   │   │   │   │   ├── AdminSaleSection.tsx  ← Mode toggle wrapper (client)
-│   │   │   │   │   │   ├── SaleForm.tsx          ← Search mode (client)
+│   │   │   │   │   │   ├── SaleForm.tsx          ← Search mode with player + participant comboboxes (client)
 │   │   │   │   │   │   ├── SalesLog.tsx          ← Sales log with void/edit (client)
-│   │   │   │   │   │   └── TeamBrowseForm.tsx    ← Browse-by-team mode (client)
+│   │   │   │   │   │   ├── TeamBrowseForm.tsx    ← Browse-by-team mode (client)
+│   │   │   │   │   │   └── UndoLastSale.tsx      ← One-click void of most recent sale (client)
 │   │   │   │   │   ├── actions.ts            ← Server actions: record/void/edit/markUnsold
 │   │   │   │   │   └── page.tsx              ← Admin page (server)
 │   │   │   │   ├── team/[participantId]/
@@ -169,9 +170,9 @@ All four tables created by `scripts/sql/live-auction-schema.sql`.
 
 The overview page is a server component that fetches all data in parallel, then passes it to `AuctionTabs` (a client component) for tab switching. Data is never re-fetched on tab switch — all three tabs receive their data as props on initial load.
 
-**My Team tab:** Budget progress bar + slots remaining. Squad grouped GK → DEF → MID → FWD, sorted by price descending within each group. Shows "not a participant" message if the logged-in user has no participant row.
+**My Team tab:** Budget progress bar + slots remaining. Below the bar: **avg spend per remaining slot** (`budget_remaining / slots_left`, 2dp) — helps participants plan their spend. Squad grouped GK → DEF → MID → FWD, sorted by price descending within each group. Shows "not a participant" message if the logged-in user has no participant row.
 
-**All Teams tab:** One card per participant. Each card shows budget bar + `N GK · N DEF · N MID · N FWD` breakdown. Clicking a card navigates to `/team/[participantId]`.
+**All Teams tab:** One card per participant. Each card shows budget bar, `N GK · N DEF · N MID · N FWD` breakdown, and **avg spend per remaining slot** for that participant. Clicking a card navigates to `/team/[participantId]`.
 
 **Unsold Players tab:** All players with status `available` or `unsold` (no distinction shown), grouped by team name alphabetically, with a total count header.
 
@@ -181,17 +182,20 @@ The overview page is a server component that fetches all data in parallel, then 
 
 ## Live Auction: admin page (`admin/page.tsx`)
 
+### Undo last sale (`UndoLastSale.tsx`)
+An amber banner at the top of the admin page showing the most recent non-voided sale. A single **↩ Undo** button immediately voids it (no confirmation step) and restores the player to available. Disappears when there are no non-voided sales. Designed for instant error correction mid-auction.
+
 ### Record a Sale — two modes (toggled via `AdminSaleSection.tsx`)
 
-**Search player mode (default):** Free-text combobox searches all available players by name/team. Select player → select participant → enter price → Confirm Sale. Handles the soft budget warning flow with a checkbox acknowledgment.
+**Search player mode (default):** Free-text combobox searches all available players by name/team. Select player → **search-as-you-type participant combobox** (type "Con" → Conrad appears) → enter price → Confirm Sale. Both player and participant fields show a chip once selected with a Clear button.
 
 **Browse by team mode:** Dropdown selects a team. Shows the full player list for that team:
-- Available players: inline owner `<select>` + price `<input>` + Sell button per row. Same warning flow as search mode.
+- Available players: inline owner `<select>` + price `<input>` + Sell button per row.
 - Sold players: greyed row showing owner + price + ✓ Sold badge + Edit button (opens inline edit form).
 - Passed/unsold players: greyed with strikethrough.
 
 ### Budget table
-Read-only server component showing all participants' current remaining budgets. Computed from non-voided sales passed in from the page.
+Read-only server component showing all participants' current remaining budgets. **Computed from `getParticipantSummaries` which fetches all non-voided sales with no row limit** — accurate regardless of total sale count. Re-renders on every server action via `revalidatePath`.
 
 ### Sales log (`SalesLog.tsx`)
 Last 30 sales (including voided). Each non-voided row has Edit and Void buttons that open inline panels. Void requires optional reason text.
@@ -202,19 +206,32 @@ Last 30 sales (including voided). Each non-voided row has Edit and Void buttons 
 
 Implemented in `app/live-auction/[auctionId]/admin/actions.ts`.
 
-**Hard blocks (reject sale):**
-- Player not found or not `available`
+**Hard blocks — `recordSaleAction` (reject sale entirely):**
+- Missing or non-numeric price
+- Price is not a whole number (decimals rejected server-side via `Number.isInteger`)
+- Price < `auction.min_bid` (default £5) — checked after auction config is loaded
+- Player not found in this auction or not `available`
 - Duplicate non-voided sale for this player
 - Participant not found in this auction
-- Price > budget remaining for participant
+- Participant already has `auction.squad_size` players (default 18) — full squad hard block
+- Price > participant's `budget_remaining` — budget never goes negative
 
-**Soft warning (admin must acknowledge with checkbox):**
-- After purchase, participant's remaining budget < (slots left × min_bid)
-- Admin can override — it's their strategic choice
+**Hard blocks — `editSaleAction`:**
+- Price is not a whole number
+- Price < `auction.min_bid`
+- If participant is changing: new participant already has a full squad
+- New price > new participant's budget (excluding this sale from the calculation)
 
-**Void:** Sets `is_voided = true`, restores player status to `available`.
+**`markUnsoldAction` guards:**
+- Rejects if player is already `sold` (must void the sale first)
+- Rejects if player is already `unsold`
+- Revalidates both the admin page and participant overview on success
 
-**Edit:** Re-runs budget check excluding the edited sale, then updates price/participant in place.
+**There is no soft warning.** The reserve check (budget after purchase vs. min spend for remaining slots) was removed — participants track their own spend using the avg-per-slot stat visible on the overview page.
+
+**Void:** Sets `is_voided = true`, restores player status to `available`. Revalidates admin + overview pages.
+
+**Edit:** Re-runs budget and min_bid checks excluding the edited sale, then updates price/participant in place.
 
 ---
 
@@ -317,12 +334,13 @@ node scripts/seed-live-auction-players.mjs \
 1. **UI to add/manage participants** — currently done via SQL (see above)
 2. **UI to create a live auction** — currently done manually in Supabase
 3. **UI to add players to the pool** — currently done via seed script
-4. **"Mark as unsold" button** in the Browse-by-team view (the server action `markUnsoldAction` exists in `actions.ts` but no UI button in browse mode)
+4. **"Mark as unsold" button** in the Browse-by-team view — `markUnsoldAction` exists in `actions.ts` but has no UI button wired in the browse mode rows
 5. **Forgot password page** — password resets are done manually via Supabase Dashboard → Authentication → Users → Send password reset email
 6. **Link to live auction from the main dashboard** — not yet added
 7. **Transfer/import** of live auction squads into the main online auction pipeline
 8. **Scoring** for live auction squads
 9. **World Cup national team player list** — `players` table needs refreshing before the actual live auction
+10. **"Last sale" feed on the participant overview** — nice-to-have; participants currently see updates only after a manual Refresh
 
 ---
 

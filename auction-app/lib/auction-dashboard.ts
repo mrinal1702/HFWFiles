@@ -32,6 +32,8 @@ export type AuctionDashboard = {
     id: number;
     name: string | null;
     hard_deadline_at: string | null;
+    initiation_deadline_at: string | null;
+    raise_deadline_at: string | null;
     is_active: boolean | null;
   } | null;
   users: AuctionUserRow[];
@@ -42,6 +44,10 @@ export type AuctionDashboard = {
   viewerMode: boolean;
   biddingClosed: boolean;
   biddingClosedReason: string | null;
+  /** True once initiation_deadline_at has passed — uninitiated lots can no longer be opened. */
+  initiationClosed: boolean;
+  /** True once raise_deadline_at has passed — all bids must raise by at least 5. */
+  raiseModeActive: boolean;
   meRosterSlots: number;
   meGkCount: number;
 };
@@ -54,6 +60,8 @@ export function toBidGateContext(d: AuctionDashboard): BidGateContext {
     me: d.me,
     meRosterSlots: d.meRosterSlots,
     meGkCount: d.meGkCount,
+    initiationClosed: d.initiationClosed,
+    raiseModeActive: d.raiseModeActive,
   };
 }
 
@@ -64,7 +72,7 @@ export const loadAuctionDashboard = cache(
   const actorMap = parseActorCookie(cookieStore.get(AUCTION_ACTOR_COOKIE)?.value);
 
   const [auctionRes, usersRes, lotsRes] = await Promise.all([
-    admin.from("Auctions").select("id,name,hard_deadline_at,is_active").eq("id", auctionId).maybeSingle(),
+    admin.from("Auctions").select("id,name,hard_deadline_at,initiation_deadline_at,raise_deadline_at,is_active").eq("id", auctionId).maybeSingle(),
     admin
       .from("auction_users")
       .select("id,name,budget_remaining,active_budget,user_id")
@@ -94,6 +102,12 @@ export const loadAuctionDashboard = cache(
   const now = Date.now();
   const hardMs = auction?.hard_deadline_at ? Date.parse(auction.hard_deadline_at) : NaN;
   const pastHard = Number.isFinite(hardMs) && now >= hardMs;
+
+  const initiationMs = auction?.initiation_deadline_at ? Date.parse(auction.initiation_deadline_at) : NaN;
+  const initiationClosed = Number.isFinite(initiationMs) && now >= initiationMs;
+
+  const raiseMs = auction?.raise_deadline_at ? Date.parse(auction.raise_deadline_at) : NaN;
+  const raiseModeActive = Number.isFinite(raiseMs) && now >= raiseMs;
   const needsRollingFinalize =
     !pastHard &&
     rawLots.some((r) => {
@@ -352,6 +366,8 @@ export const loadAuctionDashboard = cache(
     viewerMode,
     biddingClosed,
     biddingClosedReason,
+    initiationClosed,
+    raiseModeActive,
     meRosterSlots,
     meGkCount,
   };

@@ -29,4 +29,8 @@ export type BidGateContext = {
   me: AuctionUserRow | null;
   meRosterSlots: number;
   meGkCount: number;
+  /** True once initiation_deadline_at has passed — uninitiated lots can no longer be opened. */
+  initiationClosed: boolean;
+  /** True once raise_deadline_at has passed — all bids must raise by at least 5. */
+  raiseModeActive: boolean;
 };

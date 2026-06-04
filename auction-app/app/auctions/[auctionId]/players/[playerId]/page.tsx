@@ -63,7 +63,7 @@ export default async function PlayerDetailPage({
   const timerDisplay =
     lot.status === "bidding" && !gate.biddingClosed ? (lot.expires_at ? new Date(lot.expires_at).toLocaleString() : "—") : "—";
 
-  const minBid = nextMinimumBidAmount(lot.high_amount);
+  const minBid = nextMinimumBidAmount(lot.high_amount, gate.raiseModeActive);
   const disabledReason = getBidDisabledReason(lot, gate);
 
   const returnToRaw = searchParams ? (await searchParams).returnTo : undefined;

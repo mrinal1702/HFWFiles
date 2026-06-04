@@ -63,9 +63,27 @@ Global pool: at least `player_id`, `player_name`, `position` (GK vs outfield for
 
 ### `place_bid(p_auction_id, p_player_id, p_auction_user_id, p_amount)` → JSON
 
-- Validates: deadline, lot state, min bid 5, integer amounts, increment rules (below 50: any higher integer; from 50+: +5 min step), **active_budget**, **18 players** and **1 GK / 17 outfield** caps counting **sold + current highs**, self-raise allowed, no retractions.  
+- Validates: deadline phase (see below), lot state, min bid 5, integer amounts, increment rules, **active_budget**, **18 players** and **1 GK / 17 outfield** caps counting **sold + current highs**, self-raise allowed, no retractions.  
 - Locks lot + users; updates `auction_lots`, inserts `auction_bids`, adjusts `active_budget` (release previous leader, reserve new).  
 - May auto-finalize a **single** lot if its `expires_at` passed (see SQL comments).  
+
+**Three deadline phases** (columns on `"Auctions"`, ~1 hour apart):
+
+| Column | Effect when passed |
+|--------|--------------------|
+| `initiation_deadline_at` | `uninitiated` lots return `initiation_deadline_passed` — only lots already in `bidding` can be raised |
+| `raise_deadline_at` | Increment rule becomes always +5, regardless of current amount |
+| `hard_deadline_at` | No bids at all; `finalize_auction_hard_deadline` settles everything |
+
+**Setting deadlines:**
+```sql
+update public."Auctions"
+set
+  initiation_deadline_at = (timestamp '2026-XX-XX HH:MM:00' at time zone 'Europe/Dublin'),
+  raise_deadline_at      = (timestamp '2026-XX-XX HH:MM:00' at time zone 'Europe/Dublin'),
+  hard_deadline_at       = (timestamp '2026-XX-XX HH:MM:00' at time zone 'Europe/Dublin')
+where id = <auction_id>;
+```
 
 **TypeScript:** `placeBid(client, { auctionId, playerId, auctionUserId, amount })` in `lib/bidding.ts`.
 
@@ -99,10 +117,12 @@ Wipes **one** auction’s bidding data + replaces its `auction_users`, re-seeds 
 - **Budget 350** default for test resets; **no decimals**.  
 - **Self-raise** allowed.  
 - **Rolling 24h** from last valid bid on a lot, **capped** by `hard_deadline_at`.  
+- **Initiation deadline:** after `initiation_deadline_at`, only lots already in `bidding` can receive bids.  
+- **Raise mode:** after `raise_deadline_at`, every bid must raise the current high by at least 5, no exceptions.  
 - **Roster:** max **18** total slots; max **1 GK**; max **17** outfield — counts **sold + any lot where user is current high bidder**.  
 - **Sold** players stay out of the pool for this design (`sold` / `unsold` terminal states).  
 
-Surface **`budget_remaining`**, **`active_budget`**, **current high bid**, **lot status**, **`expires_at`**, and **hard deadline** in the UI so users understand why a bid was rejected.
+Surface **`budget_remaining`**, **`active_budget`**, **current high bid**, **lot status**, **`expires_at`**, all three deadlines (in user's local time via `AuctionDeadlines` client component), and active-phase banners in the UI so users always know which rules apply right now.
 
 ---
 
@@ -140,6 +160,7 @@ Reuse **`lib/bidding.ts`** and the same RPC contracts everywhere; Auction Lab re
 | File | Contents |
 |------|-----------|
 | `auction-bidding.sql` | `auction_lots`, `auction_bids`, `Auctions.hard_deadline_at`, `place_bid`, `finalize_auction_hard_deadline`, helpers |
+| `auction-deadline-rules.sql` | Adds `initiation_deadline_at` + `raise_deadline_at` columns; replaces `place_bid` with three-phase version. Run after `auction-bidding.sql`. |
 | `reset-testing-environment.sql` | `reset_testing_environment` |
 | `seed-auction-lots-all-players.sql` | `seed_auction_lots_for_auction` + optional DO block |
 | `testing-auction-helpers.sql` | `create_stacked_test_auction`, `replace_auction_users_fresh_state` |

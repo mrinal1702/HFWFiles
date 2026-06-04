@@ -416,7 +416,7 @@ export function BiddingRoomClient({
           <div className="space-y-3 md:hidden">
             {filtered.map((lot, i) => {
               const disabledReason = getBidDisabledReason(lot, gate);
-              const minBid = nextMinimumBidAmount(lot.high_amount);
+              const minBid = nextMinimumBidAmount(lot.high_amount, gate.raiseModeActive);
               const highDisplay =
                 lot.status === "sold"
                   ? (lot.high_amount != null ? String(lot.high_amount) : "—")
@@ -511,7 +511,7 @@ export function BiddingRoomClient({
               <tbody>
                 {filtered.map((lot, i) => {
                   const disabledReason = getBidDisabledReason(lot, gate);
-                  const minBid = nextMinimumBidAmount(lot.high_amount);
+                  const minBid = nextMinimumBidAmount(lot.high_amount, gate.raiseModeActive);
                   const highDisplay =
                     lot.status === "sold"
                       ? (lot.high_amount != null ? String(lot.high_amount) : "—")

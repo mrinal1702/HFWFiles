@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 
+import { AuctionDeadlines } from "@/app/auctions/_components/AuctionDeadlines";
 import { AuctionNav } from "@/app/auctions/_components/AuctionNav";
 import { RefreshButton } from "@/app/auctions/_components/RefreshButton";
 import { getAuthUser } from "@/lib/auth/get-user";
@@ -42,12 +43,13 @@ export default async function AuctionLayout({
             <h1 className="text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
               {d.auction.name ?? `Auction #${auctionId}`}
             </h1>
-            <p className="mt-1 text-sm text-slate-600">
-              Hard deadline:{" "}
-              {d.auction.hard_deadline_at
-                ? `${new Date(d.auction.hard_deadline_at).toLocaleString()} (local)`
-                : "not set"}
-            </p>
+            <div className="mt-2">
+              <AuctionDeadlines
+                initiationDeadlineAt={d.auction.initiation_deadline_at}
+                raiseDeadlineAt={d.auction.raise_deadline_at}
+                hardDeadlineAt={d.auction.hard_deadline_at}
+              />
+            </div>
           </div>
           <div className="flex flex-shrink-0 flex-wrap items-center gap-3">
             <Link href="/dashboard" className="text-sm font-medium text-sky-700 underline hover:text-sky-900">

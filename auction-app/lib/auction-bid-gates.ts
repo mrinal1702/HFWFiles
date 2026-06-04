@@ -11,7 +11,7 @@ export function getBidDisabledReason(lot: EnrichedLot, ctx: BidGateContext): str
   if (lot.status === "sold") return "This player has already been sold.";
   if (lot.status === "unsold") return "This player is no longer available to bid on.";
   if (lot.status !== "uninitiated" && lot.status !== "bidding") {
-    return "This player isn’t taking bids right now.";
+    return "This player isn't taking bids right now.";
   }
   if (lot.status === "bidding" && lot.expires_at) {
     const t = Date.parse(lot.expires_at);
@@ -22,8 +22,11 @@ export function getBidDisabledReason(lot: EnrichedLot, ctx: BidGateContext): str
 
   const selfLeading = lot.high_bidder_id === ctx.me.id && lot.status === "bidding";
   if (!selfLeading) {
+    if (lot.status === "uninitiated" && ctx.initiationClosed) {
+      return "The window for starting bids on new players has closed — you can still raise on players that are already in play.";
+    }
     if (ctx.meRosterSlots >= 18) {
-      return "Your roster is full (18 players, including anyone you’re currently winning a bid on).";
+      return "Your roster is full (18 players, including anyone you're currently winning a bid on).";
     }
     if (isGoalkeeperPosition(lot.position) && ctx.meGkCount >= 1) {
       return "You can only roster one goalkeeper.";

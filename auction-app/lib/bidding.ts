@@ -7,13 +7,14 @@ export type PlaceBidParams = {
   amount: number;
 };
 
-/** Error codes returned in JSON from public.place_bid (see scripts/sql/auction-bidding.sql). */
+/** Error codes returned in JSON from public.place_bid (see scripts/sql/auction-bidding.sql + auction-deadline-rules.sql). */
 export type PlaceBidErrorCode =
   | "amount_must_be_integer"
   | "below_minimum_opening_bid"
   | "auction_not_found"
   | "hard_deadline_not_set"
   | "auction_deadline_passed"
+  | "initiation_deadline_passed"
   | "lot_not_found"
   | "lot_not_biddable"
   | "bid_too_low"
