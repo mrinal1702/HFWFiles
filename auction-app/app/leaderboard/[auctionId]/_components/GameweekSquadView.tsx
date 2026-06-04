@@ -160,8 +160,11 @@ export function GameweekSquadView({
 
   if (!squads) {
     return (
-      <div className="rounded-xl border border-slate-200 bg-white p-6 text-center shadow-sm">
-        <p className="text-sm text-slate-500">No squads found for this auction.</p>
+      <div className="rounded-xl border border-slate-200 bg-white p-8 text-center shadow-sm">
+        <p className="text-sm font-medium text-slate-600">Squads lock at the hard deadline.</p>
+        <p className="mt-1 text-xs text-slate-400">
+          This panel will populate automatically once the gameweek deadline passes.
+        </p>
       </div>
     );
   }
@@ -174,16 +177,10 @@ export function GameweekSquadView({
     <div className="space-y-4">
       {/* Status banner */}
       <div className="flex flex-wrap items-center gap-2">
-        {squadsAreLocked && activeGw ? (
-          <span className="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-800">
-            {activeGw.name} — Locked
-          </span>
-        ) : (
-          <span className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800">
-            Live squad — not yet locked for this gameweek
-          </span>
-        )}
-        {squadsAreLocked && !scoresUploaded && (
+        <span className="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-800">
+          {activeGw ? `${activeGw.name} — Locked` : "Locked"}
+        </span>
+        {!scoresUploaded && (
           <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-500">
             Scores not yet uploaded
           </span>

@@ -23,18 +23,29 @@ export default async function LeaderboardPage({
     getActiveGameWeek(),
   ]);
 
-  // Try locked snapshot first; fall back to live auction_teams
+  // Hard deadline determines whether squads are "locked"
+  const hardDeadlineAt = d.auction?.hard_deadline_at;
+  const hardDeadlinePassed = hardDeadlineAt
+    ? Date.now() >= Date.parse(hardDeadlineAt)
+    : false;
+
+  // Priority: formal snapshot → live auction_teams (only if deadline passed) → null
   const lockedSquads = activeGw ? await getGameweekSquadData(auctionId, activeGw.id) : null;
-  const squads = lockedSquads ?? (await getCurrentSquads(auctionId));
-  const squadsAreLocked = lockedSquads !== null;
+  let squads: Awaited<ReturnType<typeof getCurrentSquads>> | null = null;
+  if (lockedSquads) {
+    squads = lockedSquads;
+  } else if (hardDeadlinePassed) {
+    const current = await getCurrentSquads(auctionId);
+    squads = current.length > 0 ? current : null;
+  }
 
   return (
     <LeaderboardTabs
       standings={standings}
       gameWeeks={gameWeeks}
       activeGw={activeGw}
-      squads={squads.length > 0 ? squads : null}
-      squadsAreLocked={squadsAreLocked}
+      squads={squads}
+      squadsAreLocked={hardDeadlinePassed}
       myUserId={d.me?.id ?? null}
     />
   );
