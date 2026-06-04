@@ -34,7 +34,6 @@ export function LeaderboardTabs({
 
   return (
     <div className="space-y-5">
-      {/* Sub-tab bar */}
       <div className="flex gap-1 rounded-xl border border-slate-200 bg-slate-100 p-1">
         {tabs.map((tab) => (
           <button
@@ -51,7 +50,6 @@ export function LeaderboardTabs({
         ))}
       </div>
 
-      {/* Content */}
       {activeTab === "standings" && (
         <StandingsTable standings={standings} gameWeeks={gameWeeks} />
       )}

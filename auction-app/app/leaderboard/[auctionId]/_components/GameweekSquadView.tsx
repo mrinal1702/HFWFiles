@@ -76,7 +76,7 @@ function SquadDisplay({ players }: { players: GwSquadPlayer[] }) {
 
     return (
       <div className="space-y-3">
-        <div className="rounded-lg border border-sky-200 bg-sky-50/60 overflow-hidden">
+        <div className="overflow-hidden rounded-lg border border-sky-200 bg-sky-50/60">
           <div className="border-b border-sky-200 bg-sky-100 px-3 py-1.5">
             <span className="text-xs font-semibold uppercase tracking-wide text-sky-800">
               Starting XI ({xi.length})
@@ -90,7 +90,7 @@ function SquadDisplay({ players }: { players: GwSquadPlayer[] }) {
         </div>
 
         {bench.length > 0 && (
-          <div className="rounded-lg border border-slate-200 bg-white overflow-hidden">
+          <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
             <div className="border-b border-slate-200 bg-slate-50 px-3 py-1.5">
               <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
                 Bench ({bench.length})
@@ -141,7 +141,6 @@ function SquadDisplay({ players }: { players: GwSquadPlayer[] }) {
 interface GameweekSquadViewProps {
   activeGw: GwInfo | null;
   squads: ParticipantGwSquad[] | null;
-  /** auction_users.id of the logged-in user, to default the picker */
   myUserId: number | null;
 }
 
