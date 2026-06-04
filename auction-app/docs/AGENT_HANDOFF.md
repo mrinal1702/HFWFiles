@@ -2,13 +2,17 @@
 
 Last updated: May 2026 (updated after live auction validation hardening + admin UX improvements)
 
+> **IMPORTANT — HFW = "How Football Works"** (not "Half Full Whistle" or any other expansion). Do not get this wrong.
+
 This document is written for an AI agent picking up this project. Read it fully before making any changes.
 
 ---
 
 ## What this project is
 
-**HFW (Half Full Whistle) Auction** is a fantasy football auction app for a private group of friends. Players are auctioned off and each participant builds a squad of real-world football players, who then earn points based on their real-life performances in matches (Champions League, World Cup, etc.).
+**HFW stands for "How Football Works".**
+
+**HFW Auction** is a fantasy football auction app for a private group of friends. Players are auctioned off and each participant builds a squad of real-world football players, who then earn points based on their real-life performances in matches (Champions League, World Cup, etc.).
 
 The app has two distinct auction modes:
 

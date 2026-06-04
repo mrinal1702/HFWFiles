@@ -3,6 +3,8 @@ export type AuctionUserRow = {
   name: string | null;
   budget_remaining: number;
   active_budget: number;
+  /** False until the manager uses their 1 paid release for the current GW window. Reset via SQL between GWs. */
+  paid_release_used: boolean;
   /** Supabase auth user id when this row is a real member; null = legacy test row. */
   user_id?: string | null;
 };

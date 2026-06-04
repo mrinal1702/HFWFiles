@@ -75,7 +75,7 @@ export const loadAuctionDashboard = cache(
     admin.from("Auctions").select("id,name,hard_deadline_at,initiation_deadline_at,raise_deadline_at,is_active").eq("id", auctionId).maybeSingle(),
     admin
       .from("auction_users")
-      .select("id,name,budget_remaining,active_budget,user_id")
+      .select("id,name,budget_remaining,active_budget,paid_release_used,user_id")
       .eq("auction_id", auctionId)
       .order("id", { ascending: true }),
     admin.from("auction_lots").select("*").eq("auction_id", auctionId).order("player_id", { ascending: true }),
@@ -88,7 +88,7 @@ export const loadAuctionDashboard = cache(
     const [usersAgain, lotsAgain] = await Promise.all([
       admin
         .from("auction_users")
-        .select("id,name,budget_remaining,active_budget,user_id")
+        .select("id,name,budget_remaining,active_budget,paid_release_used,user_id")
         .eq("auction_id", auctionId)
         .order("id", { ascending: true }),
       admin.from("auction_lots").select("*").eq("auction_id", auctionId).order("player_id", { ascending: true }),

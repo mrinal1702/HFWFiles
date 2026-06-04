@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { createAdminClient } from "@/lib/supabase-server";
 import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
+import { ReleaseButton } from "./_components/ReleaseButton";
 
 export const dynamic = "force-dynamic";
 
@@ -56,6 +57,8 @@ export default async function MyTeamPage({
   if (error) {
     throw new Error(error.message);
   }
+
+  const paidReleaseUsed = d.me.paid_release_used;
 
   const byPlayer = new Map(d.lots.map((l) => [l.player_id, l]));
   const rows = (data ?? []) as TeamRow[];
@@ -126,9 +129,18 @@ export default async function MyTeamPage({
                               {t.meta?.player_name ?? "—"}
                             </Link>
                           </h4>
-                          <span className="font-mono text-sm font-medium text-slate-900">
-                            {t.purchase_price}
-                          </span>
+                          <div className="flex items-center gap-2">
+                            <span className="font-mono text-sm font-medium text-slate-900">
+                              {t.purchase_price}
+                            </span>
+                            <ReleaseButton
+                              auctionId={auctionId}
+                              playerId={t.player_id}
+                              playerName={t.meta?.player_name ?? "this player"}
+                              purchasePrice={t.purchase_price}
+                              paidReleaseUsed={paidReleaseUsed}
+                            />
+                          </div>
                         </div>
                         <p className="mt-1 text-sm text-slate-600">
                           {(t.meta?.club ?? "—") + " · " + (t.meta?.position ?? "—")}
@@ -147,6 +159,7 @@ export default async function MyTeamPage({
                     <th className="px-3 py-3 font-semibold">Club</th>
                     <th className="px-3 py-3 font-semibold">Pos</th>
                     <th className="px-3 py-3 font-semibold">Price</th>
+                    <th className="px-3 py-3 font-semibold"></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -169,6 +182,15 @@ export default async function MyTeamPage({
                         <td className="px-3 py-3 text-slate-600">{t.meta?.club ?? "—"}</td>
                         <td className="px-3 py-3 text-slate-600">{t.meta?.position ?? "—"}</td>
                         <td className="px-3 py-3 font-mono font-medium text-slate-900">{t.purchase_price}</td>
+                        <td className="px-3 py-3">
+                          <ReleaseButton
+                            auctionId={auctionId}
+                            playerId={t.player_id}
+                            playerName={t.meta?.player_name ?? "this player"}
+                            purchasePrice={t.purchase_price}
+                            paidReleaseUsed={paidReleaseUsed}
+                          />
+                        </td>
                       </tr>
                     ));
                     return [
@@ -176,7 +198,7 @@ export default async function MyTeamPage({
                         key={`${group.id}-header`}
                         className={groupIdx === 0 ? "bg-slate-100/70" : "border-t-2 border-slate-200 bg-slate-100/70"}
                       >
-                        <td colSpan={4} className="px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-700">
+                        <td colSpan={5} className="px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-700">
                           {group.label} ({group.rows.length})
                         </td>
                       </tr>,
