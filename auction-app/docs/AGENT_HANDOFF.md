@@ -337,6 +337,7 @@ node scripts/seed-live-auction-players.mjs \
 
 | Doc | What it covers |
 |-----|---------------|
+| `docs/GAMEWEEK_FLOW.md` | Full GW cycle: bidding windows, snapshots, budget boost, commissioner ops checklist |
 | `docs/PLAYER_RELEASE_SYSTEM.md` | Release types (paid/free), GW windows, refund logic, DB schema, RPC, commissioner SQL ops |
 | `docs/LIVE_AUCTION_COMMISSIONER_GUIDE.md` | Live auction setup, seeding, admin workflow, troubleshooting |
 | `docs/BIDDING_SYSTEM_AND_UI_HANDOFF.md` | Online auction bidding flow, deadlines, budget columns |
