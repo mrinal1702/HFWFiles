@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
+import { LocalTime } from "@/app/auctions/_components/LocalTime";
 
 export const dynamic = "force-dynamic";
 
@@ -75,7 +76,7 @@ export default async function BidsHeldPage({
                     <div className="flex justify-between gap-3">
                       <dt className="text-slate-600">Timer</dt>
                       <dd className="max-w-[70%] text-right text-xs text-slate-600">
-                        {l.expires_at ? new Date(l.expires_at).toLocaleString() : "—"}
+                        <LocalTime iso={l.expires_at} />
                       </dd>
                     </div>
                   </dl>
@@ -113,7 +114,7 @@ export default async function BidsHeldPage({
                       <td className="px-3 py-3 text-slate-600">{l.position ?? "—"}</td>
                       <td className="px-3 py-3 font-mono font-medium text-slate-900">{l.high_amount ?? "—"}</td>
                       <td className="px-3 py-3 text-xs text-slate-600">
-                        {l.expires_at ? new Date(l.expires_at).toLocaleString() : "—"}
+                        <LocalTime iso={l.expires_at} />
                       </td>
                     </tr>
                   ))}
