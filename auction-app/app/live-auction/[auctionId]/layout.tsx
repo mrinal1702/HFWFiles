@@ -30,18 +30,12 @@ export default async function LiveAuctionLayout({
 }) {
   const { auctionId } = await params;
 
-  // Auth is handled by the parent layout and middleware, but double-check here
-  // so this layout can also render standalone if accessed directly.
-  const user = await getAuthUser();
-  if (!user) {
-    // Middleware should have already redirected — this is a safety fallback.
-    return null;
-  }
-
   const auction = await getLiveAuction(auctionId);
   if (!auction) {
     notFound();
   }
+
+  const user = await getAuthUser();
 
   return (
     <div className="mx-auto max-w-5xl flex-1 px-4 py-4 sm:px-6 sm:py-6">
@@ -57,12 +51,18 @@ export default async function LiveAuctionLayout({
               {STATUS_LABELS[auction.status]}
             </span>
           </div>
-          <Link
-            href="/live-auction"
-            className="text-sm font-medium text-sky-700 underline hover:text-sky-900"
-          >
-            ← All auctions
-          </Link>
+          {user ? (
+            <Link
+              href="/live-auction"
+              className="text-sm font-medium text-sky-700 underline hover:text-sky-900"
+            >
+              ← All auctions
+            </Link>
+          ) : (
+            <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-600">
+              Spectator view
+            </span>
+          )}
         </div>
         <p className="text-xs text-slate-500">
           Budget £{auction.starting_budget} · Squad {auction.squad_size} · Min bid £{auction.min_bid}

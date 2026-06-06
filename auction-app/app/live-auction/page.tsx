@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
+import { getAuthUser } from "@/lib/auth/get-user";
 import { getLiveAuctions } from "@/lib/live-auction-data";
 import type { LiveAuctionStatus } from "@/lib/live-auction-types";
 
@@ -20,6 +22,11 @@ const STATUS_COLOURS: Record<LiveAuctionStatus, string> = {
 };
 
 export default async function LiveAuctionListPage() {
+  const user = await getAuthUser();
+  if (!user) {
+    redirect("/login?next=/live-auction");
+  }
+
   let auctions: Awaited<ReturnType<typeof getLiveAuctions>> = [];
   let loadError: string | null = null;
   try {

@@ -30,14 +30,17 @@ export async function middleware(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   const path = request.nextUrl.pathname;
+  const isLiveAuctionPublic =
+    /^\/live-auction\/[^/]+\/?$/.test(path) ||
+    /^\/live-auction\/[^/]+\/team\/[^/]+\/?$/.test(path);
   const needsAuth =
     path === "/dashboard" ||
     path === "/auctions" ||
     /^\/auctions\/[^/]+/.test(path) ||
     path === "/live-auction" ||
-    /^\/live-auction\/[^/]+/.test(path);
+    /^\/live-auction\/[^/]+\/admin/.test(path);
 
-  if (!user && needsAuth) {
+  if (!user && needsAuth && !isLiveAuctionPublic) {
     const redirectUrl = request.nextUrl.clone();
     redirectUrl.pathname = "/login";
     redirectUrl.searchParams.set("next", path + request.nextUrl.search);
