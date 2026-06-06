@@ -14,6 +14,61 @@ import { createAdminClient } from "@/lib/supabase-server";
 
 export type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
 
+const SUPABASE_PAGE_SIZE = 1000;
+const PLAYER_ID_BATCH_SIZE = 200;
+
+async function fetchAllAuctionLots(
+  admin: ReturnType<typeof createAdminClient>,
+  auctionId: number,
+): Promise<Record<string, unknown>[]> {
+  let from = 0;
+  const all: Record<string, unknown>[] = [];
+
+  while (true) {
+    const { data, error } = await admin
+      .from("auction_lots")
+      .select("*")
+      .eq("auction_id", auctionId)
+      .order("player_id", { ascending: true })
+      .range(from, from + SUPABASE_PAGE_SIZE - 1);
+    if (error) throw new Error(`auction_lots: ${error.message}`);
+    if (!data?.length) break;
+    all.push(...(data as Record<string, unknown>[]));
+    if (data.length < SUPABASE_PAGE_SIZE) break;
+    from += SUPABASE_PAGE_SIZE;
+  }
+
+  return all;
+}
+
+async function fetchPlayersByIds(
+  admin: ReturnType<typeof createAdminClient>,
+  playerIds: string[],
+): Promise<Record<string, unknown>[]> {
+  if (!playerIds.length) return [];
+
+  const all: Record<string, unknown>[] = [];
+  for (let i = 0; i < playerIds.length; i += PLAYER_ID_BATCH_SIZE) {
+    const batch = playerIds.slice(i, i + PLAYER_ID_BATCH_SIZE);
+    const withClub = await admin
+      .from("players")
+      .select("player_id, player_name, position, team_name, team_id")
+      .in("player_id", batch);
+    if (withClub.error) {
+      const basic = await admin
+        .from("players")
+        .select("player_id, player_name, position")
+        .in("player_id", batch);
+      if (basic.error) throw new Error(`players: ${basic.error.message}`);
+      all.push(...((basic.data ?? []) as Record<string, unknown>[]));
+    } else {
+      all.push(...((withClub.data ?? []) as Record<string, unknown>[]));
+    }
+  }
+
+  return all;
+}
+
 /** PostgREST / Postgres when an expected RPC was never applied in Supabase. */
 function isMissingRpc(message: string | undefined, rpcName: string): boolean {
   if (!message) return false;
@@ -78,12 +133,12 @@ export const loadAuctionDashboard = cache(
       .select("id,name,budget_remaining,active_budget,paid_release_used,user_id")
       .eq("auction_id", auctionId)
       .order("id", { ascending: true }),
-    admin.from("auction_lots").select("*").eq("auction_id", auctionId).order("player_id", { ascending: true }),
+    fetchAllAuctionLots(admin, auctionId),
   ]);
 
   const auction = auctionRes.data as AuctionDashboard["auction"];
   let users = (usersRes.data ?? []) as AuctionUserRow[];
-  let rawLots = lotsRes.data ?? [];
+  let rawLots = lotsRes;
   const refetchAuctionState = async (): Promise<void> => {
     const [usersAgain, lotsAgain] = await Promise.all([
       admin
@@ -91,12 +146,11 @@ export const loadAuctionDashboard = cache(
         .select("id,name,budget_remaining,active_budget,paid_release_used,user_id")
         .eq("auction_id", auctionId)
         .order("id", { ascending: true }),
-      admin.from("auction_lots").select("*").eq("auction_id", auctionId).order("player_id", { ascending: true }),
+      fetchAllAuctionLots(admin, auctionId),
     ]);
     if (usersAgain.error) throw new Error(`auction_users: ${usersAgain.error.message}`);
-    if (lotsAgain.error) throw new Error(`auction_lots: ${lotsAgain.error.message}`);
     users = (usersAgain.data ?? []) as AuctionUserRow[];
-    rawLots = lotsAgain.data ?? [];
+    rawLots = lotsAgain;
   };
 
   const now = Date.now();
@@ -208,9 +262,9 @@ export const loadAuctionDashboard = cache(
     biddingClosedReason = "Bidding has ended — the auction deadline has passed. All times are shown in your local time.";
   }
 
-  const playerIds = [...new Set(rawLots.map((r: { player_id: string }) => String(r.player_id)))];
+  const playerIds = [...new Set(rawLots.map((r) => String(r.player_id)))];
   const bidIds = rawLots
-    .map((r: { current_high_bid_id: number | null }) => r.current_high_bid_id)
+    .map((r) => r.current_high_bid_id as number | null)
     .filter((id): id is number => id != null);
 
   const teamsForAuctionP = admin
@@ -220,20 +274,7 @@ export const loadAuctionDashboard = cache(
 
   let playerRows: Record<string, unknown>[] = [];
   if (playerIds.length) {
-    const withClub = await admin
-      .from("players")
-      .select("player_id, player_name, position, team_name, team_id")
-      .in("player_id", playerIds);
-    if (withClub.error) {
-      const basic = await admin
-        .from("players")
-        .select("player_id, player_name, position")
-        .in("player_id", playerIds);
-      if (basic.error) throw new Error(`players: ${basic.error.message}`);
-      playerRows = (basic.data ?? []) as Record<string, unknown>[];
-    } else {
-      playerRows = (withClub.data ?? []) as Record<string, unknown>[];
-    }
+    playerRows = await fetchPlayersByIds(admin, playerIds);
   }
 
   const [teamsForAuction, bidsRes] = await Promise.all([
@@ -244,7 +285,6 @@ export const loadAuctionDashboard = cache(
   ]);
 
   if (usersRes.error) throw new Error(`auction_users: ${usersRes.error.message}`);
-  if (lotsRes.error) throw new Error(`auction_lots: ${lotsRes.error.message}`);
   if (teamsForAuction.error) throw new Error(`auction_teams: ${teamsForAuction.error.message}`);
   if (bidsRes.error) throw new Error(`auction_bids: ${bidsRes.error.message}`);
 
