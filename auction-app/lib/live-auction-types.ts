@@ -131,6 +131,7 @@ export type RecordSaleState = {
     participantId?: string;
     price?: string;
   };
+  warning?: string;
   success?: boolean;
 } | null;
 
