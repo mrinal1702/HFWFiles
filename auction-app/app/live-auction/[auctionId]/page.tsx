@@ -5,6 +5,7 @@ import {
   getParticipantSquad,
   getUnsoldPlayers,
   getParticipantByUserId,
+  getAllSalesPublic,
 } from "@/lib/live-auction-data";
 import { AuctionTabs } from "./_components/AuctionTabs";
 
@@ -23,12 +24,13 @@ export default async function LiveAuctionOverviewPage({
 
   const myParticipant = user ? await getParticipantByUserId(auctionId, user.id) : null;
 
-  const [summaries, mySquad, unsoldPlayers] = await Promise.all([
+  const [summaries, mySquad, unsoldPlayers, allSales] = await Promise.all([
     getParticipantSummariesWithPositions(auctionId, auction.starting_budget),
     myParticipant
       ? getParticipantSquad(auctionId, myParticipant.id)
       : Promise.resolve([]),
     getUnsoldPlayers(auctionId),
+    getAllSalesPublic(auctionId),
   ]);
 
   return (
@@ -40,6 +42,7 @@ export default async function LiveAuctionOverviewPage({
       summaries={summaries}
       unsoldPlayers={unsoldPlayers}
       isAdmin={myParticipant?.role === "admin"}
+      allSales={allSales}
     />
   );
 }
