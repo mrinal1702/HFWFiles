@@ -10,6 +10,7 @@ import type {
   PlayerWithSaleInfo,
   PositionBreakdown,
   SaleWithDetails,
+  SaleWithFullDetails,
   SquadPlayer,
 } from "@/lib/live-auction-types";
 
@@ -22,6 +23,32 @@ function categorizePosition(position: string | null | undefined): keyof Position
   if (p.includes("midfield")) return "mid";
   if (p.includes("forward") || p.includes("attack") || p.includes("striker")) return "fwd";
   return "other";
+}
+
+const SUPABASE_PAGE_SIZE = 1000;
+
+/** Supabase caps SELECT results at 1000 rows — paginate to fetch everything. */
+async function fetchAllRows<T>(
+  runQuery: (
+    supabase: ReturnType<typeof createAdminClient>,
+    from: number,
+    to: number,
+  ) => PromiseLike<{ data: T[] | null; error: { message: string } | null }>,
+): Promise<T[]> {
+  const supabase = createAdminClient();
+  let from = 0;
+  const all: T[] = [];
+
+  while (true) {
+    const { data, error } = await runQuery(supabase, from, from + SUPABASE_PAGE_SIZE - 1);
+    if (error) throw new Error(error.message);
+    if (!data?.length) break;
+    all.push(...data);
+    if (data.length < SUPABASE_PAGE_SIZE) break;
+    from += SUPABASE_PAGE_SIZE;
+  }
+
+  return all;
 }
 
 export async function getLiveAuctions(): Promise<LiveAuction[]> {
@@ -173,15 +200,15 @@ export async function getRecentSalesPublic(
 }
 
 export async function getAvailablePlayers(auctionId: string): Promise<LiveAuctionPlayer[]> {
-  const supabase = createAdminClient();
-  const { data, error } = await supabase
-    .from("live_auction_players")
-    .select("*")
-    .eq("auction_id", auctionId)
-    .eq("status", "available")
-    .order("player_name");
-  if (error) throw new Error(error.message);
-  return data ?? [];
+  return fetchAllRows((supabase, from, to) =>
+    supabase
+      .from("live_auction_players")
+      .select("*")
+      .eq("auction_id", auctionId)
+      .eq("status", "available")
+      .order("player_name")
+      .range(from, to),
+  );
 }
 
 /**
@@ -252,16 +279,16 @@ export async function getParticipantById(
  * "Unsold Players" tab on the participant overview.
  */
 export async function getUnsoldPlayers(auctionId: string): Promise<LiveAuctionPlayer[]> {
-  const supabase = createAdminClient();
-  const { data, error } = await supabase
-    .from("live_auction_players")
-    .select("*")
-    .eq("auction_id", auctionId)
-    .in("status", ["available", "unsold"])
-    .order("team_name", { nullsFirst: false })
-    .order("player_name");
-  if (error) throw new Error(error.message);
-  return data ?? [];
+  return fetchAllRows((supabase, from, to) =>
+    supabase
+      .from("live_auction_players")
+      .select("*")
+      .eq("auction_id", auctionId)
+      .in("status", ["available", "unsold"])
+      .order("team_name", { nullsFirst: false })
+      .order("player_name")
+      .range(from, to),
+  );
 }
 
 /**
@@ -275,13 +302,16 @@ export async function getAllPlayersWithSaleInfo(
 ): Promise<PlayerWithSaleInfo[]> {
   const supabase = createAdminClient();
 
-  const [{ data: players, error: pErr }, { data: sales, error: sErr }] = await Promise.all([
-    supabase
-      .from("live_auction_players")
-      .select("*")
-      .eq("auction_id", auctionId)
-      .order("team_name", { nullsFirst: false })
-      .order("player_name"),
+  const [players, { data: sales, error: sErr }] = await Promise.all([
+    fetchAllRows((client, from, to) =>
+      client
+        .from("live_auction_players")
+        .select("*")
+        .eq("auction_id", auctionId)
+        .order("team_name", { nullsFirst: false })
+        .order("player_name")
+        .range(from, to),
+    ),
     supabase
       .from("live_auction_sales")
       .select(
@@ -291,7 +321,6 @@ export async function getAllPlayersWithSaleInfo(
       .eq("is_voided", false),
   ]);
 
-  if (pErr) throw new Error(pErr.message);
   if (sErr) throw new Error(sErr.message);
 
   // Build player_id → sale info map (only non-voided sales)
@@ -378,5 +407,42 @@ export async function getParticipantSummariesWithPositions(
   return summaries.map((s) => ({
     ...s,
     positions: breakdowns[s.id] ?? { ...empty },
+  }));
+}
+
+/**
+ * All non-voided sales for an auction, enriched with player position, nation,
+ * and team name. Ordered by price descending — ready for "top N" displays.
+ * Used by the Auction Stats tab.
+ */
+export async function getAllSalesPublic(auctionId: string): Promise<SaleWithFullDetails[]> {
+  const supabase = createAdminClient();
+  const { data, error } = await supabase
+    .from("live_auction_sales")
+    .select(
+      `*, live_auction_players!player_id(player_name, fotmob_player_id, position, nation, team_name), live_auction_participants!participant_id(display_name)`,
+    )
+    .eq("auction_id", auctionId)
+    .eq("is_voided", false)
+    .order("price", { ascending: false });
+
+  if (error) throw new Error(error.message);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (data ?? []).map((row: any) => ({
+    id: row.id,
+    auction_id: row.auction_id,
+    player_id: row.player_id,
+    participant_id: row.participant_id,
+    price: row.price,
+    created_at: row.created_at,
+    is_voided: row.is_voided,
+    void_reason: row.void_reason,
+    player_name: row.live_auction_players?.player_name ?? "Unknown",
+    fotmob_player_id: row.live_auction_players?.fotmob_player_id ?? "",
+    participant_name: row.live_auction_participants?.display_name ?? "Unknown",
+    position: row.live_auction_players?.position ?? null,
+    nation: row.live_auction_players?.nation ?? null,
+    team_name: row.live_auction_players?.team_name ?? null,
   }));
 }
