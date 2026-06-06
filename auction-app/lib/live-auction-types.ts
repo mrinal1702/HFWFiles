@@ -77,6 +77,13 @@ export interface SaleWithDetails {
   participant_name: string;
 }
 
+/** SaleWithDetails enriched with player position, nationality, and club. */
+export interface SaleWithFullDetails extends SaleWithDetails {
+  position: string | null;
+  nation: string | null;
+  team_name: string | null;
+}
+
 /** A player on a participant's squad, derived from non-voided sales. */
 export interface SquadPlayer {
   sale_id: string;
@@ -119,8 +126,6 @@ export interface PlayerWithSaleInfo extends LiveAuctionPlayer {
 
 export type RecordSaleState = {
   error?: string;
-  /** Non-blocking budget warning — admin must acknowledge before proceeding. */
-  warning?: string;
   fieldErrors?: {
     playerId?: string;
     participantId?: string;
