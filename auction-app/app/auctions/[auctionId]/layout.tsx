@@ -55,6 +55,15 @@ export default async function AuctionLayout({
             <Link href="/dashboard" className="text-sm font-medium text-sky-700 underline hover:text-sky-900">
               Dashboard
             </Link>
+            <Link
+              href={`/auctions/${auctionId}/announcements`}
+              className="inline-flex items-center gap-1.5 rounded-md bg-slate-800 px-3 py-1.5 text-sm font-medium text-white shadow-sm hover:bg-slate-700 active:bg-slate-900"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="h-3.5 w-3.5">
+                <path d="M13.488 2.513a1.75 1.75 0 0 0-2.475 0L6.75 6.774a2.75 2.75 0 0 0-.596.892L5.18 10.028a.5.5 0 0 0 .645.645l2.362-.974a2.75 2.75 0 0 0 .892-.596l4.261-4.262a1.75 1.75 0 0 0 0-2.475ZM1.75 9.5a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-4.5ZM1 12.75a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5h-6a.75.75 0 0 1-.75-.75ZM1.75 7a.75.75 0 0 0 0 1.5h2.5a.75.75 0 0 0 0-1.5h-2.5Z" />
+              </svg>
+              Announcements
+            </Link>
             <RefreshButton />
           </div>
         </div>
