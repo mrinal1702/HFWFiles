@@ -15,6 +15,7 @@ export default function LoginPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const next = searchParams.get("next") ?? "/dashboard";
+  const callbackError = searchParams.get("error");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -50,7 +51,12 @@ export default function LoginPage() {
           <input name="email" type="email" autoComplete="email" required className={field} />
         </label>
         <label className="flex flex-col gap-2 text-sm">
-          <span className="text-slate-700">Password</span>
+          <span className="flex items-baseline justify-between gap-2">
+            <span className="text-slate-700">Password</span>
+            <Link href="/forgot-password" className="text-xs font-medium text-sky-700 underline hover:text-sky-900">
+              Forgot password?
+            </Link>
+          </span>
           <input
             name="password"
             type="password"
@@ -60,6 +66,16 @@ export default function LoginPage() {
             className={field}
           />
         </label>
+        {callbackError === "callback" && (
+          <p className="text-sm text-red-700" role="alert">
+            That sign-in link is invalid or expired. Try logging in or request a new password reset.
+          </p>
+        )}
+        {callbackError === "confirm" && (
+          <p className="text-sm text-red-700" role="alert">
+            That confirmation link is invalid or expired. Try again or request a new password reset.
+          </p>
+        )}
         {error && (
           <p className="text-sm text-red-700" role="alert">
             {error}
