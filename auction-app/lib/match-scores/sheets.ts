@@ -14,6 +14,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("SouthKorea_Czechia_FinalPoints.csv"),
   },
+  {
+    slug: "canada-bosnia-herzegovina",
+    title: "Canada vs Bosnia and Herzegovina",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("Canada_BosniaandHerzegovina_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
