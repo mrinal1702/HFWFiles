@@ -58,26 +58,27 @@ async function fetchPlayerGameweekScores(
   const batchSize = 300;
   for (let i = 0; i < uniqueIds.length; i += batchSize) {
     const batch = uniqueIds.slice(i, i + batchSize);
-    let res = await admin
+    const viewRes = await admin
       .from("player_scores")
       .select("player_id, score")
       .eq("game_week_id", gameWeekId)
       .in("player_id", batch);
 
-    if (res.error) {
-      res = await admin
-        .from("Player_Scores")
-        .select("player_id, Score")
-        .eq("game_week_id", gameWeekId)
-        .in("player_id", batch);
-      if (res.error) throw new Error(`Player_Scores: ${res.error.message}`);
-      for (const row of res.data ?? []) {
-        scoreMap.set(String(row.player_id), Number(row.Score));
-      }
-    } else {
-      for (const row of res.data ?? []) {
+    if (!viewRes.error) {
+      for (const row of viewRes.data ?? []) {
         scoreMap.set(String(row.player_id), Number(row.score));
       }
+      continue;
+    }
+
+    const tableRes = await admin
+      .from("Player_Scores")
+      .select("player_id, Score")
+      .eq("game_week_id", gameWeekId)
+      .in("player_id", batch);
+    if (tableRes.error) throw new Error(`Player_Scores: ${tableRes.error.message}`);
+    for (const row of tableRes.data ?? []) {
+      scoreMap.set(String(row.player_id), Number(row.Score));
     }
   }
 
