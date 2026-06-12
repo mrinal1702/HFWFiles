@@ -25,9 +25,7 @@ export function MatchScoresTable({ rows }: { rows: MatchScoreRow[] }) {
               <th className="px-4 py-3">Player</th>
               <th className="px-4 py-3">Team</th>
               <th className="px-4 py-3 w-16">Pos</th>
-              <th className="px-4 py-3 text-right">Stats</th>
-              <th className="px-4 py-3 text-right">Endow.</th>
-              <th className="px-4 py-3 text-right">Final</th>
+              <th className="px-4 py-3 text-right">Score</th>
             </tr>
           </thead>
           <tbody>
@@ -54,12 +52,6 @@ export function MatchScoresTable({ rows }: { rows: MatchScoreRow[] }) {
                     >
                       {positionLabel(row.position)}
                     </span>
-                  </td>
-                  <td className="px-4 py-3 text-right font-mono tabular-nums text-slate-600">
-                    {formatScore(row.statsScore)}
-                  </td>
-                  <td className="px-4 py-3 text-right font-mono tabular-nums text-slate-600">
-                    {formatScore(row.endowmentScore)}
                   </td>
                   <td
                     className={`px-4 py-3 text-right font-mono text-base font-semibold tabular-nums ${
