@@ -43,6 +43,47 @@ export type LeaderboardData = {
 
 // ─── Loaders ─────────────────────────────────────────────────────────────────
 
+/** Auction-agnostic GW scores from Player_Scores (keyed by FotMob player_id). */
+async function fetchPlayerGameweekScores(
+  admin: ReturnType<typeof createAdminClient>,
+  gameWeekId: number,
+  playerIds: string[],
+): Promise<Map<string, number>> {
+  const scoreMap = new Map<string, number>();
+  const uniqueIds = [
+    ...new Set(playerIds.map((id) => Number(id)).filter((n) => Number.isFinite(n))),
+  ];
+  if (!uniqueIds.length) return scoreMap;
+
+  const batchSize = 300;
+  for (let i = 0; i < uniqueIds.length; i += batchSize) {
+    const batch = uniqueIds.slice(i, i + batchSize);
+    let res = await admin
+      .from("player_scores")
+      .select("player_id, score")
+      .eq("game_week_id", gameWeekId)
+      .in("player_id", batch);
+
+    if (res.error) {
+      res = await admin
+        .from("Player_Scores")
+        .select("player_id, Score")
+        .eq("game_week_id", gameWeekId)
+        .in("player_id", batch);
+      if (res.error) throw new Error(`Player_Scores: ${res.error.message}`);
+      for (const row of res.data ?? []) {
+        scoreMap.set(String(row.player_id), Number(row.Score));
+      }
+    } else {
+      for (const row of res.data ?? []) {
+        scoreMap.set(String(row.player_id), Number(row.score));
+      }
+    }
+  }
+
+  return scoreMap;
+}
+
 /** All-GW standings for the Standings tab. */
 export async function getLeaderboardData(auctionId: number): Promise<LeaderboardData> {
   const admin = createAdminClient();
@@ -128,7 +169,10 @@ export async function getLeaderboardData(auctionId: number): Promise<Leaderboard
  * Current live squads from auction_teams — used as a fallback when no
  * gameweek snapshot has been locked yet.
  */
-export async function getCurrentSquads(auctionId: number): Promise<ParticipantGwSquad[]> {
+export async function getCurrentSquads(
+  auctionId: number,
+  gameWeekId?: number,
+): Promise<ParticipantGwSquad[]> {
   const admin = createAdminClient();
 
   const [usersRes, teamsRes] = await Promise.all([
@@ -177,6 +221,11 @@ export async function getCurrentSquads(auctionId: number): Promise<ParticipantGw
     byUser.get(row.auction_user_id)!.push(row);
   }
 
+  const scoreMap =
+    gameWeekId != null
+      ? await fetchPlayerGameweekScores(admin, gameWeekId, playerIds)
+      : new Map<string, number>();
+
   return users
     .filter((u) => byUser.has(u.id))
     .map((u) => ({
@@ -191,7 +240,7 @@ export async function getCurrentSquads(auctionId: number): Promise<ParticipantGw
           position: meta?.position ?? null,
           club: meta?.team_name ?? null,
           purchasePrice: row.purchase_price,
-          score: null,
+          score: scoreMap.get(String(row.player_id)) ?? null,
           isBestXi: null,
         };
       }),
@@ -213,7 +262,7 @@ export async function getActiveGameWeek(): Promise<GwInfo | null> {
 
 /**
  * Locked squad snapshots for one gameweek, enriched with player metadata
- * and individual scores from auction_score_breakdown.
+ * and individual scores from Player_Scores (auction-agnostic).
  * Returns null if no squads have been locked for this GW yet.
  */
 export async function getGameweekSquadData(
@@ -222,7 +271,7 @@ export async function getGameweekSquadData(
 ): Promise<ParticipantGwSquad[] | null> {
   const admin = createAdminClient();
 
-  const [usersRes, squadsRes, scoresRes, lbRes] = await Promise.all([
+  const [usersRes, squadsRes, lbRes] = await Promise.all([
     admin
       .from("auction_users")
       .select("id, name")
@@ -234,11 +283,6 @@ export async function getGameweekSquadData(
       .eq("auction_id", auctionId)
       .eq("game_week_id", gameWeekId),
     admin
-      .from("auction_score_breakdown")
-      .select("auction_user_id, player_id, score")
-      .eq("auction_id", auctionId)
-      .eq("game_week_id", gameWeekId),
-    admin
       .from("auction_leaderboard")
       .select("auction_user_id, total_score")
       .eq("auction_id", auctionId)
@@ -247,14 +291,12 @@ export async function getGameweekSquadData(
 
   if (usersRes.error) throw new Error(`auction_users: ${usersRes.error.message}`);
   if (squadsRes.error) throw new Error(`gameweek_squads: ${squadsRes.error.message}`);
-  if (scoresRes.error) throw new Error(`auction_score_breakdown: ${scoresRes.error.message}`);
   if (lbRes.error) throw new Error(`auction_leaderboard: ${lbRes.error.message}`);
 
   const squads = squadsRes.data ?? [];
   if (squads.length === 0) return null;
 
   const users = (usersRes.data ?? []) as Array<{ id: number; name: string | null }>;
-  const scores = scoresRes.data ?? [];
   const lbRows = lbRes.data ?? [];
 
   // Fetch player metadata
@@ -272,12 +314,7 @@ export async function getGameweekSquadData(
     ]),
   );
 
-  // Build score lookup: "userId:playerId" → score
-  const scoreKey = (userId: number, playerId: string) => `${userId}:${playerId}`;
-  const scoreMap = new Map<string, number>();
-  for (const s of scores) {
-    scoreMap.set(scoreKey(s.auction_user_id as number, String(s.player_id)), Number(s.score));
-  }
+  const scoreMap = await fetchPlayerGameweekScores(admin, gameWeekId, playerIds);
 
   // Build total GW score lookup
   const totalScoreByUser = new Map<number, number>(
@@ -317,7 +354,7 @@ export async function getGameweekSquadData(
         position: meta?.position ?? null,
         club: meta?.team_name ?? null,
         purchasePrice: row.purchase_price,
-        score: scoreMap.get(scoreKey(row.auction_user_id, String(row.player_id))) ?? null,
+        score: scoreMap.get(String(row.player_id)) ?? null,
         isBestXi: row.is_best_xi ?? null,
       };
     });

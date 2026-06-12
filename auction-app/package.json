@@ -18,7 +18,10 @@
     "reset:testing": "node scripts/run-reset-testing.mjs",
     "seed:auction-lots": "node scripts/seed-auction-lots.mjs",
     "stack:auction": "node scripts/stack-test-auction.mjs",
-    "replace:auction-users": "node scripts/replace-auction-users.mjs"
+    "replace:auction-users": "node scripts/replace-auction-users.mjs",
+    "import:players": "node scripts/import-master-player-list.mjs",
+    "upsert:player-scores": "node scripts/upsert-player-scores-from-finalpoints.mjs",
+    "test:deadlines": "node scripts/test-deadline-rules.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.9.0",

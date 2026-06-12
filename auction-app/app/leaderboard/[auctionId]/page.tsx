@@ -35,7 +35,7 @@ export default async function LeaderboardPage({
   if (lockedSquads) {
     squads = lockedSquads;
   } else if (hardDeadlinePassed) {
-    const current = await getCurrentSquads(auctionId);
+    const current = await getCurrentSquads(auctionId, activeGw?.id);
     squads = current.length > 0 ? current : null;
   }
 

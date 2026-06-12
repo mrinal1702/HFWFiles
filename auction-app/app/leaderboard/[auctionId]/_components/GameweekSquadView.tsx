@@ -24,6 +24,17 @@ function sectionForPosition(pos: string | null): SectionId {
   return "other";
 }
 
+// ─── Column header ────────────────────────────────────────────────────────────
+
+function SquadColumnHeader() {
+  return (
+    <div className="flex items-center justify-between gap-2 border-b border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-slate-500">
+      <span>Player</span>
+      <span className="w-10 text-right">Pts</span>
+    </div>
+  );
+}
+
 // ─── Player row ───────────────────────────────────────────────────────────────
 
 function PlayerRow({ player }: { player: GwSquadPlayer }) {
@@ -84,6 +95,7 @@ function SquadDisplay({ players }: { players: GwSquadPlayer[] }) {
               Starting XI ({xi.length})
             </span>
           </div>
+          <SquadColumnHeader />
           <div className="divide-y divide-sky-100">
             {xi.map((p) => (
               <PlayerRow key={p.playerId} player={p} />
@@ -98,6 +110,7 @@ function SquadDisplay({ players }: { players: GwSquadPlayer[] }) {
                 Bench ({bench.length})
               </span>
             </div>
+            <SquadColumnHeader />
             <div className="divide-y divide-slate-100">
               {bench.map((p) => (
                 <PlayerRow key={p.playerId} player={p} />
@@ -127,6 +140,7 @@ function SquadDisplay({ players }: { players: GwSquadPlayer[] }) {
               {group.label} ({group.rows.length})
             </span>
           </div>
+          <SquadColumnHeader />
           <div className="divide-y divide-slate-100">
             {group.rows.map((p) => (
               <PlayerRow key={p.playerId} player={p} />
@@ -180,7 +194,11 @@ export function GameweekSquadView({
         <span className="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-800">
           {activeGw ? `${activeGw.name} — Locked` : "Locked"}
         </span>
-        {!scoresUploaded && (
+        {scoresUploaded ? (
+          <span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-800">
+            Match points live
+          </span>
+        ) : (
           <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-500">
             Scores not yet uploaded
           </span>
