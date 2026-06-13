@@ -20,6 +20,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("Canada_BosniaandHerzegovina_FinalPoints.csv"),
   },
+  {
+    slug: "usa-paraguay",
+    title: "USA vs Paraguay",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("USA_Paraguay_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
