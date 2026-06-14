@@ -26,6 +26,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("USA_Paraguay_FinalPoints.csv"),
   },
+  {
+    slug: "qatar-switzerland",
+    title: "Qatar vs Switzerland",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("Qatar_Switzerland_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
