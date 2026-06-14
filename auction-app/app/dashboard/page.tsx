@@ -55,6 +55,20 @@ export default async function DashboardPage({
         Signed in as <span className="font-medium text-slate-900">{user.email}</span>
       </p>
 
+      <section className="mt-6 rounded-xl border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
+        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Match player scores</h2>
+        <p className="mt-2 text-sm leading-relaxed text-slate-600">
+          World Cup 2026 points for every completed match — the same for all auctions. You can bookmark
+          or share the link; no login required.
+        </p>
+        <Link
+          href="/match-scores"
+          className="mt-4 inline-flex min-h-11 items-center rounded-lg bg-sky-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-sky-700"
+        >
+          Open match scores →
+        </Link>
+      </section>
+
       {sp.error === "not_member" && (
         <p className="mt-5 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-950">
           You aren&apos;t in that auction yet. Enter your join code below, or pick an auction you already

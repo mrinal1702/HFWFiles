@@ -1,12 +1,11 @@
-import { ScoresTabs } from "@/app/scores/_components/ScoresTabs";
-import { MATCH_SCORE_SHEETS } from "@/lib/match-scores/sheets";
+import { redirect } from "next/navigation";
 
+/** @deprecated Use `/match-scores` — kept for old links and bookmarks. */
 export default async function ScoresPage({
   searchParams,
 }: {
   searchParams: Promise<{ match?: string }>;
 }) {
   const { match } = await searchParams;
-
-  return <ScoresTabs sheets={MATCH_SCORE_SHEETS} initialSlug={match} />;
+  redirect(match ? `/match-scores?match=${encodeURIComponent(match)}` : "/match-scores");
 }
