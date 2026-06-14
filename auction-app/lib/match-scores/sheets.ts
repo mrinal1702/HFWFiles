@@ -44,6 +44,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("Haiti_Scotland_FinalPoints.csv"),
   },
+  {
+    slug: "australia-turkiye",
+    title: "Australia vs Turkiye",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("Australia_Turkiye_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
