@@ -73,9 +73,8 @@ DEFENDER_WEIGHTS: DefenderWeights = {
     "tackles_won": 2.7,
     "last_man_tackle": 3.0,
     "clearance_off_the_line": 3.0,
-    # Proxy: total − value on `ground_duels_won` (no separate tackles-lost in API)
+    # Tackles lost: FotMob dribbled_past (times beaten by a dribble). Not ground_duels_lost.
     "tackles_lost": -1.6,
-    # Times beaten by an opponent dribble — scored via tackles_lost (same column value)
     "interceptions": 2.7,
     # One combined line: points += clearances_weight * (clearances + headed_clearance)
     "clearances": 1.1,
@@ -179,9 +178,10 @@ STATS_NO_WEIGHT_ASSIGNED: tuple[str, ...] = (
     "recoveries — not scored until a weight is chosen",
 )
 
-# Ignore for fantasy points (aggregate overlaps component duels).
+# Ignore for fantasy points (aggregate overlaps component duels; ground_duels_lost is audit-only since 2026-06).
 STATS_IGNORED_FOR_SCORING: tuple[str, ...] = (
     "duels_won (aggregate)",
+    "ground_duels_lost — exported but not scored as tackles_lost",
 )
 
 # Collected in pipeline or mapped in `DEFENDER_STAT_KEYS` but no linear `DEFENDER_WEIGHTS` entry yet (or formula-only).
@@ -207,9 +207,9 @@ DEFENDER_SCORING: dict[str, Any] = {
     "weights_todo": SCORING_WEIGHTS_STILL_TODO,
     "notes": (
         "Clearances: apply weight 1.1 once to (clearances + headed_clearance). "
-        "dribbled_past: -1.6 (same as tackles_lost). errors_led_to_goal: -5. "
-        "dribbles: 2.5 / -0.8 (`dribbles_succeeded`). penalty_miss -5, red_card -4. "
+        "tackles_lost: -1.6 per dribbled_past (FotMob; column tackles_lost). "
+        "dribbles_lost: -0.8 per dribbles_failed. errors_led_to_goal: -5. "
         "Woodwork: confirm per-player key in each JSON before applying 2.5. "
-        "recoveries: no weight yet."
+        "recoveries: no weight yet. ground_duels_lost: not scored."
     ),
 }

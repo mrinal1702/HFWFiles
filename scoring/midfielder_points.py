@@ -163,7 +163,8 @@ MIDFIELDER_SCORING: dict[str, Any] = {
     },
     "notes": (
         "Clearances apply once via clearances_total. "
-        "Tackles lost and dribbled_past are separate -0.6 terms. "
+        "tackles_lost: -0.6 per dribbled_past (column tackles_lost). "
+        "dribbles_lost: -0.8 per dribbles_failed. No separate dribbled_past weight. "
         "Goals/assists are assumed same as defenders (10/8) since not explicitly listed for midfielders."
     ),
 }

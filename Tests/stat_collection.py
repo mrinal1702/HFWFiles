@@ -300,6 +300,7 @@ def row_from_player(
         "tackles": gv(m, KEY_TACKLES),
         "last_man_tackle": gv_or_zero(m, KEY_LAST_MAN_TACKLE),
         "clearance_off_the_line": gv_or_zero(m, KEY_CLEARANCE_OFF_THE_LINE),
+        # FotMob dribbled_past = times beaten by a dribble (defensive). Scored via tackles_lost weight.
         "tackles_lost": gv_or_zero(m, KEY_DRIBBLED_PAST),
         "blocks": gv(m, KEY_BLOCKS),
         "clearances": gv(m, KEY_CLEARANCES),

@@ -178,8 +178,8 @@ FORWARDS_SCORING: dict[str, Any] = {
     },
     "notes": (
         "Clearances apply to `clearances_total` (clearances + headed_clearance) once. "
-        "Tackles lost uses the existing proxy column `tackles_lost` (ground duels lost). "
-        "Dribbled_past uses `dribbled_past` and shares the same -1 weight per your rule. "
+        "tackles_lost: -1.0 per dribbled_past (column tackles_lost). "
+        "dribbles_lost: -1.0 per dribbles_failed. No separate dribbled_past weight. "
         "Woodwork uses the per-player `woodwork` column (only present when the JSON provides it). "
         "penalties_won: +5 each (all roles; not tied to conversion). "
         "aerial_duels_lost: 0 for forwards (2026-06)."
