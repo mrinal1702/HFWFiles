@@ -32,6 +32,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("Qatar_Switzerland_FinalPoints.csv"),
   },
+  {
+    slug: "brazil-morocco",
+    title: "Brazil vs Morocco",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("Brazil_Morocco_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
