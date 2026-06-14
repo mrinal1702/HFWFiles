@@ -38,6 +38,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("Brazil_Morocco_FinalPoints.csv"),
   },
+  {
+    slug: "haiti-scotland",
+    title: "Haiti vs Scotland",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("Haiti_Scotland_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {

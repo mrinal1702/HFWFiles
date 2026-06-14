@@ -1,0 +1,53 @@
+{
+  "_readme": "Players in match scores but not yet in public.players. Add/remove entries as the tournament goes. After adding to Supabase via add-players-to-pool.mjs, delete the row here. New missing players are also appended when you run npm run upsert:player-scores.",
+  "players": [
+    {
+      "player_id": 1242587,
+      "player_name": "Amine Sbaï",
+      "team_id": 6262,
+      "team_name": "Morocco",
+      "position": "Forward",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1242587/amine-sbai",
+      "reason": "late_callup",
+      "first_seen": "2026-06-14",
+      "first_seen_match": "Brazil vs Morocco",
+      "notes": "On match squad sheet, did not play (0 pts). Not in auction player pool."
+    },
+    {
+      "player_id": 1286428,
+      "player_name": "Garven Metusala",
+      "team_id": 5934,
+      "team_name": "Haiti",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1286428/garven-metusala",
+      "reason": "late_callup",
+      "first_seen": "2026-06-14",
+      "first_seen_match": "Haiti Scotland",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 614912,
+      "player_name": "Marwane Saadane",
+      "team_id": 6262,
+      "team_name": "Morocco",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/614912/marwane-saadane",
+      "reason": "late_callup",
+      "first_seen": "2026-06-14",
+      "first_seen_match": "Brazil vs Morocco",
+      "notes": "On match squad sheet, did not play (0 pts). Not in auction player pool."
+    },
+    {
+      "player_id": 759817,
+      "player_name": "Miro Muheim",
+      "team_id": 6717,
+      "team_name": "Switzerland",
+      "position": "Midfielder",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/759817/miro-muheim",
+      "reason": "late_callup",
+      "first_seen": "2026-06-14",
+      "first_seen_match": "Qatar vs Switzerland",
+      "notes": "Likely injury replacement; subbed on 89' vs Qatar (1 min, 0 pts). Not in auction player pool."
+    }
+  ]
+}
