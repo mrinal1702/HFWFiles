@@ -47,6 +47,7 @@ class ForwardWeights(TypedDict, total=False):
     goals: float
     assists: float
 
+    penalties_won: float
     penalty_miss: float
     red_card: float
 
@@ -60,13 +61,12 @@ class ForwardFormulas(TypedDict, total=False):
 FORWARDS_WEIGHTS: ForwardWeights = {
     # Duels / defending
     "aerial_duels_won": 1.4,
-    "aerial_duels_lost": 0.4,
+    "aerial_duels_lost": 0.0,  # forwards: no reward or penalty for lost aerials
     "tackles_won": 2.6,
     "last_man_tackle": 3.0,
     "clearance_off_the_line": 3.0,
-    # Same weight for failed tackle proxy and times dribbled past
+    # Same weight for failed tackle proxy (dribbled_past → tackles_lost column)
     "tackles_lost": -1.0,
-    "dribbled_past": -1.0,
     "interceptions": 2.7,
 
     # Clearances (combine with headed to avoid double counting)
@@ -103,6 +103,7 @@ FORWARDS_WEIGHTS: ForwardWeights = {
     "assists": 8.0,
 
     # Cards / penalties (same as defenders)
+    "penalties_won": 5.0,
     "penalty_miss": -5.0,
     "red_card": -4.0,
 }
@@ -154,6 +155,7 @@ FORWARDS_STAT_KEYS: dict[str, str] = {
     "goals": "goals",
     "assists": "assists",
 
+    "penalties_won": "penalties_won",
     "penalty_miss": "missed_penalty",
     "red_card": "red_cards",
 
@@ -178,7 +180,9 @@ FORWARDS_SCORING: dict[str, Any] = {
         "Clearances apply to `clearances_total` (clearances + headed_clearance) once. "
         "Tackles lost uses the existing proxy column `tackles_lost` (ground duels lost). "
         "Dribbled_past uses `dribbled_past` and shares the same -1 weight per your rule. "
-        "Woodwork uses the per-player `woodwork` column (only present when the JSON provides it)."
+        "Woodwork uses the per-player `woodwork` column (only present when the JSON provides it). "
+        "penalties_won: +5 each (all roles; not tied to conversion). "
+        "aerial_duels_lost: 0 for forwards (2026-06)."
     ),
 }
 

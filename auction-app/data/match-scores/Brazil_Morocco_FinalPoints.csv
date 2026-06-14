@@ -1,33 +1,33 @@
 player_name,player_id,team_name,position,stats_score,endowment_score,final_score
-Gabriel,795179,Brazil,defender,32.56,5.0,38
-Douglas Santos,346000,Brazil,defender,31.250000000000004,5.0,36
-Ismael Saibari,1180288,Morocco,forward,30.833333333333336,3.0,34
-Lucas Paquetá,766435,Brazil,midfielder,28.627333333333333,5.0,34
+Douglas Santos,346000,Brazil,defender,34.45,5.0,39
+Gabriel,795179,Brazil,defender,34.16,5.0,39
+Lucas Paquetá,766435,Brazil,midfielder,32.827333333333335,5.0,38
+Achraf Hakimi,770881,Morocco,defender,31.98,5.0,37
+Ismael Saibari,1180288,Morocco,forward,32.833333333333336,3.0,36
+Ayyoub Bouaddi,1561552,Morocco,midfielder,29.93,5.0,35
+Noussair Mazraoui,775539,Morocco,defender,29.56666666666667,5.0,35
 Marquinhos,267365,Brazil,defender,28.270000000000003,5.0,33
-Bilal El Khannouss,1340895,Morocco,midfielder,27.02266666666667,5.0,32
-Ayyoub Bouaddi,1561552,Morocco,midfielder,26.93,5.0,32
-Neil El Aynaoui,1274060,Morocco,midfielder,24.978,5.0,30
-Azzedine Ounahi,1073143,Morocco,midfielder,23.91866666666667,5.0,29
+Bilal El Khannouss,1340895,Morocco,midfielder,28.22266666666667,5.0,33
+Neil El Aynaoui,1274060,Morocco,midfielder,27.978,5.0,33
+Azzedine Ounahi,1073143,Morocco,midfielder,26.318666666666672,5.0,31
+Bruno Guimarães,850354,Brazil,midfielder,25.762666666666668,5.0,31
+Vinícius Júnior,846033,Brazil,forward,27.508333333333333,3.0,31
+Brahim Díaz,750027,Morocco,forward,26.083333333333336,3.0,29
 Chadi Riad,1187506,Morocco,defender,23.22,5.0,28
-Bruno Guimarães,850354,Brazil,midfielder,22.162666666666667,5.0,27
-Noussair Mazraoui,775539,Morocco,defender,21.566666666666663,5.0,27
-Brahim Díaz,750027,Morocco,forward,20.083333333333336,3.0,23
-Achraf Hakimi,770881,Morocco,defender,17.580000000000005,5.0,23
-Casemiro,208494,Brazil,midfielder,15.958,5.0,21
+Raphinha,696679,Brazil,forward,21.70833333333333,3.0,25
+Casemiro,208494,Brazil,midfielder,19.558,5.0,25
 Issa Diop,696443,Morocco,defender,15.0,5.0,20
-Vinícius Júnior,846033,Brazil,forward,16.508333333333333,3.0,20
-Raphinha,696679,Brazil,forward,13.708333333333334,3.0,17
-Danilo,208077,Brazil,defender,11.1,5.0,16
-Igor Thiago,1302005,Brazil,forward,10.275,3.0,13
-Roger Ibañez,862538,Brazil,defender,6.840000000000001,5.0,12
-Fabinho,359188,Brazil,midfielder,8.64,2.5,11
+Roger Ibañez,862538,Brazil,defender,14.84,5.0,20
+Danilo,208077,Brazil,defender,12.7,5.0,18
+Igor Thiago,1302005,Brazil,forward,14.275,3.0,17
+Fabinho,359188,Brazil,midfielder,10.44,2.5,13
 Samir El Mourabet,1598170,Morocco,midfielder,7.309333333333332,2.5,10
+Luiz Henrique,1176214,Brazil,forward,12.208333333333334,-2.5,10
 Danilo,1181700,Brazil,midfielder,6.399333333333334,2.5,9
-Luiz Henrique,1176214,Brazil,forward,11.208333333333334,-2.5,9
-Ayoube Amaimouni-Echghouyab,1680173,Morocco,forward,9.775,-2.5,7
-Anass Salah-Eddine,1050838,Morocco,defender,2.013333333333333,5.0,7
-Matheus Cunha,863098,Brazil,forward,8.25,-2.5,6
-Chemsdine Talbi,1368654,Morocco,forward,8.183333333333334,-2.5,6
+Matheus Cunha,863098,Brazil,forward,11.25,-2.5,9
+Anass Salah-Eddine,1050838,Morocco,defender,3.6133333333333337,5.0,9
+Ayoube Amaimouni-Echghouyab,1680173,Morocco,forward,10.775,-2.5,8
+Chemsdine Talbi,1368654,Morocco,forward,9.183333333333334,-2.5,7
 Soufiane Rahimi,988749,Morocco,forward,7.966666666666667,-2.5,5
 Alex Sandro,157865,Brazil,defender,0.0,0.0,0
 Léo Pereira,523801,Brazil,defender,0.0,0.0,0

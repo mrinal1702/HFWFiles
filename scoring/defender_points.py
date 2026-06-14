@@ -46,6 +46,7 @@ class DefenderWeights(TypedDict, total=False):
     own_goals: float
     goals: float
     assists: float
+    penalties_won: float
     penalty_miss: float  # same as missed_penalty column / `missed_penalty` stat key
     red_card: float
 
@@ -74,8 +75,7 @@ DEFENDER_WEIGHTS: DefenderWeights = {
     "clearance_off_the_line": 3.0,
     # Proxy: total − value on `ground_duels_won` (no separate tackles-lost in API)
     "tackles_lost": -1.6,
-    # Times beaten by an opponent dribble (defensive) — same weight as tackles_lost
-    "dribbled_past": -1.6,
+    # Times beaten by an opponent dribble — scored via tackles_lost (same column value)
     "interceptions": 2.7,
     # One combined line: points += clearances_weight * (clearances + headed_clearance)
     "clearances": 1.1,
@@ -101,6 +101,7 @@ DEFENDER_WEIGHTS: DefenderWeights = {
     "own_goals": -3.0,
     "goals": 10.0,
     "assists": 8.0,
+    "penalties_won": 5.0,
     "penalty_miss": -5.0,
     "red_card": -4.0,
 }
@@ -148,6 +149,7 @@ DEFENDER_STAT_KEYS: dict[str, str] = {
     # Outcomes
     "goals": "goals",
     "assists": "assists",
+    "penalties_won": "penalties_won",
     "caught_offside": "caught_offside",
     "own_goals": "own_goals",
     "errors_led_to_goal": "errors_led_to_goal",

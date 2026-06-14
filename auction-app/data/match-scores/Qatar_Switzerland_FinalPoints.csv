@@ -1,33 +1,33 @@
 player_name,player_id,team_name,position,stats_score,endowment_score,final_score
-Rubén Vargas,860752,Switzerland,forward,41.13333333333333,3.0,44
-Breel Embolo,527103,Switzerland,forward,38.6,3.0,42
-Ricardo Rodríguez,115591,Switzerland,defender,28.866666666666674,10.0,39
-Nico Elvedi,517346,Switzerland,defender,32.330000000000005,5.0,37
-Manuel Akanji,521318,Switzerland,defender,30.72,5.0,36
-Denis Zakaria,598355,Switzerland,midfielder,30.646,5.0,36
+Rubén Vargas,860752,Switzerland,forward,43.13333333333334,3.0,46
+Breel Embolo,527103,Switzerland,forward,41.6,3.0,45
+Ricardo Rodríguez,115591,Switzerland,defender,32.06666666666667,10.0,42
+Nico Elvedi,517346,Switzerland,defender,35.53,5.0,41
+Denis Zakaria,598355,Switzerland,midfielder,32.446,5.0,37
+Manuel Akanji,521318,Switzerland,defender,32.32000000000001,5.0,37
+Boualem Khoukhi,308921,Qatar,defender,31.22,5.0,36
+Pedro Miguel,734637,Qatar,defender,28.26,5.0,33
 Issa Laye,1839745,Qatar,defender,27.67,5.0,33
-Boualem Khoukhi,308921,Qatar,defender,26.42,5.0,31
 Michel Aebischer,792756,Switzerland,midfielder,23.21066666666667,7.0,30
-Pedro Miguel,734637,Qatar,defender,25.06000000000001,5.0,30
-Granit Xhaka,207236,Switzerland,midfielder,23.84,5.0,29
-Remo Freuler,201704,Switzerland,midfielder,17.332666666666668,7.0,24
-Dan Ndoye,1022649,Switzerland,forward,19.03333333333333,3.0,22
-Homam Elamin,937414,Qatar,defender,16.020000000000003,5.0,21
-Akram Afif,613792,Qatar,forward,17.066666666666663,3.0,20
+Granit Xhaka,207236,Switzerland,midfielder,24.44,5.0,29
+Remo Freuler,201704,Switzerland,midfielder,18.532666666666668,7.0,26
+Dan Ndoye,1022649,Switzerland,forward,21.03333333333333,3.0,24
+Homam Elamin,937414,Qatar,defender,17.62,5.0,23
+Akram Afif,613792,Qatar,forward,19.066666666666663,3.0,22
+Yusuf Abdurisag,1053987,Qatar,forward,20.71666666666667,0.0,21
 Ahmed Fathi,898424,Qatar,midfielder,15.426,4.5,20
-Yusuf Abdurisag,1053987,Qatar,forward,19.71666666666667,0.0,20
-Assim Madibo,615414,Qatar,midfielder,11.133333333333336,3.0,14
-Jassem Gaber,1195865,Qatar,midfielder,10.514,3.0,14
+Edmílson Junior,365245,Qatar,forward,17.224999999999998,0.0,17
+Jassem Gaber,1195865,Qatar,midfielder,12.914,3.0,16
+Assim Madibo,615414,Qatar,midfielder,12.333333333333334,3.0,15
 Karim Boudiaf,309153,Qatar,midfielder,8.456,4.5,13
 Ahmed Alaaeldin,264096,Qatar,forward,12.05,0.5,13
-Edmílson Junior,365245,Qatar,forward,11.225,0.0,11
-Zeki Amdouni,1067168,Switzerland,forward,12.883333333333333,-2.5,10
-Mohamed Al Mannai,1553870,Qatar,midfielder,4.080666666666667,4.5,9
-Ayoub Al Oui,1432180,Qatar,defender,1.7599999999999991,5.0,7
-Fabian Rieder,1161211,Switzerland,midfielder,5.703333333333333,0.5,6
+Ayoub Al Oui,1432180,Qatar,defender,6.5600000000000005,5.0,12
+Zeki Amdouni,1067168,Switzerland,forward,13.883333333333333,-2.5,11
+Mohamed Al Mannai,1553870,Qatar,midfielder,5.280666666666666,4.5,10
+Fabian Rieder,1161211,Switzerland,midfielder,6.303333333333333,0.5,7
 Hassan Al Haidos,117539,Qatar,forward,5.108333333333333,0.5,6
-Ardon Jashari,1163219,Switzerland,midfielder,2.541333333333333,0.5,3
-Johan Manzambi,1520063,Switzerland,midfielder,0.0093333333333339,0.5,1
+Ardon Jashari,1163219,Switzerland,midfielder,3.1413333333333333,0.5,4
+Johan Manzambi,1520063,Switzerland,midfielder,3.009333333333333,0.5,4
 Lucas Mendes,149583,Qatar,defender,0.0,0.0,0
 Sultan Al Brake,644014,Qatar,defender,0.0,0.0,0
 Eray Cömert,705484,Switzerland,defender,0.0,0.0,0

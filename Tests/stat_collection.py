@@ -15,13 +15,18 @@ from pathlib import Path
 import pandas as pd
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
+_TESTS_DIR = Path(__file__).resolve().parent
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
+if str(_TESTS_DIR) not in sys.path:
+    sys.path.insert(0, str(_TESTS_DIR))
 
 try:
     from scoring.defender_points import STATS_STILL_MISSING_OR_EXTERNAL
 except ImportError:
     STATS_STILL_MISSING_OR_EXTERNAL = ()
+
+from position_roles import lineup_usual_position_by_player, role_override_by_player
 
 # --- Config ---
 TESTS_DIR = Path(__file__).resolve().parent
@@ -61,6 +66,7 @@ KEY_WOODWORK = "shots_woodwork"
 KEY_ACCURATE_CROSSES = "accurate_crosses"
 KEY_LONG_BALLS_ACCURATE = "long_balls_accurate"
 KEY_MISSED_PENALTY = "missed_penalty"
+KEY_PENALTIES_WON = "penalties_won"
 KEY_DRIBBLES_SUCCEEDED = "dribbles_succeeded"
 
 def own_goal_count_by_player(data: dict) -> dict[int, int]:
@@ -114,53 +120,6 @@ def _input_path() -> Path:
     if env:
         return Path(env)
     return DEFAULT_JSON
-
-
-def lineup_usual_position_by_player(content: dict) -> dict[int, int]:
-    """Map player id -> usualPlayingPositionId (0–3) from lineup starters/subs."""
-    out: dict[int, int] = {}
-    lineup = content.get("lineup") or {}
-    for side in ("homeTeam", "awayTeam"):
-        team = lineup.get(side) or {}
-        for bucket in ("starters", "subs"):
-            for p in team.get(bucket) or []:
-                if not isinstance(p, dict):
-                    continue
-                pid = p.get("id")
-                up = p.get("usualPlayingPositionId")
-                if pid is None or up is None:
-                    continue
-                out[int(pid)] = int(up)
-    return out
-
-
-def role_override_by_player(content: dict) -> dict[int, int]:
-    """
-    Optional position override from matchFacts.topPlayers.positionLabel.key:
-    - rightwinger_short / leftwinger_short -> midfielder (2)
-    - striker_short -> forward (3)
-    """
-    out: dict[int, int] = {}
-    top = (content.get("matchFacts") or {}).get("topPlayers") or {}
-    keys_to_mid = {"rightwinger_short", "leftwinger_short"}
-    keys_to_fwd = {"striker_short"}
-    for bucket in ("homeTopPlayers", "awayTopPlayers"):
-        for p in top.get(bucket) or []:
-            if not isinstance(p, dict):
-                continue
-            pid = p.get("playerId")
-            if pid is None:
-                continue
-            try:
-                pid_i = int(pid)
-            except (TypeError, ValueError):
-                continue
-            label_key = ((p.get("positionLabel") or {}).get("key") or "").strip().lower()
-            if label_key in keys_to_mid:
-                out[pid_i] = 2
-            elif label_key in keys_to_fwd:
-                out[pid_i] = 3
-    return out
 
 
 def red_card_count_by_player(data: dict) -> dict[int, int]:
@@ -316,7 +275,7 @@ def row_from_player(
     if pos not in (1, 2, 3):
         return None
 
-    # Optional override for winger/striker labeling from topPlayers
+    # Optional override for winger/striker labeling from topPlayers (see position_roles.py)
     pos = role_overrides.get(pid, pos)
 
     m = extract_stat_map(pdata)
@@ -341,7 +300,7 @@ def row_from_player(
         "tackles": gv(m, KEY_TACKLES),
         "last_man_tackle": gv_or_zero(m, KEY_LAST_MAN_TACKLE),
         "clearance_off_the_line": gv_or_zero(m, KEY_CLEARANCE_OFF_THE_LINE),
-        "tackles_lost": gdl,
+        "tackles_lost": gv_or_zero(m, KEY_DRIBBLED_PAST),
         "blocks": gv(m, KEY_BLOCKS),
         "clearances": gv(m, KEY_CLEARANCES),
         "headed_clearance": gv(m, KEY_HEADED_CLEARANCE),
@@ -363,6 +322,7 @@ def row_from_player(
         "long_balls_completed": gv_or_zero(m, KEY_LONG_BALLS_ACCURATE),
         "long_balls_attempted": gtotal_or_zero(m, KEY_LONG_BALLS_ACCURATE),
         "missed_penalty": int(gv_or_zero(m, KEY_MISSED_PENALTY)),
+        "penalties_won": int(gv_or_zero(m, KEY_PENALTIES_WON)),
         "own_goals": int(own_goal_counts.get(pid, 0)),
         "woodwork": gv_or_zero(m, KEY_WOODWORK),
         "dribbles_successful": gv_or_zero(m, KEY_DRIBBLES_SUCCEEDED),

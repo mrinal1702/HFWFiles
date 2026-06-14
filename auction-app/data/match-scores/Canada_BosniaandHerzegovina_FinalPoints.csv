@@ -1,33 +1,33 @@
 player_name,player_id,team_name,position,stats_score,endowment_score,final_score
-Nikola Katic,725655,Bosnia and Herzegovina,defender,62.95000000000001,5.0,68
-Tarik Muharemovic,1250485,Bosnia and Herzegovina,defender,55.7,5.0,61
-Sead Kolasinac,304345,Bosnia and Herzegovina,defender,37.53,5.0,43
-Jovo Lukic,1174844,Bosnia and Herzegovina,forward,38.78333333333333,3.0,42
-Ivan Basic,1179875,Bosnia and Herzegovina,midfielder,33.044666666666664,7.0,40
+Nikola Katic,725655,Bosnia and Herzegovina,defender,69.35000000000001,5.0,74
+Tarik Muharemovic,1250485,Bosnia and Herzegovina,defender,57.3,5.0,62
+Sead Kolasinac,304345,Bosnia and Herzegovina,defender,42.33,5.0,47
+Jovo Lukic,1174844,Bosnia and Herzegovina,forward,41.78333333333333,3.0,45
+Ivan Basic,1179875,Bosnia and Herzegovina,midfielder,34.24466666666666,7.0,41
 Richie Laryea,729506,Canada,defender,33.8,5.0,39
+Luc De Fougerolles,1399943,Canada,defender,30.9,5.0,36
+Ermedin Demirovic,840241,Bosnia and Herzegovina,forward,30.275,3.0,33
+Stephen Eustaquio,816223,Canada,midfielder,28.180666666666667,5.0,33
 Derek Cornelius,847629,Canada,defender,28.180000000000003,5.0,33
-Luc De Fougerolles,1399943,Canada,defender,27.700000000000006,5.0,33
-Stephen Eustaquio,816223,Canada,midfielder,26.980666666666664,5.0,32
-Ermedin Demirovic,840241,Bosnia and Herzegovina,forward,24.475,3.0,27
-Cyle Larin,544312,Canada,forward,25.716666666666665,0.5,26
-Amar Dedic,958010,Bosnia and Herzegovina,defender,20.87,5.0,26
-Benjamin Tahirovic,1415104,Bosnia and Herzegovina,midfielder,20.344,5.0,25
-Alistair Johnston,1055426,Canada,defender,19.61,5.0,25
-Tani Oluwaseyi,1338740,Canada,forward,23.83333333333333,0.0,24
-Liam Millar,932308,Canada,forward,21.35833333333333,0.0,21
-Promise David,1252132,Canada,forward,13.933333333333335,0.5,14
-Jonathan David,939569,Canada,forward,14.216666666666669,0.0,14
-Amar Memic,1300385,Bosnia and Herzegovina,midfielder,6.288666666666668,7.0,13
-Ismaël Koné,1288119,Canada,midfielder,6.803999999999999,5.0,12
-Armin Gigovic,1057426,Bosnia and Herzegovina,midfielder,10.841333333333337,0.5,11
-Jacob Shaffelburg,1023943,Canada,forward,10.2,0.5,11
-Ali Ahmed,1359536,Canada,forward,7.733333333333332,0.5,8
-Esmir Bajraktarevic,1346860,Bosnia and Herzegovina,forward,4.133333333333333,3.0,7
+Amar Dedic,958010,Bosnia and Herzegovina,defender,27.27,5.0,32
+Alistair Johnston,1055426,Canada,defender,22.81,5.0,28
+Benjamin Tahirovic,1415104,Bosnia and Herzegovina,midfielder,21.544,5.0,27
+Cyle Larin,544312,Canada,forward,25.316666666666663,0.5,26
+Liam Millar,932308,Canada,forward,24.15833333333333,0.0,24
+Tani Oluwaseyi,1338740,Canada,forward,23.633333333333333,0.0,24
+Promise David,1252132,Canada,forward,18.133333333333333,0.5,19
+Amar Memic,1300385,Bosnia and Herzegovina,midfielder,9.288666666666668,7.0,16
+Ismaël Koné,1288119,Canada,midfielder,11.004,5.0,16
+Jonathan David,939569,Canada,forward,14.816666666666668,0.0,15
+Esmir Bajraktarevic,1346860,Bosnia and Herzegovina,forward,11.333333333333332,3.0,14
+Armin Gigovic,1057426,Bosnia and Herzegovina,midfielder,12.641333333333334,0.5,13
+Jacob Shaffelburg,1023943,Canada,forward,11.8,0.5,12
+Ali Ahmed,1359536,Canada,forward,10.333333333333334,0.5,11
+Samed Bazdar,1284492,Bosnia and Herzegovina,forward,9.366666666666667,-2.5,7
 Dzenis Burnic,660148,Bosnia and Herzegovina,midfielder,3.908,2.5,6
-Samed Bazdar,1284492,Bosnia and Herzegovina,forward,7.366666666666666,-2.5,5
-Kerim Alajbegovic,1684401,Bosnia and Herzegovina,forward,6.616666666666666,-2.5,4
-Ivan Sunjic,541551,Bosnia and Herzegovina,midfielder,2.833333333333333,0.5,3
-Tajon Buchanan,1026135,Canada,midfielder,-1.1066666666666674,3.0,2
+Kerim Alajbegovic,1684401,Bosnia and Herzegovina,forward,8.616666666666665,-2.5,6
+Tajon Buchanan,1026135,Canada,midfielder,1.8933333333333329,3.0,5
+Ivan Sunjic,541551,Bosnia and Herzegovina,midfielder,4.033333333333333,0.5,5
 Stjepan Radeljic,653982,Bosnia and Herzegovina,defender,0.0,0.0,0
 Alphonso Davies,751202,Canada,defender,0.0,0.0,0
 Alfie Jones,789598,Canada,defender,0.0,0.0,0

@@ -43,6 +43,7 @@ class MidfielderWeights(TypedDict, total=False):
     goals: float
     assists: float
 
+    penalties_won: float
     penalty_miss: float
     red_card: float
 
@@ -62,7 +63,6 @@ MIDFIELDER_WEIGHTS: MidfielderWeights = {
     "clearance_off_the_line": 3.0,
     # Tackles lost and/or times dribbled past are both -0.6
     "tackles_lost": -0.6,
-    "dribbled_past": -0.6,
     "interceptions": 2.5,
     "clearances": 1.1,  # applied to clearances_total (clearances + headed_clearance)
     # Possession/pressure consequences
@@ -97,6 +97,7 @@ MIDFIELDER_WEIGHTS: MidfielderWeights = {
     "assists": 8.0,
 
     # Cards / penalties
+    "penalties_won": 5.0,
     "penalty_miss": -5.0,
     "red_card": -4.0,
 }
@@ -139,6 +140,7 @@ MIDFIELDER_STAT_KEYS: dict[str, str] = {
     "woodwork": "woodwork",
     "goals": "goals",
     "assists": "assists",
+    "penalties_won": "penalties_won",
     "penalty_miss": "missed_penalty",
     "red_card": "red_cards",
     # Formulas inputs
