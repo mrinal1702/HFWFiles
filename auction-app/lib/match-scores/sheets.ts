@@ -62,6 +62,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("Netherlands_Japan_FinalPoints.csv"),
   },
+  {
+    slug: "ivory-coast-ecuador",
+    title: "Ivory Coast vs Ecuador",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("IvoryCoast_Ecuador_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
