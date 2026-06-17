@@ -74,6 +74,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("Sweden_Tunisia_FinalPoints.csv"),
   },
+  {
+    slug: "cape-verde-spain",
+    title: "Cape Verde vs Spain",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("Spain_CapeVerde_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
