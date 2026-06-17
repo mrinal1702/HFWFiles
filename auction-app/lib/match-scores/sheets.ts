@@ -86,6 +86,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("Belgium_Egypt_FinalPoints.csv"),
   },
+  {
+    slug: "saudi-arabia-uruguay",
+    title: "Saudi Arabia vs Uruguay",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("SaudiArabia_Uruguay_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
