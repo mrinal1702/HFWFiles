@@ -116,6 +116,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("Argentina_Algeria_FinalPoints.csv"),
   },
+  {
+    slug: "austria-jordan",
+    title: "Austria vs Jordan",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("Austria_Jordan_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
