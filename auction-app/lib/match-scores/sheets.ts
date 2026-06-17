@@ -104,6 +104,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("France_Senegal_FinalPoints.csv"),
   },
+  {
+    slug: "iraq-norway",
+    title: "Iraq vs Norway",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("Iraq_Norway_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
