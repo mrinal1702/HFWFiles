@@ -92,6 +92,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("SaudiArabia_Uruguay_FinalPoints.csv"),
   },
+  {
+    slug: "iran-new-zealand",
+    title: "Iran vs New Zealand",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("Iran_NewZealand_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
