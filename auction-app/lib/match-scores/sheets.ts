@@ -80,6 +80,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("Spain_CapeVerde_FinalPoints.csv"),
   },
+  {
+    slug: "belgium-egypt",
+    title: "Belgium vs Egypt",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("Belgium_Egypt_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
