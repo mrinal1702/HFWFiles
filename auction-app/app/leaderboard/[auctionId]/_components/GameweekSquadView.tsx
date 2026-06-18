@@ -139,50 +139,30 @@ function SquadDisplay({ players, formation }: { players: GwSquadPlayer[]; format
     );
   }
 
-  // No Best XI data yet — group by listed position
-  type SectionId = "gk" | "def" | "mid" | "fwd" | "other";
-  const SECTION_ORDER: Array<{ id: SectionId; label: string }> = [
-    { id: "gk", label: "Goalkeepers" },
-    { id: "def", label: "Defenders" },
-    { id: "mid", label: "Midfielders" },
-    { id: "fwd", label: "Forwards" },
-    { id: "other", label: "Other" },
-  ];
-
-  function sectionForPosition(pos: string | null): SectionId {
-    const label = formatListedPosition(pos);
-    if (label === "GK") return "gk";
-    if (label === "DEF") return "def";
-    if (label === "MID") return "mid";
-    if (label === "FWD") return "fwd";
-    return "other";
-  }
-
-  const grouped = SECTION_ORDER.map((section) => ({
-    ...section,
-    rows: players.filter((p) => sectionForPosition(p.position) === section.id),
-  })).filter((s) => s.rows.length > 0);
+  // No Best XI data yet — single flat squad list
+  const sorted = [...players].sort((a, b) => {
+    const posOrder = (p: GwSquadPlayer) => {
+      const label = formatListedPosition(p.position);
+      if (label === "GK") return 0;
+      if (label === "DEF") return 1;
+      if (label === "MID") return 2;
+      if (label === "FWD") return 3;
+      return 4;
+    };
+    const pa = posOrder(a);
+    const pb = posOrder(b);
+    if (pa !== pb) return pa - pb;
+    return (a.playerName ?? "").localeCompare(b.playerName ?? "");
+  });
 
   return (
-    <div className="space-y-3">
-      {grouped.map((group) => (
-        <div
-          key={group.id}
-          className="overflow-hidden rounded-lg border border-slate-200 bg-white"
-        >
-          <div className="border-b border-slate-200 bg-slate-50 px-3 py-1.5">
-            <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-              {group.label} ({group.rows.length})
-            </span>
-          </div>
-          <SquadColumnHeader showRole />
-          <div className="divide-y divide-slate-100">
-            {group.rows.map((p) => (
-              <PlayerRow key={p.playerId} player={p} showRole />
-            ))}
-          </div>
-        </div>
-      ))}
+    <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+      <SquadColumnHeader showRole={false} />
+      <div className="divide-y divide-slate-100">
+        {sorted.map((p) => (
+          <PlayerRow key={p.playerId} player={p} showRole={false} />
+        ))}
+      </div>
     </div>
   );
 }
@@ -240,18 +220,9 @@ export function GameweekSquadView({
             Live squad
           </span>
         )}
-        {scoresUploaded ? (
+        {scoresUploaded && hasBestXiData && (
           <span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-800">
-            {hasBestXiData ? "Match points live" : "Player points updating"}
-          </span>
-        ) : (
-          <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-500">
-            Scores not yet uploaded
-          </span>
-        )}
-        {!hasBestXiData && squadsAreLocked && (
-          <span className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-medium text-amber-800">
-            Formation pending — all player points shown
+            Match points live
           </span>
         )}
       </div>
