@@ -18,6 +18,8 @@ In June 2026 we fixed FotMob **position mapping** (LM/RM → MID, `positionId` 8
 
 **Prevention now in repo:** shared `Tests/final_points.py`, `build_keeper_unit_rows()` in `calculate_keeper_points.py`, validation before every Supabase upsert, and `Tests/validate_final_points.py` for agents to run manually.
 
+**GW1 freeze (Jun 2026):** Expanded topPlayers map (CB/LB/RB/CM/CAM/CDM) is in `position_roles.py` for **GW2+** only. Do not batch-rescore GW1. See [`POSITION_MAP_POLICY.md`](./POSITION_MAP_POLICY.md).
+
 ---
 
 ## Incident timeline

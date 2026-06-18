@@ -72,6 +72,21 @@ def build_final_points(match_data: dict) -> pd.DataFrame:
     return merge_outfield_and_keepers(outfield, keeper_units, validate=True)
 
 
+GW1_FROZEN_MATCH_DIRS = frozenset({
+    "world cup 2026",  # GW1 group stage — do not batch-rescore (see docs/POSITION_MAP_POLICY.md)
+})
+
+
+def _warn_if_gw1_frozen_batch(match_dir: Path) -> None:
+    name = match_dir.name.strip().lower()
+    if name in GW1_FROZEN_MATCH_DIRS:
+        print(
+            "WARNING: Batch-rescoring World Cup 2026 affects GW1 matches. "
+            "GW1 scores are FROZEN — do not run unless the commissioner explicitly "
+            "requests a full GW1 rescore. See docs/POSITION_MAP_POLICY.md\n"
+        )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Regenerate FinalPoints CSVs from match JSON.")
     parser.add_argument(
@@ -88,6 +103,7 @@ def main() -> None:
     args = parser.parse_args()
 
     match_dir = args.matches_dir.resolve()
+    _warn_if_gw1_frozen_batch(match_dir)
     json_files = sorted(
         p
         for p in match_dir.glob("*.json")

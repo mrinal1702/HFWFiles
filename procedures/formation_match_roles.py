@@ -58,4 +58,5 @@ __all__ = [
     "outfield_roles_by_player_for_match",
     "resolve_outfield_position_id_for_scoring",
     "role_override_by_player",
+    "ALL_HANDLED_TOPPLAYER_KEYS",
 ]

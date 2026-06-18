@@ -6,7 +6,7 @@
 **Live app:** https://hfwauction.vercel.app
 
 **Related docs (deeper reference, not required for every match):**
-- [`AGENT_SCORING_LESSONS_GW1_RESCORE.md`](./AGENT_SCORING_LESSONS_GW1_RESCORE.md) — **GW1 rescore incident, keeper-zero bug, agent pitfalls**
+- [`POSITION_MAP_POLICY.md`](./POSITION_MAP_POLICY.md) — **GW1 frozen; GW2+ topPlayers map**
 - [`MAIN_PIPELINE_FUNCTIONS.md`](./MAIN_PIPELINE_FUNCTIONS.md) — scoring pipeline internals
 - [`STAT_COLLECTION_AND_WORKFLOW.md`](./STAT_COLLECTION_AND_WORKFLOW.md) — stat keys and derived fields
 - [`SCORING_OPERATIONS_RUNBOOK.md`](./SCORING_OPERATIONS_RUNBOOK.md) — older CL-style GW CSV path (`generate_gameweek_scores.py`)
@@ -30,7 +30,8 @@
 2. **Do NOT** regenerate `Player_List/master_player_list.csv` unless explicitly asked.
 3. **Do NOT** use `npm run procedure:publish-active-gw` for World Cup uploads — it does **not** remap keeper units correctly. Use **`npm run upsert:player-scores`** instead (see Task 4).
 4. **Do NOT** amend past gameweek scores in Supabase unless the commissioner explicitly asks to re-publish a GW.
-5. Late call-ups: add rows manually + `scripts/add-players-to-pool.mjs` — not covered here unless requested.
+5. **GW1 group-stage scores are FROZEN** — do not batch-rescore `Matches_Raw/World Cup 2026` or re-upsert all GW1 FinalPoints. The expanded topPlayers map in `position_roles.py` applies from **GW2+** only. See [`POSITION_MAP_POLICY.md`](./POSITION_MAP_POLICY.md).
+6. Late call-ups: add rows manually + `scripts/add-players-to-pool.mjs` — not covered here unless requested.
 
 **Credentials:** `auction-app/.env.local` must contain `NEXT_PUBLIC_SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` for Supabase scripts.
 
@@ -56,7 +57,7 @@
 | `scoring/defender_points.py` | Defender weights |
 | `scoring/midfielder_points.py` | Midfielder weights |
 | `scoring/forward_points.py` | Forward weights (`aerial_duels_lost: 0`; `penalties_won: 5` since 2026-06) |
-| `Tests/position_roles.py` | Winger/striker role overrides per match |
+| `Tests/position_roles.py` | In-match role overrides — **GW2+ complete topPlayers map** (GW1 frozen) |
 
 ### Match outputs — World Cup 2026 folder
 

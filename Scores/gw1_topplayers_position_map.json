@@ -1,0 +1,43 @@
+{
+  "description": "FotMob matchFacts.topPlayers positionLabel.key → HFW counting role. GW2+ only; GW1 frozen.",
+  "applies_from_gw": 2,
+  "gw1_frozen": true,
+  "gw1_frozen_tag": "points/gw1-rescore-position-map",
+  "policy_doc": "docs/POSITION_MAP_POLICY.md",
+  "handled_keys": {
+    "defender_unconditional": [
+      "centerback_short",
+      "leftback_short",
+      "rightback_short"
+    ],
+    "defender_if_lineup_usual_is_def": [
+      "left_wing_back_short",
+      "right_wing_back_short"
+    ],
+    "midfielder_unconditional": [
+      "leftmidfielder_short",
+      "rightmidfielder_short",
+      "centermidfielder_short",
+      "centerdefensivemidfielder_short",
+      "centerattackingmidfielder_short"
+    ],
+    "forward_unconditional": [
+      "striker_short"
+    ],
+    "midfielder_if_granular_position_id_in": {
+      "keys": ["leftwinger_short", "rightwinger_short"],
+      "position_ids": [83, 87]
+    }
+  },
+  "granular_position_id_rules": {
+    "always_midfield": [85]
+  },
+  "gw1_seen_keys_all_handled": true,
+  "gw1_remaining_edge_cases": {
+    "winger_label_granular_not_83_or_87": {
+      "position_ids": [103, 107],
+      "note": "FotMob wide forward slots; stay on lineup usual (typically FWD). Examples: Pulisic, Summerville, Afif."
+    }
+  },
+  "code": "Tests/position_roles.py"
+}
