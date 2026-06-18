@@ -19,6 +19,8 @@ import { fileURLToPath } from "node:url";
 import { createClient } from "@supabase/supabase-js";
 
 import { isKeeperUnitRow, resolveScorePlayerId } from "./lib/keeper-player-id.mjs";
+import { mergeMissingIntoPendingPool, PENDING_POOL_PATH } from "./lib/pending-pool-additions.mjs";
+import { validateFinalPointsRows } from "./lib/validate-final-points.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(__dirname, "..");
@@ -78,6 +80,8 @@ function parseFinalPointsFile(filePath) {
 
     const player_name = cols[0];
     const position = cols[3];
+    const stats_score = Number(cols[4]);
+    const endowment_score = Number(cols[5]);
     const player_id = resolveScorePlayerId({
       player_id: rawPlayerId,
       player_name,
@@ -91,6 +95,8 @@ function parseFinalPointsFile(filePath) {
       player_name,
       team_name: cols[2],
       position,
+      stats_score,
+      endowment_score,
       source_file: path.basename(filePath),
       is_keeper_unit: isKeeperUnitRow({ player_name, position }),
     });
@@ -133,6 +139,8 @@ async function main() {
   }
 
   if (!parsed.length) throw new Error("No score rows parsed from CSV input.");
+
+  validateFinalPointsRows(parsed);
 
   // Last file wins if the same player appears in multiple inputs (amendment rerun).
   const byPlayer = new Map();
@@ -227,6 +235,13 @@ async function main() {
       console.log(`  ${m.player_id}  ${m.player_name}  (${m.team_name})  [${m.source_file}]`);
     }
     if (missing.length > 20) console.log(`  ... and ${missing.length - 20} more`);
+
+    const appended = mergeMissingIntoPendingPool(missing);
+    if (appended.length) {
+      console.log(
+        `Logged ${appended.length} new player(s) to pending pool list -> ${PENDING_POOL_PATH}`,
+      );
+    }
   }
 }
 

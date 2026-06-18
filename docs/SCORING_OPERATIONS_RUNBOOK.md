@@ -158,7 +158,9 @@ python "C:\Users\trive\HFWFiles\Tests\build_master_player_csv.py"
 - Stat / workflow reference: `C:\Users\trive\HFWFiles\docs\STAT_COLLECTION_AND_WORKFLOW.md`
 - Scoring modules: `C:\Users\trive\HFWFiles\scoring`
 - Calculators: `C:\Users\trive\HFWFiles\Tests`
-- GW1 batch rescore: `C:\Users\trive\HFWFiles\scripts\rescore_wc_gw1_finalpoints.py`
+- GW1 batch rescore: `C:\Users\trive\HFWFiles\scripts\rescore_finalpoints.py`
+- FinalPoints validation: `C:\Users\trive\HFWFiles\Tests\validate_final_points.py`
+- Agent incident reference: `C:\Users\trive\HFWFiles\docs\AGENT_SCORING_LESSONS_GW1_RESCORE.md`
 - Best XI compute / publish: `procedures/compute_auction_best_xi.py`, `auction-app/scripts/publish-best-xi-from-json.mjs`
 
 ---

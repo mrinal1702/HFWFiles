@@ -157,6 +157,19 @@ def pick_best_stat_gk_per_team(keepers_df: pd.DataFrame) -> pd.DataFrame:
     return pd.concat(out_rows, ignore_index=True)
 
 
+def build_keeper_unit_rows(keepers_endowed_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Collapse to one keeper unit row per team with total_points computed.
+
+    Used by KeeperPoints CSV export and FinalPoints merge — always call this
+    instead of pick_best_stat_gk_per_team() alone when building FinalPoints.
+    """
+    best = pick_best_stat_gk_per_team(keepers_endowed_df)
+    best = best.copy()
+    best["total_points"] = (best["stat_points_total"] + best["endowed_points"]).clip(lower=0.0)
+    return best
+
+
 def _write_csv(df: pd.DataFrame, path: Path) -> Path:
     try:
         df.to_csv(path, index=False, encoding="utf-8")
@@ -191,8 +204,7 @@ def main() -> None:
     keepers_endowed = compute_keeper_endowed_points(match_data, keepers_scored)
 
     # Apply rule: only best-stat GK gets endowment (stat points already computed for each GK)
-    best = pick_best_stat_gk_per_team(keepers_endowed)
-    best["total_points"] = best["stat_points_total"] + best["endowed_points"]
+    best = build_keeper_unit_rows(keepers_endowed)
 
     # Ensure readable column order
     cols = [

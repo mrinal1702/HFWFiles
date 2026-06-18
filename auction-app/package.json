@@ -23,6 +23,7 @@
     "setup:auction-gw": "node scripts/setup-auction-gw-state.mjs",
     "import:players": "node scripts/import-master-player-list.mjs",
     "upsert:player-scores": "node scripts/upsert-player-scores-from-finalpoints.mjs",
+    "validate:final-points": "python ../Tests/validate_final_points.py",
     "publish:best-xi": "node scripts/publish-best-xi-from-json.mjs",
     "test:deadlines": "node scripts/test-deadline-rules.mjs"
   },

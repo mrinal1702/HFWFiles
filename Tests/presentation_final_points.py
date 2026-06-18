@@ -32,6 +32,8 @@ from typing import Any
 
 import pandas as pd
 
+from final_points import merge_outfield_and_keepers
+
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 if str(_REPO_ROOT) not in sys.path:
@@ -72,53 +74,7 @@ def main() -> None:
     outfield = _safe_read_csv(outfield_path)
     keepers = _safe_read_csv(keepers_path)
 
-    # Outfield: rename into requested schema
-    out_keep_cols = {
-        "player_name": "player_name",
-        "player_id": "player_id",
-        "team_name": "team_name",
-        "role": "position",
-        "stat_points_total": "stats_score",
-        "endowed_points": "endowment_score",
-        "total_points": "final_score_raw",
-    }
-    out_final = outfield[list(out_keep_cols.keys())].rename(columns=out_keep_cols)
-
-    # Keepers: collapse the unit into one row per team
-    # Our keeper CSV already picks the best-stat GK per team, and endowed_points is team-level.
-    keepers = keepers.copy()
-    keepers["player_name"] = keepers["team_name"].astype(str) + " Keepers"
-    keepers["player_id"] = keepers["team_id"]
-    keepers["position"] = "goalkeeper"
-
-    keep_final = keepers[
-        ["player_name", "player_id", "team_name", "position", "stat_points_total", "endowed_points", "total_points"]
-    ].rename(
-        columns={
-            "stat_points_total": "stats_score",
-            "endowed_points": "endowment_score",
-            "total_points": "final_score_raw",
-        }
-    )
-
-    merged = pd.concat([out_final, keep_final], ignore_index=True)
-
-    # Round final score to nearest whole number; fantasy floor is 0 (no negative totals).
-    merged["final_score"] = merged["final_score_raw"].round().clip(lower=0).astype(int)
-    merged = merged.drop(columns=["final_score_raw"])
-
-    # final column order
-    merged = merged[
-        [
-            "player_name",
-            "player_id",
-            "team_name",
-            "position",
-            "stats_score",
-            "endowment_score",
-            "final_score",
-        ]
-    ]
+    merged = merge_outfield_and_keepers(outfield, keepers, validate=True)
 
     out_path = tests_dir / f"{base}_FinalPoints.csv"
     merged.to_csv(out_path, index=False, encoding="utf-8")
