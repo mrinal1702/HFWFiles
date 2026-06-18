@@ -19,8 +19,11 @@
     "seed:auction-lots": "node scripts/seed-auction-lots.mjs",
     "stack:auction": "node scripts/stack-test-auction.mjs",
     "replace:auction-users": "node scripts/replace-auction-users.mjs",
+    "setup:auction-squads": "node scripts/setup-auction-from-squads-csv.mjs",
+    "setup:auction-gw": "node scripts/setup-auction-gw-state.mjs",
     "import:players": "node scripts/import-master-player-list.mjs",
     "upsert:player-scores": "node scripts/upsert-player-scores-from-finalpoints.mjs",
+    "publish:best-xi": "node scripts/publish-best-xi-from-json.mjs",
     "test:deadlines": "node scripts/test-deadline-rules.mjs"
   },
   "dependencies": {
