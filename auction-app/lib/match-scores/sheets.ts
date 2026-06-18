@@ -134,6 +134,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("England_Croatia_FinalPoints.csv"),
   },
+  {
+    slug: "ghana-panama",
+    title: "Ghana vs Panama",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("Ghana_Panama_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
