@@ -1,0 +1,14 @@
+player_id,player_name,team,listed_position,match,match_file,lineup_usual,position_id,old_counting_role,new_counting_role,reason,in_master_list
+1478238,Ali Jasim,Iraq,Forward,Iraq vs Norway,Iraq_Vs_Norway.json,FWD,78,FWD,MID,topPlayers LM (leftmidfielder_short),True
+1028896,Ali Olwan,Jordan,Forward,Austria vs Jordan,Austria_Vs_Jordan.json,FWD,78,FWD,MID,topPlayers LM (leftmidfielder_short),True
+643635,Amir Murillo,Panama,Defender,Ghana vs Panama,Ghana_Vs_Panama.json,DEF,72,DEF,MID,topPlayers RM (rightmidfielder_short),True
+888966,César Blackman,Panama,Defender,Ghana vs Panama,Ghana_Vs_Panama.json,DEF,78,DEF,MID,topPlayers LM (leftmidfielder_short),True
+356406,John McGinn,Scotland,Forward,Haiti vs Scotland,Haiti_Vs_Scotland.json,FWD,78,FWD,MID,topPlayers LM (leftmidfielder_short),True
+845368,John Yeboah,Ecuador,Forward,IvoryCoast vs Ecuador,IvoryCoast_Vs_Ecuador.json,FWD,72,FWD,MID,topPlayers RM (rightmidfielder_short),True
+526827,Konrad Laimer,Austria,Defender,Austria vs Jordan,Austria_Vs_Jordan.json,DEF,85,DEF,MID,positionId=85,True
+1031656,Maxi Araújo,Uruguay,Defender,SaudiArabia vs Uruguay,SaudiArabia_Vs_Uruguay.json,DEF,78,DEF,MID,topPlayers LM (leftmidfielder_short),True
+442277,Miguel Almirón,Paraguay,Forward,USA vs Paraguay,USA_Vs_Paraguay.json,FWD,78,FWD,MID,topPlayers LM (leftmidfielder_short),True
+292462,Mohamed Salah,Egypt,Forward,Belgium vs Egypt,Belgium_Vs_Egypt.json,FWD,85,FWD,MID,positionId=85,True
+1073012,Mohammad Mohebi,Iran,Forward,Iran vs NewZealand,Iran_Vs_NewZealand.json,FWD,72,FWD,MID,topPlayers RM (rightmidfielder_short),True
+692984,Ousmane Dembélé,France,Forward,France vs Senegal,France_Vs_Senegal.json,FWD,85,FWD,MID,positionId=85,True
+1735453,Yan Diomande,Ivory Coast,Forward,IvoryCoast vs Ecuador,IvoryCoast_Vs_Ecuador.json,FWD,72,FWD,MID,topPlayers RM (rightmidfielder_short),True

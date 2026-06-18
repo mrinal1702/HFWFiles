@@ -103,8 +103,8 @@ def main() -> None:
 
     merged = pd.concat([out_final, keep_final], ignore_index=True)
 
-    # Round final score to nearest whole number
-    merged["final_score"] = merged["final_score_raw"].round().astype(int)
+    # Round final score to nearest whole number; fantasy floor is 0 (no negative totals).
+    merged["final_score"] = merged["final_score_raw"].round().clip(lower=0).astype(int)
     merged = merged.drop(columns=["final_score_raw"])
 
     # final column order

@@ -72,6 +72,19 @@ def _apply_scoring(df: pd.DataFrame, cfg: dict[str, Any], role: str) -> pd.DataF
         + out["stat_points_dispossessed_formula"]
         + out["stat_points_minutes"]
     )
+
+    # No minutes played => no stat points (avoids dispossessed "base" bonus for unused subs).
+    min_col = stat_keys.get("minutes_played", "minutes_played")
+    if min_col in out.columns:
+        played = out[min_col].apply(_safe_num) > 0
+        for col in (
+            "stat_points_weighted",
+            "stat_points_dispossessed_formula",
+            "stat_points_minutes",
+            "stat_points_total",
+        ):
+            out.loc[~played, col] = 0.0
+
     return out
 
 

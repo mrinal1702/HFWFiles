@@ -1,0 +1,8 @@
+player_id,player_name,match,old_role,new_role,old_stats,new_stats,old_endowment,new_endowment,old_final,new_final,delta
+292462,Mohamed Salah,Belgium vs Egypt,forward,midfielder,30.291666666666664,24.04,3.0,5.0,33,29,-4
+356406,John McGinn,Haiti vs Scotland,forward,midfielder,29.00833333333333,25.25,3.0,7.0,32,32,0
+1735453,Yan Diomande,IvoryCoast vs Ecuador,forward,midfielder,57.03333333333334,49.51,3.0,7.0,60,57,-3
+442277,Miguel Almirón,USA vs Paraguay,forward,midfielder,26.308333333333334,21.21,3.0,1.0,29,22,-7
+1031656,Maxi Araújo,SaudiArabia vs Uruguay,defender,midfielder,40.72,39.89,5.0,5.0,46,45,-1
+526827,Konrad Laimer,Austria vs Jordan,defender,midfielder,12.74,12.79,5.0,9.0,18,22,4
+692984,Ousmane Dembélé,France vs Senegal,forward,midfielder,15.85,10.99,3.0,7.0,19,18,-1

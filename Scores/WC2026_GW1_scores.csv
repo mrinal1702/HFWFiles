@@ -1,0 +1,193 @@
+player_id,player_name,team_id,team_name,score,gw_id
+725655,Nikola Katic,10106,Bosnia and Herzegovina,68,1
+1250485,Tarik Muharemovic,10106,Bosnia and Herzegovina,61,1
+304345,Sead Kolasinac,10106,Bosnia and Herzegovina,43,1
+1174844,Jovo Lukic,10106,Bosnia and Herzegovina,42,1
+1179875,Ivan Basic,10106,Bosnia and Herzegovina,40,1
+840241,Ermedin Demirovic,10106,Bosnia and Herzegovina,27,1
+90010106,Bosnia and Herzegovina Keepers,10106,Bosnia and Herzegovina,27,1
+958010,Amar Dedic,10106,Bosnia and Herzegovina,26,1
+1415104,Benjamin Tahirovic,10106,Bosnia and Herzegovina,25,1
+1300385,Amar Memic,10106,Bosnia and Herzegovina,13,1
+1057426,Armin Gigovic,10106,Bosnia and Herzegovina,11,1
+1346860,Esmir Bajraktarevic,10106,Bosnia and Herzegovina,7,1
+660148,Dzenis Burnic,10106,Bosnia and Herzegovina,6,1
+1284492,Samed Bazdar,10106,Bosnia and Herzegovina,5,1
+1684401,Kerim Alajbegovic,10106,Bosnia and Herzegovina,4,1
+541551,Ivan Sunjic,10106,Bosnia and Herzegovina,3,1
+653982,Stjepan Radeljic,10106,Bosnia and Herzegovina,0,1
+797797,Dennis Hadzikadunic,10106,Bosnia and Herzegovina,0,1
+857436,Nihad Mujakic,10106,Bosnia and Herzegovina,0,1
+1515122,Arjan Malic,10106,Bosnia and Herzegovina,0,1
+639558,Amir Hadziahmetovic,10106,Bosnia and Herzegovina,0,1
+1528815,Ermin Mahmic,10106,Bosnia and Herzegovina,0,1
+15403,Edin Dzeko,10106,Bosnia and Herzegovina,0,1
+388903,Haris Tabakovic,10106,Bosnia and Herzegovina,0,1
+729506,Richie Laryea,5810,Canada,39,1
+847629,Derek Cornelius,5810,Canada,33,1
+1399943,Luc De Fougerolles,5810,Canada,33,1
+816223,Stephen Eustaquio,5810,Canada,32,1
+90005810,Canada Keepers,5810,Canada,29,1
+544312,Cyle Larin,5810,Canada,26,1
+1055426,Alistair Johnston,5810,Canada,25,1
+1338740,Tani Oluwaseyi,5810,Canada,24,1
+932308,Liam Millar,5810,Canada,21,1
+1252132,Promise David,5810,Canada,14,1
+939569,Jonathan David,5810,Canada,14,1
+1288119,Ismaël Koné,5810,Canada,12,1
+1023943,Jacob Shaffelburg,5810,Canada,11,1
+1359536,Ali Ahmed,5810,Canada,8,1
+1026135,Tajon Buchanan,5810,Canada,2,1
+751202,Alphonso Davies,5810,Canada,0,1
+789598,Alfie Jones,5810,Canada,0,1
+1100258,Joel Waterman,5810,Canada,0,1
+1440009,Moïse Bombito,5810,Canada,0,1
+1494508,Niko Sigur,5810,Canada,0,1
+432605,Jonathan Osorio,5810,Canada,0,1
+943428,Mathieu Choinière,5810,Canada,0,1
+1216798,Nathan Saliba,5810,Canada,0,1
+1082106,Jayden Nelson,5810,Canada,0,1
+798029,Ladislav Krejcí,8496,Czech Republic,30,1
+90008496,Czech Republic Keepers,8496,Czech Republic,23,1
+791682,Lukás Provod,8496,Czech Republic,22,1
+1478281,Alexandr Sojka,8496,Czech Republic,21,1
+307317,Vladimír Coufal,8496,Czech Republic,18,1
+249063,Jaroslav Zeleny,8496,Czech Republic,18,1
+524437,Tomás Soucek,8496,Czech Republic,17,1
+1037539,Pavel Sulc,8496,Czech Republic,16,1
+540097,Patrik Schick,8496,Czech Republic,14,1
+1288146,Stepán Chaloupek,8496,Czech Republic,10,1
+523217,Tomás Chory,8496,Czech Republic,9,1
+1225995,Robin Hranác,8496,Czech Republic,7,1
+806551,Michal Sadílek,8496,Czech Republic,5,1
+988769,Mojmír Chytil,8496,Czech Republic,5,1
+969870,Adam Hlozek,8496,Czech Republic,5,1
+306168,Tomás Holes,8496,Czech Republic,0,1
+1085401,David Zima,8496,Czech Republic,0,1
+196311,Vladimír Darida,8496,Czech Republic,0,1
+883759,David Doudera,8496,Czech Republic,0,1
+1151313,Lukás Cerv,8496,Czech Republic,0,1
+1247323,David Jurásek,8496,Czech Republic,0,1
+1764021,Hugo Sochurek,8496,Czech Republic,0,1
+690332,Jan Kuchta,8496,Czech Republic,0,1
+1202885,Denis Visinsky,8496,Czech Republic,0,1
+623698,In-Beom Hwang,7804,Korea Republic,59,1
+940976,Kang-In Lee,7804,Korea Republic,49,1
+1232264,Gi-Hyuk Lee,7804,Korea Republic,43,1
+828159,Min-Jae Kim,7804,Korea Republic,37,1
+1107251,Tae-Seok Lee,7804,Korea Republic,34,1
+1232253,Han-Beom Lee,7804,Korea Republic,30,1
+90007804,Korea Republic Keepers,7804,Korea Republic,27,1
+1044299,Hyun-Gyu Oh,7804,Korea Republic,26,1
+523749,Jae-Sung Lee,7804,Korea Republic,25,1
+848102,Seung-Ho Paik,7804,Korea Republic,25,1
+1132818,Young-Woo Seol,7804,Korea Republic,19,1
+212867,Heung-Min Son,7804,Korea Republic,17,1
+1107283,Ji-Sung Eom,7804,Korea Republic,15,1
+620026,Hee-Chan Hwang,7804,Korea Republic,13,1
+925647,Jin-Seob Park,7804,Korea Republic,10,1
+622980,Jin-Gyu Kim,7804,Korea Republic,6,1
+828273,Moon-Hwan Kim,7804,Korea Republic,0,1
+1053477,Tae-Hyeon Kim,7804,Korea Republic,0,1
+1326507,Wi-Je Cho,7804,Korea Republic,0,1
+954131,Dong-Gyeong Lee,7804,Korea Republic,0,1
+1185902,Jens Castrop,7804,Korea Republic,0,1
+1386482,Jun-Ho Bae,7804,Korea Republic,0,1
+1026781,Gue-Sung Cho,7804,Korea Republic,0,1
+1232560,Hyun-Jun Yang,7804,Korea Republic,0,1
+720560,Julián Quiñones,6710,Mexico,56,1
+720737,Roberto Alvarado,6710,Mexico,48,1
+292313,Raul Jiménez,6710,Mexico,43,1
+971628,Érik Lira,6710,Mexico,42,1
+914103,Johan Vásquez,6710,Mexico,38,1
+1074586,Israel Reyes,6710,Mexico,37,1
+90006710,Mexico Keepers,6710,Mexico,33,1
+597976,Jesús Gallardo,6710,Mexico,32,1
+664644,César Montes,6710,Mexico,26,1
+895954,Álvaro Fidalgo,6710,Mexico,21,1
+1170238,Brian Gutiérrez,6710,Mexico,18,1
+527616,Luis Chávez,6710,Mexico,16,1
+783505,Edson Álvarez,6710,Mexico,11,1
+1670377,Gilberto Mora,6710,Mexico,10,1
+728365,Alexis Vega,6710,Mexico,3,1
+1456983,Armando González,6710,Mexico,2,1
+727586,Jorge Sánchez,6710,Mexico,0,1
+921174,Luis Romo,6710,Mexico,0,1
+1432212,Mateo Chávez,6710,Mexico,0,1
+559986,Orbelín Pineda,6710,Mexico,0,1
+1254394,Obed Vargas,6710,Mexico,0,1
+558539,Guillermo Martínez,6710,Mexico,0,1
+954092,Santiago Giménez,6710,Mexico,0,1
+977404,César Huerta,6710,Mexico,0,1
+1073742,Julio Enciso,6724,Paraguay,29,1
+442277,Miguel Almirón,6724,Paraguay,28,1
+1059490,Mauricio,6724,Paraguay,22,1
+751998,Omar Alderete,6724,Paraguay,20,1
+1354561,Diego Gómez,6724,Paraguay,19,1
+1133495,Juan Cáceres,6724,Paraguay,15,1
+1320444,Álex Arce,6724,Paraguay,15,1
+529625,Andrés Cubas,6724,Paraguay,15,1
+274392,Gustavo Gómez,6724,Paraguay,12,1
+90006724,Paraguay Keepers,6724,Paraguay,10,1
+497352,Gustavo Velázquez,6724,Paraguay,7,1
+474448,Antonio Sanabria,6724,Paraguay,6,1
+1252913,Damián Bobadilla,6724,Paraguay,4,1
+1132960,Ramón Sosa,6724,Paraguay,3,1
+600850,Alejandro Romero,6724,Paraguay,3,1
+466214,Júnior Alonso,6724,Paraguay,0,1
+307438,Fabián Balbuena,6724,Paraguay,0,1
+860890,José Canale,6724,Paraguay,0,1
+1736527,Alexandro Maidana,6724,Paraguay,0,1
+1075065,Braian Ojeda,6724,Paraguay,0,1
+1241957,Matías Galarza,6724,Paraguay,0,1
+425711,Gabriel Ávalos,6724,Paraguay,0,1
+1033279,Isidro Pitta,6724,Paraguay,0,1
+1347933,Gustavo Caballero,6724,Paraguay,0,1
+90006316,South Africa Keepers,6316,South Africa,32,1
+1600334,Ime Okon,6316,South Africa,25,1
+848361,Teboho Mokoena,6316,South Africa,20,1
+940010,Khuliso Mudau,6316,South Africa,19,1
+1719066,Mbekezeli Mbokazi,6316,South Africa,18,1
+1178629,Jayden Adams,6316,South Africa,13,1
+716819,Nkosinathi Sibisi,6316,South Africa,12,1
+1124424,Thalente Mbatha,6316,South Africa,8,1
+1137059,Evidence Makgopa,6316,South Africa,8,1
+1076668,Iqraam Rayners,6316,South Africa,7,1
+1054166,Oswin Appollis,6316,South Africa,6,1
+616179,Aubrey Maphosa Modiba,6316,South Africa,4,1
+881500,Lyle Foster,6316,South Africa,4,1
+1202481,Bradley Cross,6316,South Africa,0,1
+1451566,Kamogelo Sebelebele,6316,South Africa,0,1
+1469826,Olwethu Makhanya,6316,South Africa,0,1
+1579341,Thabang Matuludi,6316,South Africa,0,1
+1680659,Samukelo Kabini,6316,South Africa,0,1
+1680696,Khulumani Ndamane,6316,South Africa,0,1
+1289611,Tshepang Moremi,6316,South Africa,0,1
+1394951,Thapelo Maseko,6316,South Africa,0,1
+1471333,Relebohile Mofokeng,6316,South Africa,0,1
+303609,Themba Zwane,6316,South Africa,0,1
+1107735,Sphephelo Sithole,6316,South Africa,0,1
+729769,Tyler Adams,6713,USA,48,1
+688295,Christian Pulisic,6713,USA,45,1
+982677,Folarin Balogun,6713,USA,42,1
+1338696,Alex Freeman,6713,USA,41,1
+1126058,Malik Tillman,6713,USA,38,1
+198444,Tim Ream,6713,USA,35,1
+848266,Weston McKennie,6713,USA,33,1
+950829,Chris Richards,6713,USA,31,1
+662428,Antonee Robinson,6713,USA,29,1
+1071179,Giovanni Reyna,6713,USA,20,1
+90006713,USA Keepers,6713,USA,18,1
+892816,Sergiño Dest,6713,USA,17,1
+1136096,Sebastian Berhalter,6713,USA,13,1
+1036401,Ricardo Pepi,6713,USA,11,1
+889536,Timothy Weah,6713,USA,4,1
+688271,Auston Trusty,6713,USA,0,1
+825623,Miles Robinson,6713,USA,0,1
+924485,Mark McKenzie,6713,USA,0,1
+959696,Joseph Scally,6713,USA,0,1
+621946,Cristian Roldan,6713,USA,0,1
+952322,Brenden Aaronson,6713,USA,0,1
+1348329,Max Arfsten,6713,USA,0,1
+621882,Alex Zendejas,6713,USA,0,1
+848268,Haji Wright,6713,USA,0,1

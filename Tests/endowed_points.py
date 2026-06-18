@@ -28,6 +28,11 @@ import pandas as pd
 
 
 TESTS_DIR = Path(__file__).resolve().parent
+if str(TESTS_DIR) not in sys.path:
+    sys.path.insert(0, str(TESTS_DIR))
+
+from position_roles import lineup_usual_position_by_player, resolve_outfield_position_id_for_scoring
+
 DEFAULT_JSON = TESTS_DIR / "Match1.json"
 
 OUT_DEF = TESTS_DIR / "endowed_points_defenders.csv"
@@ -54,56 +59,6 @@ def _input_path() -> Path:
 def _read_json(path: Path) -> dict[str, Any]:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
-
-
-def lineup_usual_position_by_player(content: dict[str, Any]) -> dict[int, int]:
-    """
-    player_id -> usualPlayingPositionId
-    0 = GK, 1 = DEF, 2 = MID, 3 = FWD
-    """
-    out: dict[int, int] = {}
-    lineup = content.get("lineup") or {}
-    for side in ("homeTeam", "awayTeam"):
-        team = lineup.get(side) or {}
-        for bucket in ("starters", "subs"):
-            for p in team.get(bucket) or []:
-                if not isinstance(p, dict):
-                    continue
-                pid = p.get("id")
-                up = p.get("usualPlayingPositionId")
-                if pid is None or up is None:
-                    continue
-                out[int(pid)] = int(up)
-    return out
-
-
-def role_override_by_player(content: dict[str, Any]) -> dict[int, int]:
-    """
-    Optional position override from matchFacts.topPlayers.positionLabel.key:
-    - rightwinger_short / leftwinger_short -> midfielder (2)
-    - striker_short -> forward (3)
-    """
-    out: dict[int, int] = {}
-    top = (content.get("matchFacts") or {}).get("topPlayers") or {}
-    keys_to_mid = {"rightwinger_short", "leftwinger_short"}
-    keys_to_fwd = {"striker_short"}
-    for bucket in ("homeTopPlayers", "awayTopPlayers"):
-        for p in top.get(bucket) or []:
-            if not isinstance(p, dict):
-                continue
-            pid = p.get("playerId")
-            if pid is None:
-                continue
-            try:
-                pid_i = int(pid)
-            except (TypeError, ValueError):
-                continue
-            label_key = ((p.get("positionLabel") or {}).get("key") or "").strip().lower()
-            if label_key in keys_to_mid:
-                out[pid_i] = 2
-            elif label_key in keys_to_fwd:
-                out[pid_i] = 3
-    return out
 
 
 def red_card_count_by_player_from_timeline(data: dict[str, Any]) -> dict[int, int]:
@@ -354,8 +309,7 @@ def main() -> None:
     content = data.get("content") or {}
 
     player_meta = player_meta_from_playerstats(content)
-    usual_pos = lineup_usual_position_by_player(content)
-    role_overrides = role_override_by_player(content)
+    player_stats = content.get("playerStats") or {}
 
     states = compute_on_field_and_goals(data)
 
@@ -363,12 +317,11 @@ def main() -> None:
     for pid, st in states.items():
         if st.minutes <= 0:
             continue
-        pos = role_overrides.get(pid, usual_pos.get(pid))
+        pdata = player_stats.get(str(pid)) or player_stats.get(pid) or {}
+        if not isinstance(pdata, dict):
+            pdata = {}
+        pos = resolve_outfield_position_id_for_scoring(content, pid, pdata)
         if pos is None:
-            # fallback: if playerStats has usualPosition, but we don't load it here
-            # so we rely on lineup only.
-            continue
-        if pos == 0:
             continue
 
         meta = player_meta.get(pid, {})

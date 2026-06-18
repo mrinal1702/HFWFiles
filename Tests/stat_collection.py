@@ -11,6 +11,7 @@ import json
 import os
 import sys
 from pathlib import Path
+from typing import Any
 
 import pandas as pd
 
@@ -26,7 +27,7 @@ try:
 except ImportError:
     STATS_STILL_MISSING_OR_EXTERNAL = ()
 
-from position_roles import lineup_usual_position_by_player, role_override_by_player
+from position_roles import resolve_outfield_position_id_for_scoring
 
 # --- Config ---
 TESTS_DIR = Path(__file__).resolve().parent
@@ -255,28 +256,16 @@ def gtotal_or_zero(m: dict[str, dict], key: str) -> int | float:
 def row_from_player(
     pid: int,
     pdata: dict,
-    lineup_pos: dict[int, int],
-    role_overrides: dict[int, int],
+    content: dict[str, Any],
     red_card_counts: dict[int, int],
     own_goal_counts: dict[int, int],
 ) -> dict | None:
     if pdata.get("isGoalkeeper") is True:
         return None
 
-    pos = lineup_pos.get(pid)
-    if pos is None:
-        up = pdata.get("usualPosition")
-        if up is not None:
-            pos = int(up)
+    pos = resolve_outfield_position_id_for_scoring(content, pid, pdata)
     if pos is None:
         return None
-    if pos == 0:
-        return None
-    if pos not in (1, 2, 3):
-        return None
-
-    # Optional override for winger/striker labeling from topPlayers (see position_roles.py)
-    pos = role_overrides.get(pid, pos)
 
     m = extract_stat_map(pdata)
     gdl = derived_ground_duels_lost(m)
@@ -336,8 +325,6 @@ def row_from_player(
 def stat_collection(data: dict) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     content = data.get("content") or {}
     player_stats = content.get("playerStats") or {}
-    lineup_pos = lineup_usual_position_by_player(content)
-    role_overrides = role_override_by_player(content)
     red_card_counts = red_card_count_by_player(data)
     own_goal_counts = own_goal_count_by_player(data)
 
@@ -349,7 +336,7 @@ def stat_collection(data: dict) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFram
             pid = int(pdata.get("id", pid_str))
         except (TypeError, ValueError):
             continue
-        r = row_from_player(pid, pdata, lineup_pos, role_overrides, red_card_counts, own_goal_counts)
+        r = row_from_player(pid, pdata, content, red_card_counts, own_goal_counts)
         if r is None:
             continue
         rows.append(r)

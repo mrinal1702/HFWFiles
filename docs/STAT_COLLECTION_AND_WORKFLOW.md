@@ -70,14 +70,16 @@ Scoring role for a match may differ from the player's auction-pool position in `
 | Source | Condition | Scoring role |
 |--------|-----------|--------------|
 | `striker_short` | always | Forward (`3`) |
+| `leftmidfielder_short` / `rightmidfielder_short` | always | Midfielder (`2`) |
 | `leftwinger_short` / `rightwinger_short` | granular `positionId` ∈ `{83, 87}` | Midfielder (`2`) |
 | `leftwinger_short` / `rightwinger_short` | any other `positionId` (e.g. `103`, `107`) | No override — stays usual position (typically Forward) |
+| granular `positionId` | `85` (#10 AM slot) | Midfielder (`2`) — applied after topPlayers overrides |
 
 Granular `positionId` comes from `content.lineup.*.positionId` (FotMob formation slot, not the same as `usualPlayingPositionId`).
 
 **Example (Barcelona sample):** Yamal RW (`positionId` 83) and Raphinha LW (87) score as midfielders when labeled as wingers in topPlayers; Barnes (107) and Elanga (103) remain forwards.
 
-To add more wide-forward slots for a competition, extend `WINGER_TOPPLAYERS_TO_MIDFIELD_POSITION_IDS` in `position_roles.py`.
+To add more wide-forward slots for a competition, extend `WINGER_TOPPLAYERS_TO_MIDFIELD_POSITION_IDS` in `position_roles.py`. For fixed AM slots (e.g. `85`), extend `GRANULAR_POSITION_IDS_ALWAYS_MIDFIELD`.
 
 ### Shared usage
 The same resolution is used in:

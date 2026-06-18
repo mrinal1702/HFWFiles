@@ -17,24 +17,25 @@ import pandas as pd
 from endowed_points import (
     compute_on_field_and_goals,
     endowment_points_for_position,
-    lineup_usual_position_by_player,
     player_meta_from_playerstats,
-    role_override_by_player,
 )
+from position_roles import resolve_outfield_position_id_for_scoring
 
 
 def calculate_endowed_points(match_data: dict[str, Any]) -> pd.DataFrame:
     content = match_data.get("content") or {}
     meta = player_meta_from_playerstats(content)
-    pos_map = lineup_usual_position_by_player(content)
-    overrides = role_override_by_player(content)
+    player_stats = content.get("playerStats") or {}
     states = compute_on_field_and_goals(match_data)
 
     rows: list[dict[str, Any]] = []
     for pid, st in states.items():
         if st.minutes <= 0:
             continue
-        pos = overrides.get(pid, pos_map.get(pid))
+        pdata = player_stats.get(str(pid)) or player_stats.get(pid) or {}
+        if not isinstance(pdata, dict):
+            pdata = {}
+        pos = resolve_outfield_position_id_for_scoring(content, pid, pdata)
         if pos not in (1, 2, 3):
             continue
         m = meta.get(pid, {})

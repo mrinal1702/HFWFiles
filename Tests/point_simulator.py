@@ -82,7 +82,14 @@ def simulate_points(match_data: dict[str, Any]) -> pd.DataFrame:
     merged["goals_for_while_on_field"] = merged["goals_for_while_on_field"].fillna(0).astype(int)
     merged["goals_against_while_on_field"] = merged["goals_against_while_on_field"].fillna(0).astype(int)
 
-    merged["total_points"] = merged["stat_points_total"] + merged["endowed_points"]
+    # Unused subs / non-playing squad members: no stat or endowment credit.
+    no_play = merged["minutes_played_derived"] <= 0
+    merged.loc[no_play, "stat_points_total"] = 0.0
+    merged.loc[no_play, "endowed_points"] = 0.0
+
+    merged["total_points"] = (
+        merged["stat_points_total"] + merged["endowed_points"]
+    ).clip(lower=0.0)
 
     merged = merged.sort_values(
         by=["total_points", "stat_points_total", "endowed_points"],
