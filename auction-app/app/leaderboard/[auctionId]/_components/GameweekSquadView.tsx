@@ -221,25 +221,37 @@ export function GameweekSquadView({
   const selected = squads.find((s) => s.userId === selectedUserId) ?? squads[0];
   const totalScore = selected.totalGwScore;
   const scoresUploaded = selected.players.some((p) => p.score !== null);
+  const hasBestXiData = selected.players.some((p) => p.isBestXi !== null);
+  const rawSquadTotal = hasBestXiData
+    ? null
+    : selected.players.reduce((sum, p) => sum + (p.score ?? 0), 0);
 
   return (
     <div className="space-y-4">
       {/* Status banner */}
       <div className="flex flex-wrap items-center gap-2">
-        <span className="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-800">
-          {activeGw
-            ? `${activeGw.name} — ${squadsAreLocked ? "Locked snapshot" : "Live squad"}`
-            : squadsAreLocked
-              ? "Locked snapshot"
-              : "Live squad"}
-        </span>
+        {activeGw && (
+          <span className="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-800">
+            {activeGw.name}
+          </span>
+        )}
+        {!squadsAreLocked && (
+          <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-500">
+            Live squad
+          </span>
+        )}
         {scoresUploaded ? (
           <span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-800">
-            Match points live
+            {hasBestXiData ? "Match points live" : "Player points updating"}
           </span>
         ) : (
           <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-500">
             Scores not yet uploaded
+          </span>
+        )}
+        {!hasBestXiData && squadsAreLocked && (
+          <span className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-medium text-amber-800">
+            Formation pending — all player points shown
           </span>
         )}
       </div>
@@ -281,6 +293,21 @@ export function GameweekSquadView({
           <p className="mt-1 text-xs text-slate-500">
             Role column shows where each player counted in the formation. Bench shows listed
             position. Only Starting XI points count toward the total.
+          </p>
+        </div>
+      )}
+
+      {!hasBestXiData && scoresUploaded && rawSquadTotal !== null && rawSquadTotal > 0 && (
+        <div className="rounded-lg border border-slate-100 bg-slate-50 px-4 py-3">
+          <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+            <span className="text-sm text-slate-600">
+              {selected.name}&apos;s{activeGw ? ` ${activeGw.name}` : ""} squad points so far:{" "}
+            </span>
+            <span className="font-mono text-lg font-bold text-slate-900">{rawSquadTotal} pts</span>
+          </div>
+          <p className="mt-1 text-xs text-slate-500">
+            Sum of all locked squad players with uploaded scores. Best XI total will replace this
+            after the gameweek completes and formation logic runs.
           </p>
         </div>
       )}

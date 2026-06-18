@@ -2,8 +2,8 @@ import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
 import {
   getLeaderboardData,
   getActiveGameWeek,
-  getGameweekSquadData,
-  getCurrentSquads,
+  getLockedGameWeeksForAuction,
+  resolveGameweekPanel,
 } from "@/lib/leaderboard-data";
 import { LeaderboardTabs } from "./_components/LeaderboardTabs";
 
@@ -17,35 +17,41 @@ export default async function LeaderboardPage({
   const { auctionId: raw } = await params;
   const auctionId = Number(raw);
 
-  const [d, { standings, gameWeeks }, activeGw] = await Promise.all([
+  const [d, { standings, gameWeeks }, activeGw, lockedGws] = await Promise.all([
     loadAuctionDashboardForViewer(auctionId),
     getLeaderboardData(auctionId),
     getActiveGameWeek(),
+    getLockedGameWeeksForAuction(auctionId),
   ]);
 
-  // Hard deadline determines whether squads are "locked"
   const hardDeadlineAt = d.auction?.hard_deadline_at;
   const hardDeadlinePassed = hardDeadlineAt
     ? Date.now() >= Date.parse(hardDeadlineAt)
     : false;
 
-  // Priority: formal snapshot → live auction_teams (only if deadline passed) → null
-  const lockedSquads = activeGw ? await getGameweekSquadData(auctionId, activeGw.id) : null;
-  let squads: Awaited<ReturnType<typeof getCurrentSquads>> | null = null;
-  if (lockedSquads) {
-    squads = lockedSquads;
-  } else if (hardDeadlinePassed) {
-    const current = await getCurrentSquads(auctionId, activeGw?.id);
-    squads = current.length > 0 ? current : null;
+  const panelGwMap = new Map<number, { id: number; name: string }>();
+  for (const gw of lockedGws) panelGwMap.set(gw.id, gw);
+  if (activeGw && !panelGwMap.has(activeGw.id)) {
+    panelGwMap.set(activeGw.id, activeGw);
   }
+
+  const panelGws = [...panelGwMap.values()].sort((a, b) => a.id - b.id);
+
+  const gameweekPanels = await Promise.all(
+    panelGws.map((gw) =>
+      resolveGameweekPanel(auctionId, gw, {
+        hardDeadlinePassed,
+        isActiveGw: activeGw?.id === gw.id,
+      }),
+    ),
+  );
 
   return (
     <LeaderboardTabs
       standings={standings}
       gameWeeks={gameWeeks}
       activeGw={activeGw}
-      squads={squads}
-      squadsAreLocked={hardDeadlinePassed}
+      gameweekPanels={gameweekPanels}
       myUserId={d.me?.id ?? null}
     />
   );

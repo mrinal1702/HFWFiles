@@ -47,6 +47,12 @@ export type LeaderboardData = {
   gameWeeks: GwInfo[];
 };
 
+export type GameweekPanel = {
+  gw: GwInfo;
+  squads: ParticipantGwSquad[] | null;
+  squadsAreLocked: boolean;
+};
+
 // ─── Loaders ─────────────────────────────────────────────────────────────────
 
 /** Auction-agnostic GW scores from Player_Scores (keyed by FotMob player_id). */
@@ -254,6 +260,60 @@ export async function getCurrentSquads(
         };
       }),
     }));
+}
+
+/** Gameweeks with a locked squad snapshot for this auction, in chronological order. */
+export async function getLockedGameWeeksForAuction(auctionId: number): Promise<GwInfo[]> {
+  const admin = createAdminClient();
+
+  const { data, error } = await admin
+    .from("gameweek_squads")
+    .select("game_week_id")
+    .eq("auction_id", auctionId);
+  if (error) throw new Error(`gameweek_squads: ${error.message}`);
+
+  const gwIds = [...new Set((data ?? []).map((r) => Number(r.game_week_id)))].sort(
+    (a, b) => a - b,
+  );
+  if (!gwIds.length) return [];
+
+  const gwRes = await admin
+    .from("Game_Weeks")
+    .select("id, GW_Name")
+    .in("id", gwIds)
+    .order("id", { ascending: true });
+  if (gwRes.error) throw new Error(`Game_Weeks: ${gwRes.error.message}`);
+
+  return (gwRes.data ?? []).map((r) => ({
+    id: r.id as number,
+    name: r.GW_Name as string,
+  }));
+}
+
+/**
+ * Locked snapshot for one GW, or live auction_teams fallback for the active GW
+ * after its hard deadline if no snapshot exists yet.
+ */
+export async function resolveGameweekPanel(
+  auctionId: number,
+  gw: GwInfo,
+  opts: { hardDeadlinePassed: boolean; isActiveGw: boolean },
+): Promise<GameweekPanel> {
+  const locked = await getGameweekSquadData(auctionId, gw.id);
+  if (locked != null && locked.length > 0) {
+    return { gw, squads: locked, squadsAreLocked: true };
+  }
+
+  if (opts.isActiveGw && opts.hardDeadlinePassed) {
+    const current = await getCurrentSquads(auctionId, gw.id);
+    return {
+      gw,
+      squads: current.length > 0 ? current : null,
+      squadsAreLocked: false,
+    };
+  }
+
+  return { gw, squads: null, squadsAreLocked: false };
 }
 
 /** Active gameweek from Game_Weeks where Is_Active = true. */
