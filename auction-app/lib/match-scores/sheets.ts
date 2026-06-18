@@ -140,6 +140,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("Ghana_Panama_FinalPoints.csv"),
   },
+  {
+    slug: "uzbekistan-colombia",
+    title: "Uzbekistan vs Colombia",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("Uzbekistan_Colombia_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
