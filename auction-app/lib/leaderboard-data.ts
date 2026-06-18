@@ -1,4 +1,6 @@
 import { createAdminClient } from "@/lib/supabase-server";
+import type { XiRole } from "@/lib/best-xi-display";
+import { loadBestXiOverlay } from "@/lib/best-xi-overlay";
 
 // ─── Shared types ─────────────────────────────────────────────────────────────
 
@@ -26,6 +28,8 @@ export type GwSquadPlayer = {
   score: number | null;
   /** null = formation logic not run yet; true = Best XI; false = bench */
   isBestXi: boolean | null;
+  /** Formation slot when in Best XI (D/M/F/GK); null on bench or before XI published */
+  xiRole: XiRole | null;
 };
 
 export type ParticipantGwSquad = {
@@ -34,6 +38,8 @@ export type ParticipantGwSquad = {
   players: GwSquadPlayer[];
   /** Total GW score from auction_leaderboard; null if scores not yet published */
   totalGwScore: number | null;
+  /** e.g. "3-5-2" — display only */
+  formation: string | null;
 };
 
 export type LeaderboardData = {
@@ -233,6 +239,7 @@ export async function getCurrentSquads(
       userId: u.id,
       name: u.name ?? "—",
       totalGwScore: null,
+      formation: null,
       players: (byUser.get(u.id) ?? []).map((row) => {
         const meta = playerById.get(String(row.player_id));
         return {
@@ -243,6 +250,7 @@ export async function getCurrentSquads(
           purchasePrice: row.purchase_price,
           score: scoreMap.get(String(row.player_id)) ?? null,
           isBestXi: null,
+          xiRole: null,
         };
       }),
     }));
@@ -357,6 +365,7 @@ export async function getGameweekSquadData(
         purchasePrice: row.purchase_price,
         score: scoreMap.get(String(row.player_id)) ?? null,
         isBestXi: row.is_best_xi ?? null,
+        xiRole: null,
       };
     });
 
@@ -365,7 +374,20 @@ export async function getGameweekSquadData(
       name: nameById.get(user.id) ?? "—",
       players,
       totalGwScore: totalScoreByUser.get(user.id) ?? null,
+      formation: null,
     });
+  }
+
+  const overlay = loadBestXiOverlay(auctionId, gameWeekId);
+  if (overlay) {
+    for (const squad of result) {
+      squad.formation = overlay.formationByUser.get(squad.userId) ?? null;
+      for (const p of squad.players) {
+        if (p.isBestXi) {
+          p.xiRole = overlay.xiRoleByUserPlayer.get(`${squad.userId}:${p.playerId}`) ?? null;
+        }
+      }
+    }
   }
 
   return result;
