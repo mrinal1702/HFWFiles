@@ -128,6 +128,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("Portugal_DRCongo_FinalPoints.csv"),
   },
+  {
+    slug: "england-croatia",
+    title: "England vs Croatia",
+    subtitle: "World Cup 2026 · Group stage",
+    rows: loadMatchScoreCsv("England_Croatia_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
