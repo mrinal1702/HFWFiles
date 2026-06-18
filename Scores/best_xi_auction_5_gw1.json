@@ -12,11 +12,11 @@
         4,
         3
       ],
-      "total_points": 469,
+      "total_points": 497,
       "goalkeeper": {
         "player_id": 90008256,
         "player_name": "Brazil Keepers",
-        "score": 0
+        "score": 28
       },
       "outfield": [
         {
@@ -117,11 +117,11 @@
         5,
         1
       ],
-      "total_points": 440,
+      "total_points": 469,
       "goalkeeper": {
         "player_id": 90010155,
         "player_name": "Croatia Keepers",
-        "score": 0
+        "score": 29
       },
       "outfield": [
         {
@@ -225,11 +225,11 @@
         5,
         2
       ],
-      "total_points": 427,
+      "total_points": 449,
       "goalkeeper": {
         "player_id": 90008570,
         "player_name": "Germany Keepers",
-        "score": 0
+        "score": 22
       },
       "outfield": [
         {
@@ -330,11 +330,11 @@
         4,
         2
       ],
-      "total_points": 421,
+      "total_points": 448,
       "goalkeeper": {
         "player_id": 90006395,
         "player_name": "Senegal Keepers",
-        "score": 0
+        "score": 27
       },
       "outfield": [
         {
@@ -435,11 +435,11 @@
         3,
         3
       ],
-      "total_points": 413,
+      "total_points": 440,
       "goalkeeper": {
         "player_id": 90006720,
         "player_name": "Spain Keepers",
-        "score": 0
+        "score": 27
       },
       "outfield": [
         {
@@ -531,111 +531,6 @@
       "missing_score_player_ids": []
     },
     {
-      "auction_user_id": "43",
-      "user_name": "Sujay",
-      "gw_id": 1,
-      "formation": "3-5-2",
-      "formation_tuple": [
-        3,
-        5,
-        2
-      ],
-      "total_points": 397,
-      "goalkeeper": {
-        "player_id": 90006723,
-        "player_name": "France Keepers",
-        "score": 0
-      },
-      "outfield": [
-        {
-          "player_id": 720560,
-          "player_name": "Juli\u00e1n Qui\u00f1ones",
-          "role": "F",
-          "score": 58,
-          "flexible": false
-        },
-        {
-          "player_id": 1083323,
-          "player_name": "Pedri",
-          "role": "M",
-          "score": 58,
-          "flexible": false
-        },
-        {
-          "player_id": 729769,
-          "player_name": "Tyler Adams",
-          "role": "M",
-          "score": 50,
-          "flexible": false
-        },
-        {
-          "player_id": 209405,
-          "player_name": "Virgil van Dijk",
-          "role": "D",
-          "score": 48,
-          "flexible": false
-        },
-        {
-          "player_id": 1342757,
-          "player_name": "Jo\u00e3o Neves",
-          "role": "M",
-          "score": 46,
-          "flexible": false
-        },
-        {
-          "player_id": 847983,
-          "player_name": "Lisandro Mart\u00ednez",
-          "role": "D",
-          "score": 39,
-          "flexible": false
-        },
-        {
-          "player_id": 662428,
-          "player_name": "Antonee Robinson",
-          "role": "D",
-          "score": 35,
-          "flexible": false
-        },
-        {
-          "player_id": 526827,
-          "player_name": "Konrad Laimer",
-          "role": "M",
-          "score": 22,
-          "flexible": true
-        },
-        {
-          "player_id": 935409,
-          "player_name": "Orkun K\u00f6kc\u00fc",
-          "role": "M",
-          "score": 21,
-          "flexible": false
-        },
-        {
-          "player_id": 942393,
-          "player_name": "Ayase Ueda",
-          "role": "F",
-          "score": 20,
-          "flexible": false
-        }
-      ],
-      "best_xi_player_ids": [
-        209405,
-        526827,
-        662428,
-        720560,
-        729769,
-        847983,
-        935409,
-        942393,
-        1083323,
-        1342757,
-        90006723
-      ],
-      "empty_outfield_slots": 0,
-      "squad_size": 15,
-      "missing_score_player_ids": []
-    },
-    {
       "auction_user_id": "38",
       "user_name": "EmpanadaMama FC",
       "gw_id": 1,
@@ -645,11 +540,11 @@
         4,
         2
       ],
-      "total_points": 396,
+      "total_points": 422,
       "goalkeeper": {
         "player_id": 90006707,
         "player_name": "Ecuador Keepers",
-        "score": 0
+        "score": 26
       },
       "outfield": [
         {
@@ -741,6 +636,111 @@
       "missing_score_player_ids": []
     },
     {
+      "auction_user_id": "43",
+      "user_name": "Sujay",
+      "gw_id": 1,
+      "formation": "3-5-2",
+      "formation_tuple": [
+        3,
+        5,
+        2
+      ],
+      "total_points": 422,
+      "goalkeeper": {
+        "player_id": 90006723,
+        "player_name": "France Keepers",
+        "score": 25
+      },
+      "outfield": [
+        {
+          "player_id": 720560,
+          "player_name": "Juli\u00e1n Qui\u00f1ones",
+          "role": "F",
+          "score": 58,
+          "flexible": false
+        },
+        {
+          "player_id": 1083323,
+          "player_name": "Pedri",
+          "role": "M",
+          "score": 58,
+          "flexible": false
+        },
+        {
+          "player_id": 729769,
+          "player_name": "Tyler Adams",
+          "role": "M",
+          "score": 50,
+          "flexible": false
+        },
+        {
+          "player_id": 209405,
+          "player_name": "Virgil van Dijk",
+          "role": "D",
+          "score": 48,
+          "flexible": false
+        },
+        {
+          "player_id": 1342757,
+          "player_name": "Jo\u00e3o Neves",
+          "role": "M",
+          "score": 46,
+          "flexible": false
+        },
+        {
+          "player_id": 847983,
+          "player_name": "Lisandro Mart\u00ednez",
+          "role": "D",
+          "score": 39,
+          "flexible": false
+        },
+        {
+          "player_id": 662428,
+          "player_name": "Antonee Robinson",
+          "role": "D",
+          "score": 35,
+          "flexible": false
+        },
+        {
+          "player_id": 526827,
+          "player_name": "Konrad Laimer",
+          "role": "M",
+          "score": 22,
+          "flexible": true
+        },
+        {
+          "player_id": 935409,
+          "player_name": "Orkun K\u00f6kc\u00fc",
+          "role": "M",
+          "score": 21,
+          "flexible": false
+        },
+        {
+          "player_id": 942393,
+          "player_name": "Ayase Ueda",
+          "role": "F",
+          "score": 20,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        209405,
+        526827,
+        662428,
+        720560,
+        729769,
+        847983,
+        935409,
+        942393,
+        1083323,
+        1342757,
+        90006723
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 15,
+      "missing_score_player_ids": []
+    },
+    {
       "auction_user_id": "34",
       "user_name": "Zahaan",
       "gw_id": 1,
@@ -750,11 +750,11 @@
         3,
         2
       ],
-      "total_points": 386,
+      "total_points": 414,
       "goalkeeper": {
         "player_id": 90008263,
         "player_name": "Belgium Keepers",
-        "score": 0
+        "score": 28
       },
       "outfield": [
         {
@@ -855,11 +855,11 @@
         4,
         1
       ],
-      "total_points": 385,
+      "total_points": 413,
       "goalkeeper": {
         "player_id": 90008361,
         "player_name": "Portugal Keepers",
-        "score": 0
+        "score": 28
       },
       "outfield": [
         {
@@ -962,11 +962,11 @@
         4,
         2
       ],
-      "total_points": 384,
+      "total_points": 399,
       "goalkeeper": {
         "player_id": 90006708,
         "player_name": "Netherlands Keepers",
-        "score": 0
+        "score": 15
       },
       "outfield": [
         {
@@ -1069,11 +1069,11 @@
         5,
         1
       ],
-      "total_points": 356,
+      "total_points": 383,
       "goalkeeper": {
         "player_id": 90006706,
         "player_name": "Argentina Keepers",
-        "score": 0
+        "score": 27
       },
       "outfield": [
         {
@@ -1174,11 +1174,11 @@
         5,
         2
       ],
-      "total_points": 350,
+      "total_points": 371,
       "goalkeeper": {
         "player_id": 90008492,
         "player_name": "Norway Keepers",
-        "score": 0
+        "score": 21
       },
       "outfield": [
         {
@@ -1270,6 +1270,105 @@
       "missing_score_player_ids": []
     },
     {
+      "auction_user_id": "40",
+      "user_name": "Lucho Portuano FC",
+      "gw_id": 1,
+      "formation": "4-3-3",
+      "formation_tuple": [
+        4,
+        3,
+        3
+      ],
+      "total_points": 330,
+      "goalkeeper": {
+        "player_id": 90006262,
+        "player_name": "Morocco Keepers",
+        "score": 34
+      },
+      "outfield": [
+        {
+          "player_id": 860752,
+          "player_name": "Rub\u00e9n Vargas",
+          "role": "F",
+          "score": 46,
+          "flexible": false
+        },
+        {
+          "player_id": 527103,
+          "player_name": "Breel Embolo",
+          "role": "F",
+          "score": 45,
+          "flexible": false
+        },
+        {
+          "player_id": 638622,
+          "player_name": "Frenkie de Jong",
+          "role": "M",
+          "score": 41,
+          "flexible": false
+        },
+        {
+          "player_id": 534670,
+          "player_name": "Martin \u00d8degaard",
+          "role": "M",
+          "score": 35,
+          "flexible": false
+        },
+        {
+          "player_id": 789066,
+          "player_name": "Cristian Romero",
+          "role": "D",
+          "score": 33,
+          "flexible": false
+        },
+        {
+          "player_id": 361757,
+          "player_name": "Jo\u00e3o Cancelo",
+          "role": "D",
+          "score": 32,
+          "flexible": false
+        },
+        {
+          "player_id": 848289,
+          "player_name": "Takefusa Kubo",
+          "role": "F",
+          "score": 25,
+          "flexible": false
+        },
+        {
+          "player_id": 1137667,
+          "player_name": "Piero Hincapi\u00e9",
+          "role": "D",
+          "score": 25,
+          "flexible": false
+        },
+        {
+          "player_id": 806669,
+          "player_name": "David Raum",
+          "role": "D",
+          "score": 14,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        361757,
+        527103,
+        534670,
+        638622,
+        789066,
+        806669,
+        848289,
+        860752,
+        1137667,
+        90006262
+      ],
+      "empty_outfield_slots": 1,
+      "squad_size": 18,
+      "missing_score_player_ids": [
+        202643
+      ]
+    },
+    {
       "auction_user_id": "45",
       "user_name": "Mrinal Trivedi",
       "gw_id": 1,
@@ -1279,11 +1378,11 @@
         5,
         2
       ],
-      "total_points": 301,
+      "total_points": 329,
       "goalkeeper": {
         "player_id": 90006717,
         "player_name": "Switzerland Keepers",
-        "score": 0
+        "score": 28
       },
       "outfield": [
         {
@@ -1375,105 +1474,6 @@
       "missing_score_player_ids": []
     },
     {
-      "auction_user_id": "40",
-      "user_name": "Lucho Portuano FC",
-      "gw_id": 1,
-      "formation": "4-3-3",
-      "formation_tuple": [
-        4,
-        3,
-        3
-      ],
-      "total_points": 296,
-      "goalkeeper": {
-        "player_id": 90006262,
-        "player_name": "Morocco Keepers",
-        "score": 0
-      },
-      "outfield": [
-        {
-          "player_id": 860752,
-          "player_name": "Rub\u00e9n Vargas",
-          "role": "F",
-          "score": 46,
-          "flexible": false
-        },
-        {
-          "player_id": 527103,
-          "player_name": "Breel Embolo",
-          "role": "F",
-          "score": 45,
-          "flexible": false
-        },
-        {
-          "player_id": 638622,
-          "player_name": "Frenkie de Jong",
-          "role": "M",
-          "score": 41,
-          "flexible": false
-        },
-        {
-          "player_id": 534670,
-          "player_name": "Martin \u00d8degaard",
-          "role": "M",
-          "score": 35,
-          "flexible": false
-        },
-        {
-          "player_id": 789066,
-          "player_name": "Cristian Romero",
-          "role": "D",
-          "score": 33,
-          "flexible": false
-        },
-        {
-          "player_id": 361757,
-          "player_name": "Jo\u00e3o Cancelo",
-          "role": "D",
-          "score": 32,
-          "flexible": false
-        },
-        {
-          "player_id": 848289,
-          "player_name": "Takefusa Kubo",
-          "role": "F",
-          "score": 25,
-          "flexible": false
-        },
-        {
-          "player_id": 1137667,
-          "player_name": "Piero Hincapi\u00e9",
-          "role": "D",
-          "score": 25,
-          "flexible": false
-        },
-        {
-          "player_id": 806669,
-          "player_name": "David Raum",
-          "role": "D",
-          "score": 14,
-          "flexible": false
-        }
-      ],
-      "best_xi_player_ids": [
-        361757,
-        527103,
-        534670,
-        638622,
-        789066,
-        806669,
-        848289,
-        860752,
-        1137667,
-        90006262
-      ],
-      "empty_outfield_slots": 1,
-      "squad_size": 18,
-      "missing_score_player_ids": [
-        202643
-      ]
-    },
-    {
       "auction_user_id": "46",
       "user_name": "DD",
       "gw_id": 1,
@@ -1483,11 +1483,11 @@
         4,
         1
       ],
-      "total_points": 291,
+      "total_points": 328,
       "goalkeeper": {
         "player_id": 90008491,
         "player_name": "England Keepers",
-        "score": 0
+        "score": 37
       },
       "outfield": [
         {
@@ -1588,11 +1588,11 @@
         4,
         3
       ],
-      "total_points": 279,
+      "total_points": 303,
       "goalkeeper": {
         "player_id": 90006595,
         "player_name": "Turkiye Keepers",
-        "score": 0
+        "score": 24
       },
       "outfield": [
         {

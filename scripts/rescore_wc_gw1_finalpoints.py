@@ -70,6 +70,7 @@ def build_final_points(match_data: dict) -> pd.DataFrame:
         keepers_endowed = compute_keeper_endowed_points(match_data, keepers_scored)
         best = pick_best_stat_gk_per_team(keepers_endowed)
         best = best.copy()
+        best["total_points"] = (best["stat_points_total"] + best["endowed_points"]).clip(lower=0.0)
         best["player_name"] = best["team_name"].astype(str) + " Keepers"
         best["player_id"] = best["team_id"]
         best["position"] = "goalkeeper"

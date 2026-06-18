@@ -12,11 +12,11 @@
         4,
         3
       ],
-      "total_points": 443,
+      "total_points": 471,
       "goalkeeper": {
         "player_id": 90008361,
         "player_name": "Portugal Keepers",
-        "score": 0
+        "score": 28
       },
       "outfield": [
         {
@@ -119,11 +119,11 @@
         3,
         3
       ],
-      "total_points": 440,
+      "total_points": 455,
       "goalkeeper": {
         "player_id": 90006708,
         "player_name": "Netherlands Keepers",
-        "score": 0
+        "score": 15
       },
       "outfield": [
         {
@@ -215,6 +215,111 @@
       "missing_score_player_ids": []
     },
     {
+      "auction_user_id": "88",
+      "user_name": "ZB",
+      "gw_id": 1,
+      "formation": "3-5-2",
+      "formation_tuple": [
+        3,
+        5,
+        2
+      ],
+      "total_points": 445,
+      "goalkeeper": {
+        "player_id": 90006262,
+        "player_name": "Morocco Keepers",
+        "score": 34
+      },
+      "outfield": [
+        {
+          "player_id": 690107,
+          "player_name": "Alexander Isak",
+          "role": "F",
+          "score": 57,
+          "flexible": false
+        },
+        {
+          "player_id": 1029063,
+          "player_name": "Michael Olise",
+          "role": "F",
+          "score": 52,
+          "flexible": true
+        },
+        {
+          "player_id": 859282,
+          "player_name": "Daniel Mu\u00f1oz",
+          "role": "M",
+          "score": 47,
+          "flexible": true
+        },
+        {
+          "player_id": 1077894,
+          "player_name": "Jude Bellingham",
+          "role": "M",
+          "score": 43,
+          "flexible": false
+        },
+        {
+          "player_id": 914458,
+          "player_name": "Aur\u00e9lien Tchouam\u00e9ni",
+          "role": "M",
+          "score": 39,
+          "flexible": false
+        },
+        {
+          "player_id": 766435,
+          "player_name": "Lucas Paquet\u00e1",
+          "role": "M",
+          "score": 38,
+          "flexible": false
+        },
+        {
+          "player_id": 831489,
+          "player_name": "Alexis Mac Allister",
+          "role": "M",
+          "score": 36,
+          "flexible": false
+        },
+        {
+          "player_id": 798029,
+          "player_name": "Ladislav Krejc\u00ed",
+          "role": "D",
+          "score": 35,
+          "flexible": false
+        },
+        {
+          "player_id": 873289,
+          "player_name": "Marc Cucurella",
+          "role": "D",
+          "score": 34,
+          "flexible": false
+        },
+        {
+          "player_id": 664644,
+          "player_name": "C\u00e9sar Montes",
+          "role": "D",
+          "score": 30,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        664644,
+        690107,
+        766435,
+        798029,
+        831489,
+        859282,
+        873289,
+        914458,
+        1029063,
+        1077894,
+        90006262
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 18,
+      "missing_score_player_ids": []
+    },
+    {
       "auction_user_id": "81",
       "user_name": "AZ/Dalla",
       "gw_id": 1,
@@ -224,11 +329,11 @@
         5,
         1
       ],
-      "total_points": 416,
+      "total_points": 444,
       "goalkeeper": {
         "player_id": 90008263,
         "player_name": "Belgium Keepers",
-        "score": 0
+        "score": 28
       },
       "outfield": [
         {
@@ -322,111 +427,6 @@
       ]
     },
     {
-      "auction_user_id": "88",
-      "user_name": "ZB",
-      "gw_id": 1,
-      "formation": "3-5-2",
-      "formation_tuple": [
-        3,
-        5,
-        2
-      ],
-      "total_points": 411,
-      "goalkeeper": {
-        "player_id": 90006262,
-        "player_name": "Morocco Keepers",
-        "score": 0
-      },
-      "outfield": [
-        {
-          "player_id": 690107,
-          "player_name": "Alexander Isak",
-          "role": "F",
-          "score": 57,
-          "flexible": false
-        },
-        {
-          "player_id": 1029063,
-          "player_name": "Michael Olise",
-          "role": "F",
-          "score": 52,
-          "flexible": true
-        },
-        {
-          "player_id": 859282,
-          "player_name": "Daniel Mu\u00f1oz",
-          "role": "M",
-          "score": 47,
-          "flexible": true
-        },
-        {
-          "player_id": 1077894,
-          "player_name": "Jude Bellingham",
-          "role": "M",
-          "score": 43,
-          "flexible": false
-        },
-        {
-          "player_id": 914458,
-          "player_name": "Aur\u00e9lien Tchouam\u00e9ni",
-          "role": "M",
-          "score": 39,
-          "flexible": false
-        },
-        {
-          "player_id": 766435,
-          "player_name": "Lucas Paquet\u00e1",
-          "role": "M",
-          "score": 38,
-          "flexible": false
-        },
-        {
-          "player_id": 831489,
-          "player_name": "Alexis Mac Allister",
-          "role": "M",
-          "score": 36,
-          "flexible": false
-        },
-        {
-          "player_id": 798029,
-          "player_name": "Ladislav Krejc\u00ed",
-          "role": "D",
-          "score": 35,
-          "flexible": false
-        },
-        {
-          "player_id": 873289,
-          "player_name": "Marc Cucurella",
-          "role": "D",
-          "score": 34,
-          "flexible": false
-        },
-        {
-          "player_id": 664644,
-          "player_name": "C\u00e9sar Montes",
-          "role": "D",
-          "score": 30,
-          "flexible": false
-        }
-      ],
-      "best_xi_player_ids": [
-        664644,
-        690107,
-        766435,
-        798029,
-        831489,
-        859282,
-        873289,
-        914458,
-        1029063,
-        1077894,
-        90006262
-      ],
-      "empty_outfield_slots": 0,
-      "squad_size": 18,
-      "missing_score_player_ids": []
-    },
-    {
       "auction_user_id": "82",
       "user_name": "Devarya",
       "gw_id": 1,
@@ -436,11 +436,11 @@
         4,
         2
       ],
-      "total_points": 400,
+      "total_points": 422,
       "goalkeeper": {
         "player_id": 90008570,
         "player_name": "Germany Keepers",
-        "score": 0
+        "score": 22
       },
       "outfield": [
         {
@@ -541,11 +541,11 @@
         5,
         2
       ],
-      "total_points": 389,
+      "total_points": 414,
       "goalkeeper": {
         "player_id": 90006723,
         "player_name": "France Keepers",
-        "score": 0
+        "score": 25
       },
       "outfield": [
         {
@@ -648,11 +648,11 @@
         5,
         2
       ],
-      "total_points": 373,
+      "total_points": 401,
       "goalkeeper": {
         "player_id": 90008256,
         "player_name": "Brazil Keepers",
-        "score": 0
+        "score": 28
       },
       "outfield": [
         {
@@ -753,11 +753,11 @@
         3,
         3
       ],
-      "total_points": 352,
+      "total_points": 389,
       "goalkeeper": {
         "player_id": 90008491,
         "player_name": "England Keepers",
-        "score": 0
+        "score": 37
       },
       "outfield": [
         {
@@ -858,11 +858,11 @@
         5,
         1
       ],
-      "total_points": 338,
+      "total_points": 365,
       "goalkeeper": {
         "player_id": 90006706,
         "player_name": "Argentina Keepers",
-        "score": 0
+        "score": 27
       },
       "outfield": [
         {
@@ -963,11 +963,11 @@
         4,
         3
       ],
-      "total_points": 330,
+      "total_points": 357,
       "goalkeeper": {
         "player_id": 90006720,
         "player_name": "Spain Keepers",
-        "score": 0
+        "score": 27
       },
       "outfield": [
         {
