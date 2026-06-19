@@ -164,6 +164,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage · Round 2",
     rows: loadMatchScoreCsv("Canada_Qatar_FinalPoints.csv"),
   },
+  {
+    slug: "mexico-south-korea",
+    title: "Mexico vs South Korea",
+    subtitle: "World Cup 2026 · Group stage · Round 2",
+    rows: loadMatchScoreCsv("Mexico_SouthKorea_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
