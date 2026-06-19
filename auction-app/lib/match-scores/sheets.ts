@@ -158,6 +158,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage · Round 2",
     rows: loadMatchScoreCsv("Switzerland_BosniaandHerzegovina_FinalPoints.csv"),
   },
+  {
+    slug: "canada-qatar",
+    title: "Canada vs Qatar",
+    subtitle: "World Cup 2026 · Group stage · Round 2",
+    rows: loadMatchScoreCsv("Canada_Qatar_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
