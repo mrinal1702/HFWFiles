@@ -1,5 +1,5 @@
 import { ScoresTabs } from "@/app/scores/_components/ScoresTabs";
-import { MATCH_SCORE_SHEETS } from "@/lib/match-scores/sheets";
+import { MATCH_SCORE_GROUPS } from "@/lib/match-scores/sheets";
 
 export default async function MatchScoresPage({
   searchParams,
@@ -8,5 +8,5 @@ export default async function MatchScoresPage({
 }) {
   const { match } = await searchParams;
 
-  return <ScoresTabs sheets={MATCH_SCORE_SHEETS} initialSlug={match} />;
+  return <ScoresTabs groups={MATCH_SCORE_GROUPS} initialSlug={match} />;
 }
