@@ -146,6 +146,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage",
     rows: loadMatchScoreCsv("Uzbekistan_Colombia_FinalPoints.csv"),
   },
+  {
+    slug: "czechia-south-africa",
+    title: "Czechia vs South Africa",
+    subtitle: "World Cup 2026 · Group stage · Round 2",
+    rows: loadMatchScoreCsv("Czechia_SouthAfrica_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
