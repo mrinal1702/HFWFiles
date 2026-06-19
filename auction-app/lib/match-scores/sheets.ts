@@ -152,6 +152,12 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     subtitle: "World Cup 2026 · Group stage · Round 2",
     rows: loadMatchScoreCsv("Czechia_SouthAfrica_FinalPoints.csv"),
   },
+  {
+    slug: "switzerland-bosnia-herzegovina",
+    title: "Switzerland vs Bosnia and Herzegovina",
+    subtitle: "World Cup 2026 · Group stage · Round 2",
+    rows: loadMatchScoreCsv("Switzerland_BosniaandHerzegovina_FinalPoints.csv"),
+  },
 ];
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
