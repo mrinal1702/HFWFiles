@@ -205,6 +205,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 2,
     rows: loadMatchScoreCsv("USA_Australia_FinalPoints.csv"),
   },
+  {
+    slug: "scotland-morocco",
+    title: "Scotland vs Morocco",
+    subtitle: "World Cup 2026 · Group stage · GW2",
+    groupStageGw: 2,
+    rows: loadMatchScoreCsv("Scotland_Morocco_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
