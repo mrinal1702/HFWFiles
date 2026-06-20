@@ -219,6 +219,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 2,
     rows: loadMatchScoreCsv("Brazil_Haiti_FinalPoints.csv"),
   },
+  {
+    slug: "turkiye-paraguay",
+    title: "Turkiye vs Paraguay",
+    subtitle: "World Cup 2026 · Group stage · GW2",
+    groupStageGw: 2,
+    rows: loadMatchScoreCsv("Turkiye_Paraguay_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
