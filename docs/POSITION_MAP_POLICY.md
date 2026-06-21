@@ -41,8 +41,9 @@ GW1 Supabase `Player_Scores`, Best XI, and leaderboards stay as published. The e
 | `striker_short` | FWD | Unconditional |
 | `leftwinger_short`, `rightwinger_short` | MID | Only if granular `positionId` ∈ {83, 87} |
 | Granular `positionId` **85** | MID | Always (after topPlayers step) |
+| Granular `positionId` **103** / **107** | FWD | Always (wide-forward slots; overrides lineup usual MID) |
 
-**Known winger edge case (unchanged):** granular **103** / **107** with winger label → stay on lineup usual (typically FWD).
+**Wide slots 103/107 (GW2+):** FotMob 4-3-3 wing slots — always score as **forward**, even when `usualPlayingPositionId` is 2 (e.g. Amad Diallo). Distinct from winger→MID rule on **83/87** only.
 
 ---
 

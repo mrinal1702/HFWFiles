@@ -30,13 +30,14 @@
     }
   },
   "granular_position_id_rules": {
-    "always_midfield": [85]
+    "always_midfield": [85],
+    "always_forward": [103, 107]
   },
   "gw1_seen_keys_all_handled": true,
   "gw1_remaining_edge_cases": {
     "winger_label_granular_not_83_or_87": {
       "position_ids": [103, 107],
-      "note": "FotMob wide forward slots; stay on lineup usual (typically FWD). Examples: Pulisic, Summerville, Afif."
+      "note": "GW2+: always_forward rule applies. Winger topPlayers label does not flip 103/107 to MID."
     }
   },
   "code": "Tests/position_roles.py"

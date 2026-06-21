@@ -7,6 +7,7 @@ Resolution order (see resolve_outfield_position_id_for_scoring):
 1. lineup usualPlayingPositionId (or playerStats.usualPosition fallback)
 2. matchFacts.topPlayers positionLabel.key overrides
 3. granular lineup positionId always-mid slots (e.g. 85 = #10 AM)
+4. granular lineup positionId always-forward slots (103 = RW wide, 107 = LW wide)
 
 GW policy (2026-06): GW1 group-stage scores in Supabase are FROZEN under the map
 that was live at tag points/gw1-rescore-position-map. Do not batch-rescore GW1.
@@ -20,11 +21,15 @@ from typing import Any
 
 
 # Granular FotMob `content.lineup.*.positionId` where LW/RW in topPlayers → MID (winger rule).
-# Example: Yamal RW = 83, Raphinha LW = 87. Barnes (107), Elanga (103) remain forward.
+# Example: Yamal RW = 83, Raphinha LW = 87 → MID when topPlayers winger label applies.
 WINGER_TOPPLAYERS_TO_MIDFIELD_POSITION_IDS: frozenset[int] = frozenset({83, 87})
 
 # Granular slots that always count as midfielder (e.g. #10 AM — Salah, Bellingham in WC data).
 GRANULAR_POSITION_IDS_ALWAYS_MIDFIELD: frozenset[int] = frozenset({85})
+
+# Granular wide-forward slots (FotMob 4-3-3 wings). Always FWD even if usualPlayingPositionId is 2.
+# Example: Amad Diallo granular 103 with usual 2 → forward (Germany vs Ivory Coast GW2).
+GRANULAR_POSITION_IDS_ALWAYS_FORWARD: frozenset[int] = frozenset({103, 107})
 
 # --- topPlayers positionLabel.key → counting role (1 DEF / 2 MID / 3 FWD) ---
 
@@ -179,5 +184,7 @@ def resolve_outfield_position_id_for_scoring(
     g = granular.get(pid)
     if g is not None and g in GRANULAR_POSITION_IDS_ALWAYS_MIDFIELD:
         pos = 2
+    if g is not None and g in GRANULAR_POSITION_IDS_ALWAYS_FORWARD:
+        pos = 3
     return pos
 
