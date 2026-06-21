@@ -50,6 +50,13 @@ export async function updateFantasyTeamNameAction(
     .eq("id", row.id);
 
   if (updErr) {
+    if (String(updErr.message).includes("team_name")) {
+      return {
+        ok: false,
+        message:
+          "Team names are not enabled on the database yet. Ask the commissioner to run scripts/sql/auction-team-names.sql in Supabase.",
+      };
+    }
     return { ok: false, message: updErr.message };
   }
 
