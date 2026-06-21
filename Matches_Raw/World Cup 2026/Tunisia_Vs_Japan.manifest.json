@@ -1,0 +1,15 @@
+{
+  "match_id": 4667785,
+  "home_team": "Tunisia",
+  "away_team": "Japan",
+  "source_url": "https://www.fotmob.com/en-GB/matches/japan-vs-norway/1wumc8#4667785:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/Tunisia_Vs_Japan.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/japan-vs-norway/1wumc8",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/japan-vs-norway/1wumc8#4667785:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/japan-vs-norway/1wumc8#4667785:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/japan-vs-norway/1wumc8#4667785:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4667785"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
