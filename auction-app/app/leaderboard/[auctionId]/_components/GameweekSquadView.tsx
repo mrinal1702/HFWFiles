@@ -7,6 +7,7 @@ import {
   formatXiRoleLabel,
   xiRoleSortKey,
 } from "@/lib/best-xi-display";
+import { fantasyTeamLabel } from "@/lib/team-name";
 
 // ─── Column header ────────────────────────────────────────────────────────────
 
@@ -199,6 +200,7 @@ export function GameweekSquadView({
   }
 
   const selected = squads.find((s) => s.userId === selectedUserId) ?? squads[0];
+  const selectedTeamLabel = fantasyTeamLabel(selected.teamName, selected.name);
   const totalScore = selected.totalGwScore;
   const scoresUploaded = selected.players.some((p) => p.score !== null);
   const hasBestXiData = selected.players.some((p) => p.isBestXi !== null);
@@ -250,9 +252,15 @@ export function GameweekSquadView({
       {/* Score summary */}
       {totalScore !== null && (
         <div className="rounded-lg border border-slate-100 bg-slate-50 px-4 py-3">
+          <div className="mb-2">
+            <div className="text-base font-semibold text-slate-900">{selectedTeamLabel}</div>
+            {selected.teamName?.trim() && (
+              <div className="text-xs text-slate-500">{selected.name}</div>
+            )}
+          </div>
           <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
             <span className="text-sm text-slate-600">
-              {selected.name}&apos;s{activeGw ? ` ${activeGw.name}` : ""} Best XI score:{" "}
+              {activeGw ? `${activeGw.name}` : "Gameweek"} Best XI score:{" "}
             </span>
             <span className="font-mono text-lg font-bold text-slate-900">{totalScore} pts</span>
             {selected.formation && (
@@ -270,9 +278,15 @@ export function GameweekSquadView({
 
       {!hasBestXiData && scoresUploaded && rawSquadTotal !== null && rawSquadTotal > 0 && (
         <div className="rounded-lg border border-slate-100 bg-slate-50 px-4 py-3">
+          <div className="mb-2">
+            <div className="text-base font-semibold text-slate-900">{selectedTeamLabel}</div>
+            {selected.teamName?.trim() && (
+              <div className="text-xs text-slate-500">{selected.name}</div>
+            )}
+          </div>
           <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
             <span className="text-sm text-slate-600">
-              {selected.name}&apos;s{activeGw ? ` ${activeGw.name}` : ""} squad points so far:{" "}
+              {activeGw ? `${activeGw.name}` : "Gameweek"} squad points so far:{" "}
             </span>
             <span className="font-mono text-lg font-bold text-slate-900">{rawSquadTotal} pts</span>
           </div>

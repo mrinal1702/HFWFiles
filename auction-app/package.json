@@ -21,6 +21,7 @@
     "replace:auction-users": "node scripts/replace-auction-users.mjs",
     "setup:auction-squads": "node scripts/setup-auction-from-squads-csv.mjs",
     "setup:auction-gw": "node scripts/setup-auction-gw-state.mjs",
+    "apply:team-names": "node scripts/apply-team-name-migration.mjs",
     "import:players": "node scripts/import-master-player-list.mjs",
     "upsert:player-scores": "node scripts/upsert-player-scores-from-finalpoints.mjs",
     "validate:final-points": "python ../Tests/validate_final_points.py",

@@ -1,4 +1,5 @@
 import type { StandingEntry, GwInfo } from "@/lib/leaderboard-data";
+import { fantasyTeamLabel } from "@/lib/team-name";
 
 interface StandingsTableProps {
   standings: StandingEntry[];
@@ -22,7 +23,7 @@ export function StandingsTable({ standings, gameWeeks }: StandingsTableProps) {
         <thead className="border-b border-slate-200 bg-sky-50 text-slate-700">
           <tr>
             <th className="px-3 py-3 font-semibold">#</th>
-            <th className="px-3 py-3 font-semibold">Manager</th>
+            <th className="px-3 py-3 font-semibold">Team</th>
             {gameWeeks.map((gw) => (
               <th key={gw.id} className="px-3 py-3 text-right font-semibold">
                 {gw.name}
@@ -34,6 +35,8 @@ export function StandingsTable({ standings, gameWeeks }: StandingsTableProps) {
         <tbody>
           {standings.map((entry, idx) => {
             const isTop = entry.rank === 1;
+            const teamLabel = fantasyTeamLabel(entry.teamName, entry.name);
+            const showParticipant = Boolean(entry.teamName?.trim());
             return (
               <tr
                 key={entry.userId}
@@ -42,7 +45,12 @@ export function StandingsTable({ standings, gameWeeks }: StandingsTableProps) {
                 } ${isTop && hasScores ? "font-semibold" : ""}`}
               >
                 <td className="px-3 py-3 tabular-nums text-slate-500">{entry.rank}</td>
-                <td className="px-3 py-3 text-slate-900">{entry.name}</td>
+                <td className="px-3 py-3 text-slate-900">
+                  <div className="font-medium">{teamLabel}</div>
+                  {showParticipant && (
+                    <div className="text-xs font-normal text-slate-500">{entry.name}</div>
+                  )}
+                </td>
                 {gameWeeks.map((gw) => {
                   const score = entry.scoresByGwId[String(gw.id)];
                   return (

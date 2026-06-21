@@ -1,6 +1,8 @@
 export type AuctionUserRow = {
   id: number;
   name: string | null;
+  /** Optional fantasy team label for this auction; UI falls back to `name` when null. */
+  team_name: string | null;
   budget_remaining: number;
   active_budget: number;
   /** False until the manager uses their 1 paid release for the current GW window. Reset via SQL between GWs. */

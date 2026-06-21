@@ -9,6 +9,7 @@ import {
 import { getAuthUser } from "@/lib/auth/get-user";
 import { isGoalkeeperPosition } from "@/lib/bid-ui-messages";
 import type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
+import { fetchAuctionUsers } from "@/lib/auction-users-query";
 import { finalizeAuctionHardDeadline, finalizeExpiredLots } from "@/lib/bidding";
 import { createAdminClient } from "@/lib/supabase-server";
 
@@ -128,28 +129,19 @@ export const loadAuctionDashboard = cache(
 
   const [auctionRes, usersRes, lotsRes] = await Promise.all([
     admin.from("Auctions").select("id,name,hard_deadline_at,initiation_deadline_at,raise_deadline_at,is_active").eq("id", auctionId).maybeSingle(),
-    admin
-      .from("auction_users")
-      .select("id,name,budget_remaining,active_budget,paid_release_used,user_id")
-      .eq("auction_id", auctionId)
-      .order("id", { ascending: true }),
+    fetchAuctionUsers(admin, auctionId),
     fetchAllAuctionLots(admin, auctionId),
   ]);
 
   const auction = auctionRes.data as AuctionDashboard["auction"];
-  let users = (usersRes.data ?? []) as AuctionUserRow[];
+  let users = usersRes;
   let rawLots = lotsRes;
   const refetchAuctionState = async (): Promise<void> => {
     const [usersAgain, lotsAgain] = await Promise.all([
-      admin
-        .from("auction_users")
-        .select("id,name,budget_remaining,active_budget,paid_release_used,user_id")
-        .eq("auction_id", auctionId)
-        .order("id", { ascending: true }),
+      fetchAuctionUsers(admin, auctionId),
       fetchAllAuctionLots(admin, auctionId),
     ]);
-    if (usersAgain.error) throw new Error(`auction_users: ${usersAgain.error.message}`);
-    users = (usersAgain.data ?? []) as AuctionUserRow[];
+    users = usersAgain;
     rawLots = lotsAgain;
   };
 
@@ -284,7 +276,6 @@ export const loadAuctionDashboard = cache(
       : Promise.resolve({ data: [] as Record<string, unknown>[], error: null }),
   ]);
 
-  if (usersRes.error) throw new Error(`auction_users: ${usersRes.error.message}`);
   if (teamsForAuction.error) throw new Error(`auction_teams: ${teamsForAuction.error.message}`);
   if (bidsRes.error) throw new Error(`auction_bids: ${bidsRes.error.message}`);
 
