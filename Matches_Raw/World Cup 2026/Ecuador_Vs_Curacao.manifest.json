@@ -1,0 +1,15 @@
+{
+  "match_id": 4667779,
+  "home_team": "Ecuador",
+  "away_team": "Curacao",
+  "source_url": "https://www.fotmob.com/en-GB/matches/ecuador-vs-curacao/jy3jhs3",
+  "json_path": "Matches_Raw/World Cup 2026/Ecuador_Vs_Curacao.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/ecuador-vs-curacao/jy3jhs3",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/ecuador-vs-curacao/jy3jhs3#4667779:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/ecuador-vs-curacao/jy3jhs3#4667779:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/ecuador-vs-curacao/jy3jhs3#4667779:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4667779"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
