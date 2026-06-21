@@ -226,6 +226,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 2,
     rows: loadMatchScoreCsv("Turkiye_Paraguay_FinalPoints.csv"),
   },
+  {
+    slug: "netherlands-sweden",
+    title: "Netherlands vs Sweden",
+    subtitle: "World Cup 2026 · Group stage · GW2",
+    groupStageGw: 2,
+    rows: loadMatchScoreCsv("Netherlands_Sweden_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
