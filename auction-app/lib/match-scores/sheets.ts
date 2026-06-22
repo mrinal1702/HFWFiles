@@ -254,6 +254,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 2,
     rows: loadMatchScoreCsv("Tunisia_Japan_FinalPoints.csv"),
   },
+  {
+    slug: "spain-saudi-arabia",
+    title: "Spain vs Saudi Arabia",
+    subtitle: "World Cup 2026 · Group stage · GW2",
+    groupStageGw: 2,
+    rows: loadMatchScoreCsv("Spain_SaudiArabia_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {

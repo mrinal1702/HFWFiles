@@ -1,0 +1,15 @@
+{
+  "match_id": 4667801,
+  "home_team": "Spain",
+  "away_team": "Saudi Arabia",
+  "source_url": "https://www.fotmob.com/en-GB/matches/saudi-arabia-vs-austria/24p08q#4667801:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/Spain_Vs_SaudiArabia.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/saudi-arabia-vs-austria/24p08q",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/saudi-arabia-vs-austria/24p08q#4667801:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/saudi-arabia-vs-austria/24p08q#4667801:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/saudi-arabia-vs-austria/24p08q#4667801:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4667801"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
