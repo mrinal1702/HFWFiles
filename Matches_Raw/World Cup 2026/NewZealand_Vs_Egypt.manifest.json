@@ -1,0 +1,15 @@
+{
+  "match_id": 4667792,
+  "home_team": "New Zealand",
+  "away_team": "Egypt",
+  "source_url": "https://www.fotmob.com/en-GB/matches/czechia-vs-egypt/2wodxs#4667792:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/NewZealand_Vs_Egypt.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/czechia-vs-egypt/2wodxs",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/czechia-vs-egypt/2wodxs#4667792:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/czechia-vs-egypt/2wodxs#4667792:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/czechia-vs-egypt/2wodxs#4667792:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4667792"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
