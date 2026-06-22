@@ -1,0 +1,45 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+890503,Kevin Pina,5888,Cape Verde Islands,2,midfielder,37.844,-0.30000000000000027,2.3666666666666667,39.91066666666667,70.0,2,2,5.0,44.91066666666667
+496648,Diney Borges,5888,Cape Verde Islands,1,defender,38.07000000000001,3.0,3.0,44.07000000000001,90.0,2,2,0.0,44.07000000000001
+840212,Agustín Canobbio,5796,Uruguay,2,midfielder,33.702,0.7999999999999998,3.0,37.501999999999995,90.0,2,2,5.0,42.501999999999995
+1031656,Maxi Araújo,5796,Uruguay,2,midfielder,31.608,3.0,2.7,37.30800000000001,81.0,2,2,5.0,42.30800000000001
+620618,Rodrigo Bentancur,5796,Uruguay,2,midfielder,31.669999999999998,1.9,3.0,36.57,90.0,2,2,5.0,41.57
+230134,Roberto Lopes,5888,Cape Verde Islands,1,defender,34.43,3.0,3.0,40.43,90.0,2,2,0.0,40.43
+172615,Ryan Mendes,5888,Cape Verde Islands,3,forward,26.650000000000002,4.1,3.0,33.75,90.0,2,2,6.0,39.75
+1441786,Sidny Lopes Cabral,5888,Cape Verde Islands,1,defender,27.580000000000002,1.8,3.0,32.38,90.0,2,2,0.0,32.38
+743533,Federico Valverde,5796,Uruguay,2,midfielder,16.28,1.9,3.0,21.18,90.0,2,2,5.0,26.18
+729093,Mathías Olivera,5796,Uruguay,1,defender,19.820000000000004,3.0,3.0,25.820000000000004,90.0,2,2,0.0,25.820000000000004
+1524518,Hélio Varela,5888,Cape Verde Islands,3,forward,17.53333333333333,3.2,1.0666666666666667,21.799999999999997,32.0,1,0,0.5,22.299999999999997
+665167,Laros Duarte,5888,Cape Verde Islands,2,midfielder,16.032,3.0,0.6333333333333333,19.665333333333333,20.0,0,0,2.5,22.165333333333333
+680905,Jamiro Monteiro,5888,Cape Verde Islands,2,midfielder,12.564,1.9,2.6666666666666665,17.130666666666666,80.0,2,2,5.0,22.130666666666666
+1032811,Federico Viñas,5796,Uruguay,3,forward,7.9416666666666655,5.0,2.3333333333333335,15.275,70.0,2,2,6.0,21.275
+444000,Steven Moreira,5888,Cape Verde Islands,1,defender,14.970000000000004,3.0,3.0,20.970000000000006,90.0,2,2,0.0,20.970000000000006
+1020026,Sebastián Cáceres,5796,Uruguay,1,defender,14.66,3.0,3.0,20.66,90.0,2,2,0.0,20.66
+465614,Guillermo Varela,5796,Uruguay,1,defender,14.350000000000001,3.0,3.0,20.35,90.0,2,2,0.0,20.35
+798069,Deroy Duarte,5888,Cape Verde Islands,2,midfielder,10.661999999999999,3.0,1.5,15.161999999999999,44.0,1,0,4.5,19.662
+302912,Garry Rodrigues,5888,Cape Verde Islands,3,forward,8.083333333333334,5.0,1.9333333333333333,15.016666666666667,58.0,1,2,3.0,18.016666666666666
+1035614,Manuel Ugarte,5796,Uruguay,2,midfielder,7.464,3.0,2.3333333333333335,12.797333333333334,70.0,2,2,5.0,17.797333333333334
+1165477,Telmo Arcanjo,5888,Cape Verde Islands,3,forward,6.591666666666666,5.0,1.5,13.091666666666665,46.0,1,2,3.0,16.091666666666665
+671326,Nuno da Costa,5888,Cape Verde Islands,3,forward,9.675,2.3,1.0666666666666667,13.041666666666668,32.0,1,0,0.5,13.541666666666668
+1053963,Juan Sanabria,5796,Uruguay,1,defender,7.5,3.0,3.0,13.5,90.0,2,2,0.0,13.5
+1241302,Gilson Benchimol,5888,Cape Verde Islands,3,forward,3.083333333333333,5.0,1.9333333333333333,10.016666666666666,58.0,1,2,3.0,13.016666666666666
+950561,Darwin Núñez,5796,Uruguay,3,forward,9.475,5.0,0.6666666666666666,15.141666666666666,20.0,0,0,-2.5,12.641666666666666
+1205410,Yannick Semedo,5888,Cape Verde Islands,2,midfielder,6.36,3.0,0.3333333333333333,9.693333333333333,10.0,0,0,2.5,12.193333333333333
+751198,Nicolás de la Cruz,5796,Uruguay,2,midfielder,3.2419999999999995,3.0,0.6666666666666666,6.908666666666666,20.0,0,0,2.5,9.408666666666665
+941660,Brian Rodríguez,5796,Uruguay,3,forward,6.658333333333334,4.1,0.3,11.058333333333334,9.0,0,0,-2.5,8.558333333333334
+164062,Stopira,5888,Cape Verde Islands,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+474589,José Giménez,5796,Uruguay,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+840184,Matías Viña,5796,Uruguay,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+848034,Santiago Bueno,5796,Uruguay,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+861661,Joaquín Piquerez,5796,Uruguay,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+922877,Logan Costa,5888,Cape Verde Islands,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1175733,Kelvin Pires,5888,Cape Verde Islands,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1460591,Wagner Pina,5888,Cape Verde Islands,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1137909,Emiliano Martínez,5796,Uruguay,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1241301,João Paulo,5888,Cape Verde Islands,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+401095,Rodrigo Aguirre,5796,Uruguay,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+785716,Jovane Cabral,5888,Cape Verde Islands,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+873832,Willy Semedo,5888,Cape Verde Islands,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1070776,Rodrigo Zalazar,5796,Uruguay,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1073402,Facundo Pellistri,5796,Uruguay,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1309634,Dailon Livramento,5888,Cape Verde Islands,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

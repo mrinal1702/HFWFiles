@@ -1,0 +1,15 @@
+{
+  "match_id": 4667800,
+  "home_team": "Uruguay",
+  "away_team": "Cape Verde",
+  "source_url": "https://www.fotmob.com/en-GB/matches/uruguay-vs-cape-verde/14n97e#4667800:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/Uruguay_Vs_CapeVerde.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/uruguay-vs-cape-verde/14n97e",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/uruguay-vs-cape-verde/14n97e#4667800:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/uruguay-vs-cape-verde/14n97e#4667800:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/uruguay-vs-cape-verde/14n97e#4667800:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4667800"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
