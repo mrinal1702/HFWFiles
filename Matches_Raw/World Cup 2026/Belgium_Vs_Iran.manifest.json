@@ -1,0 +1,15 @@
+{
+  "match_id": 4667793,
+  "home_team": "Belgium",
+  "away_team": "Iran",
+  "source_url": "https://www.fotmob.com/en-GB/matches/iran-vs-czechia/1wumcc#4667793:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/Belgium_Vs_Iran.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/iran-vs-czechia/1wumcc",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/iran-vs-czechia/1wumcc#4667793:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/iran-vs-czechia/1wumcc#4667793:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/iran-vs-czechia/1wumcc#4667793:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4667793"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
