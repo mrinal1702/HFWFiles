@@ -282,6 +282,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 2,
     rows: loadMatchScoreCsv("NewZealand_Egypt_FinalPoints.csv"),
   },
+  {
+    slug: "argentina-austria",
+    title: "Argentina vs Austria",
+    subtitle: "World Cup 2026 · Group stage · GW2",
+    groupStageGw: 2,
+    rows: loadMatchScoreCsv("Argentina_Austria_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
