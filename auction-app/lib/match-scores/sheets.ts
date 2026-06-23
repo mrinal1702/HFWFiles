@@ -303,6 +303,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 2,
     rows: loadMatchScoreCsv("Norway_Senegal_FinalPoints.csv"),
   },
+  {
+    slug: "jordan-algeria",
+    title: "Jordan vs Algeria",
+    subtitle: "World Cup 2026 · Group stage · GW2",
+    groupStageGw: 2,
+    rows: loadMatchScoreCsv("Jordan_Algeria_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {

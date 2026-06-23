@@ -1,0 +1,15 @@
+{
+  "match_id": 4667814,
+  "home_team": "Jordan",
+  "away_team": "Algeria",
+  "source_url": "https://www.fotmob.com/en-GB/matches/jordan-vs-algeria/17tvf0#4667814:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/Jordan_Vs_Algeria.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/jordan-vs-algeria/17tvf0",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/jordan-vs-algeria/17tvf0#4667814:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/jordan-vs-algeria/17tvf0#4667814:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/jordan-vs-algeria/17tvf0#4667814:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4667814"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
