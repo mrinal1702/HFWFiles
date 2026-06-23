@@ -1,0 +1,15 @@
+{
+  "match_id": 4667807,
+  "home_team": "France",
+  "away_team": "Iraq",
+  "source_url": "https://www.fotmob.com/en-GB/matches/iraq-vs-france/1au1fo#4667807:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/France_Vs_Iraq.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/iraq-vs-france/1au1fo",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/iraq-vs-france/1au1fo#4667807:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/iraq-vs-france/1au1fo#4667807:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/iraq-vs-france/1au1fo#4667807:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4667807"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
