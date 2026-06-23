@@ -1,0 +1,15 @@
+{
+  "match_id": 4667806,
+  "home_team": "Norway",
+  "away_team": "Senegal",
+  "source_url": "https://www.fotmob.com/en-GB/matches/senegal-vs-norway/1tzewo#4667806:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/Norway_Vs_Senegal.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/senegal-vs-norway/1tzewo",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/senegal-vs-norway/1tzewo#4667806:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/senegal-vs-norway/1tzewo#4667806:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/senegal-vs-norway/1tzewo#4667806:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4667806"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

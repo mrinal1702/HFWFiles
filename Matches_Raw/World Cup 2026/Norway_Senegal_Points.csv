@@ -1,0 +1,47 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+737066,Erling Haaland,8492,Norway,3,forward,43.775,3.2,3.0,49.975,90.0,3,2,9.0,58.975
+303339,Sadio Mané,6395,Senegal,2,midfielder,45.166,3.0,3.0,51.166,90.0,2,3,3.0,54.166
+592102,Moussa Niakhaté,6395,Senegal,1,defender,37.53999999999999,3.0,3.0,43.53999999999999,90.0,2,3,-5.0,38.53999999999999
+771294,Ismaïla Sarr,6395,Senegal,2,midfielder,29.672,1.9,3.0,34.572,90.0,2,3,3.0,37.572
+534670,Martin Ødegaard,8492,Norway,2,midfielder,24.858,0.7999999999999998,3.0,28.658,90.0,3,2,7.0,35.658
+552718,Kristoffer Ajer,8492,Norway,1,defender,29.31,3.0,3.0,35.31,90.0,3,2,0.0,35.31
+1197347,Nicolas Jackson,6395,Senegal,3,forward,22.041666666666664,4.1,3.0,29.141666666666666,90.0,2,3,6.0,35.141666666666666
+540963,Sander Berge,8492,Norway,2,midfielder,22.759999999999998,0.7999999999999998,3.0,26.56,90.0,3,2,7.0,33.56
+935550,Torbjørn Heggem,8492,Norway,1,defender,21.82,3.0,2.8,27.62,84.0,3,1,5.0,32.620000000000005
+837061,Krépin Diatta,6395,Senegal,1,defender,30.74,3.0,3.0,36.739999999999995,90.0,2,3,-5.0,31.739999999999995
+935622,Marcus Holmgren Pedersen,8492,Norway,2,midfielder,19.062,1.9,2.5666666666666664,23.528666666666666,77.0,3,2,7.0,30.528666666666666
+179410,Idrissa Gana Gueye,6395,Senegal,2,midfielder,20.081999999999997,3.0,3.0,26.081999999999997,90.0,2,3,3.0,29.081999999999997
+1436305,Lamine Camara,6395,Senegal,2,midfielder,18.516,3.0,2.1,23.616,63.0,1,3,1.0,24.616
+530635,Patrick Berg,8492,Norway,2,midfielder,17.201999999999998,3.0,1.5,21.701999999999998,44.0,2,2,2.5,24.201999999999998
+1593857,Ibrahim Mbaye,6395,Senegal,3,forward,16.98333333333333,5.0,1.2,23.18333333333333,36.0,1,1,0.5,23.68333333333333
+1248482,Antonio Nusa,8492,Norway,3,forward,7.8999999999999995,4.1,2.3666666666666667,14.366666666666667,71.0,3,1,9.0,23.366666666666667
+440330,Alexander Sørloth,8492,Norway,3,forward,7.1583333333333306,2.3,2.8,12.25833333333333,84.0,3,1,9.0,21.25833333333333
+310768,Fredrik Aursnes,8492,Norway,2,midfielder,9.064,1.9,1.5,12.464,46.0,1,0,7.0,19.464
+1049679,David Møller Wolfe,8492,Norway,1,defender,12.570000000000002,3.0,3.0,18.57,90.0,3,2,0.0,18.57
+1451265,Malick Diouf,6395,Senegal,1,defender,13.0,3.0,1.8,17.8,54.0,1,2,0.0,17.8
+844544,Pape Gueye,6395,Senegal,2,midfielder,11.992,0.7999999999999998,1.8,14.592000000000002,54.0,1,2,3.0,17.592000000000002
+872396,Pathé Ciss,6395,Senegal,2,midfielder,7.746,3.0,0.9,11.646,27.0,1,0,4.5,16.146
+906945,Ismail Jakobs,6395,Senegal,1,defender,11.780000000000001,3.0,1.2,15.98,36.0,1,1,0.0,15.98
+659272,Julian Ryerson,8492,Norway,2,midfielder,7.442,3.0,0.43333333333333335,10.875333333333334,13.0,0,0,2.5,13.375333333333334
+1228558,Andreas Schjelderup,8492,Norway,3,forward,7.0,5.0,0.6333333333333333,12.633333333333333,19.0,0,1,-2.5,10.133333333333333
+1107280,Pape Sarr,6395,Senegal,2,midfielder,1.7919999999999996,3.0,0.6,5.3919999999999995,18.0,1,0,4.5,9.892
+740944,Leo Østigard,8492,Norway,1,defender,6.62,3.0,0.2,9.82,6.0,0,1,0.0,9.82
+1113790,Oscar Bobb,8492,Norway,3,forward,3.7,5.0,0.2,8.899999999999999,6.0,0,1,-2.5,6.399999999999999
+210428,Kalidou Koulibaly,6395,Senegal,1,defender,0.5499999999999997,3.0,2.4,5.949999999999999,72.0,1,3,-5.0,0.9499999999999993
+588626,Abdoulaye Seck,6395,Senegal,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+630228,Fredrik André Bjørkan,8492,Norway,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1110550,Henrik Falchener,8492,Norway,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1127585,Sondre Klingen Langås,8492,Norway,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1254147,Antoine Mendy,6395,Senegal,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1426170,Mamadou Sarr,6395,Senegal,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+439148,Morten Thorsby,8492,Norway,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+921921,Kristian Thorstvedt,8492,Norway,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1184468,Thelo Aasgaard,8492,Norway,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1285866,Habib Diarra,6395,Senegal,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1798782,Bara Ndiaye,6395,Senegal,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+741397,Jens Petter Hauge,8492,Norway,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+819972,Cherif Ndiaye,6395,Senegal,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+821100,Jørgen Strand Larsen,8492,Norway,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+965764,Iliman Ndiaye,6395,Senegal,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1230848,Bamba Dieng,6395,Senegal,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1434889,Assane Diao,6395,Senegal,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
