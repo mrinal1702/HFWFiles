@@ -327,6 +327,41 @@ export async function getActiveGameWeek(): Promise<GwInfo | null> {
   return { id: data.id as number, name: data.GW_Name as string };
 }
 
+/** Locked gameweek_squads rows for one auction/GW. */
+type RawSquadRow = {
+  auction_user_id: number;
+  player_id: string;
+  purchase_price: number;
+  is_best_xi: boolean | null;
+  xi_role?: string | null;
+};
+
+async function fetchGameweekSquadRows(
+  admin: ReturnType<typeof createAdminClient>,
+  auctionId: number,
+  gameWeekId: number,
+): Promise<RawSquadRow[]> {
+  const withXiRole = await admin
+    .from("gameweek_squads")
+    .select("auction_user_id, player_id, purchase_price, is_best_xi, xi_role")
+    .eq("auction_id", auctionId)
+    .eq("game_week_id", gameWeekId);
+
+  if (!withXiRole.error) return (withXiRole.data ?? []) as RawSquadRow[];
+
+  if (String(withXiRole.error.message).includes("xi_role")) {
+    const withoutXiRole = await admin
+      .from("gameweek_squads")
+      .select("auction_user_id, player_id, purchase_price, is_best_xi")
+      .eq("auction_id", auctionId)
+      .eq("game_week_id", gameWeekId);
+    if (withoutXiRole.error) throw new Error(`gameweek_squads: ${withoutXiRole.error.message}`);
+    return (withoutXiRole.data ?? []).map((row) => ({ ...row, xi_role: null }));
+  }
+
+  throw new Error(`gameweek_squads: ${withXiRole.error.message}`);
+}
+
 /**
  * Locked squad snapshots for one gameweek, enriched with player metadata
  * and individual scores from Player_Scores (auction-agnostic).
@@ -338,13 +373,9 @@ export async function getGameweekSquadData(
 ): Promise<ParticipantGwSquad[] | null> {
   const admin = createAdminClient();
 
-  const [users, squadsResInitial, lbRes] = await Promise.all([
+  const [users, squads, lbRes] = await Promise.all([
     fetchAuctionUserNames(admin, auctionId),
-    admin
-      .from("gameweek_squads")
-      .select("auction_user_id, player_id, purchase_price, is_best_xi, xi_role")
-      .eq("auction_id", auctionId)
-      .eq("game_week_id", gameWeekId),
+    fetchGameweekSquadRows(admin, auctionId, gameWeekId),
     admin
       .from("auction_leaderboard")
       .select("auction_user_id, total_score")
@@ -352,19 +383,8 @@ export async function getGameweekSquadData(
       .eq("game_week_id", gameWeekId),
   ]);
 
-  let squadsRes = squadsResInitial;
-  if (squadsRes.error && String(squadsRes.error.message).includes("xi_role")) {
-    squadsRes = await admin
-      .from("gameweek_squads")
-      .select("auction_user_id, player_id, purchase_price, is_best_xi")
-      .eq("auction_id", auctionId)
-      .eq("game_week_id", gameWeekId);
-  }
-
-  if (squadsRes.error) throw new Error(`gameweek_squads: ${squadsRes.error.message}`);
   if (lbRes.error) throw new Error(`auction_leaderboard: ${lbRes.error.message}`);
 
-  const squads = squadsRes.data ?? [];
   if (squads.length === 0) return null;
   const lbRows = lbRes.data ?? [];
 
@@ -398,15 +418,8 @@ export async function getGameweekSquadData(
   const teamNameById = new Map(users.map((u) => [u.id, u.team_name?.trim() || null]));
 
   // Group squad rows by user
-  type RawSquadRow = {
-    auction_user_id: number;
-    player_id: string;
-    purchase_price: number;
-    is_best_xi: boolean | null;
-    xi_role?: string | null;
-  };
   const byUser = new Map<number, RawSquadRow[]>();
-  for (const row of squads as RawSquadRow[]) {
+  for (const row of squads) {
     if (!byUser.has(row.auction_user_id)) byUser.set(row.auction_user_id, []);
     byUser.get(row.auction_user_id)!.push(row);
   }
