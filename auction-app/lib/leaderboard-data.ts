@@ -1,5 +1,6 @@
 import { createAdminClient } from "@/lib/supabase-server";
 import type { XiRole } from "@/lib/best-xi-display";
+import { parseXiRole } from "@/lib/best-xi-display";
 import { fetchAuctionUserNames } from "@/lib/auction-users-query";
 import { loadBestXiOverlay } from "@/lib/best-xi-overlay";
 
@@ -337,11 +338,11 @@ export async function getGameweekSquadData(
 ): Promise<ParticipantGwSquad[] | null> {
   const admin = createAdminClient();
 
-  const [users, squadsRes, lbRes] = await Promise.all([
+  const [users, squadsResInitial, lbRes] = await Promise.all([
     fetchAuctionUserNames(admin, auctionId),
     admin
       .from("gameweek_squads")
-      .select("auction_user_id, player_id, purchase_price, is_best_xi")
+      .select("auction_user_id, player_id, purchase_price, is_best_xi, xi_role")
       .eq("auction_id", auctionId)
       .eq("game_week_id", gameWeekId),
     admin
@@ -350,6 +351,15 @@ export async function getGameweekSquadData(
       .eq("auction_id", auctionId)
       .eq("game_week_id", gameWeekId),
   ]);
+
+  let squadsRes = squadsResInitial;
+  if (squadsRes.error && String(squadsRes.error.message).includes("xi_role")) {
+    squadsRes = await admin
+      .from("gameweek_squads")
+      .select("auction_user_id, player_id, purchase_price, is_best_xi")
+      .eq("auction_id", auctionId)
+      .eq("game_week_id", gameWeekId);
+  }
 
   if (squadsRes.error) throw new Error(`gameweek_squads: ${squadsRes.error.message}`);
   if (lbRes.error) throw new Error(`auction_leaderboard: ${lbRes.error.message}`);
@@ -393,6 +403,7 @@ export async function getGameweekSquadData(
     player_id: string;
     purchase_price: number;
     is_best_xi: boolean | null;
+    xi_role?: string | null;
   };
   const byUser = new Map<number, RawSquadRow[]>();
   for (const row of squads as RawSquadRow[]) {
@@ -408,6 +419,7 @@ export async function getGameweekSquadData(
 
     const players: GwSquadPlayer[] = rows.map((row) => {
       const meta = playerById.get(String(row.player_id));
+      const dbXiRole = row.is_best_xi ? parseXiRole(row.xi_role) : null;
       return {
         playerId: String(row.player_id),
         playerName: meta?.player_name ?? null,
@@ -416,7 +428,7 @@ export async function getGameweekSquadData(
         purchasePrice: row.purchase_price,
         score: scoreMap.get(String(row.player_id)) ?? null,
         isBestXi: row.is_best_xi ?? null,
-        xiRole: null,
+        xiRole: dbXiRole,
       };
     });
 
@@ -435,9 +447,9 @@ export async function getGameweekSquadData(
     for (const squad of result) {
       squad.formation = overlay.formationByUser.get(squad.userId) ?? null;
       for (const p of squad.players) {
-        if (p.isBestXi) {
-          p.xiRole = overlay.xiRoleByUserPlayer.get(`${squad.userId}:${p.playerId}`) ?? null;
-        }
+        if (!p.isBestXi) continue;
+        const overlayRole = overlay.xiRoleByUserPlayer.get(`${squad.userId}:${p.playerId}`) ?? null;
+        if (overlayRole) p.xiRole = overlayRole;
       }
     }
   }

@@ -3,9 +3,10 @@
 import { useState } from "react";
 import type { GwInfo, ParticipantGwSquad, GwSquadPlayer } from "@/lib/leaderboard-data";
 import {
+  compareXiPlayersForDisplay,
   formatListedPosition,
   formatXiRoleLabel,
-  xiRoleSortKey,
+  listedPositionSortKey,
 } from "@/lib/best-xi-display";
 import { fantasyTeamLabel } from "@/lib/team-name";
 
@@ -83,22 +84,20 @@ function PlayerRow({ player, showRole }: { player: GwSquadPlayer; showRole: bool
 
 // ─── Squad display ────────────────────────────────────────────────────────────
 
-function sortXiPlayers(a: GwSquadPlayer, b: GwSquadPlayer): number {
-  const ra = xiRoleSortKey(a.xiRole);
-  const rb = xiRoleSortKey(b.xiRole);
-  if (ra !== rb) return ra - rb;
-  return (b.score ?? 0) - (a.score ?? 0);
-}
-
 function SquadDisplay({ players, formation }: { players: GwSquadPlayer[]; formation: string | null }) {
   const hasBestXiData = players.some((p) => p.isBestXi !== null);
   const hasXiRoles = players.some((p) => p.isBestXi && p.xiRole);
 
   if (hasBestXiData) {
-    const xi = players.filter((p) => p.isBestXi === true).sort(sortXiPlayers);
+    const xi = players.filter((p) => p.isBestXi === true).sort(compareXiPlayersForDisplay);
     const bench = players
       .filter((p) => p.isBestXi === false)
-      .sort((a, b) => (b.score ?? -1) - (a.score ?? -1));
+      .sort((a, b) => {
+        const pa = listedPositionSortKey(a.position);
+        const pb = listedPositionSortKey(b.position);
+        if (pa !== pb) return pa - pb;
+        return (b.score ?? -1) - (a.score ?? -1);
+      });
 
     return (
       <div className="space-y-3">

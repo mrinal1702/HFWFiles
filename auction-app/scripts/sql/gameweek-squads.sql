@@ -19,6 +19,8 @@ create table if not exists public.gameweek_squads (
   purchase_price  int         not null,
   -- null = formation logic not yet run; true = in Best XI; false = bench
   is_best_xi      boolean,
+  -- GK / D / M / F when in Best XI; null on bench or before publish
+  xi_role         text,
   locked_at       timestamptz not null default now(),
   unique (auction_id, game_week_id, auction_user_id, player_id)
 );

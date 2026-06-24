@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 import type { XiRole } from "@/lib/best-xi-display";
+import { parseXiRole } from "@/lib/best-xi-display";
 
 export type { XiRole } from "@/lib/best-xi-display";
 
@@ -23,15 +24,6 @@ export type BestXiOverlay = {
   /** `${auctionUserId}:${playerId}` → formation slot role */
   xiRoleByUserPlayer: Map<string, XiRole>;
 };
-
-const VALID_ROLES = new Set<XiRole>(["GK", "D", "M", "F"]);
-
-function toXiRole(raw: string | null | undefined): XiRole | null {
-  const r = (raw ?? "").trim().toUpperCase();
-  if (r === "GK") return "GK";
-  if (VALID_ROLES.has(r as XiRole)) return r as XiRole;
-  return null;
-}
 
 /**
  * Display-only overlay from published Best XI JSON (formation + XI slot per player).
@@ -66,7 +58,7 @@ export function loadBestXiOverlay(auctionId: number, gameWeekId: number): BestXi
       xiRoleByUserPlayer.set(`${uid}:${gkId}`, "GK");
     }
     for (const o of m.outfield ?? []) {
-      const role = toXiRole(o.role);
+      const role = parseXiRole(o.role);
       if (role && role !== "GK") {
         xiRoleByUserPlayer.set(`${uid}:${o.player_id}`, role);
       }

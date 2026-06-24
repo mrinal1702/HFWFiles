@@ -3,7 +3,9 @@
  *
  * Writes:
  *   - gameweek_squads.is_best_xi  (true = Starting XI, false = bench)
+ *   - gameweek_squads.xi_role     (GK / D / M / F for Starting XI; null on bench)
  *   - auction_leaderboard.total_score  (Best XI total only)
+ *   - data/best-xi/auction-{id}-gw{gw}.json  (formation overlay for deploy)
  *
  * Usage:
  *   node scripts/publish-best-xi-from-json.mjs --auction-id 6 --gw-id 1
@@ -67,6 +69,27 @@ function parseArgs(argv) {
   return opts;
 }
 
+function roleMapForManager(manager) {
+  const map = new Map();
+  const gkId = manager.goalkeeper?.player_id;
+  if (gkId != null) map.set(String(gkId), "GK");
+  for (const o of manager.outfield ?? []) {
+    const r = String(o.role ?? "")
+      .trim()
+      .toUpperCase();
+    if (r === "D" || r === "M" || r === "F") map.set(String(o.player_id), r);
+  }
+  return map;
+}
+
+function copyOverlayJson(jsonPath, auctionId, gwId) {
+  const destDir = path.join(appRoot, "data", "best-xi");
+  fs.mkdirSync(destDir, { recursive: true });
+  const destPath = path.join(destDir, `auction-${auctionId}-gw${gwId}.json`);
+  fs.copyFileSync(jsonPath, destPath);
+  return destPath;
+}
+
 async function main() {
   loadEnvLocal();
   const opts = parseArgs(process.argv);
@@ -117,6 +140,9 @@ async function main() {
   const xiByUser = new Map(
     managers.map((m) => [Number(m.auction_user_id), new Set((m.best_xi_player_ids ?? []).map(String))]),
   );
+  const roleByUser = new Map(
+    managers.map((m) => [Number(m.auction_user_id), roleMapForManager(m)]),
+  );
 
   let xiUpdates = 0;
   const updatePlan = [];
@@ -126,9 +152,14 @@ async function main() {
       console.warn(`⚠️  No Best XI in JSON for auction_user_id=${uid} — skipping ${rows.length} rows`);
       continue;
     }
+    const roleMap = roleByUser.get(uid) ?? new Map();
     for (const row of rows) {
       const inXi = xiSet.has(String(row.player_id));
-      updatePlan.push({ id: row.id, is_best_xi: inXi });
+      updatePlan.push({
+        id: row.id,
+        is_best_xi: inXi,
+        xi_role: inXi ? (roleMap.get(String(row.player_id)) ?? null) : null,
+      });
       xiUpdates += 1;
     }
   }
@@ -154,14 +185,36 @@ async function main() {
     return;
   }
 
+  let wroteXiRole = true;
   for (const row of updatePlan) {
-    const { error } = await supabase
-      .from("gameweek_squads")
-      .update({ is_best_xi: row.is_best_xi })
-      .eq("id", row.id);
-    if (error) throw new Error(`gameweek_squads update id=${row.id}: ${error.message}`);
+    const payload = wroteXiRole
+      ? { is_best_xi: row.is_best_xi, xi_role: row.xi_role }
+      : { is_best_xi: row.is_best_xi };
+    const { error } = await supabase.from("gameweek_squads").update(payload).eq("id", row.id);
+    if (error) {
+      if (wroteXiRole && String(error.message).includes("xi_role")) {
+        wroteXiRole = false;
+        console.warn(
+          "⚠️  gameweek_squads.xi_role column missing — run scripts/sql/gameweek-squads-xi-role.sql, then re-publish for formation-slot order.",
+        );
+        const { error: retryErr } = await supabase
+          .from("gameweek_squads")
+          .update({ is_best_xi: row.is_best_xi })
+          .eq("id", row.id);
+        if (retryErr) throw new Error(`gameweek_squads update id=${row.id}: ${retryErr.message}`);
+        continue;
+      }
+      throw new Error(`gameweek_squads update id=${row.id}: ${error.message}`);
+    }
   }
-  console.log(`✅  Updated is_best_xi on ${xiUpdates} gameweek_squads rows`);
+  console.log(
+    wroteXiRole
+      ? `✅  Updated is_best_xi + xi_role on ${xiUpdates} gameweek_squads rows`
+      : `✅  Updated is_best_xi on ${xiUpdates} gameweek_squads rows`,
+  );
+
+  const overlayPath = copyOverlayJson(jsonPath, opts.auctionId, opts.gwId);
+  console.log(`✅  Copied formation overlay → ${overlayPath}`);
 
   const { error: lbDelErr } = await supabase
     .from("auction_leaderboard")
