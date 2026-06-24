@@ -111,8 +111,8 @@ export function StandingsTable({ standings, gameWeeks }: StandingsTableProps) {
             ))}
           </div>
           <p className="mt-2 text-xs text-slate-500">
-            Showing: {selectionLabel(gameWeeks, effectiveSelectedIds, selectAll)}. Position is
-            overall season rank; points are summed for the selected gameweeks only.
+            Showing: {selectionLabel(gameWeeks, effectiveSelectedIds, selectAll)}. Table order
+            follows filtered points; Position is overall season rank.
           </p>
         </div>
       )}
@@ -121,6 +121,7 @@ export function StandingsTable({ standings, gameWeeks }: StandingsTableProps) {
         <table className="w-full min-w-[20rem] border-collapse text-left text-sm">
           <thead className="border-b border-slate-200 bg-sky-50 text-slate-700">
             <tr>
+              <th className="w-8 px-2 py-3" aria-hidden="true" />
               <th className="px-3 py-3 font-semibold">Position</th>
               <th className="px-3 py-3 font-semibold">Team</th>
               <th className="px-3 py-3 text-right font-semibold">Points</th>
@@ -132,6 +133,7 @@ export function StandingsTable({ standings, gameWeeks }: StandingsTableProps) {
               const teamLabel = fantasyTeamLabel(entry.teamName, entry.name);
               const showParticipant = Boolean(entry.teamName?.trim());
               const showPoints = hasScores && effectiveSelectedIds.size > 0;
+              const rowIndex = idx + 1;
 
               return (
                 <tr
@@ -140,6 +142,7 @@ export function StandingsTable({ standings, gameWeeks }: StandingsTableProps) {
                     idx % 2 === 1 ? "bg-sky-50/40" : "bg-white"
                   } ${isLeader && showPoints ? "font-semibold" : ""}`}
                 >
+                  <td className="w-8 px-2 py-3 tabular-nums text-slate-400">{rowIndex}</td>
                   <td className="px-3 py-3 tabular-nums text-slate-500">{entry.rank}</td>
                   <td className="px-3 py-3 text-slate-900">
                     <div className="font-medium">{teamLabel}</div>
