@@ -1,0 +1,15 @@
+{
+  "match_id": 4667828,
+  "home_team": "England",
+  "away_team": "Ghana",
+  "source_url": "https://www.fotmob.com/en-GB/matches/ghana-vs-colombia/1uqlxk#4667828:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/England_Vs_Ghana.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/ghana-vs-colombia/1uqlxk",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/ghana-vs-colombia/1uqlxk#4667828:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/ghana-vs-colombia/1uqlxk#4667828:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/ghana-vs-colombia/1uqlxk#4667828:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4667828"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
