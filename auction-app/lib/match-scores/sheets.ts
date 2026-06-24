@@ -324,6 +324,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 2,
     rows: loadMatchScoreCsv("England_Ghana_FinalPoints.csv"),
   },
+  {
+    slug: "panama-croatia",
+    title: "Panama vs Croatia",
+    subtitle: "World Cup 2026 · Group stage · GW2",
+    groupStageGw: 2,
+    rows: loadMatchScoreCsv("Panama_Croatia_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
