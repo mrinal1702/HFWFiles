@@ -3,6 +3,7 @@ import type { XiRole } from "@/lib/best-xi-display";
 import { parseXiRole } from "@/lib/best-xi-display";
 import { fetchAuctionUserNames } from "@/lib/auction-users-query";
 import { loadBestXiOverlay } from "@/lib/best-xi-overlay";
+import { loadMatchPositionsForGameweek } from "@/lib/match-positions-for-gw";
 
 // ─── Shared types ─────────────────────────────────────────────────────────────
 
@@ -25,6 +26,8 @@ export type GwSquadPlayer = {
   playerId: string;
   playerName: string | null;
   position: string | null;
+  /** In-match scoring role for this gameweek (from FinalPoints); null if did not play */
+  matchPosition: string | null;
   club: string | null;
   purchasePrice: number;
   /** null = scores not uploaded yet for this player */
@@ -235,6 +238,8 @@ export async function getCurrentSquads(
     gameWeekId != null
       ? await fetchPlayerGameweekScores(admin, gameWeekId, playerIds)
       : new Map<string, number>();
+  const matchPosMap =
+    gameWeekId != null ? loadMatchPositionsForGameweek(gameWeekId) : new Map<string, string>();
 
   return users
     .filter((u) => byUser.has(u.id))
@@ -250,6 +255,7 @@ export async function getCurrentSquads(
           playerId: String(row.player_id),
           playerName: meta?.player_name ?? null,
           position: meta?.position ?? null,
+          matchPosition: matchPosMap.get(String(row.player_id)) ?? null,
           club: meta?.team_name ?? null,
           purchasePrice: row.purchase_price,
           score: scoreMap.get(String(row.player_id)) ?? null,
@@ -404,6 +410,7 @@ export async function getGameweekSquadData(
   );
 
   const scoreMap = await fetchPlayerGameweekScores(admin, gameWeekId, playerIds);
+  const matchPosMap = loadMatchPositionsForGameweek(gameWeekId);
 
   // Build total GW score lookup
   const totalScoreByUser = new Map<number, number>(
@@ -437,6 +444,7 @@ export async function getGameweekSquadData(
         playerId: String(row.player_id),
         playerName: meta?.player_name ?? null,
         position: meta?.position ?? null,
+        matchPosition: matchPosMap.get(String(row.player_id)) ?? null,
         club: meta?.team_name ?? null,
         purchasePrice: row.purchase_price,
         score: scoreMap.get(String(row.player_id)) ?? null,

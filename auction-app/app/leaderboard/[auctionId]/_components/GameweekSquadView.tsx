@@ -5,18 +5,31 @@ import type { GwInfo, ParticipantGwSquad, GwSquadPlayer } from "@/lib/leaderboar
 import {
   compareXiPlayersForDisplay,
   formatListedPosition,
+  formatMatchPosition,
   formatXiRoleLabel,
   listedPositionSortKey,
 } from "@/lib/best-xi-display";
 import { fantasyTeamLabel } from "@/lib/team-name";
 
+const POS_COL = "w-11 shrink-0 text-center text-[10px] font-semibold uppercase tracking-wide sm:w-12 sm:text-xs";
+
 // ─── Column header ────────────────────────────────────────────────────────────
 
 function SquadColumnHeader({ showRole }: { showRole: boolean }) {
   return (
-    <div className="flex items-center justify-between gap-2 border-b border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-slate-500">
+    <div className="flex items-center justify-between gap-1.5 border-b border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:gap-2">
       <span className="min-w-0 flex-1">Player</span>
-      {showRole && <span className="w-10 shrink-0 text-center">Role</span>}
+      <span className={POS_COL} title="Listed position">
+        Listed Pos
+      </span>
+      <span className={POS_COL} title="Match position">
+        Match Pos
+      </span>
+      {showRole && (
+        <span className={POS_COL} title="Best XI formation slot">
+          Role
+        </span>
+      )}
       <span className="w-10 shrink-0 text-right">Pts</span>
     </div>
   );
@@ -29,6 +42,12 @@ function roleLabelForPlayer(player: GwSquadPlayer): string | null {
   return formatListedPosition(player.position);
 }
 
+function PositionCell({ label }: { label: string | null }) {
+  return (
+    <span className={`${POS_COL} text-slate-500`}>{label ?? "—"}</span>
+  );
+}
+
 // ─── Player row ───────────────────────────────────────────────────────────────
 
 function PlayerRow({ player, showRole }: { player: GwSquadPlayer; showRole: boolean }) {
@@ -36,15 +55,12 @@ function PlayerRow({ player, showRole }: { player: GwSquadPlayer; showRole: bool
   const isBestXiKnown = player.isBestXi !== null;
   const inXI = player.isBestXi === true;
   const roleLabel = roleLabelForPlayer(player);
-  const flexSlot =
-    inXI &&
-    player.xiRole &&
-    player.xiRole !== "GK" &&
-    formatListedPosition(player.position) !== formatXiRoleLabel(player.xiRole);
+  const listedLabel = formatListedPosition(player.position);
+  const matchLabel = formatMatchPosition(player.matchPosition);
 
   return (
     <div
-      className={`flex items-center justify-between gap-2 px-3 py-2 text-sm ${
+      className={`flex items-center justify-between gap-1.5 px-3 py-2 text-sm sm:gap-2 ${
         isBestXiKnown && !inXI ? "opacity-50" : ""
       }`}
     >
@@ -57,20 +73,13 @@ function PlayerRow({ player, showRole }: { player: GwSquadPlayer; showRole: bool
             XI
           </span>
         )}
-        {flexSlot && (
-          <span className="ml-1 text-xs text-slate-400" title="Listed position differs from XI slot">
-            ({formatListedPosition(player.position)})
-          </span>
-        )}
         <span className="ml-2 text-xs text-slate-400">
           {player.club ?? "—"} · £{player.purchasePrice}
         </span>
       </div>
-      {showRole && (
-        <span className="w-10 shrink-0 text-center text-xs font-semibold uppercase tracking-wide text-slate-500">
-          {roleLabel ?? "—"}
-        </span>
-      )}
+      <PositionCell label={listedLabel} />
+      <PositionCell label={matchLabel} />
+      {showRole && <PositionCell label={roleLabel} />}
       <span
         className={`w-10 shrink-0 text-right font-mono text-sm font-semibold tabular-nums ${
           hasScore ? "text-slate-900" : "text-slate-300"
@@ -101,37 +110,41 @@ function SquadDisplay({ players, formation }: { players: GwSquadPlayer[]; format
 
     return (
       <div className="space-y-3">
-        <div className="overflow-hidden rounded-lg border border-sky-200 bg-sky-50/60">
-          <div className="border-b border-sky-200 bg-sky-100 px-3 py-1.5 flex items-center justify-between gap-2">
-            <span className="text-xs font-semibold uppercase tracking-wide text-sky-800">
-              Starting XI ({xi.length})
-            </span>
-            {formation && (
-              <span className="rounded bg-sky-200/80 px-2 py-0.5 text-xs font-bold tabular-nums text-sky-900">
-                {formation}
+        <div className="overflow-x-auto overflow-hidden rounded-lg border border-sky-200 bg-sky-50/60">
+          <div className="min-w-[20rem]">
+            <div className="border-b border-sky-200 bg-sky-100 px-3 py-1.5 flex items-center justify-between gap-2">
+              <span className="text-xs font-semibold uppercase tracking-wide text-sky-800">
+                Starting XI ({xi.length})
               </span>
-            )}
-          </div>
-          <SquadColumnHeader showRole={hasXiRoles} />
-          <div className="divide-y divide-sky-100">
-            {xi.map((p) => (
-              <PlayerRow key={p.playerId} player={p} showRole={hasXiRoles} />
-            ))}
+              {formation && (
+                <span className="rounded bg-sky-200/80 px-2 py-0.5 text-xs font-bold tabular-nums text-sky-900">
+                  {formation}
+                </span>
+              )}
+            </div>
+            <SquadColumnHeader showRole={hasXiRoles} />
+            <div className="divide-y divide-sky-100">
+              {xi.map((p) => (
+                <PlayerRow key={p.playerId} player={p} showRole={hasXiRoles} />
+              ))}
+            </div>
           </div>
         </div>
 
         {bench.length > 0 && (
-          <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
-            <div className="border-b border-slate-200 bg-slate-50 px-3 py-1.5">
-              <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Bench ({bench.length})
-              </span>
-            </div>
-            <SquadColumnHeader showRole />
-            <div className="divide-y divide-slate-100">
-              {bench.map((p) => (
-                <PlayerRow key={p.playerId} player={p} showRole />
-              ))}
+          <div className="overflow-x-auto overflow-hidden rounded-lg border border-slate-200 bg-white">
+            <div className="min-w-[20rem]">
+              <div className="border-b border-slate-200 bg-slate-50 px-3 py-1.5">
+                <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                  Bench ({bench.length})
+                </span>
+              </div>
+              <SquadColumnHeader showRole={false} />
+              <div className="divide-y divide-slate-100">
+                {bench.map((p) => (
+                  <PlayerRow key={p.playerId} player={p} showRole={false} />
+                ))}
+              </div>
             </div>
           </div>
         )}
@@ -156,12 +169,14 @@ function SquadDisplay({ players, formation }: { players: GwSquadPlayer[]; format
   });
 
   return (
-    <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
-      <SquadColumnHeader showRole={false} />
-      <div className="divide-y divide-slate-100">
-        {sorted.map((p) => (
-          <PlayerRow key={p.playerId} player={p} showRole={false} />
-        ))}
+    <div className="overflow-x-auto overflow-hidden rounded-lg border border-slate-200 bg-white">
+      <div className="min-w-[20rem]">
+        <SquadColumnHeader showRole={false} />
+        <div className="divide-y divide-slate-100">
+          {sorted.map((p) => (
+            <PlayerRow key={p.playerId} player={p} showRole={false} />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -269,8 +284,8 @@ export function GameweekSquadView({
             )}
           </div>
           <p className="mt-1 text-xs text-slate-500">
-            Role column shows where each player counted in the formation. Bench shows listed
-            position. Only Starting XI points count toward the total.
+            Listed Pos is the pool role. Match Pos is where the player was scored that gameweek.
+            Role is the Best XI formation slot. Only Starting XI points count toward the total.
           </p>
         </div>
       )}

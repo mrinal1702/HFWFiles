@@ -77,6 +77,11 @@ export function formatXiRoleLabel(role: XiRole): string {
   }
 }
 
+/** Short label for in-match scoring role (FinalPoints position column). */
+export function formatMatchPosition(position: string | null | undefined): string | null {
+  return formatListedPosition(position);
+}
+
 /** Short label for listed pool position (bench / fallback). */
 export function formatListedPosition(position: string | null | undefined): string | null {
   const p = (position ?? "").trim().toLowerCase();
