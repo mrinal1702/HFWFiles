@@ -354,6 +354,7 @@ export function BiddingRoomClient({
                   <li key={l.player_id}>
                     <Link
                       href={playerHref(l.player_id)}
+                      prefetch={false}
                       className={`block rounded-xl border border-sky-100 px-4 py-3 shadow-sm ${
                         i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
                       }`}
@@ -431,7 +432,7 @@ export function BiddingRoomClient({
                   <div className="flex flex-wrap items-start justify-between gap-2 gap-y-3">
                     <div className="min-w-0 flex-1">
                       <h3 className="text-base font-medium leading-snug text-slate-900">
-                        <Link href={playerHref(lot.player_id)} className="hover:underline">
+                        <Link href={playerHref(lot.player_id)} prefetch={false} className="hover:underline">
                           {lot.player_name ?? `Player #${lot.player_id}`}
                         </Link>
                       </h3>
@@ -524,6 +525,7 @@ export function BiddingRoomClient({
                       <td className="px-3 py-3 align-top text-slate-900">
                         <Link
                           href={playerHref(lot.player_id)}
+                          prefetch={false}
                           className="block truncate hover:underline"
                         >
                           {lot.player_name ?? `Player #${lot.player_id}`}
