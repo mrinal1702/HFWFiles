@@ -1,0 +1,15 @@
+{
+  "match_id": 4667821,
+  "home_team": "Colombia",
+  "away_team": "DR Congo",
+  "source_url": "https://www.fotmob.com/en-GB/matches/dr-congo-vs-colombia/1ra58w#4667821:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/Colombia_Vs_DRCongo.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/dr-congo-vs-colombia/1ra58w",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/dr-congo-vs-colombia/1ra58w#4667821:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/dr-congo-vs-colombia/1ra58w#4667821:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/dr-congo-vs-colombia/1ra58w#4667821:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4667821"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
