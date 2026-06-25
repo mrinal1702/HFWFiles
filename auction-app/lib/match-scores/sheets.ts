@@ -373,6 +373,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 3,
     rows: loadMatchScoreCsv("Czechia_Mexico_FinalPoints.csv"),
   },
+  {
+    slug: "south-africa-south-korea",
+    title: "South Africa vs South Korea",
+    subtitle: "World Cup 2026 · Group stage · GW3",
+    groupStageGw: 3,
+    rows: loadMatchScoreCsv("SouthAfrica_SouthKorea_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
