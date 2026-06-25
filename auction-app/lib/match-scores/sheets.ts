@@ -338,18 +338,28 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 2,
     rows: loadMatchScoreCsv("Colombia_DRCongo_FinalPoints.csv"),
   },
+  {
+    slug: "morocco-haiti",
+    title: "Morocco vs Haiti",
+    subtitle: "World Cup 2026 · Group stage · GW3",
+    groupStageGw: 3,
+    rows: loadMatchScoreCsv("Morocco_Haiti_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
   1: "Group Stage GW1",
   2: "Group Stage GW2",
+  3: "Group Stage GW3",
 };
 
-export const MATCH_SCORE_GROUPS: MatchScoreGroup[] = ([1, 2] as const).map((gw) => ({
-  gw,
-  label: GROUP_LABELS[gw],
-  sheets: MATCH_SCORE_SHEETS.filter((sheet) => sheet.groupStageGw === gw),
-}));
+export const MATCH_SCORE_GROUPS: MatchScoreGroup[] = ([1, 2, 3] as const)
+  .map((gw) => ({
+    gw,
+    label: GROUP_LABELS[gw],
+    sheets: MATCH_SCORE_SHEETS.filter((sheet) => sheet.groupStageGw === gw),
+  }))
+  .filter((group) => group.sheets.length > 0);
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
   return MATCH_SCORE_SHEETS.find((s) => s.slug === slug);

@@ -4,7 +4,7 @@ import type { GroupStageGw } from "@/lib/match-scores/types";
 import { MATCH_SCORE_SHEETS } from "@/lib/match-scores/sheets";
 
 function isGroupStageGw(gameWeekId: number): gameWeekId is GroupStageGw {
-  return gameWeekId === 1 || gameWeekId === 2;
+  return gameWeekId === 1 || gameWeekId === 2 || gameWeekId === 3;
 }
 
 /** player_id → in-match scoring role from FinalPoints (defender/midfielder/forward/goalkeeper). */
