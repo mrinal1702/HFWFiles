@@ -352,6 +352,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 3,
     rows: loadMatchScoreCsv("Scotland_Brazil_FinalPoints.csv"),
   },
+  {
+    slug: "switzerland-canada",
+    title: "Switzerland vs Canada",
+    subtitle: "World Cup 2026 · Group stage · GW3",
+    groupStageGw: 3,
+    rows: loadMatchScoreCsv("Switzerland_Canada_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
