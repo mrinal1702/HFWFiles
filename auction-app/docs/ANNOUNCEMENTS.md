@@ -6,7 +6,14 @@ Last updated: June 2026
 
 ## What it is
 
-The Announcements page is a **shared, read-only news feed** visible to every participant in an online auction. It surfaces three types of events in reverse-chronological order (most recent first):
+The Announcements page is a **shared, read-only news feed** visible to every participant in an online auction. It has two sections (top-level tabs):
+
+| Tab | Contents |
+|---|---|
+| **Activity** | Buys, voluntary releases, and transfers (filterable sub-tabs) |
+| **Elimination Releases** | World Cup knock-out refunds from `auction_elimination_refunds` — who received how much when a nation was eliminated |
+
+Activity tab event types:
 
 | Event type | Triggered by |
 |---|---|
@@ -34,6 +41,7 @@ Each announcement type has its own colour and icon to make the feed easy to scan
 |---|---|---|---|
 | Buy | Emerald green | Currency/coin | *"Trive signed Bruno Fernandes for £42m"* |
 | Release | Amber/orange | Exit-door arrow | *"Trive released Bruno Fernandes — paid release, £21m received back"* |
+| Elimination release | Rose/red | Warning triangle | *"Trive — Bruno Fernandes (Canada eliminated) — elimination release, £21m received back"* |
 | Transfer | Sky blue | Double arrows | Two-panel card: what each manager gave |
 
 Timestamps are shown on every card in the user's **local timezone**, formatted as `4 June 2026, 01:14 am` (en-GB locale, unambiguous month name).
@@ -56,6 +64,10 @@ Fields shown: buyer name, player name, position, price paid.
 
 The `auction_releases` audit table records every release with a `created_at` timestamp. Fields shown: releasing manager, player name, position, release type (`paid` / `free`), original purchase price, refund amount received.
 
+### Elimination release events — `auction_elimination_refunds`
+
+Commissioner-run knock-out refunds (see `WC_GROUP_STAGE_ELIMINATION_RO32.md`). Shown on the **Elimination Releases** tab only — not mixed into Activity. Fields shown: manager, player name, nation eliminated, position, original purchase price, refund amount. Ordered by `created_at` descending. Scoped to the current auction id.
+
 ### Transfer events — `auction_transfers`
 
 Only rows with `status = 'completed'` are shown. The `completed_at` column is used as the timestamp. Fields shown: both managers' names, players each side gave, cash each side gave, and the auto-generated `summary` text (as fallback for cash-only deals).
@@ -66,9 +78,11 @@ Only rows with `status = 'completed'` are shown. The `completed_at` column is us
 
 | File | Purpose |
 |---|---|
-| `lib/announcements.ts` | Server-only data layer. Fetches all three sources in parallel, enriches with player/manager names, merges, and sorts newest-first. |
-| `app/auctions/[auctionId]/announcements/page.tsx` | Server component. Calls `loadAnnouncements` and renders the card list. |
-| `app/auctions/[auctionId]/announcements/_components/BackButton.tsx` | Thin client component wrapping `router.back()`. |
+| `lib/announcements.ts` | Server-only data layer. `loadAnnouncements` for Activity; `loadEliminationReleases` for knock-out refunds. |
+| `app/auctions/[auctionId]/announcements/page.tsx` | Server component. Loads both feeds and renders tabbed UI. |
+| `app/auctions/[auctionId]/announcements/_components/AnnouncementsPageTabs.tsx` | Top-level Activity / Elimination Releases tabs. |
+| `app/auctions/[auctionId]/announcements/_components/AnnouncementsFeed.tsx` | Activity feed with buy/transfer/release filters. |
+| `app/auctions/[auctionId]/announcements/_components/EliminationReleasesFeed.tsx` | Elimination release cards (rose theme). |
 | `app/auctions/[auctionId]/layout.tsx` | Layout where the Announcements button was added to the header. |
 
 ---

@@ -44,6 +44,17 @@ export type TransferAnnouncement = {
 export type Announcement = BuyAnnouncement | ReleaseAnnouncement | TransferAnnouncement;
 export type AnnouncementFilter = "all" | "buy" | "release" | "transfer";
 
+export type EliminationRelease = {
+  timestamp: string;
+  playerId: string;
+  playerName: string | null;
+  playerPosition: string | null;
+  ownerName: string | null;
+  teamName: string;
+  purchasePrice: number;
+  refundAmount: number;
+};
+
 type BidRow = {
   player_id: string;
   auction_user_id: number;
@@ -323,4 +334,68 @@ export async function loadAnnouncements(auctionId: number): Promise<Announcement
   );
 
   return announcements;
+}
+
+export async function loadEliminationReleases(auctionId: number): Promise<EliminationRelease[]> {
+  const supabase = createAdminClient();
+
+  const { data: rows, error } = await supabase
+    .from("auction_elimination_refunds")
+    .select(
+      "player_id, auction_user_id, team_name, purchase_price, refund_amount, created_at",
+    )
+    .eq("auction_id", auctionId)
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    if (error.code === "PGRST205" || /auction_elimination_refunds/.test(error.message ?? "")) {
+      return [];
+    }
+    throw new Error(`auction_elimination_refunds: ${error.message}`);
+  }
+
+  const refunds = rows ?? [];
+  if (!refunds.length) return [];
+
+  const playerIds = [...new Set(refunds.map((r) => String(r.player_id)))];
+  const userIds = [...new Set(refunds.map((r) => r.auction_user_id as number))];
+
+  const [playersRes, usersRes] = await Promise.all([
+    supabase
+      .from("players")
+      .select("player_id, player_name, position")
+      .in("player_id", playerIds),
+    supabase.from("auction_users").select("id, name").in("id", userIds),
+  ]);
+
+  if (playersRes.error) throw new Error(`players: ${playersRes.error.message}`);
+  if (usersRes.error) throw new Error(`auction_users: ${usersRes.error.message}`);
+
+  const playerById = new Map<string, { player_name: string | null; position: string | null }>();
+  for (const p of playersRes.data ?? []) {
+    playerById.set(String(p.player_id), {
+      player_name: p.player_name,
+      position: p.position,
+    });
+  }
+
+  const userById = new Map<number, string | null>();
+  for (const u of usersRes.data ?? []) {
+    userById.set(u.id, u.name);
+  }
+
+  return refunds.map((row) => {
+    const pid = String(row.player_id);
+    const player = playerById.get(pid);
+    return {
+      timestamp: row.created_at as string,
+      playerId: pid,
+      playerName: player?.player_name ?? null,
+      playerPosition: player?.position ?? null,
+      ownerName: userById.get(row.auction_user_id as number) ?? null,
+      teamName: row.team_name as string,
+      purchasePrice: row.purchase_price as number,
+      refundAmount: row.refund_amount as number,
+    };
+  });
 }
