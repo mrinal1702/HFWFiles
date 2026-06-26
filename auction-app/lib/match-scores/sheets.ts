@@ -394,6 +394,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 3,
     rows: loadMatchScoreCsv("Ecuador_Germany_FinalPoints.csv"),
   },
+  {
+    slug: "tunisia-netherlands",
+    title: "Tunisia vs Netherlands",
+    subtitle: "World Cup 2026 · Group stage · GW3",
+    groupStageGw: 3,
+    rows: loadMatchScoreCsv("Tunisia_Netherlands_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
