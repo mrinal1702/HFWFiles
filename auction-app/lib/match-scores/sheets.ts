@@ -387,6 +387,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 3,
     rows: loadMatchScoreCsv("Curacao_IvoryCoast_FinalPoints.csv"),
   },
+  {
+    slug: "ecuador-germany",
+    title: "Ecuador vs Germany",
+    subtitle: "World Cup 2026 · Group stage · GW3",
+    groupStageGw: 3,
+    rows: loadMatchScoreCsv("Ecuador_Germany_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
