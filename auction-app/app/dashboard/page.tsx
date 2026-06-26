@@ -135,6 +135,20 @@ export default async function DashboardPage({
         )}
       </section>
 
+      <section className="mt-8 rounded-xl border border-violet-100 bg-white p-5 shadow-sm sm:p-6">
+        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Meme Builds</h2>
+        <p className="mt-2 text-sm leading-relaxed text-slate-600">
+          Assemble themed squads for fun — e.g. &ldquo;Man United &amp; ex-United XI&rdquo; — and see how
+          they score each gameweek. Saved in your browser; not part of any auction.
+        </p>
+        <Link
+          href="/meme-builds"
+          className="mt-4 inline-flex min-h-11 items-center rounded-lg bg-violet-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-violet-700"
+        >
+          Open meme builds →
+        </Link>
+      </section>
+
       <p className="mt-12 text-center text-sm sm:text-left">
         <Link href="/" className="text-slate-600 underline hover:text-slate-900">
           ← Back to home
