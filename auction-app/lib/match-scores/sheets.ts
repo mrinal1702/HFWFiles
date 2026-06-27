@@ -457,6 +457,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 3,
     rows: loadMatchScoreCsv("NewZealand_Belgium_FinalPoints.csv"),
   },
+  {
+    slug: "egypt-iran",
+    title: "Egypt vs Iran",
+    subtitle: "World Cup 2026 · Group stage · GW3",
+    groupStageGw: 3,
+    rows: loadMatchScoreCsv("Egypt_Iran_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
