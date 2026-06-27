@@ -443,6 +443,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 3,
     rows: loadMatchScoreCsv("CapeVerde_SaudiArabia_FinalPoints.csv"),
   },
+  {
+    slug: "uruguay-spain",
+    title: "Uruguay vs Spain",
+    subtitle: "World Cup 2026 · Group stage · GW3",
+    groupStageGw: 3,
+    rows: loadMatchScoreCsv("Uruguay_Spain_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
