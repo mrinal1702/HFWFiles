@@ -23,6 +23,7 @@ class GoalkeeperWeights(TypedDict, total=False):
     accurate_long_balls: float
     punches: float
     high_claim: float
+    saved_penalties: float
 
 
 class GoalkeeperFormulas(TypedDict, total=False):
@@ -39,6 +40,7 @@ GOALKEEPER_WEIGHTS: GoalkeeperWeights = {
     "accurate_long_balls": 0.3,
     "punches": 2.0,
     "high_claim": 2.4,
+    "saved_penalties": 6.0,
 }
 
 
@@ -58,6 +60,7 @@ GOALKEEPER_STAT_KEYS: dict[str, str] = {
     "accurate_long_balls": "accurate_long_balls",
     "punches": "punches",
     "high_claim": "high_claim",
+    "saved_penalties": "saved_penalties",
     "minutes_played": "minutes_played",
 }
 

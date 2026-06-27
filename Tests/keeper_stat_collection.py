@@ -29,6 +29,7 @@ KEY_INTERCEPTIONS = "interceptions"
 KEY_TACKLES = "matchstats.headers.tackles"
 KEY_PUNCHES = "punches"
 KEY_HIGH_CLAIM = "keeper_high_claim"
+KEY_SAVED_PENALTIES = "saved_penalties"
 
 
 def _safe_num(v: Any) -> float | int | None:
@@ -124,6 +125,7 @@ def keeper_stat_collection(match_data: dict[str, Any]) -> pd.DataFrame:
                 "accurate_long_balls_attempted": _t0(m, KEY_LONG_BALLS_ACCURATE),
                 "punches": _v0(m, KEY_PUNCHES),
                 "high_claim": _v0(m, KEY_HIGH_CLAIM),
+                "saved_penalties": _v0(m, KEY_SAVED_PENALTIES),
             }
         )
 
