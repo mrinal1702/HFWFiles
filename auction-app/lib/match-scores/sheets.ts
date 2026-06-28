@@ -485,6 +485,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 3,
     rows: loadMatchScoreCsv("Colombia_Portugal_FinalPoints.csv"),
   },
+  {
+    slug: "dr-congo-uzbekistan",
+    title: "DR Congo vs Uzbekistan",
+    subtitle: "World Cup 2026 · Group stage · GW3",
+    groupStageGw: 3,
+    rows: loadMatchScoreCsv("DRCongo_Uzbekistan_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {

@@ -3,6 +3,16 @@
  * See docs/AGENT_SCORING_LESSONS_GW1_RESCORE.md
  */
 
+/** Match Python 3 round() so keeper rows with .5 totals validate the same as Tests/validate_final_points.py */
+function roundLikePython(value) {
+  const rounded = Math.round(value);
+  if (Math.abs(value - rounded) === 0.5) {
+    const floor = Math.floor(value);
+    return floor % 2 === 0 ? floor : floor + 1;
+  }
+  return rounded;
+}
+
 /**
  * @param {Array<{
  *   player_name: string;
@@ -28,7 +38,7 @@ export function validateFinalPointsRows(rows) {
     }
 
     const rawTotal = stats + endow;
-    const expected = Math.max(0, Math.round(rawTotal));
+    const expected = Math.max(0, roundLikePython(rawTotal));
 
     if (rawTotal > 0.01 && final === 0) {
       errors.push(
