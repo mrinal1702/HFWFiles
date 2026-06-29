@@ -14,6 +14,10 @@ const RPC_ERROR_MESSAGES: Record<string, string> = {
   invalid_release_type: "Invalid release type.",
   player_not_owned: "You don't own this player.",
   paid_release_already_used: "You have already used your paid release this Game Week.",
+  paid_release_bidding_closed:
+    "Paid releases are only available while bidding is open. You can still release this player for free.",
+  player_nation_locked:
+    "This player's nation has passed its bidding deadline — they are locked in your squad and cannot be released.",
 };
 
 export async function releasePlayerAction(

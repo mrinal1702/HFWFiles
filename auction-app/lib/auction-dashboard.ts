@@ -10,7 +10,7 @@ import { getAuthUser } from "@/lib/auth/get-user";
 import { isGoalkeeperPosition } from "@/lib/bid-ui-messages";
 import type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
 import { fetchAuctionUsers } from "@/lib/auction-users-query";
-import { finalizeAuctionHardDeadline, finalizeExpiredLots } from "@/lib/bidding";
+import { finalizeAuctionHardDeadline, finalizeDueNationDeadlines, finalizeExpiredLots } from "@/lib/bidding";
 import { createAdminClient } from "@/lib/supabase-server";
 
 export type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
@@ -91,6 +91,8 @@ export type AuctionDashboard = {
     initiation_deadline_at: string | null;
     raise_deadline_at: string | null;
     is_active: boolean | null;
+    bidding_deadline_mode: string | null;
+    rolling_game_week_id: number | null;
   } | null;
   users: AuctionUserRow[];
   userById: Map<number, AuctionUserRow>;
@@ -104,6 +106,7 @@ export type AuctionDashboard = {
   initiationClosed: boolean;
   /** True once raise_deadline_at has passed — all bids must raise by at least 5. */
   raiseModeActive: boolean;
+  nationRollingMode: boolean;
   meRosterSlots: number;
   meGkCount: number;
 };
@@ -118,6 +121,7 @@ export function toBidGateContext(d: AuctionDashboard): BidGateContext {
     meGkCount: d.meGkCount,
     initiationClosed: d.initiationClosed,
     raiseModeActive: d.raiseModeActive,
+    nationRollingMode: d.nationRollingMode,
   };
 }
 
@@ -128,12 +132,19 @@ export const loadAuctionDashboard = cache(
   const actorMap = parseActorCookie(cookieStore.get(AUCTION_ACTOR_COOKIE)?.value);
 
   const [auctionRes, usersRes, lotsRes] = await Promise.all([
-    admin.from("Auctions").select("id,name,hard_deadline_at,initiation_deadline_at,raise_deadline_at,is_active").eq("id", auctionId).maybeSingle(),
+    admin
+      .from("Auctions")
+      .select(
+        "id,name,hard_deadline_at,initiation_deadline_at,raise_deadline_at,is_active,bidding_deadline_mode,rolling_game_week_id",
+      )
+      .eq("id", auctionId)
+      .maybeSingle(),
     fetchAuctionUsers(admin, auctionId),
     fetchAllAuctionLots(admin, auctionId),
   ]);
 
   const auction = auctionRes.data as AuctionDashboard["auction"];
+  const nationRollingMode = auction?.bidding_deadline_mode === "nation_rolling";
   let users = usersRes;
   let rawLots = lotsRes;
   const refetchAuctionState = async (): Promise<void> => {
@@ -150,10 +161,30 @@ export const loadAuctionDashboard = cache(
   const pastHard = Number.isFinite(hardMs) && now >= hardMs;
 
   const initiationMs = auction?.initiation_deadline_at ? Date.parse(auction.initiation_deadline_at) : NaN;
-  const initiationClosed = Number.isFinite(initiationMs) && now >= initiationMs;
+  const initiationClosed =
+    !nationRollingMode && Number.isFinite(initiationMs) && now >= initiationMs;
 
   const raiseMs = auction?.raise_deadline_at ? Date.parse(auction.raise_deadline_at) : NaN;
-  const raiseModeActive = Number.isFinite(raiseMs) && now >= raiseMs;
+  const raiseModeActive = !nationRollingMode && Number.isFinite(raiseMs) && now >= raiseMs;
+
+  if (nationRollingMode) {
+    const { data: nationFin, rpcError: nationFinErr } = await finalizeDueNationDeadlines(admin, {
+      auctionId,
+    });
+    if (nationFinErr) {
+      if (isMissingRpc(nationFinErr.message, "finalize_due_nation_deadlines")) {
+        console.error(
+          "[auction-dashboard] finalize_due_nation_deadlines missing; run scripts/sql/nation-rolling-bidding-rpc.sql",
+          nationFinErr.message,
+        );
+      } else {
+        throw new Error(`finalize_due_nation_deadlines: ${nationFinErr.message}`);
+      }
+    } else if (nationFin?.ok === true && nationFin.nations_processed > 0) {
+      await refetchAuctionState();
+    }
+  }
+
   const needsRollingFinalize =
     !pastHard &&
     rawLots.some((r) => {
@@ -187,6 +218,7 @@ export const loadAuctionDashboard = cache(
   }
 
   const needsHardFinalize =
+    !nationRollingMode &&
     pastHard &&
     auction != null &&
     rawLots.some((r) => {
@@ -321,11 +353,58 @@ export const loadAuctionDashboard = cache(
     });
   }
 
+  const nationDeadlineByTeam = new Map<string, { raise: string; hard: string }>();
+  if (nationRollingMode) {
+    const ndRes = await admin
+      .from("auction_nation_deadlines")
+      .select("team_name, raise_deadline_at, hard_deadline_at")
+      .eq("auction_id", auctionId);
+    if (ndRes.error) throw new Error(`auction_nation_deadlines: ${ndRes.error.message}`);
+    for (const row of ndRes.data ?? []) {
+      const r = row as { team_name: string; raise_deadline_at: string; hard_deadline_at: string };
+      nationDeadlineByTeam.set(String(r.team_name), {
+        raise: String(r.raise_deadline_at),
+        hard: String(r.hard_deadline_at),
+      });
+    }
+  }
+
+  function nationFieldsForClub(club: string | null | undefined): Pick<
+    EnrichedLot,
+    | "nation_name"
+    | "nation_raise_deadline_at"
+    | "nation_hard_deadline_at"
+    | "nation_bidding_closed"
+    | "nation_raise_mode_active"
+  > {
+    const nationName = club?.trim() || null;
+    if (!nationRollingMode || !nationName) {
+      return {
+        nation_name: nationName,
+        nation_raise_deadline_at: null,
+        nation_hard_deadline_at: null,
+        nation_bidding_closed: false,
+        nation_raise_mode_active: false,
+      };
+    }
+    const nd = nationDeadlineByTeam.get(nationName);
+    const nationHardMs = nd?.hard ? Date.parse(nd.hard) : NaN;
+    const nationRaiseMs = nd?.raise ? Date.parse(nd.raise) : NaN;
+    return {
+      nation_name: nationName,
+      nation_raise_deadline_at: nd?.raise ?? null,
+      nation_hard_deadline_at: nd?.hard ?? null,
+      nation_bidding_closed: Number.isFinite(nationHardMs) && now >= nationHardMs,
+      nation_raise_mode_active: Number.isFinite(nationRaiseMs) && now >= nationRaiseMs,
+    };
+  }
+
   const lots: EnrichedLot[] = rawLots.map((l: Record<string, unknown>) => {
     const pid = String(l.player_id);
     const meta = playerById.get(pid);
     const status = String(l.status);
     const soldTo = status === "sold" ? winnerByPlayer.get(pid) : undefined;
+    const nationFields = nationFieldsForClub(meta?.club);
 
     if (soldTo != null) {
       const bidderUser = userById.get(soldTo.auction_user_id);
@@ -340,6 +419,7 @@ export const loadAuctionDashboard = cache(
         high_bidder_id: soldTo.auction_user_id,
         high_bidder_name: bidderUser?.name ?? null,
         high_amount: soldTo.purchase_price,
+        ...nationFields,
       };
     }
 
@@ -357,6 +437,7 @@ export const loadAuctionDashboard = cache(
       high_bidder_id: bid?.auction_user_id ?? null,
       high_bidder_name: bidder?.name ?? null,
       high_amount: bid?.amount ?? null,
+      ...nationFields,
     };
   });
 
@@ -399,6 +480,7 @@ export const loadAuctionDashboard = cache(
     biddingClosedReason,
     initiationClosed,
     raiseModeActive,
+    nationRollingMode,
     meRosterSlots,
     meGkCount,
   };

@@ -22,6 +22,9 @@ const MESSAGES: Record<PlaceBidErrorCode, string> = {
   outfield_cap: "You've hit the outfield player limit for your roster.",
   insufficient_active_budget:
     "That bid is more than your available budget right now (winning bids count against what you can spend until things settle).",
+  nation_deadline_passed:
+    "Bidding for this nation has ended — those players are locked in squads for this round.",
+  nation_not_in_round: "This player is not available in the current knockout round.",
 };
 
 export function placeBidErrorMessage(code: string): string {

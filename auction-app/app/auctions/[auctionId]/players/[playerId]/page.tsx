@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { loadAuctionDashboardForViewer, toBidGateContext } from "@/lib/auction-dashboard";
-import { getBidDisabledReason } from "@/lib/auction-bid-gates";
+import { getBidDisabledReason, lotRaiseModeActive } from "@/lib/auction-bid-gates";
 import { nextMinimumBidAmount } from "@/lib/bid-ui-messages";
 
 import { BidRowForm } from "@/app/auctions/_components/BidRowForm";
@@ -63,7 +63,7 @@ export default async function PlayerDetailPage({
   const highBidderDisplay = lot.high_bidder_name ?? (lot.high_bidder_id != null ? `#${lot.high_bidder_id}` : "—");
   const showTimer = lot.status === "bidding" && !gate.biddingClosed && lot.expires_at != null;
 
-  const minBid = nextMinimumBidAmount(lot.high_amount, gate.raiseModeActive);
+  const minBid = nextMinimumBidAmount(lot.high_amount, lotRaiseModeActive(lot, gate));
   const disabledReason = getBidDisabledReason(lot, gate);
 
   const returnToRaw = searchParams ? (await searchParams).returnTo : undefined;

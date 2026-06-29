@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 
-import { getBidDisabledReason } from "@/lib/auction-bid-gates";
+import { getBidDisabledReason, lotRaiseModeActive } from "@/lib/auction-bid-gates";
 import { lotRowAnchorId } from "@/lib/lot-row-anchor";
 import { nextMinimumBidAmount, positionSortRank } from "@/lib/bid-ui-messages";
 import type { BidGateContext, EnrichedLot } from "@/lib/auction-types";
@@ -45,7 +45,7 @@ function bidDeadlineMs(lot: EnrichedLot): number | null {
 
 /** Default sort: 0 = active bidding, 1 = unsold (incl. closed bidding), 2 = sold. */
 function defaultSortTier(lot: EnrichedLot, biddingClosed: boolean): 0 | 1 | 2 {
-  if (lot.status === "bidding" && !biddingClosed) return 0;
+  if (lot.status === "bidding" && !biddingClosed && !lot.nation_bidding_closed) return 0;
   if (lot.status === "sold") return 2;
   return 1;
 }
@@ -412,7 +412,7 @@ export function BiddingRoomClient({
           <div className="space-y-3 md:hidden">
             {filtered.map((lot, i) => {
               const disabledReason = getBidDisabledReason(lot, gate);
-              const minBid = nextMinimumBidAmount(lot.high_amount, gate.raiseModeActive);
+              const minBid = nextMinimumBidAmount(lot.high_amount, lotRaiseModeActive(lot, gate));
               const highDisplay =
                 lot.status === "sold"
                   ? (lot.high_amount != null ? String(lot.high_amount) : "—")
@@ -507,7 +507,7 @@ export function BiddingRoomClient({
               <tbody>
                 {filtered.map((lot, i) => {
                   const disabledReason = getBidDisabledReason(lot, gate);
-                  const minBid = nextMinimumBidAmount(lot.high_amount, gate.raiseModeActive);
+                  const minBid = nextMinimumBidAmount(lot.high_amount, lotRaiseModeActive(lot, gate));
                   const highDisplay =
                     lot.status === "sold"
                       ? (lot.high_amount != null ? String(lot.high_amount) : "—")

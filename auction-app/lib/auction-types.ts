@@ -23,6 +23,14 @@ export type EnrichedLot = {
   high_bidder_id: number | null;
   high_bidder_name: string | null;
   high_amount: number | null;
+  /** Nation (players.team_name) for rolling deadline mode. */
+  nation_name: string | null;
+  nation_raise_deadline_at: string | null;
+  nation_hard_deadline_at: string | null;
+  /** True when nation hard deadline passed (rolling mode). */
+  nation_bidding_closed: boolean;
+  /** Per-lot +5 raise rule (rolling mode uses nation raise deadline). */
+  nation_raise_mode_active: boolean;
 };
 
 /** Serializable subset for client bid eligibility checks. */
@@ -37,4 +45,6 @@ export type BidGateContext = {
   initiationClosed: boolean;
   /** True once raise_deadline_at has passed — all bids must raise by at least 5. */
   raiseModeActive: boolean;
+  /** nation_rolling auctions use per-lot nation deadlines instead of global initiation/raise. */
+  nationRollingMode: boolean;
 };

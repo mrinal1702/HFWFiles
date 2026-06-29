@@ -11,6 +11,10 @@ interface ReleaseButtonProps {
   playerName: string;
   purchasePrice: number;
   paidReleaseUsed: boolean;
+  /** False after the hard deadline (or when auction is paused). */
+  biddingOpen: boolean;
+  /** Nation rolling: player locked after nation hard deadline. */
+  releaseLocked?: boolean;
 }
 
 export function ReleaseButton({
@@ -19,7 +23,18 @@ export function ReleaseButton({
   playerName,
   purchasePrice,
   paidReleaseUsed,
+  biddingOpen,
+  releaseLocked = false,
 }: ReleaseButtonProps) {
+  if (releaseLocked) {
+    return (
+      <span className="rounded border border-slate-200 bg-slate-100 px-2 py-1 text-xs font-medium text-slate-500">
+        Locked
+      </span>
+    );
+  }
+
+  const paidReleaseAvailable = biddingOpen && !paidReleaseUsed;
   const [open, setOpen] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
@@ -69,7 +84,7 @@ export function ReleaseButton({
           <div className="w-full max-w-sm rounded-xl bg-white p-6 shadow-xl">
             <h3 className="text-base font-semibold text-slate-900">{playerName}</h3>
 
-            {!paidReleaseUsed ? (
+            {paidReleaseAvailable ? (
               <>
                 <p className="mt-3 text-sm leading-relaxed text-slate-700">
                   You only get half price back on 1 release per Game Week. How do you want to
@@ -111,7 +126,9 @@ export function ReleaseButton({
             ) : (
               <>
                 <p className="mt-3 text-sm leading-relaxed text-slate-700">
-                  You have used your paid release. Do you want to release this player for free?
+                  {!biddingOpen
+                    ? "Bidding is closed — paid releases are not available. Do you want to release this player for free?"
+                    : "You have used your paid release. Do you want to release this player for free?"}
                 </p>
 
                 {error && <p className="mt-3 text-sm font-medium text-red-700">{error}</p>}

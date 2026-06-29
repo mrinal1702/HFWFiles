@@ -1,7 +1,7 @@
 import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
 import {
   getLeaderboardData,
-  getActiveGameWeek,
+  getActiveGameWeekForAuction,
   getLockedGameWeeksForAuction,
   resolveGameweekPanel,
 } from "@/lib/leaderboard-data";
@@ -20,7 +20,7 @@ export default async function LeaderboardPage({
   const [d, { standings, gameWeeks }, activeGw, lockedGws] = await Promise.all([
     loadAuctionDashboardForViewer(auctionId),
     getLeaderboardData(auctionId),
-    getActiveGameWeek(),
+    getActiveGameWeekForAuction(auctionId),
     getLockedGameWeeksForAuction(auctionId),
   ]);
 

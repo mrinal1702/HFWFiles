@@ -59,6 +59,7 @@ export default async function MyTeamPage({
   }
 
   const paidReleaseUsed = d.me.paid_release_used;
+  const biddingOpen = !d.biddingClosed;
 
   const byPlayer = new Map(d.lots.map((l) => [l.player_id, l]));
   const rows = (data ?? []) as TeamRow[];
@@ -139,6 +140,8 @@ export default async function MyTeamPage({
                               playerName={t.meta?.player_name ?? "this player"}
                               purchasePrice={t.purchase_price}
                               paidReleaseUsed={paidReleaseUsed}
+                              biddingOpen={biddingOpen}
+                              releaseLocked={t.meta?.nation_bidding_closed ?? false}
                             />
                           </div>
                         </div>
@@ -189,6 +192,8 @@ export default async function MyTeamPage({
                             playerName={t.meta?.player_name ?? "this player"}
                             purchasePrice={t.purchase_price}
                             paidReleaseUsed={paidReleaseUsed}
+                            biddingOpen={biddingOpen}
+                            releaseLocked={t.meta?.nation_bidding_closed ?? false}
                           />
                         </td>
                       </tr>

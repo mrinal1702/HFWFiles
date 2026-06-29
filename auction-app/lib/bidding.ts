@@ -23,7 +23,9 @@ export type PlaceBidErrorCode =
   | "roster_full"
   | "goalkeeper_cap"
   | "outfield_cap"
-  | "insufficient_active_budget";
+  | "insufficient_active_budget"
+  | "nation_deadline_passed"
+  | "nation_not_in_round";
 
 export type PlaceBidSuccess = {
   ok: true;
@@ -163,6 +165,61 @@ export async function finalizeAuctionHardDeadline(
  * Pre-hard-deadline rolling settlement: finalizes only lots whose expires_at is in the past.
  * Safe to call on refresh; it is idempotent for already-finalized lots.
  */
+export type FinalizeDueNationDeadlinesFailure = {
+  ok: false;
+  error: "auction_not_found" | "not_nation_rolling";
+};
+
+export type FinalizeDueNationDeadlinesSuccess = {
+  ok: true;
+  nations_processed: number;
+  lots_sold: number;
+  lots_unsold: number;
+  processed_at: string;
+};
+
+export type FinalizeDueNationDeadlinesResult =
+  | FinalizeDueNationDeadlinesSuccess
+  | FinalizeDueNationDeadlinesFailure;
+
+export async function finalizeDueNationDeadlines(
+  supabase: SupabaseClient,
+  params: { auctionId: number },
+): Promise<{ data: FinalizeDueNationDeadlinesResult | null; rpcError: Error | null }> {
+  const { data, error } = await supabase.rpc("finalize_due_nation_deadlines", {
+    p_auction_id: params.auctionId,
+  });
+
+  if (error) {
+    return { data: null, rpcError: error };
+  }
+
+  if (!isRecord(data)) {
+    return { data: null, rpcError: new Error("finalize_due_nation_deadlines returned non-object") };
+  }
+
+  if (data.ok !== true) {
+    return {
+      data: {
+        ok: false,
+        error: String(data.error ?? "unknown") as FinalizeDueNationDeadlinesFailure["error"],
+      },
+      rpcError: null,
+    };
+  }
+
+  return {
+    data: {
+      ok: true,
+      nations_processed: Number(data.nations_processed ?? 0),
+      lots_sold: Number(data.lots_sold ?? 0),
+      lots_unsold: Number(data.lots_unsold ?? 0),
+      processed_at: String(data.processed_at ?? ""),
+    },
+    rpcError: null,
+  };
+}
+
 export async function finalizeExpiredLots(
   supabase: SupabaseClient,
   params: { auctionId: number },

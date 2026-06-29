@@ -1,9 +1,18 @@
 import { isGoalkeeperPosition } from "@/lib/bid-ui-messages";
 import type { BidGateContext, EnrichedLot } from "@/lib/auction-types";
 
+export function lotRaiseModeActive(lot: EnrichedLot, ctx: BidGateContext): boolean {
+  if (ctx.nationRollingMode) return lot.nation_raise_mode_active;
+  return ctx.raiseModeActive;
+}
+
 export function getBidDisabledReason(lot: EnrichedLot, ctx: BidGateContext): string | null {
   if (ctx.biddingClosed) {
     return ctx.biddingClosedReason ?? "Bidding has ended.";
+  }
+  if (lot.nation_bidding_closed) {
+    const nation = lot.nation_name ?? "This nation";
+    return `Bidding for ${nation} players has ended — those players are locked in your squad.`;
   }
   if (ctx.viewerMode || !ctx.me) {
     return "Join this auction (or pick your manager seat) to place bids.";
@@ -22,7 +31,7 @@ export function getBidDisabledReason(lot: EnrichedLot, ctx: BidGateContext): str
 
   const selfLeading = lot.high_bidder_id === ctx.me.id && lot.status === "bidding";
   if (!selfLeading) {
-    if (lot.status === "uninitiated" && ctx.initiationClosed) {
+    if (lot.status === "uninitiated" && ctx.initiationClosed && !ctx.nationRollingMode) {
       return "The window for starting bids on new players has closed — you can still raise on players that are already in play.";
     }
     if (ctx.meRosterSlots >= 18) {

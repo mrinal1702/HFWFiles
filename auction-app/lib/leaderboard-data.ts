@@ -320,6 +320,34 @@ export async function resolveGameweekPanel(
   return { gw, squads: null, squadsAreLocked: false };
 }
 
+/** Active gameweek for an auction (rolling trials use rolling_game_week_id, not global Is_Active). */
+export async function getActiveGameWeekForAuction(auctionId: number): Promise<GwInfo | null> {
+  const admin = createAdminClient();
+
+  const auctionRes = await admin
+    .from("Auctions")
+    .select("bidding_deadline_mode, rolling_game_week_id")
+    .eq("id", auctionId)
+    .maybeSingle();
+  if (auctionRes.error) throw new Error(`Auctions: ${auctionRes.error.message}`);
+
+  const mode = auctionRes.data?.bidding_deadline_mode as string | null;
+  const rollingGwId = auctionRes.data?.rolling_game_week_id as number | null;
+
+  if (mode === "nation_rolling" && rollingGwId != null) {
+    const gwRes = await admin
+      .from("Game_Weeks")
+      .select("id, GW_Name")
+      .eq("id", rollingGwId)
+      .maybeSingle();
+    if (gwRes.error) throw new Error(`Game_Weeks: ${gwRes.error.message}`);
+    if (!gwRes.data) return null;
+    return { id: gwRes.data.id as number, name: gwRes.data.GW_Name as string };
+  }
+
+  return getActiveGameWeek();
+}
+
 /** Active gameweek from Game_Weeks where Is_Active = true. */
 export async function getActiveGameWeek(): Promise<GwInfo | null> {
   const admin = createAdminClient();
