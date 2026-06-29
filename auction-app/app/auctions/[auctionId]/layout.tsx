@@ -3,10 +3,12 @@ import { notFound, redirect } from "next/navigation";
 
 import { PlayingAsTeamName } from "@/app/auctions/_components/PlayingAsTeamName";
 import { AuctionDeadlines } from "@/app/auctions/_components/AuctionDeadlines";
+import { NationRollingDeadlinesButton } from "@/app/auctions/_components/NationRollingDeadlinesButton";
 import { AuctionNav } from "@/app/auctions/_components/AuctionNav";
 import { RefreshButton } from "@/app/auctions/_components/RefreshButton";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadAuctionDashboard } from "@/lib/auction-dashboard";
+import { loadNationDeadlinesForAuction } from "@/lib/nation-deadlines-data";
 
 export const dynamic = "force-dynamic";
 
@@ -36,6 +38,10 @@ export default async function AuctionLayout({
     redirect("/dashboard?error=not_member");
   }
 
+  const nationDeadlines = d.nationRollingMode
+    ? await loadNationDeadlinesForAuction(auctionId)
+    : [];
+
   return (
     <div className="mx-auto max-w-6xl flex-1 px-4 py-4 sm:px-6 sm:py-6">
       <header className="mb-5 space-y-4 sm:mb-6">
@@ -45,14 +51,27 @@ export default async function AuctionLayout({
               {d.auction.name ?? `Auction #${auctionId}`}
             </h1>
             <div className="mt-2">
-              <AuctionDeadlines
-                initiationDeadlineAt={d.auction.initiation_deadline_at}
-                raiseDeadlineAt={d.auction.raise_deadline_at}
-                hardDeadlineAt={d.auction.hard_deadline_at}
-              />
+              {d.nationRollingMode ? (
+                <p className="text-sm text-slate-600">
+                  Rolling nation deadlines — use the{" "}
+                  <span className="font-medium text-slate-800">Deadlines</span> button for the full schedule.
+                </p>
+              ) : (
+                <AuctionDeadlines
+                  initiationDeadlineAt={d.auction.initiation_deadline_at}
+                  raiseDeadlineAt={d.auction.raise_deadline_at}
+                  hardDeadlineAt={d.auction.hard_deadline_at}
+                />
+              )}
             </div>
           </div>
           <div className="flex flex-shrink-0 flex-wrap items-center gap-3">
+            {d.nationRollingMode && (
+              <NationRollingDeadlinesButton
+                deadlines={nationDeadlines}
+                finalHardDeadlineAt={d.auction.hard_deadline_at}
+              />
+            )}
             <Link href="/dashboard" className="text-sm font-medium text-sky-700 underline hover:text-sky-900">
               Dashboard
             </Link>
