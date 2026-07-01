@@ -45,6 +45,9 @@ export function parseFinalPointsCsv(csvText: string): MatchScoreRow[] {
     const cols = parseCsvLine(lines[i]);
     if (cols.length < 7) continue;
 
+    const hasShootout = cols.length >= 8;
+    const finalScoreCol = hasShootout ? 7 : 6;
+
     rows.push({
       playerName: cols[0],
       playerId: cols[1],
@@ -52,7 +55,7 @@ export function parseFinalPointsCsv(csvText: string): MatchScoreRow[] {
       position: cols[3],
       statsScore: Number(cols[4]),
       endowmentScore: Number(cols[5]),
-      finalScore: Number(cols[6]),
+      finalScore: Number(cols[finalScoreCol]),
     });
   }
 

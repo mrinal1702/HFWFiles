@@ -520,6 +520,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 4,
     rows: loadMatchScoreCsv("Brazil_Japan_FinalPoints.csv"),
   },
+  {
+    slug: "germany-paraguay",
+    title: "Germany vs Paraguay",
+    subtitle: "World Cup 2026 · Round of 32",
+    groupStageGw: 4,
+    rows: loadMatchScoreCsv("Germany_Paraguay_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
