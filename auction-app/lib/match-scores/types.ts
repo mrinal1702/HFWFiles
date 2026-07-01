@@ -8,7 +8,7 @@ export type MatchScoreRow = {
   finalScore: number;
 };
 
-export type GroupStageGw = 1 | 2 | 3;
+export type GroupStageGw = 1 | 2 | 3 | 4;
 
 export type MatchScoreSheet = {
   slug: string;
