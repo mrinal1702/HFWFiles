@@ -534,6 +534,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 4,
     rows: loadMatchScoreCsv("Netherlands_Morocco_FinalPoints.csv"),
   },
+  {
+    slug: "ivory-coast-norway",
+    title: "Ivory Coast vs Norway",
+    subtitle: "World Cup 2026 · Round of 32",
+    groupStageGw: 4,
+    rows: loadMatchScoreCsv("IvoryCoast_Norway_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
