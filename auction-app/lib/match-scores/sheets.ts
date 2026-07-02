@@ -562,6 +562,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 4,
     rows: loadMatchScoreCsv("England_DRCongo_FinalPoints.csv"),
   },
+  {
+    slug: "belgium-senegal",
+    title: "Belgium vs Senegal",
+    subtitle: "World Cup 2026 · Round of 32",
+    groupStageGw: 4,
+    rows: loadMatchScoreCsv("Belgium_Senegal_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
