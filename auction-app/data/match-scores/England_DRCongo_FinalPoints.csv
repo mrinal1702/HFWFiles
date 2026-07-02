@@ -1,0 +1,49 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Elliot Anderson,1089691,England,midfielder,43.534,7.0,0.0,51
+Harry Kane,194165,England,forward,42.325,6.0,0.0,48
+Chancel Mbemba,277761,Congo DR,defender,42.74,0.0,0.0,43
+Noni Madueke,1084981,England,midfielder,37.26933333333333,3.0,0.0,40
+Anthony Gordon,906937,England,forward,34.11666666666667,3.5,0.0,38
+Marc Guéhi,844425,England,defender,27.78,5.0,0.0,33
+Declan Rice,654096,England,midfielder,25.654666666666664,7.0,0.0,33
+Aaron Wan-Bissaka,760320,Congo DR,defender,32.05,0.0,0.0,32
+Axel Tuanzebe,690149,Congo DR,defender,31.64,0.0,0.0,32
+Brian Cipenga,1302121,Congo DR,forward,26.575000000000003,3.0,0.0,30
+Ezri Konsa,710159,England,defender,24.36,5.0,0.0,29
+Samuel Moutoussamy,866108,Congo DR,midfielder,25.662666666666667,3.0,0.0,29
+Jude Bellingham,1077894,England,midfielder,19.222,7.0,0.0,26
+Nico O'Reilly,1300526,England,defender,19.94,5.0,0.0,25
+Djed Spence,894803,England,defender,19.863333333333337,5.0,0.0,25
+Noah Sadiki,1359649,Congo DR,midfielder,19.784,3.0,0.0,23
+Marcus Rashford,696365,England,forward,21.883333333333333,0.0,0.0,22
+Arthur Masuaku,418137,Congo DR,defender,21.306666666666665,0.0,0.0,21
+Yoane Wissa,666857,Congo DR,forward,18.03333333333333,3.0,0.0,21
+Nathanaël Mbuku,1049799,Congo DR,forward,14.525,3.0,0.0,18
+Bukayo Saka,961995,England,forward,13.816666666666666,3.5,0.0,17
+Ngal Ayel Mukau,1428153,Congo DR,midfielder,8.359333333333334,5.0,0.0,13
+Eberechi Eze,818975,England,midfielder,5.536666666666667,6.5,0.0,12
+Joris Kayembe Ditu,500932,Congo DR,defender,6.043333333333333,5.0,0.0,11
+Edo Kayembe,909803,Congo DR,midfielder,7.298666666666667,0.5,0.0,8
+Théo Bongonda,466132,Congo DR,forward,9.575,-2.5,0.0,7
+Meschack Elia,694060,Congo DR,forward,9.541666666666668,-2.5,0.0,7
+Fiston Mayele,1116042,Congo DR,forward,4.533333333333333,-2.5,0.0,2
+Daniel Burn,188058,England,defender,0.0,0.0,0.0,0
+John Stones,263653,England,defender,0.0,0.0,0.0,0
+Dylan Batubinsika,751762,Congo DR,defender,0.0,0.0,0.0,0
+Trevoh Chalobah,793907,England,defender,0.0,0.0,0.0,0
+Reece James,807729,England,defender,0.0,0.0,0.0,0
+Gédéon Kalulu,1022309,Congo DR,defender,0.0,0.0,0.0,0
+Jarell Quansah,1107620,England,defender,0.0,0.0,0.0,0
+Steve Kapuadi,1132814,Congo DR,defender,0.0,0.0,0.0,0
+Jordan Henderson,156008,England,midfielder,0.0,0.0,0.0,0
+Aaron Tshibola,490122,Congo DR,midfielder,0.0,0.0,0.0,0
+Charles Pickel,743720,Congo DR,midfielder,0.0,0.0,0.0,0
+Morgan Rogers,883080,England,midfielder,0.0,0.0,0.0,0
+Kobbie Mainoo,1292810,England,midfielder,0.0,0.0,0.0,0
+Gaël Kakuta,163205,Congo DR,forward,0.0,0.0,0.0,0
+Cédric Bakambu,201939,Congo DR,forward,0.0,0.0,0.0,0
+Ivan Toney,408987,England,forward,0.0,0.0,0.0,0
+Ollie Watkins,540088,England,forward,0.0,0.0,0.0,0
+Simon Banza,696932,Congo DR,forward,0.0,0.0,0.0,0
+Congo DR Keepers,6321,Congo DR,goalkeeper,33.52,6.0,0.0,40
+England Keepers,8491,England,goalkeeper,9.74,12.0,0.0,22
