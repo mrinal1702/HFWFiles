@@ -1,0 +1,49 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Pedro Porro,941573,Spain,defender,53.98,10.0,0.0,64
+Rodri,675088,Spain,midfielder,45.32,11.0,0.0,56
+Mikel Oyarzabal,678234,Spain,forward,46.05833333333334,9.0,0.0,55
+Aymeric Laporte,411617,Spain,defender,44.49666666666667,10.0,0.0,54
+Pau Cubarsí,1532137,Spain,defender,38.1,10.0,0.0,48
+Marc Cucurella,873289,Spain,defender,36.2,10.0,0.0,46
+Lamine Yamal,1467236,Spain,forward,39.12499999999999,6.0,0.0,45
+Álex Baena,942372,Spain,midfielder,33.10666666666666,9.0,0.0,42
+Pedri,1083323,Spain,midfielder,23.596666666666664,11.0,0.0,35
+Dani Olmo,614834,Spain,midfielder,23.056666666666665,9.0,0.0,32
+Stefan Posch,557325,Austria,defender,23.433333333333334,0.0,0.0,23
+Kevin Danso,754126,Austria,defender,26.300000000000004,-5.0,0.0,21
+Konrad Laimer,526827,Austria,defender,24.01,-5.0,0.0,19
+Marcel Sabitzer,215151,Austria,midfielder,17.352,-1.0,0.0,16
+Romano Schmid,749488,Austria,midfielder,11.56,3.0,0.0,15
+Nicolas Seiwald,1024672,Austria,midfielder,11.454,3.0,0.0,14
+Paul Wanner,1327149,Austria,midfielder,15.296,-1.0,0.0,14
+David Alaba,121633,Austria,defender,18.8,-5.0,0.0,14
+Florian Grillitsch,617044,Austria,midfielder,14.482,-1.5,0.0,13
+Mikel Merino,574645,Spain,midfielder,5.637333333333332,4.5,0.0,10
+Gavi,1279040,Spain,midfielder,5.428666666666667,4.5,0.0,10
+Michael Gregoritsch,198316,Austria,forward,8.666666666666666,0.0,0.0,9
+Xaver Schlager,620027,Austria,midfielder,4.646,3.0,0.0,8
+Ferran Torres,881771,Spain,forward,4.883333333333333,0.5,0.0,5
+Marko Arnautovic,110148,Austria,forward,7.25,-2.5,0.0,5
+Alexander Prass,1027194,Austria,midfielder,4.0906666666666665,0.5,0.0,5
+Sasa Kalajdzic,858198,Austria,forward,6.508333333333333,-2.5,0.0,4
+Carney Chukwuemeka,1089685,Austria,midfielder,3.674,-1.5,0.0,2
+Marcos Llorente,602563,Spain,defender,0.0,0.0,0.0,0
+Philipp Lienhart,643724,Austria,defender,0.0,0.0,0.0,0
+Marco Friedl,767789,Austria,defender,0.0,0.0,0.0,0
+Eric García,940573,Spain,defender,0.0,0.0,0.0,0
+Michael Svoboda,951921,Austria,defender,0.0,0.0,0.0,0
+David Affengruber,1073980,Austria,defender,0.0,0.0,0.0,0
+Marc Pubill,1323897,Spain,defender,0.0,0.0,0.0,0
+Alejandro Grimaldo,288406,Spain,midfielder,0.0,0.0,0.0,0
+Phillipp Mwene,423812,Austria,midfielder,0.0,0.0,0.0,0
+Alessandro Schöpf,461357,Austria,midfielder,0.0,0.0,0.0,0
+Fabián Ruiz,605654,Spain,midfielder,0.0,0.0,0.0,0
+Dejan Ljubicic,861668,Austria,midfielder,0.0,0.0,0.0,0
+Martín Zubimendi,1031325,Spain,midfielder,0.0,0.0,0.0,0
+Yéremi Pino,1047676,Spain,midfielder,0.0,0.0,0.0,0
+Borja Iglesias,609505,Spain,forward,0.0,0.0,0.0,0
+Patrick Wimmer,1073498,Austria,forward,0.0,0.0,0.0,0
+Nico Williams,1202110,Spain,forward,0.0,0.0,0.0,0
+Víctor Muñoz,1553105,Spain,forward,0.0,0.0,0.0,0
+Austria Keepers,8255,Austria,goalkeeper,36.2,0.0,0.0,36
+Spain Keepers,6720,Spain,goalkeeper,11.16,18.0,0.0,29
