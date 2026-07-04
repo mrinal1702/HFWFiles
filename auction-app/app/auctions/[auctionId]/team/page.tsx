@@ -60,6 +60,7 @@ export default async function MyTeamPage({
 
   const paidReleaseUsed = d.me.paid_release_used;
   const biddingOpen = !d.biddingClosed;
+  const isRelegated = Boolean(d.me.is_relegated);
 
   const byPlayer = new Map(d.lots.map((l) => [l.player_id, l]));
   const rows = (data ?? []) as TeamRow[];
@@ -93,11 +94,18 @@ export default async function MyTeamPage({
     <section className="space-y-4 sm:space-y-5">
       <div className="rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
         <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">My team</h2>
-        <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          Your squad for this auction — everyone here is yours to keep. Still fighting for someone? They&apos;ll
-          show up under <span className="font-medium text-slate-800">Bids held</span> until the auction
-          wraps up.
-        </p>
+        {isRelegated ? (
+          <p className="mt-2 text-sm leading-relaxed text-slate-600">
+            You were relegated after the standings cut. Your squad has been returned to the player pool and
+            you cannot make transfers or place bids.
+          </p>
+        ) : (
+          <p className="mt-2 text-sm leading-relaxed text-slate-600">
+            Your squad for this auction — everyone here is yours to keep. Still fighting for someone? They&apos;ll
+            show up under <span className="font-medium text-slate-800">Bids held</span> until the auction
+            wraps up.
+          </p>
+        )}
       </div>
 
       <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm sm:p-5">
@@ -142,6 +150,7 @@ export default async function MyTeamPage({
                               paidReleaseUsed={paidReleaseUsed}
                               biddingOpen={biddingOpen}
                               releaseLocked={t.meta?.nation_bidding_closed ?? false}
+                              isRelegated={isRelegated}
                             />
                           </div>
                         </div>
@@ -194,6 +203,7 @@ export default async function MyTeamPage({
                             paidReleaseUsed={paidReleaseUsed}
                             biddingOpen={biddingOpen}
                             releaseLocked={t.meta?.nation_bidding_closed ?? false}
+                            isRelegated={isRelegated}
                           />
                         </td>
                       </tr>

@@ -10,6 +10,7 @@ import {
   serializeActorMap,
 } from "@/lib/auction-actor-cookie";
 import { getAuthUser } from "@/lib/auth/get-user";
+import { assertActiveParticipant } from "@/lib/relegated-guard";
 import { placeBidErrorMessage } from "@/lib/bid-ui-messages";
 import { placeBid } from "@/lib/bidding";
 import { createAdminClient } from "@/lib/supabase-server";
@@ -113,6 +114,9 @@ export async function submitAuctionBidAction(
     }
     auctionUserId = actorUserId;
   }
+
+  const active = await assertActiveParticipant(auctionId, auctionUserId);
+  if (!active.ok) return { ok: false, message: active.message };
 
   const { data, rpcError } = await placeBid(admin, {
     auctionId,

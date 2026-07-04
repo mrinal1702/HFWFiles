@@ -25,6 +25,8 @@ const MESSAGES: Record<PlaceBidErrorCode, string> = {
   nation_deadline_passed:
     "Bidding for this nation has ended — those players are locked in squads for this round.",
   nation_not_in_round: "This player is not available in the current knockout round.",
+  participant_relegated:
+    "You have been relegated and can no longer bid or manage a squad.",
 };
 
 export function placeBidErrorMessage(code: string): string {

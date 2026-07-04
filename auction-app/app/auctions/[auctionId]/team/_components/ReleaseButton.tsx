@@ -15,6 +15,7 @@ interface ReleaseButtonProps {
   biddingOpen: boolean;
   /** Nation rolling: player locked after nation hard deadline. */
   releaseLocked?: boolean;
+  isRelegated?: boolean;
 }
 
 export function ReleaseButton({
@@ -25,7 +26,11 @@ export function ReleaseButton({
   paidReleaseUsed,
   biddingOpen,
   releaseLocked = false,
+  isRelegated = false,
 }: ReleaseButtonProps) {
+  if (isRelegated) {
+    return null;
+  }
   if (releaseLocked) {
     return (
       <span className="rounded border border-slate-200 bg-slate-100 px-2 py-1 text-xs font-medium text-slate-500">

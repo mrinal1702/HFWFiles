@@ -25,7 +25,8 @@ export type PlaceBidErrorCode =
   | "outfield_cap"
   | "insufficient_active_budget"
   | "nation_deadline_passed"
-  | "nation_not_in_round";
+  | "nation_not_in_round"
+  | "participant_relegated";
 
 export type PlaceBidSuccess = {
   ok: true;

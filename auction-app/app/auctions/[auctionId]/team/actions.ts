@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadAuctionDashboard } from "@/lib/auction-dashboard";
+import { assertActiveParticipant } from "@/lib/relegated-guard";
 import { createAdminClient } from "@/lib/supabase-server";
 
 export type ReleaseResult =
@@ -18,6 +19,8 @@ const RPC_ERROR_MESSAGES: Record<string, string> = {
     "Paid releases are only available while bidding is open. You can still release this player for free.",
   player_nation_locked:
     "This player's nation has passed its bidding deadline — they are locked in your squad and cannot be released.",
+  participant_relegated:
+    "You have been relegated and can no longer release players or place bids.",
 };
 
 export async function releasePlayerAction(
@@ -33,6 +36,11 @@ export async function releasePlayerAction(
   const d = await loadAuctionDashboard(auctionId, user.id);
   if (!d.me) {
     return { ok: false, error: "You are not a participant in this auction." };
+  }
+
+  const active = await assertActiveParticipant(auctionId, d.me.id);
+  if (!active.ok) {
+    return { ok: false, error: active.message };
   }
 
   const admin = createAdminClient();

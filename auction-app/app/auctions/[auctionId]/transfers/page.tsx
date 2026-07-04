@@ -32,6 +32,18 @@ export default async function TransfersPage({
     );
   }
 
+  if (d.me.is_relegated) {
+    return (
+      <section className="rounded-xl border border-red-200 bg-red-50 p-6 shadow-sm sm:p-8">
+        <h2 className="text-base font-semibold text-red-950">Relegated — view only</h2>
+        <p className="mt-2 text-sm leading-relaxed text-red-900">
+          You were relegated after the standings cut. You can still view transfer history on this
+          page when the window is open, but you cannot propose, respond to, or confirm transfers.
+        </p>
+      </section>
+    );
+  }
+
   const admin = createAdminClient();
 
   // Load window state and deadline

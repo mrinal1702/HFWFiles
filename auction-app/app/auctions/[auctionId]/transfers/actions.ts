@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 
 import { getAuthUser } from "@/lib/auth/get-user";
+import { assertActiveParticipant } from "@/lib/relegated-guard";
 import { createAdminClient } from "@/lib/supabase-server";
 import { transferErrorMessage } from "@/lib/transfer-messages";
 import {
@@ -32,13 +33,16 @@ async function resolveAuctionUserId(
   const admin = createAdminClient();
   const { data: seat, error } = await admin
     .from("auction_users")
-    .select("id")
+    .select("id, is_relegated")
     .eq("auction_id", auctionId)
     .eq("user_id", user.id)
     .maybeSingle();
 
   if (error) return { error: "Could not load your seat in this auction." };
   if (!seat) return { error: "You're not a participant in this auction." };
+
+  const active = await assertActiveParticipant(auctionId, Number((seat as { id: number }).id));
+  if (!active.ok) return { error: active.message };
 
   return { auctionUserId: Number((seat as { id: number }).id) };
 }

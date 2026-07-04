@@ -34,6 +34,9 @@ export default async function RespondToTransferPage({
 
   const d = await loadAuctionDashboardForViewer(auctionId);
   if (!d.me) notFound();
+  if (d.me.is_relegated) {
+    redirect(`/auctions/${auctionId}/transfers`);
+  }
 
   const admin = createAdminClient();
 

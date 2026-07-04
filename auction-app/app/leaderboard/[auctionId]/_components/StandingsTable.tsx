@@ -134,18 +134,28 @@ export function StandingsTable({ standings, gameWeeks }: StandingsTableProps) {
               const showParticipant = Boolean(entry.teamName?.trim());
               const showPoints = hasScores && effectiveSelectedIds.size > 0;
               const rowIndex = idx + 1;
+              const isRelegated = entry.isRelegated;
 
               return (
                 <tr
                   key={entry.userId}
-                  className={`border-b border-slate-100 ${
-                    idx % 2 === 1 ? "bg-sky-50/40" : "bg-white"
-                  } ${isLeader && showPoints ? "font-semibold" : ""}`}
+                  className={`border-b ${
+                    isRelegated ? "border-red-100 bg-red-100" : "border-slate-100"
+                  } ${
+                    !isRelegated && idx % 2 === 1 ? "bg-sky-50/40" : !isRelegated ? "bg-white" : ""
+                  } ${isLeader && showPoints && !isRelegated ? "font-semibold" : ""}`}
                 >
                   <td className="w-8 px-2 py-3 tabular-nums text-slate-400">{rowIndex}</td>
                   <td className="px-3 py-3 tabular-nums text-slate-500">{entry.rank}</td>
                   <td className="px-3 py-3 text-slate-900">
-                    <div className="font-medium">{teamLabel}</div>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="font-medium">{teamLabel}</span>
+                      {isRelegated && (
+                        <span className="rounded border border-red-200 bg-red-100 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-red-800">
+                          Relegated
+                        </span>
+                      )}
+                    </div>
                     {showParticipant && (
                       <div className="text-xs font-normal text-slate-500">{entry.name}</div>
                     )}

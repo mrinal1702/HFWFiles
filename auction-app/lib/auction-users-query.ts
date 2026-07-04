@@ -1,20 +1,28 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 
 import type { AuctionUserRow } from "@/lib/auction-types";
+import { isUserRelegated } from "@/lib/relegated-participants";
 
 const BASE_SELECT =
   "id,name,budget_remaining,active_budget,paid_release_used,user_id";
-const FULL_SELECT = `${BASE_SELECT},team_name`;
+const FULL_SELECT = `${BASE_SELECT},team_name,is_relegated`;
+const FULL_SELECT_NO_RELEGATED = `${BASE_SELECT},team_name`;
 
-function normalizeRow(row: Record<string, unknown>): AuctionUserRow {
+function normalizeRow(row: Record<string, unknown>, auctionId: number): AuctionUserRow {
+  const id = row.id as number;
+  const dbRelegated =
+    row.is_relegated === undefined || row.is_relegated === null
+      ? null
+      : Boolean(row.is_relegated);
   return {
-    id: row.id as number,
+    id,
     name: (row.name as string | null) ?? null,
     team_name: (row.team_name as string | null | undefined) ?? null,
     budget_remaining: row.budget_remaining as number,
     active_budget: row.active_budget as number,
     paid_release_used: Boolean(row.paid_release_used),
     user_id: (row.user_id as string | null | undefined) ?? null,
+    is_relegated: isUserRelegated(auctionId, id, dbRelegated),
   };
 }
 
@@ -30,22 +38,39 @@ export async function fetchAuctionUsers(
     .order("id", { ascending: true });
 
   if (!full.error) {
-    return (full.data ?? []).map((row) => normalizeRow(row as Record<string, unknown>));
+    return (full.data ?? []).map((row) =>
+      normalizeRow(row as Record<string, unknown>, auctionId),
+    );
   }
 
-  if (!String(full.error.message).includes("team_name")) {
+  const msg = String(full.error.message);
+  if (!msg.includes("team_name") && !msg.includes("is_relegated")) {
     throw new Error(`auction_users: ${full.error.message}`);
   }
 
-  const base = await admin
+  const fallbackSelect = msg.includes("is_relegated") ? FULL_SELECT_NO_RELEGATED : FULL_SELECT;
+  const fallback = await admin
     .from("auction_users")
-    .select(BASE_SELECT)
+    .select(fallbackSelect)
     .eq("auction_id", auctionId)
     .order("id", { ascending: true });
-  if (base.error) throw new Error(`auction_users: ${base.error.message}`);
+  if (fallback.error) {
+    if (!String(fallback.error.message).includes("team_name")) {
+      throw new Error(`auction_users: ${fallback.error.message}`);
+    }
+    const base = await admin
+      .from("auction_users")
+      .select(BASE_SELECT)
+      .eq("auction_id", auctionId)
+      .order("id", { ascending: true });
+    if (base.error) throw new Error(`auction_users: ${base.error.message}`);
+    return (base.data ?? []).map((row) =>
+      normalizeRow({ ...(row as Record<string, unknown>), team_name: null }, auctionId),
+    );
+  }
 
-  return (base.data ?? []).map((row) =>
-    normalizeRow({ ...(row as Record<string, unknown>), team_name: null }),
+  return (fallback.data ?? []).map((row) =>
+    normalizeRow(row as Record<string, unknown>, auctionId),
   );
 }
 

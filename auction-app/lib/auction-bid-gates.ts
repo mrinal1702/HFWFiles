@@ -7,6 +7,9 @@ export function lotRaiseModeActive(lot: EnrichedLot, ctx: BidGateContext): boole
 }
 
 export function getBidDisabledReason(lot: EnrichedLot, ctx: BidGateContext): string | null {
+  if (ctx.me?.is_relegated) {
+    return "You have been relegated and can no longer bid or manage a squad.";
+  }
   if (ctx.biddingClosed) {
     return ctx.biddingClosedReason ?? "Bidding has ended.";
   }

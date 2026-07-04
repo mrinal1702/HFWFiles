@@ -98,6 +98,20 @@ export default async function AuctionLayout({
           </div>
         )}
 
+        {d.me?.is_relegated && (
+          <div
+            className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-950"
+            role="status"
+          >
+            <p className="font-medium">Relegated — view only</p>
+            <p className="mt-1 text-red-900">
+              You were relegated after the group stage / Round of 32 cut. You can still view
+              leaderboards and bidding activity, but you cannot bid, release players, transfer, or
+              own a squad.
+            </p>
+          </div>
+        )}
+
         <div className="max-lg:-mx-4 max-lg:border-b max-lg:border-slate-200 max-lg:bg-slate-50 max-lg:px-4 max-lg:py-3 max-lg:shadow-sm max-lg:sticky max-lg:top-0 max-lg:z-20">
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between">
             <PlayingAsTeamName

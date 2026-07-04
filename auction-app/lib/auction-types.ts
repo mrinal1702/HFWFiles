@@ -9,6 +9,8 @@ export type AuctionUserRow = {
   paid_release_used: boolean;
   /** Supabase auth user id when this row is a real member; null = legacy test row. */
   user_id?: string | null;
+  /** True when relegated by standings — view-only, no squad or bidding. */
+  is_relegated?: boolean;
 };
 
 export type EnrichedLot = {

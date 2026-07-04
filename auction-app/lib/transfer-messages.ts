@@ -40,6 +40,8 @@ export function transferErrorMessage(code: TransferErrorCode): string {
       return "Only the recipient of a transfer can reject it.";
     case "invalid_cash_amount":
       return "Cash amount must be a whole number of 0 or more.";
+    case "participant_relegated":
+      return "You have been relegated and can no longer propose or accept transfers.";
     default:
       return "Something went wrong. Refresh the page and try again.";
   }
