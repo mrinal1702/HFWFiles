@@ -1,0 +1,49 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Lionel Messi,30981,Argentina,forward,60.05833333333334,9.0,0.0,69
+Lisandro Martínez,847983,Argentina,defender,60.4,0.0,0.0,60
+Alexis Mac Allister,831489,Argentina,midfielder,42.18,7.0,0.0,49
+Cristian Romero,789066,Argentina,defender,39.62,0.0,0.0,40
+Diney Borges,496648,Cape Verde Islands,defender,43.89,-5.0,0.0,39
+Enzo Fernández,1137705,Argentina,midfielder,31.618,7.0,0.0,39
+Deroy Duarte,798069,Cape Verde Islands,midfielder,34.04933333333334,3.0,0.0,37
+Kevin Pina,890503,Cape Verde Islands,midfielder,30.633333333333333,3.0,0.0,34
+Leandro Paredes,237606,Argentina,midfielder,28.686,4.5,0.0,33
+Sidny Lopes Cabral,1441786,Cape Verde Islands,defender,38.16,-5.0,0.0,33
+Rodrigo De Paul,324578,Argentina,midfielder,27.098000000000003,5.0,0.0,32
+Yannick Semedo,1205410,Cape Verde Islands,midfielder,27.15866666666667,2.5,0.0,30
+Facundo Medina,812652,Argentina,defender,24.11666666666667,5.0,0.0,29
+Nicolás González,841672,Argentina,midfielder,21.870666666666665,7.0,0.0,29
+Ryan Mendes,172615,Cape Verde Islands,forward,25.675,3.0,0.0,29
+Roberto Lopes,230134,Cape Verde Islands,defender,33.209999999999994,-5.0,0.0,28
+Julián Álvarez,974753,Argentina,forward,21.616666666666667,6.0,0.0,28
+Nicolás Tagliafico,195750,Argentina,defender,23.50333333333333,0.0,0.0,24
+Jovane Cabral,785716,Cape Verde Islands,forward,18.816666666666663,3.0,0.0,22
+Jamiro Monteiro,680905,Cape Verde Islands,midfielder,17.930666666666667,3.0,0.0,21
+Thiago Almada,955271,Argentina,midfielder,15.163333333333332,5.0,0.0,20
+Steven Moreira,444000,Cape Verde Islands,defender,23.78,-5.0,0.0,19
+Hélio Varela,1524518,Cape Verde Islands,forward,17.2,0.5,0.0,18
+Laros Duarte,665167,Cape Verde Islands,midfielder,12.113333333333332,5.0,0.0,17
+Nahuel Molina,726345,Argentina,defender,15.386666666666668,0.0,0.0,15
+Dailon Livramento,1309634,Cape Verde Islands,forward,11.375,3.0,0.0,14
+Willy Semedo,873832,Cape Verde Islands,forward,12.266666666666667,0.5,0.0,13
+Nuno da Costa,671326,Cape Verde Islands,forward,7.516666666666667,3.0,0.0,11
+Lautaro Martínez,690230,Argentina,forward,6.891666666666666,3.0,0.0,10
+Gilson Benchimol,1241302,Cape Verde Islands,forward,9.083333333333332,0.5,0.0,10
+Gonzalo Montiel,687008,Argentina,defender,4.423333333333334,5.0,0.0,9
+Stopira,164062,Cape Verde Islands,defender,0.0,0.0,0.0,0
+Nicolás Otamendi,174321,Argentina,defender,0.0,0.0,0.0,0
+Marcos Senesi,785411,Argentina,defender,0.0,0.0,0.0,0
+Logan Costa,922877,Cape Verde Islands,defender,0.0,0.0,0.0,0
+Kelvin Pires,1175733,Cape Verde Islands,defender,0.0,0.0,0.0,0
+Wagner Pina,1460591,Cape Verde Islands,defender,0.0,0.0,0.0,0
+Giovani Lo Celso,604126,Argentina,midfielder,0.0,0.0,0.0,0
+Exequiel Palacios,693599,Argentina,midfielder,0.0,0.0,0.0,0
+Giuliano Simeone,1226147,Argentina,midfielder,0.0,0.0,0.0,0
+João Paulo,1241301,Cape Verde Islands,midfielder,0.0,0.0,0.0,0
+Valentín Barco,1272440,Argentina,midfielder,0.0,0.0,0.0,0
+Nico Paz,1347574,Argentina,midfielder,0.0,0.0,0.0,0
+Garry Rodrigues,302912,Cape Verde Islands,forward,0.0,0.0,0.0,0
+Telmo Arcanjo,1165477,Cape Verde Islands,forward,0.0,0.0,0.0,0
+José López,1216079,Argentina,forward,0.0,0.0,0.0,0
+Cape Verde Islands Keepers,5888,Cape Verde Islands,goalkeeper,34.52,0.0,0.0,35
+Argentina Keepers,6706,Argentina,goalkeeper,16.220000000000002,6.0,0.0,22
