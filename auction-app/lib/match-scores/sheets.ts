@@ -597,6 +597,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 4,
     rows: loadMatchScoreCsv("Switzerland_Algeria_FinalPoints.csv"),
   },
+  {
+    slug: "australia-egypt",
+    title: "Australia vs Egypt",
+    subtitle: "World Cup 2026 · Round of 32",
+    groupStageGw: 4,
+    rows: loadMatchScoreCsv("Australia_Egypt_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
