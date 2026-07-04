@@ -33,7 +33,7 @@ async function resolveAuctionUserId(
   const admin = createAdminClient();
   const { data: seat, error } = await admin
     .from("auction_users")
-    .select("id, is_relegated")
+    .select("id")
     .eq("auction_id", auctionId)
     .eq("user_id", user.id)
     .maybeSingle();

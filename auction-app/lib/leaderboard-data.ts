@@ -2,7 +2,7 @@ import { createAdminClient } from "@/lib/supabase-server";
 import type { XiRole } from "@/lib/best-xi-display";
 import { parseXiRole } from "@/lib/best-xi-display";
 import { fetchAuctionUserNames } from "@/lib/auction-users-query";
-import { isUserRelegated } from "@/lib/relegated-participants";
+import { isUserRelegated, relegatedUserIdsForAuction } from "@/lib/relegated-participants";
 import { loadBestXiOverlay } from "@/lib/best-xi-overlay";
 import { loadMatchPositionsForGameweek } from "@/lib/match-positions-for-gw";
 
@@ -119,16 +119,7 @@ export async function getLeaderboardData(auctionId: number): Promise<Leaderboard
       .eq("auction_id", auctionId),
   ]);
 
-  let relegatedByDb = new Map<number, boolean>();
-  const relegatedRes = await admin
-    .from("auction_users")
-    .select("id, is_relegated")
-    .eq("auction_id", auctionId);
-  if (!relegatedRes.error) {
-    relegatedByDb = new Map(
-      (relegatedRes.data ?? []).map((r) => [Number(r.id), Boolean(r.is_relegated)]),
-    );
-  }
+  const relegatedIds = relegatedUserIdsForAuction(auctionId);
 
   if (lbRes.error) throw new Error(`auction_leaderboard: ${lbRes.error.message}`);
   const lbRows = (lbRes.data ?? []) as Array<{
@@ -174,7 +165,7 @@ export async function getLeaderboardData(auctionId: number): Promise<Leaderboard
       teamName: u.team_name?.trim() || null,
       scoresByGwId: gwScores,
       total,
-      isRelegated: isUserRelegated(auctionId, u.id, relegatedByDb.get(u.id)),
+      isRelegated: isUserRelegated(auctionId, u.id, relegatedIds.has(u.id) ? true : null),
     };
   });
 
