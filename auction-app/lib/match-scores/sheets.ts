@@ -618,6 +618,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 4,
     rows: loadMatchScoreCsv("Colombia_Ghana_FinalPoints.csv"),
   },
+  {
+    slug: "canada-morocco",
+    title: "Canada vs Morocco",
+    subtitle: "World Cup 2026 · Round of 16",
+    groupStageGw: 5,
+    rows: loadMatchScoreCsv("Canada_Morocco_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
@@ -625,9 +632,10 @@ const GROUP_LABELS: Record<GroupStageGw, string> = {
   2: "Group Stage GW2",
   3: "Group Stage GW3",
   4: "Round of 32",
+  5: "Round of 16",
 };
 
-export const MATCH_SCORE_GROUPS: MatchScoreGroup[] = ([1, 2, 3, 4] as const)
+export const MATCH_SCORE_GROUPS: MatchScoreGroup[] = ([1, 2, 3, 4, 5] as const)
   .map((gw) => ({
     gw,
     label: GROUP_LABELS[gw],

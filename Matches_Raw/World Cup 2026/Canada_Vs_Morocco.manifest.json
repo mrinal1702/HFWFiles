@@ -1,0 +1,15 @@
+{
+  "match_id": 4653843,
+  "home_team": "Canada",
+  "away_team": "Morocco",
+  "source_url": "https://www.fotmob.com/en-GB/matches/canada-vs-morocco/17e1pm#4653843:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/Canada_Vs_Morocco.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/canada-vs-morocco/17e1pm",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/canada-vs-morocco/17e1pm#4653843:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/canada-vs-morocco/17e1pm#4653843:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/canada-vs-morocco/17e1pm#4653843:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4653843"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
