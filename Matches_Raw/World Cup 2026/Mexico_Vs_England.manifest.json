@@ -1,0 +1,15 @@
+{
+  "match_id": 4653847,
+  "home_team": "Mexico",
+  "away_team": "England",
+  "source_url": "https://www.fotmob.com/en-GB/matches/england-vs-3def/5r8kvbtw#4653847:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/Mexico_Vs_England.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/england-vs-3def/5r8kvbtw",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/england-vs-3def/5r8kvbtw#4653847:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/england-vs-3def/5r8kvbtw#4653847:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/england-vs-3def/5r8kvbtw#4653847:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4653847"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
