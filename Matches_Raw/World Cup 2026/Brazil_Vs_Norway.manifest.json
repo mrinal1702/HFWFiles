@@ -1,0 +1,15 @@
+{
+  "match_id": 4653846,
+  "home_team": "Brazil",
+  "away_team": "Norway",
+  "source_url": "https://www.fotmob.com/en-GB/matches/brazil-vs-norway/2bicve#4653846:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/Brazil_Vs_Norway.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/brazil-vs-norway/2bicve",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/brazil-vs-norway/2bicve#4653846:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/brazil-vs-norway/2bicve#4653846:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/brazil-vs-norway/2bicve#4653846:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4653846"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
