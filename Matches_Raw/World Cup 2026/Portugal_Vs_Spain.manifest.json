@@ -1,0 +1,15 @@
+{
+  "match_id": 4653844,
+  "home_team": "Portugal",
+  "away_team": "Spain",
+  "source_url": "https://www.fotmob.com/en-GB/matches/spain-vs-portugal/1vppuu#4653844:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/Portugal_Vs_Spain.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/spain-vs-portugal/1vppuu",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/spain-vs-portugal/1vppuu#4653844:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/spain-vs-portugal/1vppuu#4653844:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/spain-vs-portugal/1vppuu#4653844:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4653844"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
