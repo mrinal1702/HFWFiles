@@ -34,7 +34,7 @@ GW1 Supabase `Player_Scores`, Best XI, and leaderboards stay as published. The e
 
 | `positionLabel.key` | Role | Rule |
 |---------------------|------|------|
-| `centerback_short`, `leftback_short`, `rightback_short` | DEF | Unconditional |
+| `centerback_short`, `leftback_short`, `rightback_short` | DEF | Only if lineup `usualPlayingPositionId` is 1 |
 | `left_wing_back_short`, `right_wing_back_short` | DEF | Only if lineup `usualPlayingPositionId` is 1 |
 | `centermidfielder_short`, `centerdefensivemidfielder_short`, `centerattackingmidfielder_short` | MID | Unconditional |
 | `leftmidfielder_short`, `rightmidfielder_short` | MID | Unconditional |

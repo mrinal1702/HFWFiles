@@ -114,7 +114,8 @@ def role_override_by_player(content: dict[str, Any]) -> dict[int, int]:
     """
     Overrides from matchFacts.topPlayers.positionLabel.key:
 
-    Defenders (unconditional): centerback_short, leftback_short, rightback_short → 1
+    Defenders (conditional): centerback_short, leftback_short, rightback_short → 1
+      only if lineup usualPlayingPositionId is 1 (avoids mis-tagged DMs labeled CB in topPlayers)
     Wing-backs: left/right_wing_back_short → 1 only if lineup usualPlayingPositionId is 1
     Midfielders: LM/RM, CM, CDM, CAM keys → 2
     Striker: striker_short → 3
@@ -139,7 +140,8 @@ def role_override_by_player(content: dict[str, Any]) -> dict[int, int]:
             if not label_key:
                 continue
             if label_key in _TOPPLAYER_DEFENDER_KEYS:
-                out[pid_i] = 1
+                if lineup_usual.get(pid_i) == 1:
+                    out[pid_i] = 1
             elif label_key in _TOPPLAYER_WING_BACK_KEYS:
                 if lineup_usual.get(pid_i) == 1:
                     out[pid_i] = 1
