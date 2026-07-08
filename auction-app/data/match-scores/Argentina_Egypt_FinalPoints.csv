@@ -1,0 +1,46 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Lionel Messi,30981,Argentina,forward,70.00833333333333,9.0,0.0,79
+Cristian Romero,789066,Argentina,defender,50.78666666666667,0.0,0.0,51
+Enzo Fernández,1137705,Argentina,midfielder,36.55,7.0,0.0,44
+Lisandro Martínez,847983,Argentina,defender,43.45,0.0,0.0,43
+Mostafa Ziko,1426403,Egypt,forward,36.69166666666666,6.0,0.0,43
+Haissem Hassan,971787,Egypt,midfielder,29.55733333333333,9.0,0.0,39
+Marwan Ateya,1418549,Egypt,midfielder,33.370000000000005,3.0,0.0,36
+Mohanad Lasheen,906944,Egypt,midfielder,31.832666666666668,3.0,0.0,35
+Yasser Ibrahim,533403,Egypt,defender,36.510000000000005,-5.0,0.0,32
+Leandro Paredes,237606,Argentina,defender,29.17,0.0,0.0,29
+Rami Rabia,505872,Egypt,defender,32.09,-5.0,0.0,27
+Alexis Mac Allister,831489,Argentina,midfielder,18.29,7.0,0.0,25
+Karim Hafez,560416,Egypt,defender,30.15,-5.0,0.0,25
+Rodrigo De Paul,324578,Argentina,midfielder,21.67,3.0,0.0,25
+Julián Álvarez,974753,Argentina,forward,15.425,9.0,0.0,24
+Nahuel Molina,726345,Argentina,defender,23.453333333333337,0.0,0.0,23
+Nicolás González,841672,Argentina,midfielder,16.532,6.5,0.0,23
+Lautaro Martínez,690230,Argentina,forward,16.416666666666664,6.5,0.0,23
+Gonzalo Montiel,687008,Argentina,defender,16.476666666666667,5.0,0.0,21
+Nicolás Tagliafico,195750,Argentina,defender,14.419999999999998,5.0,0.0,19
+Mohamed Salah,292462,Egypt,forward,11.241666666666667,6.0,0.0,17
+Hamdi Fathi,1022128,Egypt,midfielder,16.984,-1.5,0.0,15
+Mohamed Hany,660213,Egypt,defender,17.36,-5.0,0.0,12
+Emam Ashour,979376,Egypt,midfielder,5.222,7.0,0.0,12
+Trezeguet,513492,Egypt,forward,8.466666666666667,-2.5,0.0,6
+Omar Marmoush,839204,Egypt,forward,5.583333333333333,-2.5,0.0,3
+Nicolás Otamendi,174321,Argentina,defender,0.0,0.0,0.0,0
+Marcos Senesi,785411,Argentina,defender,0.0,0.0,0.0,0
+Facundo Medina,812652,Argentina,defender,0.0,0.0,0.0,0
+Hossam Abdelmaguid,1384425,Egypt,defender,0.0,0.0,0.0,0
+Tarek Alaa,1689101,Egypt,defender,0.0,0.0,0.0,0
+Giovani Lo Celso,604126,Argentina,midfielder,0.0,0.0,0.0,0
+Exequiel Palacios,693599,Argentina,midfielder,0.0,0.0,0.0,0
+Thiago Almada,955271,Argentina,midfielder,0.0,0.0,0.0,0
+Nabil Dunga,1001335,Egypt,midfielder,0.0,0.0,0.0,0
+Giuliano Simeone,1226147,Argentina,midfielder,0.0,0.0,0.0,0
+Valentín Barco,1272440,Argentina,midfielder,0.0,0.0,0.0,0
+Mahmoud Saber,1291391,Egypt,midfielder,0.0,0.0,0.0,0
+Nico Paz,1347574,Argentina,midfielder,0.0,0.0,0.0,0
+Zizo,532766,Egypt,forward,0.0,0.0,0.0,0
+José López,1216079,Argentina,forward,0.0,0.0,0.0,0
+Ibrahim Adel,1272436,Egypt,forward,0.0,0.0,0.0,0
+Hamza Abdelkarim,1708842,Egypt,forward,0.0,0.0,0.0,0
+Egypt Keepers,10255,Egypt,goalkeeper,36.56,0.0,0.0,37
+Argentina Keepers,6706,Argentina,goalkeeper,4.48,6.0,0.0,10
