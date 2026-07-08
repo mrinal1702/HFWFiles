@@ -276,15 +276,25 @@ export async function getCurrentSquads(
 export async function getLockedGameWeeksForAuction(auctionId: number): Promise<GwInfo[]> {
   const admin = createAdminClient();
 
-  const { data, error } = await admin
-    .from("gameweek_squads")
-    .select("game_week_id")
-    .eq("auction_id", auctionId);
-  if (error) throw new Error(`gameweek_squads: ${error.message}`);
+  // Paginate: gameweek_squads holds one row per squad member, so a single auction
+  // can exceed PostgREST's default 1000-row cap. Without paging, the newest
+  // gameweek's rows get silently truncated and its tab disappears.
+  const gwIdSet = new Set<number>();
+  const pageSize = 1000;
+  for (let from = 0; ; from += pageSize) {
+    const { data, error } = await admin
+      .from("gameweek_squads")
+      .select("game_week_id")
+      .eq("auction_id", auctionId)
+      .order("game_week_id", { ascending: true })
+      .range(from, from + pageSize - 1);
+    if (error) throw new Error(`gameweek_squads: ${error.message}`);
+    const rows = data ?? [];
+    for (const r of rows) gwIdSet.add(Number(r.game_week_id));
+    if (rows.length < pageSize) break;
+  }
 
-  const gwIds = [...new Set((data ?? []).map((r) => Number(r.game_week_id)))].sort(
-    (a, b) => a - b,
-  );
+  const gwIds = [...gwIdSet].sort((a, b) => a - b);
   if (!gwIds.length) return [];
 
   const gwRes = await admin
