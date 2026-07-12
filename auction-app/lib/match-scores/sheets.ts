@@ -688,6 +688,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 6,
     rows: loadMatchScoreCsv("Spain_Belgium_FinalPoints.csv"),
   },
+  {
+    slug: "norway-england",
+    title: "Norway vs England",
+    subtitle: "World Cup 2026 · Quarter-finals",
+    groupStageGw: 6,
+    rows: loadMatchScoreCsv("Norway_England_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
