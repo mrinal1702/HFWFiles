@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
 import type { NationDeadlineRow } from "@/lib/nation-deadlines-data";
@@ -10,15 +10,49 @@ type Props = {
   finalHardDeadlineAt: string | null;
 };
 
+type PanelPosition = {
+  top: number;
+  left: number;
+  width: number;
+};
+
+const PANEL_MARGIN_PX = 16;
+const PANEL_MAX_WIDTH_PX = 416;
+const PANEL_GAP_PX = 8;
+
 function isPast(iso: string): boolean {
   const ms = Date.parse(iso);
   return Number.isFinite(ms) && Date.now() >= ms;
 }
 
+function computePanelPosition(button: HTMLButtonElement): PanelPosition {
+  const width = Math.min(window.innerWidth - PANEL_MARGIN_PX * 2, PANEL_MAX_WIDTH_PX);
+  const rect = button.getBoundingClientRect();
+  let left = rect.right - width;
+  left = Math.max(PANEL_MARGIN_PX, Math.min(left, window.innerWidth - PANEL_MARGIN_PX - width));
+  return { top: rect.bottom + PANEL_GAP_PX, left, width };
+}
+
 export function NationRollingDeadlinesButton({ deadlines, finalHardDeadlineAt }: Props) {
   const [open, setOpen] = useState(false);
+  const [panelPos, setPanelPos] = useState<PanelPosition | null>(null);
   const panelId = useId();
-  const panelRef = useRef<HTMLDivElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  const updatePanelPosition = useCallback(() => {
+    const button = buttonRef.current;
+    if (!button) return;
+    setPanelPos(computePanelPosition(button));
+  }, []);
+
+  useLayoutEffect(() => {
+    if (!open) {
+      setPanelPos(null);
+      return;
+    }
+    updatePanelPosition();
+  }, [open, updatePanelPosition]);
 
   useEffect(() => {
     if (!open) return;
@@ -28,21 +62,26 @@ export function NationRollingDeadlinesButton({ deadlines, finalHardDeadlineAt }:
     }
 
     function onPointerDown(e: MouseEvent) {
-      const el = panelRef.current;
+      const el = rootRef.current;
       if (el && !el.contains(e.target as Node)) setOpen(false);
     }
 
+    window.addEventListener("resize", updatePanelPosition);
+    window.addEventListener("scroll", updatePanelPosition, true);
     document.addEventListener("keydown", onKeyDown);
     document.addEventListener("mousedown", onPointerDown);
     return () => {
+      window.removeEventListener("resize", updatePanelPosition);
+      window.removeEventListener("scroll", updatePanelPosition, true);
       document.removeEventListener("keydown", onKeyDown);
       document.removeEventListener("mousedown", onPointerDown);
     };
-  }, [open]);
+  }, [open, updatePanelPosition]);
 
   return (
-    <div className="relative" ref={panelRef}>
+    <div className="relative" ref={rootRef}>
       <button
+        ref={buttonRef}
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
@@ -59,12 +98,18 @@ export function NationRollingDeadlinesButton({ deadlines, finalHardDeadlineAt }:
         Deadlines
       </button>
 
-      {open && (
+      {open && panelPos && (
         <div
           id={panelId}
           role="dialog"
           aria-label="Nation bidding deadlines"
-          className="absolute right-0 z-50 mt-2 w-[min(100vw-2rem,22rem)] rounded-xl border border-slate-200 bg-white p-4 shadow-lg sm:w-[26rem]"
+          style={{
+            position: "fixed",
+            top: panelPos.top,
+            left: panelPos.left,
+            width: panelPos.width,
+          }}
+          className="z-50 rounded-xl border border-slate-200 bg-white p-4 shadow-lg"
         >
           <div className="flex items-start justify-between gap-3">
             <div>
