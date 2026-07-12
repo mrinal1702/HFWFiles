@@ -2,7 +2,7 @@ import { createAdminClient } from "@/lib/supabase-server";
 import type { XiRole } from "@/lib/best-xi-display";
 import { parseXiRole } from "@/lib/best-xi-display";
 import { fetchAuctionUserNames } from "@/lib/auction-users-query";
-import { isUserRelegated, relegatedUserIdsForAuction } from "@/lib/relegated-participants";
+import { isUserRelegated } from "@/lib/relegated-participants";
 import { loadBestXiOverlay } from "@/lib/best-xi-overlay";
 import { loadMatchPositionsForGameweek } from "@/lib/match-positions-for-gw";
 
@@ -119,8 +119,6 @@ export async function getLeaderboardData(auctionId: number): Promise<Leaderboard
       .eq("auction_id", auctionId),
   ]);
 
-  const relegatedIds = relegatedUserIdsForAuction(auctionId);
-
   if (lbRes.error) throw new Error(`auction_leaderboard: ${lbRes.error.message}`);
   const lbRows = (lbRes.data ?? []) as Array<{
     auction_user_id: number;
@@ -165,7 +163,7 @@ export async function getLeaderboardData(auctionId: number): Promise<Leaderboard
       teamName: u.team_name?.trim() || null,
       scoresByGwId: gwScores,
       total,
-      isRelegated: isUserRelegated(auctionId, u.id, relegatedIds.has(u.id) ? true : null),
+      isRelegated: isUserRelegated(auctionId, u.id, u.isRelegatedInDb),
     };
   });
 
