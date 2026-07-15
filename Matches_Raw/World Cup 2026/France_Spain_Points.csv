@@ -1,0 +1,47 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+941573,Pedro Porro,6720,Spain,1,defender,28.31,1.8,2.8,32.91,83.0,2,0,10.0,42.91
+605654,Fabián Ruiz,6720,Spain,2,midfielder,28.174,3.0,2.6,33.774,77.0,2,0,9.0,42.774
+411617,Aymeric Laporte,6720,Spain,1,defender,23.279999999999998,3.0,3.0,29.279999999999998,90.0,2,0,10.0,39.28
+675088,Rodri,6720,Spain,2,midfielder,22.642000000000003,3.0,3.0,28.642000000000003,90.0,2,0,9.0,37.642
+873289,Marc Cucurella,6720,Spain,1,defender,22.229999999999997,0.6000000000000001,3.0,25.83,90.0,2,0,10.0,35.83
+1532137,Pau Cubarsí,6720,Spain,1,defender,18.630000000000003,3.0,3.0,24.630000000000003,90.0,2,0,10.0,34.63
+678234,Mikel Oyarzabal,6720,Spain,3,forward,21.716666666666665,4.1,2.466666666666667,28.28333333333333,74.0,2,0,6.0,34.28333333333333
+914458,Aurélien Tchouaméni,6723,France,2,midfielder,23.195999999999998,1.9,3.0,28.095999999999997,90.0,0,2,1.0,29.095999999999997
+614834,Dani Olmo,6720,Spain,2,midfielder,17.056,-0.30000000000000027,2.6,19.356,77.0,2,0,9.0,28.356
+352879,Adrien Rabiot,6723,France,2,midfielder,18.586,3.0,1.5,23.086,46.0,0,1,3.0,26.086
+950485,Maxence Lacroix,6723,France,1,defender,15.85,3.0,2.0,20.85,60.0,0,1,5.0,25.85
+1467236,Lamine Yamal,6720,Spain,3,forward,7.125,5.0,3.0,15.125,90.0,2,0,6.0,21.125
+1339208,Désiré Doué,6723,France,3,forward,18.4,4.1,1.1,23.6,33.0,0,1,-2.5,21.1
+692984,Ousmane Dembélé,6723,France,2,midfielder,14.043999999999999,1.9,3.0,18.944,90.0,0,2,1.0,19.944
+658554,Dayot Upamecano,6723,France,1,defender,12.92,3.0,3.0,18.92,90.0,0,2,0.0,18.92
+705450,Jules Koundé,6723,France,1,defender,11.98,3.0,3.0,17.98,90.0,0,2,0.0,17.98
+1029063,Michael Olise,6723,France,2,midfielder,13.674000000000001,0.7999999999999998,2.4,16.874,72.0,0,2,1.0,17.874
+942372,Álex Baena,6720,Spain,2,midfielder,5.078000000000001,0.7999999999999998,2.8,8.678,83.0,2,0,9.0,17.678
+1104053,Rayan Cherki,6723,France,2,midfielder,8.751999999999999,3.0,0.6,12.351999999999999,18.0,0,0,2.5,14.851999999999999
+574645,Mikel Merino,6720,Spain,2,midfielder,8.875999999999998,3.0,0.4,12.275999999999998,13.0,0,0,2.5,14.775999999999998
+602563,Marcos Llorente,6720,Spain,1,defender,4.57,3.0,0.2,7.7700000000000005,7.0,0,0,5.0,12.77
+1297165,Bradley Barcola,6723,France,3,forward,5.25,5.0,1.9,12.15,57.0,0,1,0.0,12.15
+1083323,Pedri,6720,Spain,2,midfielder,6.498,1.9,0.4,8.798,13.0,0,0,2.5,11.298
+701154,Kylian Mbappé,6723,France,3,forward,5.9,2.3,3.0,11.2,90.0,0,2,0.0,11.2
+210111,Lucas Digne,6723,France,1,defender,5.1899999999999995,3.0,2.4,10.59,72.0,0,2,0.0,10.59
+724371,Theo Hernández,6723,France,1,defender,0.7800000000000005,3.0,0.6,4.38,18.0,0,0,5.0,9.379999999999999
+881771,Ferran Torres,6720,Spain,3,forward,5.458333333333333,5.0,0.5333333333333333,10.991666666666665,16.0,0,0,-2.5,8.491666666666665
+1202110,Nico Williams,6720,Spain,3,forward,2.966666666666667,5.0,0.2,8.166666666666666,7.0,0,0,-2.5,5.666666666666666
+955406,William Saliba,6723,France,1,defender,-0.2999999999999998,3.0,1.0,3.7,30.0,0,1,0.0,3.7
+1016132,Kouadio Koné,6723,France,2,midfielder,-1.0440000000000005,1.9,1.5,2.3559999999999994,44.0,0,1,0.5,2.8559999999999994
+504606,Lucas Hernández,6723,France,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+820140,Ibrahima Konaté,6723,France,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+940573,Eric García,6720,Spain,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1197250,Malo Gusto,6723,France,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1323897,Marc Pubill,6720,Spain,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+288406,Alejandro Grimaldo,6720,Spain,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+319300,N'Golo Kanté,6723,France,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1031325,Martín Zubimendi,6720,Spain,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1047676,Yéremi Pino,6720,Spain,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1279040,Gavi,6720,Spain,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1367615,Warren Zaïre-Emery,6723,France,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+609505,Borja Iglesias,6720,Spain,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+621562,Marcus Thuram,6723,France,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+706297,Jean-Philippe Mateta,6723,France,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1305618,Maghnes Akliouche,6723,France,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1553105,Víctor Muñoz,6720,Spain,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

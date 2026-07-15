@@ -1,0 +1,15 @@
+{
+  "match_id": 4653855,
+  "home_team": "France",
+  "away_team": "Spain",
+  "source_url": "https://www.fotmob.com/en-GB/matches/spain-vs-france/1hsydl#4653855:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/France_Vs_Spain.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/spain-vs-france/1hsydl",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/spain-vs-france/1hsydl#4653855:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/spain-vs-france/1hsydl#4653855:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/spain-vs-france/1hsydl#4653855:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4653855"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
