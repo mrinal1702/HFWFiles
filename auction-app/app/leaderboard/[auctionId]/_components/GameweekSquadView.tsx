@@ -15,31 +15,27 @@ const POS_COL = "w-11 shrink-0 text-center text-[10px] font-semibold uppercase t
 
 // ─── Column header ────────────────────────────────────────────────────────────
 
-function SquadColumnHeader({ showRole }: { showRole: boolean }) {
+function SquadColumnHeader() {
   return (
     <div className="flex items-center justify-between gap-1.5 border-b border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:gap-2">
       <span className="min-w-0 flex-1">Player</span>
       <span className={POS_COL} title="Listed position">
         Listed Pos
       </span>
-      <span className={POS_COL} title="Match position">
+      <span className={POS_COL} title="In-match / Best XI scoring position">
         Match Pos
       </span>
-      {showRole && (
-        <span className={POS_COL} title="Best XI formation slot">
-          Role
-        </span>
-      )}
       <span className="w-10 shrink-0 text-right">Pts</span>
     </div>
   );
 }
 
-function roleLabelForPlayer(player: GwSquadPlayer): string | null {
+/** Match Pos: Best XI formation slot when published; else FinalPoints scoring role. */
+function matchPosLabelForPlayer(player: GwSquadPlayer): string | null {
   if (player.isBestXi && player.xiRole) {
     return formatXiRoleLabel(player.xiRole);
   }
-  return formatListedPosition(player.position);
+  return formatMatchPosition(player.matchPosition);
 }
 
 function PositionCell({ label }: { label: string | null }) {
@@ -50,13 +46,12 @@ function PositionCell({ label }: { label: string | null }) {
 
 // ─── Player row ───────────────────────────────────────────────────────────────
 
-function PlayerRow({ player, showRole }: { player: GwSquadPlayer; showRole: boolean }) {
+function PlayerRow({ player }: { player: GwSquadPlayer }) {
   const hasScore = player.score !== null;
   const isBestXiKnown = player.isBestXi !== null;
   const inXI = player.isBestXi === true;
-  const roleLabel = roleLabelForPlayer(player);
   const listedLabel = formatListedPosition(player.position);
-  const matchLabel = formatMatchPosition(player.matchPosition);
+  const matchLabel = matchPosLabelForPlayer(player);
 
   return (
     <div
@@ -79,7 +74,6 @@ function PlayerRow({ player, showRole }: { player: GwSquadPlayer; showRole: bool
       </div>
       <PositionCell label={listedLabel} />
       <PositionCell label={matchLabel} />
-      {showRole && <PositionCell label={roleLabel} />}
       <span
         className={`w-10 shrink-0 text-right font-mono text-sm font-semibold tabular-nums ${
           hasScore ? "text-slate-900" : "text-slate-300"
@@ -95,7 +89,6 @@ function PlayerRow({ player, showRole }: { player: GwSquadPlayer; showRole: bool
 
 function SquadDisplay({ players, formation }: { players: GwSquadPlayer[]; formation: string | null }) {
   const hasBestXiData = players.some((p) => p.isBestXi !== null);
-  const hasXiRoles = players.some((p) => p.isBestXi && p.xiRole);
 
   if (hasBestXiData) {
     const xi = players.filter((p) => p.isBestXi === true).sort(compareXiPlayersForDisplay);
@@ -122,10 +115,10 @@ function SquadDisplay({ players, formation }: { players: GwSquadPlayer[]; format
                 </span>
               )}
             </div>
-            <SquadColumnHeader showRole={hasXiRoles} />
+            <SquadColumnHeader />
             <div className="divide-y divide-sky-100">
               {xi.map((p) => (
-                <PlayerRow key={p.playerId} player={p} showRole={hasXiRoles} />
+                <PlayerRow key={p.playerId} player={p} />
               ))}
             </div>
           </div>
@@ -139,10 +132,10 @@ function SquadDisplay({ players, formation }: { players: GwSquadPlayer[]; format
                   Bench ({bench.length})
                 </span>
               </div>
-              <SquadColumnHeader showRole={false} />
+              <SquadColumnHeader />
               <div className="divide-y divide-slate-100">
                 {bench.map((p) => (
-                  <PlayerRow key={p.playerId} player={p} showRole={false} />
+                  <PlayerRow key={p.playerId} player={p} />
                 ))}
               </div>
             </div>
@@ -171,10 +164,10 @@ function SquadDisplay({ players, formation }: { players: GwSquadPlayer[]; format
   return (
     <div className="overflow-x-auto overflow-hidden rounded-lg border border-slate-200 bg-white">
       <div className="min-w-[20rem]">
-        <SquadColumnHeader showRole={false} />
+        <SquadColumnHeader />
         <div className="divide-y divide-slate-100">
           {sorted.map((p) => (
-            <PlayerRow key={p.playerId} player={p} showRole={false} />
+            <PlayerRow key={p.playerId} player={p} />
           ))}
         </div>
       </div>
@@ -284,8 +277,8 @@ export function GameweekSquadView({
             )}
           </div>
           <p className="mt-1 text-xs text-slate-500">
-            Listed Pos is the pool role. Match Pos is where the player was scored that gameweek.
-            Role is the Best XI formation slot. Only Starting XI points count toward the total.
+            Listed Pos is the pool role. Match Pos is the Best XI formation slot (or scoring role
+            before Best XI). Only Starting XI points count toward the total.
           </p>
         </div>
       )}
