@@ -1,0 +1,15 @@
+{
+  "match_id": 4653856,
+  "home_team": "England",
+  "away_team": "Argentina",
+  "source_url": "https://www.fotmob.com/en-GB/matches/england-vs-argentinaswitzerland/rleu30a1#4653856:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/England_Vs_Argentina.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/england-vs-argentinaswitzerland/rleu30a1",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/england-vs-argentinaswitzerland/rleu30a1#4653856:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/england-vs-argentinaswitzerland/rleu30a1#4653856:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/england-vs-argentinaswitzerland/rleu30a1#4653856:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=4653856"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

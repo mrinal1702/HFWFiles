@@ -709,6 +709,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 7,
     rows: loadMatchScoreCsv("France_Spain_FinalPoints.csv"),
   },
+  {
+    slug: "england-argentina",
+    title: "England vs Argentina",
+    subtitle: "World Cup 2026 · Semi-finals",
+    groupStageGw: 7,
+    rows: loadMatchScoreCsv("England_Argentina_FinalPoints.csv"),
+  },
 ];
 
 const GROUP_LABELS: Record<GroupStageGw, string> = {
