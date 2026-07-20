@@ -37,7 +37,7 @@ export default async function Home() {
             href="/dashboard"
             className="min-h-12 w-full rounded-lg bg-sky-600 px-5 py-3 text-center text-base font-medium text-white hover:bg-sky-700 sm:max-w-xs"
           >
-            Go to dashboard
+            Go to Active Auctions
           </Link>
         </div>
       ) : (

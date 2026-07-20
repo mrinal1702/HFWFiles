@@ -6,6 +6,7 @@ import {
   parseActorCookie,
   resolveActorFromIds,
 } from "@/lib/auction-actor-cookie";
+import { isArchivedAuctionId } from "@/lib/archived-auctions";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { isGoalkeeperPosition } from "@/lib/bid-ui-messages";
 import type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
@@ -514,6 +515,16 @@ export const loadMyAuctionsForUser = cache(async (authUserId: string): Promise<M
   if (aErr) throw new Error(aErr.message);
   return (auctions ?? []) as MyAuctionRow[];
 });
+
+export async function loadMyActiveAuctionsForUser(authUserId: string): Promise<MyAuctionRow[]> {
+  const all = await loadMyAuctionsForUser(authUserId);
+  return all.filter((a) => !isArchivedAuctionId(a.id));
+}
+
+export async function loadMyArchivedAuctionsForUser(authUserId: string): Promise<MyAuctionRow[]> {
+  const all = await loadMyAuctionsForUser(authUserId);
+  return all.filter((a) => isArchivedAuctionId(a.id));
+}
 
 /** Use in auction pages: resolves current Supabase user and loads dashboard (cached per user + auction). */
 export async function loadAuctionDashboardForViewer(auctionId: number): Promise<AuctionDashboard> {

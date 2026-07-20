@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { ParticipantNav } from "@/app/_components/ParticipantNav";
 import { getAuthUser } from "@/lib/auth/get-user";
-import { loadMyAuctionsForUser } from "@/lib/auction-dashboard";
+import { loadMyActiveAuctionsForUser } from "@/lib/auction-dashboard";
 import { signOutAction } from "@/app/auth/actions";
 
 import { JoinAuctionForm } from "./JoinAuctionForm";
@@ -21,10 +22,10 @@ export default async function DashboardPage({
 
   const sp = await searchParams;
 
-  let auctions: Awaited<ReturnType<typeof loadMyAuctionsForUser>> = [];
+  let auctions: Awaited<ReturnType<typeof loadMyActiveAuctionsForUser>> = [];
   let loadError: string | null = null;
   try {
-    auctions = await loadMyAuctionsForUser(user.id);
+    auctions = await loadMyActiveAuctionsForUser(user.id);
   } catch (e) {
     loadError = e instanceof Error ? e.message : String(e);
   }
@@ -40,8 +41,13 @@ export default async function DashboardPage({
           className="h-auto w-full max-w-xs sm:max-w-sm"
         />
       </div>
+
+      <ParticipantNav active="active-auctions" />
+
       <div className="flex flex-wrap items-baseline justify-between gap-3">
-        <h1 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">Dashboard</h1>
+        <h1 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+          Active Auctions
+        </h1>
         <form action={signOutAction}>
           <button
             type="submit"
@@ -55,20 +61,6 @@ export default async function DashboardPage({
         Signed in as <span className="font-medium text-slate-900">{user.email}</span>
       </p>
 
-      <section className="mt-6 rounded-xl border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
-        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Match player scores</h2>
-        <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          World Cup 2026 points for every completed match — the same for all auctions. You can bookmark
-          or share the link; no login required.
-        </p>
-        <Link
-          href="/match-scores"
-          className="mt-4 inline-flex min-h-11 items-center rounded-lg bg-sky-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-sky-700"
-        >
-          Open match scores →
-        </Link>
-      </section>
-
       {sp.error === "not_member" && (
         <p className="mt-5 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-950">
           You aren&apos;t in that auction yet. Enter your join code below, or pick an auction you already
@@ -76,32 +68,7 @@ export default async function DashboardPage({
         </p>
       )}
 
-      <section className="mt-10 rounded-xl border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
-        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Join an auction</h2>
-        <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          Your commissioner should have shared a short code (letters and numbers). Enter it here to join
-          — you can join even if bidding has already started.
-        </p>
-        <div className="mt-5">
-          <JoinAuctionForm />
-        </div>
-      </section>
-
-      <section className="mt-8">
-        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Start a new auction</h2>
-        <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          Commissioners will be able to create leagues here in a future update.
-        </p>
-        <button
-          type="button"
-          disabled
-          className="mt-4 min-h-12 w-full cursor-not-allowed rounded-lg border border-slate-200 bg-slate-100 px-4 py-3 text-sm text-slate-500 sm:w-auto sm:px-6"
-        >
-          Create auction (coming soon)
-        </button>
-      </section>
-
-      <section className="mt-12">
+      <section className="mt-10">
         <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Your auctions</h2>
         {loadError && (
           <p className="mt-4 text-sm leading-relaxed text-red-700">
@@ -130,23 +97,38 @@ export default async function DashboardPage({
         </ul>
         {auctions.length === 0 && !loadError && (
           <p className="mt-4 text-sm leading-relaxed text-slate-600">
-            You haven&apos;t joined any auction yet. Use a join code above when your commissioner shares one.
+            No active auctions right now. Finished tournaments are in{" "}
+            <Link href="/archives" className="font-medium text-sky-700 underline hover:text-sky-900">
+              Archives
+            </Link>
+            . Join a new one with a code below when your commissioner shares one.
           </p>
         )}
       </section>
 
-      <section className="mt-8 rounded-xl border border-violet-100 bg-white p-5 shadow-sm sm:p-6">
-        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Meme Builds</h2>
+      <section className="mt-10 rounded-xl border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
+        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Join an auction</h2>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          Assemble themed squads for fun — e.g. &ldquo;Man United &amp; ex-United XI&rdquo; — and see how
-          they score each gameweek. Saved in your browser; not part of any auction.
+          Your commissioner should have shared a short code (letters and numbers). Enter it here to join
+          — you can join even if bidding has already started.
         </p>
-        <Link
-          href="/meme-builds"
-          className="mt-4 inline-flex min-h-11 items-center rounded-lg bg-violet-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-violet-700"
+        <div className="mt-5">
+          <JoinAuctionForm />
+        </div>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Start a new auction</h2>
+        <p className="mt-2 text-sm leading-relaxed text-slate-600">
+          Commissioners will be able to create leagues here in a future update.
+        </p>
+        <button
+          type="button"
+          disabled
+          className="mt-4 min-h-12 w-full cursor-not-allowed rounded-lg border border-slate-200 bg-slate-100 px-4 py-3 text-sm text-slate-500 sm:w-auto sm:px-6"
         >
-          Open meme builds →
-        </Link>
+          Create auction (coming soon)
+        </button>
       </section>
 
       <p className="mt-12 text-center text-sm sm:text-left">
