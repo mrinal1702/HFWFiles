@@ -36,6 +36,7 @@ export async function middleware(request: NextRequest) {
   const needsAuth =
     path === "/dashboard" ||
     path === "/archives" ||
+    path === "/auction-history" ||
     path === "/meme-builds" ||
     path === "/auctions" ||
     /^\/auctions\/[^/]+/.test(path) ||
@@ -56,6 +57,7 @@ export const config = {
   matcher: [
     "/dashboard",
     "/archives",
+    "/auction-history",
     "/meme-builds",
     "/auctions",
     "/auctions/:path*",

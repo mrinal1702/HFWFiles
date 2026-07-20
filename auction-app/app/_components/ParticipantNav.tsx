@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 type ParticipantNavProps = {
-  active: "active-auctions" | "archives";
+  active: "active-auctions" | "archives" | "auction-history";
 };
 
 export function ParticipantNav({ active }: ParticipantNavProps) {
@@ -23,6 +23,9 @@ export function ParticipantNav({ active }: ParticipantNavProps) {
       </Link>
       <Link href="/archives" className={linkClass("archives")}>
         Archives
+      </Link>
+      <Link href="/auction-history" className={linkClass("auction-history")}>
+        Auction History
       </Link>
       <span className="mx-1 hidden h-5 w-px bg-slate-200 sm:inline-block" aria-hidden />
       <Link
