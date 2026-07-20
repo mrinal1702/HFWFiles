@@ -1,12 +1,13 @@
 import Link from "next/link";
-import Image from "next/image";
 
 import { ParticipantNav } from "@/app/_components/ParticipantNav";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadMyActiveAuctionsForUser } from "@/lib/auction-dashboard";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { signOutAction } from "@/app/auth/actions";
 
 import { JoinAuctionForm } from "./JoinAuctionForm";
+import { ProfileAvatar } from "./ProfileAvatar";
 
 export const dynamic = "force-dynamic";
 
@@ -22,6 +23,19 @@ export default async function DashboardPage({
 
   const sp = await searchParams;
 
+  const supabase = await createSupabaseServerClient();
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("display_name, avatar_url")
+    .eq("id", user.id)
+    .maybeSingle();
+
+  const displayName =
+    (profile as { display_name?: string } | null)?.display_name?.trim() ||
+    user.email?.split("@")[0] ||
+    "Player";
+  const avatarUrl = (profile as { avatar_url?: string | null } | null)?.avatar_url ?? null;
+
   let auctions: Awaited<ReturnType<typeof loadMyActiveAuctionsForUser>> = [];
   let loadError: string | null = null;
   try {
@@ -32,15 +46,7 @@ export default async function DashboardPage({
 
   return (
     <main className="mx-auto max-w-lg flex-1 px-4 py-8 sm:max-w-3xl sm:px-6 sm:py-10">
-      <div className="mb-6 flex justify-center sm:mb-8">
-        <Image
-          src="/hfw-auction-logo.png"
-          alt="HFW Auction logo"
-          width={768}
-          height={768}
-          className="h-auto w-full max-w-xs sm:max-w-sm"
-        />
-      </div>
+      <ProfileAvatar userId={user.id} displayName={displayName} avatarUrl={avatarUrl} />
 
       <ParticipantNav active="active-auctions" />
 
