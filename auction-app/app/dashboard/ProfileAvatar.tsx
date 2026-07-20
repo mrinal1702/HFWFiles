@@ -151,6 +151,10 @@ export function ProfileAvatar({ userId, displayName, avatarUrl }: Props) {
         </span>
       </button>
 
+      <h1 className="max-w-md text-center text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+        {displayName}
+      </h1>
+
       <div className="flex flex-wrap items-center justify-center gap-3 text-sm">
         <button
           type="button"

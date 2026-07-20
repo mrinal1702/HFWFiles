@@ -51,9 +51,9 @@ export default async function DashboardPage({
       <ParticipantNav active="active-auctions" />
 
       <div className="flex flex-wrap items-baseline justify-between gap-3">
-        <h1 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+        <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
           Active Auctions
-        </h1>
+        </h2>
         <form action={signOutAction}>
           <button
             type="submit"
