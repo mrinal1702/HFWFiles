@@ -1,0 +1,221 @@
+{
+  "auction_id": 5,
+  "gw_id": 8,
+  "managers": [
+    {
+      "auction_user_id": "35",
+      "user_name": "Antonio Lopez Cerrato",
+      "gw_id": 8,
+      "formation": "5-4-1",
+      "formation_tuple": [
+        5,
+        4,
+        1
+      ],
+      "total_points": 422,
+      "goalkeeper": {
+        "player_id": 90006706,
+        "player_name": "Argentina Keepers",
+        "score": 58
+      },
+      "outfield": [
+        {
+          "player_id": 1532137,
+          "player_name": "Pau Cubars\u00ed",
+          "role": "D",
+          "score": 50,
+          "flexible": false
+        },
+        {
+          "player_id": 675088,
+          "player_name": "Rodri",
+          "role": "M",
+          "score": 46,
+          "flexible": false
+        },
+        {
+          "player_id": 1467236,
+          "player_name": "Lamine Yamal",
+          "role": "M",
+          "score": 45,
+          "flexible": true
+        },
+        {
+          "player_id": 195750,
+          "player_name": "Nicol\u00e1s Tagliafico",
+          "role": "D",
+          "score": 43,
+          "flexible": false
+        },
+        {
+          "player_id": 941573,
+          "player_name": "Pedro Porro",
+          "role": "D",
+          "score": 41,
+          "flexible": false
+        },
+        {
+          "player_id": 1202110,
+          "player_name": "Nico Williams",
+          "role": "F",
+          "score": 38,
+          "flexible": false
+        },
+        {
+          "player_id": 614834,
+          "player_name": "Dani Olmo",
+          "role": "M",
+          "score": 26,
+          "flexible": false
+        },
+        {
+          "player_id": 726345,
+          "player_name": "Nahuel Molina",
+          "role": "D",
+          "score": 26,
+          "flexible": false
+        },
+        {
+          "player_id": 687008,
+          "player_name": "Gonzalo Montiel",
+          "role": "D",
+          "score": 25,
+          "flexible": false
+        },
+        {
+          "player_id": 237606,
+          "player_name": "Leandro Paredes",
+          "role": "M",
+          "score": 24,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        195750,
+        237606,
+        614834,
+        675088,
+        687008,
+        726345,
+        941573,
+        1202110,
+        1467236,
+        1532137,
+        90006706
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 17,
+      "missing_score_player_ids": []
+    },
+    {
+      "auction_user_id": "37",
+      "user_name": "Vedant Ladda",
+      "gw_id": 8,
+      "formation": "4-4-2",
+      "formation_tuple": [
+        4,
+        4,
+        2
+      ],
+      "total_points": 290,
+      "goalkeeper": {
+        "player_id": 90006720,
+        "player_name": "Spain Keepers",
+        "score": 32
+      },
+      "outfield": [
+        {
+          "player_id": 411617,
+          "player_name": "Aymeric Laporte",
+          "role": "D",
+          "score": 39,
+          "flexible": false
+        },
+        {
+          "player_id": 1083323,
+          "player_name": "Pedri",
+          "role": "M",
+          "score": 39,
+          "flexible": false
+        },
+        {
+          "player_id": 873289,
+          "player_name": "Marc Cucurella",
+          "role": "D",
+          "score": 31,
+          "flexible": false
+        },
+        {
+          "player_id": 881771,
+          "player_name": "Ferran Torres",
+          "role": "F",
+          "score": 27,
+          "flexible": false
+        },
+        {
+          "player_id": 605654,
+          "player_name": "Fabi\u00e1n Ruiz",
+          "role": "M",
+          "score": 25,
+          "flexible": false
+        },
+        {
+          "player_id": 30981,
+          "player_name": "Lionel Messi",
+          "role": "F",
+          "score": 24,
+          "flexible": false
+        },
+        {
+          "player_id": 789066,
+          "player_name": "Cristian Romero",
+          "role": "D",
+          "score": 24,
+          "flexible": false
+        },
+        {
+          "player_id": 574645,
+          "player_name": "Mikel Merino",
+          "role": "M",
+          "score": 19,
+          "flexible": false
+        },
+        {
+          "player_id": 847983,
+          "player_name": "Lisandro Mart\u00ednez",
+          "role": "D",
+          "score": 18,
+          "flexible": false
+        },
+        {
+          "player_id": 1226147,
+          "player_name": "Giuliano Simeone",
+          "role": "M",
+          "score": 12,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        30981,
+        411617,
+        574645,
+        605654,
+        789066,
+        847983,
+        873289,
+        881771,
+        1083323,
+        1226147,
+        90006720
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 13,
+      "missing_score_player_ids": []
+    }
+  ],
+  "meta": {
+    "squad_rows": 30,
+    "match_json_files": 1,
+    "players_with_scores": 30
+  }
+}

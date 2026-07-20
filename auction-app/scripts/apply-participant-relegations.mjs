@@ -1,5 +1,5 @@
 /**
- * Apply participant relegations (RO32 cut).
+ * Apply participant relegations (SF cut — cumulative standings after GW7).
  *
  * Prerequisites (Supabase SQL Editor, once):
  *   scripts/sql/participant-relegation-schema.sql
@@ -17,10 +17,11 @@ import { createClient } from "@supabase/supabase-js";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(__dirname, "..");
 
-/** auction_id → auction_user_id[] — bottom of cumulative standings after GW4. */
+/** auction_id → auction_user_id[] — 3rd & 4th of active standings after SF (GW7). */
 const RELEGATIONS = {
-  5: [41, 40, 45, 44],
-  6: [63, 54, 51],
+  5: [33, 43], // Nicolas Pastore, Sujay Choksey
+  6: [53, 61], // Ishaan Shah, Arnav Gupta
+  7: [88, 81], // Zahaan Bafna, AZ/Dalla
 };
 
 function loadEnvLocal() {
