@@ -11,6 +11,8 @@ export type AuctionUserRow = {
   user_id?: string | null;
   /** True when relegated by standings — view-only, no squad or bidding. */
   is_relegated?: boolean;
+  /** From profiles.avatar_url when user_id is set; null if unset or unlinked. */
+  avatar_url?: string | null;
 };
 
 export type EnrichedLot = {
@@ -24,6 +26,8 @@ export type EnrichedLot = {
   expires_at: string | null;
   high_bidder_id: number | null;
   high_bidder_name: string | null;
+  /** profiles.avatar_url for the high bidder when linked to an auth user. */
+  high_bidder_avatar_url: string | null;
   high_amount: number | null;
   /** Nation (players.team_name) for rolling deadline mode. */
   nation_name: string | null;

@@ -48,6 +48,7 @@ export default async function LeaderboardPage({
 
   return (
     <LeaderboardTabs
+      auctionId={auctionId}
       standings={standings}
       gameWeeks={gameWeeks}
       activeGw={activeGw}

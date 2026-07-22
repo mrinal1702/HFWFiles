@@ -419,6 +419,7 @@ export const loadAuctionDashboard = cache(
         expires_at: l.expires_at != null ? String(l.expires_at) : null,
         high_bidder_id: soldTo.auction_user_id,
         high_bidder_name: bidderUser?.name ?? null,
+        high_bidder_avatar_url: bidderUser?.avatar_url ?? null,
         high_amount: soldTo.purchase_price,
         ...nationFields,
       };
@@ -437,6 +438,7 @@ export const loadAuctionDashboard = cache(
       expires_at: l.expires_at != null ? String(l.expires_at) : null,
       high_bidder_id: bid?.auction_user_id ?? null,
       high_bidder_name: bidder?.name ?? null,
+      high_bidder_avatar_url: bidder?.avatar_url ?? null,
       high_amount: bid?.amount ?? null,
       ...nationFields,
     };
@@ -572,6 +574,7 @@ export const loadCompetitorView = cache(
       high_amount: priceByPlayer.get(lot.player_id) ?? lot.high_amount,
       high_bidder_id: competitorUserId,
       high_bidder_name: competitor?.name ?? null,
+      high_bidder_avatar_url: competitor?.avatar_url ?? null,
     });
   }
   sold.sort((a, b) => a.player_id.localeCompare(b.player_id));

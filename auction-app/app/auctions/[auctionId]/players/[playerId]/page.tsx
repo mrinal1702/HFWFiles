@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { ManagerChip } from "@/app/_components/entity/ManagerChip";
 import { loadAuctionDashboardForViewer, toBidGateContext } from "@/lib/auction-dashboard";
 import { getBidDisabledReason, lotRaiseModeActive } from "@/lib/auction-bid-gates";
 import { nextMinimumBidAmount } from "@/lib/bid-ui-messages";
@@ -60,7 +61,6 @@ export default async function PlayerDetailPage({
           ? String(lot.high_amount)
           : "—";
 
-  const highBidderDisplay = lot.high_bidder_name ?? (lot.high_bidder_id != null ? `#${lot.high_bidder_id}` : "—");
   const showTimer = lot.status === "bidding" && !gate.biddingClosed && lot.expires_at != null;
 
   const minBid = nextMinimumBidAmount(lot.high_amount, lotRaiseModeActive(lot, gate));
@@ -95,7 +95,19 @@ export default async function PlayerDetailPage({
           </div>
           <div className="rounded-lg border border-slate-200 bg-white px-3 py-3 shadow-sm">
             <div className="text-xs font-medium text-slate-600">High bidder</div>
-            <div className="mt-1 truncate text-sm font-medium text-slate-800">{highBidderDisplay}</div>
+            <div className="mt-1 truncate text-sm font-medium text-slate-800">
+              {lot.high_bidder_id != null ? (
+                <ManagerChip
+                  auctionId={auctionId}
+                  auctionUserId={lot.high_bidder_id}
+                  name={lot.high_bidder_name}
+                  avatarUrl={lot.high_bidder_avatar_url}
+                  labelClassName="font-medium"
+                />
+              ) : (
+                "—"
+              )}
+            </div>
           </div>
           <div className="rounded-lg border border-slate-200 bg-white px-3 py-3 shadow-sm sm:col-span-2">
             <div className="text-xs font-medium text-slate-600">Timer</div>

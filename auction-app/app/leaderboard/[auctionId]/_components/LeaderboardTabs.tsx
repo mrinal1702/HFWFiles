@@ -8,6 +8,7 @@ import { GameweekSquadView } from "./GameweekSquadView";
 type TabId = "standings" | `gw-${number}`;
 
 interface LeaderboardTabsProps {
+  auctionId: number;
   standings: StandingEntry[];
   gameWeeks: GwInfo[];
   activeGw: GwInfo | null;
@@ -16,6 +17,7 @@ interface LeaderboardTabsProps {
 }
 
 export function LeaderboardTabs({
+  auctionId,
   standings,
   gameWeeks,
   activeGw,
@@ -57,11 +59,12 @@ export function LeaderboardTabs({
       </div>
 
       {activeTab === "standings" && (
-        <StandingsTable standings={standings} gameWeeks={gameWeeks} />
+        <StandingsTable auctionId={auctionId} standings={standings} gameWeeks={gameWeeks} />
       )}
 
       {selectedPanel && (
         <GameweekSquadView
+          auctionId={auctionId}
           activeGw={selectedPanel.gw}
           squads={selectedPanel.squads}
           squadsAreLocked={selectedPanel.squadsAreLocked}

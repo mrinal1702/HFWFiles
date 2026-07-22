@@ -1,10 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
+
+import { ManagerChip } from "@/app/_components/entity/ManagerChip";
 import type { StandingEntry, GwInfo } from "@/lib/leaderboard-data";
 import { fantasyTeamLabel } from "@/lib/team-name";
 
 interface StandingsTableProps {
+  auctionId: number;
   standings: StandingEntry[];
   gameWeeks: GwInfo[];
 }
@@ -26,7 +29,7 @@ function selectionLabel(gameWeeks: GwInfo[], selectedGwIds: Set<number>, selectA
   return names.join(" + ");
 }
 
-export function StandingsTable({ standings, gameWeeks }: StandingsTableProps) {
+export function StandingsTable({ auctionId, standings, gameWeeks }: StandingsTableProps) {
   const allGwIds = useMemo(() => new Set(gameWeeks.map((gw) => gw.id)), [gameWeeks]);
   const [selectAll, setSelectAll] = useState(true);
   const [selectedGwIds, setSelectedGwIds] = useState<Set<number>>(() => new Set(allGwIds));
@@ -130,7 +133,6 @@ export function StandingsTable({ standings, gameWeeks }: StandingsTableProps) {
           <tbody>
             {displayRows.map(({ entry, filteredPoints }, idx) => {
               const isLeader = entry.rank === 1;
-              const teamLabel = fantasyTeamLabel(entry.teamName, entry.name);
               const showParticipant = Boolean(entry.teamName?.trim());
               const showPoints = hasScores && effectiveSelectedIds.size > 0;
               const rowIndex = idx + 1;
@@ -149,7 +151,15 @@ export function StandingsTable({ standings, gameWeeks }: StandingsTableProps) {
                   <td className="px-3 py-3 tabular-nums text-slate-500">{entry.rank}</td>
                   <td className="px-3 py-3 text-slate-900">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="font-medium">{teamLabel}</span>
+                      <ManagerChip
+                        auctionId={auctionId}
+                        auctionUserId={entry.userId}
+                        name={entry.name}
+                        teamName={entry.teamName}
+                        avatarUrl={entry.avatarUrl}
+                        preferTeamLabel
+                        labelClassName="font-medium text-slate-900"
+                      />
                       {isRelegated && (
                         <span className="rounded border border-red-200 bg-red-100 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-red-800">
                           Relegated
@@ -157,7 +167,7 @@ export function StandingsTable({ standings, gameWeeks }: StandingsTableProps) {
                       )}
                     </div>
                     {showParticipant && (
-                      <div className="text-xs font-normal text-slate-500">{entry.name}</div>
+                      <div className="mt-0.5 pl-6 text-xs font-normal text-slate-500">{entry.name}</div>
                     )}
                   </td>
                   <td className="px-3 py-3 text-right font-mono font-semibold tabular-nums text-slate-900">

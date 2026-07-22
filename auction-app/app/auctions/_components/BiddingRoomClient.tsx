@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 
+import { ManagerChip } from "@/app/_components/entity/ManagerChip";
 import { getBidDisabledReason, lotRaiseModeActive } from "@/lib/auction-bid-gates";
 import { lotRowAnchorId } from "@/lib/lot-row-anchor";
 import { nextMinimumBidAmount, positionSortRank } from "@/lib/bid-ui-messages";
@@ -450,7 +451,18 @@ export function BiddingRoomClient({
                     <div className="flex justify-between gap-3">
                       <dt className="text-slate-600">High bidder</dt>
                       <dd className="min-w-0 text-right text-slate-800">
-                        {lot.high_bidder_name ?? (lot.high_bidder_id != null ? `#${lot.high_bidder_id}` : "—")}
+                        {lot.high_bidder_id != null ? (
+                          <ManagerChip
+                            auctionId={auctionId}
+                            auctionUserId={lot.high_bidder_id}
+                            name={lot.high_bidder_name}
+                            avatarUrl={lot.high_bidder_avatar_url}
+                            className="justify-end"
+                            labelClassName="font-medium"
+                          />
+                        ) : (
+                          "—"
+                        )}
                       </dd>
                     </div>
                     {showDeadlineCol && (
@@ -542,7 +554,17 @@ export function BiddingRoomClient({
                         {highDisplay}
                       </td>
                       <td className="px-3 py-3 align-top text-slate-600">
-                        {lot.high_bidder_name ?? (lot.high_bidder_id != null ? `#${lot.high_bidder_id}` : "—")}
+                        {lot.high_bidder_id != null ? (
+                          <ManagerChip
+                            auctionId={auctionId}
+                            auctionUserId={lot.high_bidder_id}
+                            name={lot.high_bidder_name}
+                            avatarUrl={lot.high_bidder_avatar_url}
+                            labelClassName="font-medium"
+                          />
+                        ) : (
+                          "—"
+                        )}
                       </td>
                       {showDeadlineCol && (
                         <td className="px-3 py-3 align-top text-xs text-slate-600">

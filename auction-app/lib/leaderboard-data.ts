@@ -23,6 +23,8 @@ export type StandingEntry = {
   rank: number;
   /** Relegated managers stay on standings but cannot bid or own players. */
   isRelegated: boolean;
+  /** profiles.avatar_url when the seat is linked to an auth user. */
+  avatarUrl: string | null;
 };
 
 export type GwSquadPlayer = {
@@ -164,6 +166,7 @@ export async function getLeaderboardData(auctionId: number): Promise<Leaderboard
       scoresByGwId: gwScores,
       total,
       isRelegated: isUserRelegated(auctionId, u.id, u.isRelegatedInDb),
+      avatarUrl: u.avatar_url,
     };
   });
 

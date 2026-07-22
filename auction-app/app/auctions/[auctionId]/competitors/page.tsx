@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import { ManagerChip } from "@/app/_components/entity/ManagerChip";
 import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
 
 export const dynamic = "force-dynamic";
@@ -30,27 +29,30 @@ export default async function CompetitorsPage({
           <>
             <ul className="space-y-3 md:hidden">
               {d.users.map((u, i) => (
-                <li key={u.id}>
-                  <Link
-                    href={`/auctions/${auctionId}/competitors/${u.id}`}
-                    className={`block rounded-xl border border-sky-100 px-4 py-4 shadow-sm active:opacity-90 ${
-                      i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
-                    }`}
-                  >
-                    <span className="text-base font-medium text-sky-800 underline-offset-2 hover:underline">
-                      {u.name ?? `Manager #${u.id}`}
-                    </span>
-                    <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
-                      <div>
-                        <dt className="text-xs font-medium text-slate-600">Remaining</dt>
-                        <dd className="font-mono font-medium text-slate-900">{u.budget_remaining}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-xs font-medium text-slate-600">Active</dt>
-                        <dd className="font-mono font-medium text-slate-900">{u.active_budget}</dd>
-                      </div>
-                    </dl>
-                  </Link>
+                <li
+                  key={u.id}
+                  className={`rounded-xl border border-sky-100 px-4 py-4 shadow-sm ${
+                    i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
+                  }`}
+                >
+                  <ManagerChip
+                    auctionId={auctionId}
+                    auctionUserId={u.id}
+                    name={u.name}
+                    teamName={u.team_name}
+                    avatarUrl={u.avatar_url}
+                    labelClassName="text-base font-medium"
+                  />
+                  <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
+                    <div>
+                      <dt className="text-xs font-medium text-slate-600">Remaining</dt>
+                      <dd className="font-mono font-medium text-slate-900">{u.budget_remaining}</dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs font-medium text-slate-600">Active</dt>
+                      <dd className="font-mono font-medium text-slate-900">{u.active_budget}</dd>
+                    </div>
+                  </dl>
                 </li>
               ))}
             </ul>
@@ -70,12 +72,14 @@ export default async function CompetitorsPage({
                       className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
                     >
                       <td className="px-3 py-3">
-                        <Link
-                          href={`/auctions/${auctionId}/competitors/${u.id}`}
-                          className="font-medium text-sky-800 underline hover:text-sky-950"
-                        >
-                          {u.name ?? `Manager #${u.id}`}
-                        </Link>
+                        <ManagerChip
+                          auctionId={auctionId}
+                          auctionUserId={u.id}
+                          name={u.name}
+                          teamName={u.team_name}
+                          avatarUrl={u.avatar_url}
+                          labelClassName="font-medium"
+                        />
                       </td>
                       <td className="px-3 py-3 font-mono font-medium text-slate-900">{u.budget_remaining}</td>
                       <td className="px-3 py-3 font-mono font-medium text-slate-900">{u.active_budget}</td>

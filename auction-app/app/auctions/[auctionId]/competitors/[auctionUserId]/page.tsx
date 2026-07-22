@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { Avatar } from "@/app/_components/entity/Avatar";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadCompetitorView } from "@/lib/auction-dashboard";
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
+import { fantasyTeamLabel } from "@/lib/team-name";
 
 export const dynamic = "force-dynamic";
 
@@ -69,9 +71,21 @@ export default async function CompetitorDetailPage({
         >
           ← Competitors
         </Link>
-        <h2 className="mt-2 text-lg font-semibold text-slate-900 sm:text-xl">
-          {v.competitor.name ?? `Manager #${competitorUserId}`}
-        </h2>
+        <div className="mt-2 flex items-center gap-3">
+          <Avatar
+            name={v.competitor.name ?? `Manager #${competitorUserId}`}
+            avatarUrl={v.competitor.avatar_url}
+            size="md"
+          />
+          <div className="min-w-0">
+            <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">
+              {fantasyTeamLabel(v.competitor.team_name, v.competitor.name)}
+            </h2>
+            {v.competitor.team_name?.trim() && (
+              <p className="text-sm text-slate-600">{v.competitor.name}</p>
+            )}
+          </div>
+        </div>
         <div className="mt-3 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:gap-4">
           <div className="rounded-lg border border-sky-100 bg-sky-50/50 px-3 py-2">
             <div className="text-xs font-medium text-slate-600">budget_remaining</div>

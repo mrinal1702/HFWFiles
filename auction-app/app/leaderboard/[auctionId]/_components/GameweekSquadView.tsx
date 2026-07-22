@@ -9,7 +9,7 @@ import {
   formatXiRoleLabel,
   listedPositionSortKey,
 } from "@/lib/best-xi-display";
-import { fantasyTeamLabel } from "@/lib/team-name";
+import { ManagerChip } from "@/app/_components/entity/ManagerChip";
 
 const POS_COL = "w-11 shrink-0 text-center text-[10px] font-semibold uppercase tracking-wide sm:w-12 sm:text-xs";
 
@@ -178,6 +178,7 @@ function SquadDisplay({ players, formation }: { players: GwSquadPlayer[]; format
 // ─── Main component ───────────────────────────────────────────────────────────
 
 interface GameweekSquadViewProps {
+  auctionId: number;
   activeGw: GwInfo | null;
   squads: ParticipantGwSquad[] | null;
   /** True = locked snapshot; false = live auction_teams fallback */
@@ -186,6 +187,7 @@ interface GameweekSquadViewProps {
 }
 
 export function GameweekSquadView({
+  auctionId,
   activeGw,
   squads,
   squadsAreLocked,
@@ -207,7 +209,6 @@ export function GameweekSquadView({
   }
 
   const selected = squads.find((s) => s.userId === selectedUserId) ?? squads[0];
-  const selectedTeamLabel = fantasyTeamLabel(selected.teamName, selected.name);
   const totalScore = selected.totalGwScore;
   const scoresUploaded = selected.players.some((p) => p.score !== null);
   const hasBestXiData = selected.players.some((p) => p.isBestXi !== null);
@@ -260,9 +261,16 @@ export function GameweekSquadView({
       {totalScore !== null && (
         <div className="rounded-lg border border-slate-100 bg-slate-50 px-4 py-3">
           <div className="mb-2">
-            <div className="text-base font-semibold text-slate-900">{selectedTeamLabel}</div>
+            <ManagerChip
+              auctionId={auctionId}
+              auctionUserId={selected.userId}
+              name={selected.name}
+              teamName={selected.teamName}
+              preferTeamLabel
+              labelClassName="text-base font-semibold text-slate-900"
+            />
             {selected.teamName?.trim() && (
-              <div className="text-xs text-slate-500">{selected.name}</div>
+              <div className="mt-0.5 pl-6 text-xs text-slate-500">{selected.name}</div>
             )}
           </div>
           <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
@@ -286,9 +294,16 @@ export function GameweekSquadView({
       {!hasBestXiData && scoresUploaded && rawSquadTotal !== null && rawSquadTotal > 0 && (
         <div className="rounded-lg border border-slate-100 bg-slate-50 px-4 py-3">
           <div className="mb-2">
-            <div className="text-base font-semibold text-slate-900">{selectedTeamLabel}</div>
+            <ManagerChip
+              auctionId={auctionId}
+              auctionUserId={selected.userId}
+              name={selected.name}
+              teamName={selected.teamName}
+              preferTeamLabel
+              labelClassName="text-base font-semibold text-slate-900"
+            />
             {selected.teamName?.trim() && (
-              <div className="text-xs text-slate-500">{selected.name}</div>
+              <div className="mt-0.5 pl-6 text-xs text-slate-500">{selected.name}</div>
             )}
           </div>
           <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
