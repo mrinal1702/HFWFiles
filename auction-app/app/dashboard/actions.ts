@@ -42,7 +42,8 @@ export async function joinAuctionByCodeAction(
   }
 
   const auctionId = Number(auction.id);
-  const maxP = Math.min(12, Math.max(1, Number(auction.max_participants ?? 12)));
+  // Respect Auctions.max_participants (WC used 15–16; PL auction uses 16). Soft ceiling avoids runaway values.
+  const maxP = Math.min(32, Math.max(1, Number(auction.max_participants ?? 12)));
 
   const { data: existing } = await admin
     .from("auction_users")
