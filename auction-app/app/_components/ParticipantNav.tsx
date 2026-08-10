@@ -34,6 +34,12 @@ export function ParticipantNav({ active }: ParticipantNavProps) {
       >
         Match scores
       </Link>
+      <Link
+        href="/rules"
+        className="inline-flex min-h-10 items-center rounded-lg px-3 py-2 text-sm font-medium text-slate-600 underline-offset-2 hover:text-sky-800 hover:underline"
+      >
+        Rules
+      </Link>
     </nav>
   );
 }

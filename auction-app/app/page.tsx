@@ -26,6 +26,11 @@ export default async function Home() {
       <p className="mt-4 text-center text-sm leading-relaxed text-slate-600 sm:text-base">
         Join your league&apos;s draft, place bids, and build your team — all in one place.
       </p>
+      <p className="mt-3 text-center text-sm">
+        <Link href="/rules" className="font-medium text-sky-800 underline-offset-2 hover:underline">
+          Read the rules
+        </Link>
+      </p>
 
       {user ? (
         <div className="mt-12 flex flex-col items-stretch gap-3 sm:items-center">

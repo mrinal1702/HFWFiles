@@ -9,7 +9,7 @@ Given a FotMob-style match JSON, derive for each player:
 Then compute:
 - Defenders: base 10 (or 5 if <45 mins) and -5 per goal conceded while on field
 - Midfielders: base 5 (or 2.5 if <45 mins) and +2 per goal scored, -2 per goal conceded while on field
-- Forwards: base 0 (or -2.5 if <45 mins) and +3 per goal scored while on field
+- Forwards: base 0 (regardless of minutes) and +3 per goal scored while on field
 
 Output: CSVs in `Tests/` or `Tests/export_run/` if target files are locked.
 """
@@ -281,8 +281,7 @@ def endowment_points_for_position(position_id: int, minutes: float, goals_for: i
         base = 2.5 if is_short else 5.0
         return base + (2.0 * goals_for) - (2.0 * goals_against)
     if position_id == 3:
-        base = -2.5 if is_short else 0.0
-        return base + (3.0 * goals_for)
+        return 3.0 * goals_for
     return 0.0
 
 
