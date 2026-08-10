@@ -24,9 +24,9 @@ Top nav ([`ParticipantNav`](../app/_components/ParticipantNav.tsx)):
 | Tab | Route | Purpose |
 |-----|-------|---------|
 | **Active Auctions** | `/dashboard` | Current leagues + join code |
-| **Archives** | `/archives` | Completed leagues you joined → opens leaderboard |
+| **Archives** | `/archives` | Completed leagues → Leaderboard / Match scores / Open auction |
 | **Auction History** | `/auction-history` | Personal finishes (rank + year); podium medals 🏆🥈🥉 |
-| Match scores | `/match-scores` | Link only (public, no login) |
+| Match scores | `/match-scores` | Public link (plain player names; no auction ownership) |
 
 Archived auction IDs / history years: `lib/archived-auctions.ts`  
 History ranks: `lib/auction-history.ts` (from `auction_leaderboard`)
@@ -50,7 +50,8 @@ Removed / parked: large Match Scores card; Meme Builds entry (routes may still e
 | **My Team** | Squad + release buttons |
 | **Bids held** | Current high bids |
 | **Competitors** | Other managers’ squads |
-| **Player page** | Single player bid / detail |
+| **Player page** | Ownership, GW points, bid/release history, bid form |
+| **Match scores** | In-auction sheets; player names → player page |
 | **Announcements** | Sales, releases, eliminations |
 | **Transfers** | Propose / respond (when window open) |
 | **Leaderboard / Points** | Often redirect or link to `/leaderboard/[id]` |
@@ -88,11 +89,12 @@ Do not redesign columns every competition; add data, not a new layout.
 
 ## Match scores
 
-- Canonical: `/match-scores` (grouped by GW)
-- Legacy redirects: `/scores/[slug]`
+- **Public (canonical):** `/match-scores` (grouped by GW) — anyone; player names are plain text
+- **In-auction:** `/auctions/[auctionId]/match-scores` — members only (incl. archived if still a member); same sheets; player names link to `/auctions/[auctionId]/players/[playerId]`
+- Legacy redirects: `/scores/[slug]` → public match-scores
 - Data: `data/match-scores/*_FinalPoints.csv` + `lib/match-scores/sheets.ts`
 
-When a competition ends, sheet registry may be cleared and CSVs archived — keep the **route** for the next season’s sheets.
+When a competition ends, sheet registry may be cleared and CSVs archived — keep the **routes** for the next season’s sheets.
 
 ---
 

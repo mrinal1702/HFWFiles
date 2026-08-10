@@ -58,9 +58,12 @@ function MatchTabs({
 export function ScoresTabs({
   groups,
   initialSlug,
+  auctionId,
 }: {
   groups: MatchScoreGroup[];
   initialSlug?: string;
+  /** When set, player names link into this auction's player pages. */
+  auctionId?: number;
 }) {
   const initial = useMemo(
     () => resolveInitialSelection(groups, initialSlug),
@@ -84,6 +87,11 @@ export function ScoresTabs({
     const firstSlug = group?.sheets[0]?.slug;
     if (firstSlug) setActiveSlug(firstSlug);
   };
+
+  const returnTo =
+    auctionId != null
+      ? `/auctions/${auctionId}/match-scores?match=${encodeURIComponent(activeSheet.slug)}`
+      : undefined;
 
   return (
     <div className="space-y-5">
@@ -116,9 +124,18 @@ export function ScoresTabs({
       <div>
         <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">{activeSheet.title}</h2>
         <p className="mt-0.5 text-sm text-slate-500">{activeSheet.subtitle}</p>
+        {auctionId != null && (
+          <p className="mt-1 text-xs text-slate-500">
+            Tap a player to open their page in this auction (owner, points, bid history).
+          </p>
+        )}
       </div>
 
-      <MatchScoresTable rows={activeSheet.rows} />
+      <MatchScoresTable
+        rows={activeSheet.rows}
+        auctionId={auctionId}
+        returnTo={returnTo}
+      />
 
       <p className="text-xs text-slate-400">
         Sorted by final score. Keeper units shown per nation.

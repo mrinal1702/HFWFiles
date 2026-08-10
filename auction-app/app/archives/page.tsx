@@ -62,15 +62,32 @@ export default async function ArchivesPage() {
         <ul className="mt-4 space-y-3">
           {auctions.map((a) => (
             <li key={a.id}>
-              <Link
-                href={`/leaderboard/${a.id}`}
-                className="block min-h-[3.5rem] rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm hover:border-sky-300 hover:bg-sky-50/50"
-              >
+              <div className="rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
                 <span className="font-medium text-slate-900">{a.name ?? `Auction #${a.id}`}</span>
                 <span className="mt-1 block text-xs leading-relaxed text-slate-600">
-                  Archived · open standings &amp; history
+                  Archived · standings, squads, match scores, and player pages stay available
                 </span>
-              </Link>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <Link
+                    href={`/leaderboard/${a.id}`}
+                    className="inline-flex min-h-10 items-center rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-sm font-medium text-sky-900 hover:bg-sky-100"
+                  >
+                    Leaderboard
+                  </Link>
+                  <Link
+                    href={`/auctions/${a.id}/match-scores`}
+                    className="inline-flex min-h-10 items-center rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
+                  >
+                    Match scores
+                  </Link>
+                  <Link
+                    href={`/auctions/${a.id}/bidding-room`}
+                    className="inline-flex min-h-10 items-center rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
+                  >
+                    Open auction
+                  </Link>
+                </div>
+              </div>
             </li>
           ))}
         </ul>

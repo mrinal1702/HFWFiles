@@ -72,17 +72,39 @@ export default async function CompetitorDetailPage({
           ← Competitors
         </Link>
         <div className="mt-2 flex items-center gap-3">
-          <Avatar
-            name={v.competitor.name ?? `Manager #${competitorUserId}`}
-            avatarUrl={v.competitor.avatar_url}
-            size="md"
-          />
+          {v.competitor.user_id ? (
+            <Link
+              href={`/u/${v.competitor.user_id}?returnTo=${encodeURIComponent(returnTo)}`}
+              className="shrink-0 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/40"
+              aria-label={`View ${v.competitor.name ?? "manager"} HFW profile`}
+            >
+              <Avatar
+                name={v.competitor.name ?? `Manager #${competitorUserId}`}
+                avatarUrl={v.competitor.avatar_url}
+                size="md"
+              />
+            </Link>
+          ) : (
+            <Avatar
+              name={v.competitor.name ?? `Manager #${competitorUserId}`}
+              avatarUrl={v.competitor.avatar_url}
+              size="md"
+            />
+          )}
           <div className="min-w-0">
             <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">
               {fantasyTeamLabel(v.competitor.team_name, v.competitor.name)}
             </h2>
             {v.competitor.team_name?.trim() && (
               <p className="text-sm text-slate-600">{v.competitor.name}</p>
+            )}
+            {v.competitor.user_id && (
+              <Link
+                href={`/u/${v.competitor.user_id}?returnTo=${encodeURIComponent(returnTo)}`}
+                className="mt-1 inline-block text-sm font-medium text-sky-700 underline hover:text-sky-900"
+              >
+                View HFW profile
+              </Link>
             )}
           </div>
         </div>

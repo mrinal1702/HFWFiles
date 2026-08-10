@@ -1,6 +1,6 @@
 # Entity interconnect plan (pages & links)
 
-**Status:** Phase 1 implemented (manager links + avatars in auction). Phases 2–3 not started. Deploy phase-by-phase; do not ship all at once.  
+**Status:** Phase 1 done (deployed). Phase 2 implemented locally (rich player + in-auction scores). Phase 3 profiles started (`/u/[userId]` + competitor link).  
 **Audience:** Humans and agents working on auction-app UI.  
 **Related:** [OPS_UI_SURFACES.md](./OPS_UI_SURFACES.md), [USER_UI_AND_DEPLOYMENT.md](./USER_UI_AND_DEPLOYMENT.md), [AGENT_HANDOFF.md](./AGENT_HANDOFF.md)
 
@@ -20,7 +20,8 @@ Make the auction app feel like a real website: every meaningful name (manager, p
    - past auction finishes (archived tournaments only)
    - **Nothing else** (no email, budgets, live squads, private settings).
 2. **Player pages**: stay **in-auction**. Enrich `/auctions/[auctionId]/players/[playerId]` for **auction members only**. No platform-wide football-player career page in this plan.
-3. **Phased delivery**: each phase below is independently deployable.
+3. **Match scores**: public `/match-scores` stays public with plain player names. Members also get an **in-auction** copy under `/auctions/[auctionId]/match-scores` where player names link into that auction’s player pages.
+4. **Phased delivery**: each phase below is independently deployable.
 
 ---
 
@@ -110,41 +111,50 @@ Add once (suggested: `app/_components/entity/`):
 
 ---
 
-## Phase 2 — Rich in-auction player page
+## Phase 2 — Rich in-auction player page + in-auction match scores
 
-**Goal:** Click a footballer → full story **for this auction only** (membership already gated by auction layout).
+**Status: done (code).**
 
-**Page sections:**
-1. Header — name, club, position, lot status, timer if bidding
-2. Current ownership — owner `ManagerChip` + purchase price (or unsold / bidding held by…)
-3. Points this auction — GW → points (`player_scores` / patterns in `lib/leaderboard-data.ts`)
-4. Bid history — chronological `auction_bids` for this player in this auction
-5. Ownership / release timeline — `auction_releases` + current `auction_teams`
-6. Existing bid form when eligible
+**Goal:** Inside an auction, click a footballer → full story **for this auction only** (membership gated by auction layout). Also give members an **in-auction Match Scores** entry point so a public-style sheet (e.g. France vs England) can deep-link into that player page (owner, points history, etc.).
 
-**Loader:** new `loadPlayerAuctionDetail(auctionId, playerId)` — do **not** fold into the full dashboard payload.
+### Locked rules for scores
 
-**Deployable alone** after Phase 1 (so owner/bidder names are clickable).
+| Surface | Who | Player names |
+|---------|-----|----------------|
+| **Public** `/match-scores` | Anyone (unchanged) | Stay **plain text** — no auction context, so no “who owns him” |
+| **In-auction** `/auctions/[auctionId]/match-scores` | Auction members only | **Links** → `/auctions/[auctionId]/players/[playerId]?returnTo=…` |
+
+Same sheet registry (`MATCH_SCORE_SHEETS` / CSV data) powers both; only the chrome and player-row behaviour differ.
+
+### Shipped
+
+- `lib/player-auction-detail.ts` — `loadPlayerAuctionDetail`
+- Enriched `/auctions/[id]/players/[playerId]` — ownership, GW points, bid history, releases, bid form when in pool
+- `/auctions/[id]/match-scores` + **Match scores** in `AuctionNav`
+- Archives cards: Leaderboard / Match scores / Open auction (so archived leagues stay testable)
+
+**Note:** When `MATCH_SCORE_SHEETS` is empty, the in-auction scores page shows the empty state; player pages still work from Competitors / Bidding room / sold lots.
 
 ---
 
 ## Phase 3 — Platform profiles + people search + avatar zoom
 
-**Goal:** Leave the auction into someone’s HFW page; search users; enlarge avatar.
+**Status: profiles done (code); people search still optional/later.**
 
-**Route:** `/u/[userId]` — auth-gated in middleware (same class as `/dashboard`).
+**Goal:** Leave the auction into someone’s HFW page; enlarge avatar; easy **Back to auction**.
+
+**Route:** `/u/[userId]?returnTo=…` — auth-gated in middleware.
 
 **Page content (strict allowlist):**
-- Large avatar (click → lightbox / zoom)
+- Large avatar (click → lightbox / zoom when photo exists)
 - Display name
-- Past finishes (generalize `loadAuctionHistoryForUser` to any auth user id; same archived-auction rules)
-- Finish rows link to `/leaderboard/[auctionId]`
+- Past finishes (archived only; same as Auction History)
+- Finish rows → `/leaderboard/[auctionId]`
+- **Back to auction** via `returnTo` (from competitor page)
 
-**Data access:** prefer service-role loader with explicit field allowlist (`id`, `display_name`, `avatar_url`) — matches existing app pattern. Optional RLS for defense in depth (signed-in select of those columns only).
+**Entry points:** Competitor page — avatar + “View HFW profile” when `user_id` is set.
 
-**People search:** auth-gated; `profiles.display_name` ilike → `/u/[id]`. No cross-auction football-player search.
-
-**Entry points:** “View HFW profile” on competitor page when `user_id` present; optional hub search entry.
+**Not in this slice yet:** people search hub.
 
 ---
 
@@ -162,13 +172,14 @@ Add once (suggested: `app/_components/entity/`):
 - Names are links whenever a destination exists (same visual language as current player links in the bidding room).
 - Avatars stay small inline in tables; full-size only on `/u/...` and competitor headers.
 - Copy: **“View team”** (in-auction) vs **“View HFW profile”** (platform).
-- Preserve `?returnTo=` so Back returns to bidding room / leaderboard / search.
+- Preserve `?returnTo=` so Back returns to bidding room / leaderboard / search / **in-auction match scores**.
 
 ---
 
 ## Explicit non-goals
 
 - Platform-wide football player pages / cross-auction career
+- Turning **public** `/match-scores` into auction-scoped ownership links (that stays global + plain player names)
 - Anything on profiles beyond name, avatar, past finishes
 - One-shot deploy of all phases
 - Global app chrome redesign (feature-local shells are fine)
@@ -177,9 +188,9 @@ Add once (suggested: `app/_components/entity/`):
 
 ## Recommended build order
 
-1. Primitives + avatar join + Phase 1 manager links  
-2. Phase 2 player detail  
-3. Phase 3 `/u/[userId]` + people search + lightbox  
+1. Primitives + avatar join + Phase 1 manager links — **done**
+2. Phase 2b rich player detail → Phase 2a in-auction match scores (player links)
+3. Phase 3 `/u/[userId]` + people search + lightbox
 4. Phase 4 polish as needed  
 
 ---

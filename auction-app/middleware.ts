@@ -41,7 +41,8 @@ export async function middleware(request: NextRequest) {
     path === "/auctions" ||
     /^\/auctions\/[^/]+/.test(path) ||
     path === "/live-auction" ||
-    /^\/live-auction\/[^/]+\/admin/.test(path);
+    /^\/live-auction\/[^/]+\/admin/.test(path) ||
+    path.startsWith("/u/");
 
   if (!user && needsAuth && !isLiveAuctionPublic) {
     const redirectUrl = request.nextUrl.clone();
@@ -63,5 +64,6 @@ export const config = {
     "/auctions/:path*",
     "/live-auction",
     "/live-auction/:path*",
+    "/u/:path*",
   ],
 };

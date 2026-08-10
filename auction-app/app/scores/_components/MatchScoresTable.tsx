@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import type { MatchScoreRow } from "@/lib/match-scores/types";
 
 function formatScore(value: number): string {
@@ -14,7 +16,17 @@ function positionLabel(position: string): string {
   return position;
 }
 
-export function MatchScoresTable({ rows }: { rows: MatchScoreRow[] }) {
+export function MatchScoresTable({
+  rows,
+  auctionId,
+  returnTo,
+}: {
+  rows: MatchScoreRow[];
+  /** When set, player names link to the in-auction player page. */
+  auctionId?: number;
+  /** returnTo query for player page Back button. */
+  returnTo?: string;
+}) {
   return (
     <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
       <div className="overflow-x-auto">
@@ -32,6 +44,14 @@ export function MatchScoresTable({ rows }: { rows: MatchScoreRow[] }) {
             {rows.map((row, idx) => {
               const isKeeper = row.position.toLowerCase() === "goalkeeper";
               const isNegative = row.finalScore < 0;
+              const playerHref =
+                auctionId != null
+                  ? `/auctions/${auctionId}/players/${encodeURIComponent(row.playerId)}${
+                      returnTo
+                        ? `?returnTo=${encodeURIComponent(returnTo)}`
+                        : ""
+                    }`
+                  : null;
               return (
                 <tr
                   key={`${row.playerId}-${idx}`}
@@ -40,7 +60,19 @@ export function MatchScoresTable({ rows }: { rows: MatchScoreRow[] }) {
                   }`}
                 >
                   <td className="px-4 py-3 font-mono text-xs text-slate-400">{idx + 1}</td>
-                  <td className="px-4 py-3 font-medium text-slate-900">{row.playerName}</td>
+                  <td className="px-4 py-3 font-medium text-slate-900">
+                    {playerHref ? (
+                      <Link
+                        href={playerHref}
+                        prefetch={false}
+                        className="text-sky-800 underline-offset-2 hover:underline"
+                      >
+                        {row.playerName}
+                      </Link>
+                    ) : (
+                      row.playerName
+                    )}
+                  </td>
                   <td className="px-4 py-3 text-slate-600">{row.teamName}</td>
                   <td className="px-4 py-3">
                     <span
