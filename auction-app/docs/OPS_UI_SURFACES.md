@@ -78,7 +78,8 @@ View-only messaging when `is_relegated` — do not hide the whole auction.
 | Tab / element | Behaviour |
 |---------------|-----------|
 | **Standings** | Season rank + points from `auction_leaderboard` sums |
-| **Per-GW squad** | Locked squad; Starting XI vs bench after Best XI publish |
+
+Per-GW squad tabs (Best XI / bench) are parked for now — World Cup gameweeks must not appear on Premier League or later auctions. Reintroduce GW tabs only when that competition has its own locked gameweeks to show.
 | Formation | From published Best XI overlay JSON when present |
 | Match Pos | Scoring / XI role columns for transparency |
 | Relegated | Still listed, flagged |
