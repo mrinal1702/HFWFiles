@@ -106,6 +106,10 @@ export default async function MyTeamPage({
             wraps up.
           </p>
         )}
+        <p className="mt-3 text-sm font-medium text-slate-800">
+          Players purchased:{" "}
+          <span className="font-mono text-base tabular-nums text-slate-900">{rows.length}</span>
+        </p>
       </div>
 
       <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm sm:p-5">

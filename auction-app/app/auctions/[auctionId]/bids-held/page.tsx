@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
+import { RosterSlotCounts } from "@/app/auctions/_components/RosterSlotCounts";
 
 export const dynamic = "force-dynamic";
 
@@ -28,6 +29,7 @@ export default async function BidsHeldPage({
   const held = d.biddingClosed
     ? []
     : d.lots.filter((l) => l.status === "bidding" && l.high_bidder_id === d.me!.id);
+  const owned = d.lots.filter((l) => l.status === "sold" && l.high_bidder_id === d.me!.id).length;
 
   return (
     <section className="space-y-4 sm:space-y-5">
@@ -123,6 +125,13 @@ export default async function BidsHeldPage({
             </div>
           </>
         )}
+        <div className="mt-4 border-t border-slate-200 pt-4">
+          <RosterSlotCounts
+            owned={owned}
+            bidsHeld={held.length}
+            hideRemaining={d.biddingClosed}
+          />
+        </div>
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ import { Avatar } from "@/app/_components/entity/Avatar";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadCompetitorView } from "@/lib/auction-dashboard";
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
+import { RosterSlotCounts } from "@/app/auctions/_components/RosterSlotCounts";
 import { fantasyTeamLabel } from "@/lib/team-name";
 
 export const dynamic = "force-dynamic";
@@ -117,6 +118,9 @@ export default async function CompetitorDetailPage({
             <div className="text-xs font-medium text-slate-600">active_budget</div>
             <div className="font-mono text-base tabular-nums text-slate-900">{v.competitor.active_budget}</div>
           </div>
+        </div>
+        <div className="mt-3">
+          <RosterSlotCounts owned={v.sold.length} bidsHeld={v.leading.length} />
         </div>
       </div>
 
