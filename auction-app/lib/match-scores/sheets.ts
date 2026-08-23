@@ -27,6 +27,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 1,
     rows: loadMatchScoreCsv("IpswichTown_Sunderland_FinalPoints.csv"),
   },
+  {
+    slug: "everton-crystal-palace",
+    title: "Everton vs Crystal Palace",
+    subtitle: "Premier League · Matchweek 1",
+    groupStageGw: 1,
+    rows: loadMatchScoreCsv("Everton_CrystalPalace_FinalPoints.csv"),
+  },
 ];
 
 export const MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

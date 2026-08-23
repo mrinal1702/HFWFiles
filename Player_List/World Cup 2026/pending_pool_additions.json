@@ -1,4 +1,29 @@
 {
   "_readme": "",
-  "players": []
+  "players": [
+    {
+      "player_id": 1477878,
+      "player_name": "Anan Khalaili",
+      "team_id": 9826,
+      "team_name": "Crystal Palace",
+      "position": "Midfielder",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1477878/anan-khalaili",
+      "reason": "late_callup",
+      "first_seen": "2026-08-23",
+      "first_seen_match": "Everton CrystalPalace",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 664444,
+      "player_name": "Takehiro Tomiyasu",
+      "team_id": 9826,
+      "team_name": "Crystal Palace",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/664444/takehiro-tomiyasu",
+      "reason": "late_callup",
+      "first_seen": "2026-08-23",
+      "first_seen_match": "Everton CrystalPalace",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    }
+  ]
 }
