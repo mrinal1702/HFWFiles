@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Anton Stach,881735,Leeds United,midfielder,44.914,7.0,0.0,52
+Jaka Bijol,861805,Leeds United,defender,34.32,10.0,0.0,44
+James Justin,710158,Leeds United,midfielder,35.136,7.0,0.0,42
+Murillo,1458711,Nottingham Forest,defender,36.35166666666666,5.0,0.0,41
+Ola Aina,682548,Nottingham Forest,defender,30.431666666666665,10.0,0.0,40
+Ethan Ampadu,780432,Leeds United,midfielder,32.792,7.0,0.0,40
+Joe Rodon,717174,Leeds United,defender,28.69,10.0,0.0,39
+James McAtee,1107648,Nottingham Forest,midfielder,30.10066666666667,5.0,0.0,35
+Tarik Muharemovic,1250485,Leeds United,defender,21.325,10.0,0.0,31
+Igor Jesus,1082102,Nottingham Forest,forward,26.64,0.0,0.0,27
+Nikola Milenkovic,766611,Nottingham Forest,defender,21.57,5.0,0.0,27
+Ibrahim Sangaré,795371,Nottingham Forest,midfielder,22.344,3.0,0.0,25
+Neco Williams,1078788,Nottingham Forest,defender,19.65,5.0,0.0,25
+Noah Okafor,915797,Leeds United,forward,21.62,3.0,0.0,25
+Harry Wilson,494417,Leeds United,forward,22.77,0.0,0.0,23
+Jair Cunha,1391209,Nottingham Forest,defender,17.03,5.0,0.0,22
+Jayden Bogle,789646,Leeds United,midfielder,13.472,7.0,0.0,20
+Brenden Aaronson,952322,Leeds United,forward,20.12333333333333,0.0,0.0,20
+Morgan Gibbs-White,789502,Nottingham Forest,midfielder,16.474,3.0,0.0,19
+Dominic Calvert-Lewin,612150,Leeds United,forward,11.16,3.0,0.0,14
+Dan Ndoye,1022649,Nottingham Forest,forward,12.006666666666666,0.0,0.0,12
+Sean Longstaff,820024,Leeds United,midfielder,3.490666666666667,4.5,0.0,8
+Chris Wood,169719,Nottingham Forest,forward,6.983333333333333,0.0,0.0,7
+Xaver Schlager,620027,Nottingham Forest,midfielder,5.231333333333334,0.5,0.0,6
+Luca Netz,1155130,Nottingham Forest,midfielder,4.147333333333333,0.5,0.0,5
+Nico Elvedi,517346,Leeds United,defender,0.0,0.0,0.0,0
+Zach Abbott,1296769,Nottingham Forest,defender,0.0,0.0,0.0,0
+Ousmane Diomande,1425182,Nottingham Forest,defender,0.0,0.0,0.0,0
+Jayden Lienou,1797582,Leeds United,defender,0.0,0.0,0.0,0
+Nicolás Dominguez,827315,Nottingham Forest,midfielder,0.0,0.0,0.0,0
+Ao Tanaka,935728,Leeds United,midfielder,0.0,0.0,0.0,0
+Alfie Cresswell,1559625,Leeds United,midfielder,0.0,0.0,0.0,0
+Daniel James,717176,Leeds United,forward,0.0,0.0,0.0,0
+Callum Hudson-Odoi,846383,Nottingham Forest,forward,0.0,0.0,0.0,0
+Lukas Nmecha,861197,Leeds United,forward,0.0,0.0,0.0,0
+Arnaud Kalimuendo-Muinga,1095445,Nottingham Forest,forward,0.0,0.0,0.0,0
+Leeds United Keepers,8463,Leeds United,goalkeeper,17.840000000000003,18.0,0.0,36
+Nottingham Forest Keepers,10203,Nottingham Forest,goalkeeper,8.7,12.0,0.0,21

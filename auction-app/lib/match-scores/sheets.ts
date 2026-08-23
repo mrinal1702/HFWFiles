@@ -34,6 +34,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 1,
     rows: loadMatchScoreCsv("Everton_CrystalPalace_FinalPoints.csv"),
   },
+  {
+    slug: "leeds-nottingham-forest",
+    title: "Leeds United vs Nottingham Forest",
+    subtitle: "Premier League · Matchweek 1",
+    groupStageGw: 1,
+    rows: loadMatchScoreCsv("NottinghamForest_LeedsUnited_FinalPoints.csv"),
+  },
 ];
 
 export const MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

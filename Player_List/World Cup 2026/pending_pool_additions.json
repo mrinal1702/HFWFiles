@@ -2,6 +2,18 @@
   "_readme": "",
   "players": [
     {
+      "player_id": 1559625,
+      "player_name": "Alfie Cresswell",
+      "team_id": 8463,
+      "team_name": "Leeds United",
+      "position": "Midfielder",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1559625/alfie-cresswell",
+      "reason": "late_callup",
+      "first_seen": "2026-08-23",
+      "first_seen_match": "NottinghamForest LeedsUnited",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
       "player_id": 1477878,
       "player_name": "Anan Khalaili",
       "team_id": 9826,
@@ -11,6 +23,30 @@
       "reason": "late_callup",
       "first_seen": "2026-08-23",
       "first_seen_match": "Everton CrystalPalace",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 1797582,
+      "player_name": "Jayden Lienou",
+      "team_id": 8463,
+      "team_name": "Leeds United",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1797582/jayden-lienou",
+      "reason": "late_callup",
+      "first_seen": "2026-08-23",
+      "first_seen_match": "NottinghamForest LeedsUnited",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 517346,
+      "player_name": "Nico Elvedi",
+      "team_id": 8463,
+      "team_name": "Leeds United",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/517346/nico-elvedi",
+      "reason": "late_callup",
+      "first_seen": "2026-08-23",
+      "first_seen_match": "NottinghamForest LeedsUnited",
       "notes": "Auto-added from upsert:player-scores (not in public.players)."
     },
     {
