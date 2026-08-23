@@ -166,7 +166,7 @@ export function ScoresTabs({
       />
 
       <p className="text-xs text-slate-400">
-        Sorted by final score. Keeper units shown per club.
+        Sorted by score (highest first). Keeper units shown per club.
       </p>
     </div>
   );

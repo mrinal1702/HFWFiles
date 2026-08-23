@@ -59,7 +59,10 @@ export function parseFinalPointsCsv(csvText: string): MatchScoreRow[] {
     });
   }
 
-  return rows.sort((a, b) => b.finalScore - a.finalScore);
+  return rows.sort((a, b) => {
+    if (b.finalScore !== a.finalScore) return b.finalScore - a.finalScore;
+    return a.playerName.localeCompare(b.playerName, undefined, { sensitivity: "base" });
+  });
 }
 
 export function loadMatchScoreCsv(filename: string): MatchScoreRow[] {
