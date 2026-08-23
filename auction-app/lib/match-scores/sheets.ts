@@ -13,6 +13,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 1,
     rows: loadMatchScoreCsv("Arsenal_CoventryCity_FinalPoints.csv"),
   },
+  {
+    slug: "hull-city-manchester-united",
+    title: "Hull City vs Manchester United",
+    subtitle: "Premier League · Matchweek 1",
+    groupStageGw: 1,
+    rows: loadMatchScoreCsv("HullCity_ManchesterUnited_FinalPoints.csv"),
+  },
 ];
 
 export const MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
