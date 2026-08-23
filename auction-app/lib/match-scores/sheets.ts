@@ -1,12 +1,19 @@
+import { loadMatchScoreCsv } from "./parse-final-points";
 import type { MatchScoreGroup, MatchScoreSheet } from "./types";
 
 /**
  * Active match score sheets for the current competition.
  * World Cup 2026 sheets were archived — see archive/world-cup-2026/ops/lib/match-scores-sheets.ts
- *
- * Add one MatchScoreSheet per completed PL match under Premier League GW1.
  */
-export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [];
+export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
+  {
+    slug: "arsenal-coventry-city",
+    title: "Arsenal vs Coventry City",
+    subtitle: "Premier League · Matchweek 1",
+    groupStageGw: 1,
+    rows: loadMatchScoreCsv("Arsenal_CoventryCity_FinalPoints.csv"),
+  },
+];
 
 export const MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
   {
