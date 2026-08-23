@@ -38,6 +38,18 @@
       "notes": "Auto-added from upsert:player-scores (not in public.players)."
     },
     {
+      "player_id": 1636112,
+      "player_name": "Luca Williams-Barnett",
+      "team_id": 8586,
+      "team_name": "Tottenham Hotspur",
+      "position": "Midfielder",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1636112/luca-williams-barnett",
+      "reason": "late_callup",
+      "first_seen": "2026-08-23",
+      "first_seen_match": "Brentford TottenhamHotspur",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
       "player_id": 517346,
       "player_name": "Nico Elvedi",
       "team_id": 8463,

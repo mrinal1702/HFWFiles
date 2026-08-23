@@ -41,6 +41,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 1,
     rows: loadMatchScoreCsv("NottinghamForest_LeedsUnited_FinalPoints.csv"),
   },
+  {
+    slug: "brentford-tottenham-hotspur",
+    title: "Brentford vs Tottenham Hotspur",
+    subtitle: "Premier League · Matchweek 1",
+    groupStageGw: 1,
+    rows: loadMatchScoreCsv("Brentford_TottenhamHotspur_FinalPoints.csv"),
+  },
 ];
 
 export const MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
