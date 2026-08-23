@@ -20,6 +20,13 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     groupStageGw: 1,
     rows: loadMatchScoreCsv("HullCity_ManchesterUnited_FinalPoints.csv"),
   },
+  {
+    slug: "ipswich-town-sunderland",
+    title: "Ipswich Town vs Sunderland",
+    subtitle: "Premier League · Matchweek 1",
+    groupStageGw: 1,
+    rows: loadMatchScoreCsv("IpswichTown_Sunderland_FinalPoints.csv"),
+  },
 ];
 
 export const MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
