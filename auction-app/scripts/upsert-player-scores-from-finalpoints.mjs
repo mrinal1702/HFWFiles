@@ -6,7 +6,10 @@
  * to 90_000_000 + team_id to match the players table / auction squads.
  *
  * Usage:
- *   node scripts/upsert-player-scores-from-finalpoints.mjs <game_week_id> <csv> [csv...]
+ *   node scripts/upsert-player-scores-from-finalpoints.mjs <game_week_id> [--prune-gw] <csv> [csv...]
+ *
+ * --prune-gw  Delete GW rows for players not present in the supplied FinalPoints files
+ *             (removes stale scores, e.g. old World Cup data on a reused game_week_id).
  *
  * Example (GW1, two completed WC matches):
  *   node scripts/upsert-player-scores-from-finalpoints.mjs 1 ^
@@ -65,6 +68,33 @@ function parseCsvLine(line) {
   return fields;
 }
 
+function parseFinalPointsRow(cols) {
+  const hasShootout = cols.length >= 8;
+  const statsIdx = 4;
+  const endowmentIdx = 5;
+  const shootoutIdx = hasShootout ? 6 : null;
+  const finalIdx = hasShootout ? 7 : 6;
+
+  const rawPlayerId = Number(cols[1].trim());
+  const score = Number(cols[finalIdx]);
+  if (!Number.isFinite(rawPlayerId) || !Number.isFinite(score)) return null;
+
+  const stats_score = Number(cols[statsIdx]);
+  const endowment_score = Number(cols[endowmentIdx]);
+  const shootout_score = shootoutIdx !== null ? Number(cols[shootoutIdx]) : 0;
+
+  return {
+    rawPlayerId,
+    score,
+    player_name: cols[0],
+    position: cols[3],
+    stats_score,
+    endowment_score,
+    shootout_score,
+    team_name: cols[2],
+  };
+}
+
 function parseFinalPointsFile(filePath) {
   const csvText = fs.readFileSync(filePath, "utf8").replace(/^\uFEFF/, "");
   const lines = csvText.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
@@ -74,31 +104,27 @@ function parseFinalPointsFile(filePath) {
   for (let i = 1; i < lines.length; i += 1) {
     const cols = parseCsvLine(lines[i]);
     if (cols.length < 7) continue;
-    const rawPlayerId = Number(cols[1].trim());
-    const score = Number(cols[6]);
-    if (!Number.isFinite(rawPlayerId) || !Number.isFinite(score)) continue;
+    const parsed = parseFinalPointsRow(cols);
+    if (!parsed) continue;
 
-    const player_name = cols[0];
-    const position = cols[3];
-    const stats_score = Number(cols[4]);
-    const endowment_score = Number(cols[5]);
     const player_id = resolveScorePlayerId({
-      player_id: rawPlayerId,
-      player_name,
-      position,
+      player_id: parsed.rawPlayerId,
+      player_name: parsed.player_name,
+      position: parsed.position,
     });
 
     rows.push({
       player_id,
-      raw_player_id: rawPlayerId,
-      score,
-      player_name,
-      team_name: cols[2],
-      position,
-      stats_score,
-      endowment_score,
+      raw_player_id: parsed.rawPlayerId,
+      score: parsed.score,
+      player_name: parsed.player_name,
+      team_name: parsed.team_name,
+      position: parsed.position,
+      stats_score: parsed.stats_score,
+      endowment_score: parsed.endowment_score,
+      shootout_score: parsed.shootout_score,
       source_file: path.basename(filePath),
-      is_keeper_unit: isKeeperUnitRow({ player_name, position }),
+      is_keeper_unit: isKeeperUnitRow({ player_name: parsed.player_name, position: parsed.position }),
     });
   }
   return rows;
@@ -110,11 +136,54 @@ function toBatches(arr, size) {
   return batches;
 }
 
+async function pruneGameweekScores(supabase, gameWeekId, allowedPlayerIds) {
+  const allowed = new Set(allowedPlayerIds);
+  const stale = [];
+  const pageSize = 1000;
+
+  for (let from = 0; ; from += pageSize) {
+    const res = await supabase
+      .from("Player_Scores")
+      .select("player_id")
+      .eq("game_week_id", gameWeekId)
+      .range(from, from + pageSize - 1);
+    if (res.error) throw new Error(`Player_Scores read failed: ${res.error.message}`);
+    const batch = res.data ?? [];
+    for (const row of batch) {
+      const playerId = Number(row.player_id);
+      if (!allowed.has(playerId)) stale.push(playerId);
+    }
+    if (batch.length < pageSize) break;
+  }
+
+  if (!stale.length) {
+    console.log(`Prune GW${gameWeekId}: no stale rows to remove.`);
+    return 0;
+  }
+
+  let removed = 0;
+  for (const batch of toBatches(stale, 300)) {
+    const del = await supabase
+      .from("Player_Scores")
+      .delete()
+      .eq("game_week_id", gameWeekId)
+      .in("player_id", batch);
+    if (del.error) throw new Error(`Player_Scores prune failed: ${del.error.message}`);
+    removed += batch.length;
+  }
+
+  console.log(`Prune GW${gameWeekId}: removed ${removed} stale row(s) not in supplied FinalPoints.`);
+  return removed;
+}
+
 async function main() {
   loadEnvLocal();
 
-  const gameWeekId = Number(process.argv[2]);
-  const csvPaths = process.argv.slice(3).map((p) => path.resolve(process.cwd(), p));
+  const argv = process.argv.slice(2);
+  const pruneGw = argv.includes("--prune-gw");
+  const positional = argv.filter((arg) => arg !== "--prune-gw");
+  const gameWeekId = Number(positional[0]);
+  const csvPaths = positional.slice(1).map((p) => path.resolve(process.cwd(), p));
 
   if (!Number.isFinite(gameWeekId) || gameWeekId <= 0) {
     throw new Error("Usage: node scripts/upsert-player-scores-from-finalpoints.mjs <game_week_id> <csv> [csv...]");
@@ -148,6 +217,14 @@ async function main() {
     byPlayer.set(row.player_id, row);
   }
   const rows = [...byPlayer.values()];
+
+  if (pruneGw) {
+    await pruneGameweekScores(
+      supabase,
+      gameWeekId,
+      rows.map((r) => r.player_id),
+    );
+  }
 
   const legacyKeeperTeamIds = [
     ...new Set(
