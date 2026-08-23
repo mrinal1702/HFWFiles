@@ -522,3 +522,133 @@ export async function getGameweekSquadData(
 
   return result;
 }
+
+// ─── Owned player points (all squad players, no Best XI filter) ─────────────
+
+export type OwnedPlayerPoint = {
+  playerId: string;
+  playerName: string | null;
+  position: string | null;
+  club: string | null;
+  purchasePrice: number;
+  /** GW id → score for that gameweek */
+  scoresByGwId: Record<string, number>;
+  totalScore: number;
+};
+
+export type ParticipantOwnedPoints = {
+  userId: number;
+  name: string;
+  teamName: string | null;
+  avatarUrl: string | null;
+  players: OwnedPlayerPoint[];
+  totalScore: number;
+};
+
+export type ParticipantsOwnedPointsData = {
+  participants: ParticipantOwnedPoints[];
+  gameWeeks: GwInfo[];
+};
+
+/** Sum every owned player's score across locked gameweeks (Best XI not applied). */
+export async function getParticipantsOwnedPoints(
+  auctionId: number,
+): Promise<ParticipantsOwnedPointsData> {
+  const admin = createAdminClient();
+  const users = await fetchAuctionUserNames(admin, auctionId);
+  const lockedGws = await getLockedGameWeeksForAuction(auctionId);
+
+  let gameWeeks = lockedGws;
+  let squadsByGw: Array<{ gw: GwInfo; squads: ParticipantGwSquad[] }> = [];
+
+  if (lockedGws.length > 0) {
+    for (const gw of lockedGws) {
+      const squads = await getGameweekSquadData(auctionId, gw.id);
+      if (squads?.length) squadsByGw.push({ gw, squads });
+    }
+  } else {
+    const activeGw = (await getActiveGameWeekForAuction(auctionId)) ?? (await getActiveGameWeek());
+    const current = await getCurrentSquads(auctionId, activeGw?.id);
+    if (activeGw && current.length > 0) {
+      gameWeeks = [activeGw];
+      squadsByGw = [{ gw: activeGw, squads: current }];
+    } else if (current.length > 0) {
+      squadsByGw = [{ gw: { id: 0, name: "Current squad" }, squads: current }];
+    }
+  }
+
+  const playerAgg = new Map<
+    number,
+    Map<string, { meta: GwSquadPlayer; scoresByGwId: Record<string, number> }>
+  >();
+
+  for (const { gw, squads } of squadsByGw) {
+    const gwKey = String(gw.id);
+    for (const squad of squads) {
+      if (!playerAgg.has(squad.userId)) playerAgg.set(squad.userId, new Map());
+      const byPlayer = playerAgg.get(squad.userId)!;
+      for (const p of squad.players) {
+        const existing = byPlayer.get(p.playerId);
+        if (!existing) {
+          byPlayer.set(p.playerId, { meta: p, scoresByGwId: {} });
+        }
+        const entry = byPlayer.get(p.playerId)!;
+        if (p.score != null) entry.scoresByGwId[gwKey] = p.score;
+      }
+    }
+  }
+
+  const participants: ParticipantOwnedPoints[] = users
+    .filter((u) => playerAgg.has(u.id))
+    .map((u) => {
+      const byPlayer = playerAgg.get(u.id)!;
+      const players: OwnedPlayerPoint[] = [...byPlayer.entries()].map(([playerId, { meta, scoresByGwId }]) => {
+        const totalScore = Object.values(scoresByGwId).reduce((sum, s) => sum + s, 0);
+        return {
+          playerId,
+          playerName: meta.playerName,
+          position: meta.position,
+          club: meta.club,
+          purchasePrice: meta.purchasePrice,
+          scoresByGwId,
+          totalScore,
+        };
+      });
+
+      players.sort((a, b) => {
+        const posOrder = (pos: string | null) => {
+          const p = (pos ?? "").toLowerCase();
+          if (p.includes("goalkeeper") || p === "gk") return 0;
+          if (p.includes("defend")) return 1;
+          if (p.includes("midfield")) return 2;
+          if (p.includes("forward")) return 3;
+          return 4;
+        };
+        const pa = posOrder(a.position);
+        const pb = posOrder(b.position);
+        if (pa !== pb) return pa - pb;
+        return (a.playerName ?? "").localeCompare(b.playerName ?? "");
+      });
+
+      const totalScore = players.reduce((sum, p) => sum + p.totalScore, 0);
+      return {
+        userId: u.id,
+        name: u.name ?? "—",
+        teamName: u.team_name?.trim() || null,
+        avatarUrl: u.avatar_url,
+        players,
+        totalScore,
+      };
+    })
+    .sort((a, b) => b.totalScore - a.totalScore || a.name.localeCompare(b.name));
+
+  return { participants, gameWeeks };
+}
+
+export async function getParticipantOwnedPoints(
+  auctionId: number,
+  auctionUserId: number,
+): Promise<ParticipantOwnedPoints | null> {
+  const { participants } = await getParticipantsOwnedPoints(auctionId);
+  return participants.find((p) => p.userId === auctionUserId) ?? null;
+}

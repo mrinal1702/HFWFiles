@@ -74,12 +74,7 @@ export function ScoresTabs({
   const [activeSlug, setActiveSlug] = useState(initial.slug);
 
   const activeGroup = groups.find((g) => g.gw === activeGw) ?? groups[0];
-  const activeSheet =
-    activeGroup?.sheets.find((s) => s.slug === activeSlug) ?? activeGroup?.sheets[0];
-
-  if (!activeGroup || !activeSheet) {
-    return <p className="text-sm text-slate-500">No match scores available yet.</p>;
-  }
+  const activeSheet = activeGroup?.sheets.find((s) => s.slug === activeSlug) ?? activeGroup?.sheets[0];
 
   const handleGroupChange = (gw: GroupStageGw) => {
     setActiveGw(gw);
@@ -87,6 +82,39 @@ export function ScoresTabs({
     const firstSlug = group?.sheets[0]?.slug;
     if (firstSlug) setActiveSlug(firstSlug);
   };
+
+  if (!activeGroup) {
+    return <p className="text-sm text-slate-500">No match scores available yet.</p>;
+  }
+
+  if (!activeSheet) {
+    return (
+      <div className="space-y-5">
+        <div className="flex gap-1 rounded-xl border border-slate-200 bg-slate-100 p-1">
+          {groups.map((group) => (
+            <button
+              key={group.gw}
+              type="button"
+              onClick={() => handleGroupChange(group.gw)}
+              className={`flex-1 rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors ${
+                activeGw === group.gw
+                  ? "bg-white text-slate-900 shadow-sm"
+                  : "text-slate-600 hover:text-slate-900"
+              }`}
+            >
+              {group.label}
+              <span className="ml-1.5 text-xs font-normal text-slate-400">
+                ({group.sheets.length})
+              </span>
+            </button>
+          ))}
+        </div>
+        <p className="rounded-lg border border-dashed border-slate-200 bg-slate-50 px-4 py-10 text-center text-sm text-slate-600">
+          No matches scored yet for {activeGroup.label}. Check back once the gameweek completes.
+        </p>
+      </div>
+    );
+  }
 
   const returnTo =
     auctionId != null
@@ -138,7 +166,7 @@ export function ScoresTabs({
       />
 
       <p className="text-xs text-slate-400">
-        Sorted by final score. Keeper units shown per nation.
+        Sorted by final score. Keeper units shown per club.
       </p>
     </div>
   );

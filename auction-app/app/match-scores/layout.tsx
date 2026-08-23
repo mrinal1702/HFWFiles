@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Match scores · HFW",
-  description: "Player points for World Cup 2026 matches.",
+  description: "Player points for Premier League matches.",
 };
 
 export default function MatchScoresLayout({ children }: { children: React.ReactNode }) {
