@@ -56,29 +56,42 @@ export function AuctionSideNav({ auctionId }: { auctionId: number }) {
     };
   }, [open]);
 
+  const menuButton = (
+    <button
+      type="button"
+      className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-700 hover:bg-sky-50 hover:text-sky-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
+      aria-expanded={open}
+      aria-controls={panelId}
+      onClick={() => setOpen(true)}
+    >
+      <span className="sr-only">Open auction menu</span>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5" aria-hidden>
+        <path
+          fillRule="evenodd"
+          d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </button>
+  );
+
   return (
     <>
-      {/* Thin left rail — menu button only (icons later) */}
+      {/*
+        Mobile: floating menu button only — do not reserve a left gutter (that made the
+        bidding room feel narrow / zoomed-in). sm+: thin left rail as before.
+      */}
+      <div
+        className="fixed left-2 top-[max(0.5rem,env(safe-area-inset-top))] z-30 rounded-lg border border-slate-200 bg-white/95 shadow-sm backdrop-blur-sm sm:hidden"
+        aria-label="Auction menu"
+      >
+        {menuButton}
+      </div>
       <aside
-        className="fixed inset-y-0 left-0 z-30 flex w-11 flex-col border-r border-slate-200 bg-white pt-[max(0.75rem,env(safe-area-inset-top))] sm:w-12"
+        className="fixed inset-y-0 left-0 z-30 hidden w-12 flex-col border-r border-slate-200 bg-white pt-[max(0.75rem,env(safe-area-inset-top))] sm:flex"
         aria-label="Auction menu rail"
       >
-        <button
-          type="button"
-          className="mx-auto flex h-10 w-10 items-center justify-center rounded-lg text-slate-700 hover:bg-sky-50 hover:text-sky-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
-          aria-expanded={open}
-          aria-controls={panelId}
-          onClick={() => setOpen(true)}
-        >
-          <span className="sr-only">Open auction menu</span>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5" aria-hidden>
-            <path
-              fillRule="evenodd"
-              d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
+        <div className="mx-auto">{menuButton}</div>
       </aside>
 
       {/* Overlay drawer */}

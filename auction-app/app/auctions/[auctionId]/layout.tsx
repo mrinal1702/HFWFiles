@@ -45,7 +45,8 @@ export default async function AuctionLayout({
   return (
     <div className="flex min-h-0 flex-1">
       <AuctionSideNav auctionId={auctionId} />
-      <div className="mx-auto min-w-0 max-w-6xl flex-1 px-4 py-4 pl-[calc(2.75rem+1rem)] sm:px-6 sm:py-6 sm:pl-[calc(3rem+1.5rem)]">
+      {/* Mobile: full-width content (menu is a floating button). sm+: leave room for the thin left rail. */}
+      <div className="mx-auto min-w-0 max-w-6xl flex-1 px-4 pb-4 pt-14 sm:px-6 sm:py-6 sm:pl-[calc(3rem+1.5rem)]">
         <header className="mb-5 space-y-4 sm:mb-6">
           <div className="flex flex-wrap items-baseline justify-between gap-2">
             <div className="min-w-0 flex-1">
