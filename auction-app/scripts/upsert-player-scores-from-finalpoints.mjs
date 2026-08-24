@@ -8,13 +8,13 @@
  * Usage:
  *   node scripts/upsert-player-scores-from-finalpoints.mjs <game_week_id> [--prune-gw] <csv> [csv...]
  *
- * --prune-gw  Delete GW rows for players not present in the supplied FinalPoints files
- *             (removes stale scores, e.g. old World Cup data on a reused game_week_id).
+ * Competition-aware (preferred):
+ *   node scripts/upsert-player-scores-from-finalpoints.mjs <legacy_gw_id> ^
+ *     --competition-round-id 101 --fotmob-match-id 5795369 <csv>
  *
- * Example (GW1, two completed WC matches):
- *   node scripts/upsert-player-scores-from-finalpoints.mjs 1 ^
- *     "../Matches_Raw/World Cup 2026/Mexico_SouthAfrica_FinalPoints.csv" ^
- *     "../Matches_Raw/World Cup 2026/SouthKorea_Czechia_FinalPoints.csv"
+ * --competition-round-id  Uses upsert_player_scores_for_round (stamps round/match IDs).
+ * --fotmob-match-id       Required with --competition-round-id for a single-match upsert.
+ * --prune-gw              Delete GW rows for players not in the supplied FinalPoints files.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -176,20 +176,54 @@ async function pruneGameweekScores(supabase, gameWeekId, allowedPlayerIds) {
   return removed;
 }
 
+function parseCliArgs(argv) {
+  let pruneGw = false;
+  let competitionRoundId = null;
+  let fotmobMatchId = null;
+  const positional = [];
+
+  for (let i = 0; i < argv.length; i += 1) {
+    const arg = argv[i];
+    if (arg === "--prune-gw") {
+      pruneGw = true;
+      continue;
+    }
+    if (arg === "--competition-round-id" && argv[i + 1]) {
+      competitionRoundId = Number(argv[++i]);
+      continue;
+    }
+    if (arg === "--fotmob-match-id" && argv[i + 1]) {
+      fotmobMatchId = Number(argv[++i]);
+      continue;
+    }
+    positional.push(arg);
+  }
+
+  return { pruneGw, competitionRoundId, fotmobMatchId, positional };
+}
+
 async function main() {
   loadEnvLocal();
 
-  const argv = process.argv.slice(2);
-  const pruneGw = argv.includes("--prune-gw");
-  const positional = argv.filter((arg) => arg !== "--prune-gw");
+  const { pruneGw, competitionRoundId, fotmobMatchId, positional } = parseCliArgs(
+    process.argv.slice(2),
+  );
   const gameWeekId = Number(positional[0]);
   const csvPaths = positional.slice(1).map((p) => path.resolve(process.cwd(), p));
 
   if (!Number.isFinite(gameWeekId) || gameWeekId <= 0) {
-    throw new Error("Usage: node scripts/upsert-player-scores-from-finalpoints.mjs <game_week_id> <csv> [csv...]");
+    throw new Error(
+      "Usage: node scripts/upsert-player-scores-from-finalpoints.mjs <game_week_id> [--competition-round-id N --fotmob-match-id M] <csv> [csv...]",
+    );
   }
   if (!csvPaths.length) {
     throw new Error("Provide at least one *FinalPoints.csv path.");
+  }
+  if (competitionRoundId != null && !Number.isFinite(competitionRoundId)) {
+    throw new Error("--competition-round-id must be a number");
+  }
+  if (competitionRoundId != null && (!Number.isFinite(fotmobMatchId) || fotmobMatchId <= 0)) {
+    throw new Error("--fotmob-match-id is required with --competition-round-id");
   }
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -238,38 +272,58 @@ async function main() {
     Score: r.score,
   }));
 
-  const jsonPayload = rows.map((r) => ({ player_id: r.player_id, score: r.score }));
-  const rpc = await supabase.rpc("upsert_player_scores", {
-    p_game_week_id: gameWeekId,
-    p_rows: jsonPayload,
-  });
-
   let upserted = 0;
-  if (rpc.error) {
-    const msg = String(rpc.error.message || "");
-    const useFallback =
-      msg.includes("upsert_player_scores") ||
-      msg.includes("player_scores_player_gw_unique") ||
-      msg.includes("schema cache");
 
-    if (!useFallback) throw new Error(`upsert_player_scores RPC failed: ${msg}`);
-
-    console.warn("RPC unavailable — falling back to batched Supabase upsert.");
-    console.warn("Run scripts/sql/player-scores.sql in Supabase SQL Editor for the RPC.");
-
-    for (const batch of toBatches(payload, 500)) {
-      const res = await supabase
-        .from("Player_Scores")
-        .upsert(batch, { onConflict: "player_id,game_week_id" });
-      if (res.error) {
-        throw new Error(
-          `Upsert failed: ${res.error.message}. Run scripts/sql/player-scores.sql first.`,
-        );
-      }
-      upserted += batch.length;
+  if (competitionRoundId != null) {
+    const roundPayload = rows.map((r) => ({
+      player_id: r.player_id,
+      score: r.score,
+      fotmob_match_id: fotmobMatchId,
+    }));
+    const rpc = await supabase.rpc("upsert_player_scores_for_round", {
+      p_competition_round_id: competitionRoundId,
+      p_rows: roundPayload,
+    });
+    if (rpc.error) {
+      throw new Error(`upsert_player_scores_for_round RPC failed: ${rpc.error.message}`);
     }
-  } else {
     upserted = Number(rpc.data?.upserted ?? rows.length);
+    console.log(
+      `Competition round ${competitionRoundId} · fotmob_match_id ${fotmobMatchId} · legacy GW ${rpc.data?.legacy_game_week_id ?? gameWeekId}`,
+    );
+  } else {
+    const jsonPayload = rows.map((r) => ({ player_id: r.player_id, score: r.score }));
+    const rpc = await supabase.rpc("upsert_player_scores", {
+      p_game_week_id: gameWeekId,
+      p_rows: jsonPayload,
+    });
+
+    if (rpc.error) {
+      const msg = String(rpc.error.message || "");
+      const useFallback =
+        msg.includes("upsert_player_scores") ||
+        msg.includes("player_scores_player_gw_unique") ||
+        msg.includes("schema cache");
+
+      if (!useFallback) throw new Error(`upsert_player_scores RPC failed: ${msg}`);
+
+      console.warn("RPC unavailable — falling back to batched Supabase upsert.");
+      console.warn("Run scripts/sql/player-scores.sql in Supabase SQL Editor for the RPC.");
+
+      for (const batch of toBatches(payload, 500)) {
+        const res = await supabase
+          .from("Player_Scores")
+          .upsert(batch, { onConflict: "player_id,game_week_id" });
+        if (res.error) {
+          throw new Error(
+            `Upsert failed: ${res.error.message}. Run scripts/sql/player-scores.sql first.`,
+          );
+        }
+        upserted += batch.length;
+      }
+    } else {
+      upserted = Number(rpc.data?.upserted ?? rows.length);
+    }
   }
 
   // Remove pre-remap keeper rows (raw team_id used as player_id).

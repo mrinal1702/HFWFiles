@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "brighton-aston-villa",
+  "fotmob_match_id": 5795369,
+  "source_url": "https://www.fotmob.com/en-GB/matches/brighton-vs-aston-villa/3gku1s#5795369:tab=stats",
+  "home_team": "Brighton & Hove Albion",
+  "away_team": "Aston Villa",
+  "raw_json_path": "intermediates/BrightonHoveAlbion_Vs_AstonVilla.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

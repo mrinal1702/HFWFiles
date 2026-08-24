@@ -1,0 +1,25 @@
+{
+  "competition_slug": "epl-2026-27",
+  "database_competition_id": 2,
+  "database_round_id": 101,
+  "round_slug": "mw01",
+  "display_name": "Matchweek 1",
+  "round_number": 1,
+  "legacy_game_week_id": 100,
+  "expected_match_count": 10,
+  "_match_count_note": "GW1 has 10 fixtures (20 teams). 7 captured so far; add the remaining 3 as they are played.",
+  "auction_ids": [9],
+  "squad_lock_state": "locked",
+  "scoring_state": "in_progress",
+  "publication_state": "partial",
+  "algorithm_version": "1.0",
+  "fixtures": [
+    { "match_slug": "arsenal-coventry-city", "fotmob_match_id": 5795363, "home_team": "Arsenal", "away_team": "Coventry City" },
+    { "match_slug": "hull-city-manchester-united", "fotmob_match_id": 5795364, "home_team": "Hull City", "away_team": "Manchester United" },
+    { "match_slug": "everton-crystal-palace", "fotmob_match_id": 5795365, "home_team": "Everton", "away_team": "Crystal Palace" },
+    { "match_slug": "ipswich-town-sunderland", "fotmob_match_id": 5795366, "home_team": "Ipswich Town", "away_team": "Sunderland" },
+    { "match_slug": "nottingham-forest-leeds-united", "fotmob_match_id": 5795367, "home_team": "Nottingham Forest", "away_team": "Leeds United" },
+    { "match_slug": "brentford-tottenham-hotspur", "fotmob_match_id": 5795368, "home_team": "Brentford", "away_team": "Tottenham Hotspur" },
+    { "match_slug": "brighton-aston-villa", "fotmob_match_id": 5795369, "home_team": "Brighton & Hove Albion", "away_team": "Aston Villa" }
+  ]
+}

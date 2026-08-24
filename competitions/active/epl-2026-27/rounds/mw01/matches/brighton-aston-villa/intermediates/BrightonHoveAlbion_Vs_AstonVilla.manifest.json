@@ -1,0 +1,15 @@
+{
+  "match_id": 5795369,
+  "home_team": "Brighton & Hove Albion",
+  "away_team": "Aston Villa",
+  "source_url": "https://www.fotmob.com/en-GB/matches/brighton-vs-aston-villa/3gku1s#5795369:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw01/matches/brighton-aston-villa/intermediates/BrightonHoveAlbion_Vs_AstonVilla.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/brighton-vs-aston-villa/3gku1s",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/brighton-vs-aston-villa/3gku1s#5795369:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/brighton-vs-aston-villa/3gku1s#5795369:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/brighton-vs-aston-villa/3gku1s#5795369:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795369"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
