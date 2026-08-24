@@ -74,7 +74,6 @@ export function GwPointsView({
             {seasonTotal != null ? seasonTotal : "—"}
           </span>
         </div>
-        <p className="mt-1 text-xs text-slate-500">Full ranking is on Standings.</p>
       </div>
 
       <GwSelect gameWeeks={gameWeeks} selectedGwId={selectedGw?.id ?? null} basePath={basePath} />
@@ -106,18 +105,12 @@ export function GwPointsView({
               </p>
             </>
           ) : (
-            <>
-              <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                <span className="text-sm text-slate-600">Squad points so far:</span>
-                <span className="font-mono text-2xl font-bold tabular-nums text-slate-900">
-                  {scoresUploaded ? rawSquadTotal : "—"}
-                </span>
-              </div>
-              <p className="mt-1 text-xs text-slate-500">
-                Sum of this gameweek’s locked squad with uploaded scores. Best XI total replaces this
-                after the gameweek is complete and formation logic runs.
-              </p>
-            </>
+            <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+              <span className="text-sm text-slate-600">Squad points so far:</span>
+              <span className="font-mono text-2xl font-bold tabular-nums text-slate-900">
+                {scoresUploaded ? rawSquadTotal : "—"}
+              </span>
+            </div>
           )}
         </div>
       )}

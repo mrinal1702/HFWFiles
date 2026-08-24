@@ -68,13 +68,14 @@ Standings tab (unchanged by this redesign unless later specified): season rank +
 | Default | **Latest gameweek that has scores uploaded.** When GW2 scores are uploaded, default becomes GW2 without a code change per week |
 | Revisit | User can pick an earlier GW in the same dropdown |
 | URL | Persist selection (`tab` + `gw`) so refresh/share keeps the same week. Omitting `gw` uses the default |
-| Competitors | Same dropdown + same table. Opening a competitor shows **their** squad for the **default current GW**; the dropdown still switches that competitor’s past weeks |
+| Competitors | Same dropdown + same table. Opening a competitor shows **their** squad for the **default current GW**; the dropdown still switches that competitor’s past weeks. Competitors list columns: Manager, Season total (no Players column; no intro blurb) |
 
 ### My Points header
 
 - Keep team / manager identity as today.
 - **Small season-total box** at the top (Best XI season sum from standings / `auction_leaderboard`). Full ranking stays on **Standings**.
 - Primary number on this tab is **the selected GW**, not a career squad sum.
+- No helper copy under season total. No “squad points so far” explanatory paragraph under the GW total.
 
 ### Table for the selected GW only
 

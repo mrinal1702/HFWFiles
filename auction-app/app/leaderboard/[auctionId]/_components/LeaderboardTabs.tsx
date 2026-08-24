@@ -63,17 +63,15 @@ export function LeaderboardTabs({
 
   const competitorRows: CompetitorListEntry[] = useMemo(() => {
     return standings.map((entry) => {
-      const squad = squads?.find((s) => s.userId === entry.userId);
       return {
         userId: entry.userId,
         name: entry.name,
         teamName: entry.teamName,
         avatarUrl: entry.avatarUrl,
-        playerCount: squad?.players.length ?? 0,
         seasonTotal: seasonTotalForUser(standings, entry.userId),
       };
     });
-  }, [standings, squads]);
+  }, [standings]);
 
   const setTab = useCallback(
     (tab: LeaderboardTabId) => {

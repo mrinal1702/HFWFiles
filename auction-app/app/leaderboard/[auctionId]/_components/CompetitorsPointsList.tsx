@@ -7,7 +7,6 @@ export type CompetitorListEntry = {
   name: string;
   teamName: string | null;
   avatarUrl: string | null;
-  playerCount: number;
   seasonTotal: number | null;
 };
 
@@ -35,10 +34,6 @@ export function CompetitorsPointsList({
 
   return (
     <div className="space-y-4">
-      <p className="text-sm text-slate-600">
-        Tap a manager to see their squad and scores for one gameweek at a time.
-      </p>
-
       <ul className="space-y-3 md:hidden">
         {participants.map((p, i) => (
           <li
@@ -62,19 +57,15 @@ export function CompetitorsPointsList({
                 {p.seasonTotal != null ? p.seasonTotal : "—"}
               </span>
             </div>
-            <p className="mt-2 text-xs text-slate-500">
-              {p.playerCount} player{p.playerCount === 1 ? "" : "s"} this gameweek
-            </p>
           </li>
         ))}
       </ul>
 
       <div className="hidden overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm md:block">
-        <table className="w-full min-w-[24rem] border-collapse text-left text-sm">
+        <table className="w-full min-w-[20rem] border-collapse text-left text-sm">
           <thead className="border-b border-slate-200 bg-sky-50 text-slate-700">
             <tr>
               <th className="px-3 py-3 font-semibold">Manager</th>
-              <th className="px-3 py-3 text-right font-semibold">Players</th>
               <th className="px-3 py-3 text-right font-semibold">Season total</th>
             </tr>
           </thead>
@@ -99,7 +90,6 @@ export function CompetitorsPointsList({
                     <div className="mt-0.5 pl-6 text-xs text-slate-500">{p.name}</div>
                   )}
                 </td>
-                <td className="px-3 py-3 text-right tabular-nums text-slate-600">{p.playerCount}</td>
                 <td className="px-3 py-3 text-right font-mono font-semibold tabular-nums text-slate-900">
                   {p.seasonTotal != null ? p.seasonTotal : "—"}
                 </td>
