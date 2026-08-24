@@ -12,7 +12,7 @@ Tournament-specific archives (e.g. World Cup 2026) live under `archive/world-cup
 ## Principles (standardization)
 
 1. **Reuse code and RPCs** — bidding, releases, locks, scores, Best XI, relegations, eliminations already have scripts/SQL. Extend them; do not invent parallel paths.
-2. **Do not change participant UI mid-season** unless fixing a bug. New competitions should inherit the same surfaces (`/dashboard`, `/archives`, `/auction-history`, `/auctions/[id]/*`, `/leaderboard/[id]`, `/match-scores`).
+2. **Do not change participant UI mid-season** unless fixing a bug. New competitions should inherit the same surfaces (`/dashboard`, `/archives`, `/auction-history`, `/auctions/[id]/*`, `/match-scores`). New in-auction pages must be added via the **left side menu** (`AuctionSideNav`) — see [OPS_UI_SURFACES.md](./OPS_UI_SURFACES.md).
 3. **Schema changes are manual SQL** in Supabase (`auction-app/scripts/sql/*`). There is no migration runner — document every new script in the relevant OPS doc.
 4. **Scores and standings** always flow through published tables (`Player_Scores`, `gameweek_squads`, `auction_leaderboard`). Never invent standings in the UI from live `auction_teams` alone.
 5. **Competition-specific IDs** (archived auctions, history years) belong in small config modules (`lib/archived-auctions.ts`), not scattered hardcodes.

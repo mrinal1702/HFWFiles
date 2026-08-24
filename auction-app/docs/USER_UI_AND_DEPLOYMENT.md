@@ -50,14 +50,18 @@ After changing env vars, **redeploy**. After local commits, **`git push`** so Ve
 | **Player detail + bid** | `/auctions/[auctionId]/players/[playerId]` — bid form, optional `?returnTo=` for back navigation |
 | **Auction Lab** (integration / dev) | `/auction-lab` — **not** linked from normal navigation; uses service-role flows; protect or omit in production |
 
-**Auction chrome:** thin left rail + overlay side menu (`AuctionSideNav`) for section links. Sticky Playing as / Remaining / Active budgets appear on the bidding room only. Navigation highlights Bidding room when viewing a player under the same auction.
+**Auction chrome:** thin left rail (desktop) or floating menu button (mobile) + overlay side menu (`AuctionSideNav`) for section links. Sticky Playing as / Remaining / Active budgets appear on the bidding room only. Navigation highlights Bidding room when viewing a player under the same auction.
+
+**Mobile (validated):** phones use full-width content (no permanent left gutter), `.auction-mobile-compact` at **`zoom: 0.88`**, denser bidding-room cards/controls, and full-width deadlines (label above value). Details and “do not regress” notes: `OPS_UI_SURFACES.md` → **Mobile auction chrome**.
+
+**New pages:** any new participant section inside an auction must ship under `/auctions/[auctionId]/…` **and** be linked from `AuctionSideNav` (see `OPS_UI_SURFACES.md` → “New in-auction pages”).
 
 ---
 
 ## 3. Bidding room behavior
 
 - **Tabs:** All players, Ongoing bids, Unsold (no bids / closed unsold), Sold, Search player.
-- **Theme:** Light **white + sky** palette, mobile-first layout (e.g. sticky budget context on small screens).
+- **Theme:** Light **white + sky** palette, mobile-first layout (e.g. sticky budget context on small screens). On phones, auction chrome uses compact density (`zoom: 0.88` + tighter lot cards) — see `OPS_UI_SURFACES.md` mobile section.
 - **Filters:** Club, position, status (on “All”), bidder (on “Ongoing”), plus **Sort** (see below).
 - **Player names** link to the **player detail** URL; **Back** respects `returnTo` when present so users return to bidding room, competitor view, etc., not always the room.
 - **Search loop:** player detail has **Back to search**, returning to bidding room search tab (`?tab=search`) for quick multi-player bidding.
