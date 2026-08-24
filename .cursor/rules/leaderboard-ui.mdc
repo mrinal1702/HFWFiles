@@ -1,0 +1,16 @@
+---
+description: Frozen leaderboard UI contract — My Points / Competitors one-GW dropdown.
+globs: auction-app/app/leaderboard/**/*.{ts,tsx},auction-app/lib/leaderboard-data.ts,auction-app/app/auctions/**/competitors/**/*.{ts,tsx},auction-app/docs/ui-contracts/**
+alwaysApply: false
+---
+
+# Leaderboard UI
+
+Canonical spec: `auction-app/docs/ui-contracts/LEADERBOARD.md`.
+
+- Three tabs only: Standings, My Points, Competitors.
+- My Points and Competitors: one GW dropdown, one GW table. Default = latest GW with scores uploaded.
+- Columns: Player, Club, Listed Pos, Match Pos, Score. No named-GW column. No Total on that table.
+- Season total: small box on My Points; full table on Standings.
+- After Best XI publish: Starting XI + formation + bench (existing `GameweekSquadView` pattern).
+- Update the contract in the same change if the user explicitly redesigns this UI.

@@ -1,10 +1,22 @@
 # HFW Auction App — Agent Handoff Document
 
-Last updated: May 2026 (updated after live auction validation hardening + admin UX improvements)
+Last updated: July 2026
 
 > **IMPORTANT — HFW = "How Football Works"** (not "Half Full Whistle" or any other expansion). Do not get this wrong.
 
 This document is written for an AI agent picking up this project. Read it fully before making any changes.
+
+---
+
+## Operations handbook (start here for live auctions)
+
+**Day-to-day / gameweek / scoring / relegations / UI standards:**  
+→ **[`OPS_INDEX.md`](./OPS_INDEX.md)** and the `OPS_*.md` docs linked from it.
+
+**Leaderboard UI (frozen contract):**  
+→ **[`ui-contracts/LEADERBOARD.md`](./ui-contracts/LEADERBOARD.md)** — do not change Standings / My Points / Competitors layout unless the user explicitly asks.
+
+Do **not** improvise one-off procedures when an OPS doc and script already exist. Tournament archives live under `archive/world-cup-2026/` (historical only).
 
 ---
 

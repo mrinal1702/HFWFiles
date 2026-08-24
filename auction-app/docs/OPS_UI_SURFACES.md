@@ -75,16 +75,17 @@ View-only messaging when `is_relegated` — do not hide the whole auction.
 
 ## Leaderboard presentation (`/leaderboard/[auctionId]`)
 
+**Canonical layout contract (agents must follow):** [ui-contracts/LEADERBOARD.md](./ui-contracts/LEADERBOARD.md).
+
+Do not redesign this surface unless the user explicitly asks. Extra gameweeks only add dropdown options.
+
 | Tab / element | Behaviour |
 |---------------|-----------|
-| **Standings** | Season rank + points from `auction_leaderboard` sums |
+| **Standings** | Season rank + points from `auction_leaderboard` sums. Relegated managers stay listed and flagged. |
+| **My Points / Competitors** | One gameweek at a time via a **dropdown** (not a tab per GW). Default = latest GW with scores uploaded. Table: Player, Club, Listed Pos, Match Pos, Score. Season total is a small header box only. |
+| **Best XI** | After publish for that GW: Starting XI + formation + substitutes (same pattern as parked `GameweekSquadView`). |
 
-Per-GW squad tabs (Best XI / bench) are parked for now — World Cup gameweeks must not appear on Premier League or later auctions. Reintroduce GW tabs only when that competition has its own locked gameweeks to show.
-| Formation | From published Best XI overlay JSON when present |
-| Match Pos | Scoring / XI role columns for transparency |
-| Relegated | Still listed, flagged |
-
-Do not redesign columns every competition; add data, not a new layout.
+Do not add per-GW score columns or endless tabs. World Cup GW **tabs** must not reappear on later auctions.
 
 ---
 

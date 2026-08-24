@@ -47,6 +47,7 @@ export type ParticipantGwSquad = {
   userId: number;
   name: string;
   teamName: string | null;
+  avatarUrl: string | null;
   players: GwSquadPlayer[];
   /** Total GW score from auction_leaderboard; null if scores not yet published */
   totalGwScore: number | null;
@@ -254,6 +255,7 @@ export async function getCurrentSquads(
       userId: u.id,
       name: u.name ?? "—",
       teamName: u.team_name?.trim() || null,
+      avatarUrl: u.avatar_url,
       totalGwScore: null,
       formation: null,
       players: (byUser.get(u.id) ?? []).map((row) => {
@@ -502,6 +504,7 @@ export async function getGameweekSquadData(
       userId: user.id,
       name: nameById.get(user.id) ?? "—",
       teamName: teamNameById.get(user.id) ?? null,
+      avatarUrl: user.avatar_url,
       players,
       totalGwScore: totalScoreByUser.get(user.id) ?? null,
       formation: null,
@@ -651,4 +654,103 @@ export async function getParticipantOwnedPoints(
 ): Promise<ParticipantOwnedPoints | null> {
   const { participants } = await getParticipantsOwnedPoints(auctionId);
   return participants.find((p) => p.userId === auctionUserId) ?? null;
+}
+
+export type PointsGwContext = {
+  gameWeeks: GwInfo[];
+  defaultGwId: number | null;
+  selectedGw: GwInfo | null;
+  squads: ParticipantGwSquad[] | null;
+  squadsAreLocked: boolean;
+};
+
+async function findGwIdsWithUploadedScores(gwIds: number[]): Promise<Set<number>> {
+  const scored = new Set<number>();
+  if (gwIds.length === 0) return scored;
+  const admin = createAdminClient();
+
+  for (const gwId of gwIds) {
+    const viewRes = await admin
+      .from("player_scores")
+      .select("player_id")
+      .eq("game_week_id", gwId)
+      .limit(1);
+    if (!viewRes.error && (viewRes.data?.length ?? 0) > 0) {
+      scored.add(gwId);
+      continue;
+    }
+
+    const tableRes = await admin
+      .from("Player_Scores")
+      .select("player_id")
+      .eq("game_week_id", gwId)
+      .limit(1);
+    if (!tableRes.error && (tableRes.data?.length ?? 0) > 0) {
+      scored.add(gwId);
+    }
+  }
+
+  return scored;
+}
+
+function pickDefaultGwId(gameWeeks: GwInfo[], scoredGwIds: Set<number>): number | null {
+  const latestScored = [...gameWeeks].reverse().find((gw) => scoredGwIds.has(gw.id));
+  if (latestScored) return latestScored.id;
+  return gameWeeks.at(-1)?.id ?? null;
+}
+
+/** Locked (or live-fallback) gameweeks plus the squad panel for the selected GW. */
+export async function getPointsGwContext(
+  auctionId: number,
+  requestedGwId: number | null,
+): Promise<PointsGwContext> {
+  let gameWeeks = await getLockedGameWeeksForAuction(auctionId);
+  if (gameWeeks.length === 0) {
+    const active = await getActiveGameWeekForAuction(auctionId);
+    if (active) gameWeeks = [active];
+  }
+
+  const scoredGwIds = await findGwIdsWithUploadedScores(gameWeeks.map((gw) => gw.id));
+  const defaultGwId = pickDefaultGwId(gameWeeks, scoredGwIds);
+  const selectedId =
+    requestedGwId != null && gameWeeks.some((gw) => gw.id === requestedGwId)
+      ? requestedGwId
+      : defaultGwId;
+  const selectedGw = gameWeeks.find((gw) => gw.id === selectedId) ?? null;
+
+  if (!selectedGw) {
+    return {
+      gameWeeks,
+      defaultGwId,
+      selectedGw: null,
+      squads: null,
+      squadsAreLocked: false,
+    };
+  }
+
+  const locked = await getGameweekSquadData(auctionId, selectedGw.id);
+  if (locked != null && locked.length > 0) {
+    return {
+      gameWeeks,
+      defaultGwId,
+      selectedGw,
+      squads: locked,
+      squadsAreLocked: true,
+    };
+  }
+
+  const current = await getCurrentSquads(auctionId, selectedGw.id);
+  return {
+    gameWeeks,
+    defaultGwId,
+    selectedGw,
+    squads: current.length > 0 ? current : null,
+    squadsAreLocked: false,
+  };
+}
+
+export function parseGwSearchParam(value: string | undefined): number | null {
+  if (value == null || value === "") return null;
+  const n = Number(value);
+  return Number.isFinite(n) && n > 0 ? n : null;
 }

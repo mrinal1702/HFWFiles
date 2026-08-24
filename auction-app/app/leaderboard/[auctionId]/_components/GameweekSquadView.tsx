@@ -266,6 +266,7 @@ export function GameweekSquadView({
               auctionUserId={selected.userId}
               name={selected.name}
               teamName={selected.teamName}
+              avatarUrl={selected.avatarUrl}
               preferTeamLabel
               labelClassName="text-base font-semibold text-slate-900"
             />
@@ -299,6 +300,7 @@ export function GameweekSquadView({
               auctionUserId={selected.userId}
               name={selected.name}
               teamName={selected.teamName}
+              avatarUrl={selected.avatarUrl}
               preferTeamLabel
               labelClassName="text-base font-semibold text-slate-900"
             />

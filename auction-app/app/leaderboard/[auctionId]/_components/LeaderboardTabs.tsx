@@ -3,14 +3,11 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useMemo } from "react";
 
-import type {
-  GwInfo,
-  ParticipantOwnedPoints,
-  StandingEntry,
-} from "@/lib/leaderboard-data";
+import type { GwInfo, ParticipantGwSquad, StandingEntry } from "@/lib/leaderboard-data";
 
-import { CompetitorsPointsList } from "./CompetitorsPointsList";
-import { OwnedPointsView } from "./OwnedPointsView";
+import { CompetitorsPointsList, type CompetitorListEntry } from "./CompetitorsPointsList";
+import { GwPointsView } from "./GwPointsView";
+import { GwSelect } from "./GwSelect";
 import { StandingsTable } from "./StandingsTable";
 
 export type LeaderboardTabId = "standings" | "my-points" | "competitors";
@@ -26,12 +23,20 @@ function parseTab(value: string | null | undefined): LeaderboardTabId {
   return "standings";
 }
 
+function seasonTotalForUser(standings: StandingEntry[], userId: number): number | null {
+  const entry = standings.find((s) => s.userId === userId);
+  if (!entry) return null;
+  if (entry.total === 0 && Object.keys(entry.scoresByGwId).length === 0) return null;
+  return entry.total;
+}
+
 interface LeaderboardTabsProps {
   auctionId: number;
   standings: StandingEntry[];
-  gameWeeks: GwInfo[];
-  ownedPointsParticipants: ParticipantOwnedPoints[];
-  ownedPointsGameWeeks: GwInfo[];
+  standingsGameWeeks: GwInfo[];
+  pointsGameWeeks: GwInfo[];
+  selectedGw: GwInfo | null;
+  squads: ParticipantGwSquad[] | null;
   myUserId: number | null;
   initialTab: LeaderboardTabId;
 }
@@ -39,20 +44,36 @@ interface LeaderboardTabsProps {
 export function LeaderboardTabs({
   auctionId,
   standings,
-  gameWeeks,
-  ownedPointsParticipants,
-  ownedPointsGameWeeks,
+  standingsGameWeeks,
+  pointsGameWeeks,
+  selectedGw,
+  squads,
   myUserId,
   initialTab,
 }: LeaderboardTabsProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const activeTab = parseTab(searchParams.get("tab") ?? initialTab);
+  const basePath = `/leaderboard/${auctionId}`;
 
-  const myPoints = useMemo(
-    () => ownedPointsParticipants.find((p) => p.userId === myUserId) ?? null,
-    [ownedPointsParticipants, myUserId],
+  const mySquad = useMemo(
+    () => squads?.find((s) => s.userId === myUserId) ?? null,
+    [squads, myUserId],
   );
+
+  const competitorRows: CompetitorListEntry[] = useMemo(() => {
+    return standings.map((entry) => {
+      const squad = squads?.find((s) => s.userId === entry.userId);
+      return {
+        userId: entry.userId,
+        name: entry.name,
+        teamName: entry.teamName,
+        avatarUrl: entry.avatarUrl,
+        playerCount: squad?.players.length ?? 0,
+        seasonTotal: seasonTotalForUser(standings, entry.userId),
+      };
+    });
+  }, [standings, squads]);
 
   const setTab = useCallback(
     (tab: LeaderboardTabId) => {
@@ -60,11 +81,9 @@ export function LeaderboardTabs({
       if (tab === "standings") params.delete("tab");
       else params.set("tab", tab);
       const qs = params.toString();
-      router.replace(qs ? `/leaderboard/${auctionId}?${qs}` : `/leaderboard/${auctionId}`, {
-        scroll: false,
-      });
+      router.replace(qs ? `${basePath}?${qs}` : basePath, { scroll: false });
     },
-    [auctionId, router, searchParams],
+    [basePath, router, searchParams],
   );
 
   return (
@@ -90,7 +109,7 @@ export function LeaderboardTabs({
       </div>
 
       {activeTab === "standings" && (
-        <StandingsTable auctionId={auctionId} standings={standings} gameWeeks={gameWeeks} />
+        <StandingsTable auctionId={auctionId} standings={standings} gameWeeks={standingsGameWeeks} />
       )}
 
       {activeTab === "my-points" && (
@@ -99,22 +118,32 @@ export function LeaderboardTabs({
             <p className="py-8 text-center text-sm text-slate-500">
               Sign in with an account linked to this auction to see your points.
             </p>
-          ) : myPoints ? (
-            <OwnedPointsView
-              auctionId={auctionId}
-              participant={myPoints}
-              gameWeeks={ownedPointsGameWeeks}
-            />
           ) : (
-            <p className="py-8 text-center text-sm text-slate-500">
-              You are not registered as a manager in this auction.
-            </p>
+            <GwPointsView
+              auctionId={auctionId}
+              squad={mySquad}
+              gameWeeks={pointsGameWeeks}
+              selectedGw={selectedGw}
+              seasonTotal={seasonTotalForUser(standings, myUserId)}
+              basePath={basePath}
+            />
           )}
         </>
       )}
 
       {activeTab === "competitors" && (
-        <CompetitorsPointsList auctionId={auctionId} participants={ownedPointsParticipants} />
+        <div className="space-y-4">
+          <GwSelect
+            gameWeeks={pointsGameWeeks}
+            selectedGwId={selectedGw?.id ?? null}
+            basePath={basePath}
+          />
+          <CompetitorsPointsList
+            auctionId={auctionId}
+            participants={competitorRows}
+            gwQuery={searchParams.get("gw")}
+          />
+        </div>
       )}
     </div>
   );

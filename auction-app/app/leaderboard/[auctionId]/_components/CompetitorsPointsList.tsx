@@ -1,24 +1,42 @@
 "use client";
 
 import { ManagerChip } from "@/app/_components/entity/ManagerChip";
-import type { ParticipantOwnedPoints } from "@/lib/leaderboard-data";
+
+export type CompetitorListEntry = {
+  userId: number;
+  name: string;
+  teamName: string | null;
+  avatarUrl: string | null;
+  playerCount: number;
+  seasonTotal: number | null;
+};
 
 interface CompetitorsPointsListProps {
   auctionId: number;
-  participants: ParticipantOwnedPoints[];
+  participants: CompetitorListEntry[];
+  gwQuery?: string | null;
 }
 
-export function CompetitorsPointsList({ auctionId, participants }: CompetitorsPointsListProps) {
+export function CompetitorsPointsList({
+  auctionId,
+  participants,
+  gwQuery,
+}: CompetitorsPointsListProps) {
   if (participants.length === 0) {
     return (
       <p className="py-8 text-center text-sm text-slate-500">No managers in this auction yet.</p>
     );
   }
 
+  const competitorHref = (userId: number) => {
+    const qs = gwQuery ? `?gw=${encodeURIComponent(gwQuery)}` : "";
+    return `/auctions/${auctionId}/competitors/${userId}${qs}`;
+  };
+
   return (
     <div className="space-y-4">
       <p className="text-sm text-slate-600">
-        Tap a manager to see every player they own and the points each has scored so far.
+        Tap a manager to see their squad and scores for one gameweek at a time.
       </p>
 
       <ul className="space-y-3 md:hidden">
@@ -38,13 +56,14 @@ export function CompetitorsPointsList({ auctionId, participants }: CompetitorsPo
                 avatarUrl={p.avatarUrl}
                 preferTeamLabel
                 labelClassName="text-base font-medium"
+                href={competitorHref(p.userId)}
               />
               <span className="shrink-0 font-mono text-lg font-bold tabular-nums text-slate-900">
-                {p.totalScore > 0 ? p.totalScore : "—"}
+                {p.seasonTotal != null ? p.seasonTotal : "—"}
               </span>
             </div>
             <p className="mt-2 text-xs text-slate-500">
-              {p.players.length} player{p.players.length === 1 ? "" : "s"}
+              {p.playerCount} player{p.playerCount === 1 ? "" : "s"} this gameweek
             </p>
           </li>
         ))}
@@ -56,7 +75,7 @@ export function CompetitorsPointsList({ auctionId, participants }: CompetitorsPo
             <tr>
               <th className="px-3 py-3 font-semibold">Manager</th>
               <th className="px-3 py-3 text-right font-semibold">Players</th>
-              <th className="px-3 py-3 text-right font-semibold">Points so far</th>
+              <th className="px-3 py-3 text-right font-semibold">Season total</th>
             </tr>
           </thead>
           <tbody>
@@ -74,14 +93,15 @@ export function CompetitorsPointsList({ auctionId, participants }: CompetitorsPo
                     avatarUrl={p.avatarUrl}
                     preferTeamLabel
                     labelClassName="font-medium text-slate-900"
+                    href={competitorHref(p.userId)}
                   />
                   {p.teamName?.trim() && (
                     <div className="mt-0.5 pl-6 text-xs text-slate-500">{p.name}</div>
                   )}
                 </td>
-                <td className="px-3 py-3 text-right tabular-nums text-slate-600">{p.players.length}</td>
+                <td className="px-3 py-3 text-right tabular-nums text-slate-600">{p.playerCount}</td>
                 <td className="px-3 py-3 text-right font-mono font-semibold tabular-nums text-slate-900">
-                  {p.totalScore > 0 ? p.totalScore : "—"}
+                  {p.seasonTotal != null ? p.seasonTotal : "—"}
                 </td>
               </tr>
             ))}

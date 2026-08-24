@@ -18,6 +18,8 @@ type Props = {
   className?: string;
   /** Extra classes on the text/link portion only. */
   labelClassName?: string;
+  /** Override competitor-page href (e.g. include `?gw=`). */
+  href?: string;
 };
 
 function resolveLabel(
@@ -47,6 +49,7 @@ export function ManagerChip({
   showAvatar = true,
   className = "",
   labelClassName = "",
+  href,
 }: Props) {
   const label = resolveLabel(preferTeamLabel, name, teamName, auctionUserId);
   const avatarName = name?.trim() || label;
@@ -72,7 +75,7 @@ export function ManagerChip({
 
   return (
     <Link
-      href={`/auctions/${auctionId}/competitors/${auctionUserId}`}
+      href={href ?? `/auctions/${auctionId}/competitors/${auctionUserId}`}
       prefetch={false}
       className={rowClass}
     >

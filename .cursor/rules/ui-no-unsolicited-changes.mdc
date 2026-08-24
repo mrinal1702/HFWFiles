@@ -1,0 +1,12 @@
+---
+description: Never change participant UI unless the user explicitly asks. Leaderboard has a frozen contract.
+alwaysApply: true
+---
+
+# UI freeze (HFW auction)
+
+Do not change participant-facing layout, labels, columns, colors, or interaction unless the user **explicitly** requests that UI change. Bug fixes that preserve the same UI are allowed.
+
+Leaderboard (`/leaderboard/[auctionId]`, My Points, Competitors GW views): read and follow `auction-app/docs/ui-contracts/LEADERBOARD.md` before editing. New gameweeks are data only — do not add tabs or extra score columns.
+
+If a task would “improve” or restyle the UI as a side effect, skip that part and say so.

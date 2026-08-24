@@ -2,10 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { Avatar } from "@/app/_components/entity/Avatar";
-import { OwnedPointsView } from "@/app/leaderboard/[auctionId]/_components/OwnedPointsView";
+import { GwPointsView } from "@/app/leaderboard/[auctionId]/_components/GwPointsView";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadCompetitorView } from "@/lib/auction-dashboard";
-import { getParticipantsOwnedPoints } from "@/lib/leaderboard-data";
+import { getLeaderboardData, getPointsGwContext, parseGwSearchParam } from "@/lib/leaderboard-data";
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
 import { RosterSlotCounts } from "@/app/auctions/_components/RosterSlotCounts";
 import { fantasyTeamLabel } from "@/lib/team-name";
@@ -33,10 +33,13 @@ function sectionForPosition(position: string | null | undefined): SectionId {
 
 export default async function CompetitorDetailPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ auctionId: string; auctionUserId: string }>;
+  searchParams: Promise<{ gw?: string }>;
 }) {
   const { auctionId: aRaw, auctionUserId: uRaw } = await params;
+  const { gw: gwParam } = await searchParams;
   const auctionId = Number(aRaw);
   const competitorUserId = Number(uRaw);
   if (!Number.isFinite(competitorUserId)) {
@@ -44,19 +47,25 @@ export default async function CompetitorDetailPage({
   }
 
   const user = await getAuthUser();
-  const [v, ownedPointsData] = await Promise.all([
+  const [v, leaderboardData, pointsContext] = await Promise.all([
     loadCompetitorView(auctionId, competitorUserId, user?.id ?? null),
-    getParticipantsOwnedPoints(auctionId),
+    getLeaderboardData(auctionId),
+    getPointsGwContext(auctionId, parseGwSearchParam(gwParam)),
   ]);
   if (!v.competitor) {
     notFound();
   }
 
-  const ownedPoints =
-    ownedPointsData.participants.find((p) => p.userId === competitorUserId) ?? null;
+  const squad = pointsContext.squads?.find((p) => p.userId === competitorUserId) ?? null;
+  const seasonEntry = leaderboardData.standings.find((s) => s.userId === competitorUserId);
+  const seasonTotal =
+    seasonEntry && (seasonEntry.total !== 0 || Object.keys(seasonEntry.scoresByGwId).length > 0)
+      ? seasonEntry.total
+      : null;
 
   const returnTo = `/auctions/${auctionId}/competitors/${competitorUserId}`;
-  const competitorsBackHref = `/leaderboard/${auctionId}?tab=competitors`;
+  const gwQs = gwParam ? `&gw=${encodeURIComponent(gwParam)}` : "";
+  const competitorsBackHref = `/leaderboard/${auctionId}?tab=competitors${gwQs}`;
   const soldGrouped = SECTION_ORDER.map((section) => {
     const rows = v.sold
       .filter((l) => sectionForPosition(l.position) === section.id)
@@ -133,22 +142,23 @@ export default async function CompetitorDetailPage({
         </div>
       </div>
 
-      {ownedPoints && (
-        <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm sm:p-5">
-          <h3 className="text-base font-semibold text-slate-900">Points so far</h3>
-          <p className="mt-1 text-sm leading-relaxed text-slate-600">
-            Every owned player and their match scores. Best XI is not applied here.
-          </p>
-          <div className="mt-4">
-            <OwnedPointsView
-              auctionId={auctionId}
-              participant={ownedPoints}
-              gameWeeks={ownedPointsData.gameWeeks}
-              compact
-            />
-          </div>
+      <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm sm:p-5">
+        <h3 className="text-base font-semibold text-slate-900">Gameweek points</h3>
+        <p className="mt-1 text-sm leading-relaxed text-slate-600">
+          One gameweek at a time. Use the dropdown to revisit earlier weeks.
+        </p>
+        <div className="mt-4">
+          <GwPointsView
+            auctionId={auctionId}
+            squad={squad}
+            gameWeeks={pointsContext.gameWeeks}
+            selectedGw={pointsContext.selectedGw}
+            seasonTotal={seasonTotal}
+            basePath={`/auctions/${auctionId}/competitors/${competitorUserId}`}
+            compact
+          />
         </div>
-      )}
+      </div>
 
       <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm sm:p-5">
         <h3 className="text-base font-semibold text-slate-900">View Team</h3>
