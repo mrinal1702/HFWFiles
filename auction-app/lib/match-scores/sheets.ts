@@ -71,6 +71,15 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795369,
     rows: loadMatchScoreCsv("BrightonHoveAlbion_AstonVilla_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "manchester-city-afc-bournemouth",
+    title: "Manchester City vs AFC Bournemouth",
+    subtitle: "Premier League · Matchweek 1",
+    groupStageGw: 1,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795370,
+    rows: loadMatchScoreCsv("ManchesterCity_AFCBournemouth_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 export const MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

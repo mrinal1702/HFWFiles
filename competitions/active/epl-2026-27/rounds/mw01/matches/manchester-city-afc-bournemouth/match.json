@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "manchester-city-afc-bournemouth",
+  "fotmob_match_id": 5795370,
+  "source_url": "https://www.fotmob.com/en-GB/matches/man-city-vs-bournemouth/2feiv3#5795370:tab=stats",
+  "home_team": "Manchester City",
+  "away_team": "AFC Bournemouth",
+  "raw_json_path": "intermediates/ManchesterCity_Vs_AFCBournemouth.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

@@ -26,6 +26,18 @@
       "notes": "Auto-added from upsert:player-scores (not in public.players)."
     },
     {
+      "player_id": 1158512,
+      "player_name": "Juanlu Sánchez",
+      "team_id": null,
+      "team_name": "Bournemouth",
+      "position": "Midfielder",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1158512/juanlu-sanchez",
+      "reason": "late_callup",
+      "first_seen": "2026-08-24",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
       "player_id": 1553189,
       "player_name": "Luka Lynch",
       "team_id": null,
