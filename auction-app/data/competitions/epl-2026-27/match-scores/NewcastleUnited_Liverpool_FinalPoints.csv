@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Cody Gakpo,806552,Liverpool,midfielder,40.21,5.0,0.0,45
+Dominik Szoboszlai,846005,Liverpool,midfielder,39.754,5.0,0.0,45
+Lewis Miley,1296763,Newcastle United,midfielder,30.83333333333333,7.0,0.0,38
+Yoane Wissa,666857,Newcastle United,midfielder,29.860666666666667,7.0,0.0,37
+Lewis Hall,1197655,Newcastle United,defender,36.205,0.0,0.0,36
+Virgil van Dijk,209405,Liverpool,defender,33.29,0.0,0.0,33
+Anthony Elanga,1050166,Newcastle United,midfielder,22.903333333333336,7.0,0.0,30
+Milos Kerkez,1195281,Liverpool,defender,29.34500000000001,0.0,0.0,29
+Ryan Gravenberch,956683,Liverpool,midfielder,24.426,3.0,0.0,27
+Alexander Isak,690107,Liverpool,forward,21.07,6.0,0.0,27
+Joseph Willock,860975,Newcastle United,midfielder,24.517333333333333,2.5,0.0,27
+Jeremie Frimpong,966018,Liverpool,defender,26.42,0.0,0.0,26
+Jérémy Jacquet,1473534,Liverpool,defender,25.98333333333333,0.0,0.0,26
+Malick Thiaw,1137407,Newcastle United,defender,24.9,0.0,0.0,25
+William Osula,1258092,Newcastle United,forward,21.426666666666662,3.0,0.0,24
+Florian Wirtz,1152455,Liverpool,midfielder,19.108000000000004,3.0,0.0,22
+Ronald Araujo,921253,Liverpool,defender,15.316666666666665,5.0,0.0,20
+Amar Dedic,958010,Newcastle United,defender,19.19,0.0,0.0,19
+Sven Botman,956682,Newcastle United,defender,18.855,0.0,0.0,19
+Víctor Muñoz,1553105,Liverpool,forward,13.84,3.0,0.0,17
+Jacob Ramsey,1021929,Newcastle United,midfielder,14.303333333333333,2.5,0.0,17
+Harvey Barnes,760359,Newcastle United,forward,10.5,6.0,0.0,16
+Alexis Mac Allister,831489,Liverpool,midfielder,10.022,4.5,0.0,15
+Rio Ngumoha,1597668,Liverpool,forward,9.77,3.0,0.0,13
+Lewis Koumas,1364042,Liverpool,forward,8.85,3.0,0.0,12
+Sean Steur,1643770,Newcastle United,midfielder,4.660666666666667,5.0,0.0,10
+Aladji Bamba,1695681,Newcastle United,midfielder,8.878666666666668,0.5,0.0,9
+Jacob Murphy,521148,Newcastle United,forward,5.096666666666667,0.0,0.0,5
+Fabian Schär,189982,Newcastle United,defender,0.0,0.0,0.0,0
+Leo Shahar,1414761,Newcastle United,defender,0.0,0.0,0.0,0
+Wataru Endo,202643,Liverpool,midfielder,0.0,0.0,0.0,0
+Konstantinos Tsimikas,671529,Liverpool,midfielder,0.0,0.0,0.0,0
+James McConnell,1231075,Liverpool,midfielder,0.0,0.0,0.0,0
+Trey Nyoni,1436258,Liverpool,midfielder,0.0,0.0,0.0,0
+Nick Woltemade,1106563,Newcastle United,forward,0.0,0.0,0.0,0
+Bazoumana Touré,1624586,Newcastle United,forward,0.0,0.0,0.0,0
+Newcastle United Keepers,10261,Newcastle United,goalkeeper,26.42,6.0,0.0,32
+Liverpool Keepers,8650,Liverpool,goalkeeper,18.200000000000003,6.0,0.0,24

@@ -7,7 +7,7 @@
   "round_number": 1,
   "legacy_game_week_id": 100,
   "expected_match_count": 10,
-  "_match_count_note": "GW1 has 10 fixtures (20 teams). 8 captured so far; add the remaining 2 as they are played.",
+  "_match_count_note": "GW1 has 10 fixtures (20 teams). 9 captured so far; add the remaining 1 as it is played.",
   "auction_ids": [9],
   "squad_lock_state": "locked",
   "scoring_state": "in_progress",
@@ -21,6 +21,7 @@
     { "match_slug": "nottingham-forest-leeds-united", "fotmob_match_id": 5795367, "home_team": "Nottingham Forest", "away_team": "Leeds United" },
     { "match_slug": "brentford-tottenham-hotspur", "fotmob_match_id": 5795368, "home_team": "Brentford", "away_team": "Tottenham Hotspur" },
     { "match_slug": "brighton-aston-villa", "fotmob_match_id": 5795369, "home_team": "Brighton & Hove Albion", "away_team": "Aston Villa" },
-    { "match_slug": "manchester-city-afc-bournemouth", "fotmob_match_id": 5795370, "home_team": "Manchester City", "away_team": "AFC Bournemouth" }
+    { "match_slug": "manchester-city-afc-bournemouth", "fotmob_match_id": 5795370, "home_team": "Manchester City", "away_team": "AFC Bournemouth" },
+    { "match_slug": "liverpool-newcastle-united", "fotmob_match_id": 5795371, "home_team": "Newcastle United", "away_team": "Liverpool" }
   ]
 }

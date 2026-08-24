@@ -1,0 +1,15 @@
+{
+  "match_id": 5795371,
+  "home_team": "Newcastle United",
+  "away_team": "Liverpool",
+  "source_url": "https://www.fotmob.com/en-GB/matches/liverpool-vs-newcastle/2ygyxm#5795371:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw01/matches/liverpool-newcastle-united/intermediates/Liverpool_Vs_NewcastleUnited.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/liverpool-vs-newcastle/2ygyxm",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/liverpool-vs-newcastle/2ygyxm#5795371:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/liverpool-vs-newcastle/2ygyxm#5795371:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/liverpool-vs-newcastle/2ygyxm#5795371:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795371"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

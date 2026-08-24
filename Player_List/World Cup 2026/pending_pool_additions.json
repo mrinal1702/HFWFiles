@@ -2,6 +2,18 @@
   "_readme": "",
   "players": [
     {
+      "player_id": 958010,
+      "player_name": "Amar Dedic",
+      "team_id": null,
+      "team_name": "Newcastle United",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/958010/amar-dedic",
+      "reason": "late_callup",
+      "first_seen": "2026-08-24",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
       "player_id": 1639163,
       "player_name": "Bradley Burrowes",
       "team_id": null,
@@ -26,12 +38,36 @@
       "notes": "Auto-added from upsert:player-scores (not in public.players)."
     },
     {
+      "player_id": 1231075,
+      "player_name": "James McConnell",
+      "team_id": null,
+      "team_name": "Liverpool",
+      "position": "Midfielder",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1231075/james-mcconnell",
+      "reason": "late_callup",
+      "first_seen": "2026-08-24",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
       "player_id": 1158512,
       "player_name": "Juanlu Sánchez",
       "team_id": null,
       "team_name": "Bournemouth",
       "position": "Midfielder",
       "fotmob_url": "https://www.fotmob.com/en-GB/players/1158512/juanlu-sanchez",
+      "reason": "late_callup",
+      "first_seen": "2026-08-24",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 1364042,
+      "player_name": "Lewis Koumas",
+      "team_id": null,
+      "team_name": "Liverpool",
+      "position": "Forward",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1364042/lewis-koumas",
       "reason": "late_callup",
       "first_seen": "2026-08-24",
       "first_seen_match": "final-points.csv",
