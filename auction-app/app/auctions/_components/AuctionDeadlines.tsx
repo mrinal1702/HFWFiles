@@ -30,6 +30,29 @@ function isPast(iso: string | null): boolean {
   return Number.isFinite(ms) && Date.now() >= ms;
 }
 
+function DeadlineRow({
+  label,
+  iso,
+  past,
+}: {
+  label: string;
+  iso: string | null;
+  past: boolean;
+}) {
+  return (
+    <div className="min-w-0">
+      <dt className="font-medium text-slate-600">{label}</dt>
+      <dd
+        className={`mt-0.5 text-slate-700 sm:mt-0 ${past ? "font-medium text-amber-700" : ""}`}
+      >
+        {/* Inline on sm+ next to label; full-width line on mobile so the date isn't squeezed. */}
+        <span className="sm:ml-2">{formatDeadline(iso)}</span>
+        {past && <span className="ml-1 text-xs">(passed)</span>}
+      </dd>
+    </div>
+  );
+}
+
 export function AuctionDeadlines({ initiationDeadlineAt, raiseDeadlineAt, hardDeadlineAt }: Props) {
   const router = useRouter();
 
@@ -52,39 +75,27 @@ export function AuctionDeadlines({ initiationDeadlineAt, raiseDeadlineAt, hardDe
   const hardPast = isPast(hardDeadlineAt);
 
   return (
-    <div className="space-y-2">
-      <dl className="grid grid-cols-1 gap-x-6 gap-y-1 text-sm sm:grid-cols-3">
-        <div className="flex items-baseline gap-2">
-          <dt className="shrink-0 font-medium text-slate-600">Initiation deadline</dt>
-          <dd className={initiationPast ? "text-amber-700 font-medium" : "text-slate-700"}>
-            {formatDeadline(initiationDeadlineAt)}
-            {initiationPast && <span className="ml-1 text-xs">(passed)</span>}
-          </dd>
-        </div>
-        <div className="flex items-baseline gap-2">
-          <dt className="shrink-0 font-medium text-slate-600">Raise deadline</dt>
-          <dd className={raisePast ? "text-amber-700 font-medium" : "text-slate-700"}>
-            {formatDeadline(raiseDeadlineAt)}
-            {raisePast && <span className="ml-1 text-xs">(passed)</span>}
-          </dd>
-        </div>
-        <div className="flex items-baseline gap-2">
-          <dt className="shrink-0 font-medium text-slate-600">Hard deadline</dt>
-          <dd className={hardPast ? "text-amber-700 font-medium" : "text-slate-700"}>
-            {formatDeadline(hardDeadlineAt)}
-            {hardPast && <span className="ml-1 text-xs">(passed)</span>}
-          </dd>
-        </div>
+    <div className="w-full min-w-0 space-y-2">
+      {/*
+        Mobile: one full-width stack (label above value) — avoids the old squeezed
+        side-by-side column next to header actions. sm+: three columns, label + value inline.
+      */}
+      <dl className="grid w-full grid-cols-1 gap-x-6 gap-y-2 text-sm sm:grid-cols-3 sm:gap-y-1 sm:[&>div]:flex sm:[&>div]:items-baseline sm:[&>div]:gap-0">
+        <DeadlineRow label="Initiation deadline" iso={initiationDeadlineAt} past={initiationPast} />
+        <DeadlineRow label="Raise deadline" iso={raiseDeadlineAt} past={raisePast} />
+        <DeadlineRow label="Hard deadline" iso={hardDeadlineAt} past={hardPast} />
       </dl>
 
       {initiationPast && !raisePast && (
         <p className="rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-xs text-sky-900">
-          <span className="font-semibold">Initiation closed.</span> Players with no bids can no longer be opened — you can only raise on players already in play.
+          <span className="font-semibold">Initiation closed.</span> Players with no bids can no longer
+          be opened — you can only raise on players already in play.
         </p>
       )}
       {raisePast && !hardPast && (
         <p className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-950">
-          <span className="font-semibold">Raise mode active.</span> Every bid must increase the current high by at least 5.
+          <span className="font-semibold">Raise mode active.</span> Every bid must increase the
+          current high by at least 5.
         </p>
       )}
     </div>
