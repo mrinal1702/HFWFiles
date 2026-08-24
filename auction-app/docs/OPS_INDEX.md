@@ -40,7 +40,7 @@ This index is primarily about the **online** product.
 | [OPS_SCORING_AND_LEADERBOARD.md](./OPS_SCORING_AND_LEADERBOARD.md) | FinalPoints → Supabase → Best XI → standings → Vercel |
 | [OPS_RELEGATIONS.md](./OPS_RELEGATIONS.md) | Cutting managers; view-only behaviour |
 | [OPS_ELIMINATIONS.md](./OPS_ELIMINATIONS.md) | Real-world team knockouts; half-price refunds |
-| [OPS_UI_SURFACES.md](./OPS_UI_SURFACES.md) | Participant UI map; what may change vs must stay stable |
+| [OPS_UI_SURFACES.md](./OPS_UI_SURFACES.md) | Participant UI map; mobile chrome (zoom / side menu / deadlines); what may change vs must stay stable |
 | [ui-contracts/LEADERBOARD.md](./ui-contracts/LEADERBOARD.md) | Frozen leaderboard layout (Standings / My Points / Competitors) — do not improvise UI |
 | [OPS_OTHER_MODULES.md](./OPS_OTHER_MODULES.md) | Transfers, announcements, acting-as, archives/history, live auction |
 | [ENTITY_INTERCONNECT_PLAN.md](./ENTITY_INTERCONNECT_PLAN.md) | Planned manager/player/profile links, avatars, phased delivery |
