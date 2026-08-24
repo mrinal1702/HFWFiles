@@ -9,5 +9,5 @@ export default async function PointsPage({
   params: Promise<{ auctionId: string }>;
 }) {
   const { auctionId } = await params;
-  redirect(`/leaderboard/${auctionId}?tab=my-points`);
+  redirect(`/auctions/${auctionId}/leaderboard?tab=my-points`);
 }

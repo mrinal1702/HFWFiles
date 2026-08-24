@@ -65,7 +65,7 @@ export default async function CompetitorDetailPage({
 
   const returnTo = `/auctions/${auctionId}/competitors/${competitorUserId}`;
   const gwQs = gwParam ? `&gw=${encodeURIComponent(gwParam)}` : "";
-  const competitorsBackHref = `/leaderboard/${auctionId}?tab=competitors${gwQs}`;
+  const competitorsBackHref = `/auctions/${auctionId}/leaderboard?tab=competitors${gwQs}`;
   const soldGrouped = SECTION_ORDER.map((section) => {
     const rows = v.sold
       .filter((l) => sectionForPosition(l.position) === section.id)

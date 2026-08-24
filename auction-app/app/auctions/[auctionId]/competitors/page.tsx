@@ -9,5 +9,5 @@ export default async function CompetitorsPage({
   params: Promise<{ auctionId: string }>;
 }) {
   const { auctionId } = await params;
-  redirect(`/leaderboard/${auctionId}?tab=competitors`);
+  redirect(`/auctions/${auctionId}/leaderboard?tab=competitors`);
 }

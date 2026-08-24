@@ -6,7 +6,7 @@ import type { AuctionMatchweek } from "@/lib/auction-fixtures";
 
 type Props = {
   matchweeks: AuctionMatchweek[];
-  /** Visual style to match AuctionNav tabs */
+  /** Visual style to match side-menu items */
   className?: string;
 };
 

@@ -130,7 +130,7 @@ Same sheet registry (`MATCH_SCORE_SHEETS` / CSV data) powers both; only the chro
 
 - `lib/player-auction-detail.ts` — `loadPlayerAuctionDetail`
 - Enriched `/auctions/[id]/players/[playerId]` — ownership, GW points, bid history, releases, bid form when in pool
-- `/auctions/[id]/match-scores` + **Match scores** in `AuctionNav`
+- `/auctions/[id]/match-scores` + **Match scores** in `AuctionSideNav`
 - Archives cards: Leaderboard / Match scores / Open auction (so archived leagues stay testable)
 
 **Note:** When `MATCH_SCORE_SHEETS` is empty, the in-auction scores page shows the empty state; player pages still work from Competitors / Bidding room / sold lots.

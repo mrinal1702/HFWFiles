@@ -45,12 +45,12 @@ After changing env vars, **redeploy**. After local commits, **`git push`** so Ve
 | **Bidding room** (main table) | `/auctions/[auctionId]/bidding-room` |
 | My team | `/auctions/[auctionId]/team` |
 | Bids held | `/auctions/[auctionId]/bids-held` |
-| Leaderboard, points | `/auctions/[auctionId]/leaderboard`, `/points` |
+| Leaderboard, points | `/auctions/[auctionId]/leaderboard` (legacy `/leaderboard/[id]` redirects); `/points` → My Points tab |
 | Competitors | `/auctions/[auctionId]/competitors`, `/competitors/[auctionUserId]` |
 | **Player detail + bid** | `/auctions/[auctionId]/players/[playerId]` — bid form, optional `?returnTo=` for back navigation |
 | **Auction Lab** (integration / dev) | `/auction-lab` — **not** linked from normal navigation; uses service-role flows; protect or omit in production |
 
-Navigation highlights the bidding experience (including when viewing a player under the same auction).
+**Auction chrome:** thin left rail + overlay side menu (`AuctionSideNav`) for section links. Sticky Playing as / Remaining / Active budgets appear on the bidding room only. Navigation highlights Bidding room when viewing a player under the same auction.
 
 ---
 

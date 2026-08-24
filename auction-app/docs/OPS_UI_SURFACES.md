@@ -45,16 +45,17 @@ Removed / parked: large Match Scores card; Meme Builds entry (routes may still e
 
 | Area | Notes |
 |------|--------|
-| Header / nav | Auction name; link back to dashboard |
-| **Bidding room** | Lot list, filters, deadlines, bid forms |
+| Header | Auction name; deadlines; Dashboard / Announcements / Refresh |
+| **Side menu** | Thin left rail + overlay drawer (`AuctionSideNav`): Bidding room, Fixtures (modal when configured), My team, Bids held, Transfer Room, Match scores, Leaderboard |
+| **Bidding room** | Lot list, filters, deadlines, bid forms; sticky Playing as + Remaining / Active budgets (bidding room only) |
 | **My Team** | Squad + release buttons |
 | **Bids held** | Current high bids |
-| **Competitors** | Other managers’ squads |
+| **Competitors** | Other managers’ squads (also via Leaderboard → Competitors) |
 | **Player page** | Ownership, GW points, bid/release history, bid form |
 | **Match scores** | In-auction sheets; player names → player page |
-| **Announcements** | Sales, releases, eliminations |
+| **Announcements** | Sales, releases, eliminations (header button for now) |
 | **Transfers** | Propose / respond (when window open) |
-| **Leaderboard / Points** | Often redirect or link to `/leaderboard/[id]` |
+| **Leaderboard / Points** | `/auctions/[id]/leaderboard` (under auction chrome). Legacy `/leaderboard/[id]` redirects here |
 
 ### Deadlines presentation
 

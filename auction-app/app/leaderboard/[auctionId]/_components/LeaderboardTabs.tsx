@@ -32,6 +32,8 @@ function seasonTotalForUser(standings: StandingEntry[], userId: number): number 
 
 interface LeaderboardTabsProps {
   auctionId: number;
+  /** Route prefix for tab/gw query updates (e.g. `/auctions/9/leaderboard`). */
+  basePath: string;
   standings: StandingEntry[];
   standingsGameWeeks: GwInfo[];
   pointsGameWeeks: GwInfo[];
@@ -43,6 +45,7 @@ interface LeaderboardTabsProps {
 
 export function LeaderboardTabs({
   auctionId,
+  basePath,
   standings,
   standingsGameWeeks,
   pointsGameWeeks,
@@ -54,7 +57,6 @@ export function LeaderboardTabs({
   const router = useRouter();
   const searchParams = useSearchParams();
   const activeTab = parseTab(searchParams.get("tab") ?? initialTab);
-  const basePath = `/leaderboard/${auctionId}`;
 
   const mySquad = useMemo(
     () => squads?.find((s) => s.userId === myUserId) ?? null,

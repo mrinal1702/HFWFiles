@@ -1,62 +1,20 @@
-import { Suspense } from "react";
-
-import { getAuthUser } from "@/lib/auth/get-user";
-import { fetchAuctionUserNames } from "@/lib/auction-users-query";
-import {
-  getLeaderboardData,
-  getPointsGwContext,
-  parseGwSearchParam,
-} from "@/lib/leaderboard-data";
-import { createAdminClient } from "@/lib/supabase-server";
-
-import { LeaderboardTabs, type LeaderboardTabId } from "./_components/LeaderboardTabs";
+import { redirect } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 
-function parseTab(value: string | undefined): LeaderboardTabId {
-  if (value === "my-points" || value === "competitors" || value === "standings") return value;
-  return "standings";
-}
-
-async function resolveMyAuctionUserId(auctionId: number, authUserId: string | undefined) {
-  if (!authUserId) return null;
-  const admin = createAdminClient();
-  const users = await fetchAuctionUserNames(admin, auctionId);
-  return users.find((u) => u.user_id === authUserId)?.id ?? null;
-}
-
-export default async function LeaderboardPage({
+/** Legacy URL — leaderboard now lives under auction chrome with the side menu. */
+export default async function LeaderboardRedirect({
   params,
   searchParams,
 }: {
   params: Promise<{ auctionId: string }>;
   searchParams: Promise<{ tab?: string; gw?: string }>;
 }) {
-  const { auctionId: raw } = await params;
-  const { tab: tabParam, gw: gwParam } = await searchParams;
-  const auctionId = Number(raw);
-
-  const [authUser, leaderboardData, pointsContext] = await Promise.all([
-    getAuthUser(),
-    getLeaderboardData(auctionId),
-    getPointsGwContext(auctionId, parseGwSearchParam(gwParam)),
-  ]);
-
-  const myUserId = await resolveMyAuctionUserId(auctionId, authUser?.id);
-  const initialTab = parseTab(tabParam);
-
-  return (
-    <Suspense fallback={<p className="text-sm text-slate-500">Loading leaderboard…</p>}>
-      <LeaderboardTabs
-        auctionId={auctionId}
-        standings={leaderboardData.standings}
-        standingsGameWeeks={leaderboardData.gameWeeks}
-        pointsGameWeeks={pointsContext.gameWeeks}
-        selectedGw={pointsContext.selectedGw}
-        squads={pointsContext.squads}
-        myUserId={myUserId}
-        initialTab={initialTab}
-      />
-    </Suspense>
-  );
+  const { auctionId } = await params;
+  const sp = await searchParams;
+  const qs = new URLSearchParams();
+  if (sp.tab) qs.set("tab", sp.tab);
+  if (sp.gw) qs.set("gw", sp.gw);
+  const q = qs.toString();
+  redirect(`/auctions/${auctionId}/leaderboard${q ? `?${q}` : ""}`);
 }
