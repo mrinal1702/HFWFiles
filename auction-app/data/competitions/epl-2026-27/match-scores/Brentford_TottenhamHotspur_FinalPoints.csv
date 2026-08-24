@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Vitaly Janelt,688273,Brentford,midfielder,50.55600000000001,11.0,0.0,62
+Keane Lewis-Potter,1010426,Brentford,defender,40.38499999999999,10.0,0.0,50
+Kevin Schade,1083796,Brentford,forward,40.34,9.0,0.0,49
+Mamadou Sangaré,1185211,Brentford,midfielder,35.64933333333333,11.0,0.0,47
+Kristoffer Ajer,552718,Brentford,defender,36.06,10.0,0.0,46
+Michael Kayode,1429912,Brentford,defender,31.97833333333333,10.0,0.0,42
+Marcos Senesi,785411,Tottenham Hotspur,defender,44.415,-5.0,0.0,39
+Mathias Jensen,650616,Brentford,midfielder,24.485333333333333,11.0,0.0,35
+Andrew Robertson,357880,Tottenham Hotspur,defender,38.515,-5.0,0.0,34
+Nathan Collins,961306,Brentford,defender,20.925,10.0,0.0,31
+Mathys Tel,1288111,Tottenham Hotspur,midfielder,27.108,-1.0,0.0,26
+Dango Ouattara,1250253,Brentford,forward,17.063333333333333,9.0,0.0,26
+Jan Paul van Hecke,974618,Tottenham Hotspur,defender,29.875,-5.0,0.0,25
+Jaidon Anthony,1171140,Brentford,forward,23.586666666666662,0.0,0.0,24
+Igor Thiago,1302005,Brentford,forward,14.546666666666669,9.0,0.0,24
+Mikey Moore,1407250,Tottenham Hotspur,midfielder,20.778666666666663,-1.0,0.0,20
+Archie Gray,1323305,Tottenham Hotspur,midfielder,19.29266666666667,-1.0,0.0,18
+Mateus Fernandes,1356312,Tottenham Hotspur,midfielder,16.228,0.5,0.0,17
+Sandro Tonali,867414,Tottenham Hotspur,midfielder,16.902,-1.0,0.0,16
+Rodrigo Bentancur,620618,Tottenham Hotspur,midfielder,15.154000000000002,0.5,0.0,16
+Mikkel Damsgaard,888912,Brentford,midfielder,12.890666666666668,2.5,0.0,15
+Yehor Yarmoliuk,1157236,Brentford,midfielder,9.920666666666666,2.5,0.0,12
+Callum Wilson,184321,Brentford,forward,10.013333333333332,0.0,0.0,10
+Destiny Udogie,1052898,Tottenham Hotspur,defender,3.8133333333333335,5.0,0.0,9
+Aaron Hickey,1002039,Brentford,defender,3.581666666666667,5.0,0.0,9
+Richarlison,654908,Tottenham Hotspur,forward,8.296666666666667,0.0,0.0,8
+Conor Gallagher,966027,Tottenham Hotspur,midfielder,6.362,1.0,0.0,7
+James Maddison,493165,Tottenham Hotspur,midfielder,3.503333333333333,2.5,0.0,6
+Lucas Bergvall,1386775,Tottenham Hotspur,midfielder,4.795999999999999,1.0,0.0,6
+Dominic Solanke,591734,Tottenham Hotspur,forward,4.5233333333333325,0.0,0.0,5
+Ben Davies,276121,Tottenham Hotspur,defender,0.0,0.0,0.0,0
+Rico Henry,562892,Brentford,defender,0.0,0.0,0.0,0
+Ethan Pinnock,711357,Brentford,defender,0.0,0.0,0.0,0
+Kevin Danso,754126,Tottenham Hotspur,defender,0.0,0.0,0.0,0
+Jannik Schuster,1572340,Brentford,defender,0.0,0.0,0.0,0
+Luca Williams-Barnett,1636112,Tottenham Hotspur,midfielder,0.0,0.0,0.0,0
+Brentford Keepers,9937,Brentford,goalkeeper,23.82,18.0,0.0,42
+Tottenham Hotspur Keepers,8586,Tottenham Hotspur,goalkeeper,30.76,0.0,0.0,31

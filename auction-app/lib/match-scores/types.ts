@@ -15,6 +15,10 @@ export type MatchScoreSheet = {
   title: string;
   subtitle: string;
   groupStageGw: GroupStageGw;
+  /** Competition this match belongs to, e.g. "epl-2026-27". */
+  competitionSlug?: string;
+  /** FotMob match ID for historical traceability. */
+  fotmobMatchId?: number;
   rows: MatchScoreRow[];
 };
 
