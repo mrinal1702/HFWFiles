@@ -26,3 +26,10 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
+
+/* Auction pages: show more content on phones (users can pinch-zoom if needed). */
+@media (max-width: 767px) {
+  .auction-mobile-compact {
+    zoom: 0.88;
+  }
+}

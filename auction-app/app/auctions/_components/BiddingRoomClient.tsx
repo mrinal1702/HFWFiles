@@ -51,14 +51,16 @@ function defaultSortTier(lot: EnrichedLot, biddingClosed: boolean): 0 | 1 | 2 {
   return 1;
 }
 
+const selectClass =
+  "min-h-9 w-full rounded-lg border border-slate-300 bg-white px-2.5 py-1.5 text-sm text-slate-900 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/25 sm:min-h-10 sm:px-3 sm:py-2";
+
 function StatusBadge({ status }: { status: string }) {
   return (
-    <span className="inline-flex max-w-[min(100%,14rem)] shrink-0 items-center rounded-full border border-sky-200 bg-sky-50 px-2.5 py-1 text-left text-xs font-medium leading-snug text-slate-800">
+    <span className="inline-flex max-w-[min(100%,12rem)] shrink-0 items-center rounded-full border border-sky-200 bg-sky-50 px-2 py-0.5 text-left text-[11px] font-medium leading-snug text-slate-800 sm:max-w-[min(100%,14rem)] sm:px-2.5 sm:py-1 sm:text-xs">
       {statusLabel(status)}
     </span>
   );
 }
-
 
 const TAB_DEFS = [
   ["all", "All players"],
@@ -67,9 +69,6 @@ const TAB_DEFS = [
   ["sold", "Sold"],
   ["search", "Search player"],
 ] as const;
-
-const selectClass =
-  "min-h-11 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/25 sm:min-h-10 sm:text-sm";
 
 export function BiddingRoomClient({
   auctionId,
@@ -196,8 +195,8 @@ export function BiddingRoomClient({
   const showDeadlineCol = tab === "ongoing" || tab === "all";
 
   const filterFields = (
-    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-      <label className="flex flex-col gap-1.5 text-sm">
+    <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3">
+      <label className="flex flex-col gap-1 text-xs sm:gap-1.5 sm:text-sm">
         <span className="font-medium text-slate-700">Club</span>
         <select className={selectClass} value={club} onChange={(e) => setClub(e.target.value)}>
           <option value="">All</option>
@@ -208,7 +207,7 @@ export function BiddingRoomClient({
           ))}
         </select>
       </label>
-      <label className="flex flex-col gap-1.5 text-sm">
+      <label className="flex flex-col gap-1 text-xs sm:gap-1.5 sm:text-sm">
         <span className="font-medium text-slate-700">Position</span>
         <select className={selectClass} value={position} onChange={(e) => setPosition(e.target.value)}>
           <option value="">All</option>
@@ -220,7 +219,7 @@ export function BiddingRoomClient({
         </select>
       </label>
       {tab === "all" && (
-        <label className="flex flex-col gap-1.5 text-sm">
+        <label className="flex flex-col gap-1 text-xs sm:gap-1.5 sm:text-sm">
           <span className="font-medium text-slate-700">Lot state</span>
           <select className={selectClass} value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
             <option value="">All</option>
@@ -232,7 +231,7 @@ export function BiddingRoomClient({
         </label>
       )}
       {tab === "ongoing" && (
-        <label className="flex flex-col gap-1.5 text-sm">
+        <label className="flex flex-col gap-1 text-xs sm:gap-1.5 sm:text-sm">
           <span className="font-medium text-slate-700">High bidder</span>
           <select className={selectClass} value={bidderFilter} onChange={(e) => setBidderFilter(e.target.value)}>
             <option value="">All</option>
@@ -244,7 +243,7 @@ export function BiddingRoomClient({
           </select>
         </label>
       )}
-      <label className="flex flex-col gap-1.5 text-sm sm:col-span-2 lg:col-span-1">
+      <label className="flex flex-col gap-1 text-xs sm:col-span-2 sm:gap-1.5 sm:text-sm lg:col-span-1">
         <span className="font-medium text-slate-700">Sort</span>
         <select className={selectClass} value={sort} onChange={(e) => setSort(e.target.value as typeof sort)}>
           <option value="">Default (ongoing → unsold → sold)</option>
@@ -279,14 +278,14 @@ export function BiddingRoomClient({
   }, [lots, searchParts, tab]);
 
   return (
-    <div className="space-y-4 sm:space-y-5">
-      <div className="-mx-1 flex gap-2 overflow-x-auto overflow-y-hidden px-1 pb-1 [scrollbar-width:thin]">
+    <div className="space-y-3 sm:space-y-5">
+      <div className="-mx-1 flex gap-1.5 overflow-x-auto overflow-y-hidden px-1 pb-1 [scrollbar-width:thin] sm:gap-2">
         {TAB_DEFS.map(([k, label]) => (
           <button
             key={k}
             type="button"
             onClick={() => setTab(k)}
-            className={`shrink-0 rounded-lg px-4 py-2.5 text-sm font-medium leading-tight sm:py-2 ${
+            className={`shrink-0 rounded-md px-2.5 py-1.5 text-xs font-medium leading-tight sm:rounded-lg sm:px-4 sm:py-2 sm:text-sm ${
               tab === k
                 ? "bg-sky-600 text-white shadow-sm"
                 : "bg-slate-100 text-slate-800 hover:bg-sky-100"
@@ -410,7 +409,7 @@ export function BiddingRoomClient({
         </div>
       ) : (
         <>
-          <div className="space-y-3 md:hidden">
+          <div className="space-y-2 md:hidden">
             {filtered.map((lot, i) => {
               const disabledReason = getBidDisabledReason(lot, gate);
               const minBid = nextMinimumBidAmount(lot.high_amount, lotRaiseModeActive(lot, gate));
@@ -426,29 +425,29 @@ export function BiddingRoomClient({
                 <article
                   key={lot.player_id}
                   id={lotRowAnchorId(lot.player_id)}
-                  className={`scroll-mt-28 rounded-xl border border-sky-100 px-4 py-4 shadow-sm ${
+                  className={`scroll-mt-28 rounded-lg border border-sky-100 px-3 py-2.5 shadow-sm ${
                     i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
                   }`}
                 >
-                  <div className="flex flex-wrap items-start justify-between gap-2 gap-y-3">
+                  <div className="flex flex-wrap items-start justify-between gap-1.5 gap-y-2">
                     <div className="min-w-0 flex-1">
-                      <h3 className="text-base font-medium leading-snug text-slate-900">
+                      <h3 className="text-sm font-medium leading-snug text-slate-900">
                         <Link href={playerHref(lot.player_id)} prefetch={false} className="hover:underline">
                           {lot.player_name ?? `Player #${lot.player_id}`}
                         </Link>
                       </h3>
-                      <p className="mt-1 text-sm text-slate-600">
+                      <p className="mt-0.5 text-xs text-slate-600">
                         {(lot.club ?? "—") + " · " + (lot.position ?? "—")}
                       </p>
                     </div>
                     <StatusBadge status={displayLotStatus(lot, gate.biddingClosed)} />
                   </div>
-                  <dl className="mt-4 space-y-2 text-sm">
-                    <div className="flex justify-between gap-3">
+                  <dl className="mt-2 space-y-1 text-xs">
+                    <div className="flex justify-between gap-2">
                       <dt className="text-slate-600">High bid</dt>
                       <dd className="font-mono font-medium text-slate-900">{highDisplay}</dd>
                     </div>
-                    <div className="flex justify-between gap-3">
+                    <div className="flex justify-between gap-2">
                       <dt className="text-slate-600">High bidder</dt>
                       <dd className="min-w-0 text-right text-slate-800">
                         {lot.high_bidder_id != null ? (
@@ -457,8 +456,8 @@ export function BiddingRoomClient({
                             auctionUserId={lot.high_bidder_id}
                             name={lot.high_bidder_name}
                             avatarUrl={lot.high_bidder_avatar_url}
-                            className="justify-end"
-                            labelClassName="font-medium"
+                            className="justify-end gap-1"
+                            labelClassName="text-xs font-medium"
                           />
                         ) : (
                           "—"
@@ -466,9 +465,9 @@ export function BiddingRoomClient({
                       </dd>
                     </div>
                     {showDeadlineCol && (
-                      <div className="flex justify-between gap-3">
+                      <div className="flex justify-between gap-2">
                         <dt className="text-slate-600">Lot deadline</dt>
-                        <dd className="max-w-[65%] text-right text-xs text-slate-600">
+                        <dd className="max-w-[65%] text-right text-[11px] text-slate-600">
                           {lot.status === "bidding" && !gate.biddingClosed
                             ? <LocalTime iso={lot.expires_at} />
                             : "—"}
@@ -476,16 +475,16 @@ export function BiddingRoomClient({
                       </div>
                     )}
                     {tab === "sold" && (
-                      <div className="flex justify-between gap-3">
+                      <div className="flex justify-between gap-2">
                         <dt className="text-slate-600">Sold at</dt>
-                        <dd className="text-xs text-slate-600">—</dd>
+                        <dd className="text-[11px] text-slate-600">—</dd>
                       </div>
                     )}
                   </dl>
                   {showBidCol && (
-                    <div className="mt-4 border-t border-slate-200 pt-4">
+                    <div className="mt-2 border-t border-slate-200 pt-2">
                       {lot.status === "sold" || lot.status === "unsold" || gate.biddingClosed ? (
-                        <span className="text-sm text-slate-500">—</span>
+                        <span className="text-xs text-slate-500">—</span>
                       ) : (
                         <BidRowForm
                           auctionId={auctionId}
