@@ -1,0 +1,15 @@
+{
+  "match_id": 5795372,
+  "home_team": "Fulham",
+  "away_team": "Chelsea",
+  "source_url": "https://www.fotmob.com/en-GB/matches/chelsea-vs-fulham/2s2omg#5795372:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw01/matches/chelsea-fulham/intermediates/Chelsea_Vs_Fulham.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/chelsea-vs-fulham/2s2omg",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/chelsea-vs-fulham/2s2omg#5795372:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/chelsea-vs-fulham/2s2omg#5795372:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/chelsea-vs-fulham/2s2omg#5795372:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795372"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

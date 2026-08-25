@@ -89,6 +89,15 @@ export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795371,
     rows: loadMatchScoreCsv("NewcastleUnited_Liverpool_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "chelsea-fulham",
+    title: "Fulham vs Chelsea",
+    subtitle: "Premier League · Matchweek 1",
+    groupStageGw: 1,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795372,
+    rows: loadMatchScoreCsv("Fulham_Chelsea_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 export const MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

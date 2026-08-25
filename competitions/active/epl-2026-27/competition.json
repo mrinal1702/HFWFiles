@@ -1,0 +1,43 @@
+{
+  "slug": "epl-2026-27",
+  "display_name": "English Premier League 2026/27",
+  "status": "active",
+  "database_competition_id": 2,
+  "auction_ids": [9],
+  "_auction_ids_note": "Auction 9 is the active EPL online auction. Auction 8 is a test placeholder (not attached). World Cup online auctions 5, 6, 7 belong to world-cup-2026.",
+  "player_pool": "player-pool/master_player_list.csv",
+  "legacy_game_week_id_range": [100, 199],
+  "team_count": 20,
+  "matches_per_round": 10,
+  "rounds": {
+    "mw01": {
+      "database_round_id": 101,
+      "display_name": "Matchweek 1",
+      "round_number": 1,
+      "status": "published",
+      "expected_match_count": 10
+    },
+    "mw02": {
+      "database_round_id": 102,
+      "display_name": "Matchweek 2",
+      "round_number": 2,
+      "status": "scheduled",
+      "expected_match_count": 10
+    },
+    "mw03": {
+      "database_round_id": 103,
+      "display_name": "Matchweek 3",
+      "round_number": 3,
+      "status": "scheduled",
+      "expected_match_count": 10
+    },
+    "mw04": {
+      "database_round_id": 104,
+      "display_name": "Matchweek 4",
+      "round_number": 4,
+      "status": "scheduled",
+      "expected_match_count": 10
+    }
+  },
+  "archived_at": null
+}

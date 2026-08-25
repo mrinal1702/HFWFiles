@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "chelsea-fulham",
+  "fotmob_match_id": 5795372,
+  "source_url": "https://www.fotmob.com/en-GB/matches/chelsea-vs-fulham/2s2omg#5795372:tab=stats",
+  "home_team": "Fulham",
+  "away_team": "Chelsea",
+  "raw_json_path": "intermediates/Chelsea_Vs_Fulham.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

@@ -74,6 +74,18 @@
       "notes": "Auto-added from upsert:player-scores (not in public.players)."
     },
     {
+      "player_id": 1399943,
+      "player_name": "Luc De Fougerolles",
+      "team_id": null,
+      "team_name": "Fulham",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1399943/luc-de-fougerolles",
+      "reason": "late_callup",
+      "first_seen": "2026-08-25",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
       "player_id": 1553189,
       "player_name": "Luka Lynch",
       "team_id": null,
@@ -98,6 +110,18 @@
       "notes": "Auto-added from upsert:player-scores (not in public.players)."
     },
     {
+      "player_id": 988805,
+      "player_name": "Pep Chavarría",
+      "team_id": null,
+      "team_name": "Chelsea",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/988805/pep-chavarria",
+      "reason": "late_callup",
+      "first_seen": "2026-08-25",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
       "player_id": 1252132,
       "player_name": "Promise David",
       "team_id": null,
@@ -106,6 +130,18 @@
       "fotmob_url": "https://www.fotmob.com/en-GB/players/1252132/promise-david",
       "reason": "late_callup",
       "first_seen": "2026-08-24",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 1281452,
+      "player_name": "Shea Charles",
+      "team_id": null,
+      "team_name": "Fulham",
+      "position": "Midfielder",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1281452/shea-charles",
+      "reason": "late_callup",
+      "first_seen": "2026-08-25",
       "first_seen_match": "final-points.csv",
       "notes": "Auto-added from upsert:player-scores (not in public.players)."
     },

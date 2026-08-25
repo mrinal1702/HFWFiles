@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Cole Palmer,1096353,Chelsea,midfielder,56.13666666666666,7.0,0.0,63
+Morgan Rogers,883080,Chelsea,midfielder,46.50533333333333,7.0,0.0,54
+João Pedro,1021382,Chelsea,forward,43.25,9.0,0.0,52
+Maxence Lacroix,950485,Chelsea,defender,47.23500000000001,0.0,0.0,47
+Timothy Castagne,465750,Fulham,defender,42.11,-5.0,0.0,37
+Gonzalo García,1413847,Fulham,forward,30.35,6.0,0.0,36
+Josh Acheampong,1400216,Chelsea,defender,32.13,0.0,0.0,32
+Roméo Lavia,1190867,Chelsea,midfielder,24.558666666666667,7.0,0.0,32
+Jorge Cuenca,821728,Fulham,defender,35.945,-5.0,0.0,31
+Alex Iwobi,604785,Fulham,midfielder,27.606,3.0,0.0,31
+Joshua King,1422593,Fulham,midfielder,27.406,3.0,0.0,30
+Reece James,807729,Chelsea,defender,24.72,0.0,0.0,25
+César Palacios,1403691,Fulham,forward,18.543333333333333,6.0,0.0,25
+Sander Berge,540963,Fulham,midfielder,19.799333333333333,3.0,0.0,23
+Oscar Bobb,1113790,Fulham,midfielder,19.139333333333337,3.0,0.0,22
+Antonee Robinson,662428,Fulham,defender,25.523333333333333,-5.0,0.0,21
+Levi Colwill,1096400,Chelsea,defender,18.44,0.0,0.0,18
+Pedro Neto,843040,Chelsea,forward,18.136666666666663,0.0,0.0,18
+Malo Gusto,1197250,Chelsea,defender,18.05333333333333,0.0,0.0,18
+Calvin Bassey,877401,Fulham,defender,22.625,-5.0,0.0,18
+Jorrel Hato,1413846,Chelsea,defender,17.616666666666667,0.0,0.0,18
+Ryan Sessegnon,773991,Fulham,defender,12.346666666666666,5.0,0.0,17
+Rodrigo Muniz,1128945,Fulham,forward,15.956666666666663,0.0,0.0,16
+Shea Charles,1281452,Fulham,midfielder,9.670666666666666,2.5,0.0,12
+Enzo Fernández,1137705,Chelsea,midfielder,8.041333333333334,2.5,0.0,11
+Kevin,1318400,Fulham,forward,8.926666666666666,0.0,0.0,9
+Pep Chavarría,988805,Chelsea,defender,3.0983333333333336,5.0,0.0,8
+Geovany Quenda,1530314,Chelsea,forward,5.806666666666667,0.0,0.0,6
+Estêvão,1580774,Chelsea,forward,5.5633333333333335,0.0,0.0,6
+Kenny Tete,469804,Fulham,defender,0.0,0.0,0.0,0
+Luc De Fougerolles,1399943,Fulham,defender,0.0,0.0,0.0,0
+Harrison Reed,502420,Fulham,midfielder,0.0,0.0,0.0,0
+Emile Smith Rowe,889534,Fulham,midfielder,0.0,0.0,0.0,0
+Valentín Barco,1272440,Chelsea,midfielder,0.0,0.0,0.0,0
+Danny Welbeck,113836,Chelsea,forward,0.0,0.0,0.0,0
+Jamie Gittens,1113692,Chelsea,forward,0.0,0.0,0.0,0
+Chelsea Keepers,8455,Chelsea,goalkeeper,27.28,6.0,0.0,33
+Fulham Keepers,9879,Fulham,goalkeeper,20.940000000000005,0.0,0.0,21
