@@ -128,16 +128,10 @@ function AvailablePlayerRow({
   recordSale: (prevState: RecordSaleState, formData: FormData) => Promise<RecordSaleState>;
 }) {
   const [state, formAction, pending] = useActionState(recordSale, null);
-  const [overrideWarning, setOverrideWarning] = useState(false);
 
-  useEffect(() => {
-    if (!state?.warning) setOverrideWarning(false);
-  }, [state?.warning]);
-
-  const hasWarning = !state?.success && !!state?.warning;
   const hasError =
     !state?.success &&
-    (!!state?.error || !!state?.fieldErrors?.playerId || !!state?.fieldErrors?.price);
+    (!!state?.error || !!state?.fieldErrors?.playerId || !!state?.fieldErrors?.price || !!state?.fieldErrors?.participantId);
 
   return (
     <div className="bg-white px-4 py-3">
@@ -157,26 +151,9 @@ function AvailablePlayerRow({
         </p>
       )}
 
-      {/* Soft budget warning */}
-      {hasWarning && (
-        <div className="mb-2 space-y-2 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2.5 text-xs text-amber-900">
-          <p>{state.warning}</p>
-          <label className="flex cursor-pointer items-center gap-2">
-            <input
-              type="checkbox"
-              checked={overrideWarning}
-              onChange={(e) => setOverrideWarning(e.target.checked)}
-              className="h-3.5 w-3.5 rounded border-amber-400 accent-amber-600"
-            />
-            <span>Proceed anyway</span>
-          </label>
-        </div>
-      )}
-
       {/* Inline sale form: owner + price + Sell button */}
       <form action={formAction} className="flex items-center gap-2">
         <input type="hidden" name="playerId" value={player.id} />
-        <input type="hidden" name="overrideWarning" value={overrideWarning ? "true" : "false"} />
 
         <select
           name="participantId"
@@ -200,7 +177,7 @@ function AvailablePlayerRow({
           <input
             type="number"
             name="price"
-            min="1"
+            min="5"
             step="1"
             placeholder="0"
             className="w-20 rounded-lg border border-slate-200 bg-white py-1.5 pl-6 pr-2 text-sm text-slate-900 placeholder-slate-300 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
@@ -209,7 +186,7 @@ function AvailablePlayerRow({
 
         <button
           type="submit"
-          disabled={pending || (hasWarning && !overrideWarning)}
+          disabled={pending}
           className="shrink-0 rounded-lg bg-sky-600 px-3 py-1.5 text-sm font-semibold text-white hover:bg-sky-700 disabled:cursor-not-allowed disabled:opacity-50"
         >
           {pending ? "…" : "Sell"}
@@ -286,9 +263,9 @@ function SoldPlayerRow({
             <input
               type="number"
               name="price"
-              min="1"
+              min="5"
               step="1"
-              defaultValue={player.sale_price ?? 1}
+              defaultValue={player.sale_price ?? 5}
               className="w-20 rounded-lg border border-slate-200 bg-white py-1.5 pl-6 pr-2 text-sm text-slate-900 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
             />
           </div>

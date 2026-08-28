@@ -2,17 +2,20 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { getAuthUser } from "@/lib/auth/get-user";
+import { userHasLiveAuctionAdminAccess } from "@/lib/live-auction-auth";
 import {
   getLiveAuction,
   getAvailablePlayers,
   getAllPlayersWithSaleInfo,
-  getLiveAuctionParticipants,
+  getLiveAuctionBidders,
   getRecentSales,
-  getParticipantByUserId,
+  getParticipantSummaries,
 } from "@/lib/live-auction-data";
+import type { ParticipantSummary } from "@/lib/live-auction-types";
 import { recordSaleAction, voidSaleAction, editSaleAction } from "./actions";
 import { AdminSaleSection } from "./_components/AdminSaleSection";
 import { SalesLog } from "./_components/SalesLog";
+import { UndoLastSale } from "./_components/UndoLastSale";
 
 export const dynamic = "force-dynamic";
 
@@ -28,27 +31,34 @@ export default async function LiveAuctionAdminPage({
     redirect(`/login?next=/live-auction/${auctionId}/admin`);
   }
 
-  // Only admins may access this page
-  const myParticipant = await getParticipantByUserId(auctionId, user.id);
-  if (!myParticipant || myParticipant.role !== "admin") {
-    redirect(`/live-auction/${auctionId}`);
+  // Only users who redeemed admin_code on the dashboard may access this page
+  const isAdmin = await userHasLiveAuctionAdminAccess(auctionId, user.id);
+  if (!isAdmin) {
+    redirect("/dashboard?error=not_admin");
   }
 
-  const [auction, availablePlayers, allPlayers, participants, recentSales] = await Promise.all([
-    getLiveAuction(auctionId),
-    getAvailablePlayers(auctionId),
-    getAllPlayersWithSaleInfo(auctionId),
-    getLiveAuctionParticipants(auctionId),
-    getRecentSales(auctionId, 30),
-  ]);
+  // Load auction first so starting_budget is available for participant summaries
+  const auction = await getLiveAuction(auctionId);
+  if (!auction) redirect("/dashboard");
 
-  if (!auction) redirect("/live-auction");
+  const [availablePlayers, allPlayers, participants, recentSales, participantSummaries] =
+    await Promise.all([
+      getAvailablePlayers(auctionId),
+      getAllPlayersWithSaleInfo(auctionId),
+      getLiveAuctionBidders(auctionId),
+      getRecentSales(auctionId, 30),
+      // All non-voided sales (no limit) — used for accurate budget totals
+      getParticipantSummaries(auctionId, auction.starting_budget),
+    ]);
 
   // Bind auctionId into each server action so client components receive
   // a (prevState, formData) => Promise<State> signature for useActionState.
   const boundRecordSale = recordSaleAction.bind(null, auctionId);
   const boundVoidSale = voidSaleAction.bind(null, auctionId);
   const boundEditSale = editSaleAction.bind(null, auctionId);
+
+  // Most recent non-voided sale — used for the Undo Last Sale widget
+  const lastSale = recentSales.find((s) => !s.is_voided) ?? null;
 
   return (
     <div className="space-y-8">
@@ -62,12 +72,15 @@ export default async function LiveAuctionAdminPage({
           </p>
         </div>
         <Link
-          href={`/live-auction/${auctionId}`}
+          href="/dashboard"
           className="text-sm font-medium text-sky-700 underline hover:text-sky-900"
         >
-          ← Auction overview
+          ← Dashboard
         </Link>
       </div>
+
+      {/* Undo last sale — quick correction widget */}
+      <UndoLastSale lastSale={lastSale} voidSale={boundVoidSale} />
 
       {/* Two-column layout on desktop, stacked on mobile */}
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -86,13 +99,11 @@ export default async function LiveAuctionAdminPage({
         {/* Right: Budgets at a glance */}
         <section className="rounded-xl border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
           <h3 className="mb-4 text-base font-semibold text-slate-900">Budgets</h3>
-          {participants.length === 0 ? (
+          {participantSummaries.length === 0 ? (
             <p className="text-sm text-slate-500">No participants yet.</p>
           ) : (
             <BudgetTable
-              participants={participants}
-              sales={recentSales.filter((s) => !s.is_voided)}
-              startingBudget={auction.starting_budget}
+              summaries={participantSummaries}
               auctionId={auctionId}
             />
           )}
@@ -117,35 +128,16 @@ export default async function LiveAuctionAdminPage({
 }
 
 // ─── Budget table (server component — no interactivity needed) ────────────────
+// Uses pre-computed ParticipantSummary rows (all non-voided sales, no limit)
+// so the remaining budget is always accurate regardless of total sale count.
 
 function BudgetTable({
-  participants,
-  sales,
-  startingBudget,
+  summaries,
   auctionId,
 }: {
-  participants: Awaited<ReturnType<typeof getLiveAuctionParticipants>>;
-  sales: Awaited<ReturnType<typeof getRecentSales>>;
-  startingBudget: number;
+  summaries: ParticipantSummary[];
   auctionId: string;
 }) {
-  // Compute budget remaining per participant from the sales passed in
-  const spentMap: Record<string, { total: number; count: number }> = {};
-  for (const sale of sales) {
-    const s = spentMap[sale.participant_id];
-    spentMap[sale.participant_id] = {
-      total: (s?.total ?? 0) + sale.price,
-      count: (s?.count ?? 0) + 1,
-    };
-  }
-
-  const rows = participants.map((p) => ({
-    ...p,
-    spent: spentMap[p.id]?.total ?? 0,
-    count: spentMap[p.id]?.count ?? 0,
-    remaining: startingBudget - (spentMap[p.id]?.total ?? 0),
-  }));
-
   return (
     <table className="w-full border-collapse text-sm">
       <thead className="border-b border-slate-100 text-left text-xs text-slate-500">
@@ -156,7 +148,7 @@ function BudgetTable({
         </tr>
       </thead>
       <tbody>
-        {rows.map((p) => (
+        {summaries.map((p) => (
           <tr key={p.id} className="border-b border-slate-50">
             <td className="py-2">
               <Link
@@ -166,13 +158,13 @@ function BudgetTable({
                 {p.display_name}
               </Link>
             </td>
-            <td className="py-2 text-right tabular-nums text-slate-600">{p.count}</td>
+            <td className="py-2 text-right tabular-nums text-slate-600">{p.players_count}</td>
             <td
               className={`py-2 text-right font-mono tabular-nums font-semibold ${
-                p.remaining < 20 ? "text-red-700" : "text-slate-900"
+                p.budget_remaining < 20 ? "text-red-700" : "text-slate-900"
               }`}
             >
-              £{p.remaining}
+              £{p.budget_remaining}
             </td>
           </tr>
         ))}

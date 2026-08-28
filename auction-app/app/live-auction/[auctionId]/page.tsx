@@ -1,4 +1,5 @@
 import { getAuthUser } from "@/lib/auth/get-user";
+import { userHasLiveAuctionAdminAccess } from "@/lib/live-auction-auth";
 import {
   getLiveAuction,
   getParticipantSummariesWithPositions,
@@ -23,6 +24,7 @@ export default async function LiveAuctionOverviewPage({
   if (!auction) return null; // layout handles 404
 
   const myParticipant = user ? await getParticipantByUserId(auctionId, user.id) : null;
+  const isAdmin = user ? await userHasLiveAuctionAdminAccess(auctionId, user.id) : false;
 
   const [summaries, mySquad, unsoldPlayers, allSales] = await Promise.all([
     getParticipantSummariesWithPositions(auctionId, auction.starting_budget),
@@ -41,7 +43,7 @@ export default async function LiveAuctionOverviewPage({
       mySquad={mySquad}
       summaries={summaries}
       unsoldPlayers={unsoldPlayers}
-      isAdmin={myParticipant?.role === "admin"}
+      isAdmin={isAdmin}
       allSales={allSales}
     />
   );

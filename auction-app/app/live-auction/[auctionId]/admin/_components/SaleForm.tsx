@@ -17,17 +17,20 @@ type Props = {
 export function SaleForm({ players, participants, recordSale }: Props) {
   const [state, formAction, pending] = useActionState(recordSale, null);
 
-  // Local UI state for the player search
+  // Player search state
   const [search, setSearch] = useState("");
   const [selectedPlayer, setSelectedPlayer] = useState<LiveAuctionPlayer | null>(null);
-  const [showDropdown, setShowDropdown] = useState(false);
-  // Whether the admin has acknowledged the soft budget warning
-  const [overrideWarning, setOverrideWarning] = useState(false);
-  // Shown briefly after a successful sale
+  const [showPlayerDropdown, setShowPlayerDropdown] = useState(false);
+
+  // Participant combobox state
+  const [participantSearch, setParticipantSearch] = useState("");
+  const [selectedParticipant, setSelectedParticipant] = useState<LiveAuctionParticipant | null>(null);
+  const [showParticipantDropdown, setShowParticipantDropdown] = useState(false);
+
   const [flashSuccess, setFlashSuccess] = useState(false);
 
   const formRef = useRef<HTMLFormElement>(null);
-  const participantRef = useRef<HTMLSelectElement>(null);
+  const participantInputRef = useRef<HTMLInputElement>(null);
   const priceRef = useRef<HTMLInputElement>(null);
 
   // Reset form on success
@@ -35,8 +38,10 @@ export function SaleForm({ players, participants, recordSale }: Props) {
     if (state?.success) {
       setSearch("");
       setSelectedPlayer(null);
-      setOverrideWarning(false);
-      setShowDropdown(false);
+      setShowPlayerDropdown(false);
+      setParticipantSearch("");
+      setSelectedParticipant(null);
+      setShowParticipantDropdown(false);
       formRef.current?.reset();
       setFlashSuccess(true);
       const t = setTimeout(() => setFlashSuccess(false), 3500);
@@ -44,13 +49,8 @@ export function SaleForm({ players, participants, recordSale }: Props) {
     }
   }, [state?.success]);
 
-  // Clear the override flag when a new non-warning state arrives
-  useEffect(() => {
-    if (!state?.warning) setOverrideWarning(false);
-  }, [state?.warning]);
-
   // Filter players by search query (client-side — all available players are pre-loaded)
-  const filtered = useMemo(() => {
+  const filteredPlayers = useMemo(() => {
     const q = search.trim().toLowerCase();
     if (!q) return [];
     return players
@@ -63,17 +63,29 @@ export function SaleForm({ players, participants, recordSale }: Props) {
       .slice(0, 10);
   }, [search, players]);
 
+  // Filter participants by search query
+  const filteredParticipants = useMemo(() => {
+    const q = participantSearch.trim().toLowerCase();
+    if (!q) return participants;
+    return participants.filter((p) =>
+      p.display_name.toLowerCase().includes(q),
+    );
+  }, [participantSearch, participants]);
+
   const selectPlayer = (p: LiveAuctionPlayer) => {
     setSelectedPlayer(p);
     setSearch("");
-    setShowDropdown(false);
-    // Move focus to participant dropdown for fast entry
-    setTimeout(() => participantRef.current?.focus(), 0);
+    setShowPlayerDropdown(false);
+    // Move focus to participant search for fast entry
+    setTimeout(() => participantInputRef.current?.focus(), 0);
   };
 
-  const clearPlayer = () => {
-    setSelectedPlayer(null);
-    setSearch("");
+  const selectParticipant = (p: LiveAuctionParticipant) => {
+    setSelectedParticipant(p);
+    setParticipantSearch("");
+    setShowParticipantDropdown(false);
+    // Move focus to price
+    setTimeout(() => priceRef.current?.focus(), 0);
   };
 
   return (
@@ -92,34 +104,13 @@ export function SaleForm({ players, participants, recordSale }: Props) {
         </div>
       )}
 
-      {/* Soft budget warning — admin must acknowledge before proceeding */}
-      {!state?.success && state?.warning && (
-        <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900 space-y-3">
-          <p className="font-medium">Budget warning</p>
-          <p className="leading-relaxed">{state.warning}</p>
-          <label className="flex cursor-pointer items-center gap-2">
-            <input
-              type="checkbox"
-              checked={overrideWarning}
-              onChange={(e) => setOverrideWarning(e.target.checked)}
-              className="h-4 w-4 rounded border-amber-400 accent-amber-600"
-            />
-            <span className="text-sm">I understand — proceed anyway</span>
-          </label>
-        </div>
-      )}
-
       <form ref={formRef} action={formAction} className="space-y-5">
-        {/* Hidden field — tells the server whether the admin acknowledged the warning */}
-        <input type="hidden" name="overrideWarning" value={overrideWarning ? "true" : "false"} />
-
         {/* ── Player search ─────────────────────────────────────────────── */}
         <div>
           <label className="mb-1.5 block text-sm font-medium text-slate-700">Player</label>
           <input type="hidden" name="playerId" value={selectedPlayer?.id ?? ""} />
 
           {selectedPlayer ? (
-            // Selected state: show player chip with clear button
             <div className="flex items-center justify-between rounded-lg border border-sky-300 bg-sky-50 px-3 py-2.5">
               <div>
                 <span className="text-sm font-medium text-slate-900">{selectedPlayer.player_name}</span>
@@ -130,31 +121,27 @@ export function SaleForm({ players, participants, recordSale }: Props) {
               </div>
               <button
                 type="button"
-                onClick={clearPlayer}
+                onClick={() => { setSelectedPlayer(null); setSearch(""); }}
                 className="ml-3 text-xs text-slate-500 hover:text-slate-800"
               >
                 Clear
               </button>
             </div>
           ) : (
-            // Search state: text input with dropdown
             <div className="relative">
               <input
                 type="text"
                 value={search}
-                onChange={(e) => {
-                  setSearch(e.target.value);
-                  setShowDropdown(true);
-                }}
-                onFocus={() => setShowDropdown(true)}
-                onBlur={() => setTimeout(() => setShowDropdown(false), 150)}
+                onChange={(e) => { setSearch(e.target.value); setShowPlayerDropdown(true); }}
+                onFocus={() => setShowPlayerDropdown(true)}
+                onBlur={() => setTimeout(() => setShowPlayerDropdown(false), 150)}
                 placeholder="Search by name or team…"
                 className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
                 autoComplete="off"
               />
-              {showDropdown && filtered.length > 0 && (
+              {showPlayerDropdown && filteredPlayers.length > 0 && (
                 <ul className="absolute z-20 mt-1 max-h-64 w-full overflow-auto rounded-lg border border-slate-200 bg-white shadow-lg">
-                  {filtered.map((p) => (
+                  {filteredPlayers.map((p) => (
                     <li
                       key={p.id}
                       onMouseDown={() => selectPlayer(p)}
@@ -169,7 +156,7 @@ export function SaleForm({ players, participants, recordSale }: Props) {
                   ))}
                 </ul>
               )}
-              {showDropdown && search.trim().length > 0 && filtered.length === 0 && (
+              {showPlayerDropdown && search.trim().length > 0 && filteredPlayers.length === 0 && (
                 <div className="absolute z-20 mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-3 text-sm text-slate-500 shadow-lg">
                   No available players match &quot;{search}&quot;
                 </div>
@@ -182,31 +169,62 @@ export function SaleForm({ players, participants, recordSale }: Props) {
           )}
         </div>
 
-        {/* ── Participant ───────────────────────────────────────────────── */}
+        {/* ── Participant combobox ───────────────────────────────────────── */}
         <div>
           <label className="mb-1.5 block text-sm font-medium text-slate-700">Participant</label>
-          <select
-            ref={participantRef}
-            name="participantId"
-            defaultValue=""
-            onKeyDown={(e) => {
-              // Tab/Enter from participant moves to price
-              if (e.key === "Enter") {
-                e.preventDefault();
-                priceRef.current?.focus();
-              }
-            }}
-            className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
-          >
-            <option value="" disabled>
-              Select participant…
-            </option>
-            {participants.map((p) => (
-              <option key={p.id} value={p.id}>
-                {p.display_name}
-              </option>
-            ))}
-          </select>
+          <input type="hidden" name="participantId" value={selectedParticipant?.id ?? ""} />
+
+          {selectedParticipant ? (
+            <div className="flex items-center justify-between rounded-lg border border-sky-300 bg-sky-50 px-3 py-2.5">
+              <span className="text-sm font-medium text-slate-900">{selectedParticipant.display_name}</span>
+              <button
+                type="button"
+                onClick={() => { setSelectedParticipant(null); setParticipantSearch(""); }}
+                className="ml-3 text-xs text-slate-500 hover:text-slate-800"
+              >
+                Clear
+              </button>
+            </div>
+          ) : (
+            <div className="relative">
+              <input
+                ref={participantInputRef}
+                type="text"
+                value={participantSearch}
+                onChange={(e) => { setParticipantSearch(e.target.value); setShowParticipantDropdown(true); }}
+                onFocus={() => setShowParticipantDropdown(true)}
+                onBlur={() => setTimeout(() => setShowParticipantDropdown(false), 150)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" && filteredParticipants.length > 0) {
+                    e.preventDefault();
+                    selectParticipant(filteredParticipants[0]);
+                  }
+                }}
+                placeholder="Search participant…"
+                className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
+                autoComplete="off"
+              />
+              {showParticipantDropdown && filteredParticipants.length > 0 && (
+                <ul className="absolute z-20 mt-1 w-full overflow-auto rounded-lg border border-slate-200 bg-white shadow-lg">
+                  {filteredParticipants.map((p) => (
+                    <li
+                      key={p.id}
+                      onMouseDown={() => selectParticipant(p)}
+                      className="cursor-pointer px-3 py-2.5 text-sm font-medium text-slate-900 hover:bg-sky-50"
+                    >
+                      {p.display_name}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {showParticipantDropdown && participantSearch.trim().length > 0 && filteredParticipants.length === 0 && (
+                <div className="absolute z-20 mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-3 text-sm text-slate-500 shadow-lg">
+                  No participants match &quot;{participantSearch}&quot;
+                </div>
+              )}
+            </div>
+          )}
+
           {!state?.success && state?.fieldErrors?.participantId && (
             <p className="mt-1 text-xs text-red-600">{state.fieldErrors.participantId}</p>
           )}
@@ -219,7 +237,7 @@ export function SaleForm({ players, participants, recordSale }: Props) {
             ref={priceRef}
             type="number"
             name="price"
-            min="1"
+            min="5"
             step="1"
             placeholder="e.g. 45"
             className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
@@ -232,10 +250,10 @@ export function SaleForm({ players, participants, recordSale }: Props) {
         {/* ── Submit ────────────────────────────────────────────────────── */}
         <button
           type="submit"
-          disabled={pending || !selectedPlayer || (!!state?.warning && !overrideWarning)}
+          disabled={pending || !selectedPlayer || !selectedParticipant}
           className="w-full rounded-lg bg-sky-600 px-4 py-3 text-sm font-medium text-white hover:bg-sky-700 disabled:cursor-not-allowed disabled:opacity-50"
         >
-          {pending ? "Recording…" : state?.warning ? "Confirm Sale (warning acknowledged)" : "Confirm Sale"}
+          {pending ? "Recording…" : "Confirm Sale"}
         </button>
       </form>
     </div>

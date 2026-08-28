@@ -1,8 +1,11 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 import { ParticipantNav } from "@/app/_components/ParticipantNav";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadMyActiveAuctionsForUser } from "@/lib/auction-dashboard";
+import { loadMyLiveAuctionsForDashboard } from "@/lib/live-auction-data";
+import type { DashboardLiveAuctionRow } from "@/lib/live-auction-types";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { signOutAction } from "@/app/auth/actions";
 
@@ -18,7 +21,7 @@ export default async function DashboardPage({
 }) {
   const user = await getAuthUser();
   if (!user) {
-    return null;
+    redirect("/login?next=/dashboard");
   }
 
   const sp = await searchParams;
@@ -37,9 +40,13 @@ export default async function DashboardPage({
   const avatarUrl = (profile as { avatar_url?: string | null } | null)?.avatar_url ?? null;
 
   let auctions: Awaited<ReturnType<typeof loadMyActiveAuctionsForUser>> = [];
+  let liveAuctions: DashboardLiveAuctionRow[] = [];
   let loadError: string | null = null;
   try {
-    auctions = await loadMyActiveAuctionsForUser(user.id);
+    [auctions, liveAuctions] = await Promise.all([
+      loadMyActiveAuctionsForUser(user.id),
+      loadMyLiveAuctionsForDashboard(user.id),
+    ]);
   } catch (e) {
     loadError = e instanceof Error ? e.message : String(e);
   }
@@ -74,6 +81,12 @@ export default async function DashboardPage({
         </p>
       )}
 
+      {sp.error === "not_admin" && (
+        <p className="mt-5 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-950">
+          Admin access requires the admin code. Enter it under Join an auction below.
+        </p>
+      )}
+
       <section className="mt-10">
         <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Your auctions</h2>
         {loadError && (
@@ -84,7 +97,7 @@ export default async function DashboardPage({
         )}
         <ul className="mt-4 space-y-3">
           {auctions.map((a) => (
-            <li key={a.id}>
+            <li key={`online-${a.id}`}>
               <Link
                 href={`/auctions/${a.id}/bidding-room`}
                 className="block min-h-[3.5rem] rounded-xl border border-sky-100 bg-white px-4 py-3 shadow-sm hover:border-sky-300 hover:bg-sky-50/50"
@@ -100,8 +113,31 @@ export default async function DashboardPage({
               </Link>
             </li>
           ))}
+          {liveAuctions.map((a) => {
+            const label =
+              a.access === "admin" ? `Admin - ${a.name}` : a.name;
+            const href =
+              a.access === "admin"
+                ? `/live-auction/${a.id}/admin`
+                : `/live-auction/${a.id}`;
+            return (
+              <li key={`live-${a.access}-${a.id}`}>
+                <Link
+                  href={href}
+                  className="block min-h-[3.5rem] rounded-xl border border-sky-100 bg-white px-4 py-3 shadow-sm hover:border-sky-300 hover:bg-sky-50/50"
+                >
+                  <span className="font-medium text-slate-900">{label}</span>
+                  <span className="mt-1 block text-xs leading-relaxed text-slate-600">
+                    Live auction{a.status === "live" ? " · in progress" : ""}
+                    {a.status === "setup" ? " · setting up" : ""}
+                    {a.status === "paused" ? " · paused" : ""}
+                  </span>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
-        {auctions.length === 0 && !loadError && (
+        {auctions.length === 0 && liveAuctions.length === 0 && !loadError && (
           <p className="mt-4 text-sm leading-relaxed text-slate-600">
             No active auctions right now. Finished tournaments are in{" "}
             <Link href="/archives" className="font-medium text-sky-700 underline hover:text-sky-900">
@@ -115,8 +151,9 @@ export default async function DashboardPage({
       <section className="mt-10 rounded-xl border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
         <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Join an auction</h2>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          Your commissioner should have shared a short code (letters and numbers). Enter it here to join
-          — you can join even if bidding has already started.
+          Enter the code your commissioner shared — participant code to join the auction, or admin
+          code to record sales. You can enter both codes for the same live auction if you are
+          commissioner and a bidder.
         </p>
         <div className="mt-5">
           <JoinAuctionForm />

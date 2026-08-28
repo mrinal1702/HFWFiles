@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { getAuthUser } from "@/lib/auth/get-user";
-import { getLiveAuction } from "@/lib/live-auction-data";
+import { getLiveAuction, getParticipantByUserId } from "@/lib/live-auction-data";
 import type { LiveAuctionStatus } from "@/lib/live-auction-types";
 
 export const dynamic = "force-dynamic";
@@ -36,6 +36,9 @@ export default async function LiveAuctionLayout({
   }
 
   const user = await getAuthUser();
+  const participantName = user
+    ? (await getParticipantByUserId(auctionId, user.id))?.display_name ?? null
+    : null;
 
   return (
     <div className="mx-auto max-w-5xl flex-1 px-4 py-4 sm:px-6 sm:py-6">
@@ -52,12 +55,19 @@ export default async function LiveAuctionLayout({
             </span>
           </div>
           {user ? (
-            <Link
-              href="/live-auction"
-              className="text-sm font-medium text-sky-700 underline hover:text-sky-900"
-            >
-              ← All auctions
-            </Link>
+            <div className="flex items-center gap-3">
+              {participantName && (
+                <span className="rounded-full bg-sky-100 px-2.5 py-0.5 text-xs font-medium text-sky-800">
+                  {participantName}
+                </span>
+              )}
+              <Link
+                href="/dashboard"
+                className="text-sm font-medium text-sky-700 underline hover:text-sky-900"
+              >
+                ← Dashboard
+              </Link>
+            </div>
           ) : (
             <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-600">
               Spectator view

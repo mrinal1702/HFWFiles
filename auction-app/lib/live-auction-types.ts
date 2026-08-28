@@ -11,9 +11,20 @@ export interface LiveAuction {
   starting_budget: number;
   squad_size: number;
   min_bid: number;
+  join_code: string | null;
+  admin_code: string | null;
+  max_participants: number;
   created_by: string | null;
   created_at: string;
 }
+
+/** Live auction tile on /dashboard (participant or admin grant). */
+export type DashboardLiveAuctionRow = {
+  id: string;
+  name: string;
+  status: LiveAuctionStatus;
+  access: "participant" | "admin";
+};
 
 export interface LiveAuctionParticipant {
   id: string;

@@ -2,6 +2,7 @@ import "server-only";
 
 import { createAdminClient } from "@/lib/supabase-server";
 import type {
+  DashboardLiveAuctionRow,
   LiveAuction,
   LiveAuctionParticipant,
   LiveAuctionPlayer,
@@ -100,6 +101,7 @@ export async function getParticipantSummaries(
       .from("live_auction_participants")
       .select("*")
       .eq("auction_id", auctionId)
+      .eq("role", "participant")
       .order("display_name"),
     supabase
       .from("live_auction_sales")
@@ -255,9 +257,89 @@ export async function getParticipantByUserId(
     .select("*")
     .eq("auction_id", auctionId)
     .eq("user_id", userId)
+    .eq("role", "participant")
     .maybeSingle();
   if (error) throw new Error(error.message);
   return data;
+}
+
+/** Bidders only — excludes admin-only seats (legacy role=admin rows). */
+export async function getLiveAuctionBidders(
+  auctionId: string,
+): Promise<LiveAuctionParticipant[]> {
+  const supabase = createAdminClient();
+  const { data, error } = await supabase
+    .from("live_auction_participants")
+    .select("*")
+    .eq("auction_id", auctionId)
+    .eq("role", "participant")
+    .order("display_name");
+  if (error) throw new Error(error.message);
+  return data ?? [];
+}
+
+export async function loadMyLiveAuctionsForDashboard(
+  userId: string,
+): Promise<DashboardLiveAuctionRow[]> {
+  const supabase = createAdminClient();
+
+  const [{ data: seats, error: seatErr }, { data: grants, error: grantErr }, { data: legacyAdmins, error: legacyErr }] =
+    await Promise.all([
+      supabase
+        .from("live_auction_participants")
+        .select("auction_id")
+        .eq("user_id", userId)
+        .eq("role", "participant"),
+      supabase.from("live_auction_admin_grants").select("auction_id").eq("user_id", userId),
+      supabase
+        .from("live_auction_participants")
+        .select("auction_id")
+        .eq("user_id", userId)
+        .eq("role", "admin"),
+    ]);
+
+  if (seatErr) throw new Error(seatErr.message);
+  if (grantErr) throw new Error(grantErr.message);
+  if (legacyErr) throw new Error(legacyErr.message);
+
+  const participantIds = new Set((seats ?? []).map((r) => r.auction_id as string));
+  const adminIds = new Set([
+    ...(grants ?? []).map((r) => r.auction_id as string),
+    ...(legacyAdmins ?? []).map((r) => r.auction_id as string),
+  ]);
+  const allIds = [...new Set([...participantIds, ...adminIds])];
+  if (allIds.length === 0) return [];
+
+  const { data: auctions, error: aErr } = await supabase
+    .from("live_auctions")
+    .select("id, name, status")
+    .in("id", allIds)
+    .neq("status", "completed")
+    .order("created_at", { ascending: false });
+
+  if (aErr) throw new Error(aErr.message);
+
+  const rows: DashboardLiveAuctionRow[] = [];
+  for (const a of auctions ?? []) {
+    if (participantIds.has(a.id)) {
+      rows.push({
+        id: a.id,
+        name: a.name,
+        status: a.status,
+        access: "participant",
+      });
+    }
+    if (adminIds.has(a.id)) {
+      rows.push({
+        id: a.id,
+        name: a.name,
+        status: a.status,
+        access: "admin",
+      });
+    }
+  }
+
+  return rows;
 }
 
 export async function getParticipantById(

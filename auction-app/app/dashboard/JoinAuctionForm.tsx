@@ -37,6 +37,11 @@ export function JoinAuctionForm() {
       >
         {pending ? "Joining…" : "Join auction"}
       </button>
+      {state?.ok === true && (
+        <p className="text-sm leading-relaxed text-green-800" role="status">
+          {state.message}
+        </p>
+      )}
       {state?.ok === false && (
         <p className="text-sm leading-relaxed text-red-700" role="alert">
           {state.message}

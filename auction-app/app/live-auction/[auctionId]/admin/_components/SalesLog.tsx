@@ -95,7 +95,7 @@ export function SalesLog({ sales, participants, voidSale, editSale }: Props) {
                   type="number"
                   name="price"
                   defaultValue={editingSale.price}
-                  min="1"
+                  min="5"
                   className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
                 />
               </div>
