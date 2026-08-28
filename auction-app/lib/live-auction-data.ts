@@ -1,6 +1,7 @@
 import "server-only";
 
 import { createAdminClient } from "@/lib/supabase-server";
+import { isArchivedLiveAuctionId } from "@/lib/archived-live-auctions";
 import type {
   DashboardLiveAuctionRow,
   LiveAuction,
@@ -283,30 +284,20 @@ export async function loadMyLiveAuctionsForDashboard(
 ): Promise<DashboardLiveAuctionRow[]> {
   const supabase = createAdminClient();
 
-  const [{ data: seats, error: seatErr }, { data: grants, error: grantErr }, { data: legacyAdmins, error: legacyErr }] =
-    await Promise.all([
-      supabase
-        .from("live_auction_participants")
-        .select("auction_id")
-        .eq("user_id", userId)
-        .eq("role", "participant"),
-      supabase.from("live_auction_admin_grants").select("auction_id").eq("user_id", userId),
-      supabase
-        .from("live_auction_participants")
-        .select("auction_id")
-        .eq("user_id", userId)
-        .eq("role", "admin"),
-    ]);
+  const [{ data: seats, error: seatErr }, { data: grants, error: grantErr }] = await Promise.all([
+    supabase
+      .from("live_auction_participants")
+      .select("auction_id")
+      .eq("user_id", userId)
+      .eq("role", "participant"),
+    supabase.from("live_auction_admin_grants").select("auction_id").eq("user_id", userId),
+  ]);
 
   if (seatErr) throw new Error(seatErr.message);
   if (grantErr) throw new Error(grantErr.message);
-  if (legacyErr) throw new Error(legacyErr.message);
 
   const participantIds = new Set((seats ?? []).map((r) => r.auction_id as string));
-  const adminIds = new Set([
-    ...(grants ?? []).map((r) => r.auction_id as string),
-    ...(legacyAdmins ?? []).map((r) => r.auction_id as string),
-  ]);
+  const adminIds = new Set((grants ?? []).map((r) => r.auction_id as string));
   const allIds = [...new Set([...participantIds, ...adminIds])];
   if (allIds.length === 0) return [];
 
@@ -321,6 +312,7 @@ export async function loadMyLiveAuctionsForDashboard(
 
   const rows: DashboardLiveAuctionRow[] = [];
   for (const a of auctions ?? []) {
+    if (isArchivedLiveAuctionId(a.id)) continue;
     if (participantIds.has(a.id)) {
       rows.push({
         id: a.id,
