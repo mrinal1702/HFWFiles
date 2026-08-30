@@ -1,0 +1,11 @@
+{
+  "slug": "uefa-cl-2026-27",
+  "display_name": "UEFA Champions League 2026/27",
+  "status": "active",
+  "database_competition_id": 4,
+  "auction_ids": [10],
+  "_auction_ids_note": "Auction 10 is the online UCL auction imported from Live Auction 1 (Aug 2026). Live Auction 2 remains verbal-only until imported separately.",
+  "player_pool": "player-pool/master_player_list.csv",
+  "legacy_game_week_id_range": [300, 399],
+  "archived_at": null
+}

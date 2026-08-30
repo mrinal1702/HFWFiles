@@ -25,6 +25,8 @@
     "import:players": "node scripts/import-master-player-list.mjs",
     "import:competition-players": "node scripts/import-competition-players.mjs",
     "setup:ucl-live-auction-1": "node scripts/setup-ucl-live-auction-1.mjs",
+    "setup:ucl-live-auction-2": "node scripts/setup-ucl-live-auction-2.mjs",
+    "setup:ucl-online-from-live-1": "node scripts/setup-ucl-online-from-live-1.mjs",
     "apply:live-auction-schema": "node scripts/apply-live-auction-dashboard-schema.mjs",
     "seed:live-auction-competition": "node scripts/seed-live-auction-from-competition.mjs",
     "upsert:player-scores": "node scripts/upsert-player-scores-from-finalpoints.mjs",
