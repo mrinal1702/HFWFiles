@@ -12,7 +12,7 @@ type Props = {
   activeBudget: number | string | null | undefined;
 };
 
-/** Sticky Playing as + budgets — bidding room only. */
+/** Sticky Playing as + budgets — bidding room and My team. */
 export function AuctionBudgetStrip({
   auctionId,
   participantName,
@@ -21,8 +21,10 @@ export function AuctionBudgetStrip({
   activeBudget,
 }: Props) {
   const pathname = usePathname();
-  const onBiddingRoom = pathname === `/auctions/${auctionId}/bidding-room`;
-  if (!onBiddingRoom) return null;
+  const showBudgetStrip =
+    pathname === `/auctions/${auctionId}/bidding-room` ||
+    pathname === `/auctions/${auctionId}/team`;
+  if (!showBudgetStrip) return null;
 
   return (
     <div className="max-lg:-mx-4 max-lg:border-b max-lg:border-slate-200 max-lg:bg-slate-50 max-lg:px-4 max-lg:py-3 max-lg:shadow-sm max-lg:sticky max-lg:top-0 max-lg:z-20">
