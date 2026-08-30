@@ -247,7 +247,7 @@ async function main() {
     .insert({
       id: opts.auctionId,
       name: opts.name,
-      is_active: true,
+      is_active: false,
       hard_deadline_at: PLACEHOLDER_DEADLINE,
       join_code: joinCode,
       max_participants: opts.maxParticipants,

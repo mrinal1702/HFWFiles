@@ -77,6 +77,25 @@ export async function submitAuctionBidAction(
   const authUser = await getAuthUser();
   const admin = createAdminClient();
 
+  const { data: auctionRow, error: auctionErr } = await admin
+    .from("Auctions")
+    .select("is_active, hard_deadline_at")
+    .eq("id", auctionId)
+    .maybeSingle();
+  if (auctionErr) {
+    return { ok: false, message: "We couldn’t load this auction. Try again in a moment." };
+  }
+  if (!auctionRow) {
+    return { ok: false, message: "This auction doesn’t exist." };
+  }
+  if (auctionRow.is_active === false) {
+    return { ok: false, message: "This auction is paused right now — bidding is closed." };
+  }
+  const hardMs = auctionRow.hard_deadline_at ? Date.parse(auctionRow.hard_deadline_at) : NaN;
+  if (Number.isFinite(hardMs) && Date.now() >= hardMs) {
+    return { ok: false, message: "Bidding has ended — the auction deadline has passed." };
+  }
+
   let auctionUserId: number;
 
   if (authUser) {

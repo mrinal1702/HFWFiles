@@ -64,7 +64,34 @@ export type PlayerAuctionDetail = {
 async function fetchPlayerMeta(
   admin: ReturnType<typeof createAdminClient>,
   playerId: string,
+  competitionId: number | null = null,
 ): Promise<{ playerName: string | null; position: string | null; club: string | null }> {
+  if (competitionId != null) {
+    const n = Number(playerId);
+    if (Number.isFinite(n)) {
+      const cp = await admin
+        .from("competition_players")
+        .select("player_id, player_name, position, team_name")
+        .eq("competition_id", competitionId)
+        .eq("player_id", n)
+        .maybeSingle();
+      if (!cp.error && cp.data) {
+        const row = cp.data as {
+          player_name: string | null;
+          position: string | null;
+          team_name: string | null;
+        };
+        return {
+          playerName: row.player_name,
+          position: row.position,
+          club: row.team_name,
+        };
+      }
+      if (cp.error) throw new Error(`competition_players: ${cp.error.message}`);
+    }
+    return { playerName: null, position: null, club: null };
+  }
+
   const withClub = await admin
     .from("players")
     .select("player_id, player_name, position, team_name")
@@ -173,6 +200,10 @@ export const loadPlayerAuctionDetail = cache(
     const dashboard = await loadAuctionDashboard(auctionId, authUserId);
     if (!dashboard.auction) return null;
 
+    const competitionId =
+      dashboard.auction && "competition_id" in dashboard.auction
+        ? Number((dashboard.auction as { competition_id?: number | null }).competition_id)
+        : null;
     const lot = dashboard.lots.find((l) => l.player_id === playerId) ?? null;
     const meta = lot
       ? {
@@ -180,7 +211,11 @@ export const loadPlayerAuctionDetail = cache(
           position: lot.position,
           club: lot.club,
         }
-      : await fetchPlayerMeta(admin, playerId);
+      : await fetchPlayerMeta(
+          admin,
+          playerId,
+          Number.isFinite(competitionId) ? competitionId : null,
+        );
 
     const [teamRes, bidsRes, releasesRes, gwScores] = await Promise.all([
       admin

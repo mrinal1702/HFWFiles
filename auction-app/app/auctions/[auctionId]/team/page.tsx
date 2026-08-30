@@ -6,7 +6,7 @@ import { ReleaseButton } from "./_components/ReleaseButton";
 
 export const dynamic = "force-dynamic";
 
-type TeamRow = { player_id: string; purchase_price: number };
+type TeamRow = { player_id: string | number; purchase_price: number };
 type SectionId = "gk" | "def" | "mid" | "fwd" | "other";
 
 const SECTION_ORDER: Array<{ id: SectionId; label: string }> = [
@@ -63,7 +63,13 @@ export default async function MyTeamPage({
   const isRelegated = Boolean(d.me.is_relegated);
 
   const byPlayer = new Map(d.lots.map((l) => [l.player_id, l]));
-  const rows = (data ?? []) as TeamRow[];
+  const rows = (data ?? []).map((row) => {
+    const r = row as TeamRow;
+    return {
+      player_id: String(r.player_id),
+      purchase_price: r.purchase_price,
+    };
+  });
   const enrichedRows = rows.map((row) => {
     const meta = byPlayer.get(String(row.player_id));
     return {

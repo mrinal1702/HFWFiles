@@ -46,10 +46,36 @@ async function fetchAllAuctionLots(
 async function fetchPlayersByIds(
   admin: ReturnType<typeof createAdminClient>,
   playerIds: string[],
+  competitionId: number | null = null,
 ): Promise<Record<string, unknown>[]> {
   if (!playerIds.length) return [];
 
   const all: Record<string, unknown>[] = [];
+
+  // Competition-scoped auctions must use competition_players only — the global
+  // players table is EPL-centric and mislabels UCL lots (same FotMob id, wrong club).
+  if (competitionId != null) {
+    for (let i = 0; i < playerIds.length; i += PLAYER_ID_BATCH_SIZE) {
+      const batch = playerIds.slice(i, i + PLAYER_ID_BATCH_SIZE).map((id) => {
+        const n = Number(id);
+        if (!Number.isFinite(n)) throw new Error(`Invalid player_id: ${id}`);
+        return n;
+      });
+      const cpRes = await admin
+        .from("competition_players")
+        .select("player_id, player_name, position, team_name, team_id")
+        .eq("competition_id", competitionId)
+        .in("player_id", batch);
+      if (cpRes.error) throw new Error(`competition_players: ${cpRes.error.message}`);
+      for (const p of cpRes.data ?? []) {
+        all.push(p as Record<string, unknown>);
+      }
+    }
+    return all;
+  }
+
+  const found = new Set<string>();
+
   for (let i = 0; i < playerIds.length; i += PLAYER_ID_BATCH_SIZE) {
     const batch = playerIds.slice(i, i + PLAYER_ID_BATCH_SIZE);
     const withClub = await admin
@@ -62,9 +88,15 @@ async function fetchPlayersByIds(
         .select("player_id, player_name, position")
         .in("player_id", batch);
       if (basic.error) throw new Error(`players: ${basic.error.message}`);
-      all.push(...((basic.data ?? []) as Record<string, unknown>[]));
+      for (const p of basic.data ?? []) {
+        all.push(p as Record<string, unknown>);
+        found.add(String((p as { player_id: unknown }).player_id));
+      }
     } else {
-      all.push(...((withClub.data ?? []) as Record<string, unknown>[]));
+      for (const p of withClub.data ?? []) {
+        all.push(p as Record<string, unknown>);
+        found.add(String((p as { player_id: unknown }).player_id));
+      }
     }
   }
 
@@ -94,6 +126,7 @@ export type AuctionDashboard = {
     is_active: boolean | null;
     bidding_deadline_mode: string | null;
     rolling_game_week_id: number | null;
+    competition_id: number | null;
   } | null;
   users: AuctionUserRow[];
   userById: Map<number, AuctionUserRow>;
@@ -136,7 +169,7 @@ export const loadAuctionDashboard = cache(
     admin
       .from("Auctions")
       .select(
-        "id,name,hard_deadline_at,initiation_deadline_at,raise_deadline_at,is_active,bidding_deadline_mode,rolling_game_week_id",
+        "id,name,hard_deadline_at,initiation_deadline_at,raise_deadline_at,is_active,bidding_deadline_mode,rolling_game_week_id,competition_id",
       )
       .eq("id", auctionId)
       .maybeSingle(),
@@ -144,7 +177,13 @@ export const loadAuctionDashboard = cache(
     fetchAllAuctionLots(admin, auctionId),
   ]);
 
-  const auction = auctionRes.data as AuctionDashboard["auction"];
+  const auction = auctionRes.data as AuctionDashboard["auction"] & {
+    competition_id?: number | null;
+  };
+  const competitionId =
+    auction?.competition_id != null && Number.isFinite(Number(auction.competition_id))
+      ? Number(auction.competition_id)
+      : null;
   const nationRollingMode = auction?.bidding_deadline_mode === "nation_rolling";
   let users = usersRes;
   let rawLots = lotsRes;
@@ -299,7 +338,7 @@ export const loadAuctionDashboard = cache(
 
   let playerRows: Record<string, unknown>[] = [];
   if (playerIds.length) {
-    playerRows = await fetchPlayersByIds(admin, playerIds);
+    playerRows = await fetchPlayersByIds(admin, playerIds, competitionId);
   }
 
   const [teamsForAuction, bidsRes] = await Promise.all([
