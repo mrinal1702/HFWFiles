@@ -2,10 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { Avatar } from "@/app/_components/entity/Avatar";
-import { GwPointsView } from "@/app/leaderboard/[auctionId]/_components/GwPointsView";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadCompetitorView } from "@/lib/auction-dashboard";
-import { getLeaderboardData, getPointsGwContext, parseGwSearchParam } from "@/lib/leaderboard-data";
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
 import { RosterSlotCounts } from "@/app/auctions/_components/RosterSlotCounts";
 import { fantasyTeamLabel } from "@/lib/team-name";
@@ -33,13 +31,10 @@ function sectionForPosition(position: string | null | undefined): SectionId {
 
 export default async function CompetitorDetailPage({
   params,
-  searchParams,
 }: {
   params: Promise<{ auctionId: string; auctionUserId: string }>;
-  searchParams: Promise<{ gw?: string }>;
 }) {
   const { auctionId: aRaw, auctionUserId: uRaw } = await params;
-  const { gw: gwParam } = await searchParams;
   const auctionId = Number(aRaw);
   const competitorUserId = Number(uRaw);
   if (!Number.isFinite(competitorUserId)) {
@@ -47,25 +42,12 @@ export default async function CompetitorDetailPage({
   }
 
   const user = await getAuthUser();
-  const [v, leaderboardData, pointsContext] = await Promise.all([
-    loadCompetitorView(auctionId, competitorUserId, user?.id ?? null),
-    getLeaderboardData(auctionId),
-    getPointsGwContext(auctionId, parseGwSearchParam(gwParam)),
-  ]);
+  const v = await loadCompetitorView(auctionId, competitorUserId, user?.id ?? null);
   if (!v.competitor) {
     notFound();
   }
 
-  const squad = pointsContext.squads?.find((p) => p.userId === competitorUserId) ?? null;
-  const seasonEntry = leaderboardData.standings.find((s) => s.userId === competitorUserId);
-  const seasonTotal =
-    seasonEntry && (seasonEntry.total !== 0 || Object.keys(seasonEntry.scoresByGwId).length > 0)
-      ? seasonEntry.total
-      : null;
-
   const returnTo = `/auctions/${auctionId}/competitors/${competitorUserId}`;
-  const gwQs = gwParam ? `&gw=${encodeURIComponent(gwParam)}` : "";
-  const competitorsBackHref = `/auctions/${auctionId}/leaderboard?tab=competitors${gwQs}`;
   const soldGrouped = SECTION_ORDER.map((section) => {
     const rows = v.sold
       .filter((l) => sectionForPosition(l.position) === section.id)
@@ -85,7 +67,7 @@ export default async function CompetitorDetailPage({
     <section className="space-y-4 sm:space-y-6">
       <div className="rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
         <Link
-          href={competitorsBackHref}
+          href={`/auctions/${auctionId}/competitors`}
           className="inline-block min-h-10 py-2 text-sm font-medium text-sky-700 underline hover:text-sky-900"
         >
           ← Competitors
@@ -117,6 +99,11 @@ export default async function CompetitorDetailPage({
             {v.competitor.team_name?.trim() && (
               <p className="text-sm text-slate-600">{v.competitor.name}</p>
             )}
+            {v.competitor.is_relegated && (
+              <span className="mt-1 inline-block rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-800">
+                Relegated
+              </span>
+            )}
             {v.competitor.user_id && (
               <Link
                 href={`/u/${v.competitor.user_id}?returnTo=${encodeURIComponent(returnTo)}`}
@@ -129,34 +116,16 @@ export default async function CompetitorDetailPage({
         </div>
         <div className="mt-3 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:gap-4">
           <div className="rounded-lg border border-sky-100 bg-sky-50/50 px-3 py-2">
-            <div className="text-xs font-medium text-slate-600">budget_remaining</div>
+            <div className="text-xs font-medium text-slate-600">Remaining</div>
             <div className="font-mono text-base tabular-nums text-slate-900">{v.competitor.budget_remaining}</div>
           </div>
           <div className="rounded-lg border border-sky-100 bg-sky-50/50 px-3 py-2">
-            <div className="text-xs font-medium text-slate-600">active_budget</div>
+            <div className="text-xs font-medium text-slate-600">Active</div>
             <div className="font-mono text-base tabular-nums text-slate-900">{v.competitor.active_budget}</div>
           </div>
         </div>
         <div className="mt-3">
           <RosterSlotCounts owned={v.sold.length} bidsHeld={v.leading.length} />
-        </div>
-      </div>
-
-      <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm sm:p-5">
-        <h3 className="text-base font-semibold text-slate-900">Gameweek points</h3>
-        <p className="mt-1 text-sm leading-relaxed text-slate-600">
-          One gameweek at a time. Use the dropdown to revisit earlier weeks.
-        </p>
-        <div className="mt-4">
-          <GwPointsView
-            auctionId={auctionId}
-            squad={squad}
-            gameWeeks={pointsContext.gameWeeks}
-            selectedGw={pointsContext.selectedGw}
-            seasonTotal={seasonTotal}
-            basePath={`/auctions/${auctionId}/competitors/${competitorUserId}`}
-            compact
-          />
         </div>
       </div>
 

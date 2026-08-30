@@ -625,3 +625,54 @@ export const loadCompetitorView = cache(
   return { competitor, sold, leading };
   },
 );
+
+export type CompetitorSummaryRow = {
+  user: AuctionUserRow;
+  ownedCount: number;
+  bidsHeldCount: number;
+};
+
+export const loadCompetitorsSummary = cache(
+  async (auctionId: number, authUserId: string | null): Promise<CompetitorSummaryRow[]> => {
+    const admin = createAdminClient();
+    const base = await loadAuctionDashboard(auctionId, authUserId);
+
+    const teamsRes = await admin
+      .from("auction_teams")
+      .select("auction_user_id")
+      .eq("auction_id", auctionId);
+
+    if (teamsRes.error) throw new Error(teamsRes.error.message);
+
+    const ownedByUser = new Map<number, number>();
+    for (const row of teamsRes.data ?? []) {
+      const uid = (row as { auction_user_id: number }).auction_user_id;
+      ownedByUser.set(uid, (ownedByUser.get(uid) ?? 0) + 1);
+    }
+
+    const bidsHeldByUser = new Map<number, number>();
+    if (!base.biddingClosed) {
+      for (const lot of base.lots) {
+        if (lot.status === "bidding" && lot.high_bidder_id != null) {
+          const uid = lot.high_bidder_id;
+          bidsHeldByUser.set(uid, (bidsHeldByUser.get(uid) ?? 0) + 1);
+        }
+      }
+    }
+
+    const rows: CompetitorSummaryRow[] = base.users.map((user) => ({
+      user,
+      ownedCount: ownedByUser.get(user.id) ?? 0,
+      bidsHeldCount: base.biddingClosed ? 0 : (bidsHeldByUser.get(user.id) ?? 0),
+    }));
+
+    rows.sort((a, b) => {
+      const nameA = (a.user.name ?? "").trim().toLowerCase();
+      const nameB = (b.user.name ?? "").trim().toLowerCase();
+      if (nameA !== nameB) return nameA.localeCompare(nameB);
+      return a.user.id - b.user.id;
+    });
+
+    return rows;
+  },
+);
