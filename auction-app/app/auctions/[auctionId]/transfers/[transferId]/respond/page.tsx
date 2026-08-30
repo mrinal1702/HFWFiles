@@ -2,6 +2,7 @@ import { notFound, redirect } from "next/navigation";
 
 import { RespondTransferClient } from "@/app/auctions/[auctionId]/transfers/[transferId]/respond/_components/RespondTransferClient";
 import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
+import { fetchPlayerMetaByIds, resolveAuctionCompetitionId } from "@/lib/players-query";
 import { createAdminClient } from "@/lib/supabase-server";
 import type { AuctionTransfer } from "@/lib/transfers";
 
@@ -78,21 +79,21 @@ export default async function RespondToTransferPage({
   // ── Load proposer info ───────────────────────────────────────────────────
   const proposerUser = d.users.find((u) => u.id === transfer.proposer_id);
 
+  const competitionId = resolveAuctionCompetitionId(d.auction);
+
   // Proposer's players (those they're sending)
   const proposerPlayers: { player_id: string; player_name: string | null; position: string | null }[] = [];
   if (transfer.proposer_player_ids.length > 0) {
-    const { data: pp } = await admin
-      .from("players")
-      .select("player_id, player_name, position")
-      .in("player_id", transfer.proposer_player_ids);
+    const proposerMeta = await fetchPlayerMetaByIds(
+      admin,
+      transfer.proposer_player_ids,
+      competitionId,
+    );
     for (const pid of transfer.proposer_player_ids) {
-      const found = (pp ?? []).find(
-        (p: { player_id: string }) => String(p.player_id) === pid,
-      ) as { player_id: string; player_name: string | null; position: string | null } | undefined;
       proposerPlayers.push({
         player_id: pid,
-        player_name: found?.player_name ?? null,
-        position: found?.position ?? null,
+        player_name: proposerMeta[pid]?.player_name ?? null,
+        position: proposerMeta[pid]?.position ?? null,
       });
     }
   }
@@ -107,21 +108,7 @@ export default async function RespondToTransferPage({
   if (teamErr) throw new Error(teamErr.message);
   const myPlayerIds = (teamRows ?? []).map((r: { player_id: string }) => String(r.player_id));
 
-  const playerMeta: Record<string, { player_name: string | null; position: string | null; club: string | null }> = {};
-  if (myPlayerIds.length > 0) {
-    const { data: playerRows } = await admin
-      .from("players")
-      .select("player_id, player_name, position, team_name")
-      .in("player_id", myPlayerIds);
-    for (const p of playerRows ?? []) {
-      const row = p as { player_id: string; player_name: string | null; position: string | null; team_name: string | null };
-      playerMeta[String(row.player_id)] = {
-        player_name: row.player_name,
-        position: row.position,
-        club: row.team_name,
-      };
-    }
-  }
+  const playerMeta = await fetchPlayerMetaByIds(admin, myPlayerIds, competitionId);
 
   // Find my locked players (in another active transfer as recipient)
   const { data: activeTransfers } = await admin

@@ -1,5 +1,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 
+import { fetchPlayersByIds, playerMetaByIdFromRows } from "@/lib/players-query";
+
 export type TransferStatus =
   | "awaiting_response"
   | "awaiting_confirmation"
@@ -201,6 +203,7 @@ export function voidExpiredTransfers(
 export async function loadTransfersForAuction(
   supabase: SupabaseClient,
   auctionId: number,
+  competitionId: number | null = null,
 ): Promise<{ active: EnrichedTransfer[]; history: EnrichedTransfer[] }> {
   const { data: raw, error } = await supabase
     .from("auction_transfers")
@@ -225,29 +228,24 @@ export async function loadTransfersForAuction(
     ...new Set(transfers.flatMap((t) => [t.proposer_id, t.recipient_id])),
   ];
 
-  const [playersRes, usersRes] = await Promise.all([
+  const [playerRows, usersRes] = await Promise.all([
     allPlayerIds.length
-      ? supabase
-          .from("players")
-          .select("player_id, player_name, position")
-          .in("player_id", allPlayerIds)
-      : Promise.resolve({ data: [], error: null }),
+      ? fetchPlayersByIds(supabase, allPlayerIds, competitionId)
+      : Promise.resolve([] as Record<string, unknown>[]),
     supabase
       .from("auction_users")
       .select("id, name")
       .in("id", allUserIds),
   ]);
 
-  if (playersRes.error) throw new Error(`players: ${playersRes.error.message}`);
   if (usersRes.error) throw new Error(`auction_users: ${usersRes.error.message}`);
 
   const playerById = new Map<string, PlayerMeta>();
-  for (const p of playersRes.data ?? []) {
-    const row = p as { player_id: string; player_name: string | null; position: string | null };
-    playerById.set(String(row.player_id), {
-      player_id: String(row.player_id),
-      player_name: row.player_name,
-      position: row.position,
+  for (const [id, meta] of Object.entries(playerMetaByIdFromRows(playerRows))) {
+    playerById.set(id, {
+      player_id: id,
+      player_name: meta.player_name,
+      position: meta.position,
     });
   }
 

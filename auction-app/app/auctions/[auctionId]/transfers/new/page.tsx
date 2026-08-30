@@ -2,6 +2,7 @@ import { notFound, redirect } from "next/navigation";
 
 import { ProposeTransferClient } from "@/app/auctions/[auctionId]/transfers/new/_components/ProposeTransferClient";
 import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
+import { fetchPlayerMetaByIds, resolveAuctionCompetitionId } from "@/lib/players-query";
 import { createAdminClient } from "@/lib/supabase-server";
 
 export const dynamic = "force-dynamic";
@@ -77,23 +78,8 @@ export default async function NewTransferPage({
 
   const allPlayerIds = [...new Set((allTeamRows ?? []).map((r: { player_id: string }) => String(r.player_id)))];
 
-  // Batch-load player metadata for all players
-  const playerMeta: Record<string, { player_name: string | null; position: string | null; club: string | null }> = {};
-  if (allPlayerIds.length > 0) {
-    const { data: playerRows, error: playerErr } = await admin
-      .from("players")
-      .select("player_id, player_name, position, team_name")
-      .in("player_id", allPlayerIds);
-    if (playerErr) throw new Error(playerErr.message);
-    for (const p of playerRows ?? []) {
-      const row = p as { player_id: string; player_name: string | null; position: string | null; team_name: string | null };
-      playerMeta[String(row.player_id)] = {
-        player_name: row.player_name,
-        position: row.position,
-        club: row.team_name,
-      };
-    }
-  }
+  const competitionId = resolveAuctionCompetitionId(d.auction);
+  const playerMeta = await fetchPlayerMetaByIds(admin, allPlayerIds, competitionId);
 
   // Find my locked players (in an active transfer as proposer or recipient)
   const { data: activeTransfers } = await admin

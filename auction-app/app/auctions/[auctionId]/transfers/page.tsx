@@ -6,6 +6,7 @@ import { getAuthUser } from "@/lib/auth/get-user";
 import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
 import { createAdminClient } from "@/lib/supabase-server";
 import { transferStatusColor, transferStatusLabel } from "@/lib/transfer-messages";
+import { resolveAuctionCompetitionId } from "@/lib/players-query";
 import { loadTransfersForAuction, voidExpiredTransfers } from "@/lib/transfers";
 
 export const dynamic = "force-dynamic";
@@ -95,7 +96,11 @@ export default async function TransfersPage({
     );
   }
 
-  const { active, history } = await loadTransfersForAuction(admin, auctionId);
+  const { active, history } = await loadTransfersForAuction(
+    admin,
+    auctionId,
+    resolveAuctionCompetitionId(d.auction),
+  );
   const meId = d.me.id;
 
   // Only show transfers the current user is involved in (admins see all)

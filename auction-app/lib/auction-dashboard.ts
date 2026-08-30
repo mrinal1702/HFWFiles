@@ -12,12 +12,12 @@ import { isGoalkeeperPosition } from "@/lib/bid-ui-messages";
 import type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
 import { fetchAuctionUsers } from "@/lib/auction-users-query";
 import { finalizeAuctionHardDeadline, finalizeDueNationDeadlines, finalizeExpiredLots } from "@/lib/bidding";
+import { fetchPlayersByIds, resolveAuctionCompetitionId } from "@/lib/players-query";
 import { createAdminClient } from "@/lib/supabase-server";
 
 export type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
 
 const SUPABASE_PAGE_SIZE = 1000;
-const PLAYER_ID_BATCH_SIZE = 200;
 
 async function fetchAllAuctionLots(
   admin: ReturnType<typeof createAdminClient>,
@@ -38,66 +38,6 @@ async function fetchAllAuctionLots(
     all.push(...(data as Record<string, unknown>[]));
     if (data.length < SUPABASE_PAGE_SIZE) break;
     from += SUPABASE_PAGE_SIZE;
-  }
-
-  return all;
-}
-
-async function fetchPlayersByIds(
-  admin: ReturnType<typeof createAdminClient>,
-  playerIds: string[],
-  competitionId: number | null = null,
-): Promise<Record<string, unknown>[]> {
-  if (!playerIds.length) return [];
-
-  const all: Record<string, unknown>[] = [];
-
-  // Competition-scoped auctions must use competition_players only — the global
-  // players table is EPL-centric and mislabels UCL lots (same FotMob id, wrong club).
-  if (competitionId != null) {
-    for (let i = 0; i < playerIds.length; i += PLAYER_ID_BATCH_SIZE) {
-      const batch = playerIds.slice(i, i + PLAYER_ID_BATCH_SIZE).map((id) => {
-        const n = Number(id);
-        if (!Number.isFinite(n)) throw new Error(`Invalid player_id: ${id}`);
-        return n;
-      });
-      const cpRes = await admin
-        .from("competition_players")
-        .select("player_id, player_name, position, team_name, team_id")
-        .eq("competition_id", competitionId)
-        .in("player_id", batch);
-      if (cpRes.error) throw new Error(`competition_players: ${cpRes.error.message}`);
-      for (const p of cpRes.data ?? []) {
-        all.push(p as Record<string, unknown>);
-      }
-    }
-    return all;
-  }
-
-  const found = new Set<string>();
-
-  for (let i = 0; i < playerIds.length; i += PLAYER_ID_BATCH_SIZE) {
-    const batch = playerIds.slice(i, i + PLAYER_ID_BATCH_SIZE);
-    const withClub = await admin
-      .from("players")
-      .select("player_id, player_name, position, team_name, team_id")
-      .in("player_id", batch);
-    if (withClub.error) {
-      const basic = await admin
-        .from("players")
-        .select("player_id, player_name, position")
-        .in("player_id", batch);
-      if (basic.error) throw new Error(`players: ${basic.error.message}`);
-      for (const p of basic.data ?? []) {
-        all.push(p as Record<string, unknown>);
-        found.add(String((p as { player_id: unknown }).player_id));
-      }
-    } else {
-      for (const p of withClub.data ?? []) {
-        all.push(p as Record<string, unknown>);
-        found.add(String((p as { player_id: unknown }).player_id));
-      }
-    }
   }
 
   return all;
@@ -180,10 +120,7 @@ export const loadAuctionDashboard = cache(
   const auction = auctionRes.data as AuctionDashboard["auction"] & {
     competition_id?: number | null;
   };
-  const competitionId =
-    auction?.competition_id != null && Number.isFinite(Number(auction.competition_id))
-      ? Number(auction.competition_id)
-      : null;
+  const competitionId = resolveAuctionCompetitionId(auction);
   const nationRollingMode = auction?.bidding_deadline_mode === "nation_rolling";
   let users = usersRes;
   let rawLots = lotsRes;
