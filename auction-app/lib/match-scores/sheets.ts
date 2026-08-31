@@ -141,6 +141,15 @@ const EPL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795428,
     rows: loadMatchScoreCsv("CoventryCity_HullCity_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "tottenham-hotspur-newcastle-united",
+    title: "Tottenham Hotspur vs Newcastle United",
+    subtitle: "Premier League · Matchweek 2",
+    groupStageGw: 2,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795434,
+    rows: loadMatchScoreCsv("TottenhamHotspur_NewcastleUnited_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
