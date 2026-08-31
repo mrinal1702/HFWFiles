@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+James Tarkowski,243138,Everton,defender,47.97,5.0,0.0,53
+James Hill,959407,Bournemouth,defender,44.92,5.0,0.0,50
+Alex Scott,1233655,Bournemouth,midfielder,42.504,7.0,0.0,50
+Adrien Truffert,1177358,Bournemouth,defender,38.14,5.0,0.0,43
+António Silva,1292092,Bournemouth,defender,33.42,5.0,0.0,38
+Marcus Tavernier,789630,Bournemouth,forward,35.230000000000004,3.0,0.0,38
+Jarrad Branthwaite,1030829,Everton,defender,31.754999999999995,5.0,0.0,37
+Vitaliy Mykolenko,874025,Everton,defender,29.395,5.0,0.0,34
+Kiernan Dewsbury-Hall,886016,Everton,midfielder,29.33,5.0,0.0,34
+Adam Smith,160447,Bournemouth,defender,28.56,5.0,0.0,34
+Evanilson,1098096,Bournemouth,forward,29.899999999999995,3.0,0.0,33
+Iliman Ndiaye,965764,Everton,midfielder,26.612,5.0,0.0,32
+Justin Kluivert,794253,Bournemouth,midfielder,19.36,7.0,0.0,26
+Thierno Barry,1398392,Everton,forward,26.293333333333333,0.0,0.0,26
+Harrison Armstrong,1559637,Everton,midfielder,21.284666666666663,3.0,0.0,24
+Lewis Cook,562724,Bournemouth,midfielder,15.323999999999998,7.0,0.0,22
+Rayan,1478295,Bournemouth,forward,19.270000000000003,3.0,0.0,22
+Tyrique George,1424875,Everton,forward,20.846666666666668,0.0,0.0,21
+Merlin Röhl,1210384,Everton,defender,13.686666666666664,5.0,0.0,19
+James Garner,950474,Everton,midfielder,13.664666666666667,3.0,0.0,17
+Hayden Hackney,982394,Everton,midfielder,7.815333333333333,4.5,0.0,12
+Brennan Johnson,1076756,Everton,forward,6.543333333333333,3.0,0.0,10
+Beto,1079485,Everton,forward,5.526666666666666,3.0,0.0,9
+Ryan Christie,439369,Bournemouth,midfielder,7.550000000000001,0.5,0.0,8
+Álvaro Rodriguez,1327406,Bournemouth,forward,7.95,0.0,0.0,8
+Tim Iroegbunam,1203512,Everton,midfielder,2.583333333333333,4.5,0.0,7
+David Brooks,674014,Bournemouth,forward,5.79,0.0,0.0,6
+Charly Alcaraz,1128965,Everton,midfielder,1.147333333333333,4.5,0.0,6
+Tyler Adams,729769,Bournemouth,midfielder,5.07,0.5,0.0,6
+Michael Keane,290410,Everton,defender,0.0,0.0,0.0,0
+Bafodé Diakité,979752,Bournemouth,defender,0.0,0.0,0.0,0
+Jake O'Brien,1098607,Everton,defender,0.0,0.0,0.0,0
+Julio Soler,1358655,Bournemouth,defender,0.0,0.0,0.0,0
+Daniel Jebbison,1253827,Bournemouth,forward,0.0,0.0,0.0,0
+Tyler Dibling,1292833,Everton,forward,0.0,0.0,0.0,0
+Ben Gannon-Doak,1324871,Bournemouth,forward,0.0,0.0,0.0,0
+Bournemouth Keepers,8678,Bournemouth,goalkeeper,27.94,12.0,0.0,40
+Everton Keepers,8668,Everton,goalkeeper,27.38,12.0,0.0,39

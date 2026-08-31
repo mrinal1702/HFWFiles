@@ -1,0 +1,15 @@
+{
+  "match_id": 5795425,
+  "home_team": "AFC Bournemouth",
+  "away_team": "Everton",
+  "source_url": "https://www.fotmob.com/en-GB/matches/everton-vs-afc-bournemouth/2hkv2h#5795425:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw02/matches/everton-afc-bournemouth/intermediates/Everton_AFCBournemouth.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/everton-vs-afc-bournemouth/2hkv2h",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/everton-vs-afc-bournemouth/2hkv2h#5795425:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/everton-vs-afc-bournemouth/2hkv2h#5795425:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/everton-vs-afc-bournemouth/2hkv2h#5795425:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795425"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

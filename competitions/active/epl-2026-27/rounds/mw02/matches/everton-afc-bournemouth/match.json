@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "everton-afc-bournemouth",
+  "fotmob_match_id": 5795425,
+  "source_url": "https://www.fotmob.com/en-GB/matches/everton-vs-afc-bournemouth/2hkv2h#5795425:tab=stats",
+  "home_team": "AFC Bournemouth",
+  "away_team": "Everton",
+  "raw_json_path": "intermediates/Everton_AFCBournemouth.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

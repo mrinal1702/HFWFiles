@@ -123,6 +123,15 @@ const EPL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795431,
     rows: loadMatchScoreCsv("Liverpool_NottinghamForest_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "afc-bournemouth-everton",
+    title: "AFC Bournemouth vs Everton",
+    subtitle: "Premier League · Matchweek 2",
+    groupStageGw: 2,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795425,
+    rows: loadMatchScoreCsv("AFCBournemouth_Everton_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
