@@ -29,7 +29,7 @@ export function CompetitorsPointsList({
 
   const competitorHref = (userId: number) => {
     const qs = gwQuery ? `?gw=${encodeURIComponent(gwQuery)}` : "";
-    return `/auctions/${auctionId}/competitors/${userId}${qs}`;
+    return `/auctions/${auctionId}/leaderboard/competitors/${userId}${qs}`;
   };
 
   return (
