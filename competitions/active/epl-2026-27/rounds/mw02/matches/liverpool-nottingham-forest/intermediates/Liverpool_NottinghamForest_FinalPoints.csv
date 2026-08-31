@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Jérémy Jacquet,1473534,Liverpool,defender,47.71166666666667,0.0,0.0,48
+Neco Williams,1078788,Nottingham Forest,defender,47.265,0.0,0.0,47
+Morgan Gibbs-White,789502,Nottingham Forest,midfielder,37.214,5.0,0.0,42
+Dominik Szoboszlai,846005,Liverpool,midfielder,35.456,5.0,0.0,40
+Igor Jesus,1082102,Nottingham Forest,forward,33.21666666666667,6.0,0.0,39
+Víctor Muñoz,1553105,Liverpool,midfielder,31.93,5.0,0.0,37
+Virgil van Dijk,209405,Liverpool,defender,36.13,0.0,0.0,36
+Florian Wirtz,1152455,Liverpool,midfielder,29.044,5.0,0.0,34
+Xaver Schlager,620027,Nottingham Forest,midfielder,27.892000000000003,5.0,0.0,33
+Dan Ndoye,1022649,Nottingham Forest,midfielder,27.366,5.0,0.0,32
+Alexander Isak,690107,Liverpool,forward,26.29,6.0,0.0,32
+Nikola Milenkovic,766611,Nottingham Forest,defender,30.770000000000003,0.0,0.0,31
+Cody Gakpo,806552,Liverpool,forward,26.336666666666662,3.0,0.0,29
+Alexis Mac Allister,831489,Liverpool,midfielder,22.670666666666666,3.0,0.0,26
+Ola Aina,682548,Nottingham Forest,defender,24.226666666666667,0.0,0.0,24
+Milos Kerkez,1195281,Liverpool,defender,22.666666666666664,0.0,0.0,23
+James McAtee,1107648,Nottingham Forest,midfielder,16.704666666666668,5.0,0.0,22
+Jeremie Frimpong,966018,Liverpool,defender,19.936666666666667,0.0,0.0,20
+Jair Cunha,1391209,Nottingham Forest,defender,19.52,0.0,0.0,20
+Murillo,1458711,Nottingham Forest,defender,16.799999999999997,0.0,0.0,17
+Trey Nyoni,1436258,Liverpool,midfielder,12.029333333333334,4.5,0.0,17
+Liam Delap,1113903,Nottingham Forest,forward,12.59,3.0,0.0,16
+Rio Ngumoha,1597668,Liverpool,forward,10.663333333333332,3.0,0.0,14
+Ryan Gravenberch,956683,Liverpool,midfielder,8.353333333333333,4.5,0.0,13
+Ronald Araujo,921253,Liverpool,defender,7.853333333333333,5.0,0.0,13
+Konstantinos Tsimikas,671529,Liverpool,midfielder,6.239333333333333,4.5,0.0,11
+Luca Netz,1155130,Nottingham Forest,midfielder,5.123333333333334,2.5,0.0,8
+Zach Abbott,1296769,Nottingham Forest,defender,0.0,0.0,0.0,0
+Ousmane Diomande,1425182,Nottingham Forest,defender,0.0,0.0,0.0,0
+Wataru Endo,202643,Liverpool,midfielder,0.0,0.0,0.0,0
+Ryan Yates,775614,Nottingham Forest,midfielder,0.0,0.0,0.0,0
+Nicolás Dominguez,827315,Nottingham Forest,midfielder,0.0,0.0,0.0,0
+James McConnell,1231075,Liverpool,midfielder,0.0,0.0,0.0,0
+Chris Wood,169719,Nottingham Forest,forward,0.0,0.0,0.0,0
+Callum Hudson-Odoi,846383,Nottingham Forest,forward,0.0,0.0,0.0,0
+Lewis Koumas,1364042,Liverpool,forward,0.0,0.0,0.0,0
+Liverpool Keepers,8650,Liverpool,goalkeeper,16.18,6.0,0.0,22
+Nottingham Forest Keepers,10203,Nottingham Forest,goalkeeper,15.58,6.0,0.0,22

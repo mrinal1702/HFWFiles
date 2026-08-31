@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "liverpool-nottingham-forest",
+  "fotmob_match_id": 5795431,
+  "source_url": "https://www.fotmob.com/en-GB/matches/liverpool-vs-nottingham-forest/2xthvt#5795431:tab=stats",
+  "home_team": "Liverpool",
+  "away_team": "Nottingham Forest",
+  "raw_json_path": "intermediates/Liverpool_NottinghamForest.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

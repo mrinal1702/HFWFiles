@@ -7,7 +7,7 @@
   "round_number": 2,
   "legacy_game_week_id": 101,
   "expected_match_count": 10,
-  "_match_count_note": "GW2 in progress — 1 of 10 fixtures scored.",
+  "_match_count_note": "GW2 in progress — 2 of 10 fixtures scored.",
   "auction_ids": [9],
   "squad_lock_state": "locked",
   "scoring_state": "in_progress",
@@ -19,6 +19,12 @@
       "fotmob_match_id": 5795429,
       "home_team": "Crystal Palace",
       "away_team": "Manchester City"
+    },
+    {
+      "match_slug": "liverpool-nottingham-forest",
+      "fotmob_match_id": 5795431,
+      "home_team": "Liverpool",
+      "away_team": "Nottingham Forest"
     }
   ]
 }
