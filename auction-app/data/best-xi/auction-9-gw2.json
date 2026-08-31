@@ -82,6 +82,90 @@
       ]
     },
     {
+      "auction_user_id": "118",
+      "user_name": "Abhishek Khanna",
+      "gw_id": 2,
+      "formation": "3-5-2",
+      "formation_tuple": [
+        3,
+        5,
+        2
+      ],
+      "total_points": 193,
+      "goalkeeper": {
+        "player_id": 90010204,
+        "player_name": "Brighton & Hove Albion Keepers",
+        "score": 0
+      },
+      "outfield": [
+        {
+          "player_id": 933576,
+          "player_name": "Antoine Semenyo",
+          "role": "F",
+          "score": 43,
+          "flexible": false
+        },
+        {
+          "player_id": 1177358,
+          "player_name": "Adrien Truffert",
+          "role": "D",
+          "score": 43,
+          "flexible": false
+        },
+        {
+          "player_id": 874025,
+          "player_name": "Vitaliy Mykolenko",
+          "role": "D",
+          "score": 34,
+          "flexible": false
+        },
+        {
+          "player_id": 410836,
+          "player_name": "Semi Ajayi",
+          "role": "D",
+          "score": 32,
+          "flexible": false
+        },
+        {
+          "player_id": 806552,
+          "player_name": "Cody Gakpo",
+          "role": "F",
+          "score": 29,
+          "flexible": false
+        },
+        {
+          "player_id": 982394,
+          "player_name": "Hayden Hackney",
+          "role": "M",
+          "score": 12,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        410836,
+        806552,
+        874025,
+        933576,
+        982394,
+        1177358,
+        90010204
+      ],
+      "empty_outfield_slots": 4,
+      "squad_size": 16,
+      "missing_score_player_ids": [
+        662428,
+        816325,
+        1288111,
+        1105912,
+        1386775,
+        710158,
+        207236,
+        604785,
+        1168311,
+        90010204
+      ]
+    },
+    {
       "auction_user_id": "113",
       "user_name": "Vedant Mehra",
       "gw_id": 2,
@@ -228,8 +312,8 @@
       ]
     },
     {
-      "auction_user_id": "118",
-      "user_name": "Abhishek Khanna",
+      "auction_user_id": "116",
+      "user_name": "Rushabh Shah",
       "gw_id": 2,
       "formation": "3-5-2",
       "formation_tuple": [
@@ -237,71 +321,308 @@
         5,
         2
       ],
-      "total_points": 161,
+      "total_points": 172,
       "goalkeeper": {
-        "player_id": 90010204,
-        "player_name": "Brighton & Hove Albion Keepers",
-        "score": 0
+        "player_id": 90009826,
+        "player_name": "Crystal Palace Keepers",
+        "score": 20
       },
       "outfield": [
         {
-          "player_id": 933576,
-          "player_name": "Antoine Semenyo",
-          "role": "F",
-          "score": 43,
-          "flexible": false
-        },
-        {
-          "player_id": 1177358,
-          "player_name": "Adrien Truffert",
+          "player_id": 959407,
+          "player_name": "James Hill",
           "role": "D",
-          "score": 43,
+          "score": 50,
           "flexible": false
         },
         {
-          "player_id": 874025,
-          "player_name": "Vitaliy Mykolenko",
+          "player_id": 1161885,
+          "player_name": "Bobby Thomas",
           "role": "D",
-          "score": 34,
+          "score": 32,
           "flexible": false
         },
         {
-          "player_id": 806552,
-          "player_name": "Cody Gakpo",
-          "role": "F",
-          "score": 29,
-          "flexible": false
-        },
-        {
-          "player_id": 982394,
-          "player_name": "Hayden Hackney",
+          "player_id": 562724,
+          "player_name": "Lewis Cook",
           "role": "M",
-          "score": 12,
+          "score": 22,
+          "flexible": false
+        },
+        {
+          "player_id": 950474,
+          "player_name": "James Garner",
+          "role": "M",
+          "score": 17,
+          "flexible": false
+        },
+        {
+          "player_id": 1458711,
+          "player_name": "Murillo",
+          "role": "D",
+          "score": 17,
+          "flexible": false
+        },
+        {
+          "player_id": 1597668,
+          "player_name": "Rio Ngumoha",
+          "role": "F",
+          "score": 14,
           "flexible": false
         }
       ],
       "best_xi_player_ids": [
-        806552,
-        874025,
-        933576,
-        982394,
-        1177358,
-        90010204
+        562724,
+        950474,
+        959407,
+        1161885,
+        1458711,
+        1597668,
+        90009826
+      ],
+      "empty_outfield_slots": 4,
+      "squad_size": 18,
+      "missing_score_player_ids": [
+        1137668,
+        795179,
+        970243,
+        610184,
+        1203665,
+        861197,
+        1197347,
+        1318400,
+        688273,
+        1174337,
+        861805
+      ]
+    },
+    {
+      "auction_user_id": "112",
+      "user_name": "Nik Desai",
+      "gw_id": 2,
+      "formation": "4-5-1",
+      "formation_tuple": [
+        4,
+        5,
+        1
+      ],
+      "total_points": 170,
+      "goalkeeper": {
+        "player_id": 90008456,
+        "player_name": "Manchester City Keepers",
+        "score": 24
+      },
+      "outfield": [
+        {
+          "player_id": 1078788,
+          "player_name": "Neco Williams",
+          "role": "D",
+          "score": 47,
+          "flexible": false
+        },
+        {
+          "player_id": 766611,
+          "player_name": "Nikola Milenkovic",
+          "role": "D",
+          "score": 31,
+          "flexible": false
+        },
+        {
+          "player_id": 933635,
+          "player_name": "Ryan Giles",
+          "role": "D",
+          "score": 26,
+          "flexible": false
+        },
+        {
+          "player_id": 509151,
+          "player_name": "Oli McBurnie",
+          "role": "F",
+          "score": 22,
+          "flexible": false
+        },
+        {
+          "player_id": 966018,
+          "player_name": "Jeremie Frimpong",
+          "role": "D",
+          "score": 20,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        509151,
+        766611,
+        933635,
+        966018,
+        1078788,
+        90008456
       ],
       "empty_outfield_slots": 5,
-      "squad_size": 16,
+      "squad_size": 14,
       "missing_score_player_ids": [
-        662428,
-        816325,
-        1288111,
-        1105912,
-        1386775,
-        410836,
-        710158,
-        207236,
-        604785,
-        1168311,
-        90010204
+        1031325,
+        266520,
+        465750,
+        664500,
+        961995,
+        966027,
+        1302005,
+        868344
+      ]
+    },
+    {
+      "auction_user_id": "114",
+      "user_name": "Viv",
+      "gw_id": 2,
+      "formation": "3-5-2",
+      "formation_tuple": [
+        3,
+        5,
+        2
+      ],
+      "total_points": 160,
+      "goalkeeper": {
+        "player_id": 90009825,
+        "player_name": "Arsenal Keepers",
+        "score": 0
+      },
+      "outfield": [
+        {
+          "player_id": 1104053,
+          "player_name": "Rayan Cherki",
+          "role": "M",
+          "score": 58,
+          "flexible": false
+        },
+        {
+          "player_id": 737066,
+          "player_name": "Erling Haaland",
+          "role": "F",
+          "score": 52,
+          "flexible": false
+        },
+        {
+          "player_id": 807930,
+          "player_name": "Regan Slater",
+          "role": "M",
+          "score": 26,
+          "flexible": false
+        },
+        {
+          "player_id": 682548,
+          "player_name": "Ola Aina",
+          "role": "D",
+          "score": 24,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        682548,
+        737066,
+        807930,
+        1104053,
+        90009825
+      ],
+      "empty_outfield_slots": 6,
+      "squad_size": 17,
+      "missing_score_player_ids": [
+        941573,
+        729731,
+        356406,
+        717176,
+        1137705,
+        744494,
+        90009825,
+        956925,
+        503659,
+        1137667,
+        535936,
+        1106563
+      ]
+    },
+    {
+      "auction_user_id": "104",
+      "user_name": "Dhruv Chawla",
+      "gw_id": 2,
+      "formation": "3-4-3",
+      "formation_tuple": [
+        3,
+        4,
+        3
+      ],
+      "total_points": 153,
+      "goalkeeper": {
+        "player_id": 90009902,
+        "player_name": "Ipswich Town Keepers",
+        "score": 0
+      },
+      "outfield": [
+        {
+          "player_id": 886016,
+          "player_name": "Kiernan Dewsbury-Hall",
+          "role": "M",
+          "score": 34,
+          "flexible": false
+        },
+        {
+          "player_id": 965764,
+          "player_name": "Iliman Ndiaye",
+          "role": "F",
+          "score": 32,
+          "flexible": false
+        },
+        {
+          "player_id": 1022649,
+          "player_name": "Dan Ndoye",
+          "role": "F",
+          "score": 32,
+          "flexible": false
+        },
+        {
+          "player_id": 1074750,
+          "player_name": "Milan van Ewijk",
+          "role": "D",
+          "score": 27,
+          "flexible": false
+        },
+        {
+          "player_id": 1478295,
+          "player_name": "Rayan",
+          "role": "F",
+          "score": 22,
+          "flexible": false
+        },
+        {
+          "player_id": 729769,
+          "player_name": "Tyler Adams",
+          "role": "M",
+          "score": 6,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        729769,
+        886016,
+        965764,
+        1022649,
+        1074750,
+        1478295,
+        90009902
+      ],
+      "empty_outfield_slots": 4,
+      "squad_size": 17,
+      "missing_score_player_ids": [
+        771294,
+        1137407,
+        980381,
+        1185211,
+        613715,
+        847983,
+        1413847,
+        494417,
+        974618,
+        1292810,
+        90009902
       ]
     },
     {
@@ -361,7 +682,6 @@
       "squad_size": 17,
       "missing_score_player_ids": [
         422685,
-        1615927,
         860975,
         90009937,
         1250253,
@@ -376,285 +696,6 @@
       ]
     },
     {
-      "auction_user_id": "116",
-      "user_name": "Rushabh Shah",
-      "gw_id": 2,
-      "formation": "3-5-2",
-      "formation_tuple": [
-        3,
-        5,
-        2
-      ],
-      "total_points": 140,
-      "goalkeeper": {
-        "player_id": 90009826,
-        "player_name": "Crystal Palace Keepers",
-        "score": 20
-      },
-      "outfield": [
-        {
-          "player_id": 959407,
-          "player_name": "James Hill",
-          "role": "D",
-          "score": 50,
-          "flexible": false
-        },
-        {
-          "player_id": 562724,
-          "player_name": "Lewis Cook",
-          "role": "M",
-          "score": 22,
-          "flexible": false
-        },
-        {
-          "player_id": 950474,
-          "player_name": "James Garner",
-          "role": "M",
-          "score": 17,
-          "flexible": false
-        },
-        {
-          "player_id": 1458711,
-          "player_name": "Murillo",
-          "role": "D",
-          "score": 17,
-          "flexible": false
-        },
-        {
-          "player_id": 1597668,
-          "player_name": "Rio Ngumoha",
-          "role": "F",
-          "score": 14,
-          "flexible": false
-        }
-      ],
-      "best_xi_player_ids": [
-        562724,
-        950474,
-        959407,
-        1458711,
-        1597668,
-        90009826
-      ],
-      "empty_outfield_slots": 5,
-      "squad_size": 18,
-      "missing_score_player_ids": [
-        1137668,
-        795179,
-        970243,
-        610184,
-        1161885,
-        1203665,
-        861197,
-        1197347,
-        1318400,
-        688273,
-        1174337,
-        861805
-      ]
-    },
-    {
-      "auction_user_id": "114",
-      "user_name": "Viv",
-      "gw_id": 2,
-      "formation": "3-5-2",
-      "formation_tuple": [
-        3,
-        5,
-        2
-      ],
-      "total_points": 134,
-      "goalkeeper": {
-        "player_id": 90009825,
-        "player_name": "Arsenal Keepers",
-        "score": 0
-      },
-      "outfield": [
-        {
-          "player_id": 1104053,
-          "player_name": "Rayan Cherki",
-          "role": "M",
-          "score": 58,
-          "flexible": false
-        },
-        {
-          "player_id": 737066,
-          "player_name": "Erling Haaland",
-          "role": "F",
-          "score": 52,
-          "flexible": false
-        },
-        {
-          "player_id": 682548,
-          "player_name": "Ola Aina",
-          "role": "D",
-          "score": 24,
-          "flexible": false
-        }
-      ],
-      "best_xi_player_ids": [
-        682548,
-        737066,
-        1104053,
-        90009825
-      ],
-      "empty_outfield_slots": 7,
-      "squad_size": 17,
-      "missing_score_player_ids": [
-        941573,
-        729731,
-        356406,
-        717176,
-        1137705,
-        744494,
-        90009825,
-        956925,
-        503659,
-        1137667,
-        807930,
-        535936,
-        1106563
-      ]
-    },
-    {
-      "auction_user_id": "104",
-      "user_name": "Dhruv Chawla",
-      "gw_id": 2,
-      "formation": "3-4-3",
-      "formation_tuple": [
-        3,
-        4,
-        3
-      ],
-      "total_points": 126,
-      "goalkeeper": {
-        "player_id": 90009902,
-        "player_name": "Ipswich Town Keepers",
-        "score": 0
-      },
-      "outfield": [
-        {
-          "player_id": 886016,
-          "player_name": "Kiernan Dewsbury-Hall",
-          "role": "M",
-          "score": 34,
-          "flexible": false
-        },
-        {
-          "player_id": 965764,
-          "player_name": "Iliman Ndiaye",
-          "role": "F",
-          "score": 32,
-          "flexible": false
-        },
-        {
-          "player_id": 1022649,
-          "player_name": "Dan Ndoye",
-          "role": "F",
-          "score": 32,
-          "flexible": false
-        },
-        {
-          "player_id": 1478295,
-          "player_name": "Rayan",
-          "role": "F",
-          "score": 22,
-          "flexible": false
-        },
-        {
-          "player_id": 729769,
-          "player_name": "Tyler Adams",
-          "role": "M",
-          "score": 6,
-          "flexible": false
-        }
-      ],
-      "best_xi_player_ids": [
-        729769,
-        886016,
-        965764,
-        1022649,
-        1478295,
-        90009902
-      ],
-      "empty_outfield_slots": 5,
-      "squad_size": 17,
-      "missing_score_player_ids": [
-        771294,
-        1137407,
-        980381,
-        1185211,
-        613715,
-        847983,
-        1413847,
-        1074750,
-        494417,
-        974618,
-        1292810,
-        90009902
-      ]
-    },
-    {
-      "auction_user_id": "112",
-      "user_name": "Nik Desai",
-      "gw_id": 2,
-      "formation": "3-5-2",
-      "formation_tuple": [
-        3,
-        5,
-        2
-      ],
-      "total_points": 122,
-      "goalkeeper": {
-        "player_id": 90008456,
-        "player_name": "Manchester City Keepers",
-        "score": 24
-      },
-      "outfield": [
-        {
-          "player_id": 1078788,
-          "player_name": "Neco Williams",
-          "role": "D",
-          "score": 47,
-          "flexible": false
-        },
-        {
-          "player_id": 766611,
-          "player_name": "Nikola Milenkovic",
-          "role": "D",
-          "score": 31,
-          "flexible": false
-        },
-        {
-          "player_id": 966018,
-          "player_name": "Jeremie Frimpong",
-          "role": "D",
-          "score": 20,
-          "flexible": false
-        }
-      ],
-      "best_xi_player_ids": [
-        766611,
-        966018,
-        1078788,
-        90008456
-      ],
-      "empty_outfield_slots": 7,
-      "squad_size": 14,
-      "missing_score_player_ids": [
-        1031325,
-        266520,
-        465750,
-        509151,
-        933635,
-        664500,
-        961995,
-        966027,
-        1302005,
-        868344
-      ]
-    },
-    {
       "auction_user_id": "105",
       "user_name": "Pratham Arora",
       "gw_id": 2,
@@ -664,13 +705,20 @@
         5,
         2
       ],
-      "total_points": 108,
+      "total_points": 142,
       "goalkeeper": {
         "player_id": 90008472,
         "player_name": "Sunderland Keepers",
         "score": 0
       },
       "outfield": [
+        {
+          "player_id": 1428427,
+          "player_name": "Nobel Mendy",
+          "role": "D",
+          "score": 34,
+          "flexible": false
+        },
         {
           "player_id": 620027,
           "player_name": "Xaver Schlager",
@@ -705,9 +753,10 @@
         831489,
         1047676,
         1300526,
+        1428427,
         90008472
       ],
-      "empty_outfield_slots": 6,
+      "empty_outfield_slots": 5,
       "squad_size": 17,
       "missing_score_player_ids": [
         940446,
@@ -717,7 +766,6 @@
         751998,
         90008472,
         807729,
-        1428427,
         821728,
         1134871,
         540088,
@@ -780,12 +828,144 @@
         706297,
         795371,
         856685,
-        538112,
         666857,
         775539,
         820024,
         883080,
         696365
+      ]
+    },
+    {
+      "auction_user_id": "111",
+      "user_name": "Dhruv Gupta",
+      "gw_id": 2,
+      "formation": "3-5-2",
+      "formation_tuple": [
+        3,
+        5,
+        2
+      ],
+      "total_points": 96,
+      "goalkeeper": {
+        "player_id": 90008455,
+        "player_name": "Chelsea Keepers",
+        "score": 0
+      },
+      "outfield": [
+        {
+          "player_id": 209405,
+          "player_name": "Virgil van Dijk",
+          "role": "D",
+          "score": 36,
+          "flexible": false
+        },
+        {
+          "player_id": 1098096,
+          "player_name": "Evanilson",
+          "role": "F",
+          "score": 33,
+          "flexible": false
+        },
+        {
+          "player_id": 643717,
+          "player_name": "Taiwo Awoniyi",
+          "role": "F",
+          "score": 27,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        209405,
+        643717,
+        1098096,
+        90008455
+      ],
+      "empty_outfield_slots": 7,
+      "squad_size": 17,
+      "missing_score_player_ids": [
+        1473806,
+        90008455,
+        1413996,
+        650616,
+        1280132,
+        1258092,
+        785411,
+        1403691,
+        521148,
+        1320949,
+        780432,
+        1190867
+      ]
+    },
+    {
+      "auction_user_id": "115",
+      "user_name": "Sujay Choksey",
+      "gw_id": 2,
+      "formation": "3-5-2",
+      "formation_tuple": [
+        3,
+        5,
+        2
+      ],
+      "total_points": 96,
+      "goalkeeper": {
+        "player_id": 90010252,
+        "player_name": "Aston Villa Keepers",
+        "score": 0
+      },
+      "outfield": [
+        {
+          "player_id": 1292092,
+          "player_name": "Ant\u00f3nio Silva",
+          "role": "D",
+          "score": 38,
+          "flexible": false
+        },
+        {
+          "player_id": 478357,
+          "player_name": "Matt Grimes",
+          "role": "M",
+          "score": 25,
+          "flexible": false
+        },
+        {
+          "player_id": 1559637,
+          "player_name": "Harrison Armstrong",
+          "role": "M",
+          "score": 24,
+          "flexible": false
+        },
+        {
+          "player_id": 1664722,
+          "player_name": "Jaydee Canvot",
+          "role": "D",
+          "score": 9,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        478357,
+        1292092,
+        1559637,
+        1664722,
+        90010252
+      ],
+      "empty_outfield_slots": 6,
+      "squad_size": 17,
+      "missing_score_player_ids": [
+        552718,
+        1251334,
+        789578,
+        90010252,
+        465960,
+        877401,
+        600524,
+        1010426,
+        1287010,
+        1021382,
+        751550,
+        760359,
+        1049999
       ]
     },
     {
@@ -914,125 +1094,6 @@
       ]
     },
     {
-      "auction_user_id": "115",
-      "user_name": "Sujay Choksey",
-      "gw_id": 2,
-      "formation": "3-5-2",
-      "formation_tuple": [
-        3,
-        5,
-        2
-      ],
-      "total_points": 71,
-      "goalkeeper": {
-        "player_id": 90010252,
-        "player_name": "Aston Villa Keepers",
-        "score": 0
-      },
-      "outfield": [
-        {
-          "player_id": 1292092,
-          "player_name": "Ant\u00f3nio Silva",
-          "role": "D",
-          "score": 38,
-          "flexible": false
-        },
-        {
-          "player_id": 1559637,
-          "player_name": "Harrison Armstrong",
-          "role": "M",
-          "score": 24,
-          "flexible": false
-        },
-        {
-          "player_id": 1664722,
-          "player_name": "Jaydee Canvot",
-          "role": "D",
-          "score": 9,
-          "flexible": false
-        }
-      ],
-      "best_xi_player_ids": [
-        1292092,
-        1559637,
-        1664722,
-        90010252
-      ],
-      "empty_outfield_slots": 7,
-      "squad_size": 17,
-      "missing_score_player_ids": [
-        552718,
-        1251334,
-        789578,
-        90010252,
-        465960,
-        877401,
-        600524,
-        1010426,
-        1287010,
-        1021382,
-        751550,
-        760359,
-        1049999,
-        478357
-      ]
-    },
-    {
-      "auction_user_id": "111",
-      "user_name": "Dhruv Gupta",
-      "gw_id": 2,
-      "formation": "3-5-2",
-      "formation_tuple": [
-        3,
-        5,
-        2
-      ],
-      "total_points": 69,
-      "goalkeeper": {
-        "player_id": 90008455,
-        "player_name": "Chelsea Keepers",
-        "score": 0
-      },
-      "outfield": [
-        {
-          "player_id": 209405,
-          "player_name": "Virgil van Dijk",
-          "role": "D",
-          "score": 36,
-          "flexible": false
-        },
-        {
-          "player_id": 1098096,
-          "player_name": "Evanilson",
-          "role": "F",
-          "score": 33,
-          "flexible": false
-        }
-      ],
-      "best_xi_player_ids": [
-        209405,
-        1098096,
-        90008455
-      ],
-      "empty_outfield_slots": 8,
-      "squad_size": 17,
-      "missing_score_player_ids": [
-        1473806,
-        90008455,
-        1413996,
-        650616,
-        1280132,
-        1258092,
-        785411,
-        1403691,
-        643717,
-        521148,
-        1320949,
-        780432,
-        1190867
-      ]
-    },
-    {
       "auction_user_id": "110",
       "user_name": "Advait Trivedi",
       "gw_id": 2,
@@ -1076,6 +1137,6 @@
   "meta": {
     "squad_rows": 257,
     "match_json_files": 0,
-    "players_with_scores": 67
+    "players_with_scores": 78
   }
 }

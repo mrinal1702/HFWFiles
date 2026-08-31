@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+John Egan,295062,Hull City,defender,33.14,10.0,0.0,43
+Jay Dasilva,759814,Coventry City,defender,31.725,5.0,0.0,37
+Nobel Mendy,1428427,Hull City,defender,23.731666666666666,10.0,0.0,34
+Mohamed Belloumi,1231090,Hull City,forward,29.14666666666667,3.0,0.0,32
+Bobby Thomas,1161885,Coventry City,defender,21.505000000000003,10.0,0.0,32
+Semi Ajayi,410836,Hull City,defender,21.5,10.0,0.0,32
+Aurèle Amenda,1257648,Coventry City,defender,25.985,5.0,0.0,31
+Taiwo Awoniyi,643717,Coventry City,forward,27.340000000000003,0.0,0.0,27
+Milan van Ewijk,1074750,Coventry City,defender,21.73,5.0,0.0,27
+Ryan Giles,933635,Hull City,defender,16.17,10.0,0.0,26
+Regan Slater,807930,Hull City,midfielder,18.8,7.0,0.0,26
+Caleb Yirenkyi,1615927,Coventry City,midfielder,20.150666666666663,5.0,0.0,25
+Matt Grimes,478357,Coventry City,midfielder,21.966,3.0,0.0,25
+Lewie Coyle,709148,Hull City,defender,13.715000000000002,10.0,0.0,24
+Oli McBurnie,509151,Hull City,forward,19.42,3.0,0.0,22
+Hidemasa Morita,915102,Hull City,midfielder,17.014,5.0,0.0,22
+Liam Millar,932308,Hull City,forward,18.62333333333333,3.0,0.0,22
+Loum Tchaouna,1283034,Coventry City,forward,20.526666666666664,0.0,0.0,21
+Jack Rudoni,1030830,Coventry City,midfielder,15.182666666666668,5.0,0.0,20
+Lucas Gourna-Douath,1137106,Hull City,midfielder,11.97,4.5,0.0,16
+Cody Drameh,962046,Hull City,defender,11.2,5.0,0.0,16
+Tatsuhiro Sakamoto,1025603,Coventry City,forward,14.453333333333331,0.0,0.0,14
+Ephron Mason-Clark,798654,Coventry City,forward,11.693333333333332,0.0,0.0,12
+Elliot Stroud,1272349,Hull City,forward,11.416666666666666,0.0,0.0,11
+Lucas Herrington,1686118,Hull City,defender,6.273333333333333,5.0,0.0,11
+Brandon Thomas-Asante,776184,Coventry City,forward,9.106666666666666,0.0,0.0,9
+Ethan Pinnock,711357,Coventry City,defender,8.515,0.0,0.0,9
+Gustavo Hamer,775355,Coventry City,forward,7.093333333333334,0.0,0.0,7
+Mohamed-Ali Cho,1180718,Hull City,forward,5.983333333333333,0.0,0.0,6
+Victor Torp,845985,Coventry City,midfielder,3.3953333333333333,0.5,0.0,4
+Matt Targett,538112,Hull City,defender,0.0,0.0,0.0,0
+Paddy McNair,575780,Hull City,defender,0.0,0.0,0.0,0
+Joel Latibeaudiere,863822,Coventry City,defender,0.0,0.0,0.0,0
+Liam Kitching,914399,Coventry City,defender,0.0,0.0,0.0,0
+Jens Hjertø-Dahl,1377949,Hull City,midfielder,0.0,0.0,0.0,0
+Ellis Simms,982284,Coventry City,forward,0.0,0.0,0.0,0
+Hull City Keepers,8667,Hull City,goalkeeper,17.360000000000003,18.0,0.0,35
+Coventry City Keepers,8669,Coventry City,goalkeeper,18.36,12.0,0.0,30
