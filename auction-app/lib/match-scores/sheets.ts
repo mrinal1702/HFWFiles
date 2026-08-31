@@ -150,6 +150,15 @@ const EPL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795434,
     rows: loadMatchScoreCsv("TottenhamHotspur_NewcastleUnited_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "chelsea-brighton-hove-albion",
+    title: "Chelsea vs Brighton & Hove Albion",
+    subtitle: "Premier League · Matchweek 2",
+    groupStageGw: 2,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795427,
+    rows: loadMatchScoreCsv("Chelsea_BrightonHoveAlbion_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

@@ -1,0 +1,15 @@
+{
+  "match_id": 5795427,
+  "home_team": "Chelsea",
+  "away_team": "Brighton & Hove Albion",
+  "source_url": "https://www.fotmob.com/en-GB/matches/chelsea-vs-brighton-hove-albion/2vni1p#5795427:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw02/matches/chelsea-brighton-hove-albion/intermediates/Chelsea_BrightonHoveAlbion.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/chelsea-vs-brighton-hove-albion/2vni1p",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/chelsea-vs-brighton-hove-albion/2vni1p#5795427:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/chelsea-vs-brighton-hove-albion/2vni1p#5795427:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/chelsea-vs-brighton-hove-albion/2vni1p#5795427:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795427"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

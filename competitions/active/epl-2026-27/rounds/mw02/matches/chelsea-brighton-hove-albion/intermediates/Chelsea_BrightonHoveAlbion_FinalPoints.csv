@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+João Pedro,1021382,Chelsea,forward,55.63,12.0,0.0,68
+Pedro Neto,843040,Chelsea,forward,41.406666666666666,9.0,0.0,50
+Malick Junior Yalcouyé,1602352,Brighton and Hove Albion,midfielder,45.01666666666667,3.0,0.0,48
+Cole Palmer,1096353,Chelsea,midfielder,32.2,7.0,0.0,39
+Pascal Groß,167008,Brighton and Hove Albion,midfielder,35.08,3.0,0.0,38
+Roméo Lavia,1190867,Chelsea,midfielder,26.560666666666663,7.0,0.0,34
+Morgan Rogers,883080,Chelsea,midfielder,26.176,7.0,0.0,33
+Charalampos Kostoulas,1561249,Brighton and Hove Albion,forward,21.996666666666663,6.0,0.0,28
+Jorrel Hato,1413846,Chelsea,defender,31.17,-5.0,0.0,26
+Diego Gómez,1354561,Brighton and Hove Albion,midfielder,21.437999999999995,3.0,0.0,24
+Levi Colwill,1096400,Chelsea,defender,23.845,0.0,0.0,24
+Maxim De Cuyper,1134871,Brighton and Hove Albion,midfielder,19.198,3.0,0.0,22
+Luka Vuskovic,1413996,Brighton and Hove Albion,defender,30.54,-10.0,0.0,21
+Wesley Fofana,917802,Chelsea,defender,19.771666666666665,0.0,0.0,20
+Maxence Lacroix,950485,Chelsea,defender,22.28,-5.0,0.0,17
+Olivier Boscagli,613715,Brighton and Hove Albion,defender,27.195,-10.0,0.0,17
+Mats Wieffer,970243,Brighton and Hove Albion,defender,26.806666666666665,-10.0,0.0,17
+Ibrahim Osman,1215410,Brighton and Hove Albion,forward,10.823333333333332,3.0,0.0,14
+Malo Gusto,1197250,Chelsea,defender,14.89,-5.0,0.0,10
+Pep Chavarría,988805,Chelsea,defender,9.74,0.0,0.0,10
+Promise David,1252132,Brighton and Hove Albion,forward,5.983333333333333,3.0,0.0,9
+Moisés Caicedo,1137668,Chelsea,midfielder,3.690666666666667,4.5,0.0,8
+Costinha,1079456,Brighton and Hove Albion,defender,3.023333333333333,5.0,0.0,8
+Lewis Dunk,201690,Brighton and Hove Albion,defender,17.075000000000003,-10.0,0.0,7
+Josh Acheampong,1400216,Chelsea,defender,6.948333333333334,0.0,0.0,7
+Ferdi Kadioglu,774448,Brighton and Hove Albion,defender,15.765,-10.0,0.0,6
+Valentín Barco,1272440,Chelsea,midfielder,4.666666666666667,0.5,0.0,5
+Reece James,807729,Chelsea,defender,3.9333333333333336,0.0,0.0,4
+Pascal Struijk,796974,Brighton and Hove Albion,defender,0.0,0.0,0.0,0
+Jaouen Hadjam,1178324,Brighton and Hove Albion,defender,0.0,0.0,0.0,0
+Matthew O'Riley,866686,Brighton and Hove Albion,midfielder,0.0,0.0,0.0,0
+Danny Welbeck,113836,Chelsea,forward,0.0,0.0,0.0,0
+Jamie Gittens,1113692,Chelsea,forward,0.0,0.0,0.0,0
+Amario Cozier-Duberry,1254170,Brighton and Hove Albion,forward,0.0,0.0,0.0,0
+Nehemiah Oriola,1526697,Brighton and Hove Albion,forward,0.0,0.0,0.0,0
+Estêvão,1580774,Chelsea,forward,0.0,0.0,0.0,0
+Chelsea Keepers,8455,Chelsea,goalkeeper,21.86,0.0,0.0,22
+Brighton and Hove Albion Keepers,10204,Brighton and Hove Albion,goalkeeper,12.000000000000002,-6.0,0.0,6
