@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "ipswich-town-manchester-united",
+  "fotmob_match_id": 5795432,
+  "source_url": "https://www.fotmob.com/en-GB/matches/ipswich-town-vs-manchester-united/3d0uj5#5795432:tab=stats",
+  "home_team": "Manchester United",
+  "away_team": "Ipswich Town",
+  "raw_json_path": "intermediates/IpswichTown_ManchesterUnited.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

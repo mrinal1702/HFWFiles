@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Bruno Fernandes,422685,Manchester United,midfielder,81.65800000000002,11.0,0.0,93
+Youri Tielemans,465960,Manchester United,midfielder,46.508,11.0,0.0,58
+Bryan Mbeumo,923312,Manchester United,midfielder,41.456,11.0,0.0,52
+Marcus Rashford,696365,Manchester United,forward,38.766666666666666,12.0,0.0,51
+Kobbie Mainoo,1292810,Manchester United,midfielder,34.068666666666665,11.0,0.0,45
+Matheus Cunha,863098,Manchester United,forward,31.256666666666668,12.0,0.0,43
+Luke Shaw,362694,Manchester United,defender,32.33333333333333,5.0,0.0,37
+Diogo Dalot,751550,Manchester United,defender,32.21666666666667,5.0,0.0,37
+Harry Maguire,255610,Manchester United,defender,29.17,0.0,0.0,29
+Sasa Lukic,556972,Ipswich Town,midfielder,30.00733333333334,-1.0,0.0,29
+Abdul Fatawu,1265626,Ipswich Town,midfielder,28.736666666666665,-3.0,0.0,26
+Julio Enciso,1073742,Ipswich Town,midfielder,24.512,-1.0,0.0,24
+Patrick Dorgu,1526560,Manchester United,forward,18.77333333333333,3.0,0.0,22
+Daizen Maeda,728765,Ipswich Town,forward,16.323333333333334,3.0,0.0,19
+Issa Diop,696443,Ipswich Town,defender,32.754999999999995,-15.0,0.0,18
+Exequiel Palacios,693599,Ipswich Town,midfielder,16.523333333333333,0.5,0.0,17
+Andrey Santos,1372921,Manchester United,midfielder,11.429333333333336,2.5,0.0,14
+Lisandro Martínez,847983,Manchester United,defender,12.250000000000002,0.0,0.0,12
+Leif Davis,980381,Ipswich Town,defender,27.16,-15.0,0.0,12
+Benjamin Sesko,1073977,Manchester United,forward,9.013333333333334,3.0,0.0,12
+Emersonn,1320949,Ipswich Town,forward,8.67,3.0,0.0,12
+Chuba Akpom,413158,Ipswich Town,midfielder,14.328,-3.5,0.0,11
+Marcelino Núñez,1129081,Ipswich Town,midfielder,9.670666666666667,1.0,0.0,11
+Leny Yoro,1358581,Manchester United,defender,9.173333333333334,0.0,0.0,9
+Kasey McAteer,1113915,Ipswich Town,forward,4.623333333333333,3.0,0.0,8
+Noussair Mazraoui,775539,Manchester United,defender,6.161666666666667,0.0,0.0,6
+Abdoul Ouattara,1343053,Ipswich Town,defender,4.281666666666666,0.0,0.0,4
+Darnell Furlong,609733,Ipswich Town,defender,3.871666666666667,0.0,0.0,4
+Jacob Greaves,1079103,Ipswich Town,defender,16.810000000000002,-15.0,0.0,2
+Dara O'Shea,789578,Ipswich Town,defender,7.2,-15.0,0.0,0
+Cédric Kipré,760398,Ipswich Town,defender,0.0,0.0,0.0,0
+Ayden Heaven,1559639,Manchester United,defender,0.0,0.0,0.0,0
+Jack Clarke,914402,Ipswich Town,forward,0.0,0.0,0.0,0
+Joshua Zirkzee,950830,Manchester United,forward,0.0,0.0,0.0,0
+Sindre Walle Egeli,1307961,Ipswich Town,forward,0.0,0.0,0.0,0
+Shea Lacey,1436260,Manchester United,forward,0.0,0.0,0.0,0
+Ipswich Town Keepers,9902,Ipswich Town,goalkeeper,40.82,-12.0,0.0,29
+Manchester United Keepers,10260,Manchester United,goalkeeper,18.22,6.0,0.0,24
