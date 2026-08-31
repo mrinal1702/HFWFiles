@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Rayan Cherki,1104053,Manchester City,midfielder,49.22733333333333,9.0,0.0,58
+Elliot Anderson,1089691,Manchester City,midfielder,48.55733333333335,9.0,0.0,58
+Phil Foden,815006,Manchester City,midfielder,43.138,11.0,0.0,54
+Erling Haaland,737066,Manchester City,forward,40.14,12.0,0.0,52
+Anan Khalaili,1477878,Crystal Palace,midfielder,48.64599999999999,1.0,0.0,50
+Marc Guéhi,844425,Manchester City,defender,41.095,5.0,0.0,46
+Rúben Dias,614006,Manchester City,defender,38.275000000000006,5.0,0.0,43
+Antoine Semenyo,933576,Manchester City,forward,30.85,12.0,0.0,43
+Abdukodir Khusanov,1362998,Manchester City,defender,37.02666666666667,5.0,0.0,42
+Josko Gvardiol,1070712,Manchester City,defender,33.87,5.0,0.0,39
+Daichi Kamada,621515,Crystal Palace,midfielder,30.922,-1.0,0.0,30
+Yéremi Pino,1047676,Crystal Palace,midfielder,24.628666666666668,1.0,0.0,26
+Adam Wharton,1296650,Crystal Palace,midfielder,25.98,-1.0,0.0,25
+Tyrick Mitchell,1120224,Crystal Palace,midfielder,24.4,-1.0,0.0,23
+Nico O'Reilly,1300526,Manchester City,defender,18.386666666666663,5.0,0.0,23
+Jørgen Strand Larsen,821100,Crystal Palace,forward,14.749999999999998,3.0,0.0,18
+Chris Richards,950829,Crystal Palace,defender,27.35,-10.0,0.0,17
+Takehiro Tomiyasu,664444,Crystal Palace,defender,21.071666666666665,-5.0,0.0,16
+Ayyoub Bouaddi,1561552,Manchester City,midfielder,9.71866666666667,4.5,0.0,14
+Edward Nketiah,860920,Crystal Palace,midfielder,12.490666666666666,1.0,0.0,13
+Mateo Kovacic,239219,Manchester City,midfielder,7.215999999999999,4.5,0.0,12
+Ryan McAidoo,1680328,Manchester City,forward,7.896666666666667,3.0,0.0,11
+Vitor Reis,1580952,Manchester City,defender,4.4383333333333335,5.0,0.0,9
+Jaydee Canvot,1664722,Crystal Palace,defender,19.005,-10.0,0.0,9
+Kaden Braithwaite,1682403,Manchester City,defender,3.883333333333333,5.0,0.0,9
+Axel Disasi,696646,Crystal Palace,defender,8.818333333333333,0.0,0.0,9
+Dwight McNeil,939542,Crystal Palace,forward,7.363333333333333,0.0,0.0,7
+Evann Guessand,1087966,Crystal Palace,forward,6.16,0.0,0.0,6
+Óscar Mingueza,952095,Crystal Palace,midfielder,5.302,0.5,0.0,6
+Zavier Gozo,1455818,Crystal Palace,midfielder,1.959333333333333,0.5,0.0,2
+Rayan Aït-Nouri,933845,Manchester City,defender,0.0,0.0,0.0,0
+Rico Lewis,1288450,Manchester City,defender,0.0,0.0,0.0,0
+Will Hughes,295067,Crystal Palace,midfielder,0.0,0.0,0.0,0
+Jefferson Lerma,466672,Crystal Palace,midfielder,0.0,0.0,0.0,0
+Daniel Muñoz,859282,Crystal Palace,midfielder,0.0,0.0,0.0,0
+Claudio Echeverri,1486264,Manchester City,forward,0.0,0.0,0.0,0
+Manchester City Keepers,8456,Manchester City,goalkeeper,12.28,12.0,0.0,24
+Crystal Palace Keepers,9826,Crystal Palace,goalkeeper,25.86,-6.0,0.0,20

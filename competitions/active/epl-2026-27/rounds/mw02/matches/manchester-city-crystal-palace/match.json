@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "manchester-city-crystal-palace",
+  "fotmob_match_id": 5795429,
+  "source_url": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-crystal-palace/2ri9zd#5795429:tab=stats",
+  "home_team": "Crystal Palace",
+  "away_team": "Manchester City",
+  "raw_json_path": "intermediates/CrystalPalace_ManchesterCity.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

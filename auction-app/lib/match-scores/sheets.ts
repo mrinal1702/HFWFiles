@@ -105,6 +105,15 @@ const EPL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795372,
     rows: loadMatchScoreCsv("Fulham_Chelsea_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "crystal-palace-manchester-city",
+    title: "Crystal Palace vs Manchester City",
+    subtitle: "Premier League · Matchweek 2",
+    groupStageGw: 2,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795429,
+    rows: loadMatchScoreCsv("CrystalPalace_ManchesterCity_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
@@ -112,6 +121,11 @@ const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
     gw: 1,
     label: "Premier League GW1",
     sheets: EPL_MATCH_SCORE_SHEETS.filter((s) => s.groupStageGw === 1),
+  },
+  {
+    gw: 2,
+    label: "Premier League GW2",
+    sheets: EPL_MATCH_SCORE_SHEETS.filter((s) => s.groupStageGw === 2),
   },
 ];
 
