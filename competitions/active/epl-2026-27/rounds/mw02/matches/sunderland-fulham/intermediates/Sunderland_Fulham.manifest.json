@@ -1,0 +1,15 @@
+{
+  "match_id": 5795433,
+  "home_team": "Sunderland",
+  "away_team": "Fulham",
+  "source_url": "https://www.fotmob.com/en-GB/matches/sunderland-vs-fulham/2s9d8f#5795433:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw02/matches/sunderland-fulham/intermediates/Sunderland_Fulham.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/sunderland-vs-fulham/2s9d8f",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/sunderland-vs-fulham/2s9d8f#5795433:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/sunderland-vs-fulham/2s9d8f#5795433:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/sunderland-vs-fulham/2s9d8f#5795433:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795433"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

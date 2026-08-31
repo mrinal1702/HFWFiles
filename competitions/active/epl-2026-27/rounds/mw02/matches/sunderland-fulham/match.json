@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "sunderland-fulham",
+  "fotmob_match_id": 5795433,
+  "source_url": "https://www.fotmob.com/en-GB/matches/sunderland-vs-fulham/2s9d8f#5795433:tab=stats",
+  "home_team": "Sunderland",
+  "away_team": "Fulham",
+  "raw_json_path": "intermediates/Sunderland_Fulham.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

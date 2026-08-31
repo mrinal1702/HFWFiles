@@ -168,6 +168,15 @@ const EPL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795430,
     rows: loadMatchScoreCsv("LeedsUnited_Brentford_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "sunderland-fulham",
+    title: "Sunderland vs Fulham",
+    subtitle: "Premier League · Matchweek 2",
+    groupStageGw: 2,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795433,
+    rows: loadMatchScoreCsv("Sunderland_Fulham_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
