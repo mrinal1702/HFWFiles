@@ -159,6 +159,15 @@ const EPL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795427,
     rows: loadMatchScoreCsv("Chelsea_BrightonHoveAlbion_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "leeds-united-brentford",
+    title: "Leeds United vs Brentford",
+    subtitle: "Premier League · Matchweek 2",
+    groupStageGw: 2,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795430,
+    rows: loadMatchScoreCsv("LeedsUnited_Brentford_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

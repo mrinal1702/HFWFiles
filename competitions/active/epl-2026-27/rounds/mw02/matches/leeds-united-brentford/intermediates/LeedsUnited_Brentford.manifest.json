@@ -1,0 +1,15 @@
+{
+  "match_id": 5795430,
+  "home_team": "Leeds United",
+  "away_team": "Brentford",
+  "source_url": "https://www.fotmob.com/en-GB/matches/leeds-united-vs-brentford/2sso1t#5795430:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw02/matches/leeds-united-brentford/intermediates/LeedsUnited_Brentford.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/leeds-united-vs-brentford/2sso1t",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/leeds-united-vs-brentford/2sso1t#5795430:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/leeds-united-vs-brentford/2sso1t#5795430:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/leeds-united-vs-brentford/2sso1t#5795430:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795430"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

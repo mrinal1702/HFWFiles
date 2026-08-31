@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "leeds-united-brentford",
+  "fotmob_match_id": 5795430,
+  "source_url": "https://www.fotmob.com/en-GB/matches/leeds-united-vs-brentford/2sso1t#5795430:tab=stats",
+  "home_team": "Leeds United",
+  "away_team": "Brentford",
+  "raw_json_path": "intermediates/LeedsUnited_Brentford.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

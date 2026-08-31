@@ -7,7 +7,7 @@
   "round_number": 2,
   "legacy_game_week_id": 101,
   "expected_match_count": 10,
-  "_match_count_note": "GW2 in progress — 6 of 10 fixtures scored.",
+  "_match_count_note": "GW2 in progress — 7 of 10 fixtures scored.",
   "auction_ids": [9],
   "squad_lock_state": "locked",
   "scoring_state": "in_progress",
@@ -49,6 +49,12 @@
       "fotmob_match_id": 5795427,
       "home_team": "Chelsea",
       "away_team": "Brighton & Hove Albion"
+    },
+    {
+      "match_slug": "leeds-united-brentford",
+      "fotmob_match_id": 5795430,
+      "home_team": "Leeds United",
+      "away_team": "Brentford"
     }
   ]
 }
