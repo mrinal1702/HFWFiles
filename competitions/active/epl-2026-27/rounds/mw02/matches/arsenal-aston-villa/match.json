@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "arsenal-aston-villa",
+  "fotmob_match_id": 5795426,
+  "source_url": "https://www.fotmob.com/en-GB/matches/arsenal-vs-aston-villa/3c06vg#5795426:tab=stats",
+  "home_team": "Aston Villa",
+  "away_team": "Arsenal",
+  "raw_json_path": "intermediates/Arsenal_AstonVilla.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

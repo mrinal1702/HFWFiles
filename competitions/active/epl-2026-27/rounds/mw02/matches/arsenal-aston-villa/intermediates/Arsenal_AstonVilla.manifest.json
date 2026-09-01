@@ -1,0 +1,15 @@
+{
+  "match_id": 5795426,
+  "home_team": "Aston Villa",
+  "away_team": "Arsenal",
+  "source_url": "https://www.fotmob.com/en-GB/matches/arsenal-vs-aston-villa/3c06vg#5795426:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw02/matches/arsenal-aston-villa/intermediates/Arsenal_AstonVilla.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/arsenal-vs-aston-villa/3c06vg",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/arsenal-vs-aston-villa/3c06vg#5795426:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/arsenal-vs-aston-villa/3c06vg#5795426:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/arsenal-vs-aston-villa/3c06vg#5795426:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795426"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

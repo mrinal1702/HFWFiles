@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Gabriel,795179,Arsenal,defender,33.46,10.0,0.0,43
+Bukayo Saka,961995,Arsenal,midfielder,34.666,7.0,0.0,42
+Declan Rice,654096,Arsenal,midfielder,32.775333333333336,7.0,0.0,40
+Ben White,776151,Arsenal,defender,29.4,10.0,0.0,39
+Riccardo Calafiori,1105912,Arsenal,defender,28.475000000000005,10.0,0.0,38
+Boubacar Kamara,816325,Aston Villa,midfielder,26.022,3.0,0.0,29
+Ross Barkley,215384,Aston Villa,midfielder,24.178000000000004,3.0,0.0,27
+Ian Maatsen,966026,Aston Villa,defender,22.165,5.0,0.0,27
+Matty Cash,729731,Aston Villa,defender,20.935,5.0,0.0,26
+Myles Lewis-Skelly,1406436,Arsenal,defender,15.501666666666669,10.0,0.0,26
+Martin Ødegaard,534670,Arsenal,midfielder,18.27866666666667,7.0,0.0,25
+Victor Nilsson Lindelöf,258269,Aston Villa,defender,19.015,5.0,0.0,24
+Cristhian Mosquera,1298907,Arsenal,defender,13.798333333333334,10.0,0.0,24
+Pau Torres,792645,Aston Villa,defender,14.365,5.0,0.0,19
+Nicolas Jackson,1197347,Aston Villa,forward,19.106666666666666,0.0,0.0,19
+Emiliano Buendía,610184,Aston Villa,midfielder,15.726,3.0,0.0,19
+Mikel Merino,574645,Arsenal,midfielder,15.001333333333331,2.5,0.0,18
+Aaron Wan-Bissaka,760320,Aston Villa,defender,10.375,5.0,0.0,15
+John McGinn,356406,Aston Villa,forward,12.54,0.0,0.0,13
+Kai Havertz,749736,Arsenal,forward,8.69,3.0,0.0,12
+Martín Zubimendi,1031325,Arsenal,midfielder,8.752666666666666,2.5,0.0,11
+Eberechi Eze,818975,Arsenal,midfielder,6.452,4.5,0.0,11
+Ezri Konsa,710159,Arsenal,defender,5.916666666666666,5.0,0.0,11
+George Hemmings,1607333,Aston Villa,midfielder,6.226666666666667,3.0,0.0,9
+Alysson Edward,1656860,Aston Villa,forward,8.903333333333332,0.0,0.0,9
+Tammy Abraham,749661,Aston Villa,forward,7.163333333333332,0.0,0.0,7
+Bruno Guimarães,850354,Arsenal,midfielder,3.969333333333333,2.5,0.0,6
+Christos Tzolis,1157237,Arsenal,forward,6.41,0.0,0.0,6
+Alejandro Garnacho,1203665,Aston Villa,forward,5.41,0.0,0.0,5
+Tyrone Mings,419664,Aston Villa,defender,0.0,0.0,0.0,0
+Matteo Ruggeri,1051097,Aston Villa,defender,0.0,0.0,0.0,0
+Piero Hincapié,1137667,Arsenal,defender,0.0,0.0,0.0,0
+Lamare Bogarde,1190033,Aston Villa,midfielder,0.0,0.0,0.0,0
+Luka Lynch,1553189,Aston Villa,midfielder,0.0,0.0,0.0,0
+Viktor Gyökeres,664500,Arsenal,forward,0.0,0.0,0.0,0
+Noni Madueke,1084981,Arsenal,forward,0.0,0.0,0.0,0
+Arsenal Keepers,9825,Arsenal,goalkeeper,9.58,18.0,0.0,28
+Aston Villa Keepers,10252,Aston Villa,goalkeeper,10.12,12.0,0.0,22

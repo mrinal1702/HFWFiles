@@ -7,11 +7,11 @@
   "round_number": 2,
   "legacy_game_week_id": 101,
   "expected_match_count": 10,
-  "_match_count_note": "GW2 in progress — 9 of 10 fixtures scored.",
+  "_match_count_note": "GW2 complete — all 10 fixtures scored.",
   "auction_ids": [9],
   "squad_lock_state": "locked",
-  "scoring_state": "in_progress",
-  "publication_state": "partial",
+  "scoring_state": "complete",
+  "publication_state": "published",
   "algorithm_version": "1.0",
   "fixtures": [
     {
@@ -67,6 +67,12 @@
       "fotmob_match_id": 5795432,
       "home_team": "Manchester United",
       "away_team": "Ipswich Town"
+    },
+    {
+      "match_slug": "arsenal-aston-villa",
+      "fotmob_match_id": 5795426,
+      "home_team": "Aston Villa",
+      "away_team": "Arsenal"
     }
   ]
 }
