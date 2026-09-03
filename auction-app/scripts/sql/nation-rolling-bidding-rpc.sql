@@ -257,6 +257,7 @@ begin
 
   v_rolling_interval := case
     when v_mode = 'nation_rolling' then interval '12 hours'
+    when p_auction_id = 11 then interval '12 hours'
     else interval '24 hours'
   end;
 
@@ -497,7 +498,7 @@ end;
 $$;
 
 comment on function public.place_bid(bigint, text, bigint, bigint) is
-  'Places one bid. global: initiation/raise/hard on Auctions. nation_rolling: per-nation raise/hard, 12h rolling timer, no initiation.';
+  'Places one bid. global: initiation/raise/hard on Auctions (24h rolling, except auction 11 = 12h). nation_rolling: per-nation raise/hard, 12h rolling timer, no initiation.';
 
 grant execute on function public.place_bid(bigint, text, bigint, bigint) to authenticated;
 grant execute on function public.place_bid(bigint, text, bigint, bigint) to service_role;
