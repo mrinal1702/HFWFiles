@@ -8,6 +8,7 @@ import { NationRollingDeadlinesButton } from "@/app/auctions/_components/NationR
 import { RefreshButton } from "@/app/auctions/_components/RefreshButton";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadAuctionDashboard } from "@/lib/auction-dashboard";
+import { isAuctionSpectator } from "@/lib/auction-spectators";
 import { loadNationDeadlinesForAuction } from "@/lib/nation-deadlines-data";
 
 export const dynamic = "force-dynamic";
@@ -34,7 +35,8 @@ export default async function AuctionLayout({
   if (!d.auction) {
     notFound();
   }
-  if (!d.me) {
+  const spectator = !d.me && isAuctionSpectator(auctionId, user.id);
+  if (!d.me && !spectator) {
     redirect("/dashboard?error=not_member");
   }
 
@@ -108,6 +110,19 @@ export default async function AuctionLayout({
             </div>
           )}
 
+          {spectator && (
+            <div
+              className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900"
+              role="status"
+            >
+              <p className="font-medium">Spectator — view only</p>
+              <p className="mt-1 text-slate-600">
+                You don&apos;t hold a seat in this auction. You can follow bids, budgets and squads,
+                but you cannot bid, release, or transfer.
+              </p>
+            </div>
+          )}
+
           {d.me?.is_relegated && (
             <div
               className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-950"
@@ -122,13 +137,15 @@ export default async function AuctionLayout({
             </div>
           )}
 
-          <AuctionBudgetStrip
-            auctionId={auctionId}
-            participantName={d.me?.name ?? "—"}
-            teamName={d.me?.team_name ?? null}
-            budgetRemaining={d.me?.budget_remaining}
-            activeBudget={d.me?.active_budget}
-          />
+          {d.me && (
+            <AuctionBudgetStrip
+              auctionId={auctionId}
+              participantName={d.me.name ?? "—"}
+              teamName={d.me.team_name ?? null}
+              budgetRemaining={d.me.budget_remaining}
+              activeBudget={d.me.active_budget}
+            />
+          )}
         </header>
         {children}
       </div>
