@@ -1,0 +1,15 @@
+{
+  "match_id": 5795367,
+  "home_team": "Nottingham Forest",
+  "away_team": "Leeds United",
+  "source_url": "https://www.fotmob.com/en-GB/matches/leeds-vs-nottm-forest/2vqauu#5795367:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/NottinghamForest_Vs_LeedsUnited.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/leeds-vs-nottm-forest/2vqauu",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/leeds-vs-nottm-forest/2vqauu#5795367:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/leeds-vs-nottm-forest/2vqauu#5795367:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/leeds-vs-nottm-forest/2vqauu#5795367:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795367"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

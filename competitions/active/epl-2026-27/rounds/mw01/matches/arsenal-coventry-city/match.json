@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "arsenal-coventry-city",
+  "fotmob_match_id": 5795363,
+  "source_url": "https://www.fotmob.com/en-GB/matches/coventry-vs-arsenal/2tttz6#5795363:tab=stats",
+  "home_team": "Arsenal",
+  "away_team": "Coventry City",
+  "raw_json_path": "intermediates/Arsenal_Vs_CoventryCity.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

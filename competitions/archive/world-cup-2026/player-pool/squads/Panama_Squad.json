@@ -1,0 +1,169 @@
+{
+  "team_name": "Panama",
+  "team_id": 5922,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/5922/squad/panama",
+  "players": [
+    {
+      "player_id": 36053,
+      "player_name": "Thomas Christiansen",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/36053/thomas-christiansen"
+    },
+    {
+      "player_id": 183088,
+      "player_name": "Alberto Quintero",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/183088/alberto-quintero"
+    },
+    {
+      "player_id": 206088,
+      "player_name": "Luis Mejía",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/206088/luis-mejia"
+    },
+    {
+      "player_id": 308131,
+      "player_name": "Aníbal Godoy",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/308131/anibal-godoy"
+    },
+    {
+      "player_id": 312159,
+      "player_name": "Cecilio Waterman",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/312159/cecilio-waterman"
+    },
+    {
+      "player_id": 501847,
+      "player_name": "Roderick Miller",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/501847/roderick-miller"
+    },
+    {
+      "player_id": 503710,
+      "player_name": "Éric Davis",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/503710/eric-davis"
+    },
+    {
+      "player_id": 526710,
+      "player_name": "Yoel Bárcenas",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/526710/yoel-barcenas"
+    },
+    {
+      "player_id": 531913,
+      "player_name": "Orlando Mosquera",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/531913/orlando-mosquera"
+    },
+    {
+      "player_id": 574077,
+      "player_name": "Ismael Díaz",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/574077/ismael-diaz"
+    },
+    {
+      "player_id": 643635,
+      "player_name": "Amir Murillo",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/643635/amir-murillo"
+    },
+    {
+      "player_id": 643638,
+      "player_name": "Fidel Escobar",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/643638/fidel-escobar"
+    },
+    {
+      "player_id": 643682,
+      "player_name": "Adalberto Carrasquilla",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/643682/adalberto-carrasquilla"
+    },
+    {
+      "player_id": 688448,
+      "player_name": "Jiovany Ramos",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/688448/jiovany-ramos"
+    },
+    {
+      "player_id": 688449,
+      "player_name": "Andrés Andrade",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/688449/andres-andrade"
+    },
+    {
+      "player_id": 727101,
+      "player_name": "Cristian Martínez",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/727101/cristian-martinez"
+    },
+    {
+      "player_id": 888966,
+      "player_name": "César Blackman",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/888966/cesar-blackman"
+    },
+    {
+      "player_id": 924235,
+      "player_name": "Jorge Gutiérrez",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/924235/jorge-gutierrez"
+    },
+    {
+      "player_id": 940333,
+      "player_name": "José Luis Rodríguez",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/940333/jose-luis-rodriguez"
+    },
+    {
+      "player_id": 940334,
+      "player_name": "José Fajardo",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/940334/jose-fajardo"
+    },
+    {
+      "player_id": 1017520,
+      "player_name": "Carlos Harvey",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1017520/carlos-harvey"
+    },
+    {
+      "player_id": 1054138,
+      "player_name": "Tomás Rodríguez",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1054138/tomas-rodriguez"
+    },
+    {
+      "player_id": 1137803,
+      "player_name": "César Yanis",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1137803/cesar-yanis"
+    },
+    {
+      "player_id": 1223132,
+      "player_name": "José Córdoba",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1223132/jose-cordoba"
+    },
+    {
+      "player_id": 1330683,
+      "player_name": "César Samudio",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1330683/cesar-samudio"
+    },
+    {
+      "player_id": 1404414,
+      "player_name": "Azarías Londoño",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1404414/azarias-londono"
+    },
+    {
+      "player_id": 1454648,
+      "player_name": "Edgardo Fariña",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1454648/edgardo-farina"
+    }
+  ]
+}

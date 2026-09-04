@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "everton-crystal-palace",
+  "fotmob_match_id": 5795365,
+  "source_url": "https://www.fotmob.com/en-GB/matches/everton-vs-crystal-palace/2tttz7#5795365:tab=stats",
+  "home_team": "Everton",
+  "away_team": "Crystal Palace",
+  "raw_json_path": "intermediates/Everton_Vs_CrystalPalace.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

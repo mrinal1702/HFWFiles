@@ -1,0 +1,222 @@
+{
+  "teams": [
+    {
+      "team_name": "AEK Athens",
+      "team_id": 8563,
+      "slug": "aek-athens",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8563/squad/aek-athens"
+    },
+    {
+      "team_name": "Arsenal",
+      "team_id": 9825,
+      "slug": "arsenal",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/9825/squad/arsenal"
+    },
+    {
+      "team_name": "Aston Villa",
+      "team_id": 10252,
+      "slug": "aston-villa",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/10252/squad/aston-villa"
+    },
+    {
+      "team_name": "Atletico Madrid",
+      "team_id": 9906,
+      "slug": "atletico-madrid",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/9906/squad/atletico-madrid"
+    },
+    {
+      "team_name": "Barcelona",
+      "team_id": 8634,
+      "slug": "barcelona",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8634/squad/barcelona"
+    },
+    {
+      "team_name": "Bayern Munich",
+      "team_id": 9823,
+      "slug": "bayern-munchen",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/9823/squad/bayern-munchen"
+    },
+    {
+      "team_name": "Bodo/Glimt",
+      "team_id": 8402,
+      "slug": "bodoglimt",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8402/squad/bodoglimt"
+    },
+    {
+      "team_name": "Borussia Dortmund",
+      "team_id": 9789,
+      "slug": "borussia-dortmund",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/9789/squad/borussia-dortmund"
+    },
+    {
+      "team_name": "Club Brugge",
+      "team_id": 8342,
+      "slug": "club-brugge",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8342/squad/club-brugge"
+    },
+    {
+      "team_name": "Como",
+      "team_id": 10171,
+      "slug": "como",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/10171/squad/como"
+    },
+    {
+      "team_name": "FC Porto",
+      "team_id": 9773,
+      "slug": "fc-porto",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/9773/squad/fc-porto"
+    },
+    {
+      "team_name": "Fenerbahce",
+      "team_id": 8695,
+      "slug": "fenerbahce",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8695/squad/fenerbahce"
+    },
+    {
+      "team_name": "Feyenoord",
+      "team_id": 10235,
+      "slug": "feyenoord",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/10235/squad/feyenoord"
+    },
+    {
+      "team_name": "Galatasaray",
+      "team_id": 8637,
+      "slug": "galatasaray",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8637/squad/galatasaray"
+    },
+    {
+      "team_name": "Inter",
+      "team_id": 8636,
+      "slug": "inter",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8636/squad/inter"
+    },
+    {
+      "team_name": "LASK",
+      "team_id": 9977,
+      "slug": "lask",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/9977/squad/lask"
+    },
+    {
+      "team_name": "Lens",
+      "team_id": 8588,
+      "slug": "lens",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8588/squad/lens"
+    },
+    {
+      "team_name": "Lille",
+      "team_id": 8639,
+      "slug": "lille",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8639/squad/lille"
+    },
+    {
+      "team_name": "Liverpool",
+      "team_id": 8650,
+      "slug": "liverpool",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8650/squad/liverpool"
+    },
+    {
+      "team_name": "Manchester City",
+      "team_id": 8456,
+      "slug": "manchester-city",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8456/squad/manchester-city"
+    },
+    {
+      "team_name": "Manchester United",
+      "team_id": 10260,
+      "slug": "manchester-united",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/10260/squad/manchester-united"
+    },
+    {
+      "team_name": "Napoli",
+      "team_id": 9875,
+      "slug": "napoli",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/9875/squad/napoli"
+    },
+    {
+      "team_name": "Paris Saint-Germain",
+      "team_id": 9847,
+      "slug": "paris-saint-germain",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/9847/squad/paris-saint-germain"
+    },
+    {
+      "team_name": "PSV Eindhoven",
+      "team_id": 8640,
+      "slug": "psv-eindhoven",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8640/squad/psv-eindhoven"
+    },
+    {
+      "team_name": "RB Leipzig",
+      "team_id": 178475,
+      "slug": "rb-leipzig",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/178475/squad/rb-leipzig"
+    },
+    {
+      "team_name": "Real Betis",
+      "team_id": 8603,
+      "slug": "real-betis",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8603/squad/real-betis"
+    },
+    {
+      "team_name": "Real Madrid",
+      "team_id": 8633,
+      "slug": "real-madrid",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8633/squad/real-madrid"
+    },
+    {
+      "team_name": "Roma",
+      "team_id": 8686,
+      "slug": "roma",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8686/squad/roma"
+    },
+    {
+      "team_name": "Slavia Prague",
+      "team_id": 7787,
+      "slug": "slavia-prague",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/7787/squad/slavia-prague"
+    },
+    {
+      "team_name": "Slovan Bratislava",
+      "team_id": 6019,
+      "slug": "slovan-bratislava",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/6019/squad/slovan-bratislava"
+    },
+    {
+      "team_name": "Sporting CP",
+      "team_id": 9768,
+      "slug": "sporting-cp",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/9768/squad/sporting-cp"
+    },
+    {
+      "team_name": "Shakhtar Donetsk",
+      "team_id": 9728,
+      "slug": "shakhtar-donetsk",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/9728/overview/shakhtar-donetsk",
+      "_squad_note": "FotMob squad page returns HTTP 500; roster built from recent match lineups via scripts/fetch_shakhtar_from_lineups.py"
+    },
+    {
+      "team_name": "Sabah FK",
+      "team_id": 951893,
+      "slug": "sabah-fk",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/951893/stats/sabah-fk/players",
+      "_squad_note": "FotMob squad page returns HTTP 500; roster built from recent match lineups via scripts/fetch_sabah_from_lineups.py"
+    },
+    {
+      "team_name": "VfB Stuttgart",
+      "team_id": 10269,
+      "slug": "vfb-stuttgart",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/10269/squad/vfb-stuttgart"
+    },
+    {
+      "team_name": "Viking",
+      "team_id": 8478,
+      "slug": "viking",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/8478/squad/viking"
+    },
+    {
+      "team_name": "Villarreal",
+      "team_id": 10205,
+      "slug": "villarreal",
+      "squad_url": "https://www.fotmob.com/en-GB/teams/10205/squad/villarreal"
+    }
+  ]
+}

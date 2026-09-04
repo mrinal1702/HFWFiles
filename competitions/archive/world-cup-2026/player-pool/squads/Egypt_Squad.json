@@ -1,0 +1,169 @@
+{
+  "team_name": "Egypt",
+  "team_id": 10255,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/10255/squad/egypt",
+  "players": [
+    {
+      "player_id": 292462,
+      "player_name": "Mohamed Salah",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/292462/mohamed-salah"
+    },
+    {
+      "player_id": 505814,
+      "player_name": "Hossam Hassan",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/505814/hossam-hassan"
+    },
+    {
+      "player_id": 505872,
+      "player_name": "Ramy Rabia",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/505872/ramy-rabia"
+    },
+    {
+      "player_id": 513492,
+      "player_name": "Trezeguet",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/513492/trezeguet"
+    },
+    {
+      "player_id": 532766,
+      "player_name": "Zizo",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/532766/zizo"
+    },
+    {
+      "player_id": 533403,
+      "player_name": "Yasser Ibrahim",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/533403/yasser-ibrahim"
+    },
+    {
+      "player_id": 546550,
+      "player_name": "Mohamed El Shenawy",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/546550/mohamed-el-shenawy"
+    },
+    {
+      "player_id": 560416,
+      "player_name": "Karim Hafez",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/560416/karim-hafez"
+    },
+    {
+      "player_id": 653688,
+      "player_name": "Al Mahdi Soliman",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/653688/el-mahdy-soliman"
+    },
+    {
+      "player_id": 660213,
+      "player_name": "Mohamed Hany",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/660213/mohamed-hany"
+    },
+    {
+      "player_id": 839204,
+      "player_name": "Omar Marmoush",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/839204/omar-marmoush"
+    },
+    {
+      "player_id": 849334,
+      "player_name": "Ahmed Abou El Fotouh",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/849334/ahmed-fatouh"
+    },
+    {
+      "player_id": 906944,
+      "player_name": "Mohanad Lasheen",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/906944/mohanad-lasheen"
+    },
+    {
+      "player_id": 971787,
+      "player_name": "Haissem Hassan",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/971787/haissem-hassan"
+    },
+    {
+      "player_id": 979376,
+      "player_name": "Emam Ashour",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/979376/emam-ashour"
+    },
+    {
+      "player_id": 1001335,
+      "player_name": "Nabil Dunga",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1001335/nabil-emad-dunga"
+    },
+    {
+      "player_id": 1022128,
+      "player_name": "Hamdi Fathy",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1022128/hamdi-fathy"
+    },
+    {
+      "player_id": 1179331,
+      "player_name": "Mohamed Abdelmonem",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1179331/mohamed-abdelmonem"
+    },
+    {
+      "player_id": 1228546,
+      "player_name": "Mostafa Ahmed Shobeir",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1228546/mostafa-shobeir"
+    },
+    {
+      "player_id": 1272436,
+      "player_name": "Ibrahim Adel",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1272436/ibrahim-adel"
+    },
+    {
+      "player_id": 1291391,
+      "player_name": "Mahmoud Saber",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1291391/mahmoud-saber"
+    },
+    {
+      "player_id": 1384425,
+      "player_name": "Hossam Abdelmaguid",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1384425/hossam-abdelmaguid"
+    },
+    {
+      "player_id": 1418549,
+      "player_name": "Marwan Ateya",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1418549/marwan-attia"
+    },
+    {
+      "player_id": 1426403,
+      "player_name": "Mostafa Ziko",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1426403/mostafa-zico"
+    },
+    {
+      "player_id": 1689101,
+      "player_name": "Tarek Alaa",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1689101/tarek-alaa"
+    },
+    {
+      "player_id": 1689371,
+      "player_name": "Mohamed Alaa",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1689371/mohamed-alaa"
+    },
+    {
+      "player_id": 1927440,
+      "player_name": "Hamza Abdelkarim",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1927440/hamza-abdelkarim"
+    }
+  ]
+}

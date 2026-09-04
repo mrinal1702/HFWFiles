@@ -20,6 +20,18 @@ FINAL_POINTS_COLUMNS = [
     "position",
     "stats_score",
     "endowment_score",
+    "shootout_score",
+    "final_score",
+]
+
+# Legacy CSVs (pre–shootout column) still accepted by upload/parser helpers.
+LEGACY_FINAL_POINTS_COLUMNS = [
+    "player_name",
+    "player_id",
+    "team_name",
+    "position",
+    "stats_score",
+    "endowment_score",
     "final_score",
 ]
 
@@ -28,6 +40,7 @@ def merge_outfield_and_keepers(
     outfield_df: pd.DataFrame,
     keepers_df: pd.DataFrame,
     *,
+    match_data: dict[str, Any] | None = None,
     validate: bool = True,
 ) -> pd.DataFrame:
     """
@@ -74,12 +87,69 @@ def merge_outfield_and_keepers(
 
     merged = pd.concat([out_final, keep_final], ignore_index=True)
     merged["final_score_raw"] = pd.to_numeric(merged["final_score_raw"], errors="coerce").fillna(0.0)
+    merged["shootout_score"] = 0.0
     merged["final_score"] = merged["final_score_raw"].round().clip(lower=0).astype(int)
-    result = merged[FINAL_POINTS_COLUMNS].copy()
+    result = merged[
+        [
+            "player_name",
+            "player_id",
+            "team_name",
+            "position",
+            "stats_score",
+            "endowment_score",
+            "shootout_score",
+            "final_score",
+        ]
+    ].copy()
+
+    result = apply_penalty_shootout_points(result, match_data)
 
     if validate:
         validate_final_points_df(result, context="merge_outfield_and_keepers")
     return result
+
+
+def apply_penalty_shootout_points(
+    df: pd.DataFrame,
+    match_data: dict[str, Any] | None,
+) -> pd.DataFrame:
+    """Add shootout_score column and recompute final_score when a shootout occurred."""
+    from penalty_shootout_points import compute_penalty_shootout_points
+
+    result = df.copy()
+    if "shootout_score" not in result.columns:
+        result["shootout_score"] = 0.0
+
+    outfield_pts: dict[int, float] = {}
+    keeper_pts_by_team: dict[int, float] = {}
+    if match_data is not None:
+        outfield_pts, keeper_pts_by_team = compute_penalty_shootout_points(match_data)
+
+    if not outfield_pts and not keeper_pts_by_team:
+        result["final_score"] = (
+            pd.to_numeric(result["stats_score"], errors="coerce").fillna(0.0)
+            + pd.to_numeric(result["endowment_score"], errors="coerce").fillna(0.0)
+            + pd.to_numeric(result["shootout_score"], errors="coerce").fillna(0.0)
+        ).round().clip(lower=0).astype(int)
+        return result[FINAL_POINTS_COLUMNS].copy()
+
+    shootout_col: list[float] = []
+    for _, row in result.iterrows():
+        pid = int(pd.to_numeric(row["player_id"], errors="coerce"))
+        position = str(row.get("position") or "").strip().lower()
+        if position == "goalkeeper":
+            shootout_col.append(float(keeper_pts_by_team.get(pid, 0.0)))
+        else:
+            shootout_col.append(float(outfield_pts.get(pid, 0.0)))
+
+    result["shootout_score"] = shootout_col
+    raw_total = (
+        pd.to_numeric(result["stats_score"], errors="coerce").fillna(0.0)
+        + pd.to_numeric(result["endowment_score"], errors="coerce").fillna(0.0)
+        + pd.to_numeric(result["shootout_score"], errors="coerce").fillna(0.0)
+    )
+    result["final_score"] = raw_total.round().clip(lower=0).astype(int)
+    return result[FINAL_POINTS_COLUMNS].copy()
 
 
 def validate_final_points_df(df: pd.DataFrame, *, context: str = "") -> None:
@@ -90,6 +160,10 @@ def validate_final_points_df(df: pd.DataFrame, *, context: str = "") -> None:
     final_score forced to 0 because total_points was never computed.
     """
     prefix = f"{context}: " if context else ""
+    if "shootout_score" not in df.columns:
+        df = df.copy()
+        df["shootout_score"] = 0.0
+
     required = set(FINAL_POINTS_COLUMNS)
     missing = required - set(df.columns)
     if missing:
@@ -104,8 +178,9 @@ def validate_final_points_df(df: pd.DataFrame, *, context: str = "") -> None:
         name = str(row.get("player_name") or "")
         stats = float(pd.to_numeric(row.get("stats_score"), errors="coerce") or 0)
         endow = float(pd.to_numeric(row.get("endowment_score"), errors="coerce") or 0)
+        shootout = float(pd.to_numeric(row.get("shootout_score"), errors="coerce") or 0)
         final = int(pd.to_numeric(row.get("final_score"), errors="coerce") or 0)
-        raw_total = stats + endow
+        raw_total = stats + endow + shootout
         expected = int(max(0, round(raw_total)))
 
         if raw_total > 0.01 and final == 0:

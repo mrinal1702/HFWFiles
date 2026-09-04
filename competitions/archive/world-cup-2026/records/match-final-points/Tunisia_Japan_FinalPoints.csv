@@ -1,0 +1,47 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Ayase Ueda,942393,Japan,forward,58.375,12.0,0.0,70
+Ko Itakura,620917,Japan,defender,48.97,10.0,0.0,59
+Hiroki Ito,851626,Japan,defender,37.85000000000001,10.0,0.0,48
+Kaishu Sano,1033111,Japan,midfielder,34.593999999999994,13.0,0.0,48
+Keito Nakamura,887704,Japan,forward,35.275,9.0,0.0,44
+Ao Tanaka,935728,Japan,midfielder,27.157999999999998,13.0,0.0,40
+Takehiro Tomiyasu,664444,Japan,defender,30.11333333333333,10.0,0.0,40
+Junya Ito,604044,Japan,forward,27.916666666666664,12.0,0.0,40
+Daichi Kamada,621515,Japan,midfielder,21.105333333333334,11.0,0.0,32
+Ritsu Doan,629805,Japan,midfielder,10.968666666666667,11.0,0.0,22
+Dylan Bronn,771686,Tunisia,defender,19.810000000000002,0.0,0.0,20
+Anis Ben Slimane,1055316,Tunisia,midfielder,21.014000000000003,-3.0,0.0,18
+Ayumu Seko,857120,Japan,defender,12.636666666666667,5.0,0.0,18
+Omar Rekik,1160097,Tunisia,defender,25.760000000000005,-10.0,0.0,16
+Junnosuke Suzuki,1337765,Japan,defender,8.796666666666667,5.0,0.0,14
+Ali Abdi,566187,Tunisia,defender,23.546666666666674,-10.0,0.0,14
+Amine Ben Hamida,1131928,Tunisia,defender,17.880000000000003,-5.0,0.0,13
+Yan Valery,789596,Tunisia,defender,21.64,-10.0,0.0,12
+Ellyes Skhiri,574642,Tunisia,midfielder,13.862666666666668,-3.0,0.0,11
+Montassar Talbi,846392,Tunisia,defender,20.770000000000003,-10.0,0.0,11
+Yukinari Sugawara,924610,Japan,defender,5.033333333333333,5.0,0.0,10
+Yuito Suzuki,1134467,Japan,midfielder,5.482666666666666,4.5,0.0,10
+Sebastian Tounekti,921919,Tunisia,forward,6.541666666666666,0.0,0.0,7
+Keisuke Goto,1436730,Japan,forward,8.716666666666665,-2.5,0.0,6
+Elias Saad,1285773,Tunisia,forward,3.908333333333333,0.0,0.0,4
+Hannibal Mejbri,1113785,Tunisia,midfielder,5.7620000000000005,-3.0,0.0,3
+Firas Chaouat,845336,Tunisia,forward,4.9,-2.5,0.0,2
+Ismaël Gharbi,1244924,Tunisia,midfielder,3.05,-1.5,0.0,2
+Yuto Nagatomo,98254,Japan,defender,0.0,0.0,0.0,0
+Shogo Taniguchi,523731,Japan,defender,0.0,0.0,0.0,0
+Tsuyoshi Watanabe,1023887,Japan,defender,0.0,0.0,0.0,0
+Moutaz Neffati,1413151,Tunisia,defender,0.0,0.0,0.0,0
+Raed Chikhaoui,1721242,Tunisia,defender,0.0,0.0,0.0,0
+Adem Arous,1797902,Tunisia,defender,0.0,0.0,0.0,0
+Rani Khedira,304348,Tunisia,midfielder,0.0,0.0,0.0,0
+Elias Achouri,1015128,Tunisia,midfielder,0.0,0.0,0.0,0
+Hadj Mahmoud,1131896,Tunisia,midfielder,0.0,0.0,0.0,0
+Khalil Ayari,1715492,Tunisia,midfielder,0.0,0.0,0.0,0
+Mortadha Ben Ouanes,712132,Tunisia,forward,0.0,0.0,0.0,0
+Koki Ogawa,727837,Japan,forward,0.0,0.0,0.0,0
+Daizen Maeda,728765,Japan,forward,0.0,0.0,0.0,0
+Hazem Mastouri,1311408,Tunisia,forward,0.0,0.0,0.0,0
+Kento Shiogai,1611223,Japan,forward,0.0,0.0,0.0,0
+Rayan Elloumi,1685596,Tunisia,forward,0.0,0.0,0.0,0
+Japan Keepers,6715,Japan,goalkeeper,9.620000000000001,18.0,0.0,28
+Tunisia Keepers,6719,Tunisia,goalkeeper,10.100000000000001,-6.0,0.0,4

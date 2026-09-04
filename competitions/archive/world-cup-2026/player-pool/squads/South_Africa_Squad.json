@@ -1,0 +1,169 @@
+{
+  "team_name": "South Africa",
+  "team_id": 6316,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6316/squad/south-africa",
+  "players": [
+    {
+      "player_id": 179919,
+      "player_name": "Hugo Broos",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/179919/hugo-broos"
+    },
+    {
+      "player_id": 253991,
+      "player_name": "Ronwen Williams",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/253991/ronwen-williams"
+    },
+    {
+      "player_id": 303609,
+      "player_name": "Themba Zwane",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/303609/themba-zwane"
+    },
+    {
+      "player_id": 428006,
+      "player_name": "Ricardo Goss",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/428006/ricardo-goss"
+    },
+    {
+      "player_id": 616179,
+      "player_name": "Aubrey Modiba",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/616179/aubrey-modiba"
+    },
+    {
+      "player_id": 716819,
+      "player_name": "Nkosinathi Sibisi",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/716819/nkosinathi-sibisi"
+    },
+    {
+      "player_id": 787099,
+      "player_name": "Sipho Chaine",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/787099/sipho-chaine"
+    },
+    {
+      "player_id": 848361,
+      "player_name": "Teboho Mokoena",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/848361/teboho-mokoena"
+    },
+    {
+      "player_id": 881500,
+      "player_name": "Lyle Foster",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/881500/lyle-foster"
+    },
+    {
+      "player_id": 940010,
+      "player_name": "Khuliso Mudau",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/940010/khuliso-mudau"
+    },
+    {
+      "player_id": 1054166,
+      "player_name": "Oswin Appollis",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1054166/oswin-appollis"
+    },
+    {
+      "player_id": 1076668,
+      "player_name": "Iqraam Rayners",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1076668/iqraam-rayners"
+    },
+    {
+      "player_id": 1107735,
+      "player_name": "Sphephelo Sithole",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1107735/yaya-sithole"
+    },
+    {
+      "player_id": 1124424,
+      "player_name": "Thalente Mbatha",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1124424/thalente-mbatha"
+    },
+    {
+      "player_id": 1137059,
+      "player_name": "Evidence Makgopa",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1137059/evidence-makgopa"
+    },
+    {
+      "player_id": 1178629,
+      "player_name": "Jayden Adams",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1178629/jayden-adams"
+    },
+    {
+      "player_id": 1202481,
+      "player_name": "Bradley Cross",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1202481/bradley-cross"
+    },
+    {
+      "player_id": 1289611,
+      "player_name": "Tshepang Moremi",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1289611/tshepang-moremi"
+    },
+    {
+      "player_id": 1394951,
+      "player_name": "Thapelo Maseko",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1394951/thapelo-maseko"
+    },
+    {
+      "player_id": 1451566,
+      "player_name": "Kamogelo Sebelebele",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1451566/kamogelo-sebelebele"
+    },
+    {
+      "player_id": 1469826,
+      "player_name": "Olwethu Makhanya",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1469826/olwethu-makhanya"
+    },
+    {
+      "player_id": 1471333,
+      "player_name": "Relebohile Mofokeng",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1471333/relebohile-mofokeng"
+    },
+    {
+      "player_id": 1579341,
+      "player_name": "Thabang Matuludi",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1579341/thabang-matuludi"
+    },
+    {
+      "player_id": 1600334,
+      "player_name": "Ime Okon",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1600334/ime-okon"
+    },
+    {
+      "player_id": 1680659,
+      "player_name": "Samukelo Kabini",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1680659/samukele-kabini"
+    },
+    {
+      "player_id": 1680696,
+      "player_name": "Khulumani Ndamane",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1680696/khulumani-ndamane"
+    },
+    {
+      "player_id": 1719066,
+      "player_name": "Mbekezeli Mbokazi",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1719066/mbekezeli-mbokazi"
+    }
+  ]
+}

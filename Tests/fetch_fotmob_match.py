@@ -125,6 +125,7 @@ def run_scoring(json_path: Path, scores_dir: Path) -> None:
         scores_dir / f"{base}_Points.csv",
         scores_dir / f"{base}_KeeperPoints.csv",
         scores_dir / f"{base}_FinalPoints.csv",
+        json_path,
     )
     outfield_src = scores_dir / f"{base}_Points.csv"
     outfield_dst = scores_dir / f"{base}_Outfield_Points.csv"
@@ -144,14 +145,15 @@ def _output_base(json_path: Path, suffix: str) -> str:
     return f"{_match_label(data)}{suffix}"
 
 
-def _merge_final_points(outfield_path: Path, keepers_path: Path, out_path: Path) -> None:
+def _merge_final_points(outfield_path: Path, keepers_path: Path, out_path: Path, json_path: Path) -> None:
     import pandas as pd
 
     from final_points import merge_outfield_and_keepers
 
     outfield = pd.read_csv(outfield_path)
     keepers = pd.read_csv(keepers_path)
-    merged = merge_outfield_and_keepers(outfield, keepers, validate=True)
+    match_data = json.loads(json_path.read_text(encoding="utf-8"))
+    merged = merge_outfield_and_keepers(outfield, keepers, match_data=match_data, validate=True)
     merged.to_csv(out_path, index=False, encoding="utf-8")
 
 

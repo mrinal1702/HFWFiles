@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "hull-city-manchester-united",
+  "fotmob_match_id": 5795364,
+  "source_url": "https://www.fotmob.com/en-GB/matches/hull-vs-man-united/2yngir#5795364:tab=stats",
+  "home_team": "Hull City",
+  "away_team": "Manchester United",
+  "raw_json_path": "intermediates/HullCity_Vs_ManchesterUnited.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

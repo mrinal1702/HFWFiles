@@ -1,0 +1,47 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Leandro Trossard,318615,Belgium,midfielder,53.418,11.0,0.0,64
+Kevin De Bruyne,169200,Belgium,midfielder,42.736,11.0,0.0,54
+Hans Vanaken,203666,Belgium,midfielder,38.09,13.0,0.0,51
+Arthur Theate,1173250,Belgium,defender,35.74000000000001,5.0,0.0,41
+Maxim De Cuyper,1134871,Belgium,defender,33.31,5.0,0.0,38
+Brandon Mechele,445873,Belgium,defender,30.970000000000006,5.0,0.0,36
+Timothy Castagne,465750,Belgium,defender,29.240000000000006,5.0,0.0,34
+Romelu Lukaku,181276,Belgium,forward,30.283333333333335,3.5,0.0,34
+Matias Fernandez-Pardo,1444231,Belgium,forward,26.45833333333333,6.5,0.0,33
+Charles De Ketelaere,1095432,Belgium,midfielder,22.319333333333333,9.0,0.0,31
+Elijah Just,1053736,New Zealand,midfielder,34.07000000000001,-3.0,0.0,31
+Jérémy Doku,942368,Belgium,forward,23.983333333333334,6.0,0.0,30
+Nicolas Raskin,863869,Belgium,midfielder,21.436666666666667,6.5,0.0,28
+Liberato Cacace,919671,New Zealand,defender,29.953333333333337,-5.0,0.0,25
+Youri Tielemans,465960,Belgium,midfielder,14.211333333333334,9.0,0.0,23
+Alexis Saelemaekers,921341,Belgium,midfielder,18.572000000000003,4.5,0.0,23
+Chris Wood,169719,New Zealand,forward,18.641666666666666,3.0,0.0,22
+Marko Stamenic,1209597,New Zealand,midfielder,24.302000000000003,-3.0,0.0,21
+Joe Bell,848345,New Zealand,midfielder,19.46533333333333,1.0,0.0,20
+Amadou Onana,1185748,Belgium,midfielder,10.026,4.5,0.0,15
+Jesse Randall,1460327,New Zealand,forward,12.041666666666666,0.5,0.0,13
+Tyler Bindon,1524716,New Zealand,defender,27.290000000000003,-15.0,0.0,12
+Ryan Thomas,496356,New Zealand,midfielder,8.66,3.0,0.0,12
+Sarpreet Singh,724531,New Zealand,midfielder,7.59,3.0,0.0,11
+Tim Payne,324305,New Zealand,defender,10.283333333333333,0.0,0.0,10
+Francis De Vries,825593,New Zealand,defender,8.676666666666668,-5.0,0.0,4
+Callum McCowatt,848352,New Zealand,midfielder,4.134666666666666,-1.5,0.0,3
+Benjamin Old,1257745,New Zealand,defender,12.02,-15.0,0.0,0
+Finn Surman,1325761,New Zealand,defender,10.45,-15.0,0.0,0
+Michael Boxall,128949,New Zealand,defender,6.136666666666667,-10.0,0.0,0
+Tommy Smith,115025,New Zealand,defender,0.0,0.0,0.0,0
+Thomas Meunier,277771,Belgium,defender,0.0,0.0,0.0,0
+Callan Elliot,1013276,New Zealand,defender,0.0,0.0,0.0,0
+Nando Pijnaker,1053731,New Zealand,defender,0.0,0.0,0.0,0
+Koni De Winter,1200630,Belgium,defender,0.0,0.0,0.0,0
+Joaquin Seys,1489449,Belgium,defender,0.0,0.0,0.0,0
+Axel Witsel,39591,Belgium,midfielder,0.0,0.0,0.0,0
+Alex Rufer,519240,New Zealand,midfielder,0.0,0.0,0.0,0
+Diego Moreira,1342754,Belgium,midfielder,0.0,0.0,0.0,0
+Lachlan Bayliss,1565865,New Zealand,midfielder,0.0,0.0,0.0,0
+Kosta Barbarouses,96488,New Zealand,forward,0.0,0.0,0.0,0
+Logan Rogerson,676431,New Zealand,forward,0.0,0.0,0.0,0
+Dodi Lukébakio,688876,Belgium,forward,0.0,0.0,0.0,0
+Ben Waine,1034995,New Zealand,forward,0.0,0.0,0.0,0
+New Zealand Keepers,5820,New Zealand,goalkeeper,26.16,-12.0,0.0,14
+Belgium Keepers,8263,Belgium,goalkeeper,21.96,12.0,0.0,34

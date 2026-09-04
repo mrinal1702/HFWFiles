@@ -1,0 +1,47 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Virgil van Dijk,209405,Netherlands,defender,59.910000000000004,5.0,0.0,65
+Jan Paul van Hecke,974618,Netherlands,defender,54.040000000000006,5.0,0.0,59
+Hazem Mastouri,1311408,Tunisia,forward,42.18333333333333,3.0,0.0,45
+Tijjani Reijnders,868344,Netherlands,midfielder,36.041999999999994,9.0,0.0,45
+Brian Brobbey,940446,Netherlands,forward,32.59166666666667,9.0,0.0,42
+Frenkie de Jong,638622,Netherlands,midfielder,24.839999999999996,9.0,0.0,34
+Nathan Aké,417068,Netherlands,defender,27.600000000000005,5.0,0.0,33
+Hannibal Mejbri,1113785,Tunisia,midfielder,30.093999999999998,1.0,0.0,31
+Donyell Malen,660301,Netherlands,forward,21.699999999999996,9.0,0.0,31
+Denzel Dumfries,593118,Netherlands,midfielder,21.138,9.0,0.0,30
+Ryan Gravenberch,956683,Netherlands,midfielder,17.439999999999998,9.0,0.0,26
+Ismaël Gharbi,1244924,Tunisia,midfielder,21.932000000000002,1.0,0.0,23
+Yan Valery,789596,Tunisia,defender,27.86,-5.0,0.0,23
+Ali Abdi,566187,Tunisia,defender,26.66,-5.0,0.0,22
+Ellyes Skhiri,574642,Tunisia,midfielder,20.306,1.0,0.0,21
+Amine Ben Hamida,1131928,Tunisia,defender,25.386666666666667,-5.0,0.0,20
+Cody Gakpo,806552,Netherlands,forward,11.341666666666665,9.0,0.0,20
+Anis Ben Slimane,1055316,Tunisia,midfielder,18.706666666666663,1.0,0.0,20
+Teun Koopmeiners,866516,Netherlands,midfielder,9.202,2.5,0.0,12
+Montassar Talbi,846392,Tunisia,defender,14.51,-5.0,0.0,10
+Crysencio Summerville,941213,Netherlands,forward,11.775,-2.5,0.0,9
+Hadj Mahmoud,1131896,Tunisia,midfielder,6.736666666666667,2.5,0.0,9
+Elias Achouri,1015128,Tunisia,midfielder,5.471333333333333,2.5,0.0,8
+Rani Khedira,304348,Tunisia,midfielder,6.543333333333334,1.0,0.0,8
+Justin Kluivert,794253,Netherlands,midfielder,4.524,2.5,0.0,7
+Noa Lang,837341,Netherlands,forward,9.325,-2.5,0.0,7
+Mortadha Ben Ouanes,712132,Tunisia,forward,8.583333333333332,-2.5,0.0,6
+Memphis Depay,303824,Netherlands,forward,5.9750000000000005,-2.5,0.0,3
+Firas Chaouat,845336,Tunisia,forward,4.666666666666667,-2.5,0.0,2
+Dylan Bronn,771686,Tunisia,defender,0.0,0.0,0.0,0
+Lutsharel Geertruida,881640,Netherlands,defender,0.0,0.0,0.0,0
+Mats Wieffer,970243,Netherlands,defender,0.0,0.0,0.0,0
+Micky van de Ven,1097466,Netherlands,defender,0.0,0.0,0.0,0
+Omar Rekik,1160097,Tunisia,defender,0.0,0.0,0.0,0
+Jorrel Hato,1413846,Netherlands,defender,0.0,0.0,0.0,0
+Raed Chikhaoui,1721242,Tunisia,defender,0.0,0.0,0.0,0
+Marten de Roon,198559,Netherlands,midfielder,0.0,0.0,0.0,0
+Quinten Timber,970563,Netherlands,midfielder,0.0,0.0,0.0,0
+Khalil Ayari,1715492,Tunisia,midfielder,0.0,0.0,0.0,0
+Wout Weghorst,351999,Netherlands,forward,0.0,0.0,0.0,0
+Guus Til,774947,Netherlands,forward,0.0,0.0,0.0,0
+Sebastian Tounekti,921919,Tunisia,forward,0.0,0.0,0.0,0
+Elias Saad,1285773,Tunisia,forward,0.0,0.0,0.0,0
+Rayan Elloumi,1685596,Tunisia,forward,0.0,0.0,0.0,0
+Netherlands Keepers,6708,Netherlands,goalkeeper,15.780000000000001,12.0,0.0,28
+Tunisia Keepers,6719,Tunisia,goalkeeper,25.38,0.0,0.0,25

@@ -1,0 +1,211 @@
+{
+  "team_name": "Borussia Dortmund",
+  "team_id": 9789,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/9789/squad/borussia-dortmund",
+  "players": [
+    {
+      "player_id": 33072,
+      "player_name": "Niko Kovac",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/33072/niko-kovac"
+    },
+    {
+      "player_id": 215151,
+      "player_name": "Marcel Sabitzer",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/215151/marcel-sabitzer"
+    },
+    {
+      "player_id": 307021,
+      "player_name": "Emre Can",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/307021/emre-can"
+    },
+    {
+      "player_id": 359203,
+      "player_name": "Patrick Drewes",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/359203/patrick-drewes"
+    },
+    {
+      "player_id": 448540,
+      "player_name": "Serhou Guirassy",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/448540/serhou-guirassy"
+    },
+    {
+      "player_id": 559065,
+      "player_name": "Ramy Bensebaini",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/559065/ramy-bensebaini"
+    },
+    {
+      "player_id": 659272,
+      "player_name": "Julian Ryerson",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/659272/julian-ryerson"
+    },
+    {
+      "player_id": 664970,
+      "player_name": "Waldemar Anton",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/664970/waldemar-anton"
+    },
+    {
+      "player_id": 743381,
+      "player_name": "Alexander Meyer",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/743381/alexander-meyer"
+    },
+    {
+      "player_id": 764018,
+      "player_name": "Gregor Kobel",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/764018/gregor-kobel"
+    },
+    {
+      "player_id": 792429,
+      "player_name": "Joey Veerman",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/792429/joey-veerman"
+    },
+    {
+      "player_id": 966019,
+      "player_name": "Felix Nmecha",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/966019/felix-nmecha"
+    },
+    {
+      "player_id": 1002058,
+      "player_name": "Nico Schlotterbeck",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1002058/nico-schlotterbeck"
+    },
+    {
+      "player_id": 1047667,
+      "player_name": "Maximilian Beier",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1047667/maximilian-beier"
+    },
+    {
+      "player_id": 1050158,
+      "player_name": "Fábio Silva",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1050158/fabio-silva"
+    },
+    {
+      "player_id": 1089685,
+      "player_name": "Carney Chukwuemeka",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1089685/carney-chukwuemeka"
+    },
+    {
+      "player_id": 1209228,
+      "player_name": "Daniel Svensson",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/1209228/daniel-svensson"
+    },
+    {
+      "player_id": 1215014,
+      "player_name": "Giannis Konstantelias",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1215014/giannis-konstantelias"
+    },
+    {
+      "player_id": 1287373,
+      "player_name": "Jobe Bellingham",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1287373/jobe-bellingham"
+    },
+    {
+      "player_id": 1316269,
+      "player_name": "Silas Ostrzinski",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1316269/silas-ostrzinski"
+    },
+    {
+      "player_id": 1479742,
+      "player_name": "Joane Gadou",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1479742/joane-gadou"
+    },
+    {
+      "player_id": 1536436,
+      "player_name": "Konstantinos Karetsas",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1536436/konstantinos-karetsas"
+    },
+    {
+      "player_id": 1636870,
+      "player_name": "Justin Lerma",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1636870/justin-lerma"
+    },
+    {
+      "player_id": 1663094,
+      "player_name": "Filippo Mane",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1663094/filippo-mane"
+    },
+    {
+      "player_id": 1684432,
+      "player_name": "Mussa Kaba",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1684432/mussa-kaba"
+    },
+    {
+      "player_id": 1692797,
+      "player_name": "Mathis Albert",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1692797/mathis-albert"
+    },
+    {
+      "player_id": 1729839,
+      "player_name": "Enzo dos Santos",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1729839/enzo-duarte"
+    },
+    {
+      "player_id": 1750565,
+      "player_name": "Kauã Prates",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1750565/kaua-prates"
+    },
+    {
+      "player_id": 1761151,
+      "player_name": "Samuele Inácio",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1761151/samuele-inacio"
+    },
+    {
+      "player_id": 1845173,
+      "player_name": "Luca Reggiani",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1845173/luca-reggiani"
+    },
+    {
+      "player_id": 1845215,
+      "player_name": "Jan-Luca Riedl",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1845215/jan-luca-riedl"
+    },
+    {
+      "player_id": 1845220,
+      "player_name": "Roméo Ritter",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1845220/romeo-ritter"
+    },
+    {
+      "player_id": 1845223,
+      "player_name": "Miguel Adje",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1845223/miguel-adje"
+    },
+    {
+      "player_id": 1845228,
+      "player_name": "Marwan Mirza",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1845228/marwan-omir-mirza"
+    }
+  ]
+}

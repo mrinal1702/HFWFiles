@@ -1,0 +1,205 @@
+{
+  "team_name": "RB Leipzig",
+  "team_id": 178475,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/178475/squad/rb-leipzig",
+  "players": [
+    {
+      "player_id": 30459,
+      "player_name": "Martín Demichelis",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/30459/martin-demichelis"
+    },
+    {
+      "player_id": 73409,
+      "player_name": "Ørjan Håskjold Nyland",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/73409/orjan-haskjold-nyland"
+    },
+    {
+      "player_id": 278856,
+      "player_name": "Willi Orbán",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/278856/willi-orban"
+    },
+    {
+      "player_id": 450972,
+      "player_name": "Leopold Zingerle",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/450972/leopold-zingerle"
+    },
+    {
+      "player_id": 526657,
+      "player_name": "Lukas Klostermann",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/526657/lukas-klostermann"
+    },
+    {
+      "player_id": 681383,
+      "player_name": "Benjamin Henrichs",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/681383/benjamin-henrichs"
+    },
+    {
+      "player_id": 704523,
+      "player_name": "Christopher Nkunku",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/704523/christopher-nkunku"
+    },
+    {
+      "player_id": 747718,
+      "player_name": "Christoph Baumgartner",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/747718/christoph-baumgartner"
+    },
+    {
+      "player_id": 806669,
+      "player_name": "David Raum",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/806669/david-raum"
+    },
+    {
+      "player_id": 883087,
+      "player_name": "Ridle Baku",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/883087/ridle-baku"
+    },
+    {
+      "player_id": 972200,
+      "player_name": "Maarten Vandevoordt",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/972200/maarten-vandevoordt"
+    },
+    {
+      "player_id": 1024672,
+      "player_name": "Nicolas Seiwald",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1024672/nicolas-seiwald"
+    },
+    {
+      "player_id": 1173788,
+      "player_name": "El Chadaille Bitshiabu",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1173788/el-chadaille-bitshiabu"
+    },
+    {
+      "player_id": 1174726,
+      "player_name": "Rocco Reitz",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1174726/rocco-reitz"
+    },
+    {
+      "player_id": 1203194,
+      "player_name": "Johan Bakayoko",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1203194/johan-bakayoko"
+    },
+    {
+      "player_id": 1248482,
+      "player_name": "Antonio Nusa",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1248482/antonio-nusa"
+    },
+    {
+      "player_id": 1250443,
+      "player_name": "Maxime Estève",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1250443/maxime-esteve"
+    },
+    {
+      "player_id": 1253852,
+      "player_name": "Castello Lukeba",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1253852/castello-lukeba"
+    },
+    {
+      "player_id": 1310001,
+      "player_name": "Ezechiel Banzuzi",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1310001/ezechiel-banzuzi"
+    },
+    {
+      "player_id": 1314412,
+      "player_name": "Rômulo",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1314412/romulo"
+    },
+    {
+      "player_id": 1374055,
+      "player_name": "Sani Suleiman",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1374055/sani-suleiman"
+    },
+    {
+      "player_id": 1387389,
+      "player_name": "Arthur Vermeeren",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1387389/arthur-vermeeren"
+    },
+    {
+      "player_id": 1430151,
+      "player_name": "Brajan Gruda",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1430151/brajan-gruda"
+    },
+    {
+      "player_id": 1482209,
+      "player_name": "Andrija Maksimovic",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1482209/andrija-maksimovic"
+    },
+    {
+      "player_id": 1482294,
+      "player_name": "Conrad Harder",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1482294/conrad-harder"
+    },
+    {
+      "player_id": 1482733,
+      "player_name": "Tidiam Gomis",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1482733/tidiam-gomis"
+    },
+    {
+      "player_id": 1486541,
+      "player_name": "Assan Ouédraogo",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1486541/assan-ouedraogo"
+    },
+    {
+      "player_id": 1529161,
+      "player_name": "Max Finkgräfe",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1529161/max-finkgrafe"
+    },
+    {
+      "player_id": 1615528,
+      "player_name": "Ayodele Thomas",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1615528/ayodele-thomas"
+    },
+    {
+      "player_id": 1643776,
+      "player_name": "Abdoul Koné",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1643776/abdoul-kone"
+    },
+    {
+      "player_id": 1667986,
+      "player_name": "Viggo Gebel",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1667986/viggo-gebel"
+    },
+    {
+      "player_id": 1860819,
+      "player_name": "Samba Konaté",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1860819/samba-konate"
+    },
+    {
+      "player_id": 1875892,
+      "player_name": "Benno Kaltefleiter",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1875892/benno-kaltefleiter"
+    }
+  ]
+}

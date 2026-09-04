@@ -1,0 +1,211 @@
+{
+  "team_name": "Hull City",
+  "team_id": 8667,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8667/squad/hull-city",
+  "players": [
+    {
+      "player_id": 9012,
+      "player_name": "Sergej Jakirovic",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/9012/sergej-jakirovic"
+    },
+    {
+      "player_id": 280507,
+      "player_name": "Matt Crooks",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/280507/matt-crooks"
+    },
+    {
+      "player_id": 288880,
+      "player_name": "Jack Butland",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/288880/jack-butland"
+    },
+    {
+      "player_id": 295062,
+      "player_name": "John Egan",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/295062/john-egan"
+    },
+    {
+      "player_id": 410836,
+      "player_name": "Semi Ajayi",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/410836/semi-ajayi"
+    },
+    {
+      "player_id": 509151,
+      "player_name": "Oli McBurnie",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/509151/oli-mcburnie"
+    },
+    {
+      "player_id": 518500,
+      "player_name": "Dillon Phillips",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/518500/dillon-phillips"
+    },
+    {
+      "player_id": 538112,
+      "player_name": "Matt Targett",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/538112/matt-targett"
+    },
+    {
+      "player_id": 575780,
+      "player_name": "Paddy McNair",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/575780/paddy-mcnair"
+    },
+    {
+      "player_id": 605262,
+      "player_name": "Kieran Dowell",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/605262/kieran-dowell"
+    },
+    {
+      "player_id": 656495,
+      "player_name": "Babajide David",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/656495/babajide-david"
+    },
+    {
+      "player_id": 704138,
+      "player_name": "Abdülkadir Ömür",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/704138/abdulkadir-omur"
+    },
+    {
+      "player_id": 709148,
+      "player_name": "Lewie Coyle",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/709148/lewie-coyle"
+    },
+    {
+      "player_id": 807930,
+      "player_name": "Regan Slater",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/807930/regan-slater"
+    },
+    {
+      "player_id": 915102,
+      "player_name": "Hidemasa Morita",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/915102/hidemasa-morita"
+    },
+    {
+      "player_id": 932308,
+      "player_name": "Liam Millar",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/932308/liam-millar"
+    },
+    {
+      "player_id": 933635,
+      "player_name": "Ryan Giles",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/933635/ryan-giles"
+    },
+    {
+      "player_id": 962046,
+      "player_name": "Cody Drameh",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/962046/cody-drameh"
+    },
+    {
+      "player_id": 1072068,
+      "player_name": "Konstantinos Tzolakis",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1072068/konstantinos-tzolakis"
+    },
+    {
+      "player_id": 1077907,
+      "player_name": "Brandon Williams",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1077907/brandon-williams"
+    },
+    {
+      "player_id": 1125874,
+      "player_name": "Darko Gyabi",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1125874/darko-gyabi"
+    },
+    {
+      "player_id": 1136450,
+      "player_name": "Abu Kamara",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1136450/abu-kamara"
+    },
+    {
+      "player_id": 1178514,
+      "player_name": "Eliot Matazo",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1178514/eliot-matazo"
+    },
+    {
+      "player_id": 1187308,
+      "player_name": "Matty Jacob",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1187308/matty-jacob"
+    },
+    {
+      "player_id": 1197548,
+      "player_name": "Enis Destan",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1197548/enis-destan"
+    },
+    {
+      "player_id": 1231090,
+      "player_name": "Mohamed Belloumi",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1231090/mohamed-belloumi"
+    },
+    {
+      "player_id": 1331703,
+      "player_name": "Charlie Hughes",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1331703/charlie-hughes"
+    },
+    {
+      "player_id": 1356264,
+      "player_name": "Óscar Zambrano",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1356264/oscar-zambrano"
+    },
+    {
+      "player_id": 1377949,
+      "player_name": "Jens Hjertø-Dahl",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1377949/jens-hjerto-dahl"
+    },
+    {
+      "player_id": 1683723,
+      "player_name": "Cathal McCarthy",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1683723/cathal-mccarthy"
+    },
+    {
+      "player_id": 2100600,
+      "player_name": "Reuben Silk",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/2100600/reuben-silk"
+    },
+    {
+      "player_id": 2130252,
+      "player_name": "Dellal Robinson",
+      "position": "Defender",
+      "href": "https://www.fotmob.com/en-GB/players/2130252/dellal-robinson"
+    },
+    {
+      "player_id": 2130253,
+      "player_name": "Josh Ocaya",
+      "position": "Defender",
+      "href": "https://www.fotmob.com/en-GB/players/2130253/josh-ocaya"
+    },
+    {
+      "player_id": 2130255,
+      "player_name": "Bobby Moore",
+      "position": "Defender",
+      "href": "https://www.fotmob.com/en-GB/players/2130255/bobby-moore"
+    }
+  ]
+}

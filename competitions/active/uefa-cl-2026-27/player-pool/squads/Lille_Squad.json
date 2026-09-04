@@ -1,0 +1,181 @@
+{
+  "team_name": "Lille",
+  "team_id": 8639,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8639/squad/lille",
+  "players": [
+    {
+      "player_id": 46469,
+      "player_name": "Olivier Giroud",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/46469/olivier-giroud"
+    },
+    {
+      "player_id": 148830,
+      "player_name": "Benjamin André",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/148830/benjamin-andre"
+    },
+    {
+      "player_id": 500520,
+      "player_name": "Nabil Bentaleb",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/500520/nabil-bentaleb"
+    },
+    {
+      "player_id": 622137,
+      "player_name": "Calvin Verdonk",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/622137/calvin-verdonk"
+    },
+    {
+      "player_id": 708435,
+      "player_name": "Gaëtan Perrin",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/708435/gaetan-perrin"
+    },
+    {
+      "player_id": 815465,
+      "player_name": "Romain Perraud",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/815465/romain-perraud"
+    },
+    {
+      "player_id": 815912,
+      "player_name": "Berke Özer",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/815912/berke-ozer"
+    },
+    {
+      "player_id": 841705,
+      "player_name": "Arnaud Bodart",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/841705/arnaud-bodart"
+    },
+    {
+      "player_id": 891373,
+      "player_name": "Mohamed Bayo",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/891373/mohamed-bayo"
+    },
+    {
+      "player_id": 942358,
+      "player_name": "Félix Correia",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/942358/felix-correia"
+    },
+    {
+      "player_id": 988160,
+      "player_name": "Osame Sahraoui",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/988160/osame-sahraoui"
+    },
+    {
+      "player_id": 1044470,
+      "player_name": "Hákon Arnar Haraldsson",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1044470/hakon-arnar-haraldsson"
+    },
+    {
+      "player_id": 1070617,
+      "player_name": "Tanguy Nianzou",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1070617/tanguy-nianzou"
+    },
+    {
+      "player_id": 1079539,
+      "player_name": "Dilane Bakwa",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1079539/dilane-bakwa"
+    },
+    {
+      "player_id": 1108529,
+      "player_name": "Davide Ancelotti",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/1108529/davide-ancelotti"
+    },
+    {
+      "player_id": 1186553,
+      "player_name": "Alexsandro Ribeiro",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1186553/alexsandro-ribeiro"
+    },
+    {
+      "player_id": 1187392,
+      "player_name": "Tiago Morais",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1187392/tiago-morais"
+    },
+    {
+      "player_id": 1252070,
+      "player_name": "Nathan Ngoy",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1252070/nathan-ngoy"
+    },
+    {
+      "player_id": 1347229,
+      "player_name": "Basar Önal",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/1347229/basar-onal"
+    },
+    {
+      "player_id": 1397857,
+      "player_name": "Tiago Santos",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1397857/tiago-santos"
+    },
+    {
+      "player_id": 1421275,
+      "player_name": "Hamza Igamane",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1421275/hamza-igamane"
+    },
+    {
+      "player_id": 1426809,
+      "player_name": "Ethan Mbappé",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1426809/ethan-mbappe"
+    },
+    {
+      "player_id": 1428153,
+      "player_name": "Ngal Ayel Mukau",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1428153/ngal-ayel-mukau"
+    },
+    {
+      "player_id": 1444231,
+      "player_name": "Matias Fernandez-Pardo",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1444231/matias-fernandez-pardo"
+    },
+    {
+      "player_id": 1603990,
+      "player_name": "Noah Edjouma",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1603990/noah-edjouma"
+    },
+    {
+      "player_id": 1660370,
+      "player_name": "Loun Srdanovic",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1660370/loun-srdanovic"
+    },
+    {
+      "player_id": 1680590,
+      "player_name": "Isaac Cossier",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1680590/isaac-cossier"
+    },
+    {
+      "player_id": 1683391,
+      "player_name": "Orlando Gill",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1683391/orlando-gill"
+    },
+    {
+      "player_id": 1684579,
+      "player_name": "Soriba Diaoune",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1684579/soriba-diaoune"
+    }
+  ]
+}

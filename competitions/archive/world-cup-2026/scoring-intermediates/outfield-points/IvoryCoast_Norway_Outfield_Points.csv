@@ -1,0 +1,47 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+552718,Kristoffer Ajer,8492,Norway,1,defender,43.910000000000004,3.0,3.0,49.910000000000004,90.0,2,1,5.0,54.910000000000004
+737066,Erling Haaland,8492,Norway,3,forward,28.933333333333334,5.0,3.0,36.93333333333334,90.0,2,1,6.0,42.93333333333334
+534670,Martin Ødegaard,8492,Norway,2,midfielder,31.951999999999998,0.7999999999999998,3.0,35.751999999999995,90.0,2,1,7.0,42.751999999999995
+530635,Patrick Berg,8492,Norway,2,midfielder,29.28,3.0,3.0,35.28,90.0,2,1,7.0,42.28
+575735,Nicolas Pépé,6709,Côte d'Ivoire,3,forward,28.224999999999998,4.1,2.9,35.224999999999994,87.0,1,2,3.0,38.224999999999994
+1070052,Amad Diallo,6709,Côte d'Ivoire,2,midfielder,26.694,3.0,1.0,30.694,30.0,1,1,2.5,33.194
+540963,Sander Berge,8492,Norway,2,midfielder,21.564,0.7999999999999998,3.0,25.364,90.0,2,1,7.0,32.364000000000004
+1395704,Guéla Doué,6709,Côte d'Ivoire,1,defender,26.34,3.0,3.0,32.34,90.0,1,2,0.0,32.34
+935550,Torbjørn Heggem,8492,Norway,1,defender,20.6,3.0,3.0,26.6,90.0,2,1,5.0,31.6
+1114979,Emmanuel Agbadou,6709,Côte d'Ivoire,1,defender,25.26,3.0,3.0,31.26,90.0,1,2,0.0,31.26
+795371,Ibrahim Sangaré,6709,Côte d'Ivoire,2,midfielder,22.177999999999997,3.0,3.0,28.177999999999997,90.0,1,2,3.0,31.177999999999997
+1248482,Antonio Nusa,8492,Norway,3,forward,19.441666666666666,5.0,2.3666666666666667,26.808333333333334,71.0,1,0,3.0,29.808333333333334
+1735453,Yan Diomande,6709,Côte d'Ivoire,3,forward,15.975000000000001,5.0,2.966666666666667,23.94166666666667,90.0,1,2,3.0,26.94166666666667
+1049679,David Møller Wolfe,8492,Norway,1,defender,16.59,1.8,3.0,21.39,90.0,2,1,5.0,26.39
+440330,Alexander Sørloth,8492,Norway,3,forward,14.266666666666664,3.2,2.3666666666666667,19.833333333333332,71.0,1,0,3.0,22.833333333333332
+1014496,Odilon Kossounou,6709,Côte d'Ivoire,1,defender,15.8,3.0,3.0,21.8,90.0,1,2,0.0,21.8
+740997,Ghislain Konan,6709,Côte d'Ivoire,1,defender,17.419999999999998,0.6000000000000001,2.966666666666667,20.986666666666665,90.0,1,2,0.0,20.986666666666665
+1666494,Christ Inao Oulaï,6709,Côte d'Ivoire,2,midfielder,12.434,3.0,2.0,17.433999999999997,60.0,0,1,3.0,20.433999999999997
+579747,Franck Kessié,6709,Côte d'Ivoire,2,midfielder,9.734,3.0,3.0,15.734,90.0,1,2,3.0,18.734
+310768,Fredrik Aursnes,8492,Norway,2,midfielder,6.86,3.0,0.23333333333333334,10.093333333333332,7.0,1,0,4.5,14.593333333333332
+935622,Marcus Holmgren Pedersen,8492,Norway,2,midfielder,4.896000000000001,1.9,2.7666666666666666,9.562666666666669,83.0,1,1,5.0,14.562666666666669
+1228558,Andreas Schjelderup,8492,Norway,3,forward,3.783333333333333,5.0,0.6333333333333333,9.416666666666666,19.0,1,1,0.5,9.916666666666666
+1113790,Oscar Bobb,8492,Norway,3,forward,3.7249999999999996,4.1,0.6333333333333333,8.458333333333332,19.0,1,1,0.5,8.958333333333332
+1199383,Ange-Yoan Bonny,6709,Côte d'Ivoire,3,forward,4.016666666666666,2.3,2.0,8.316666666666666,60.0,0,1,0.0,8.316666666666666
+1328540,Oumar Diakité,6709,Côte d'Ivoire,3,forward,5.141666666666667,5.0,0.1,10.241666666666665,3.0,0,0,-2.5,7.741666666666665
+1213430,Elye Wahi,6709,Côte d'Ivoire,3,forward,0.6666666666666666,5.0,1.0,6.666666666666667,30.0,1,1,0.5,7.166666666666667
+630228,Fredrik André Bjørkan,8492,Norway,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+740944,Leo Østigard,8492,Norway,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+787242,Evan N'Dicka,6709,Côte d'Ivoire,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+802462,Christopher Opéri,6709,Côte d'Ivoire,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1027472,Wilfried Singo,6709,Côte d'Ivoire,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1110550,Henrik Falchener,8492,Norway,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1127585,Sondre Klingen Langås,8492,Norway,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1425182,Ousmane Diomande,6709,Côte d'Ivoire,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+439148,Morten Thorsby,8492,Norway,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+470539,Jean Michaël Seri,6709,Côte d'Ivoire,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+602211,Seko Fofana,6709,Côte d'Ivoire,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+659272,Julian Ryerson,8492,Norway,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+921921,Kristian Thorstvedt,8492,Norway,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1184468,Thelo Aasgaard,8492,Norway,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+741397,Jens Petter Hauge,8492,Norway,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+821100,Jørgen Strand Larsen,8492,Norway,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1087966,Evann Guessand,6709,Côte d'Ivoire,3,forward,0.9749999999999999,5.0,0.03333333333333333,0.0,0.0,0,0,0.0,0.0
+1186770,Parfait Guiagon,6709,Côte d'Ivoire,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1227012,Simon Adingra,6709,Côte d'Ivoire,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1624586,Bazoumana Touré,6709,Côte d'Ivoire,3,forward,5.6,5.0,0.03333333333333333,0.0,0.0,0,0,0.0,0.0

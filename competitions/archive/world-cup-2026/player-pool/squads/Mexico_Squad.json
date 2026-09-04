@@ -1,0 +1,169 @@
+{
+  "team_name": "Mexico",
+  "team_id": 6710,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6710/squad/mexico",
+  "players": [
+    {
+      "player_id": 31047,
+      "player_name": "Guillermo Ochoa",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/31047/guillermo-ochoa"
+    },
+    {
+      "player_id": 78642,
+      "player_name": "Javier Aguirre",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/78642/javier-aguirre"
+    },
+    {
+      "player_id": 292313,
+      "player_name": "Raul Jiménez",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/292313/raul-jimenez"
+    },
+    {
+      "player_id": 527616,
+      "player_name": "Luis Chávez",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/527616/luis-chavez"
+    },
+    {
+      "player_id": 558539,
+      "player_name": "Guillermo Martínez",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/558539/guillermo-martinez"
+    },
+    {
+      "player_id": 559986,
+      "player_name": "Orbelín Pineda",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/559986/orbelin-pineda"
+    },
+    {
+      "player_id": 597976,
+      "player_name": "Jesús Gallardo",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/597976/jesus-gallardo"
+    },
+    {
+      "player_id": 664644,
+      "player_name": "César Montes",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/664644/cesar-montes"
+    },
+    {
+      "player_id": 720560,
+      "player_name": "Julián Quiñones",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/720560/julian-quinones"
+    },
+    {
+      "player_id": 720737,
+      "player_name": "Roberto Alvarado",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/720737/roberto-alvarado"
+    },
+    {
+      "player_id": 727586,
+      "player_name": "Jorge Sánchez",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/727586/jorge-sanchez"
+    },
+    {
+      "player_id": 728365,
+      "player_name": "Alexis Vega",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/728365/alexis-vega"
+    },
+    {
+      "player_id": 751164,
+      "player_name": "Carlos Acevedo",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/751164/carlos-acevedo"
+    },
+    {
+      "player_id": 783505,
+      "player_name": "Edson Álvarez",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/783505/edson-alvarez"
+    },
+    {
+      "player_id": 895954,
+      "player_name": "Álvaro Fidalgo",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/895954/alvaro-fidalgo"
+    },
+    {
+      "player_id": 914103,
+      "player_name": "Johan Vásquez",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/914103/johan-vasquez"
+    },
+    {
+      "player_id": 921174,
+      "player_name": "Luis Romo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/921174/luis-romo"
+    },
+    {
+      "player_id": 954092,
+      "player_name": "Santiago Giménez",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/954092/santiago-gimenez"
+    },
+    {
+      "player_id": 971628,
+      "player_name": "Érik Lira",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/971628/erik-lira"
+    },
+    {
+      "player_id": 977404,
+      "player_name": "César Huerta",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/977404/cesar-huerta"
+    },
+    {
+      "player_id": 1074586,
+      "player_name": "Israel Reyes",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1074586/israel-reyes"
+    },
+    {
+      "player_id": 1170238,
+      "player_name": "Brian Gutiérrez",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1170238/brian-gutierrez"
+    },
+    {
+      "player_id": 1227878,
+      "player_name": "Raúl Rangel",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1227878/raul-rangel"
+    },
+    {
+      "player_id": 1254394,
+      "player_name": "Obed Vargas",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1254394/obed-vargas"
+    },
+    {
+      "player_id": 1432212,
+      "player_name": "Mateo Chávez",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1432212/mateo-chavez"
+    },
+    {
+      "player_id": 1456983,
+      "player_name": "Armando González",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1456983/armando-gonzalez"
+    },
+    {
+      "player_id": 1670377,
+      "player_name": "Gilberto Mora",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1670377/gilberto-mora"
+    }
+  ]
+}

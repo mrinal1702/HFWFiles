@@ -1,0 +1,169 @@
+{
+  "team_name": "Ecuador",
+  "team_id": 6707,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6707/squad/ecuador",
+  "players": [
+    {
+      "player_id": 146801,
+      "player_name": "Hernán Galíndez",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/146801/hernan-galindez"
+    },
+    {
+      "player_id": 195927,
+      "player_name": "Enner Valencia",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/195927/enner-valencia"
+    },
+    {
+      "player_id": 688278,
+      "player_name": "Pervis Estupinán",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/688278/pervis-estupinan"
+    },
+    {
+      "player_id": 766159,
+      "player_name": "Jordy Caicedo",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/766159/jordy-caicedo"
+    },
+    {
+      "player_id": 825641,
+      "player_name": "Félix Torres",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/825641/felix-torres"
+    },
+    {
+      "player_id": 832171,
+      "player_name": "Alan Franco",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/832171/alan-franco"
+    },
+    {
+      "player_id": 845368,
+      "player_name": "John Yeboah",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/845368/john-yeboah"
+    },
+    {
+      "player_id": 848593,
+      "player_name": "Ángelo Preciado",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/848593/angelo-preciado"
+    },
+    {
+      "player_id": 950396,
+      "player_name": "Jordy Alcívar",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/950396/jordy-alcivar"
+    },
+    {
+      "player_id": 978290,
+      "player_name": "Moisés Ramirez",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/978290/moises-ramirez"
+    },
+    {
+      "player_id": 980311,
+      "player_name": "Gonzalo Plata",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/980311/gonzalo-plata"
+    },
+    {
+      "player_id": 1032039,
+      "player_name": "Jackson Porozo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1032039/jackson-porozo"
+    },
+    {
+      "player_id": 1108611,
+      "player_name": "Pedro Vite",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1108611/pedro-vite"
+    },
+    {
+      "player_id": 1135477,
+      "player_name": "Sebastián Beccacece",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/1135477/sebastian-beccacece"
+    },
+    {
+      "player_id": 1137667,
+      "player_name": "Piero Hincapié",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1137667/piero-hincapie"
+    },
+    {
+      "player_id": 1137668,
+      "player_name": "Moisés Caicedo",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1137668/moises-caicedo"
+    },
+    {
+      "player_id": 1137670,
+      "player_name": "Willian Pacho",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1137670/willian-pacho"
+    },
+    {
+      "player_id": 1274400,
+      "player_name": "Alan Minda",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1274400/alan-minda"
+    },
+    {
+      "player_id": 1287010,
+      "player_name": "Nilson Angulo",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1287010/nilson-angulo"
+    },
+    {
+      "player_id": 1353364,
+      "player_name": "Anthony Valencia",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1353364/anthony-valencia"
+    },
+    {
+      "player_id": 1354085,
+      "player_name": "Joel Ordóñez",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1354085/joel-ordonez"
+    },
+    {
+      "player_id": 1391753,
+      "player_name": "Yaimar Medina",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1391753/yaimar-medina"
+    },
+    {
+      "player_id": 1418122,
+      "player_name": "Jeremy Arévalo",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1418122/jeremy-arevalo"
+    },
+    {
+      "player_id": 1421270,
+      "player_name": "Kevin Rodríguez",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1421270/kevin-rodriguez"
+    },
+    {
+      "player_id": 1443464,
+      "player_name": "Kendry Páez",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1443464/kendry-paez"
+    },
+    {
+      "player_id": 1477417,
+      "player_name": "Denil Castillo",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1477417/denil-castillo"
+    },
+    {
+      "player_id": 1614051,
+      "player_name": "Gonzalo Valle",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1614051/gonzalo-valle"
+    }
+  ]
+}

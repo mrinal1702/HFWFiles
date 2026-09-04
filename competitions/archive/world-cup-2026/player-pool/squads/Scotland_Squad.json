@@ -1,0 +1,169 @@
+{
+  "team_name": "Scotland",
+  "team_id": 8498,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8498/squad/scotland",
+  "players": [
+    {
+      "player_id": 32562,
+      "player_name": "Craig Gordon",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/32562/craig-gordon"
+    },
+    {
+      "player_id": 190851,
+      "player_name": "Kenny McLean",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/190851/kenny-mclean"
+    },
+    {
+      "player_id": 202180,
+      "player_name": "Grant Hanley",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/202180/grant-hanley"
+    },
+    {
+      "player_id": 317544,
+      "player_name": "Lawrence Shankland",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/317544/lawrence-shankland"
+    },
+    {
+      "player_id": 322080,
+      "player_name": "Steve Clarke",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/322080/steve-clarke"
+    },
+    {
+      "player_id": 356406,
+      "player_name": "John McGinn",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/356406/john-mcginn"
+    },
+    {
+      "player_id": 357880,
+      "player_name": "Andrew Robertson",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/357880/andrew-robertson"
+    },
+    {
+      "player_id": 419207,
+      "player_name": "John Souttar",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/419207/john-souttar"
+    },
+    {
+      "player_id": 439369,
+      "player_name": "Ryan Christie",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/439369/ryan-christie"
+    },
+    {
+      "player_id": 445522,
+      "player_name": "Liam Kelly",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/445522/liam-kelly"
+    },
+    {
+      "player_id": 551805,
+      "player_name": "Scott McKenna",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/551805/scott-mckenna"
+    },
+    {
+      "player_id": 582499,
+      "player_name": "Kieran Tierney",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/582499/kieran-tierney"
+    },
+    {
+      "player_id": 599353,
+      "player_name": "Ché Adams",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/599353/che-adams"
+    },
+    {
+      "player_id": 640642,
+      "player_name": "Jack Hendry",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/640642/jack-hendry"
+    },
+    {
+      "player_id": 668422,
+      "player_name": "Anthony Ralston",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/668422/anthony-ralston"
+    },
+    {
+      "player_id": 694558,
+      "player_name": "Dominic Hyam",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/694558/dominic-hyam"
+    },
+    {
+      "player_id": 750033,
+      "player_name": "George Hirst",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/750033/george-hirst"
+    },
+    {
+      "player_id": 760746,
+      "player_name": "Angus Gunn",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/760746/angus-gunn"
+    },
+    {
+      "player_id": 768635,
+      "player_name": "Lyndon Dykes",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/768635/lyndon-dykes"
+    },
+    {
+      "player_id": 776159,
+      "player_name": "Ross Stewart",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/776159/ross-stewart"
+    },
+    {
+      "player_id": 843099,
+      "player_name": "Scott McTominay",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/843099/scott-mctominay"
+    },
+    {
+      "player_id": 888921,
+      "player_name": "Lewis Ferguson",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/888921/lewis-ferguson"
+    },
+    {
+      "player_id": 1002039,
+      "player_name": "Aaron Hickey",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1002039/aaron-hickey"
+    },
+    {
+      "player_id": 1112684,
+      "player_name": "Nathan Patterson",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1112684/nathan-patterson"
+    },
+    {
+      "player_id": 1324871,
+      "player_name": "Ben Gannon-Doak",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1324871/ben-gannon-doak"
+    },
+    {
+      "player_id": 1558461,
+      "player_name": "Findlay Curtis",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1558461/findlay-curtis"
+    },
+    {
+      "player_id": 1676985,
+      "player_name": "Tyler Fletcher",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1676985/tyler-fletcher"
+    }
+  ]
+}

@@ -28,13 +28,16 @@ class DefenderWeights(TypedDict, total=False):
     tackles_lost: float
     dribbled_past: float  # same magnitude as tackles_lost (-1.6)
     interceptions: float
-    clearances: float  # apply once to (clearances + headed_clearance) to avoid double counting
+    # FotMob: `clearances` includes headed; non-headed = clearances − headed_clearance.
+    clearances: float  # non-headed clearances only
+    headed_clearance: float
     errors_led_to_goal: float
     fouls_committed: float
     caught_offside: float
     accurate_passes: float
     inaccurate_passes: float
     chances_created: float
+    passes_into_final_third: float
     dribbles_won: float  # `dribbles_succeeded` value (successful take-on)
     dribbles_lost: float  # failed take-on: total − value on `dribbles_succeeded`
     blocks: float
@@ -68,25 +71,27 @@ class DefenderPending(TypedDict, total=False):
 
 DEFENDER_WEIGHTS: DefenderWeights = {
     # Duels / defending
-    "aerial_duels_won": 1.5,
-    "aerial_duels_lost": -0.7,
-    "tackles_won": 2.7,
+    "aerial_duels_won": 1.3,
+    "aerial_duels_lost": -1.0,
+    "tackles_won": 3.0,
     "last_man_tackle": 3.0,
     "clearance_off_the_line": 3.0,
     # Tackles lost: FotMob dribbled_past (times beaten by a dribble). Not ground_duels_lost.
-    "tackles_lost": -1.6,
+    "tackles_lost": -1.3,
     "interceptions": 2.7,
-    # One combined line: points += clearances_weight * (clearances + headed_clearance)
-    "clearances": 1.1,
+    # FotMob headed_clearance is a subset of clearances — score non-headed and headed separately.
+    "clearances": 0.8,
+    "headed_clearance": 1.4,
     "errors_led_to_goal": -5.0,
     "fouls_committed": -0.6,
     "caught_offside": -0.6,
     # Passing / creation
-    "accurate_passes": 0.11,
+    "accurate_passes": 0.085,
     "inaccurate_passes": -0.22,
-    "chances_created": 2.6,
+    "chances_created": 3.1,
+    "passes_into_final_third": 0.30,
     # Take-ons (`dribbles_succeeded` in JSON) — not the same as ground-duel tackles_lost
-    "dribbles_won": 2.5,
+    "dribbles_won": 3.0,
     "dribbles_lost": -0.8,  # unsuccessful / failed take-on
     "blocks": 1.0,
     # Shooting
@@ -94,7 +99,7 @@ DEFENDER_WEIGHTS: DefenderWeights = {
     "shots_on_target": 2.5,
     "woodwork": 2.5,
     # Delivery (per completed / accurate — confirm mapping later)
-    "crosses_completed": 1.6,
+    "crosses_completed": 1.9,
     "long_balls": 0.2,
     # Outcomes
     "own_goals": -3.0,
@@ -125,13 +130,15 @@ DEFENDER_STAT_KEYS: dict[str, str] = {
     "dribbled_past": "dribbled_past",
     "interceptions": "interceptions",
 
-    # One combined term to avoid double counting
-    "clearances": "clearances_total",
+    # Non-headed = FotMob clearances − headed_clearance; headed scored separately.
+    "clearances": "clearances_non_headed",
+    "headed_clearance": "headed_clearance",
 
     # Passing / creation
     "accurate_passes": "accurate_passes",
     "inaccurate_passes": "inaccurate_passes",
     "chances_created": "chances_created",
+    "passes_into_final_third": "passes_into_final_third",
 
     # Take-ons
     "dribbles_won": "dribbles_successful",
@@ -195,7 +202,7 @@ DEFENDER_PENDING: DefenderPending = {
 }
 
 DEFENDER_SCORING: dict[str, Any] = {
-    "version": "0.6",
+    "version": "0.7",
     "role": "defender",
     "weights": DEFENDER_WEIGHTS,
     "formulas": DEFENDER_FORMULAS,
@@ -206,10 +213,11 @@ DEFENDER_SCORING: dict[str, Any] = {
     "stats_ignored": STATS_IGNORED_FOR_SCORING,
     "weights_todo": SCORING_WEIGHTS_STILL_TODO,
     "notes": (
-        "Clearances: apply weight 1.1 once to (clearances + headed_clearance). "
-        "tackles_lost: -1.6 per dribbled_past (FotMob; column tackles_lost). "
-        "dribbles_lost: -0.8 per dribbles_failed. errors_led_to_goal: -5. "
-        "Woodwork: confirm per-player key in each JSON before applying 2.5. "
+        "Clearances: FotMob headed_clearance is a subset of clearances. "
+        "Score clearances_non_headed (clearances − headed) at 0.8 and headed_clearance at 1.4. "
+        "Accurate passes 0.085; passes_into_final_third 0.30. "
+        "Aerials won 1.3 / lost -1.0. Crosses completed 1.9; dribbles won 3.0; chances created 3.1. "
+        "Tackles won 3.0; tackles_lost -1.3 per dribbled_past. dribbles_lost: -0.8 per dribbles_failed. "
         "recoveries: no weight yet. ground_duels_lost: not scored."
     ),
 }

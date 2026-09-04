@@ -1,0 +1,169 @@
+{
+  "team_name": "Australia",
+  "team_id": 6716,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6716/squad/australia",
+  "players": [
+    {
+      "player_id": 34482,
+      "player_name": "Tony Popovic",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/34482/tony-popovic"
+    },
+    {
+      "player_id": 185014,
+      "player_name": "Mathew Leckie",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/185014/matthew-leckie"
+    },
+    {
+      "player_id": 185644,
+      "player_name": "Mathew Ryan",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/185644/mathew-ryan"
+    },
+    {
+      "player_id": 192735,
+      "player_name": "Aziz Behich",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/192735/aziz-behich"
+    },
+    {
+      "player_id": 302176,
+      "player_name": "Paul Izzo",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/302176/paul-izzo"
+    },
+    {
+      "player_id": 369742,
+      "player_name": "Jackson Irvine",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/369742/jackson-irvine"
+    },
+    {
+      "player_id": 416124,
+      "player_name": "Milos Degenek",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/416124/milos-degenek"
+    },
+    {
+      "player_id": 418799,
+      "player_name": "Jason Geria",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/418799/jason-geria"
+    },
+    {
+      "player_id": 421328,
+      "player_name": "Awer Mabil",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/421328/awer-mabil"
+    },
+    {
+      "player_id": 564842,
+      "player_name": "Cameron Burgess",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/564842/cameron-burgess"
+    },
+    {
+      "player_id": 671518,
+      "player_name": "Harry Souttar",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/671518/harry-souttar"
+    },
+    {
+      "player_id": 675762,
+      "player_name": "Ajdin Hrustic",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/675762/ajdin-hrustic"
+    },
+    {
+      "player_id": 785377,
+      "player_name": "Aiden O'Neill",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/785377/aiden-oneill"
+    },
+    {
+      "player_id": 885870,
+      "player_name": "Connor Metcalfe",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/885870/connor-metcalfe"
+    },
+    {
+      "player_id": 889093,
+      "player_name": "Jacob Italiano",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/889093/jacob-italiano"
+    },
+    {
+      "player_id": 970544,
+      "player_name": "Cameron Devlin",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/970544/cameron-devlin"
+    },
+    {
+      "player_id": 1101030,
+      "player_name": "Kai Trewin",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1101030/kai-trewin"
+    },
+    {
+      "player_id": 1132069,
+      "player_name": "Mohamed Touré",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1132069/mohamed-toure"
+    },
+    {
+      "player_id": 1220549,
+      "player_name": "Tete Yengi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1220549/tete-yengi"
+    },
+    {
+      "player_id": 1250885,
+      "player_name": "Nishan Velupillay",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1250885/nishan-velupillay"
+    },
+    {
+      "player_id": 1308909,
+      "player_name": "Cristian Volpato",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1308909/cristian-volpato"
+    },
+    {
+      "player_id": 1316930,
+      "player_name": "Jordan Bos",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1316930/jordan-bos"
+    },
+    {
+      "player_id": 1318686,
+      "player_name": "Alessandro Circati",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1318686/alessandro-circati"
+    },
+    {
+      "player_id": 1327214,
+      "player_name": "Nestory Irankunda",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/1327214/nestory-irankunda"
+    },
+    {
+      "player_id": 1335765,
+      "player_name": "Patrick Beach",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1335765/patrick-beach"
+    },
+    {
+      "player_id": 1527363,
+      "player_name": "Paul Okon-Engstler",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1527363/paul-okon-engstler"
+    },
+    {
+      "player_id": 1686118,
+      "player_name": "Lucas Herrington",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1686118/lucas-herrington"
+    }
+  ]
+}

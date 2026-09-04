@@ -52,6 +52,7 @@ KEY_CLEARANCE_OFF_THE_LINE = "clearance_off_the_line"
 KEY_BLOCKS = "shot_blocks"
 KEY_CLEARANCES = "clearances"
 KEY_HEADED_CLEARANCE = "headed_clearance"
+KEY_PASSES_INTO_FINAL_THIRD = "passes_into_final_third"
 KEY_INTERCEPTIONS = "interceptions"
 KEY_RECOVERIES = "recoveries"
 KEY_DRIBBLED_PAST = "dribbled_past"
@@ -269,7 +270,12 @@ def row_from_player(
 
     m = extract_stat_map(pdata)
     gdl = derived_ground_duels_lost(m)
-    clearances_total = gv_or_zero(m, KEY_CLEARANCES) + gv_or_zero(m, KEY_HEADED_CLEARANCE)
+    clearances_raw = gv_or_zero(m, KEY_CLEARANCES)
+    headed_clearance = gv_or_zero(m, KEY_HEADED_CLEARANCE)
+    # FotMob: headed_clearance is a subset of clearances (8 clearances + 3 headed => 5 non-headed).
+    clearances_non_headed = max(0.0, float(clearances_raw) - float(headed_clearance))
+    # Legacy combined column kept for midfielder/forward scoring (unchanged formula).
+    clearances_total = clearances_raw + headed_clearance
 
     return {
         "player_id": pid,
@@ -283,6 +289,7 @@ def row_from_player(
         "accurate_passes": gv(m, KEY_ACCURATE_PASSES),
         "inaccurate_passes": derived_inaccurate_passes(m),
         "chances_created": gv(m, KEY_CHANCES),
+        "passes_into_final_third": gv_or_zero(m, KEY_PASSES_INTO_FINAL_THIRD),
         "shots_on_target": gv(m, KEY_SOT),
         "shots_off_target": gv(m, KEY_SOFF),
         "dispossessed": gv(m, KEY_DISPOSSESSED),
@@ -292,8 +299,9 @@ def row_from_player(
         # FotMob dribbled_past = times beaten by a dribble (defensive). Scored via tackles_lost weight.
         "tackles_lost": gv_or_zero(m, KEY_DRIBBLED_PAST),
         "blocks": gv(m, KEY_BLOCKS),
-        "clearances": gv(m, KEY_CLEARANCES),
-        "headed_clearance": gv(m, KEY_HEADED_CLEARANCE),
+        "clearances": clearances_raw,
+        "headed_clearance": headed_clearance,
+        "clearances_non_headed": clearances_non_headed,
         "clearances_total": clearances_total,
         "interceptions": gv(m, KEY_INTERCEPTIONS),
         "recoveries": gv(m, KEY_RECOVERIES),

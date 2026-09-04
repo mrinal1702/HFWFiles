@@ -1,0 +1,163 @@
+{
+  "team_name": "Austria",
+  "team_id": 8255,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8255/squad/austria",
+  "players": [
+    {
+      "player_id": 110148,
+      "player_name": "Marko Arnautovic",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/110148/marko-arnautovic"
+    },
+    {
+      "player_id": 121633,
+      "player_name": "David Alaba",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/121633/david-alaba"
+    },
+    {
+      "player_id": 148889,
+      "player_name": "Ralf Rangnick",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/148889/ralf-rangnick"
+    },
+    {
+      "player_id": 198316,
+      "player_name": "Michael Gregoritsch",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/198316/michael-gregoritsch"
+    },
+    {
+      "player_id": 215151,
+      "player_name": "Marcel Sabitzer",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/215151/marcel-sabitzer"
+    },
+    {
+      "player_id": 423812,
+      "player_name": "Phillipp Mwene",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/423812/phillipp-mwene"
+    },
+    {
+      "player_id": 450739,
+      "player_name": "Alexander Schlager",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/450739/alexander-schlager"
+    },
+    {
+      "player_id": 461357,
+      "player_name": "Alessandro Schöpf",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/461357/alessandro-schopf"
+    },
+    {
+      "player_id": 526827,
+      "player_name": "Konrad Laimer",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/526827/konrad-laimer"
+    },
+    {
+      "player_id": 557325,
+      "player_name": "Stefan Posch",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/557325/stefan-posch"
+    },
+    {
+      "player_id": 617044,
+      "player_name": "Florian Grillitsch",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/617044/florian-grillitsch"
+    },
+    {
+      "player_id": 620027,
+      "player_name": "Xaver Schlager",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/620027/xaver-schlager"
+    },
+    {
+      "player_id": 630672,
+      "player_name": "Patrick Pentz",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/630672/patrick-pentz"
+    },
+    {
+      "player_id": 643724,
+      "player_name": "Philipp Lienhart",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/643724/philipp-lienhart"
+    },
+    {
+      "player_id": 749488,
+      "player_name": "Romano Schmid",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/749488/romano-schmid"
+    },
+    {
+      "player_id": 754126,
+      "player_name": "Kevin Danso",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/754126/kevin-danso"
+    },
+    {
+      "player_id": 767789,
+      "player_name": "Marco Friedl",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/767789/marco-friedl"
+    },
+    {
+      "player_id": 858198,
+      "player_name": "Sasa Kalajdzic",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/858198/sasa-kalajdzic"
+    },
+    {
+      "player_id": 951921,
+      "player_name": "Michael Svoboda",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/951921/michael-svoboda"
+    },
+    {
+      "player_id": 1024672,
+      "player_name": "Nicolas Seiwald",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1024672/nicolas-seiwald"
+    },
+    {
+      "player_id": 1027194,
+      "player_name": "Alexander Prass",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/1027194/alexander-prass"
+    },
+    {
+      "player_id": 1073498,
+      "player_name": "Patrick Wimmer",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1073498/patrick-wimmer"
+    },
+    {
+      "player_id": 1073980,
+      "player_name": "David Affengruber",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1073980/david-affengruber"
+    },
+    {
+      "player_id": 1089685,
+      "player_name": "Carney Chukwuemeka",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1089685/carney-chukwuemeka"
+    },
+    {
+      "player_id": 1327149,
+      "player_name": "Paul Wanner",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1327149/paul-wanner"
+    },
+    {
+      "player_id": 1514693,
+      "player_name": "Florian Wiegele",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1514693/florian-wiegele"
+    }
+  ]
+}

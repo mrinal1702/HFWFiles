@@ -1,0 +1,169 @@
+{
+  "team_name": "Ghana",
+  "team_id": 6714,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6714/squad/ghana",
+  "players": [
+    {
+      "player_id": 149649,
+      "player_name": "Carlos Queiroz",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/149649/carlos-queiroz"
+    },
+    {
+      "player_id": 154280,
+      "player_name": "Jordan Ayew",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/154280/jordan-ayew"
+    },
+    {
+      "player_id": 324910,
+      "player_name": "Abdul Rahman Baba",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/324910/abdul-rahman-baba"
+    },
+    {
+      "player_id": 434325,
+      "player_name": "Thomas Partey",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/434325/thomas-partey"
+    },
+    {
+      "player_id": 562801,
+      "player_name": "Derrick Luckassen",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/562801/derrick-luckassen"
+    },
+    {
+      "player_id": 604105,
+      "player_name": "Iñaki Williams",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/604105/inaki-williams"
+    },
+    {
+      "player_id": 615411,
+      "player_name": "Lawrence Ati-Zigi",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/615411/lawrence-ati-zigi"
+    },
+    {
+      "player_id": 771630,
+      "player_name": "Gideon Mensah",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/771630/gideon-mensah"
+    },
+    {
+      "player_id": 776184,
+      "player_name": "Brandon Thomas-Asante",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/776184/brandon-thomas-asante"
+    },
+    {
+      "player_id": 776591,
+      "player_name": "Abdul Mumin",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/776591/abdul-mumin"
+    },
+    {
+      "player_id": 873227,
+      "player_name": "Jerome Opoku",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/873227/jerome-opoku"
+    },
+    {
+      "player_id": 883823,
+      "player_name": "Elisha Owusu",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/883823/elisha-owusu"
+    },
+    {
+      "player_id": 933576,
+      "player_name": "Antoine Semenyo",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/933576/antoine-semenyo"
+    },
+    {
+      "player_id": 948745,
+      "player_name": "Kwasi Sibo",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/948745/kwasi-sibo"
+    },
+    {
+      "player_id": 963812,
+      "player_name": "Joseph Anang",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/963812/joseph-anang"
+    },
+    {
+      "player_id": 1130691,
+      "player_name": "Kamaldeen Sulemana",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1130691/kamaldeen-sulemana"
+    },
+    {
+      "player_id": 1177779,
+      "player_name": "Alidu Seidu",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1177779/alidu-seidu"
+    },
+    {
+      "player_id": 1201760,
+      "player_name": "Marvin Senaya",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1201760/marvin-senaya"
+    },
+    {
+      "player_id": 1211610,
+      "player_name": "Augustine Boakye",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1211610/augustine-boakye"
+    },
+    {
+      "player_id": 1220633,
+      "player_name": "Prince Adu",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1220633/prince-adu"
+    },
+    {
+      "player_id": 1265626,
+      "player_name": "Abdul Fatawu",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1265626/abdul-fatawu"
+    },
+    {
+      "player_id": 1338390,
+      "player_name": "Ernest Nuamah",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1338390/ernest-nuamah"
+    },
+    {
+      "player_id": 1429607,
+      "player_name": "Kojo Peprah Oppong",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1429607/kojo-peprah-oppong"
+    },
+    {
+      "player_id": 1432344,
+      "player_name": "Jonas Adjetey",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1432344/jonas-adjetey"
+    },
+    {
+      "player_id": 1452385,
+      "player_name": "Christopher Bonsu Baah",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/1452385/christopher-bonsu-baah"
+    },
+    {
+      "player_id": 1615927,
+      "player_name": "Caleb Yirenkyi",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1615927/caleb-yirenkyi"
+    },
+    {
+      "player_id": 1806615,
+      "player_name": "Benjamin Asare",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1806615/benjamin-asare"
+    }
+  ]
+}

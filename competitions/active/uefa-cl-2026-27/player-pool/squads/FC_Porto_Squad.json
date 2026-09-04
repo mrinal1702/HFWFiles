@@ -1,0 +1,181 @@
+{
+  "team_name": "FC Porto",
+  "team_id": 9773,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/9773/squad/fc-porto",
+  "players": [
+    {
+      "player_id": 181433,
+      "player_name": "Cláudio Ramos",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/181433/claudio-ramos"
+    },
+    {
+      "player_id": 289253,
+      "player_name": "João Costa",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/289253/joao-costa"
+    },
+    {
+      "player_id": 388523,
+      "player_name": "André Silva",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/388523/andre-silva"
+    },
+    {
+      "player_id": 490868,
+      "player_name": "Jan Bednarek",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/490868/jan-bednarek"
+    },
+    {
+      "player_id": 602211,
+      "player_name": "Seko Fofana",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/602211/seko-fofana"
+    },
+    {
+      "player_id": 623698,
+      "player_name": "In-Beom Hwang",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/623698/beom-hwang"
+    },
+    {
+      "player_id": 664226,
+      "player_name": "Pablo Rosario",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/664226/pablo-rosario"
+    },
+    {
+      "player_id": 795630,
+      "player_name": "Diogo Costa",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/795630/diogo-costa"
+    },
+    {
+      "player_id": 850356,
+      "player_name": "Pepê",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/850356/pepe"
+    },
+    {
+      "player_id": 902383,
+      "player_name": "Nehuén Pérez",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/902383/nehuen-perez"
+    },
+    {
+      "player_id": 919374,
+      "player_name": "Francisco Moura",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/919374/francisco-moura"
+    },
+    {
+      "player_id": 1021834,
+      "player_name": "Jakub Kiwior",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1021834/jakub-kiwior"
+    },
+    {
+      "player_id": 1079056,
+      "player_name": "Zaidu Sanusi",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1079056/zaidu-sanusi"
+    },
+    {
+      "player_id": 1083204,
+      "player_name": "Borja Sainz",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1083204/borja-sainz"
+    },
+    {
+      "player_id": 1116734,
+      "player_name": "Gabriel Veiga",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1116734/gabriel-veiga"
+    },
+    {
+      "player_id": 1186684,
+      "player_name": "Alan Varela",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1186684/alan-varela"
+    },
+    {
+      "player_id": 1243535,
+      "player_name": "Francesco Farioli",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/1243535/francesco-farioli"
+    },
+    {
+      "player_id": 1285532,
+      "player_name": "Vasco Sousa",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1285532/vasco-sousa"
+    },
+    {
+      "player_id": 1387439,
+      "player_name": "Alberto Costa",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1387439/alberto-costa"
+    },
+    {
+      "player_id": 1404949,
+      "player_name": "Martim Fernandes",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1404949/martim-fernandes"
+    },
+    {
+      "player_id": 1406300,
+      "player_name": "Deniz Gül",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1406300/deniz-gul"
+    },
+    {
+      "player_id": 1414859,
+      "player_name": "Samuel Aghehowa",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1414859/samuel-aghehowa"
+    },
+    {
+      "player_id": 1436856,
+      "player_name": "Victor Froholdt",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1436856/victor-froholdt"
+    },
+    {
+      "player_id": 1510854,
+      "player_name": "Dominik Prpic",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1510854/dominik-prpic"
+    },
+    {
+      "player_id": 1580427,
+      "player_name": "William Gomes",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1580427/william-gomes"
+    },
+    {
+      "player_id": 1603224,
+      "player_name": "João Afonso",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1603224/joao-afonso"
+    },
+    {
+      "player_id": 1646517,
+      "player_name": "Cardoso Varela",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1646517/cardoso-varela"
+    },
+    {
+      "player_id": 1647807,
+      "player_name": "Oskar Pietuszewski",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1647807/oskar-pietuszewski"
+    },
+    {
+      "player_id": 1766344,
+      "player_name": "Duarte Cunha",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1766344/duarte-cunha"
+    }
+  ]
+}

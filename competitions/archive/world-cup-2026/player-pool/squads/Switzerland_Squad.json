@@ -1,0 +1,169 @@
+{
+  "team_name": "Switzerland",
+  "team_id": 6717,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6717/squad/switzerland",
+  "players": [
+    {
+      "player_id": 34053,
+      "player_name": "Murat Yakin",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/34053/murat-yakin"
+    },
+    {
+      "player_id": 115591,
+      "player_name": "Ricardo Rodríguez",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/115591/ricardo-rodriguez"
+    },
+    {
+      "player_id": 201704,
+      "player_name": "Remo Freuler",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/201704/remo-freuler"
+    },
+    {
+      "player_id": 207236,
+      "player_name": "Granit Xhaka",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/207236/granit-xhaka"
+    },
+    {
+      "player_id": 274787,
+      "player_name": "Yvon Mvogo",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/274787/yvon-mvogo"
+    },
+    {
+      "player_id": 275034,
+      "player_name": "Silvan Widmer",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/275034/silvan-widmer"
+    },
+    {
+      "player_id": 517346,
+      "player_name": "Nico Elvedi",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/517346/nico-elvedi"
+    },
+    {
+      "player_id": 521318,
+      "player_name": "Manuel Akanji",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/521318/manuel-akanji"
+    },
+    {
+      "player_id": 527103,
+      "player_name": "Breel Embolo",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/527103/breel-embolo"
+    },
+    {
+      "player_id": 598355,
+      "player_name": "Denis Zakaria",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/598355/denis-zakaria"
+    },
+    {
+      "player_id": 618774,
+      "player_name": "Christian Fassnacht",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/618774/christian-fassnacht"
+    },
+    {
+      "player_id": 705484,
+      "player_name": "Eray Cömert",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/705484/eray-comert"
+    },
+    {
+      "player_id": 707970,
+      "player_name": "Djibril Sow",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/707970/djibril-sow"
+    },
+    {
+      "player_id": 726956,
+      "player_name": "Cedric Itten",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/726956/cedric-itten"
+    },
+    {
+      "player_id": 764018,
+      "player_name": "Gregor Kobel",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/764018/gregor-kobel"
+    },
+    {
+      "player_id": 792756,
+      "player_name": "Michel Aebischer",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/792756/michel-aebischer"
+    },
+    {
+      "player_id": 823206,
+      "player_name": "Lucas Blondel",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/823206/lucas-blondel"
+    },
+    {
+      "player_id": 860752,
+      "player_name": "Rubén Vargas",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/860752/ruben-vargas"
+    },
+    {
+      "player_id": 915797,
+      "player_name": "Noah Okafor",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/915797/noah-okafor"
+    },
+    {
+      "player_id": 1022649,
+      "player_name": "Dan Ndoye",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1022649/dan-ndoye"
+    },
+    {
+      "player_id": 1067168,
+      "player_name": "Zeki Amdouni",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1067168/zeki-amdouni"
+    },
+    {
+      "player_id": 1107298,
+      "player_name": "Marvin Keller",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1107298/marvin-keller"
+    },
+    {
+      "player_id": 1161211,
+      "player_name": "Fabian Rieder",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1161211/fabian-rieder"
+    },
+    {
+      "player_id": 1163219,
+      "player_name": "Ardon Jashari",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1163219/ardon-jashari"
+    },
+    {
+      "player_id": 1257648,
+      "player_name": "Aurèle Amenda",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1257648/aurele-amenda"
+    },
+    {
+      "player_id": 1270002,
+      "player_name": "Luca Jaquez",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1270002/luca-jaquez"
+    },
+    {
+      "player_id": 1520063,
+      "player_name": "Johan Manzambi",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1520063/johan-manzambi"
+    }
+  ]
+}

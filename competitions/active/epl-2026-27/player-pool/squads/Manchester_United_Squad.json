@@ -1,0 +1,211 @@
+{
+  "team_name": "Manchester United",
+  "team_id": 10260,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/10260/squad/manchester-united",
+  "players": [
+    {
+      "player_id": 24155,
+      "player_name": "Tom Heaton",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/24155/tom-heaton"
+    },
+    {
+      "player_id": 34944,
+      "player_name": "Michael Carrick",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/34944/michael-carrick"
+    },
+    {
+      "player_id": 163604,
+      "player_name": "Karl Darlow",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/163604/karl-darlow"
+    },
+    {
+      "player_id": 255610,
+      "player_name": "Harry Maguire",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/255610/harry-maguire"
+    },
+    {
+      "player_id": 362694,
+      "player_name": "Luke Shaw",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/362694/luke-shaw"
+    },
+    {
+      "player_id": 422685,
+      "player_name": "Bruno Fernandes",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/422685/bruno-fernandes"
+    },
+    {
+      "player_id": 465960,
+      "player_name": "Youri Tielemans",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/465960/youri-tielemans"
+    },
+    {
+      "player_id": 696365,
+      "player_name": "Marcus Rashford",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/696365/marcus-rashford"
+    },
+    {
+      "player_id": 750032,
+      "player_name": "Mason Mount",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/750032/mason-mount"
+    },
+    {
+      "player_id": 751550,
+      "player_name": "Diogo Dalot",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/751550/diogo-dalot"
+    },
+    {
+      "player_id": 769895,
+      "player_name": "Matthijs de Ligt",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/769895/matthijs-de-ligt"
+    },
+    {
+      "player_id": 775539,
+      "player_name": "Noussair Mazraoui",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/775539/noussair-mazraoui"
+    },
+    {
+      "player_id": 847983,
+      "player_name": "Lisandro Martínez",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/847983/lisandro-martinez"
+    },
+    {
+      "player_id": 863098,
+      "player_name": "Matheus Cunha",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/863098/matheus-cunha"
+    },
+    {
+      "player_id": 923312,
+      "player_name": "Bryan Mbeumo",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/923312/bryan-mbeumo"
+    },
+    {
+      "player_id": 950830,
+      "player_name": "Joshua Zirkzee",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/950830/joshua-zirkzee"
+    },
+    {
+      "player_id": 1035614,
+      "player_name": "Manuel Ugarte",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1035614/manuel-ugarte"
+    },
+    {
+      "player_id": 1070052,
+      "player_name": "Amad Diallo",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1070052/amad-diallo"
+    },
+    {
+      "player_id": 1073977,
+      "player_name": "Benjamin Sesko",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1073977/benjamin-sesko"
+    },
+    {
+      "player_id": 1178602,
+      "player_name": "Senne Lammens",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1178602/senne-lammens"
+    },
+    {
+      "player_id": 1292810,
+      "player_name": "Kobbie Mainoo",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1292810/kobbie-mainoo"
+    },
+    {
+      "player_id": 1292838,
+      "player_name": "Daniel Gore",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1292838/daniel-gore"
+    },
+    {
+      "player_id": 1358581,
+      "player_name": "Leny Yoro",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1358581/leny-yoro"
+    },
+    {
+      "player_id": 1367699,
+      "player_name": "Dermot Mee",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1367699/dermot-mee"
+    },
+    {
+      "player_id": 1372921,
+      "player_name": "Andrey Santos",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1372921/andrey-santos"
+    },
+    {
+      "player_id": 1398915,
+      "player_name": "Ethan Wheatley",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1398915/ethan-wheatley"
+    },
+    {
+      "player_id": 1421810,
+      "player_name": "Toby Collyer",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1421810/toby-collyer"
+    },
+    {
+      "player_id": 1430832,
+      "player_name": "Harry Amass",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/1430832/harry-amass"
+    },
+    {
+      "player_id": 1436260,
+      "player_name": "Shea Lacey",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1436260/shea-lacey"
+    },
+    {
+      "player_id": 1526560,
+      "player_name": "Patrick Dorgu",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/1526560/patrick-dorgu"
+    },
+    {
+      "player_id": 1557220,
+      "player_name": "Chido Obi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1557220/chido-obi"
+    },
+    {
+      "player_id": 1559639,
+      "player_name": "Ayden Heaven",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1559639/ayden-heaven"
+    },
+    {
+      "player_id": 1676985,
+      "player_name": "Tyler Fletcher",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1676985/tyler-fletcher"
+    },
+    {
+      "player_id": 1714514,
+      "player_name": "Enzo Kana Biyik",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1714514/enzo-kana-biyik"
+    }
+  ]
+}

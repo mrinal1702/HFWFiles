@@ -1,0 +1,199 @@
+{
+  "team_name": "Brighton & Hove Albion",
+  "team_id": 10204,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/10204/squad/brighton-hove-albion",
+  "players": [
+    {
+      "player_id": 107917,
+      "player_name": "Jason Steele",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/107917/jason-steele"
+    },
+    {
+      "player_id": 167008,
+      "player_name": "Pascal Groß",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/167008/pascal-gross"
+    },
+    {
+      "player_id": 201690,
+      "player_name": "Lewis Dunk",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/201690/lewis-dunk"
+    },
+    {
+      "player_id": 208516,
+      "player_name": "Fabian Hürzeler",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/208516/fabian-hurzeler"
+    },
+    {
+      "player_id": 613715,
+      "player_name": "Olivier Boscagli",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/613715/olivier-boscagli"
+    },
+    {
+      "player_id": 768331,
+      "player_name": "Igor Julio",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/768331/igor-julio"
+    },
+    {
+      "player_id": 774448,
+      "player_name": "Ferdi Kadioglu",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/774448/ferdi-kadioglu"
+    },
+    {
+      "player_id": 796974,
+      "player_name": "Pascal Struijk",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/796974/pascal-struijk"
+    },
+    {
+      "player_id": 862608,
+      "player_name": "Kaoru Mitoma",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/862608/kaoru-mitoma"
+    },
+    {
+      "player_id": 866686,
+      "player_name": "Matthew O'Riley",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/866686/matthew-oriley"
+    },
+    {
+      "player_id": 951921,
+      "player_name": "Michael Svoboda",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/951921/michael-svoboda"
+    },
+    {
+      "player_id": 956925,
+      "player_name": "Georginio Rutter",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/956925/georginio-rutter"
+    },
+    {
+      "player_id": 970243,
+      "player_name": "Mats Wieffer",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/970243/mats-wieffer"
+    },
+    {
+      "player_id": 1068482,
+      "player_name": "Evan Ferguson",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1068482/evan-ferguson"
+    },
+    {
+      "player_id": 1079456,
+      "player_name": "Costinha",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1079456/costinha"
+    },
+    {
+      "player_id": 1127305,
+      "player_name": "Eiran Cashin",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1127305/eiran-cashin"
+    },
+    {
+      "player_id": 1131987,
+      "player_name": "Bart Verbruggen",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1131987/bart-verbruggen"
+    },
+    {
+      "player_id": 1134871,
+      "player_name": "Maxim De Cuyper",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1134871/maxim-de-cuyper"
+    },
+    {
+      "player_id": 1168311,
+      "player_name": "Yasin Ayari",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1168311/yasin-ayari"
+    },
+    {
+      "player_id": 1215410,
+      "player_name": "Ibrahim Osman",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1215410/ibrahim-osman"
+    },
+    {
+      "player_id": 1251334,
+      "player_name": "Jack Hinshelwood",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1251334/jack-hinshelwood"
+    },
+    {
+      "player_id": 1254170,
+      "player_name": "Amario Cozier-Duberry",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1254170/amario-cozier-duberry"
+    },
+    {
+      "player_id": 1336566,
+      "player_name": "Facundo Buonanotte",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1336566/facundo-buonanotte"
+    },
+    {
+      "player_id": 1352713,
+      "player_name": "Carlos Baleba",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1352713/carlos-baleba"
+    },
+    {
+      "player_id": 1354561,
+      "player_name": "Diego Gómez",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1354561/diego-gomez"
+    },
+    {
+      "player_id": 1400227,
+      "player_name": "Yankuba Minteh",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1400227/yankuba-minteh"
+    },
+    {
+      "player_id": 1413996,
+      "player_name": "Luka Vuskovic",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1413996/luka-vuskovic"
+    },
+    {
+      "player_id": 1423616,
+      "player_name": "Stefanos Tzimas",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1423616/stefanos-tzimas"
+    },
+    {
+      "player_id": 1446616,
+      "player_name": "Harry Howell",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1446616/harry-howell"
+    },
+    {
+      "player_id": 1561249,
+      "player_name": "Charalampos Kostoulas",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1561249/charalampos-kostoulas"
+    },
+    {
+      "player_id": 1602352,
+      "player_name": "Malick Junior Yalcouyé",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1602352/malick-junior-yalcouye"
+    },
+    {
+      "player_id": 1782648,
+      "player_name": "Zadok Yohanna",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1782648/zadok-yohanna"
+    }
+  ]
+}

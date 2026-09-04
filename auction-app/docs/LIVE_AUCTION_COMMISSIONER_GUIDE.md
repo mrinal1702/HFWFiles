@@ -126,7 +126,7 @@ You have two modes on the admin page — toggle between them at the top of the "
 Best for: finding a specific player quickly, especially unsold players from earlier rounds.
 1. Type the player's name or team in the search box
 2. Select them from the dropdown
-3. Select the buyer from the participant dropdown
+3. **Type the buyer's name** in the participant box — it searches as you type (e.g. typing "Con" brings up Conrad). Press Enter or click to select.
 4. Enter the sale price
 5. Click **Confirm Sale**
 
@@ -137,13 +137,16 @@ Best for: going through a team's players in order during the auction.
 3. For each available player (shown with Owner + £ inputs): select the buyer, enter the price, click **Sell**
 4. Sold players show as greyed-out ✓ Sold rows — click **Edit** if you need to change them
 
-### Budget warning
+### Undoing the last sale (quickest error fix)
 
-If a sale would leave someone with less budget than they'd need to fill their remaining squad slots, you'll see an amber warning box. Tick **"Proceed anyway"** if it's intentional (e.g. they're happy to end with a shorter squad). This is just advisory — you decide.
+At the top of the admin page there is always an amber banner showing the most recent sale, e.g.:
+> **Last sale:** Mbappé → Nimai (£95) &nbsp; **↩ Undo**
 
-### Voiding a sale (wrong price or wrong buyer entered)
+Click **↩ Undo** to immediately void it — no confirmation needed. The player returns to available and the budget is restored. If you undid it by mistake, just re-record the sale.
 
-In the **Recent Sales** log at the bottom of the admin page:
+### Voiding an older sale
+
+For sales further back in the log, use the **Recent Sales** section at the bottom of the admin page:
 1. Find the sale in the list
 2. Click **Void** → enter an optional reason → **Confirm void**
 
@@ -167,10 +170,10 @@ Once added to the auction, participants go to:
 They see three tabs:
 
 **My Team**
-Their own squad so far. Players grouped by position (GK → DEF → MID → FWD), sorted highest price first. Budget bar shows how much they've spent. Slots remaining shown at the top.
+Their own squad so far. Players grouped by position (GK → DEF → MID → FWD), sorted highest price first. Budget bar shows how much they've spent and what's left. Below the bar: **avg spend per remaining slot** — their remaining budget divided by how many squad slots they still need to fill, rounded to 2dp. Helps them plan bids without mental arithmetic.
 
 **All Teams**
-Summary cards for every participant, including yours. Each card shows: budget bar, and a breakdown like `1 GK · 3 DEF · 4 MID · 2 FWD`. Clicking a card takes them to that person's full squad.
+Summary cards for every participant, including yours. Each card shows: budget bar, position breakdown (`1 GK · 3 DEF · 4 MID · 2 FWD`), and the **avg per slot** for that person — so participants can see their competitors' spending power at a glance. Clicking a card takes them to that person's full squad.
 
 **Unsold Players**
 Every player not yet sold, grouped by team. Sorted alphabetically within each team. Participants use this to plan their remaining budget.
@@ -195,9 +198,10 @@ WHERE auction_id = '<auction-uuid>'
 
 ### "A participant can't log in / forgot their password"
 
-1. Go to Supabase Dashboard → **Authentication** → **Users**
-2. Find their email → click the **⋮ menu** on the right → **Send password reset email**
-3. They get a link in their inbox to set a new password
+1. Confirm the **Reset password** email template uses the `TokenHash` → `/auth/confirm` link (see `docs/PASSWORD_RECOVERY.md`). The default Supabase template breaks when the link is opened on a phone or another browser.
+2. Go to Supabase Dashboard → **Authentication** → **Users**
+3. Find their email → click the **⋮ menu** on the right → **Send password reset email**
+4. They get a link in their inbox to set a new password on `/reset-password`
 
 ### "I added the wrong participant to a sale"
 
@@ -207,9 +211,13 @@ Use the **Edit** button in the Recent Sales log to change the participant. The b
 
 Use the **Edit** button in the Recent Sales log to correct the price. If the new price exceeds the buyer's remaining budget, the edit is rejected.
 
-### "A sale was recorded that shouldn't have happened"
+### "I just recorded the wrong sale"
 
-Use the **Void** button in the Recent Sales log. The player returns to available and the budget is restored.
+Use the **↩ Undo** button in the amber banner at the top of the admin page — one click, no confirmation. The player returns to available and the budget is restored instantly. Then re-record the correct sale.
+
+### "A sale from earlier needs to be voided"
+
+Use the **Void** button in the Recent Sales log at the bottom of the page. The player returns to available and the budget is restored.
 
 ### "A participant's budget looks wrong"
 

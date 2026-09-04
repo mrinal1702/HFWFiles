@@ -1,5 +1,7 @@
 # Player Release System — Online Auction
 
+> **Ops canonical:** [`OPS_RELEASES.md`](./OPS_RELEASES.md) (July 2026). Prefer that doc for agent training and commissioner steps.
+
 Last updated: June 2026
 
 ---

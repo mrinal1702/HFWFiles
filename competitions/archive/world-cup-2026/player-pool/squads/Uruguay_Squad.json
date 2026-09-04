@@ -1,0 +1,169 @@
+{
+  "team_name": "Uruguay",
+  "team_id": 5796,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/5796/squad/uruguay",
+  "players": [
+    {
+      "player_id": 56829,
+      "player_name": "Fernando Muslera",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/56829/fernando-muslera"
+    },
+    {
+      "player_id": 154305,
+      "player_name": "Marcelo Bielsa",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/154305/marcelo-bielsa"
+    },
+    {
+      "player_id": 401095,
+      "player_name": "Rodrigo Aguirre",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/401095/rodrigo-aguirre"
+    },
+    {
+      "player_id": 438647,
+      "player_name": "Giorgian de Arrascaeta",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/438647/giorgian-de-arrascaeta"
+    },
+    {
+      "player_id": 465614,
+      "player_name": "Guillermo Varela",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/465614/guillermo-varela"
+    },
+    {
+      "player_id": 474589,
+      "player_name": "José Giménez",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/474589/jose-gimenez"
+    },
+    {
+      "player_id": 553476,
+      "player_name": "Sergio Rochet",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/553476/sergio-rochet"
+    },
+    {
+      "player_id": 620618,
+      "player_name": "Rodrigo Bentancur",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/620618/rodrigo-bentancur"
+    },
+    {
+      "player_id": 729093,
+      "player_name": "Mathías Olivera",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/729093/mathias-olivera"
+    },
+    {
+      "player_id": 743533,
+      "player_name": "Federico Valverde",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/743533/federico-valverde"
+    },
+    {
+      "player_id": 751198,
+      "player_name": "Nicolás de la Cruz",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/751198/nicolas-de-la-cruz"
+    },
+    {
+      "player_id": 840184,
+      "player_name": "Matías Viña",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/840184/matias-vina"
+    },
+    {
+      "player_id": 840212,
+      "player_name": "Agustín Canobbio",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/840212/agustin-canobbio"
+    },
+    {
+      "player_id": 848027,
+      "player_name": "Santiago Mele",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/848027/santiago-mele"
+    },
+    {
+      "player_id": 848034,
+      "player_name": "Santiago Bueno",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/848034/santiago-bueno"
+    },
+    {
+      "player_id": 861661,
+      "player_name": "Joaquín Piquerez",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/861661/joaquin-piquerez"
+    },
+    {
+      "player_id": 921253,
+      "player_name": "Ronald Araujo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/921253/ronald-araujo"
+    },
+    {
+      "player_id": 941660,
+      "player_name": "Brian Rodríguez",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/941660/brian-rodriguez"
+    },
+    {
+      "player_id": 950561,
+      "player_name": "Darwin Núñez",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/950561/darwin-nunez"
+    },
+    {
+      "player_id": 1020026,
+      "player_name": "Sebastián Cáceres",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1020026/sebastian-caceres"
+    },
+    {
+      "player_id": 1031656,
+      "player_name": "Maxi Araújo",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1031656/maxi-araujo"
+    },
+    {
+      "player_id": 1032811,
+      "player_name": "Federico Viñas",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1032811/federico-vinas"
+    },
+    {
+      "player_id": 1035614,
+      "player_name": "Manuel Ugarte",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1035614/manuel-ugarte"
+    },
+    {
+      "player_id": 1053963,
+      "player_name": "Juan Sanabria",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1053963/juan-sanabria"
+    },
+    {
+      "player_id": 1070776,
+      "player_name": "Rodrigo Zalazar",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1070776/rodrigo-zalazar"
+    },
+    {
+      "player_id": 1073402,
+      "player_name": "Facundo Pellistri",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1073402/facundo-pellistri"
+    },
+    {
+      "player_id": 1137909,
+      "player_name": "Emiliano Martínez",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1137909/emiliano-martinez"
+    }
+  ]
+}

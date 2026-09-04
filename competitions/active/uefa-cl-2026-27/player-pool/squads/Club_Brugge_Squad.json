@@ -1,0 +1,187 @@
+{
+  "team_name": "Club Brugge",
+  "team_id": 8342,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8342/squad/club-brugge",
+  "players": [
+    {
+      "player_id": 30910,
+      "player_name": "Ivan Leko",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/30910/ivan-leko"
+    },
+    {
+      "player_id": 37868,
+      "player_name": "Simon Mignolet",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/37868/simon-mignolet"
+    },
+    {
+      "player_id": 41618,
+      "player_name": "Yann Sommer",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/41618/yann-sommer"
+    },
+    {
+      "player_id": 118241,
+      "player_name": "Gustaf Nilsson",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/118241/gustaf-nilsson"
+    },
+    {
+      "player_id": 203666,
+      "player_name": "Hans Vanaken",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/203666/hans-vanaken"
+    },
+    {
+      "player_id": 445873,
+      "player_name": "Brandon Mechele",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/445873/brandon-mechele"
+    },
+    {
+      "player_id": 526227,
+      "player_name": "Nordin Jackers",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/526227/nordin-jackers"
+    },
+    {
+      "player_id": 837064,
+      "player_name": "Hugo Vetlesen",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/837064/hugo-vetlesen"
+    },
+    {
+      "player_id": 1178442,
+      "player_name": "Lynnt Audoor",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1178442/lynnt-audoor"
+    },
+    {
+      "player_id": 1178453,
+      "player_name": "Romeo Vermant",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1178453/romeo-vermant"
+    },
+    {
+      "player_id": 1186529,
+      "player_name": "Carlos Forbs",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1186529/carlos-forbs"
+    },
+    {
+      "player_id": 1202888,
+      "player_name": "Hugo Siquet",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1202888/hugo-siquet"
+    },
+    {
+      "player_id": 1206287,
+      "player_name": "Freddie Potts",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1206287/freddie-potts"
+    },
+    {
+      "player_id": 1227590,
+      "player_name": "Kyriani Sabbe",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1227590/kyriani-sabbe"
+    },
+    {
+      "player_id": 1232253,
+      "player_name": "Han-Beom Lee",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1232253/han-beom-lee"
+    },
+    {
+      "player_id": 1233418,
+      "player_name": "Jorne Spileers",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1233418/jorne-spileers"
+    },
+    {
+      "player_id": 1284071,
+      "player_name": "Félix Lemaréchal",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1284071/felix-lemarechal"
+    },
+    {
+      "player_id": 1315821,
+      "player_name": "Matteo Dams",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1315821/matteo-dams"
+    },
+    {
+      "player_id": 1334552,
+      "player_name": "Nicolò Tresoldi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1334552/nicolo-tresoldi"
+    },
+    {
+      "player_id": 1354085,
+      "player_name": "Joel Ordóñez",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1354085/joel-ordonez"
+    },
+    {
+      "player_id": 1484998,
+      "player_name": "Mamadou Diakhon",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1484998/mamadou-diakhon"
+    },
+    {
+      "player_id": 1485173,
+      "player_name": "Alejandro Granados",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1485173/alejandro-granados"
+    },
+    {
+      "player_id": 1489449,
+      "player_name": "Joaquin Seys",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1489449/joaquin-seys"
+    },
+    {
+      "player_id": 1557061,
+      "player_name": "Axl De Corte",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1557061/axl-de-corte"
+    },
+    {
+      "player_id": 1612843,
+      "player_name": "Cheveyo Tsawa",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1612843/cheveyo-tsawa"
+    },
+    {
+      "player_id": 1690093,
+      "player_name": "Jan Virgili",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1690093/jan-virgili"
+    },
+    {
+      "player_id": 1691828,
+      "player_name": "Andrej Vasovic",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1691828/andrej-vasovic"
+    },
+    {
+      "player_id": 1692880,
+      "player_name": "Tian Nai Koren",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1692880/tian-nai-koren"
+    },
+    {
+      "player_id": 1830647,
+      "player_name": "Samba Coulibaly",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1830647/samba-coulibaly"
+    },
+    {
+      "player_id": 1863039,
+      "player_name": "Stefan Ostoici",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1863039/stefan-ostoici"
+    }
+  ]
+}

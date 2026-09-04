@@ -1,0 +1,169 @@
+{
+  "team_name": "Germany",
+  "team_id": 8570,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8570/squad/germany",
+  "players": [
+    {
+      "player_id": 27299,
+      "player_name": "Manuel Neuer",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/27299/manuel-neuer"
+    },
+    {
+      "player_id": 36567,
+      "player_name": "Julian Nagelsmann",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/36567/julian-nagelsmann"
+    },
+    {
+      "player_id": 167008,
+      "player_name": "Pascal Groß",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/167008/pascal-gross"
+    },
+    {
+      "player_id": 178778,
+      "player_name": "Oliver Baumann",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/178778/oliver-baumann"
+    },
+    {
+      "player_id": 276738,
+      "player_name": "Antonio Rüdiger",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/276738/antonio-rudiger"
+    },
+    {
+      "player_id": 343748,
+      "player_name": "Leon Goretzka",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/343748/leon-goretzka"
+    },
+    {
+      "player_id": 460632,
+      "player_name": "Joshua Kimmich",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/460632/joshua-kimmich"
+    },
+    {
+      "player_id": 469700,
+      "player_name": "Jonathan Tah",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/469700/jonathan-tah"
+    },
+    {
+      "player_id": 530859,
+      "player_name": "Leroy Sané",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/530859/leroy-sane"
+    },
+    {
+      "player_id": 554534,
+      "player_name": "Alexander Nübel",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/554534/alexander-nubel"
+    },
+    {
+      "player_id": 614449,
+      "player_name": "Nadiem Amiri",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/614449/nadiem-amiri"
+    },
+    {
+      "player_id": 661519,
+      "player_name": "Deniz Undav",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/661519/deniz-undav"
+    },
+    {
+      "player_id": 664970,
+      "player_name": "Waldemar Anton",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/664970/waldemar-anton"
+    },
+    {
+      "player_id": 749736,
+      "player_name": "Kai Havertz",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/749736/kai-havertz"
+    },
+    {
+      "player_id": 806669,
+      "player_name": "David Raum",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/806669/david-raum"
+    },
+    {
+      "player_id": 966019,
+      "player_name": "Felix Nmecha",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/966019/felix-nmecha"
+    },
+    {
+      "player_id": 1002058,
+      "player_name": "Nico Schlotterbeck",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1002058/nico-schlotterbeck"
+    },
+    {
+      "player_id": 1047667,
+      "player_name": "Maximilian Beier",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1047667/maximilian-beier"
+    },
+    {
+      "player_id": 1071186,
+      "player_name": "Angelo Stiller",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1071186/angelo-stiller"
+    },
+    {
+      "player_id": 1074968,
+      "player_name": "Jamie Leweling",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1074968/jamie-leweling"
+    },
+    {
+      "player_id": 1106563,
+      "player_name": "Nick Woltemade",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1106563/nick-woltemade"
+    },
+    {
+      "player_id": 1137407,
+      "player_name": "Malick Thiaw",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1137407/malick-thiaw"
+    },
+    {
+      "player_id": 1152455,
+      "player_name": "Florian Wirtz",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1152455/florian-wirtz"
+    },
+    {
+      "player_id": 1156141,
+      "player_name": "Jamal Musiala",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1156141/jamal-musiala"
+    },
+    {
+      "player_id": 1395447,
+      "player_name": "Nathaniel Brown",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1395447/nathaniel-brown"
+    },
+    {
+      "player_id": 1473580,
+      "player_name": "Aleksandar Pavlovic",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1473580/aleksandar-pavlovic"
+    },
+    {
+      "player_id": 1486541,
+      "player_name": "Assan Ouédraogo",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1486541/assan-ouedraogo"
+    }
+  ]
+}

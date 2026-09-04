@@ -1,0 +1,169 @@
+{
+  "team_name": "Cape Verde",
+  "team_id": 5888,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/5888/squad/cape-verde",
+  "players": [
+    {
+      "player_id": 164062,
+      "player_name": "Stopira",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/164062/stopira"
+    },
+    {
+      "player_id": 172615,
+      "player_name": "Ryan Mendes",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/172615/ryan-mendes"
+    },
+    {
+      "player_id": 230134,
+      "player_name": "Roberto Lopes",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/230134/roberto-lopes"
+    },
+    {
+      "player_id": 302912,
+      "player_name": "Garry Rodrigues",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/302912/garry-rodrigues"
+    },
+    {
+      "player_id": 422149,
+      "player_name": "Vozinha",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/422149/vozinha"
+    },
+    {
+      "player_id": 444000,
+      "player_name": "Steven Moreira",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/444000/steven-moreira"
+    },
+    {
+      "player_id": 496648,
+      "player_name": "Diney Borges",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/496648/diney-borges"
+    },
+    {
+      "player_id": 665167,
+      "player_name": "Laros Duarte",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/665167/laros-duarte"
+    },
+    {
+      "player_id": 671326,
+      "player_name": "Nuno da Costa",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/671326/nuno-da-costa"
+    },
+    {
+      "player_id": 680905,
+      "player_name": "Jamiro Monteiro",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/680905/jamiro-monteiro"
+    },
+    {
+      "player_id": 785716,
+      "player_name": "Jovane Cabral",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/785716/jovane-cabral"
+    },
+    {
+      "player_id": 798069,
+      "player_name": "Deroy Duarte",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/798069/deroy-duarte"
+    },
+    {
+      "player_id": 865144,
+      "player_name": "Márcio",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/865144/marcio"
+    },
+    {
+      "player_id": 873832,
+      "player_name": "Willy Semedo",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/873832/willy-semedo"
+    },
+    {
+      "player_id": 890503,
+      "player_name": "Kevin Pina",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/890503/kevin-pina"
+    },
+    {
+      "player_id": 922877,
+      "player_name": "Logan Costa",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/922877/logan-costa"
+    },
+    {
+      "player_id": 1054027,
+      "player_name": "Carlos Dos Santos",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1054027/carlos-dos-santos"
+    },
+    {
+      "player_id": 1165477,
+      "player_name": "Telmo Arcanjo",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1165477/telmo-arcanjo"
+    },
+    {
+      "player_id": 1175733,
+      "player_name": "Kelvin Pires",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1175733/kelvin-pires"
+    },
+    {
+      "player_id": 1204965,
+      "player_name": "Bubista",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/1204965/bubista"
+    },
+    {
+      "player_id": 1205410,
+      "player_name": "Yannick Semedo",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1205410/yannick-semedo"
+    },
+    {
+      "player_id": 1241301,
+      "player_name": "João Paulo",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1241301/joao-paulo"
+    },
+    {
+      "player_id": 1241302,
+      "player_name": "Gilson Tavares",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1241302/gilson-tavares"
+    },
+    {
+      "player_id": 1309634,
+      "player_name": "Dailon Livramento",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1309634/dailon-livramento"
+    },
+    {
+      "player_id": 1441786,
+      "player_name": "Sidny Lopes Cabral",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/1441786/sidny-lopes-cabral"
+    },
+    {
+      "player_id": 1460591,
+      "player_name": "Wagner Pina",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1460591/wagner-pina"
+    },
+    {
+      "player_id": 1524518,
+      "player_name": "Hélio Varela",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1524518/helio-varela"
+    }
+  ]
+}

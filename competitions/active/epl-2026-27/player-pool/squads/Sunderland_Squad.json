@@ -1,0 +1,193 @@
+{
+  "team_name": "Sunderland",
+  "team_id": 8472,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8472/squad/sunderland",
+  "players": [
+    {
+      "player_id": 180646,
+      "player_name": "Simon Moore",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/180646/simon-moore"
+    },
+    {
+      "player_id": 207236,
+      "player_name": "Granit Xhaka",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/207236/granit-xhaka"
+    },
+    {
+      "player_id": 277771,
+      "player_name": "Thomas Meunier",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/277771/thomas-meunier"
+    },
+    {
+      "player_id": 418137,
+      "player_name": "Arthur Masuaku",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/418137/arthur-masuaku"
+    },
+    {
+      "player_id": 434498,
+      "player_name": "Alan Browne",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/434498/alan-browne"
+    },
+    {
+      "player_id": 480253,
+      "player_name": "Luke O'Nien",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/480253/luke-onien"
+    },
+    {
+      "player_id": 600524,
+      "player_name": "Reinildo",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/600524/reinildo"
+    },
+    {
+      "player_id": 602304,
+      "player_name": "Nordi Mukiele",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/602304/nordi-mukiele"
+    },
+    {
+      "player_id": 751998,
+      "player_name": "Omar Alderete",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/751998/omar-alderete"
+    },
+    {
+      "player_id": 887703,
+      "player_name": "Wilson Isidor",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/887703/wilson-isidor"
+    },
+    {
+      "player_id": 940446,
+      "player_name": "Brian Brobbey",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/940446/brian-brobbey"
+    },
+    {
+      "player_id": 963940,
+      "player_name": "Ajibola Alese",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/963940/ajibola-alese"
+    },
+    {
+      "player_id": 968912,
+      "player_name": "Anthony Patterson",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/968912/anthony-patterson"
+    },
+    {
+      "player_id": 974268,
+      "player_name": "Daniel Ballard",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/974268/daniel-ballard"
+    },
+    {
+      "player_id": 1049999,
+      "player_name": "Enzo Le Fée",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1049999/enzo-le-fee"
+    },
+    {
+      "player_id": 1067763,
+      "player_name": "Trai Hume",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1067763/trai-hume"
+    },
+    {
+      "player_id": 1123947,
+      "player_name": "Romaine Mundle",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1123947/romaine-mundle"
+    },
+    {
+      "player_id": 1125720,
+      "player_name": "Robin Roefs",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1125720/robin-roefs"
+    },
+    {
+      "player_id": 1186615,
+      "player_name": "Melker Ellborg",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1186615/melker-ellborg"
+    },
+    {
+      "player_id": 1203192,
+      "player_name": "Jenson Seelt",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1203192/jenson-seelt"
+    },
+    {
+      "player_id": 1222770,
+      "player_name": "Leo Hjelde",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1222770/leo-hjelde"
+    },
+    {
+      "player_id": 1227012,
+      "player_name": "Simon Adingra",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1227012/simon-adingra"
+    },
+    {
+      "player_id": 1239583,
+      "player_name": "Abdoullah Ba",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1239583/abdoullah-ba"
+    },
+    {
+      "player_id": 1285866,
+      "player_name": "Habib Diarra",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1285866/habib-diarra"
+    },
+    {
+      "player_id": 1287010,
+      "player_name": "Nilson Angulo",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1287010/nilson-angulo"
+    },
+    {
+      "player_id": 1327319,
+      "player_name": "Chris Rigg",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1327319/chris-rigg"
+    },
+    {
+      "player_id": 1342756,
+      "player_name": "Luís Semedo",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1342756/luis-semedo"
+    },
+    {
+      "player_id": 1359649,
+      "player_name": "Noah Sadiki",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1359649/noah-sadiki"
+    },
+    {
+      "player_id": 1368654,
+      "player_name": "Chemsdine Talbi",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1368654/chemsdine-talbi"
+    },
+    {
+      "player_id": 1381583,
+      "player_name": "Régis Le Bris",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/1381583/regis-le-bris"
+    },
+    {
+      "player_id": 1690655,
+      "player_name": "Jocelin Ta Bi",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1690655/jocelin-ta-bi"
+    }
+  ]
+}

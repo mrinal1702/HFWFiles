@@ -32,14 +32,26 @@ from fotmob_player_profile import (  # noqa: E402
 OUT_DIR = Path(r"C:\Users\trive\HFWFiles\Player_List\Raw_Files")
 
 TEAMS = [
-    {"team_name": "Barcelona", "team_id": 8634, "slug": "barcelona"},
-    {"team_name": "Liverpool", "team_id": 8650, "slug": "liverpool"},
+    {"team_name": "AFC Bournemouth", "team_id": 8678, "slug": "afc-bournemouth"},
     {"team_name": "Arsenal", "team_id": 9825, "slug": "arsenal"},
-    {"team_name": "Real Madrid", "team_id": 8633, "slug": "real-madrid"},
-    {"team_name": "Paris Saint-Germain", "team_id": 9847, "slug": "paris-saint-germain"},
-    {"team_name": "Sporting CP", "team_id": 9768, "slug": "sporting-cp"},
-    {"team_name": "Atletico Madrid", "team_id": 9906, "slug": "atletico-de-madrid"},
-    {"team_name": "Bayern Munich", "team_id": 9823, "slug": "bayern-munchen"},
+    {"team_name": "Aston Villa", "team_id": 10252, "slug": "aston-villa"},
+    {"team_name": "Brentford", "team_id": 9937, "slug": "brentford"},
+    {"team_name": "Brighton & Hove Albion", "team_id": 10204, "slug": "brighton-hove-albion"},
+    {"team_name": "Chelsea", "team_id": 8455, "slug": "chelsea"},
+    {"team_name": "Coventry City", "team_id": 8669, "slug": "coventry-city"},
+    {"team_name": "Crystal Palace", "team_id": 9826, "slug": "crystal-palace"},
+    {"team_name": "Everton", "team_id": 8668, "slug": "everton"},
+    {"team_name": "Fulham", "team_id": 9879, "slug": "fulham"},
+    {"team_name": "Hull City", "team_id": 8667, "slug": "hull-city"},
+    {"team_name": "Ipswich Town", "team_id": 9902, "slug": "ipswich-town"},
+    {"team_name": "Leeds United", "team_id": 8463, "slug": "leeds-united"},
+    {"team_name": "Liverpool", "team_id": 8650, "slug": "liverpool"},
+    {"team_name": "Manchester City", "team_id": 8456, "slug": "manchester-city"},
+    {"team_name": "Manchester United", "team_id": 10260, "slug": "manchester-united"},
+    {"team_name": "Newcastle United", "team_id": 10261, "slug": "newcastle-united"},
+    {"team_name": "Nottingham Forest", "team_id": 10203, "slug": "nottingham-forest"},
+    {"team_name": "Sunderland", "team_id": 8472, "slug": "sunderland"},
+    {"team_name": "Tottenham Hotspur", "team_id": 8586, "slug": "tottenham-hotspur"},
 ]
 
 
@@ -127,10 +139,21 @@ def file_name(team_name: str) -> str:
 
 
 def main() -> None:
+    # Default: skip clubs that already have a Raw_Files JSON (append-friendly for many teams).
+    # Pass --force to re-scrape every team in TEAMS.
+    force = "--force" in sys.argv
+
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     summary = []
+    skipped = []
 
     for idx, team in enumerate(TEAMS, start=1):
+        out_path = OUT_DIR / file_name(team["team_name"])
+        if out_path.exists() and not force:
+            print(f"[{idx}/{len(TEAMS)}] Skip (exists): {team['team_name']} -> {out_path.name}")
+            skipped.append(team["team_name"])
+            continue
+
         squad_url = f"https://www.fotmob.com/en-GB/teams/{team['team_id']}/squad/{team['slug']}"
         print(f"[{idx}/{len(TEAMS)}] Squad page: {team['team_name']} -> {squad_url}")
 
@@ -146,7 +169,6 @@ def main() -> None:
             "players": players,
         }
 
-        out_path = OUT_DIR / file_name(team["team_name"])
         out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         summary.append((team["team_name"], team["team_id"], len(players), str(out_path)))
 
@@ -157,6 +179,10 @@ def main() -> None:
     print("\nDone. Summary:")
     for team_name, team_id, count, out in summary:
         print(f"- {team_name} ({team_id}): {count} players -> {out}")
+    if skipped:
+        print(f"Skipped (already on disk): {', '.join(skipped)}")
+    if not summary and not skipped:
+        print("(nothing to do)")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,18 @@
+{
+  "competition_slug": "uefa-cl-2025-26",
+  "database_competition_id": 3,
+  "database_round_id": 202,
+  "round_slug": "qf-leg1",
+  "display_name": "Quarter-finals, Leg 1",
+  "round_number": 2,
+  "legacy_game_week_id": 201,
+  "expected_match_count": 4,
+  "scoring_state": "scored",
+  "publication_state": "archived",
+  "fixtures": [
+    { "match_slug": "paris-saint-germain-liverpool", "fotmob_match_id": 5205789, "home_team": "Paris Saint-Germain", "away_team": "Liverpool" },
+    { "match_slug": "real-madrid-bayern-munich", "fotmob_match_id": 5205791, "home_team": "Real Madrid", "away_team": "Bayern Munich" },
+    { "match_slug": "barcelona-atletico-madrid", "fotmob_match_id": 5205793, "home_team": "Barcelona", "away_team": "Atletico Madrid" },
+    { "match_slug": "sporting-cp-arsenal", "fotmob_match_id": 5205795, "home_team": "Sporting CP", "away_team": "Arsenal" }
+  ]
+}

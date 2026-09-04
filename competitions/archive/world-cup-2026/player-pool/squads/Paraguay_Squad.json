@@ -1,0 +1,169 @@
+{
+  "team_name": "Paraguay",
+  "team_id": 6724,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6724/squad/paraguay",
+  "players": [
+    {
+      "player_id": 68422,
+      "player_name": "Roberto Fernández",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/68422/roberto-fernandez"
+    },
+    {
+      "player_id": 274392,
+      "player_name": "Gustavo Gómez",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/274392/gustavo-gomez"
+    },
+    {
+      "player_id": 306380,
+      "player_name": "Gustavo Alfaro",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/306380/gustavo-alfaro"
+    },
+    {
+      "player_id": 307438,
+      "player_name": "Fabián Balbuena",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/307438/fabian-balbuena"
+    },
+    {
+      "player_id": 425711,
+      "player_name": "Gabriel Ávalos",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/425711/gabriel-avalos"
+    },
+    {
+      "player_id": 442277,
+      "player_name": "Miguel Almirón",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/442277/miguel-almiron"
+    },
+    {
+      "player_id": 466214,
+      "player_name": "Júnior Alonso",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/466214/junior-alonso"
+    },
+    {
+      "player_id": 474448,
+      "player_name": "Antonio Sanabria",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/474448/antonio-sanabria"
+    },
+    {
+      "player_id": 495193,
+      "player_name": "Gastón Olveira",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/495193/gaston-olveira"
+    },
+    {
+      "player_id": 497352,
+      "player_name": "Gustavo Velázquez",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/497352/gustavo-velazquez"
+    },
+    {
+      "player_id": 529625,
+      "player_name": "Andrés Cubas",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/529625/andres-cubas"
+    },
+    {
+      "player_id": 600850,
+      "player_name": "Alejandro Romero",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/600850/alejandro-romero"
+    },
+    {
+      "player_id": 751998,
+      "player_name": "Omar Alderete",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/751998/omar-alderete"
+    },
+    {
+      "player_id": 860890,
+      "player_name": "José Canale",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/860890/jose-canale"
+    },
+    {
+      "player_id": 1033279,
+      "player_name": "Isidro Pitta",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1033279/isidro-pitta"
+    },
+    {
+      "player_id": 1059490,
+      "player_name": "Mauricio Magalhães Prado",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1059490/mauricio"
+    },
+    {
+      "player_id": 1073742,
+      "player_name": "Julio Enciso",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1073742/julio-enciso"
+    },
+    {
+      "player_id": 1075065,
+      "player_name": "Braian Ojeda",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1075065/braian-ojeda"
+    },
+    {
+      "player_id": 1132960,
+      "player_name": "Ramón Sosa",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1132960/ramon-sosa"
+    },
+    {
+      "player_id": 1133495,
+      "player_name": "Juan Cáceres",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1133495/juan-caceres"
+    },
+    {
+      "player_id": 1241957,
+      "player_name": "Matías Galarza",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1241957/matias-galarza"
+    },
+    {
+      "player_id": 1252913,
+      "player_name": "Damián Bobadilla",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1252913/damian-bobadilla"
+    },
+    {
+      "player_id": 1320444,
+      "player_name": "Álex Arce",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1320444/alex-arce"
+    },
+    {
+      "player_id": 1347933,
+      "player_name": "Gustavo Caballero",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1347933/gustavo-caballero"
+    },
+    {
+      "player_id": 1354561,
+      "player_name": "Diego Gómez",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1354561/diego-gomez"
+    },
+    {
+      "player_id": 1683391,
+      "player_name": "Orlando Gill",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1683391/orlando-gill"
+    },
+    {
+      "player_id": 1736527,
+      "player_name": "Alexandro Maidana",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1736527/alexandro-maidana"
+    }
+  ]
+}

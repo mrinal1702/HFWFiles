@@ -1,6 +1,8 @@
 # Bidding system & UI handoff
 
-This document is the **technical handoff** for the **Supabase + Next.js** bidding stack. For the **current product UI** (routes, bidding room, sorting, deployment pointers), read **`USER_UI_AND_DEPLOYMENT.md`** in the same folder. This file matches the code and SQL in **`auction-app`** as of its last update.
+> **Ops canonical:** [`OPS_BIDDING_AND_DEADLINES.md`](./OPS_BIDDING_AND_DEADLINES.md) and [`OPS_INDEX.md`](./OPS_INDEX.md). This file remains a technical deep-dive; it may lag on `nation_rolling` — trust OPS + current SQL (`nation-rolling-bidding-rpc.sql`) when they differ.
+
+This document is the **technical handoff** for the **Supabase + Next.js** bidding stack. For the **current product UI** (routes, bidding room, sorting, deployment pointers), read **`USER_UI_AND_DEPLOYMENT.md`** and **`OPS_UI_SURFACES.md`** in the same folder.
 
 ---
 

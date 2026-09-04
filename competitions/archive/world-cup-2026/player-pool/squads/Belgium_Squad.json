@@ -1,0 +1,169 @@
+{
+  "team_name": "Belgium",
+  "team_id": 8263,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8263/squad/belgium",
+  "players": [
+    {
+      "player_id": 39591,
+      "player_name": "Axel Witsel",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/39591/axel-witsel"
+    },
+    {
+      "player_id": 169200,
+      "player_name": "Kevin De Bruyne",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/169200/kevin-de-bruyne"
+    },
+    {
+      "player_id": 170323,
+      "player_name": "Thibaut Courtois",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/170323/thibaut-courtois"
+    },
+    {
+      "player_id": 176580,
+      "player_name": "Rudi Garcia",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/176580/rudi-garcia"
+    },
+    {
+      "player_id": 181276,
+      "player_name": "Romelu Lukaku",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/181276/romelu-lukaku"
+    },
+    {
+      "player_id": 203666,
+      "player_name": "Hans Vanaken",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/203666/hans-vanaken"
+    },
+    {
+      "player_id": 277771,
+      "player_name": "Thomas Meunier",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/277771/thomas-meunier"
+    },
+    {
+      "player_id": 318615,
+      "player_name": "Leandro Trossard",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/318615/leandro-trossard"
+    },
+    {
+      "player_id": 445873,
+      "player_name": "Brandon Mechele",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/445873/brandon-mechele"
+    },
+    {
+      "player_id": 465750,
+      "player_name": "Timothy Castagne",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/465750/timothy-castagne"
+    },
+    {
+      "player_id": 465960,
+      "player_name": "Youri Tielemans",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/465960/youri-tielemans"
+    },
+    {
+      "player_id": 688876,
+      "player_name": "Dodi Lukébakio",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/688876/dodi-lukebakio"
+    },
+    {
+      "player_id": 863869,
+      "player_name": "Nicolas Raskin",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/863869/nicolas-raskin"
+    },
+    {
+      "player_id": 921341,
+      "player_name": "Alexis Saelemaekers",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/921341/alexis-saelemaekers"
+    },
+    {
+      "player_id": 942368,
+      "player_name": "Jérémy Doku",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/942368/jeremy-doku"
+    },
+    {
+      "player_id": 1095432,
+      "player_name": "Charles De Ketelaere",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1095432/charles-de-ketelaere"
+    },
+    {
+      "player_id": 1134871,
+      "player_name": "Maxim De Cuyper",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1134871/maxim-de-cuyper"
+    },
+    {
+      "player_id": 1173250,
+      "player_name": "Arthur Theate",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1173250/arthur-theate"
+    },
+    {
+      "player_id": 1178602,
+      "player_name": "Senne Lammens",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1178602/senne-lammens"
+    },
+    {
+      "player_id": 1185748,
+      "player_name": "Amadou Onana",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1185748/amadou-onana"
+    },
+    {
+      "player_id": 1200630,
+      "player_name": "Koni De Winter",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1200630/koni-de-winter"
+    },
+    {
+      "player_id": 1232172,
+      "player_name": "Zeno Debast",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1232172/zeno-debast"
+    },
+    {
+      "player_id": 1252070,
+      "player_name": "Nathan Ngoy",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1252070/nathan-ngoy"
+    },
+    {
+      "player_id": 1319972,
+      "player_name": "Mike Penders",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1319972/mike-penders"
+    },
+    {
+      "player_id": 1342754,
+      "player_name": "Diego Moreira",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1342754/diego-moreira"
+    },
+    {
+      "player_id": 1444231,
+      "player_name": "Matias Fernandez-Pardo",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1444231/matias-fernandez-pardo"
+    },
+    {
+      "player_id": 1489449,
+      "player_name": "Joaquin Seys",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1489449/joaquin-seys"
+    }
+  ]
+}

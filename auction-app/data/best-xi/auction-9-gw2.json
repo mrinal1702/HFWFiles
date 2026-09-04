@@ -6,11 +6,11 @@
       "auction_user_id": "107",
       "user_name": "Arnav Gupta",
       "gw_id": 2,
-      "formation": "4-4-2",
+      "formation": "4-5-1",
       "formation_tuple": [
         4,
-        4,
-        2
+        5,
+        1
       ],
       "total_points": 454,
       "goalkeeper": {
@@ -64,9 +64,9 @@
         {
           "player_id": 1050166,
           "player_name": "Anthony Elanga",
-          "role": "F",
+          "role": "M",
           "score": 38,
-          "flexible": false
+          "flexible": true
         },
         {
           "player_id": 974268,
@@ -218,13 +218,13 @@
       "auction_user_id": "103",
       "user_name": "Mrinal Trivedi",
       "gw_id": 2,
-      "formation": "4-3-3",
+      "formation": "4-4-2",
       "formation_tuple": [
         4,
-        3,
-        3
+        4,
+        2
       ],
-      "total_points": 408,
+      "total_points": 421,
       "goalkeeper": {
         "player_id": 90009937,
         "player_name": "Brentford Keepers",
@@ -250,7 +250,7 @@
           "player_name": "Marcus Tavernier",
           "role": "M",
           "score": 38,
-          "flexible": false
+          "flexible": true
         },
         {
           "player_id": 1030829,
@@ -276,16 +276,16 @@
         {
           "player_id": 789646,
           "player_name": "Jayden Bogle",
-          "role": "D",
+          "role": "M",
           "score": 33,
-          "flexible": false
+          "flexible": true
         },
         {
           "player_id": 1265626,
           "player_name": "Abdul Fatawu",
-          "role": "F",
+          "role": "M",
           "score": 26,
-          "flexible": false
+          "flexible": true
         },
         {
           "player_id": 1398392,
@@ -295,10 +295,10 @@
           "flexible": false
         },
         {
-          "player_id": 860975,
-          "player_name": "Joseph Willock",
-          "role": "M",
-          "score": 13,
+          "player_id": 1413846,
+          "player_name": "Jorrel Hato",
+          "role": "D",
+          "score": 26,
           "flexible": false
         }
       ],
@@ -307,12 +307,12 @@
         614006,
         789630,
         789646,
-        860975,
         1030829,
         1067763,
         1250253,
         1265626,
         1398392,
+        1413846,
         90009937
       ],
       "empty_outfield_slots": 0,
@@ -376,7 +376,7 @@
           "player_name": "Florian Wirtz",
           "role": "F",
           "score": 34,
-          "flexible": false
+          "flexible": true
         },
         {
           "player_id": 966026,
@@ -539,13 +539,13 @@
       "auction_user_id": "104",
       "user_name": "Dhruv Chawla",
       "gw_id": 2,
-      "formation": "4-3-3",
+      "formation": "3-5-2",
       "formation_tuple": [
-        4,
         3,
-        3
+        5,
+        2
       ],
-      "total_points": 344,
+      "total_points": 349,
       "goalkeeper": {
         "player_id": 90009902,
         "player_name": "Ipswich Town Keepers",
@@ -583,16 +583,16 @@
         {
           "player_id": 965764,
           "player_name": "Iliman Ndiaye",
-          "role": "F",
+          "role": "M",
           "score": 32,
-          "flexible": false
+          "flexible": true
         },
         {
           "player_id": 1022649,
           "player_name": "Dan Ndoye",
-          "role": "F",
+          "role": "M",
           "score": 32,
-          "flexible": false
+          "flexible": true
         },
         {
           "player_id": 494417,
@@ -616,16 +616,15 @@
           "flexible": false
         },
         {
-          "player_id": 613715,
-          "player_name": "Olivier Boscagli",
-          "role": "D",
-          "score": 17,
+          "player_id": 1478295,
+          "player_name": "Rayan",
+          "role": "F",
+          "score": 22,
           "flexible": false
         }
       ],
       "best_xi_player_ids": [
         494417,
-        613715,
         886016,
         965764,
         974618,
@@ -634,6 +633,7 @@
         1137407,
         1185211,
         1292810,
+        1478295,
         90009902
       ],
       "empty_outfield_slots": 0,
@@ -827,7 +827,7 @@
           "player_name": "Maxim De Cuyper",
           "role": "D",
           "score": 22,
-          "flexible": false
+          "flexible": true
         },
         {
           "player_id": 940446,
@@ -860,11 +860,11 @@
       "auction_user_id": "106",
       "user_name": "Sumair Patel",
       "gw_id": 2,
-      "formation": "5-3-2",
+      "formation": "5-4-1",
       "formation_tuple": [
         5,
-        3,
-        2
+        4,
+        1
       ],
       "total_points": 333,
       "goalkeeper": {
@@ -897,9 +897,9 @@
         {
           "player_id": 1083796,
           "player_name": "Kevin Schade",
-          "role": "F",
+          "role": "M",
           "score": 32,
-          "flexible": false
+          "flexible": true
         },
         {
           "player_id": 1097466,
@@ -1008,7 +1008,7 @@
           "player_name": "V\u00edctor Mu\u00f1oz",
           "role": "F",
           "score": 37,
-          "flexible": false
+          "flexible": true
         },
         {
           "player_id": 1359649,
@@ -1022,7 +1022,7 @@
           "player_name": "Tyrick Mitchell",
           "role": "D",
           "score": 23,
-          "flexible": false
+          "flexible": true
         },
         {
           "player_id": 915797,
@@ -1077,11 +1077,11 @@
       "auction_user_id": "116",
       "user_name": "Rushabh Shah",
       "gw_id": 2,
-      "formation": "4-3-3",
+      "formation": "4-4-2",
       "formation_tuple": [
         4,
-        3,
-        3
+        4,
+        2
       ],
       "total_points": 309,
       "goalkeeper": {
@@ -1142,9 +1142,9 @@
         {
           "player_id": 610184,
           "player_name": "Emiliano Buend\u00eda",
-          "role": "F",
+          "role": "M",
           "score": 19,
-          "flexible": false
+          "flexible": true
         },
         {
           "player_id": 1197347,
@@ -1345,7 +1345,7 @@
           "player_name": "Patrick Dorgu",
           "role": "D",
           "score": 22,
-          "flexible": false
+          "flexible": true
         },
         {
           "player_id": 1422593,
@@ -1487,13 +1487,13 @@
       "auction_user_id": "112",
       "user_name": "Nik Desai",
       "gw_id": 2,
-      "formation": "4-3-3",
+      "formation": "5-3-2",
       "formation_tuple": [
-        4,
+        5,
         3,
-        3
+        2
       ],
-      "total_points": 246,
+      "total_points": 265,
       "goalkeeper": {
         "player_id": 90008456,
         "player_name": "Manchester City Keepers",
@@ -1510,9 +1510,9 @@
         {
           "player_id": 961995,
           "player_name": "Bukayo Saka",
-          "role": "F",
+          "role": "M",
           "score": 42,
-          "flexible": false
+          "flexible": true
         },
         {
           "player_id": 766611,
@@ -1550,6 +1550,13 @@
           "flexible": false
         },
         {
+          "player_id": 465750,
+          "player_name": "Timothy Castagne",
+          "role": "D",
+          "score": 19,
+          "flexible": false
+        },
+        {
           "player_id": 1031325,
           "player_name": "Mart\u00edn Zubimendi",
           "role": "M",
@@ -1558,6 +1565,7 @@
         }
       ],
       "best_xi_player_ids": [
+        465750,
         509151,
         766611,
         933635,
@@ -1568,7 +1576,7 @@
         1302005,
         90008456
       ],
-      "empty_outfield_slots": 2,
+      "empty_outfield_slots": 1,
       "squad_size": 14,
       "missing_score_player_ids": [
         266520,
@@ -1638,7 +1646,7 @@
   ],
   "meta": {
     "squad_rows": 257,
-    "match_json_files": 0,
+    "match_json_files": 10,
     "players_with_scores": 230
   }
 }

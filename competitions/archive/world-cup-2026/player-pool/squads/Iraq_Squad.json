@@ -1,0 +1,163 @@
+{
+  "team_name": "Iraq",
+  "team_id": 5819,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/5819/squad/iraq",
+  "players": [
+    {
+      "player_id": 147315,
+      "player_name": "Graham Arnold",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/147315/graham-arnold"
+    },
+    {
+      "player_id": 320139,
+      "player_name": "Frans Putros",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/320139/frans-putros"
+    },
+    {
+      "player_id": 502481,
+      "player_name": "Rebin Sulaka",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/502481/rebin-sulaka"
+    },
+    {
+      "player_id": 533495,
+      "player_name": "Fahad Talib",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/533495/fahad-talib"
+    },
+    {
+      "player_id": 578761,
+      "player_name": "Jalal Hassan",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/578761/jalal-hassan"
+    },
+    {
+      "player_id": 674332,
+      "player_name": "Ayman Hussein",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/674332/aymen-hussein"
+    },
+    {
+      "player_id": 858340,
+      "player_name": "Amir Al-Ammari",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/858340/amir-al-ammari"
+    },
+    {
+      "player_id": 926484,
+      "player_name": "Mohanad Ali",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/926484/mohanad-ali"
+    },
+    {
+      "player_id": 941579,
+      "player_name": "Kevin Yakob",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/941579/kevin-yakob"
+    },
+    {
+      "player_id": 942834,
+      "player_name": "Ibrahim Bayesh",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/942834/ibrahim-bayesh"
+    },
+    {
+      "player_id": 1042511,
+      "player_name": "Aimar Sher",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1042511/aimar-sher"
+    },
+    {
+      "player_id": 1092563,
+      "player_name": "Hussein Ali",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1092563/hussein-ali"
+    },
+    {
+      "player_id": 1113688,
+      "player_name": "Ali Al Hamadi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1113688/ali-al-hamadi"
+    },
+    {
+      "player_id": 1132570,
+      "player_name": "Ahmed Basil Fadhil",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1132570/ahmed-basil"
+    },
+    {
+      "player_id": 1132572,
+      "player_name": "Ali Yousif",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1132572/ali-yousif"
+    },
+    {
+      "player_id": 1138592,
+      "player_name": "Zidane Iqbal",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1138592/zidane-iqbal"
+    },
+    {
+      "player_id": 1162514,
+      "player_name": "Marko Lawk Farji",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1162514/marko-farji"
+    },
+    {
+      "player_id": 1199113,
+      "player_name": "Merchas Doski",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1199113/merchas-doski"
+    },
+    {
+      "player_id": 1224691,
+      "player_name": "Ahmed Qasem",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1224691/ahmed-qasem"
+    },
+    {
+      "player_id": 1235623,
+      "player_name": "Youssef Amyn",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/1235623/youssef-amyn"
+    },
+    {
+      "player_id": 1333336,
+      "player_name": "Manaf Younis",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1333336/munaf-younus"
+    },
+    {
+      "player_id": 1420369,
+      "player_name": "Zaid Tahseen",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1420369/zaid-tahseen"
+    },
+    {
+      "player_id": 1478238,
+      "player_name": "Ali Jasim",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1478238/ali-jasim"
+    },
+    {
+      "player_id": 1554123,
+      "player_name": "Mustafa Saadoun",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1554123/mustafa-saadoon"
+    },
+    {
+      "player_id": 1606279,
+      "player_name": "Akam Hashem",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1606279/akam-hashim"
+    },
+    {
+      "player_id": 1642820,
+      "player_name": "Zaid Ismael",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1642820/zaid-ismail-al-dulaimi"
+    }
+  ]
+}

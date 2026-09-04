@@ -1,0 +1,49 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Cristiano Ronaldo,30893,Portugal,forward,51.31666666666666,15.0,0.0,66
+Bruno Fernandes,422685,Portugal,midfielder,41.642,15.0,0.0,57
+Nuno Mendes,1158945,Portugal,defender,41.57000000000001,10.0,0.0,52
+Rúben Dias,614006,Portugal,defender,32.6,10.0,0.0,43
+João Cancelo,361757,Portugal,defender,32.55,10.0,0.0,43
+Renato Veiga,1343750,Portugal,defender,27.6,10.0,0.0,38
+Joao Félix,794427,Portugal,forward,24.79166666666667,12.0,0.0,37
+Vitinha,1061249,Portugal,midfielder,22.516666666666666,13.0,0.0,36
+Eldor Shomurodov,619513,Uzbekistan,forward,35.375,0.0,0.0,35
+João Neves,1342757,Portugal,midfielder,18.821333333333335,13.0,0.0,32
+Francisco Conceição,1185336,Portugal,midfielder,19.874000000000002,6.5,0.0,26
+Rafael Leão,848844,Portugal,forward,22.40833333333333,0.5,0.0,23
+Abdulla Abdullaev,1294120,Uzbekistan,midfielder,27.018,-5.0,0.0,22
+Pedro Neto,843040,Portugal,forward,10.416666666666666,9.0,0.0,19
+Abbosbek Fayzullayev,1249993,Uzbekistan,midfielder,19.44533333333333,-3.0,0.0,16
+Rustamjon Ashurmatov,643624,Uzbekistan,defender,31.29,-15.0,0.0,16
+Nélson Semedo,470834,Portugal,defender,10.0,5.0,0.0,15
+Abdukodir Khusanov,1362998,Uzbekistan,defender,29.57,-15.0,0.0,15
+Bernardo Silva,488139,Portugal,midfielder,8.292666666666667,4.5,0.0,13
+Azizjon Ganiev,629823,Uzbekistan,midfielder,17.090000000000003,-5.0,0.0,12
+Otabek Shukurov,624405,Uzbekistan,midfielder,17.006666666666668,-5.0,0.0,12
+Trincão,732282,Portugal,midfielder,6.868000000000001,4.5,0.0,11
+Khoziakbar Alidzhanov,940778,Uzbekistan,defender,12.72,-5.0,0.0,8
+Behruzjon Karimov,1898281,Uzbekistan,defender,22.696666666666665,-15.0,0.0,8
+Igor Sergeev,251915,Uzbekistan,forward,6.841666666666667,-2.5,0.0,4
+Akmal Mozgovoy,929168,Uzbekistan,midfielder,5.746,-1.5,0.0,4
+Sherzod Nasrulloev,1258316,Uzbekistan,defender,8.1,-5.0,0.0,3
+Odildzhon Khamrobekov,619697,Uzbekistan,midfielder,4.092,-1.0,0.0,3
+Diogo Dalot,751550,Portugal,defender,0.0,0.0,0.0,0
+Umar Eshmuradov,922298,Uzbekistan,defender,0.0,0.0,0.0,0
+Matheus Nunes,955529,Portugal,defender,0.0,0.0,0.0,0
+Avazbek Ulasmaliev,1029597,Uzbekistan,defender,0.0,0.0,0.0,0
+Gonçalo Inácio,1165710,Portugal,defender,0.0,0.0,0.0,0
+Tomás Araújo,1187283,Portugal,defender,0.0,0.0,0.0,0
+Jakhongir Urozov,1477513,Uzbekistan,defender,0.0,0.0,0.0,0
+Rúben Neves,534684,Portugal,midfielder,0.0,0.0,0.0,0
+Farrukh Sayfiev,589585,Uzbekistan,midfielder,0.0,0.0,0.0,0
+Dostonbek Khamdamov,619508,Uzbekistan,midfielder,0.0,0.0,0.0,0
+Azizbek Amonov,933051,Uzbekistan,midfielder,0.0,0.0,0.0,0
+Oston Urunov,1057486,Uzbekistan,midfielder,0.0,0.0,0.0,0
+Samú,1130583,Portugal,midfielder,0.0,0.0,0.0,0
+Sherzod Esanov,1477517,Uzbekistan,midfielder,0.0,0.0,0.0,0
+Jamshid Iskandarov,431169,Uzbekistan,forward,0.0,0.0,0.0,0
+Gonçalo Guedes,536455,Portugal,forward,0.0,0.0,0.0,0
+Gonçalo Ramos,940087,Portugal,forward,0.0,0.0,0.0,0
+Ruslanbek Jiyanov,1421621,Uzbekistan,forward,0.0,0.0,0.0,0
+Portugal Keepers,8361,Portugal,goalkeeper,20.46,18.0,0.0,38
+Uzbekistan Keepers,8700,Uzbekistan,goalkeeper,17.3,-12.0,0.0,5

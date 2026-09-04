@@ -1,0 +1,169 @@
+{
+  "team_name": "USA",
+  "team_id": 6713,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6713/squad/usa",
+  "players": [
+    {
+      "player_id": 37915,
+      "player_name": "Mauricio Pochettino",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/37915/mauricio-pochettino"
+    },
+    {
+      "player_id": 198444,
+      "player_name": "Tim Ream",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/198444/tim-ream"
+    },
+    {
+      "player_id": 621882,
+      "player_name": "Álex Zendejas",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/621882/alex-zendejas"
+    },
+    {
+      "player_id": 621946,
+      "player_name": "Cristian Roldan",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/621946/cristian-roldan"
+    },
+    {
+      "player_id": 662428,
+      "player_name": "Antonee Robinson",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/662428/antonee-robinson"
+    },
+    {
+      "player_id": 688271,
+      "player_name": "Auston Trusty",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/688271/auston-trusty"
+    },
+    {
+      "player_id": 688295,
+      "player_name": "Christian Pulisic",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/688295/christian-pulisic"
+    },
+    {
+      "player_id": 729769,
+      "player_name": "Tyler Adams",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/729769/tyler-adams"
+    },
+    {
+      "player_id": 729988,
+      "player_name": "Matt Turner",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/729988/matt-turner"
+    },
+    {
+      "player_id": 825623,
+      "player_name": "Miles Robinson",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/825623/miles-robinson"
+    },
+    {
+      "player_id": 848266,
+      "player_name": "Weston McKennie",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/848266/weston-mckennie"
+    },
+    {
+      "player_id": 848268,
+      "player_name": "Haji Wright",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/848268/haji-wright"
+    },
+    {
+      "player_id": 889536,
+      "player_name": "Timothy Weah",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/889536/timothy-weah"
+    },
+    {
+      "player_id": 892816,
+      "player_name": "Sergiño Dest",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/892816/sergino-dest"
+    },
+    {
+      "player_id": 924485,
+      "player_name": "Mark McKenzie",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/924485/mark-mckenzie"
+    },
+    {
+      "player_id": 950829,
+      "player_name": "Chris Richards",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/950829/chris-richards"
+    },
+    {
+      "player_id": 952322,
+      "player_name": "Brenden Aaronson",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/952322/brenden-aaronson"
+    },
+    {
+      "player_id": 959696,
+      "player_name": "Joseph Scally",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/959696/joseph-scally"
+    },
+    {
+      "player_id": 982677,
+      "player_name": "Folarin Balogun",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/982677/folarin-balogun"
+    },
+    {
+      "player_id": 1026065,
+      "player_name": "Matt Freese",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1026065/matt-freese"
+    },
+    {
+      "player_id": 1036401,
+      "player_name": "Ricardo Pepi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1036401/ricardo-pepi"
+    },
+    {
+      "player_id": 1071179,
+      "player_name": "Giovanni Reyna",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1071179/giovanni-reyna"
+    },
+    {
+      "player_id": 1126058,
+      "player_name": "Malik Tillman",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1126058/malik-tillman"
+    },
+    {
+      "player_id": 1136096,
+      "player_name": "Sebastian Berhalter",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1136096/sebastian-berhalter"
+    },
+    {
+      "player_id": 1245998,
+      "player_name": "Chris Brady",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1245998/chris-brady"
+    },
+    {
+      "player_id": 1338696,
+      "player_name": "Alex Freeman",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1338696/alex-freeman"
+    },
+    {
+      "player_id": 1348329,
+      "player_name": "Max Arfsten",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/1348329/max-arfsten"
+    }
+  ]
+}

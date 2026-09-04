@@ -1,0 +1,169 @@
+{
+  "team_name": "Bosnia and Herzegovina",
+  "team_id": 10106,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/10106/squad/bosnia-herzegovina",
+  "players": [
+    {
+      "player_id": 15403,
+      "player_name": "Edin Dzeko",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/15403/edin-dzeko"
+    },
+    {
+      "player_id": 27294,
+      "player_name": "Sergej Barbarez",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/27294/sergej-barbarez"
+    },
+    {
+      "player_id": 304345,
+      "player_name": "Sead Kolasinac",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/304345/sead-kolasinac"
+    },
+    {
+      "player_id": 388903,
+      "player_name": "Haris Tabakovic",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/388903/haris-tabakovic"
+    },
+    {
+      "player_id": 466867,
+      "player_name": "Nikola Vasilj",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/466867/nikola-vasilj"
+    },
+    {
+      "player_id": 488207,
+      "player_name": "Osman Hadzikic",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/488207/osman-hadzikic"
+    },
+    {
+      "player_id": 541551,
+      "player_name": "Ivan Sunjic",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/541551/ivan-sunjic"
+    },
+    {
+      "player_id": 639558,
+      "player_name": "Amir Hadziahmetovic",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/639558/amir-hadziahmetovic"
+    },
+    {
+      "player_id": 653982,
+      "player_name": "Stjepan Radeljic",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/653982/stjepan-radeljic"
+    },
+    {
+      "player_id": 660148,
+      "player_name": "Dzenis Burnic",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/660148/dzenis-burnic"
+    },
+    {
+      "player_id": 725655,
+      "player_name": "Nikola Katic",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/725655/nikola-katic"
+    },
+    {
+      "player_id": 797797,
+      "player_name": "Dennis Hadzikadunic",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/797797/dennis-hadzikadunic"
+    },
+    {
+      "player_id": 840241,
+      "player_name": "Ermedin Demirovic",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/840241/ermedin-demirovic"
+    },
+    {
+      "player_id": 857436,
+      "player_name": "Nihad Mujakic",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/857436/nihad-mujakic"
+    },
+    {
+      "player_id": 857661,
+      "player_name": "Martin Zlomislic",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/857661/martin-zlomislic"
+    },
+    {
+      "player_id": 958010,
+      "player_name": "Amar Dedic",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/958010/amar-dedic"
+    },
+    {
+      "player_id": 1057426,
+      "player_name": "Armin Gigovic",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1057426/armin-gigovic"
+    },
+    {
+      "player_id": 1174844,
+      "player_name": "Jovo Lukic",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1174844/jovo-lukic"
+    },
+    {
+      "player_id": 1179875,
+      "player_name": "Ivan Basic",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1179875/ivan-basic"
+    },
+    {
+      "player_id": 1250485,
+      "player_name": "Tarik Muharemovic",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1250485/tarik-muharemovic"
+    },
+    {
+      "player_id": 1284492,
+      "player_name": "Samed Bazdar",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1284492/samed-bazdar"
+    },
+    {
+      "player_id": 1300385,
+      "player_name": "Amar Memic",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/1300385/amar-memic"
+    },
+    {
+      "player_id": 1346860,
+      "player_name": "Esmir Bajraktarevic",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1346860/esmir-bajraktarevic"
+    },
+    {
+      "player_id": 1415104,
+      "player_name": "Benjamin Tahirovic",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1415104/benjamin-tahirovic"
+    },
+    {
+      "player_id": 1528815,
+      "player_name": "Ermin Mahmic",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1528815/ermin-mahmic"
+    },
+    {
+      "player_id": 1657810,
+      "player_name": "Nidal Celik",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1657810/nidal-celik"
+    },
+    {
+      "player_id": 1684401,
+      "player_name": "Kerim Alajbegovic",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1684401/kerim-alajbegovic"
+    }
+  ]
+}

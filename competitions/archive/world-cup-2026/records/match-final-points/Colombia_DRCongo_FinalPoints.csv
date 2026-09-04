@@ -1,0 +1,49 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Johan Mojica,474673,Colombia,defender,35.31,10.0,0.0,45
+Daniel Muñoz,859282,Colombia,defender,34.31,10.0,0.0,44
+Davinson Sánchez,643533,Colombia,defender,33.77,10.0,0.0,44
+Jhon Lucumí,860913,Colombia,defender,31.04,10.0,0.0,41
+Jhon Arias,1023030,Colombia,forward,34.875,3.0,0.0,38
+James Rodríguez,164684,Colombia,forward,37.025,0.0,0.0,37
+Gustavo Puerta,1331597,Colombia,midfielder,26.197999999999993,7.0,0.0,33
+Jefferson Lerma,466672,Colombia,midfielder,23.422,7.0,0.0,30
+Aaron Wan-Bissaka,760320,Congo DR,defender,24.410000000000004,5.0,0.0,29
+Axel Tuanzebe,690149,Congo DR,defender,22.060000000000002,5.0,0.0,27
+Luis Díaz,860914,Colombia,forward,23.491666666666664,3.0,0.0,26
+Juan Quintero,207617,Colombia,midfielder,21.026666666666667,4.5,0.0,26
+Arthur Masuaku,418137,Congo DR,defender,15.19,10.0,0.0,25
+Steve Kapuadi,1132814,Congo DR,defender,15.87,5.0,0.0,21
+Samuel Moutoussamy,866108,Congo DR,midfielder,14.661333333333335,3.0,0.0,18
+Ngal Ayel Mukau,1428153,Congo DR,midfielder,11.136,5.0,0.0,16
+Joris Kayembe Ditu,500932,Congo DR,defender,15.54,0.0,0.0,16
+Yoane Wissa,666857,Congo DR,forward,15.341666666666665,0.0,0.0,15
+Chancel Mbemba,277761,Congo DR,defender,9.780000000000001,5.0,0.0,15
+Cédric Bakambu,201939,Congo DR,forward,12.025,0.0,0.0,12
+Simon Banza,696932,Congo DR,forward,14.25,-2.5,0.0,12
+Noah Sadiki,1359649,Congo DR,midfielder,10.772,0.5,0.0,11
+Nathanaël Mbuku,1049799,Congo DR,forward,12.258333333333335,-2.5,0.0,10
+Charles Pickel,743720,Congo DR,midfielder,8.824,0.5,0.0,9
+Luis Suárez,792303,Colombia,forward,8.183333333333334,0.0,0.0,8
+Richard Ríos,1174630,Colombia,midfielder,5.481333333333334,2.5,0.0,8
+Jhon Córdoba,291425,Colombia,forward,5.441666666666666,0.5,0.0,6
+Edo Kayembe,909803,Congo DR,midfielder,0.8719999999999994,5.0,0.0,6
+Santiago Arias,207642,Colombia,defender,0.0,0.0,0.0,0
+Yerry Mina,496042,Colombia,defender,0.0,0.0,0.0,0
+Dylan Batubinsika,751762,Congo DR,defender,0.0,0.0,0.0,0
+Willer Ditta,965205,Colombia,defender,0.0,0.0,0.0,0
+Gédéon Kalulu,1022309,Congo DR,defender,0.0,0.0,0.0,0
+Aaron Tshibola,490122,Congo DR,midfielder,0.0,0.0,0.0,0
+Deiver Machado,578756,Colombia,midfielder,0.0,0.0,0.0,0
+Juan Portilla,1281230,Colombia,midfielder,0.0,0.0,0.0,0
+Brian Cipenga,1302121,Congo DR,midfielder,0.0,0.0,0.0,0
+Kevin Castaño,1434853,Colombia,midfielder,0.0,0.0,0.0,0
+Gaël Kakuta,163205,Congo DR,forward,0.0,0.0,0.0,0
+Théo Bongonda,466132,Congo DR,forward,0.0,0.0,0.0,0
+Meschack Elia,694060,Congo DR,forward,0.0,0.0,0.0,0
+Jorge Carrascal,784834,Colombia,forward,0.0,0.0,0.0,0
+Jaminton Campaz,837870,Colombia,forward,0.0,0.0,0.0,0
+Juan Hernández,852071,Colombia,forward,0.0,0.0,0.0,0
+Fiston Mayele,1116042,Congo DR,forward,0.0,0.0,0.0,0
+Andrés Gómez,1353421,Colombia,forward,0.0,0.0,0.0,0
+Congo DR Keepers,6321,Congo DR,goalkeeper,34.379999999999995,12.0,0.0,46
+Colombia Keepers,8258,Colombia,goalkeeper,12.1,18.0,0.0,30

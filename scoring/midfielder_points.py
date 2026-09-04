@@ -27,6 +27,7 @@ class MidfielderWeights(TypedDict, total=False):
     accurate_passes: float
     inaccurate_passes: float
     chances_created: float
+    passes_into_final_third: float
 
     dribbles_won: float
     dribbles_lost: float
@@ -72,9 +73,10 @@ MIDFIELDER_WEIGHTS: MidfielderWeights = {
     "errors_led_to_goal": -5.0,
 
     # Passing / creation
-    "accurate_passes": 0.154,
+    "accurate_passes": 0.112,
     "inaccurate_passes": -0.31,
     "chances_created": 2.5,
+    "passes_into_final_third": 0.30,
 
     # Take-ons
     "dribbles_won": 2.9,
@@ -130,6 +132,7 @@ MIDFIELDER_STAT_KEYS: dict[str, str] = {
     "accurate_passes": "accurate_passes",
     "inaccurate_passes": "inaccurate_passes",
     "chances_created": "chances_created",
+    "passes_into_final_third": "passes_into_final_third",
     "dribbles_won": "dribbles_successful",
     "dribbles_lost": "dribbles_failed",
     "blocks": "blocks",
@@ -150,7 +153,7 @@ MIDFIELDER_STAT_KEYS: dict[str, str] = {
 
 
 MIDFIELDER_SCORING: dict[str, Any] = {
-    "version": "0.1",
+    "version": "0.2",
     "role": "midfielder",
     "weights": MIDFIELDER_WEIGHTS,
     "formulas": MIDFIELDER_FORMULAS,
@@ -163,6 +166,8 @@ MIDFIELDER_SCORING: dict[str, Any] = {
     },
     "notes": (
         "Clearances apply once via clearances_total. "
+        "Accurate passes 0.112; passes_into_final_third 0.30 (revenue-neutral shift from 0.154). "
+        "Inaccurate passes unchanged at -0.31. "
         "tackles_lost: -0.6 per dribbled_past (column tackles_lost). "
         "dribbles_lost: -0.8 per dribbles_failed. No separate dribbled_past weight. "
         "Goals/assists are assumed same as defenders (10/8) since not explicitly listed for midfielders."

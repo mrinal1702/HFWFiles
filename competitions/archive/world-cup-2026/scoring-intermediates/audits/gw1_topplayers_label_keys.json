@@ -1,0 +1,33 @@
+{
+  "handled": [
+    "centerattackingmidfielder_short",
+    "centerback_short",
+    "centerdefensivemidfielder_short",
+    "centermidfielder_short",
+    "left_wing_back_short",
+    "leftback_short",
+    "leftmidfielder_short",
+    "leftwinger_short",
+    "right_wing_back_short",
+    "rightback_short",
+    "rightmidfielder_short",
+    "rightwinger_short",
+    "striker_short"
+  ],
+  "seen_in_gw1": [
+    "centerattackingmidfielder_short",
+    "centerback_short",
+    "centerdefensivemidfielder_short",
+    "centermidfielder_short",
+    "left_wing_back_short",
+    "leftback_short",
+    "leftmidfielder_short",
+    "leftwinger_short",
+    "right_wing_back_short",
+    "rightback_short",
+    "rightmidfielder_short",
+    "rightwinger_short",
+    "striker_short"
+  ],
+  "unhandled_seen": []
+}

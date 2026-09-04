@@ -1,0 +1,199 @@
+{
+  "team_name": "Ipswich Town",
+  "team_id": 9902,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/9902/squad/ipswich-town",
+  "players": [
+    {
+      "player_id": 24393,
+      "player_name": "Gary O'Neil",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/24393/gary-oneil"
+    },
+    {
+      "player_id": 111027,
+      "player_name": "David Button",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/111027/david-button"
+    },
+    {
+      "player_id": 413158,
+      "player_name": "Chuba Akpom",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/413158/chuba-akpom"
+    },
+    {
+      "player_id": 512013,
+      "player_name": "Christian Walton",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/512013/christian-walton"
+    },
+    {
+      "player_id": 556972,
+      "player_name": "Sasa Lukic",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/556972/sasa-lukic"
+    },
+    {
+      "player_id": 609733,
+      "player_name": "Darnell Furlong",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/609733/darnell-furlong"
+    },
+    {
+      "player_id": 643228,
+      "player_name": "Alex Palmer",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/643228/alex-palmer"
+    },
+    {
+      "player_id": 674009,
+      "player_name": "Chiedozie Ogbene",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/674009/chiedozie-ogbene"
+    },
+    {
+      "player_id": 696443,
+      "player_name": "Issa Diop",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/696443/issa-diop"
+    },
+    {
+      "player_id": 728765,
+      "player_name": "Daizen Maeda",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/728765/daizen-maeda"
+    },
+    {
+      "player_id": 750033,
+      "player_name": "George Hirst",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/750033/george-hirst"
+    },
+    {
+      "player_id": 760398,
+      "player_name": "Cédric Kipré",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/760398/cedric-kipre"
+    },
+    {
+      "player_id": 770267,
+      "player_name": "Ben Johnson",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/770267/ben-johnson"
+    },
+    {
+      "player_id": 789507,
+      "player_name": "Jack Taylor",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/789507/jack-taylor"
+    },
+    {
+      "player_id": 789578,
+      "player_name": "Dara O'Shea",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/789578/dara-oshea"
+    },
+    {
+      "player_id": 793255,
+      "player_name": "Florentino",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/793255/florentino"
+    },
+    {
+      "player_id": 796398,
+      "player_name": "Kjell Scherpen",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/796398/kjell-scherpen"
+    },
+    {
+      "player_id": 797594,
+      "player_name": "Azor Matusiwa",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/797594/azor-matusiwa"
+    },
+    {
+      "player_id": 914402,
+      "player_name": "Jack Clarke",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/914402/jack-clarke"
+    },
+    {
+      "player_id": 980381,
+      "player_name": "Leif Davis",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/980381/leif-davis"
+    },
+    {
+      "player_id": 1079103,
+      "player_name": "Jacob Greaves",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1079103/jacob-greaves"
+    },
+    {
+      "player_id": 1086712,
+      "player_name": "Harry Clarke",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/1086712/harry-clarke"
+    },
+    {
+      "player_id": 1089645,
+      "player_name": "Jaden Philogene-Bidace",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1089645/jaden-philogene-bidace"
+    },
+    {
+      "player_id": 1113688,
+      "player_name": "Ali Al Hamadi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1113688/ali-al-hamadi"
+    },
+    {
+      "player_id": 1113915,
+      "player_name": "Kasey McAteer",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1113915/kasey-mcateer"
+    },
+    {
+      "player_id": 1129081,
+      "player_name": "Marcelino Núñez",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1129081/marcelino-nunez"
+    },
+    {
+      "player_id": 1198007,
+      "player_name": "Anis Mehmeti",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1198007/anis-mehmeti"
+    },
+    {
+      "player_id": 1265626,
+      "player_name": "Abdul Fatawu",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1265626/abdul-fatawu"
+    },
+    {
+      "player_id": 1287056,
+      "player_name": "Cameron Humphreys",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1287056/cameron-humphreys"
+    },
+    {
+      "player_id": 1307961,
+      "player_name": "Sindre Walle Egeli",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1307961/sindre-walle-egeli"
+    },
+    {
+      "player_id": 1320949,
+      "player_name": "Emersonn",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1320949/emersonn"
+    },
+    {
+      "player_id": 1348497,
+      "player_name": "Kayne van Oevelen",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1348497/kayne-van-oevelen"
+    }
+  ]
+}

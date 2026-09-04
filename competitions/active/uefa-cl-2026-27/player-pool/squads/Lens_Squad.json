@@ -1,0 +1,181 @@
+{
+  "team_name": "Lens",
+  "team_id": 8588,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8588/squad/lens",
+  "players": [
+    {
+      "player_id": 26427,
+      "player_name": "Régis Gurtner",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/26427/regis-gurtner"
+    },
+    {
+      "player_id": 38847,
+      "player_name": "Dino Toppmöller",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/38847/dino-toppmoller"
+    },
+    {
+      "player_id": 186811,
+      "player_name": "Mathieu Gorgelin",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/186811/mathieu-gorgelin"
+    },
+    {
+      "player_id": 254308,
+      "player_name": "Florian Thauvin",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/254308/florian-thauvin"
+    },
+    {
+      "player_id": 264190,
+      "player_name": "Thorgan Hazard",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/264190/thorgan-hazard"
+    },
+    {
+      "player_id": 513072,
+      "player_name": "Jonathan Gradit",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/513072/jonathan-gradit"
+    },
+    {
+      "player_id": 561046,
+      "player_name": "Ruben Aguilar",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/561046/ruben-aguilar"
+    },
+    {
+      "player_id": 612699,
+      "player_name": "Florian Sotoca",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/612699/florian-sotoca"
+    },
+    {
+      "player_id": 637746,
+      "player_name": "Odsonne Édouard",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/637746/odsonne-edouard"
+    },
+    {
+      "player_id": 660326,
+      "player_name": "Matthieu Udol",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/660326/matthieu-udol"
+    },
+    {
+      "player_id": 688830,
+      "player_name": "Amadou Haidara",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/688830/amadou-haidara"
+    },
+    {
+      "player_id": 861445,
+      "player_name": "Michaël Cuisance",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/861445/michael-cuisance"
+    },
+    {
+      "player_id": 954190,
+      "player_name": "Michal Skóras",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/954190/michal-skoras"
+    },
+    {
+      "player_id": 1002617,
+      "player_name": "Saud Abdulhamid",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/1002617/saud-abdulhamid"
+    },
+    {
+      "player_id": 1053713,
+      "player_name": "Maik Nawrocki",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1053713/maik-nawrocki"
+    },
+    {
+      "player_id": 1189856,
+      "player_name": "Abdallah Sima",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1189856/abdallah-sima"
+    },
+    {
+      "player_id": 1191194,
+      "player_name": "Jhoanner Chávez",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1191194/jhoanner-chavez"
+    },
+    {
+      "player_id": 1276626,
+      "player_name": "Samson Baidoo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1276626/samson-baidoo"
+    },
+    {
+      "player_id": 1288907,
+      "player_name": "Yacine Titraoui",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1288907/yacine-titraoui"
+    },
+    {
+      "player_id": 1390336,
+      "player_name": "Robin Risser",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1390336/robin-risser"
+    },
+    {
+      "player_id": 1406419,
+      "player_name": "Franjo Ivanovic",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1406419/franjo-ivanovic"
+    },
+    {
+      "player_id": 1406645,
+      "player_name": "Ismaëlo Ganiou",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1406645/ismaelo-ganiou"
+    },
+    {
+      "player_id": 1586559,
+      "player_name": "Rayan Fofana",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1586559/rayan-fofana"
+    },
+    {
+      "player_id": 1634789,
+      "player_name": "Andrija Bulatovic",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1634789/andrija-bulatovic"
+    },
+    {
+      "player_id": 1657810,
+      "player_name": "Nidal Celik",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1657810/nidal-celik"
+    },
+    {
+      "player_id": 1685514,
+      "player_name": "Kyllian Antonio",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1685514/kyllian-antonio"
+    },
+    {
+      "player_id": 1727044,
+      "player_name": "Souleymane Sagnan",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1727044/souleymane-sagnan"
+    },
+    {
+      "player_id": 1755868,
+      "player_name": "Ilan Jourdren",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1755868/ilan-jourdren"
+    },
+    {
+      "player_id": 1980586,
+      "player_name": "Mezian Soares",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1980586/mezian-soares"
+    }
+  ]
+}

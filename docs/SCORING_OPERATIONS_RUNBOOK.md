@@ -2,7 +2,9 @@
 
 This runbook formalizes two operational procedures for your current admin workflow.
 
-**World Cup agent workflow (score match → public page → Supabase leaderboard → player breakdowns):** see [`AGENT_SCORES_AND_LEADERBOARD_WORKFLOW.md`](./AGENT_SCORES_AND_LEADERBOARD_WORKFLOW.md).
+**World Cup 2026 agent workflow** (archived with tournament records): see [`archive/world-cup-2026/docs/AGENT_SCORES_AND_LEADERBOARD_WORKFLOW.md`](../archive/world-cup-2026/docs/AGENT_SCORES_AND_LEADERBOARD_WORKFLOW.md).
+
+**Canonical online-auction scoring ops (all competitions):** [`auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md`](../auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md) via [`OPS_INDEX.md`](../auction-app/docs/OPS_INDEX.md).
 
 **Player pool (auction prep):** Building the FotMob-based master list from squad URLs through `master_player_list.csv` is documented in [`AUCTION_PREPARATION_PROCEDURE.md`](./AUCTION_PREPARATION_PROCEDURE.md) (configure teams, scrape, role map, names, CSV).
 

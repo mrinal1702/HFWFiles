@@ -1,0 +1,169 @@
+{
+  "team_name": "Brazil",
+  "team_id": 8256,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8256/squad/brazil",
+  "players": [
+    {
+      "player_id": 19533,
+      "player_name": "Neymar",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/19533/neymar"
+    },
+    {
+      "player_id": 78619,
+      "player_name": "Carlo Ancelotti",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/78619/carlo-ancelotti"
+    },
+    {
+      "player_id": 157865,
+      "player_name": "Alex Sandro",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/157865/alex-sandro"
+    },
+    {
+      "player_id": 208077,
+      "player_name": "Danilo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/208077/danilo"
+    },
+    {
+      "player_id": 208494,
+      "player_name": "Casemiro",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/208494/casemiro"
+    },
+    {
+      "player_id": 267365,
+      "player_name": "Marquinhos",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/267365/marquinhos"
+    },
+    {
+      "player_id": 267826,
+      "player_name": "Weverton",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/267826/weverton"
+    },
+    {
+      "player_id": 319784,
+      "player_name": "Alisson Becker",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/319784/alisson-becker"
+    },
+    {
+      "player_id": 346000,
+      "player_name": "Douglas Santos",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/346000/douglas-santos"
+    },
+    {
+      "player_id": 359188,
+      "player_name": "Fabinho",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/359188/fabinho"
+    },
+    {
+      "player_id": 363364,
+      "player_name": "Ederson",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/363364/ederson"
+    },
+    {
+      "player_id": 523801,
+      "player_name": "Léo Pereira",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/523801/leo-pereira"
+    },
+    {
+      "player_id": 696679,
+      "player_name": "Raphinha",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/696679/raphinha"
+    },
+    {
+      "player_id": 766435,
+      "player_name": "Lucas Paquetá",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/766435/lucas-paqueta"
+    },
+    {
+      "player_id": 795179,
+      "player_name": "Gabriel",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/795179/gabriel"
+    },
+    {
+      "player_id": 846033,
+      "player_name": "Vinícius Júnior",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/846033/vinicius-junior"
+    },
+    {
+      "player_id": 850354,
+      "player_name": "Bruno Guimarães",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/850354/bruno-guimaraes"
+    },
+    {
+      "player_id": 857269,
+      "player_name": "Gleison Bremer",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/857269/gleison-bremer"
+    },
+    {
+      "player_id": 862538,
+      "player_name": "Ibañez",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/862538/ibanez"
+    },
+    {
+      "player_id": 863098,
+      "player_name": "Matheus Cunha",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/863098/matheus-cunha"
+    },
+    {
+      "player_id": 1021586,
+      "player_name": "Gabriel Martinelli",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1021586/gabriel-martinelli"
+    },
+    {
+      "player_id": 1176214,
+      "player_name": "Luiz Henrique",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1176214/luiz-henrique"
+    },
+    {
+      "player_id": 1181700,
+      "player_name": "Danilo Santos",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1181700/danilo"
+    },
+    {
+      "player_id": 1302005,
+      "player_name": "Igor Thiago",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1302005/igor-thiago"
+    },
+    {
+      "player_id": 1320176,
+      "player_name": "Wesley",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/1320176/wesley"
+    },
+    {
+      "player_id": 1406729,
+      "player_name": "Endrick",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1406729/endrick"
+    },
+    {
+      "player_id": 1478295,
+      "player_name": "Rayan",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1478295/rayan"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "team_name": "Ivory Coast",
+  "team_id": 6709,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6709/squad/ivory-coast",
+  "players": [
+    {
+      "player_id": 30908,
+      "player_name": "Emerse Faé",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/30908/emerse-fae"
+    },
+    {
+      "player_id": 470539,
+      "player_name": "Jean Michaël Seri",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/470539/jean-michael-seri"
+    },
+    {
+      "player_id": 575735,
+      "player_name": "Nicolas Pépé",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/575735/nicolas-pepe"
+    },
+    {
+      "player_id": 579747,
+      "player_name": "Franck Kessié",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/579747/franck-kessie"
+    },
+    {
+      "player_id": 602211,
+      "player_name": "Seko Fofana",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/602211/seko-fofana"
+    },
+    {
+      "player_id": 698273,
+      "player_name": "Alban Lafont",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/698273/alban-lafont"
+    },
+    {
+      "player_id": 740997,
+      "player_name": "Ghislain Konan",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/740997/ghislain-konan"
+    },
+    {
+      "player_id": 787242,
+      "player_name": "Evan N'Dicka",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/787242/evan-ndicka"
+    },
+    {
+      "player_id": 795371,
+      "player_name": "Ibrahim Sangaré",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/795371/ibrahim-sangare"
+    },
+    {
+      "player_id": 802462,
+      "player_name": "Christopher Opéri",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/802462/christopher-operi"
+    },
+    {
+      "player_id": 873566,
+      "player_name": "Yahia Fofana",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/873566/yahia-fofana"
+    },
+    {
+      "player_id": 1014496,
+      "player_name": "Odilon Kossounou",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1014496/odilon-kossounou"
+    },
+    {
+      "player_id": 1027472,
+      "player_name": "Wilfried Singo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1027472/wilfried-singo"
+    },
+    {
+      "player_id": 1070052,
+      "player_name": "Amad Diallo",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1070052/amad-diallo"
+    },
+    {
+      "player_id": 1087966,
+      "player_name": "Evann Guessand",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1087966/evann-guessand"
+    },
+    {
+      "player_id": 1114979,
+      "player_name": "Emmanuel Agbadou",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1114979/emmanuel-agbadou"
+    },
+    {
+      "player_id": 1186770,
+      "player_name": "Parfait Guiagon",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1186770/parfait-guiagon"
+    },
+    {
+      "player_id": 1199383,
+      "player_name": "Ange-Yoan Bonny",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1199383/ange-yoan-bonny"
+    },
+    {
+      "player_id": 1213430,
+      "player_name": "Elye Wahi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1213430/elye-wahi"
+    },
+    {
+      "player_id": 1227012,
+      "player_name": "Simon Adingra",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1227012/simon-adingra"
+    },
+    {
+      "player_id": 1280201,
+      "player_name": "Mohamed Koné",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1280201/mohamed-kone"
+    },
+    {
+      "player_id": 1328540,
+      "player_name": "Oumar Diakité",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1328540/oumar-diakite"
+    },
+    {
+      "player_id": 1395704,
+      "player_name": "Guéla Doué",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1395704/guela-doue"
+    },
+    {
+      "player_id": 1425182,
+      "player_name": "Ousmane Diomande",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1425182/ousmane-diomande"
+    },
+    {
+      "player_id": 1624586,
+      "player_name": "Bazoumana Touré",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1624586/bazoumana-toure"
+    },
+    {
+      "player_id": 1666494,
+      "player_name": "Christ Inao Oulaï",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1666494/christ-inao-oulai"
+    },
+    {
+      "player_id": 1735453,
+      "player_name": "Yan Diomande",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1735453/yan-diomande"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Exequiel Palacios,693599,Argentina,defender,43.35,5.0,0.0,48
+Leandro Paredes,237606,Argentina,midfielder,29.452,9.0,0.0,38
+Giovani Lo Celso,604126,Argentina,midfielder,30.592000000000002,7.0,0.0,38
+Nicolás Otamendi,174321,Argentina,defender,30.840000000000003,5.0,0.0,36
+Lautaro Martínez,690230,Argentina,forward,28.224999999999998,6.0,0.0,34
+Mohannad Abu Taha,1247001,Jordan,midfielder,30.179999999999996,1.0,0.0,31
+Lionel Messi,30981,Argentina,forward,29.68333333333333,0.5,0.0,30
+Yazan Abu Al-Arab,852168,Jordan,defender,34.96000000000001,-5.0,0.0,30
+Marcos Senesi,785411,Argentina,defender,24.5,5.0,0.0,30
+Noor Al-Rawabdeh,1036253,Jordan,midfielder,26.046000000000003,1.0,0.0,27
+Ehsan Haddad,546201,Jordan,midfielder,24.69,1.0,0.0,26
+Nico Paz,1347574,Argentina,midfielder,17.703333333333333,7.0,0.0,25
+Mousa Tamari,813055,Jordan,midfielder,20.614,2.5,0.0,23
+Alexis Mac Allister,831489,Argentina,midfielder,18.204666666666665,4.5,0.0,23
+Julián Álvarez,974753,Argentina,forward,11.399999999999999,9.0,0.0,20
+Nizar Al Rashdan,1195369,Jordan,midfielder,17.34733333333333,3.0,0.0,20
+Giuliano Simeone,1226147,Argentina,midfielder,12.61266666666667,7.0,0.0,20
+Abdallah Nasib,1312681,Jordan,defender,23.73,-5.0,0.0,19
+Nicolás Tagliafico,195750,Argentina,defender,13.16,5.0,0.0,18
+Ali Iyad Olwan,1028896,Jordan,forward,14.116666666666667,3.0,0.0,17
+Thiago Almada,955271,Argentina,midfielder,11.222000000000001,4.5,0.0,16
+Ali Al-Azaizeh,1642793,Jordan,midfielder,14.428,1.0,0.0,15
+Husam Abu Dahab,1554109,Jordan,defender,18.366666666666667,-5.0,0.0,13
+Valentín Barco,1272440,Argentina,midfielder,7.457333333333333,4.5,0.0,12
+Odeh Fakhouri,1823348,Jordan,forward,8.2,0.0,0.0,8
+Mahmoud Al Mardi,674520,Jordan,midfielder,5.077999999999999,2.5,0.0,8
+José López,1216079,Argentina,forward,7.866666666666666,-2.5,0.0,5
+Amer Jamous,1213678,Jordan,midfielder,3.5326666666666666,0.5,0.0,4
+Gonzalo Montiel,687008,Argentina,defender,0.0,0.0,0.0,0
+Nahuel Molina,726345,Argentina,defender,0.0,0.0,0.0,0
+Cristian Romero,789066,Argentina,defender,0.0,0.0,0.0,0
+Facundo Medina,812652,Argentina,defender,0.0,0.0,0.0,0
+Saleem Obaid,847766,Jordan,defender,0.0,0.0,0.0,0
+Lisandro Martínez,847983,Argentina,defender,0.0,0.0,0.0,0
+Mo Abualnadi,1033300,Jordan,defender,0.0,0.0,0.0,0
+Saed Al-Rosan,1179369,Jordan,defender,0.0,0.0,0.0,0
+Mohammad Abu Ghoush,1902793,Jordan,defender,0.0,0.0,0.0,0
+Anas Badawi,1991034,Jordan,defender,0.0,0.0,0.0,0
+Rodrigo De Paul,324578,Argentina,midfielder,0.0,0.0,0.0,0
+Rajaei Ayed,546203,Jordan,midfielder,0.0,0.0,0.0,0
+Mohammad Al-Daoud,600844,Jordan,midfielder,0.0,0.0,0.0,0
+Nicolás González,841672,Argentina,midfielder,0.0,0.0,0.0,0
+Enzo Fernández,1137705,Argentina,midfielder,0.0,0.0,0.0,0
+Ibrahim Saadeh,1202924,Jordan,midfielder,0.0,0.0,0.0,0
+Mohammad Abu Hasheesh,1350517,Jordan,midfielder,0.0,0.0,0.0,0
+Mohammad Abuzraiq,1059129,Jordan,forward,0.0,0.0,0.0,0
+Jordan Keepers,5816,Jordan,goalkeeper,7.659999999999999,0.0,0.0,8
+Argentina Keepers,6706,Argentina,goalkeeper,6.0,12.0,0.0,18

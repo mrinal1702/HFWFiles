@@ -1,0 +1,44 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,final_score
+William Saliba,955406,Arsenal,defender,37.39,10.0,47
+Declan Rice,654096,Arsenal,midfielder,37.714,7.0,45
+Dávid Hancko,727897,Atlético de Madrid,defender,32.72,5.0,38
+Gabriel,795179,Arsenal,defender,24.340000000000003,10.0,34
+Marc Pubill,1323897,Atlético de Madrid,defender,28.0,5.0,33
+Leandro Trossard,318615,Arsenal,midfielder,24.41266666666667,7.0,31
+Bukayo Saka,961995,Arsenal,midfielder,22.831333333333333,7.0,30
+Matteo Ruggeri,1051097,Atlético de Madrid,defender,24.640000000000004,5.0,30
+Ben White,776151,Arsenal,defender,16.299999999999997,10.0,26
+Marcos Llorente,602563,Atlético de Madrid,defender,18.92,5.0,24
+Myles Lewis-Skelly,1406436,Arsenal,defender,13.006666666666666,10.0,23
+Robin Le Normand,609516,Atlético de Madrid,defender,15.05,5.0,20
+Antoine Griezmann,184138,Atlético de Madrid,forward,19.508333333333336,0.0,20
+Piero Hincapié,1137667,Arsenal,defender,13.466666666666669,5.0,18
+Eberechi Eze,818975,Arsenal,midfielder,10.068666666666669,7.0,17
+Martin Ødegaard,534670,Arsenal,midfielder,13.933333333333334,2.5,16
+Riccardo Calafiori,1105912,Arsenal,defender,5.783333333333333,10.0,16
+Koke,184533,Atlético de Madrid,midfielder,11.734000000000002,3.0,15
+Giuliano Simeone,1226147,Atlético de Madrid,midfielder,9.364,3.0,12
+Ademola Lookman,690516,Atlético de Madrid,midfielder,9.338,3.0,12
+Nahuel Molina,726345,Atlético de Madrid,defender,5.390000000000001,5.0,10
+Julián Álvarez,974753,Atlético de Madrid,forward,9.0,0.0,9
+Noni Madueke,1084981,Arsenal,forward,11.475,-2.5,9
+Álex Baena,942372,Atlético de Madrid,midfielder,5.76,2.5,8
+Martín Zubimendi,1031325,Arsenal,midfielder,5.513333333333333,2.5,8
+Thiago Almada,955271,Atlético de Madrid,midfielder,3.74,2.5,6
+Johnny Cardoso,1173678,Atlético de Madrid,midfielder,2.6899999999999995,2.5,5
+Gabriel Jesus,576165,Arsenal,forward,5.0,0.0,5
+Kai Havertz,749736,Arsenal,forward,5.0,0.0,5
+José Giménez,474589,Atlético de Madrid,defender,3.0,0.0,3
+Clément Lenglet,488412,Atlético de Madrid,defender,3.0,0.0,3
+Cristhian Mosquera,1298907,Arsenal,defender,3.0,0.0,3
+Javier Boñar,1367926,Atlético de Madrid,defender,3.0,0.0,3
+Julio Díaz,1447089,Atlético de Madrid,defender,3.0,0.0,3
+Christian Nørgaard,266520,Arsenal,midfielder,3.0,0.0,3
+Obed Vargas,1254394,Atlético de Madrid,midfielder,3.0,0.0,3
+Rodrigo Mendoza,1419969,Atlético de Madrid,midfielder,3.0,0.0,3
+Max Dowman,1635773,Arsenal,midfielder,3.0,0.0,3
+Gabriel Martinelli,1021586,Arsenal,forward,3.733333333333333,-2.5,1
+Alexander Sørloth,440330,Atlético de Madrid,forward,3.35,-2.5,1
+Viktor Gyökeres,664500,Arsenal,forward,-3.1500000000000004,3.0,0
+Arsenal Keepers,9825,Arsenal,goalkeeper,27.32,18.0,45
+Atlético de Madrid Keepers,9906,Atlético de Madrid,goalkeeper,13.5,12.0,26

@@ -1,0 +1,187 @@
+{
+  "team_name": "Coventry City",
+  "team_id": 8669,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8669/squad/coventry-city",
+  "players": [
+    {
+      "player_id": 30631,
+      "player_name": "Frank Lampard",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/30631/frank-lampard"
+    },
+    {
+      "player_id": 191174,
+      "player_name": "Jake Bidwell",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/191174/jake-bidwell"
+    },
+    {
+      "player_id": 302783,
+      "player_name": "Ben Wilson",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/302783/ben-wilson"
+    },
+    {
+      "player_id": 478357,
+      "player_name": "Matt Grimes",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/478357/matt-grimes"
+    },
+    {
+      "player_id": 759814,
+      "player_name": "Jay Dasilva",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/759814/jay-dasilva"
+    },
+    {
+      "player_id": 776184,
+      "player_name": "Brandon Thomas-Asante",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/776184/brandon-thomas-asante"
+    },
+    {
+      "player_id": 798654,
+      "player_name": "Ephron Mason-Clark",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/798654/ephron-mason-clark"
+    },
+    {
+      "player_id": 845985,
+      "player_name": "Victor Torp",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/845985/victor-torp"
+    },
+    {
+      "player_id": 848268,
+      "player_name": "Haji Wright",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/848268/haji-wright"
+    },
+    {
+      "player_id": 856685,
+      "player_name": "Frank Onyeka",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/856685/frank-onyeka"
+    },
+    {
+      "player_id": 863822,
+      "player_name": "Joel Latibeaudiere",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/863822/joel-latibeaudiere"
+    },
+    {
+      "player_id": 866688,
+      "player_name": "Luke Woolfenden",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/866688/luke-woolfenden"
+    },
+    {
+      "player_id": 914399,
+      "player_name": "Liam Kitching",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/914399/liam-kitching"
+    },
+    {
+      "player_id": 962000,
+      "player_name": "Josh Eccles",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/962000/josh-eccles"
+    },
+    {
+      "player_id": 982284,
+      "player_name": "Ellis Simms",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/982284/ellis-simms"
+    },
+    {
+      "player_id": 1025603,
+      "player_name": "Tatsuhiro Sakamoto",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1025603/tatsuhiro-sakamoto"
+    },
+    {
+      "player_id": 1030830,
+      "player_name": "Jack Rudoni",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1030830/jack-rudoni"
+    },
+    {
+      "player_id": 1051407,
+      "player_name": "Oliver Nnonyelu Dovin",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1051407/oliver-nnonyelu-dovin"
+    },
+    {
+      "player_id": 1074750,
+      "player_name": "Milan van Ewijk",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1074750/milan-van-ewijk"
+    },
+    {
+      "player_id": 1089686,
+      "player_name": "Kaine Kesler-Hayden",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1089686/kaine-kesler-hayden"
+    },
+    {
+      "player_id": 1101043,
+      "player_name": "Raphael Borges Rodrigues",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/1101043/raphael-borges-rodrigues"
+    },
+    {
+      "player_id": 1161885,
+      "player_name": "Bobby Thomas",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1161885/bobby-thomas"
+    },
+    {
+      "player_id": 1187236,
+      "player_name": "Carl Rushworth",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1187236/carl-rushworth"
+    },
+    {
+      "player_id": 1257648,
+      "player_name": "Aurèle Amenda",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1257648/aurele-amenda"
+    },
+    {
+      "player_id": 1283034,
+      "player_name": "Loum Tchaouna",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1283034/loum-tchaouna"
+    },
+    {
+      "player_id": 1334842,
+      "player_name": "Jahnoah Markelo",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1334842/jahnoah-markelo"
+    },
+    {
+      "player_id": 1358582,
+      "player_name": "Miguel Ángel Brau",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1358582/miguel-angel-brau"
+    },
+    {
+      "player_id": 1526413,
+      "player_name": "Kai Andrews",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1526413/kai-andrews"
+    },
+    {
+      "player_id": 1821340,
+      "player_name": "Oscar Varney",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1821340/oscar-varney"
+    },
+    {
+      "player_id": 1970884,
+      "player_name": "Harri Laidler",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1970884/harri-laidler"
+    }
+  ]
+}

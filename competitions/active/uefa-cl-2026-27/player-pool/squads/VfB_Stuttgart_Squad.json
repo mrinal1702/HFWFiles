@@ -1,0 +1,187 @@
+{
+  "team_name": "VfB Stuttgart",
+  "team_id": 10269,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/10269/squad/vfb-stuttgart",
+  "players": [
+    {
+      "player_id": 36490,
+      "player_name": "Sebastian Hoeneß",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/36490/sebastian-hoeness"
+    },
+    {
+      "player_id": 522236,
+      "player_name": "Fabian Bredlow",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/522236/fabian-bredlow"
+    },
+    {
+      "player_id": 614384,
+      "player_name": "Maximilian Mittelstädt",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/614384/maximilian-mittelstadt"
+    },
+    {
+      "player_id": 625175,
+      "player_name": "Grischa Prömel",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/625175/grischa-promel"
+    },
+    {
+      "player_id": 659086,
+      "player_name": "Marius Funk",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/659086/marius-funk"
+    },
+    {
+      "player_id": 661519,
+      "player_name": "Deniz Undav",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/661519/deniz-undav"
+    },
+    {
+      "player_id": 684983,
+      "player_name": "Atakan Karazor",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/684983/atakan-karazor"
+    },
+    {
+      "player_id": 840241,
+      "player_name": "Ermedin Demirovic",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/840241/ermedin-demirovic"
+    },
+    {
+      "player_id": 852347,
+      "player_name": "Dan-Axel Zagadou",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/852347/dan-axel-zagadou"
+    },
+    {
+      "player_id": 867080,
+      "player_name": "Jeff Chabot",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/867080/jeff-chabot"
+    },
+    {
+      "player_id": 892679,
+      "player_name": "Chris Führich",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/892679/chris-fuhrich"
+    },
+    {
+      "player_id": 928454,
+      "player_name": "Josha Vagnoman",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/928454/josha-vagnoman"
+    },
+    {
+      "player_id": 1019947,
+      "player_name": "Leonidas Stergiou",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1019947/leonidas-stergiou"
+    },
+    {
+      "player_id": 1071186,
+      "player_name": "Angelo Stiller",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1071186/angelo-stiller"
+    },
+    {
+      "player_id": 1074968,
+      "player_name": "Jamie Leweling",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1074968/jamie-leweling"
+    },
+    {
+      "player_id": 1125187,
+      "player_name": "Ramon Hendriks",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1125187/ramon-hendriks"
+    },
+    {
+      "player_id": 1164506,
+      "player_name": "Tiago Tomás",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1164506/tiago-tomas"
+    },
+    {
+      "player_id": 1175706,
+      "player_name": "Stefan Drljaca",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1175706/stefan-drljaca"
+    },
+    {
+      "player_id": 1192406,
+      "player_name": "Lorenz Assignon",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1192406/lorenz-assignon"
+    },
+    {
+      "player_id": 1270002,
+      "player_name": "Luca Jaquez",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1270002/luca-jaquez"
+    },
+    {
+      "player_id": 1279764,
+      "player_name": "Ameen Al Dakhil",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1279764/ameen-al-dakhil"
+    },
+    {
+      "player_id": 1340895,
+      "player_name": "Bilal El Khannouss",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1340895/bilal-el-khannouss"
+    },
+    {
+      "player_id": 1366602,
+      "player_name": "Dzenan Pejcinovic",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1366602/dzenan-pejcinovic"
+    },
+    {
+      "player_id": 1388070,
+      "player_name": "Badredine Bouanani",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1388070/badredine-bouanani"
+    },
+    {
+      "player_id": 1425998,
+      "player_name": "Leo Sauer",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1425998/leo-sauer"
+    },
+    {
+      "player_id": 1478098,
+      "player_name": "Dennis Seimen",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1478098/dennis-seimen"
+    },
+    {
+      "player_id": 1487877,
+      "player_name": "Finn Jeltsch",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1487877/finn-jeltsch"
+    },
+    {
+      "player_id": 1518938,
+      "player_name": "Lazar Jovanovic",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1518938/lazar-jovanovic"
+    },
+    {
+      "player_id": 1586552,
+      "player_name": "Chema Andrés",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1586552/chema-andres"
+    },
+    {
+      "player_id": 1700267,
+      "player_name": "Mirza Catovic",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1700267/mirza-catovic"
+    }
+  ]
+}

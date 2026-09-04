@@ -1,0 +1,169 @@
+{
+  "team_name": "Sweden",
+  "team_id": 8520,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8520/squad/sweden",
+  "players": [
+    {
+      "player_id": 24347,
+      "player_name": "Graham Potter",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/24347/graham-potter"
+    },
+    {
+      "player_id": 73462,
+      "player_name": "Kristoffer Nordfeldt",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/73462/kristoffer-nordfeldt"
+    },
+    {
+      "player_id": 118241,
+      "player_name": "Gustaf Nilsson",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/118241/gustaf-nilsson"
+    },
+    {
+      "player_id": 258269,
+      "player_name": "Victor Nilsson Lindelöf",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/258269/victor-nilsson-lindelof"
+    },
+    {
+      "player_id": 322003,
+      "player_name": "Jesper Karlström",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/322003/jesper-karlstrom"
+    },
+    {
+      "player_id": 497662,
+      "player_name": "Carl Starfelt",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/497662/carl-starfelt"
+    },
+    {
+      "player_id": 520670,
+      "player_name": "Ken Sema",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/520670/ken-sema"
+    },
+    {
+      "player_id": 531327,
+      "player_name": "Eric Smith",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/531327/eric-smith"
+    },
+    {
+      "player_id": 546252,
+      "player_name": "Viktor Johansson",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/546252/viktor-johansson"
+    },
+    {
+      "player_id": 647900,
+      "player_name": "Mattias Svanberg",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/647900/mattias-svanberg"
+    },
+    {
+      "player_id": 664500,
+      "player_name": "Viktor Gyökeres",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/664500/viktor-gyokeres"
+    },
+    {
+      "player_id": 690107,
+      "player_name": "Alexander Isak",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/690107/alexander-isak"
+    },
+    {
+      "player_id": 744494,
+      "player_name": "Gabriel Gudmundsson",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/744494/gabriel-gudmundsson"
+    },
+    {
+      "player_id": 831044,
+      "player_name": "Hjalmar Ekdal",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/831044/hjalmar-ekdal"
+    },
+    {
+      "player_id": 919848,
+      "player_name": "Gustaf Lagerbielke",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/919848/gustaf-lagerbielke"
+    },
+    {
+      "player_id": 931605,
+      "player_name": "Benjamin Nygren",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/931605/benjamin-nygren"
+    },
+    {
+      "player_id": 939780,
+      "player_name": "Isak Hien",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/939780/isak-hien"
+    },
+    {
+      "player_id": 946703,
+      "player_name": "Herman Johansson",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/946703/herman-johansson"
+    },
+    {
+      "player_id": 1014602,
+      "player_name": "Jacob Widell Zetterström",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1014602/jacob-widell-zetterstrom"
+    },
+    {
+      "player_id": 1014688,
+      "player_name": "Alexander Bernhardsson",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/1014688/alexander-bernhardsson"
+    },
+    {
+      "player_id": 1050166,
+      "player_name": "Anthony Elanga",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1050166/anthony-elanga"
+    },
+    {
+      "player_id": 1135782,
+      "player_name": "Taha Abdi Ali",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/1135782/taha-abdi-ali"
+    },
+    {
+      "player_id": 1168311,
+      "player_name": "Yasin Ayari",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1168311/yasin-ayari"
+    },
+    {
+      "player_id": 1209228,
+      "player_name": "Daniel Svensson",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/1209228/daniel-svensson"
+    },
+    {
+      "player_id": 1272349,
+      "player_name": "Elliot Stroud",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/1272349/elliot-stroud"
+    },
+    {
+      "player_id": 1338361,
+      "player_name": "Besfort Zeneli",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1338361/besfort-zeneli"
+    },
+    {
+      "player_id": 1386775,
+      "player_name": "Lucas Bergvall",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1386775/lucas-bergvall"
+    }
+  ]
+}

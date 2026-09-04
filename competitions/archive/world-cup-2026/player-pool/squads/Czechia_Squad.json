@@ -1,0 +1,169 @@
+{
+  "team_name": "Czechia",
+  "team_id": 8496,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8496/squad/czechia",
+  "players": [
+    {
+      "player_id": 196311,
+      "player_name": "Vladimír Darida",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/196311/vladimir-darida"
+    },
+    {
+      "player_id": 249063,
+      "player_name": "Jaroslav Zeleny",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/249063/jaroslav-zeleny"
+    },
+    {
+      "player_id": 278086,
+      "player_name": "Miroslav Koubek",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/278086/miroslav-koubek"
+    },
+    {
+      "player_id": 306168,
+      "player_name": "Tomás Holes",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/306168/tomas-holes"
+    },
+    {
+      "player_id": 307317,
+      "player_name": "Vladimír Coufal",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/307317/vladimir-coufal"
+    },
+    {
+      "player_id": 463967,
+      "player_name": "Jindrich Stanek",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/463967/jindrich-stanek"
+    },
+    {
+      "player_id": 523217,
+      "player_name": "Tomás Chory",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/523217/tomas-chory"
+    },
+    {
+      "player_id": 524437,
+      "player_name": "Tomás Soucek",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/524437/tomas-soucek"
+    },
+    {
+      "player_id": 540097,
+      "player_name": "Patrik Schick",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/540097/patrik-schick"
+    },
+    {
+      "player_id": 690332,
+      "player_name": "Jan Kuchta",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/690332/jan-kuchta"
+    },
+    {
+      "player_id": 791682,
+      "player_name": "Lukás Provod",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/791682/lukas-provod"
+    },
+    {
+      "player_id": 798029,
+      "player_name": "Ladislav Krejcí",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/798029/ladislav-krejci"
+    },
+    {
+      "player_id": 806551,
+      "player_name": "Michal Sadílek",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/806551/michal-sadilek"
+    },
+    {
+      "player_id": 883759,
+      "player_name": "David Doudera",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/883759/david-doudera"
+    },
+    {
+      "player_id": 969870,
+      "player_name": "Adam Hlozek",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/969870/adam-hlozek"
+    },
+    {
+      "player_id": 988769,
+      "player_name": "Mojmír Chytil",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/988769/mojmir-chytil"
+    },
+    {
+      "player_id": 1037539,
+      "player_name": "Pavel Sulc",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1037539/pavel-sulc"
+    },
+    {
+      "player_id": 1077903,
+      "player_name": "Matej Kovár",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1077903/matej-kovar"
+    },
+    {
+      "player_id": 1085401,
+      "player_name": "David Zima",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1085401/david-zima"
+    },
+    {
+      "player_id": 1151313,
+      "player_name": "Lukás Cerv",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1151313/lukas-cerv"
+    },
+    {
+      "player_id": 1186978,
+      "player_name": "Lukás Hornícek",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1186978/lukas-hornicek"
+    },
+    {
+      "player_id": 1202885,
+      "player_name": "Denis Visinsky",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1202885/denis-visinsky"
+    },
+    {
+      "player_id": 1225995,
+      "player_name": "Robin Hranác",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1225995/robin-hranac"
+    },
+    {
+      "player_id": 1247323,
+      "player_name": "David Jurásek",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/1247323/david-jurasek"
+    },
+    {
+      "player_id": 1288146,
+      "player_name": "Stepán Chaloupek",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1288146/stepan-chaloupek"
+    },
+    {
+      "player_id": 1478281,
+      "player_name": "Alexandr Sojka",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/1478281/alexandr-sojka"
+    },
+    {
+      "player_id": 1764021,
+      "player_name": "Hugo Sochurek",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1764021/hugo-sochurek"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "team_name": "New Zealand",
+  "team_id": 5820,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/5820/squad/new-zealand",
+  "players": [
+    {
+      "player_id": 23798,
+      "player_name": "Darren Bazeley",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/23798/darren-bazeley"
+    },
+    {
+      "player_id": 96488,
+      "player_name": "Kosta Barbarouses",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/96488/kosta-barbarouses"
+    },
+    {
+      "player_id": 115025,
+      "player_name": "Tommy Smith",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/115025/tommy-smith"
+    },
+    {
+      "player_id": 128949,
+      "player_name": "Michael Boxall",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/128949/michael-boxall"
+    },
+    {
+      "player_id": 169719,
+      "player_name": "Chris Wood",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/169719/chris-wood"
+    },
+    {
+      "player_id": 315201,
+      "player_name": "Max Crocombe",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/315201/max-crocombe"
+    },
+    {
+      "player_id": 324305,
+      "player_name": "Tim Payne",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/324305/tim-payne"
+    },
+    {
+      "player_id": 496356,
+      "player_name": "Ryan Thomas",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/496356/ryan-thomas"
+    },
+    {
+      "player_id": 519240,
+      "player_name": "Alex Rufer",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/519240/alex-rufer"
+    },
+    {
+      "player_id": 724531,
+      "player_name": "Sarpreet Singh",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/724531/sarpreet-singh"
+    },
+    {
+      "player_id": 825593,
+      "player_name": "Francis de Vries",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/825593/francis-de-vries"
+    },
+    {
+      "player_id": 848317,
+      "player_name": "Michael Woud",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/848317/michael-woud"
+    },
+    {
+      "player_id": 848345,
+      "player_name": "Joe Bell",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/848345/joe-bell"
+    },
+    {
+      "player_id": 848352,
+      "player_name": "Callum McCowatt",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/848352/callum-mccowatt"
+    },
+    {
+      "player_id": 919671,
+      "player_name": "Liberato Cacace",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/919671/liberato-cacace"
+    },
+    {
+      "player_id": 1013276,
+      "player_name": "Callan Elliot",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1013276/callan-elliot"
+    },
+    {
+      "player_id": 1034995,
+      "player_name": "Ben Waine",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1034995/ben-waine"
+    },
+    {
+      "player_id": 1053731,
+      "player_name": "Nando Pijnaker",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1053731/nando-pijnaker"
+    },
+    {
+      "player_id": 1053736,
+      "player_name": "Elijah Just",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1053736/elijah-just"
+    },
+    {
+      "player_id": 1108605,
+      "player_name": "Matthew Garbett",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1108605/matthew-garbett"
+    },
+    {
+      "player_id": 1209597,
+      "player_name": "Marko Stamenic",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1209597/marko-stamenic"
+    },
+    {
+      "player_id": 1257745,
+      "player_name": "Benjamin Old",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1257745/benjamin-old"
+    },
+    {
+      "player_id": 1272118,
+      "player_name": "Alex Paulsen",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1272118/alex-paulsen"
+    },
+    {
+      "player_id": 1325761,
+      "player_name": "Finn Surman",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1325761/finn-surman"
+    },
+    {
+      "player_id": 1460327,
+      "player_name": "Jesse Randall",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/1460327/jesse-randall"
+    },
+    {
+      "player_id": 1524716,
+      "player_name": "Tyler Bindon",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1524716/tyler-bindon"
+    },
+    {
+      "player_id": 1565865,
+      "player_name": "Lachlan Bayliss",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1565865/lachlan-bayliss"
+    }
+  ]
+}

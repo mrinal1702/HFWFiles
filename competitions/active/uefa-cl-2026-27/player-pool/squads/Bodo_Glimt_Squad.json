@@ -1,0 +1,187 @@
+{
+  "team_name": "Bodo/Glimt",
+  "team_id": 8402,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8402/squad/bodoglimt",
+  "players": [
+    {
+      "player_id": 215158,
+      "player_name": "Haitam Aleesami",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/215158/haitam-aleesami"
+    },
+    {
+      "player_id": 310763,
+      "player_name": "Ulrik Saltnes",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/310763/ulrik-saltnes"
+    },
+    {
+      "player_id": 530635,
+      "player_name": "Patrick Berg",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/530635/patrick-berg"
+    },
+    {
+      "player_id": 540929,
+      "player_name": "Jostein Gundersen",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/540929/jostein-gundersen"
+    },
+    {
+      "player_id": 540975,
+      "player_name": "Sondre Brunstad Fet",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/540975/sondre-brunstad-fet"
+    },
+    {
+      "player_id": 615292,
+      "player_name": "Andreas Helmersen",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/615292/andreas-helmersen"
+    },
+    {
+      "player_id": 625360,
+      "player_name": "Nikita Haikin",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/625360/nikita-haikin"
+    },
+    {
+      "player_id": 630228,
+      "player_name": "Fredrik André Bjørkan",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/630228/fredrik-andre-bjorkan"
+    },
+    {
+      "player_id": 630277,
+      "player_name": "Kjetil Knutsen",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/630277/kjetil-knutsen"
+    },
+    {
+      "player_id": 632870,
+      "player_name": "Håkon Evjen",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/632870/hakon-evjen"
+    },
+    {
+      "player_id": 635198,
+      "player_name": "Julian Faye Lund",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/635198/julian-faye-lund"
+    },
+    {
+      "player_id": 741397,
+      "player_name": "Jens Petter Hauge",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/741397/jens-petter-hauge"
+    },
+    {
+      "player_id": 837066,
+      "player_name": "Ola Brynhildsen",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/837066/ola-brynhildsen"
+    },
+    {
+      "player_id": 902675,
+      "player_name": "Joshua Kitolano",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/902675/joshua-kitolano"
+    },
+    {
+      "player_id": 917774,
+      "player_name": "Odin Lurås Bjørtuft",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/917774/odin-luras-bjortuft"
+    },
+    {
+      "player_id": 954167,
+      "player_name": "August Mikkelsen",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/954167/august-mikkelsen"
+    },
+    {
+      "player_id": 1037037,
+      "player_name": "Isak Dybvik Määttä",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1037037/isak-dybvik-maatta"
+    },
+    {
+      "player_id": 1049665,
+      "player_name": "Joel Mvuka",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/1049665/joel-mvuka"
+    },
+    {
+      "player_id": 1086551,
+      "player_name": "Ole Blomberg",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1086551/ole-blomberg"
+    },
+    {
+      "player_id": 1126421,
+      "player_name": "Magnus Bech Riisnæs",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1126421/magnus-bech-riisnaes"
+    },
+    {
+      "player_id": 1160076,
+      "player_name": "Sondre Auklend",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1160076/sondre-auklend"
+    },
+    {
+      "player_id": 1281021,
+      "player_name": "Fredrik Sjøvold",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1281021/fredrik-sjovold"
+    },
+    {
+      "player_id": 1359647,
+      "player_name": "Daniel Bassi",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1359647/daniel-bassi"
+    },
+    {
+      "player_id": 1436937,
+      "player_name": "Villads Nielsen",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1436937/villads-nielsen"
+    },
+    {
+      "player_id": 1441106,
+      "player_name": "Isak Sjong",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1441106/isak-sjong"
+    },
+    {
+      "player_id": 1641114,
+      "player_name": "Kasper Solhaug",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1641114/kasper-johansen-solhaug"
+    },
+    {
+      "player_id": 1675410,
+      "player_name": "Matias Høgsæt Jaiteh",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1675410/matias-jaiteh"
+    },
+    {
+      "player_id": 1677228,
+      "player_name": "Mathias Olsen",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1677228/mathias-blix-olsen"
+    },
+    {
+      "player_id": 1695316,
+      "player_name": "Mikkel Bro",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1695316/mikkel-bro"
+    },
+    {
+      "player_id": 1843403,
+      "player_name": "Martin Andersen",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1843403/martin-lund-andersen"
+    }
+  ]
+}

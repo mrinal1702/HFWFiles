@@ -2,6 +2,18 @@
   "_readme": "",
   "players": [
     {
+      "player_id": 760320,
+      "player_name": "Aaron Wan-Bissaka",
+      "team_id": null,
+      "team_name": "Aston Villa",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/760320/aaron-wan-bissaka",
+      "reason": "late_callup",
+      "first_seen": "2026-09-01",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
       "player_id": 958010,
       "player_name": "Amar Dedic",
       "team_id": null,
@@ -14,6 +26,18 @@
       "notes": "Auto-added from upsert:player-scores (not in public.players)."
     },
     {
+      "player_id": 1561552,
+      "player_name": "Ayyoub Bouaddi",
+      "team_id": null,
+      "team_name": "Manchester City",
+      "position": "Midfielder",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1561552/ayyoub-bouaddi",
+      "reason": "late_callup",
+      "first_seen": "2026-08-31",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
       "player_id": 1639163,
       "player_name": "Bradley Burrowes",
       "team_id": null,
@@ -22,6 +46,18 @@
       "fotmob_url": "https://www.fotmob.com/en-GB/players/1639163/bradley-burrowes",
       "reason": "late_callup",
       "first_seen": "2026-08-24",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 693599,
+      "player_name": "Exequiel Palacios",
+      "team_id": null,
+      "team_name": "Ipswich Town",
+      "position": "Midfielder",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/693599/exequiel-palacios",
+      "reason": "late_callup",
+      "first_seen": "2026-08-31",
       "first_seen_match": "final-points.csv",
       "notes": "Auto-added from upsert:player-scores (not in public.players)."
     },
@@ -50,6 +86,18 @@
       "notes": "Auto-added from upsert:player-scores (not in public.players)."
     },
     {
+      "player_id": 1178324,
+      "player_name": "Jaouen Hadjam",
+      "team_id": null,
+      "team_name": "Brighton and Hove Albion",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1178324/jaouen-hadjam",
+      "reason": "late_callup",
+      "first_seen": "2026-08-31",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
       "player_id": 1158512,
       "player_name": "Juanlu Sánchez",
       "team_id": null,
@@ -58,6 +106,30 @@
       "fotmob_url": "https://www.fotmob.com/en-GB/players/1158512/juanlu-sanchez",
       "reason": "late_callup",
       "first_seen": "2026-08-24",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 1811265,
+      "player_name": "Jules Ahoka",
+      "team_id": null,
+      "team_name": "Sunderland",
+      "position": "Midfielder",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1811265/jules-ahoka",
+      "reason": "late_callup",
+      "first_seen": "2026-08-31",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 1682403,
+      "player_name": "Kaden Braithwaite",
+      "team_id": null,
+      "team_name": "Manchester City",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1682403/kaden-braithwaite",
+      "reason": "late_callup",
+      "first_seen": "2026-08-31",
       "first_seen_match": "final-points.csv",
       "notes": "Auto-added from upsert:player-scores (not in public.players)."
     },
@@ -98,6 +170,30 @@
       "notes": "Auto-added from upsert:player-scores (not in public.players)."
     },
     {
+      "player_id": 1631628,
+      "player_name": "Macauley Zepa",
+      "team_id": null,
+      "team_name": "Fulham",
+      "position": "Forward",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1631628/macauley-zepa",
+      "reason": "late_callup",
+      "first_seen": "2026-08-31",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 1451265,
+      "player_name": "Malick Diouf",
+      "team_id": null,
+      "team_name": "Brentford",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1451265/malick-diouf",
+      "reason": "late_callup",
+      "first_seen": "2026-08-31",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
       "player_id": 1051097,
       "player_name": "Matteo Ruggeri",
       "team_id": null,
@@ -106,6 +202,30 @@
       "fotmob_url": "https://www.fotmob.com/en-GB/players/1051097/matteo-ruggeri",
       "reason": "late_callup",
       "first_seen": "2026-08-24",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 1180718,
+      "player_name": "Mohamed-Ali Cho",
+      "team_id": null,
+      "team_name": "Hull City",
+      "position": "Forward",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1180718/mohamed-ali-cho",
+      "reason": "late_callup",
+      "first_seen": "2026-08-31",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 1526697,
+      "player_name": "Nehemiah Oriola",
+      "team_id": null,
+      "team_name": "Brighton and Hove Albion",
+      "position": "Forward",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1526697/nehemiah-oriola",
+      "reason": "late_callup",
+      "first_seen": "2026-08-31",
       "first_seen_match": "final-points.csv",
       "notes": "Auto-added from upsert:player-scores (not in public.players)."
     },
@@ -154,6 +274,18 @@
       "fotmob_url": "https://www.fotmob.com/en-GB/players/1442496/triston-rowe",
       "reason": "late_callup",
       "first_seen": "2026-08-24",
+      "first_seen_match": "final-points.csv",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 1455818,
+      "player_name": "Zavier Gozo",
+      "team_id": null,
+      "team_name": "Crystal Palace",
+      "position": "Midfielder",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1455818/zavier-gozo",
+      "reason": "late_callup",
+      "first_seen": "2026-08-31",
       "first_seen_match": "final-points.csv",
       "notes": "Auto-added from upsert:player-scores (not in public.players)."
     }

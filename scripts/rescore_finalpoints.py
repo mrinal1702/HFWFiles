@@ -69,7 +69,7 @@ def build_final_points(match_data: dict) -> pd.DataFrame:
         keepers_endowed = compute_keeper_endowed_points(match_data, keepers_scored)
         keeper_units = build_keeper_unit_rows(keepers_endowed)
 
-    return merge_outfield_and_keepers(outfield, keeper_units, validate=True)
+    return merge_outfield_and_keepers(outfield, keeper_units, match_data=match_data, validate=True)
 
 
 GW1_FROZEN_MATCH_DIRS = frozenset({

@@ -1,0 +1,45 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+950829,Chris Richards,6713,USA,1,defender,30.730000000000004,3.0,3.0,36.730000000000004,90.0,2,0,10.0,46.730000000000004
+1126058,Malik Tillman,6713,USA,2,midfielder,31.615999999999996,3.0,3.0,37.616,90.0,2,0,9.0,46.616
+662428,Antonee Robinson,6713,USA,1,defender,28.500000000000007,3.0,3.0,34.50000000000001,90.0,2,0,10.0,44.50000000000001
+1250485,Tarik Muharemovic,10106,Bosnia and Herzegovina,1,defender,36.22,1.8,3.0,41.019999999999996,90.0,0,2,0.0,41.019999999999996
+198444,Tim Ream,6713,USA,1,defender,20.250000000000004,3.0,3.0,26.250000000000004,90.0,2,0,10.0,36.25
+848266,Weston McKennie,6713,USA,2,midfielder,21.314000000000004,1.9,2.966666666666667,26.180666666666667,90.0,2,0,9.0,35.18066666666667
+1338696,Alex Freeman,6713,USA,1,defender,17.849999999999998,3.0,3.0,23.849999999999998,90.0,2,0,10.0,33.849999999999994
+729769,Tyler Adams,6713,USA,2,midfielder,9.504000000000001,3.0,3.0,15.504000000000001,90.0,2,0,9.0,24.504
+688295,Christian Pulisic,6713,USA,3,forward,11.433333333333334,4.1,2.933333333333333,18.466666666666665,87.0,2,0,6.0,24.466666666666665
+892816,Sergiño Dest,6713,USA,1,defender,10.88,0.6000000000000001,2.9,14.38,87.0,2,0,10.0,24.380000000000003
+958010,Amar Dedic,10106,Bosnia and Herzegovina,1,defender,18.2,3.0,3.0,24.2,90.0,0,2,0.0,24.2
+653982,Stjepan Radeljic,10106,Bosnia and Herzegovina,1,defender,15.700000000000001,3.0,3.0,21.700000000000003,90.0,0,2,0.0,21.700000000000003
+982677,Folarin Balogun,6713,USA,3,forward,9.466666666666667,4.1,2.1333333333333333,15.7,90.0,2,0,6.0,21.7
+840241,Ermedin Demirovic,10106,Bosnia and Herzegovina,3,forward,12.708333333333332,5.0,3.0,20.708333333333332,90.0,0,2,0.0,20.708333333333332
+304345,Sead Kolasinac,10106,Bosnia and Herzegovina,1,defender,9.760000000000002,3.0,2.5,15.260000000000002,75.0,0,1,5.0,20.26
+725655,Nikola Katic,10106,Bosnia and Herzegovina,1,defender,8.16,3.0,2.5,13.66,75.0,0,1,5.0,18.66
+1346860,Esmir Bajraktarevic,10106,Bosnia and Herzegovina,3,forward,13.7,5.0,1.3,20.0,39.0,0,1,-2.5,17.5
+15403,Edin Dzeko,10106,Bosnia and Herzegovina,3,forward,8.508333333333333,5.0,1.7,15.208333333333332,51.0,0,1,0.0,15.208333333333332
+1057426,Armin Gigovic,10106,Bosnia and Herzegovina,2,midfielder,6.5200000000000005,3.0,1.7,11.219999999999999,51.0,0,1,3.0,14.219999999999999
+1415104,Benjamin Tahirovic,10106,Bosnia and Herzegovina,2,midfielder,8.384,3.0,1.3,12.684000000000001,39.0,0,1,0.5,13.184000000000001
+541551,Ivan Sunjic,10106,Bosnia and Herzegovina,2,midfielder,5.662,1.9,1.7,9.261999999999999,51.0,0,1,3.0,12.261999999999999
+1684401,Kerim Alajbegovic,10106,Bosnia and Herzegovina,3,forward,5.6499999999999995,3.2,3.0,11.85,90.0,0,2,0.0,11.85
+1136096,Sebastian Berhalter,6713,USA,2,midfielder,3.1960000000000006,3.0,0.1,6.296,3.0,0,0,2.5,8.796
+1036401,Ricardo Pepi,6713,USA,3,forward,2.875,5.0,0.06666666666666667,7.941666666666666,3.0,0,0,-2.5,5.441666666666666
+1300385,Amar Memic,10106,Bosnia and Herzegovina,2,midfielder,1.4239999999999995,3.0,0.5,4.9239999999999995,15.0,0,1,0.5,5.4239999999999995
+388903,Haris Tabakovic,10106,Bosnia and Herzegovina,3,forward,0.16666666666666666,5.0,0.5,5.666666666666667,15.0,0,1,-2.5,3.166666666666667
+1528815,Ermin Mahmic,10106,Bosnia and Herzegovina,2,midfielder,-2.814,3.0,1.3,1.486,39.0,0,1,0.5,1.986
+688271,Auston Trusty,6713,USA,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+797797,Dennis Hadzikadunic,10106,Bosnia and Herzegovina,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+825623,Miles Robinson,6713,USA,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+857436,Nihad Mujakic,10106,Bosnia and Herzegovina,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+959696,Joseph Scally,6713,USA,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1515122,Arjan Malic,10106,Bosnia and Herzegovina,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+639558,Amir Hadziahmetovic,10106,Bosnia and Herzegovina,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+660148,Dzenis Burnic,10106,Bosnia and Herzegovina,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+889536,Timothy Weah,6713,USA,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+952322,Brenden Aaronson,6713,USA,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1071179,Giovanni Reyna,6713,USA,2,midfielder,-0.0020000000000000018,3.0,0.03333333333333333,0.0,0.0,0,0,0.0,0.0
+1179875,Ivan Basic,10106,Bosnia and Herzegovina,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1348329,Max Arfsten,6713,USA,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+621882,Alex Zendejas,6713,USA,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+848268,Haji Wright,6713,USA,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1174844,Jovo Lukic,10106,Bosnia and Herzegovina,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1284492,Samed Bazdar,10106,Bosnia and Herzegovina,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

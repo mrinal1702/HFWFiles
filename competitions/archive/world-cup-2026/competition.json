@@ -1,0 +1,21 @@
+{
+  "slug": "world-cup-2026",
+  "display_name": "FIFA World Cup 2026",
+  "status": "archived",
+  "database_competition_id": 1,
+  "auction_ids": [5, 6, 7],
+  "player_pool": "player-pool/master_player_list.csv",
+  "legacy_game_week_id_range": [1, 99],
+  "_rounds_note": "Round -> database_round_id mapping must be confirmed against Supabase Game_Weeks history. 8 gameweeks were played.",
+  "rounds": {
+    "gw01": { "database_round_id": null, "display_name": "Gameweek 1", "round_number": 1, "status": "archived" },
+    "gw02": { "database_round_id": null, "display_name": "Gameweek 2", "round_number": 2, "status": "archived" },
+    "gw03": { "database_round_id": null, "display_name": "Gameweek 3", "round_number": 3, "status": "archived" },
+    "gw04": { "database_round_id": null, "display_name": "Gameweek 4", "round_number": 4, "status": "archived" },
+    "gw05": { "database_round_id": null, "display_name": "Gameweek 5", "round_number": 5, "status": "archived" },
+    "gw06": { "database_round_id": null, "display_name": "Gameweek 6", "round_number": 6, "status": "archived" },
+    "gw07": { "database_round_id": null, "display_name": "Gameweek 7", "round_number": 7, "status": "archived" },
+    "gw08": { "database_round_id": null, "display_name": "Gameweek 8", "round_number": 8, "status": "archived" }
+  },
+  "archived_at": "2026-08-23"
+}

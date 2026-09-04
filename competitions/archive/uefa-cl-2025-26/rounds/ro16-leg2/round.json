@@ -1,0 +1,18 @@
+{
+  "competition_slug": "uefa-cl-2025-26",
+  "database_competition_id": 3,
+  "database_round_id": 201,
+  "round_slug": "ro16-leg2",
+  "display_name": "Round of 16, Leg 2",
+  "round_number": 1,
+  "legacy_game_week_id": 200,
+  "expected_match_count": 4,
+  "scoring_state": "scored",
+  "publication_state": "archived",
+  "fixtures": [
+    { "match_slug": "real-madrid-manchester-city", "fotmob_match_id": 5205731, "home_team": "Real Madrid", "away_team": "Manchester City" },
+    { "match_slug": "barcelona-newcastle-united", "fotmob_match_id": 5205734, "home_team": "Barcelona", "away_team": "Newcastle United" },
+    { "match_slug": "liverpool-galatasaray", "fotmob_match_id": 5205738, "home_team": "Liverpool", "away_team": "Galatasaray" },
+    { "match_slug": "tottenham-hotspur-atletico-madrid", "fotmob_match_id": 5205742, "home_team": "Tottenham Hotspur", "away_team": "Atletico Madrid" }
+  ]
+}

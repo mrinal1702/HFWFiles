@@ -1,0 +1,43 @@
+{
+  "slug": "uefa-cl-2025-26",
+  "display_name": "UEFA Champions League 2025/26",
+  "status": "archived",
+  "database_competition_id": 3,
+  "auction_ids": [],
+  "_auction_ids_note": "TODO: confirm which online auction IDs were attached to the Champions League competition before finalizing the archive.",
+  "player_pool": "player-pool/master_player_list.csv",
+  "legacy_game_week_id_range": [200, 299],
+  "rounds": {
+    "ro16-leg2": {
+      "database_round_id": 201,
+      "display_name": "Round of 16, Leg 2",
+      "round_number": 1,
+      "status": "archived"
+    },
+    "qf-leg1": {
+      "database_round_id": 202,
+      "display_name": "Quarter-finals, Leg 1",
+      "round_number": 2,
+      "status": "archived"
+    },
+    "qf-leg2": {
+      "database_round_id": 203,
+      "display_name": "Quarter-finals, Leg 2",
+      "round_number": 3,
+      "status": "archived"
+    },
+    "sf-leg1": {
+      "database_round_id": 204,
+      "display_name": "Semi-finals, Leg 1",
+      "round_number": 4,
+      "status": "archived"
+    },
+    "sf-leg2": {
+      "database_round_id": 205,
+      "display_name": "Semi-finals, Leg 2",
+      "round_number": 5,
+      "status": "archived"
+    }
+  },
+  "archived_at": "2026-08-23"
+}

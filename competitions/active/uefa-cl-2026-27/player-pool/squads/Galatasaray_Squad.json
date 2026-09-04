@@ -1,0 +1,199 @@
+{
+  "team_name": "Galatasaray",
+  "team_id": 8637,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8637/squad/galatasaray",
+  "players": [
+    {
+      "player_id": 39781,
+      "player_name": "Okan Buruk",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/39781/okan-buruk"
+    },
+    {
+      "player_id": 178818,
+      "player_name": "Ilkay Gündogan",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/178818/ilkay-gundogan"
+    },
+    {
+      "player_id": 291399,
+      "player_name": "Abdülkerim Bardakci",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/291399/abdulkerim-bardakci"
+    },
+    {
+      "player_id": 335429,
+      "player_name": "Günay Güvenc",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/335429/gunay-guvenc"
+    },
+    {
+      "player_id": 421786,
+      "player_name": "Mario Lemina",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/421786/mario-lemina"
+    },
+    {
+      "player_id": 441164,
+      "player_name": "Kaan Ayhan",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/441164/kaan-ayhan"
+    },
+    {
+      "player_id": 530859,
+      "player_name": "Leroy Sané",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/530859/leroy-sane"
+    },
+    {
+      "player_id": 583601,
+      "player_name": "Roland Sallai",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/583601/roland-sallai"
+    },
+    {
+      "player_id": 592909,
+      "player_name": "Lucas Torreira",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/592909/lucas-torreira"
+    },
+    {
+      "player_id": 603669,
+      "player_name": "Ugurcan Çakir",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/603669/ugurcan-cakir"
+    },
+    {
+      "player_id": 643533,
+      "player_name": "Davinson Sánchez",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/643533/davinson-sanchez"
+    },
+    {
+      "player_id": 687681,
+      "player_name": "Victor Osimhen",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/687681/victor-osimhen"
+    },
+    {
+      "player_id": 776594,
+      "player_name": "Victor Nelsson",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/776594/victor-nelsson"
+    },
+    {
+      "player_id": 845991,
+      "player_name": "Yunus Akgün",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/845991/yunus-akgun"
+    },
+    {
+      "player_id": 848844,
+      "player_name": "Rafael Leão",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/848844/rafael-leao"
+    },
+    {
+      "player_id": 890232,
+      "player_name": "Baris Alper Yilmaz",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/890232/baris-alper-yilmaz"
+    },
+    {
+      "player_id": 902710,
+      "player_name": "Gabriel Sara",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/902710/gabriel-sara"
+    },
+    {
+      "player_id": 906945,
+      "player_name": "Ismail Jakobs",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/906945/ismail-jakobs"
+    },
+    {
+      "player_id": 1027472,
+      "player_name": "Wilfried Singo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1027472/wilfried-singo"
+    },
+    {
+      "player_id": 1041660,
+      "player_name": "Eren Elmali",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1041660/eren-elmali"
+    },
+    {
+      "player_id": 1108328,
+      "player_name": "Kazimcan Karatas",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1108328/kazimcan-karatas"
+    },
+    {
+      "player_id": 1200631,
+      "player_name": "Lesley Ugochukwu",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1200631/lesley-ugochukwu"
+    },
+    {
+      "player_id": 1210886,
+      "player_name": "Siraçhan Nas",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1210886/sirachan-nas"
+    },
+    {
+      "player_id": 1286950,
+      "player_name": "Jankat Yilmaz",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1286950/jankat-yilmaz"
+    },
+    {
+      "player_id": 1300864,
+      "player_name": "Eyüp Aydin",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1300864/eyup-aydin"
+    },
+    {
+      "player_id": 1433600,
+      "player_name": "Arda Ünyay",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1433600/arda-unyay"
+    },
+    {
+      "player_id": 1504343,
+      "player_name": "Aleksey Batrakov",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1504343/aleksey-batrakov"
+    },
+    {
+      "player_id": 1682656,
+      "player_name": "Berat Lus",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1682656/berat-lus"
+    },
+    {
+      "player_id": 1741323,
+      "player_name": "Renato Nhaga",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1741323/renato-nhaga"
+    },
+    {
+      "player_id": 1783494,
+      "player_name": "Ada Yüzgec",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1783494/ada-yuzgec"
+    },
+    {
+      "player_id": 1793856,
+      "player_name": "Enes Büyük",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1793856/enes-buyuk"
+    },
+    {
+      "player_id": 1901084,
+      "player_name": "Armando Güner",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1901084/armando-guner"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "team_name": "Real Madrid",
+  "team_id": 8633,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8633/squad/real-madrid",
+  "players": [
+    {
+      "player_id": 78719,
+      "player_name": "José Mourinho",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/78719/jose-mourinho"
+    },
+    {
+      "player_id": 170323,
+      "player_name": "Thibaut Courtois",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/170323/thibaut-courtois"
+    },
+    {
+      "player_id": 276738,
+      "player_name": "Antonio Rüdiger",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/276738/antonio-rudiger"
+    },
+    {
+      "player_id": 488139,
+      "player_name": "Bernardo Silva",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/488139/bernardo-silva"
+    },
+    {
+      "player_id": 593118,
+      "player_name": "Denzel Dumfries",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/593118/denzel-dumfries"
+    },
+    {
+      "player_id": 623537,
+      "player_name": "Ferland Mendy",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/623537/ferland-mendy"
+    },
+    {
+      "player_id": 701154,
+      "player_name": "Kylian Mbappé",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/701154/kylian-mbappe"
+    },
+    {
+      "player_id": 743533,
+      "player_name": "Federico Valverde",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/743533/federico-valverde"
+    },
+    {
+      "player_id": 750027,
+      "player_name": "Brahim Díaz",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/750027/brahim-diaz"
+    },
+    {
+      "player_id": 760712,
+      "player_name": "Trent Alexander-Arnold",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/760712/trent-alexander-arnold"
+    },
+    {
+      "player_id": 800882,
+      "player_name": "Andriy Lunin",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/800882/andriy-lunin"
+    },
+    {
+      "player_id": 820140,
+      "player_name": "Ibrahima Konaté",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/820140/ibrahima-konate"
+    },
+    {
+      "player_id": 844415,
+      "player_name": "Éder Militao",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/844415/eder-militao"
+    },
+    {
+      "player_id": 846033,
+      "player_name": "Vinícius Júnior",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/846033/vinicius-junior"
+    },
+    {
+      "player_id": 873289,
+      "player_name": "Marc Cucurella",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/873289/marc-cucurella"
+    },
+    {
+      "player_id": 895362,
+      "player_name": "Rodrygo",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/895362/rodrygo"
+    },
+    {
+      "player_id": 914458,
+      "player_name": "Aurélien Tchouaméni",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/914458/aurelien-tchouameni"
+    },
+    {
+      "player_id": 1015185,
+      "player_name": "Eduardo Camavinga",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1015185/eduardo-camavinga"
+    },
+    {
+      "player_id": 1077894,
+      "player_name": "Jude Bellingham",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1077894/jude-bellingham"
+    },
+    {
+      "player_id": 1190025,
+      "player_name": "Alvaro Carreras",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1190025/alvaro-carreras"
+    },
+    {
+      "player_id": 1253890,
+      "player_name": "Arda Güler",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1253890/arda-guler"
+    },
+    {
+      "player_id": 1367619,
+      "player_name": "Dean Huijsen",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1367619/dean-huijsen"
+    },
+    {
+      "player_id": 1406729,
+      "player_name": "Endrick",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1406729/endrick"
+    },
+    {
+      "player_id": 1413780,
+      "player_name": "David Jiménez",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1413780/david-jimenez"
+    },
+    {
+      "player_id": 1580528,
+      "player_name": "Raúl Asencio",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1580528/raul-asencio"
+    },
+    {
+      "player_id": 1610744,
+      "player_name": "Carlos Espí",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1610744/carlos-espi"
+    },
+    {
+      "player_id": 1735453,
+      "player_name": "Yan Diomande",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1735453/yan-diomande"
+    },
+    {
+      "player_id": 1796908,
+      "player_name": "Thiago Pitarch",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1796908/thiago-pitarch"
+    },
+    {
+      "player_id": 1807277,
+      "player_name": "Jorge Cestero",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1807277/jorge-cestero"
+    }
+  ]
+}

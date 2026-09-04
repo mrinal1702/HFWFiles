@@ -1,0 +1,169 @@
+{
+  "team_name": "Colombia",
+  "team_id": 8258,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8258/squad/colombia",
+  "players": [
+    {
+      "player_id": 50065,
+      "player_name": "David Ospina",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/50065/david-ospina"
+    },
+    {
+      "player_id": 50207,
+      "player_name": "Camilo Vargas",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/50207/camilo-vargas"
+    },
+    {
+      "player_id": 164684,
+      "player_name": "James Rodríguez",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/164684/james-rodriguez"
+    },
+    {
+      "player_id": 207617,
+      "player_name": "Juan Fernando Quintero",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/207617/juan-quintero"
+    },
+    {
+      "player_id": 207642,
+      "player_name": "Santiago Arias",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/207642/santiago-arias"
+    },
+    {
+      "player_id": 291425,
+      "player_name": "Jhon Córdoba",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/291425/jhon-cordoba"
+    },
+    {
+      "player_id": 466672,
+      "player_name": "Jefferson Lerma",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/466672/jefferson-lerma"
+    },
+    {
+      "player_id": 474673,
+      "player_name": "Johan Mojica",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/474673/johan-mojica"
+    },
+    {
+      "player_id": 496042,
+      "player_name": "Yerry Mina",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/496042/yerry-mina"
+    },
+    {
+      "player_id": 498457,
+      "player_name": "Álvaro Montero",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/498457/alvaro-montero"
+    },
+    {
+      "player_id": 578756,
+      "player_name": "Deiver Machado",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/578756/deiver-machado"
+    },
+    {
+      "player_id": 643533,
+      "player_name": "Davinson Sánchez",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/643533/davinson-sanchez"
+    },
+    {
+      "player_id": 784834,
+      "player_name": "Jorge Carrascal",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/784834/jorge-carrascal"
+    },
+    {
+      "player_id": 792303,
+      "player_name": "Luis Suárez",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/792303/luis-suarez"
+    },
+    {
+      "player_id": 837870,
+      "player_name": "Jaminton Campaz",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/837870/jaminton-campaz"
+    },
+    {
+      "player_id": 852071,
+      "player_name": "Juan Hernández",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/852071/juan-hernandez"
+    },
+    {
+      "player_id": 859282,
+      "player_name": "Daniel Muñoz",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/859282/daniel-munoz"
+    },
+    {
+      "player_id": 860913,
+      "player_name": "Jhon Lucumí",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/860913/jhon-lucumi"
+    },
+    {
+      "player_id": 860914,
+      "player_name": "Luis Díaz",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/860914/luis-diaz"
+    },
+    {
+      "player_id": 965205,
+      "player_name": "Willer Ditta",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/965205/willer-ditta"
+    },
+    {
+      "player_id": 1023030,
+      "player_name": "Jhon Arias",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1023030/jhon-arias"
+    },
+    {
+      "player_id": 1174630,
+      "player_name": "Richard Ríos",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1174630/richard-rios"
+    },
+    {
+      "player_id": 1248693,
+      "player_name": "Néstor Lorenzo",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/1248693/nestor-lorenzo"
+    },
+    {
+      "player_id": 1281230,
+      "player_name": "Juan Portilla",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1281230/juan-portilla"
+    },
+    {
+      "player_id": 1331597,
+      "player_name": "Gustavo Puerta",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1331597/gustavo-puerta"
+    },
+    {
+      "player_id": 1353421,
+      "player_name": "Andrés Gómez",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1353421/andres-gomez"
+    },
+    {
+      "player_id": 1434853,
+      "player_name": "Kevin Castaño",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1434853/kevin-castano"
+    }
+  ]
+}

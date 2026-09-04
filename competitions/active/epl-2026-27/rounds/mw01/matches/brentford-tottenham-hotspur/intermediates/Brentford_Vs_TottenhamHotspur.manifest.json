@@ -1,0 +1,15 @@
+{
+  "match_id": 5795368,
+  "home_team": "Brentford",
+  "away_team": "Tottenham Hotspur",
+  "source_url": "https://www.fotmob.com/en-GB/matches/tottenham-vs-brentford/2u5c8b#5795368:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/Brentford_Vs_TottenhamHotspur.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/tottenham-vs-brentford/2u5c8b",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/tottenham-vs-brentford/2u5c8b#5795368:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/tottenham-vs-brentford/2u5c8b#5795368:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/tottenham-vs-brentford/2u5c8b#5795368:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795368"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

@@ -1,0 +1,181 @@
+{
+  "team_name": "AEK Athens",
+  "team_id": 8563,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8563/squad/aek-athens",
+  "players": [
+    {
+      "player_id": 115180,
+      "player_name": "Domagoj Vida",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/115180/domagoj-vida"
+    },
+    {
+      "player_id": 184639,
+      "player_name": "Petros Mantalos",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/184639/petros-mantalos"
+    },
+    {
+      "player_id": 299879,
+      "player_name": "Alberto Brignoli",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/299879/alberto-brignoli"
+    },
+    {
+      "player_id": 395914,
+      "player_name": "Charalambos Lykogiannis",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/395914/charalambos-lykogiannis"
+    },
+    {
+      "player_id": 403049,
+      "player_name": "Thomas Strakosha",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/403049/thomas-strakosha"
+    },
+    {
+      "player_id": 448859,
+      "player_name": "Mijat Gacinovic",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/448859/mijat-gacinovic"
+    },
+    {
+      "player_id": 463291,
+      "player_name": "Luka Jovic",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/463291/luka-jovic"
+    },
+    {
+      "player_id": 463539,
+      "player_name": "Marko Nikolic",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/463539/marko-nikolic"
+    },
+    {
+      "player_id": 547454,
+      "player_name": "Kaan Kairinen",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/547454/kaan-kairinen"
+    },
+    {
+      "player_id": 574844,
+      "player_name": "Razvan Marin",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/574844/razvan-marin"
+    },
+    {
+      "player_id": 617396,
+      "player_name": "Dereck Kutesa",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/617396/dereck-kutesa"
+    },
+    {
+      "player_id": 637737,
+      "player_name": "Harold Moukoudi",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/637737/harold-moukoudi"
+    },
+    {
+      "player_id": 655636,
+      "player_name": "Oleksandr Zubkov",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/655636/oleksandr-zubkov"
+    },
+    {
+      "player_id": 725695,
+      "player_name": "Aboubakary Koïta",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/725695/aboubakary-koita"
+    },
+    {
+      "player_id": 762721,
+      "player_name": "Lovro Majer",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/762721/lovro-majer"
+    },
+    {
+      "player_id": 796504,
+      "player_name": "Barnabás Varga",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/796504/barnabas-varga"
+    },
+    {
+      "player_id": 833641,
+      "player_name": "Frantzdy Pierrot",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/833641/frantzdy-pierrot"
+    },
+    {
+      "player_id": 839750,
+      "player_name": "Kervin Arriaga",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/839750/kervin-arriaga"
+    },
+    {
+      "player_id": 949866,
+      "player_name": "Lazaros Rota",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/949866/lazaros-rota"
+    },
+    {
+      "player_id": 1015750,
+      "player_name": "Stavros Pilios",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1015750/stavros-pilios"
+    },
+    {
+      "player_id": 1106943,
+      "player_name": "Zine",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1106943/zine"
+    },
+    {
+      "player_id": 1197823,
+      "player_name": "Milán Vitális",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1197823/milan-vitalis"
+    },
+    {
+      "player_id": 1285815,
+      "player_name": "Filipe Relvas",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1285815/filipe-relvas"
+    },
+    {
+      "player_id": 1295674,
+      "player_name": "Martin Georgiev",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1295674/martin-georgiev"
+    },
+    {
+      "player_id": 1412199,
+      "player_name": "Dimitrios Kaloskamis",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1412199/dimitrios-kaloskamis"
+    },
+    {
+      "player_id": 1453434,
+      "player_name": "Hakim Sahabo",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1453434/hakim-sahabo"
+    },
+    {
+      "player_id": 1661197,
+      "player_name": "Christos Alexiou",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1661197/christos-alexiou"
+    },
+    {
+      "player_id": 1798250,
+      "player_name": "Marios Balamotis",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1798250/marios-balamotis"
+    },
+    {
+      "player_id": 1814510,
+      "player_name": "Zois Karagyris",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1814510/zois-karagyris"
+    }
+  ]
+}

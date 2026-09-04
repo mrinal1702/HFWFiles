@@ -19,7 +19,10 @@ export function AuthRecoveryRedirect() {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((event) => {
       if (event === "PASSWORD_RECOVERY") {
-        router.replace("/reset-password");
+        // Defer so we don't run navigation while Supabase still holds its auth lock.
+        window.setTimeout(() => {
+          router.replace("/reset-password");
+        }, 0);
       }
     });
 

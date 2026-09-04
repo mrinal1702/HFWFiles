@@ -1,0 +1,112 @@
+[
+  {
+    "player_id": 460632,
+    "player_name": "Joshua Kimmich",
+    "team_name": "Germany",
+    "match": "Germany vs Curacao",
+    "old_role": null,
+    "new_role": "defender",
+    "old_points": 63,
+    "new_points": 50,
+    "delta": -13
+  },
+  {
+    "player_id": 1215064,
+    "player_name": "Martin Baturina",
+    "team_name": "Croatia",
+    "match": "England vs Croatia",
+    "old_role": null,
+    "new_role": "midfielder",
+    "old_points": 42,
+    "new_points": 31,
+    "delta": -11
+  },
+  {
+    "player_id": 659272,
+    "player_name": "Julian Ryerson",
+    "team_name": "Norway",
+    "match": "Iraq vs Norway",
+    "old_role": null,
+    "new_role": "defender",
+    "old_points": 45,
+    "new_points": 38,
+    "delta": -7
+  },
+  {
+    "player_id": 1247001,
+    "player_name": "Mohannad Abu Taha",
+    "team_name": "Jordan",
+    "match": "Austria vs Jordan",
+    "old_role": null,
+    "new_role": "defender",
+    "old_points": 28,
+    "new_points": 22,
+    "delta": -6
+  },
+  {
+    "player_id": 832171,
+    "player_name": "Alan Franco",
+    "team_name": "Ecuador",
+    "match": "IvoryCoast vs Ecuador",
+    "old_role": null,
+    "new_role": "defender",
+    "old_points": 27,
+    "new_points": 33,
+    "delta": 6
+  },
+  {
+    "player_id": 1249993,
+    "player_name": "Abbosbek Fayzullayev",
+    "team_name": "Uzbekistan",
+    "match": "Uzbekistan vs Colombia",
+    "old_role": null,
+    "new_role": "midfielder",
+    "old_points": 26,
+    "new_points": 20,
+    "delta": -6
+  },
+  {
+    "player_id": 848289,
+    "player_name": "Takefusa Kubo",
+    "team_name": "Japan",
+    "match": "Netherlands vs Japan",
+    "old_role": null,
+    "new_role": "midfielder",
+    "old_points": 25,
+    "new_points": 21,
+    "delta": -4
+  },
+  {
+    "player_id": 859282,
+    "player_name": "Daniel Mu\u00f1oz",
+    "team_name": "Colombia",
+    "match": "Uzbekistan vs Colombia",
+    "old_role": null,
+    "new_role": "defender",
+    "old_points": 47,
+    "new_points": 44,
+    "delta": -3
+  },
+  {
+    "player_id": 1037539,
+    "player_name": "Pavel Sulc",
+    "team_name": "Czech Republic",
+    "match": "SouthKorea vs Czechia",
+    "old_role": null,
+    "new_role": "midfielder",
+    "old_points": 19,
+    "new_points": 21,
+    "delta": 2
+  },
+  {
+    "player_id": 1441786,
+    "player_name": "Sidny Lopes Cabral",
+    "team_name": "Cape Verde Islands",
+    "match": "Spain vs CapeVerde",
+    "old_role": null,
+    "new_role": "defender",
+    "old_points": 32,
+    "new_points": 34,
+    "delta": 2
+  }
+]

@@ -7,7 +7,7 @@ export type NationDeadlineRow = {
   hardDeadlineAt: string;
 };
 
-/** Per-nation raise/hard schedule for nation_rolling auctions (e.g. trial auction 8). */
+/** Per-nation raise/hard schedule for nation_rolling auctions. */
 export async function loadNationDeadlinesForAuction(
   auctionId: number,
 ): Promise<NationDeadlineRow[]> {

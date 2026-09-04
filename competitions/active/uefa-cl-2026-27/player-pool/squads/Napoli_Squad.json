@@ -1,0 +1,217 @@
+{
+  "team_name": "Napoli",
+  "team_id": 9875,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/9875/squad/napoli",
+  "players": [
+    {
+      "player_id": 129745,
+      "player_name": "Massimiliano Allegri",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/129745/massimiliano-allegri"
+    },
+    {
+      "player_id": 169200,
+      "player_name": "Kevin De Bruyne",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/169200/kevin-de-bruyne"
+    },
+    {
+      "player_id": 215242,
+      "player_name": "Leonardo Spinazzola",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/215242/leonardo-spinazzola"
+    },
+    {
+      "player_id": 308517,
+      "player_name": "Stanislav Lobotka",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/308517/stanislav-lobotka"
+    },
+    {
+      "player_id": 414906,
+      "player_name": "Giovanni Di Lorenzo",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/414906/giovanni-di-lorenzo"
+    },
+    {
+      "player_id": 415539,
+      "player_name": "Matteo Politano",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/415539/matteo-politano"
+    },
+    {
+      "player_id": 517068,
+      "player_name": "Nikita Contini",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/517068/nikita-contini"
+    },
+    {
+      "player_id": 543021,
+      "player_name": "Vanja Milinkovic-Savic",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/543021/vanja-milinkovic-savic"
+    },
+    {
+      "player_id": 544693,
+      "player_name": "Amir Rrahmani",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/544693/amir-rrahmani"
+    },
+    {
+      "player_id": 577912,
+      "player_name": "Alex Meret",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/577912/alex-meret"
+    },
+    {
+      "player_id": 612863,
+      "player_name": "Frank Anguissa",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/612863/frank-anguissa"
+    },
+    {
+      "player_id": 675327,
+      "player_name": "Pasquale Mazzocchi",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/675327/pasquale-mazzocchi"
+    },
+    {
+      "player_id": 729093,
+      "player_name": "Mathías Olivera",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/729093/mathias-olivera"
+    },
+    {
+      "player_id": 793066,
+      "player_name": "David Neres",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/793066/david-neres"
+    },
+    {
+      "player_id": 801120,
+      "player_name": "Jens-Lys Cajuste",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/801120/jens-lys-cajuste"
+    },
+    {
+      "player_id": 822440,
+      "player_name": "Michael Folorunsho",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/822440/michael-folorunsho"
+    },
+    {
+      "player_id": 823018,
+      "player_name": "Alessandro Buongiorno",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/823018/alessandro-buongiorno"
+    },
+    {
+      "player_id": 837341,
+      "player_name": "Noa Lang",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/837341/noa-lang"
+    },
+    {
+      "player_id": 843099,
+      "player_name": "Scott McTominay",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/843099/scott-mctominay"
+    },
+    {
+      "player_id": 873573,
+      "player_name": "Sam Beukema",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/873573/sam-beukema"
+    },
+    {
+      "player_id": 942549,
+      "player_name": "Billy Gilmour",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/942549/billy-gilmour"
+    },
+    {
+      "player_id": 955376,
+      "player_name": "Benoît Badiashile",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/955376/benoit-badiashile"
+    },
+    {
+      "player_id": 958335,
+      "player_name": "Jesper Lindstrøm",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/958335/jesper-lindstrom"
+    },
+    {
+      "player_id": 994403,
+      "player_name": "Cyril Ngonge",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/994403/cyril-ngonge"
+    },
+    {
+      "player_id": 1078113,
+      "player_name": "Walid Cheddira",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1078113/walid-cheddira"
+    },
+    {
+      "player_id": 1199272,
+      "player_name": "Rasmus Højlund",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1199272/rasmus-hojlund"
+    },
+    {
+      "player_id": 1212630,
+      "player_name": "Lorenzo Lucca",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1212630/lorenzo-lucca"
+    },
+    {
+      "player_id": 1313884,
+      "player_name": "Rafa Marín",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1313884/rafa-marin"
+    },
+    {
+      "player_id": 1320863,
+      "player_name": "Antonio Vergara",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1320863/antonio-vergara"
+    },
+    {
+      "player_id": 1355552,
+      "player_name": "Alisson Santos",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1355552/alisson-santos"
+    },
+    {
+      "player_id": 1355574,
+      "player_name": "Giovane Nascimento",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1355574/giovane-nascimento"
+    },
+    {
+      "player_id": 1403328,
+      "player_name": "Costantino Favasuli",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/1403328/costantino-favasuli"
+    },
+    {
+      "player_id": 1526621,
+      "player_name": "Nosa Edward Obaretin",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1526621/nosa-edward-obaretin"
+    },
+    {
+      "player_id": 1529148,
+      "player_name": "Luca Marianucci",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1529148/luca-marianucci"
+    },
+    {
+      "player_id": 1830782,
+      "player_name": "Christian Garofalo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1830782/christian-garofalo"
+    }
+  ]
+}

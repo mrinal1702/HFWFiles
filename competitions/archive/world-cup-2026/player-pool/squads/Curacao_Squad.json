@@ -1,0 +1,169 @@
+{
+  "team_name": "Curacao",
+  "team_id": 287981,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/287981/squad/curacao",
+  "players": [
+    {
+      "player_id": 78614,
+      "player_name": "Dick Advocaat",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/78614/dick-advocaat"
+    },
+    {
+      "player_id": 150242,
+      "player_name": "Eloy Room",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/150242/eloy-room"
+    },
+    {
+      "player_id": 183500,
+      "player_name": "Leandro Bacuna",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/183500/leandro-bacuna"
+    },
+    {
+      "player_id": 289441,
+      "player_name": "Jürgen Locadia",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/289441/jurgen-locadia"
+    },
+    {
+      "player_id": 352358,
+      "player_name": "Brandley Kuwas",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/352358/brandley-kuwas"
+    },
+    {
+      "player_id": 380942,
+      "player_name": "Gervane Kastaneer",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/380942/gervane-kastaneer"
+    },
+    {
+      "player_id": 389845,
+      "player_name": "Joshua Brenet",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/389845/joshua-brenet"
+    },
+    {
+      "player_id": 467479,
+      "player_name": "Riechedly Bazoer",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/467479/riechedly-bazoer"
+    },
+    {
+      "player_id": 614574,
+      "player_name": "Juninho Bacuna",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/614574/juninho-bacuna"
+    },
+    {
+      "player_id": 643232,
+      "player_name": "Kenji Gorré",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/643232/kenji-gorre"
+    },
+    {
+      "player_id": 671327,
+      "player_name": "Sherel Floranus",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/671327/sherel-floranus"
+    },
+    {
+      "player_id": 708738,
+      "player_name": "Juriën Gaari",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/708738/jurien-gaari"
+    },
+    {
+      "player_id": 751066,
+      "player_name": "Tahith Chong",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/751066/tahith-chong"
+    },
+    {
+      "player_id": 794244,
+      "player_name": "Armando Obispo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/794244/armando-obispo"
+    },
+    {
+      "player_id": 873856,
+      "player_name": "Trevor Doornbusch",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/873856/trevor-doornbusch"
+    },
+    {
+      "player_id": 875845,
+      "player_name": "Kevin Felida",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/875845/kevin-felida"
+    },
+    {
+      "player_id": 924844,
+      "player_name": "Roshon van Eijma",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/924844/roshon-van-eijma"
+    },
+    {
+      "player_id": 938524,
+      "player_name": "Godfried Roemeratoe",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/938524/godfried-roemeratoe"
+    },
+    {
+      "player_id": 1050160,
+      "player_name": "Sontje Hansen",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1050160/sontje-hansen"
+    },
+    {
+      "player_id": 1125997,
+      "player_name": "Shurandy Sambo",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1125997/shurandy-sambo"
+    },
+    {
+      "player_id": 1180735,
+      "player_name": "Arjany Martha",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1180735/arjany-martha"
+    },
+    {
+      "player_id": 1180784,
+      "player_name": "Jearl Margaritha",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1180784/jearl-margaritha"
+    },
+    {
+      "player_id": 1210947,
+      "player_name": "Jeremy Antonisse",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1210947/jeremy-antonisse"
+    },
+    {
+      "player_id": 1240833,
+      "player_name": "Tyrick Bodak",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1240833/tyrick-bodak"
+    },
+    {
+      "player_id": 1243246,
+      "player_name": "Livano Comenencia",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1243246/livano-comenencia"
+    },
+    {
+      "player_id": 1335315,
+      "player_name": "Deveron Fonville",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1335315/deveron-fonville"
+    },
+    {
+      "player_id": 1439121,
+      "player_name": "Tyrese Noslin",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/1439121/tyrese-noslin"
+    }
+  ]
+}

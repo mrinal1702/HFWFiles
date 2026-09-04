@@ -1,0 +1,199 @@
+{
+  "team_name": "Viking",
+  "team_id": 8478,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8478/squad/viking",
+  "players": [
+    {
+      "player_id": 119598,
+      "player_name": "Arild Østbø",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/119598/arild-ostbo"
+    },
+    {
+      "player_id": 200670,
+      "player_name": "Morten Jensen",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/200670/morten-jensen"
+    },
+    {
+      "player_id": 255626,
+      "player_name": "Veton Berisha",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/255626/veton-berisha"
+    },
+    {
+      "player_id": 279191,
+      "player_name": "Zlatko Tripic",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/279191/zlatko-tripic"
+    },
+    {
+      "player_id": 313128,
+      "player_name": "Kristoffer Haugen",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/313128/kristoffer-haugen"
+    },
+    {
+      "player_id": 444253,
+      "player_name": "Viljar Vevatne",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/444253/viljar-vevatne"
+    },
+    {
+      "player_id": 538580,
+      "player_name": "Sondre Bjørshol",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/538580/sondre-bjorshol"
+    },
+    {
+      "player_id": 633094,
+      "player_name": "Jesper Daland",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/633094/jesper-daland"
+    },
+    {
+      "player_id": 633595,
+      "player_name": "Martin Roseth",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/633595/martin-roseth"
+    },
+    {
+      "player_id": 694964,
+      "player_name": "Nicholas D'Agostino",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/694964/nicholas-dagostino"
+    },
+    {
+      "player_id": 745816,
+      "player_name": "Erlend Jacobsen",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/745816/erlend-jacobsen"
+    },
+    {
+      "player_id": 848345,
+      "player_name": "Joe Bell",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/848345/joe-bell"
+    },
+    {
+      "player_id": 935392,
+      "player_name": "Anders Bærtelsen",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/935392/anders-baertelsen"
+    },
+    {
+      "player_id": 955759,
+      "player_name": "Peter Christiansen",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/955759/peter-christiansen"
+    },
+    {
+      "player_id": 964535,
+      "player_name": "Kristoffer Askildsen",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/964535/kristoffer-askildsen"
+    },
+    {
+      "player_id": 1019527,
+      "player_name": "Herman Haugen",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1019527/herman-haugen"
+    },
+    {
+      "player_id": 1029026,
+      "player_name": "Gianni Stensness",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1029026/gianni-stensness"
+    },
+    {
+      "player_id": 1069826,
+      "player_name": "Romano Postema",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1069826/romano-postema"
+    },
+    {
+      "player_id": 1110550,
+      "player_name": "Henrik Falchener",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1110550/henrik-falchener"
+    },
+    {
+      "player_id": 1159555,
+      "player_name": "Lubomír Belko",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1159555/lubomir-belko"
+    },
+    {
+      "player_id": 1163230,
+      "player_name": "Henrik Heggheim",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1163230/henrik-heggheim"
+    },
+    {
+      "player_id": 1172556,
+      "player_name": "Ruben Kristensen Alte",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1172556/ruben-kristensen-alte"
+    },
+    {
+      "player_id": 1267374,
+      "player_name": "Simen Kvia-Egeskog",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1267374/simen-kvia-egeskog"
+    },
+    {
+      "player_id": 1367620,
+      "player_name": "Edvin Austbø",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1367620/edvin-austbo"
+    },
+    {
+      "player_id": 1376699,
+      "player_name": "Jakob Segadal Hansen",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1376699/jakob-segadal-hansen"
+    },
+    {
+      "player_id": 1565855,
+      "player_name": "Franco Lino",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1565855/franco-lino"
+    },
+    {
+      "player_id": 1585827,
+      "player_name": "Vetle Auklend",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1585827/vetle-auklend"
+    },
+    {
+      "player_id": 1636179,
+      "player_name": "Ola Visted",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1636179/ola-visted"
+    },
+    {
+      "player_id": 1636182,
+      "player_name": "Tobias Moi",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1636182/tobias-moi"
+    },
+    {
+      "player_id": 1636186,
+      "player_name": "Niklas Fuglestad",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1636186/niklas-fuglestad"
+    },
+    {
+      "player_id": 1751162,
+      "player_name": "Amin Cosic",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1751162/amin-cosic"
+    },
+    {
+      "player_id": 1927055,
+      "player_name": "Kelvin Frimpong",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1927055/kelvin-frimpong"
+    }
+  ]
+}

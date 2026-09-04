@@ -1,0 +1,15 @@
+{
+  "match_id": 5795366,
+  "home_team": "Ipswich Town",
+  "away_team": "Sunderland",
+  "source_url": "https://www.fotmob.com/en-GB/matches/sunderland-vs-ipswich/2sif4z#5795366",
+  "json_path": "Matches_Raw/World Cup 2026/IpswichTown_Vs_Sunderland.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/sunderland-vs-ipswich/2sif4z",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/sunderland-vs-ipswich/2sif4z#5795366:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/sunderland-vs-ipswich/2sif4z#5795366:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/sunderland-vs-ipswich/2sif4z#5795366:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795366"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

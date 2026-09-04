@@ -1,0 +1,16 @@
+{
+  "competition_slug": "uefa-cl-2025-26",
+  "database_competition_id": 3,
+  "database_round_id": 204,
+  "round_slug": "sf-leg1",
+  "display_name": "Semi-finals, Leg 1",
+  "round_number": 4,
+  "legacy_game_week_id": 203,
+  "expected_match_count": 2,
+  "scoring_state": "scored",
+  "publication_state": "archived",
+  "fixtures": [
+    { "match_slug": "paris-saint-germain-bayern-munich", "fotmob_match_id": 5205811, "home_team": "Paris Saint-Germain", "away_team": "Bayern Munich" },
+    { "match_slug": "atletico-madrid-arsenal", "fotmob_match_id": 5205813, "home_team": "Atletico Madrid", "away_team": "Arsenal" }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "team_name": "Portugal",
+  "team_id": 8361,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8361/squad/portugal",
+  "players": [
+    {
+      "player_id": 30893,
+      "player_name": "Cristiano Ronaldo",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/30893/cristiano-ronaldo"
+    },
+    {
+      "player_id": 35382,
+      "player_name": "Roberto Martínez",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/35382/roberto-martinez"
+    },
+    {
+      "player_id": 361717,
+      "player_name": "Rui Silva",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/361717/rui-silva"
+    },
+    {
+      "player_id": 361757,
+      "player_name": "João Cancelo",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/361757/joao-cancelo"
+    },
+    {
+      "player_id": 416175,
+      "player_name": "José Sá",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/416175/jose-sa"
+    },
+    {
+      "player_id": 422685,
+      "player_name": "Bruno Fernandes",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/422685/bruno-fernandes"
+    },
+    {
+      "player_id": 470834,
+      "player_name": "Nélson Semedo",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/470834/nelson-semedo"
+    },
+    {
+      "player_id": 488139,
+      "player_name": "Bernardo Silva",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/488139/bernardo-silva"
+    },
+    {
+      "player_id": 534684,
+      "player_name": "Rúben Neves",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/534684/ruben-neves"
+    },
+    {
+      "player_id": 536455,
+      "player_name": "Gonçalo Guedes",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/536455/goncalo-guedes"
+    },
+    {
+      "player_id": 614006,
+      "player_name": "Rúben Dias",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/614006/ruben-dias"
+    },
+    {
+      "player_id": 732282,
+      "player_name": "Trincão",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/732282/trincao"
+    },
+    {
+      "player_id": 751550,
+      "player_name": "Diogo Dalot",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/751550/diogo-dalot"
+    },
+    {
+      "player_id": 794427,
+      "player_name": "Joao Félix",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/794427/joao-felix"
+    },
+    {
+      "player_id": 795630,
+      "player_name": "Diogo Costa",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/795630/diogo-costa"
+    },
+    {
+      "player_id": 843040,
+      "player_name": "Pedro Neto",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/843040/pedro-neto"
+    },
+    {
+      "player_id": 848844,
+      "player_name": "Rafael Leão",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/848844/rafael-leao"
+    },
+    {
+      "player_id": 940087,
+      "player_name": "Gonçalo Ramos",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/940087/goncalo-ramos"
+    },
+    {
+      "player_id": 955529,
+      "player_name": "Matheus Nunes",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/955529/matheus-nunes"
+    },
+    {
+      "player_id": 1061249,
+      "player_name": "Vitinha",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1061249/vitinha"
+    },
+    {
+      "player_id": 1130583,
+      "player_name": "Samú",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1130583/samu"
+    },
+    {
+      "player_id": 1158945,
+      "player_name": "Nuno Mendes",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1158945/nuno-mendes"
+    },
+    {
+      "player_id": 1165710,
+      "player_name": "Gonçalo Inácio",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1165710/goncalo-inacio"
+    },
+    {
+      "player_id": 1185336,
+      "player_name": "Francisco Conceição",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1185336/francisco-conceicao"
+    },
+    {
+      "player_id": 1187283,
+      "player_name": "Tomás Araújo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1187283/tomas-araujo"
+    },
+    {
+      "player_id": 1342757,
+      "player_name": "João Neves",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1342757/joao-neves"
+    },
+    {
+      "player_id": 1343750,
+      "player_name": "Renato Veiga",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1343750/renato-veiga"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "team_name": "Shakhtar Donetsk",
+  "team_id": 9728,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/9728/overview/shakhtar-donetsk",
+  "_source_note": "FotMob squad page returns HTTP 500; roster built from recent match lineups.",
+  "players": [
+    {
+      "player_id": 510843,
+      "player_name": "Oleksandr Karavaev",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/510843/oleksandr-karavaev"
+    },
+    {
+      "player_id": 656667,
+      "player_name": "Mykola Matviyenko",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/656667/mykola-matviyenko"
+    },
+    {
+      "player_id": 728941,
+      "player_name": "Yegor Nazaryna",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/728941/yegor-nazaryna"
+    },
+    {
+      "player_id": 844186,
+      "player_name": "Pedrinho",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/844186/pedrinho"
+    },
+    {
+      "player_id": 850858,
+      "player_name": "Lassina Traoré",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/850858/lassina-traor"
+    },
+    {
+      "player_id": 976428,
+      "player_name": "Dmytro Riznyk",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/976428/dmytro-riznyk"
+    },
+    {
+      "player_id": 1024427,
+      "player_name": "Valeriy Bondar",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1024427/valeriy-bondar"
+    },
+    {
+      "player_id": 1067263,
+      "player_name": "Irakli Azarovi",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1067263/irakli-azarovi"
+    },
+    {
+      "player_id": 1116325,
+      "player_name": "Artem Bondarenko",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1116325/artem-bondarenko"
+    },
+    {
+      "player_id": 1173774,
+      "player_name": "Alaa Ghram",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1173774/alaa-ghram"
+    },
+    {
+      "player_id": 1192419,
+      "player_name": "Oleg Ocheretko",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1192419/oleg-ocheretko"
+    },
+    {
+      "player_id": 1259576,
+      "player_name": "Pedro Henrique",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1259576/pedro-henrique"
+    },
+    {
+      "player_id": 1314657,
+      "player_name": "Vinícius Tobias",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1314657/vin-cius-tobias"
+    },
+    {
+      "player_id": 1460572,
+      "player_name": "Gleiker Mendoza",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1460572/gleiker-mendoza"
+    },
+    {
+      "player_id": 1483508,
+      "player_name": "Kauã Elias",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1483508/kau-elias"
+    },
+    {
+      "player_id": 1503318,
+      "player_name": "Alisson Santana",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1503318/alisson-santana"
+    },
+    {
+      "player_id": 1516203,
+      "player_name": "Newerton",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1516203/newerton"
+    },
+    {
+      "player_id": 1520391,
+      "player_name": "Denys Tvardovskyi",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1520391/denys-tvardovskyi"
+    },
+    {
+      "player_id": 1530313,
+      "player_name": "Prosper Obah",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1530313/prosper-obah"
+    },
+    {
+      "player_id": 1612225,
+      "player_name": "Viktor Tsukanov",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1612225/viktor-tsukanov"
+    },
+    {
+      "player_id": 1694887,
+      "player_name": "Luca Meirelles",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1694887/luca-meirelles"
+    },
+    {
+      "player_id": 1697412,
+      "player_name": "Isaque",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1697412/isaque"
+    },
+    {
+      "player_id": 1699018,
+      "player_name": "Lucas Ferreira",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1699018/lucas-ferreira"
+    },
+    {
+      "player_id": 1721075,
+      "player_name": "Denys Smetana",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1721075/denys-smetana"
+    },
+    {
+      "player_id": 1839360,
+      "player_name": "Ryan Roberto",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1839360/ryan-roberto"
+    }
+  ]
+}

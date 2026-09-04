@@ -1,0 +1,199 @@
+{
+  "team_name": "Sporting CP",
+  "team_id": 9768,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/9768/squad/sporting-cp",
+  "players": [
+    {
+      "player_id": 361717,
+      "player_name": "Rui Silva",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/361717/rui-silva"
+    },
+    {
+      "player_id": 554283,
+      "player_name": "Nuno Santos",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/554283/nuno-santos"
+    },
+    {
+      "player_id": 792303,
+      "player_name": "Luis Suárez",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/792303/luis-suarez"
+    },
+    {
+      "player_id": 875133,
+      "player_name": "Pote",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/875133/pote"
+    },
+    {
+      "player_id": 899701,
+      "player_name": "Fotis Ioannidis",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/899701/fotis-ioannidis"
+    },
+    {
+      "player_id": 1014980,
+      "player_name": "Daniel Bragança",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1014980/daniel-braganca"
+    },
+    {
+      "player_id": 1031656,
+      "player_name": "Maxi Araújo",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1031656/maxi-araujo"
+    },
+    {
+      "player_id": 1070776,
+      "player_name": "Rodrigo Zalazar",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1070776/rodrigo-zalazar"
+    },
+    {
+      "player_id": 1088753,
+      "player_name": "Geny Catamo",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1088753/geny-catamo"
+    },
+    {
+      "player_id": 1091973,
+      "player_name": "Koba Koindredi",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1091973/koba-koindredi"
+    },
+    {
+      "player_id": 1093025,
+      "player_name": "Sotiris Alexandropoulos",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1093025/sotiris-alexandropoulos"
+    },
+    {
+      "player_id": 1119687,
+      "player_name": "Georgios Vagiannidis",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1119687/georgios-vagiannidis"
+    },
+    {
+      "player_id": 1135797,
+      "player_name": "Rui Borges",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/1135797/rui-borges"
+    },
+    {
+      "player_id": 1156380,
+      "player_name": "Eduardo Quaresma",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1156380/eduardo-quaresma"
+    },
+    {
+      "player_id": 1165710,
+      "player_name": "Gonçalo Inácio",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1165710/goncalo-inacio"
+    },
+    {
+      "player_id": 1232172,
+      "player_name": "Zeno Debast",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1232172/zeno-debast"
+    },
+    {
+      "player_id": 1310480,
+      "player_name": "Sergi Altimira",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1310480/sergi-altimira"
+    },
+    {
+      "player_id": 1325998,
+      "player_name": "Iván Fresneda",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1325998/ivan-fresneda"
+    },
+    {
+      "player_id": 1327214,
+      "player_name": "Nestory Irankunda",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/1327214/nestory-irankunda"
+    },
+    {
+      "player_id": 1339345,
+      "player_name": "Issa Doumbia",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1339345/issa-doumbia"
+    },
+    {
+      "player_id": 1425101,
+      "player_name": "Silas Andersen",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1425101/silas-andersen"
+    },
+    {
+      "player_id": 1458757,
+      "player_name": "Luís Guilherme",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1458757/luis-guilherme"
+    },
+    {
+      "player_id": 1459257,
+      "player_name": "Pedro Lima",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1459257/pedro-lima"
+    },
+    {
+      "player_id": 1525416,
+      "player_name": "Rafael Nel",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1525416/rafael-nel"
+    },
+    {
+      "player_id": 1526704,
+      "player_name": "Jesse Derry",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1526704/jesse-derry"
+    },
+    {
+      "player_id": 1609327,
+      "player_name": "Ibrahima Ba",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1609327/ibrahima-ba"
+    },
+    {
+      "player_id": 1663855,
+      "player_name": "João Simões",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1663855/joao-simoes"
+    },
+    {
+      "player_id": 1691190,
+      "player_name": "Flávio Gonçalves",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1691190/flavio-goncalves"
+    },
+    {
+      "player_id": 1712326,
+      "player_name": "Salvador Blopa",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1712326/salvador-blopa"
+    },
+    {
+      "player_id": 1755850,
+      "player_name": "Moncef Zekri",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1755850/moncef-zekri"
+    },
+    {
+      "player_id": 1759322,
+      "player_name": "Rodrigo Rodrigues",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1759322/rodrigo-rodrigues"
+    },
+    {
+      "player_id": 1918387,
+      "player_name": "Delcio Aurelio",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1918387/delcio-aurelio"
+    }
+  ]
+}

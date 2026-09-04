@@ -74,7 +74,7 @@ def main() -> None:
     outfield = _safe_read_csv(outfield_path)
     keepers = _safe_read_csv(keepers_path)
 
-    merged = merge_outfield_and_keepers(outfield, keepers, validate=True)
+    merged = merge_outfield_and_keepers(outfield, keepers, match_data=match_data, validate=True)
 
     out_path = tests_dir / f"{base}_FinalPoints.csv"
     merged.to_csv(out_path, index=False, encoding="utf-8")

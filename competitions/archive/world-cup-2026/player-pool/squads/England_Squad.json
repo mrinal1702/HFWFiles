@@ -1,0 +1,169 @@
+{
+  "team_name": "England",
+  "team_id": 8491,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8491/squad/england",
+  "players": [
+    {
+      "player_id": 156008,
+      "player_name": "Jordan Henderson",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/156008/jordan-henderson"
+    },
+    {
+      "player_id": 179347,
+      "player_name": "Thomas Tuchel",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/179347/thomas-tuchel"
+    },
+    {
+      "player_id": 188058,
+      "player_name": "Daniel Burn",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/188058/daniel-burn"
+    },
+    {
+      "player_id": 194165,
+      "player_name": "Harry Kane",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/194165/harry-kane"
+    },
+    {
+      "player_id": 263653,
+      "player_name": "John Stones",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/263653/john-stones"
+    },
+    {
+      "player_id": 303919,
+      "player_name": "Jordan Pickford",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/303919/jordan-pickford"
+    },
+    {
+      "player_id": 408987,
+      "player_name": "Ivan Toney",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/408987/ivan-toney"
+    },
+    {
+      "player_id": 540088,
+      "player_name": "Ollie Watkins",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/540088/ollie-watkins"
+    },
+    {
+      "player_id": 654096,
+      "player_name": "Declan Rice",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/654096/declan-rice"
+    },
+    {
+      "player_id": 696365,
+      "player_name": "Marcus Rashford",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/696365/marcus-rashford"
+    },
+    {
+      "player_id": 710159,
+      "player_name": "Ezri Konsa",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/710159/ezri-konsa"
+    },
+    {
+      "player_id": 719330,
+      "player_name": "Dean Henderson",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/719330/dean-henderson"
+    },
+    {
+      "player_id": 807729,
+      "player_name": "Reece James",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/807729/reece-james"
+    },
+    {
+      "player_id": 818975,
+      "player_name": "Eberechi Eze",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/818975/eberechi-eze"
+    },
+    {
+      "player_id": 844425,
+      "player_name": "Marc Guéhi",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/844425/marc-guehi"
+    },
+    {
+      "player_id": 883080,
+      "player_name": "Morgan Rogers",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/883080/morgan-rogers"
+    },
+    {
+      "player_id": 894803,
+      "player_name": "Djed Spence",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/894803/djed-spence"
+    },
+    {
+      "player_id": 906937,
+      "player_name": "Anthony Gordon",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/906937/anthony-gordon"
+    },
+    {
+      "player_id": 961995,
+      "player_name": "Bukayo Saka",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/961995/bukayo-saka"
+    },
+    {
+      "player_id": 1077894,
+      "player_name": "Jude Bellingham",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1077894/jude-bellingham"
+    },
+    {
+      "player_id": 1084981,
+      "player_name": "Noni Madueke",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1084981/noni-madueke"
+    },
+    {
+      "player_id": 1089691,
+      "player_name": "Elliot Anderson",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1089691/elliot-anderson"
+    },
+    {
+      "player_id": 1107620,
+      "player_name": "Jarell Quansah",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1107620/jarell-quansah"
+    },
+    {
+      "player_id": 1107910,
+      "player_name": "Valentino Livramento",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1107910/valentino-livramento"
+    },
+    {
+      "player_id": 1187213,
+      "player_name": "James Trafford",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1187213/james-trafford"
+    },
+    {
+      "player_id": 1292810,
+      "player_name": "Kobbie Mainoo",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1292810/kobbie-mainoo"
+    },
+    {
+      "player_id": 1300526,
+      "player_name": "Nico O'Reilly",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1300526/nico-oreilly"
+    }
+  ]
+}

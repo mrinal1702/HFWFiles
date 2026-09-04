@@ -1,0 +1,157 @@
+{
+  "team_name": "LASK",
+  "team_id": 9977,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/9977/squad/lask",
+  "players": [
+    {
+      "player_id": 43051,
+      "player_name": "Dietmar Kühbauer",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/43051/dietmar-kuhbauer"
+    },
+    {
+      "player_id": 426726,
+      "player_name": "Sascha Horvath",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/426726/sascha-horvath"
+    },
+    {
+      "player_id": 461357,
+      "player_name": "Alessandro Schöpf",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/461357/alessandro-schopf"
+    },
+    {
+      "player_id": 557349,
+      "player_name": "Tobias Schützenauer",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/557349/tobias-schutzenauer"
+    },
+    {
+      "player_id": 619687,
+      "player_name": "Florian Flecker",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/619687/florian-flecker"
+    },
+    {
+      "player_id": 688449,
+      "player_name": "Andrés Andrade",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/688449/andres-andrade"
+    },
+    {
+      "player_id": 939430,
+      "player_name": "Robert Ljubicic",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/939430/robert-ljubicic"
+    },
+    {
+      "player_id": 953995,
+      "player_name": "George Bello",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/953995/george-bello"
+    },
+    {
+      "player_id": 979963,
+      "player_name": "Xavier Mbuyamba",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/979963/xavier-mbuyamba"
+    },
+    {
+      "player_id": 1029360,
+      "player_name": "Kasper Jørgensen",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/1029360/kasper-jorgensen"
+    },
+    {
+      "player_id": 1108604,
+      "player_name": "Melayro Bogarde",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1108604/melayro-bogarde"
+    },
+    {
+      "player_id": 1118147,
+      "player_name": "Krystof Danek",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1118147/krystof-danek"
+    },
+    {
+      "player_id": 1156883,
+      "player_name": "Lukas Jungwirth",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1156883/lukas-jungwirth"
+    },
+    {
+      "player_id": 1188855,
+      "player_name": "Samuel Adeniran",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1188855/samuel-adeniran"
+    },
+    {
+      "player_id": 1232205,
+      "player_name": "Christoph Lang",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1232205/christoph-lang"
+    },
+    {
+      "player_id": 1254266,
+      "player_name": "Yvan Dibango",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1254266/yvan-dibango"
+    },
+    {
+      "player_id": 1366348,
+      "player_name": "Moses Usor",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1366348/moses-usor"
+    },
+    {
+      "player_id": 1420822,
+      "player_name": "Miguel Freckleton",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1420822/miguel-freckleton"
+    },
+    {
+      "player_id": 1437941,
+      "player_name": "Alemão",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1437941/alemao"
+    },
+    {
+      "player_id": 1510970,
+      "player_name": "Art Smakaj",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1510970/art-smakaj"
+    },
+    {
+      "player_id": 1667728,
+      "player_name": "Ramiz Harakate",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1667728/ramiz-harakate"
+    },
+    {
+      "player_id": 1671273,
+      "player_name": "Fabian Schillinger",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1671273/fabian-schillinger"
+    },
+    {
+      "player_id": 1756283,
+      "player_name": "Nael Kane",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1756283/nael-kane"
+    },
+    {
+      "player_id": 1833178,
+      "player_name": "Cheikne Kebe",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1833178/cheikne-kebe"
+    },
+    {
+      "player_id": 1863042,
+      "player_name": "Manoël Verhaeghe",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1863042/manoel-verhaeghe"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "team_name": "Spain",
+  "team_id": 6720,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6720/squad/spain",
+  "players": [
+    {
+      "player_id": 288406,
+      "player_name": "Alejandro Grimaldo",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/288406/alejandro-grimaldo"
+    },
+    {
+      "player_id": 411617,
+      "player_name": "Aymeric Laporte",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/411617/aymeric-laporte"
+    },
+    {
+      "player_id": 562727,
+      "player_name": "David Raya",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/562727/david-raya"
+    },
+    {
+      "player_id": 574645,
+      "player_name": "Mikel Merino",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/574645/mikel-merino"
+    },
+    {
+      "player_id": 602563,
+      "player_name": "Marcos Llorente",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/602563/marcos-llorente"
+    },
+    {
+      "player_id": 605654,
+      "player_name": "Fabián Ruiz",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/605654/fabian-ruiz"
+    },
+    {
+      "player_id": 609505,
+      "player_name": "Borja Iglesias",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/609505/borja-iglesias"
+    },
+    {
+      "player_id": 614834,
+      "player_name": "Dani Olmo",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/614834/dani-olmo"
+    },
+    {
+      "player_id": 660625,
+      "player_name": "Unai Simón",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/660625/unai-simon"
+    },
+    {
+      "player_id": 675088,
+      "player_name": "Rodri",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/675088/rodri"
+    },
+    {
+      "player_id": 678234,
+      "player_name": "Mikel Oyarzabal",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/678234/mikel-oyarzabal"
+    },
+    {
+      "player_id": 873289,
+      "player_name": "Marc Cucurella",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/873289/marc-cucurella"
+    },
+    {
+      "player_id": 881771,
+      "player_name": "Ferran Torres",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/881771/ferran-torres"
+    },
+    {
+      "player_id": 940573,
+      "player_name": "Eric García",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/940573/eric-garcia"
+    },
+    {
+      "player_id": 941573,
+      "player_name": "Pedro Porro",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/941573/pedro-porro"
+    },
+    {
+      "player_id": 942372,
+      "player_name": "Álex Baena",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/942372/alex-baena"
+    },
+    {
+      "player_id": 1031325,
+      "player_name": "Martín Zubimendi",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1031325/martin-zubimendi"
+    },
+    {
+      "player_id": 1047676,
+      "player_name": "Yéremi Pino",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1047676/yeremi-pino"
+    },
+    {
+      "player_id": 1059866,
+      "player_name": "Luis de la Fuente",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/1059866/luis-de-la-fuente"
+    },
+    {
+      "player_id": 1083323,
+      "player_name": "Pedri",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1083323/pedri"
+    },
+    {
+      "player_id": 1167220,
+      "player_name": "Joan García",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1167220/joan-garcia"
+    },
+    {
+      "player_id": 1202110,
+      "player_name": "Nico Williams",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1202110/nico-williams"
+    },
+    {
+      "player_id": 1279040,
+      "player_name": "Gavi",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1279040/gavi"
+    },
+    {
+      "player_id": 1323897,
+      "player_name": "Marc Pubill",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1323897/marc-pubill"
+    },
+    {
+      "player_id": 1467236,
+      "player_name": "Lamine Yamal",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1467236/lamine-yamal"
+    },
+    {
+      "player_id": 1532137,
+      "player_name": "Pau Cubarsí",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1532137/pau-cubarsi"
+    },
+    {
+      "player_id": 1553105,
+      "player_name": "Víctor Muñoz",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1553105/victor-munoz"
+    }
+  ]
+}

@@ -29,10 +29,12 @@ POSITION_ROLE_MAP: dict[str, str] = {
     "LB": "Defender",
     "LM": "Midfielder",
     "LW": "Forward",
+    "LWB": "Defender",
     "midfielder": "Midfielder",
     "RB": "Defender",
     "RM": "Midfielder",
     "RW": "Forward",
+    "RWB": "Defender",
     "ST": "Forward",
 }
 
@@ -89,6 +91,7 @@ def load_player_rows(json_path: Path) -> list[dict]:
     if isinstance(data, dict) and isinstance(data.get("players"), list):
         team_name = data.get("team_name") or normalize_team_name_from_file(json_path.name)
         team_id = data.get("team_id")
+        squad_url = data.get("squad_url", "")
         for p in data["players"]:
             rows.append(
                 {
@@ -99,6 +102,8 @@ def load_player_rows(json_path: Path) -> list[dict]:
                     "position": p.get("position"),
                     "href": p.get("href"),
                     "source_file": json_path.name,
+                    # kept only for collapse_goalkeepers; not written to CSV
+                    "_squad_url": squad_url,
                 }
             )
         return rows
@@ -127,6 +132,48 @@ def load_player_rows(json_path: Path) -> list[dict]:
         return rows
 
     return rows
+
+
+def collapse_goalkeepers(rows: list[dict]) -> list[dict]:
+    """
+    Replace all individual GK rows for each team with a single
+    '{Team} Keepers' row using a synthetic player_id.
+
+    Synthetic ID scheme: 90_000_000 + team_id
+    """
+    gk_rows: list[dict] = []
+    non_gk_rows: list[dict] = []
+    for row in rows:
+        if map_position_to_role(str(row.get("position") or "").strip()) == "Goalkeeper":
+            gk_rows.append(row)
+        else:
+            non_gk_rows.append(row)
+
+    seen_teams: dict = {}
+    for row in gk_rows:
+        tid = row["team_id"]
+        if tid is None:
+            continue
+        if tid not in seen_teams:
+            seen_teams[tid] = row
+
+    keeper_bundle_rows: list[dict] = []
+    for tid, rep in seen_teams.items():
+        synthetic_id = 90_000_000 + int(tid)
+        keeper_bundle_rows.append(
+            {
+                "player_id": synthetic_id,
+                "player_name": f"{rep['team_name']} Keepers",
+                "team_id": rep["team_id"],
+                "team_name": rep["team_name"],
+                "position": "GK",
+                "href": rep.get("_squad_url") or rep.get("href", ""),
+                "source_file": rep["source_file"],
+                "_squad_url": rep.get("_squad_url", ""),
+            }
+        )
+
+    return non_gk_rows + keeper_bundle_rows
 
 
 def build_master_unique(rows: list[dict]) -> list[dict]:
@@ -167,6 +214,18 @@ def main() -> None:
     for fp in files:
         all_rows.extend(load_player_rows(fp))
 
+    gk_before = sum(
+        1
+        for r in all_rows
+        if map_position_to_role(str(r.get("position") or "").strip()) == "Goalkeeper"
+    )
+    all_rows = collapse_goalkeepers(all_rows)
+    gk_after = sum(1 for r in all_rows if str(r.get("position") or "").strip() == "GK")
+    print(f"GK collapse: {gk_before} individual GK rows -> {gk_after} Keepers bundle(s)")
+
+    for r in all_rows:
+        r.pop("_squad_url", None)
+
     master = build_master_unique(all_rows)
     master_mapped, stats = apply_role_map_to_master(master)
 
@@ -189,7 +248,7 @@ def main() -> None:
         writer.writerows(master_mapped)
 
     print(f"Input squad files: {len(files)}")
-    print(f"Raw rows loaded: {len(all_rows)}")
+    print(f"Raw rows after GK collapse: {len(all_rows)}")
     print(f"Unique players (before role map / drops): {len(master)}")
     print(
         "Skipped: empty position=%(skipped_empty)s, Coach=%(skipped_coach)s, unmapped=%(skipped_unmapped)s"

@@ -3,8 +3,8 @@
   "display_name": "UEFA Champions League 2026/27",
   "status": "active",
   "database_competition_id": 4,
-  "auction_ids": [10],
-  "_auction_ids_note": "Auction 10 is the online UCL auction imported from Live Auction 1 (Aug 2026). Live Auction 2 remains verbal-only until imported separately.",
+  "auction_ids": [10, 11, 12, 13],
+  "_auction_ids_note": "10 = online from Live Auction 1 (Aug 2026). 11 (UCLAUC2) = fresh join league, 12h rolling. 12 = online from Live Auction 2. 13 (UCLAUC4) = fresh join league 'UEFA CL 2026/27 Auction 4', 12h rolling deadlines (place_bid branch pending), is_active=false until bidding opens.",
   "player_pool": "player-pool/master_player_list.csv",
   "legacy_game_week_id_range": [300, 399],
   "archived_at": null

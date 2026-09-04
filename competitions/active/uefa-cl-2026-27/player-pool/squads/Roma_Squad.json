@@ -1,0 +1,175 @@
+{
+  "team_name": "Roma",
+  "team_id": 8686,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8686/squad/roma",
+  "players": [
+    {
+      "player_id": 96945,
+      "player_name": "Gian Piero Gasperini",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/96945/gian-piero-gasperini"
+    },
+    {
+      "player_id": 299799,
+      "player_name": "Bryan Cristante",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/299799/bryan-cristante"
+    },
+    {
+      "player_id": 325916,
+      "player_name": "Paulo Dybala",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/325916/paulo-dybala"
+    },
+    {
+      "player_id": 540307,
+      "player_name": "Lorenzo Pellegrini",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/540307/lorenzo-pellegrini"
+    },
+    {
+      "player_id": 553849,
+      "player_name": "Pierluigi Gollini",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/553849/pierluigi-gollini"
+    },
+    {
+      "player_id": 588687,
+      "player_name": "Gianluca Mancini",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/588687/gianluca-mancini"
+    },
+    {
+      "player_id": 660301,
+      "player_name": "Donyell Malen",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/660301/donyell-malen"
+    },
+    {
+      "player_id": 671203,
+      "player_name": "Mario Hermoso",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/671203/mario-hermoso"
+    },
+    {
+      "player_id": 726345,
+      "player_name": "Nahuel Molina",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/726345/nahuel-molina"
+    },
+    {
+      "player_id": 768474,
+      "player_name": "Mile Svilar",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/768474/mile-svilar"
+    },
+    {
+      "player_id": 787242,
+      "player_name": "Evan N'Dicka",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/787242/evan-ndicka"
+    },
+    {
+      "player_id": 1016132,
+      "player_name": "Manu Koné",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1016132/manu-kone"
+    },
+    {
+      "player_id": 1050838,
+      "player_name": "Anass Salah-Eddine",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1050838/anass-salah-eddine"
+    },
+    {
+      "player_id": 1180321,
+      "player_name": "Devyne Rensch",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/1180321/devyne-rensch"
+    },
+    {
+      "player_id": 1186685,
+      "player_name": "Devis Vásquez",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1186685/devis-vasquez"
+    },
+    {
+      "player_id": 1274060,
+      "player_name": "Neil El Aynaoui",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1274060/neil-el-aynaoui"
+    },
+    {
+      "player_id": 1280082,
+      "player_name": "Matias Soulé",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1280082/matias-soule"
+    },
+    {
+      "player_id": 1282008,
+      "player_name": "Santiago Castro",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1282008/santiago-castro"
+    },
+    {
+      "player_id": 1320176,
+      "player_name": "Wesley",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/1320176/wesley"
+    },
+    {
+      "player_id": 1337884,
+      "player_name": "Konstantinos Koulierakis",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1337884/konstantinos-koulierakis"
+    },
+    {
+      "player_id": 1386006,
+      "player_name": "Daniele Ghilardi",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1386006/daniele-ghilardi"
+    },
+    {
+      "player_id": 1451196,
+      "player_name": "Niccolò Pisilli",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1451196/niccolo-pisilli"
+    },
+    {
+      "player_id": 1483089,
+      "player_name": "Mattia Mannini",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1483089/mattia-mannini"
+    },
+    {
+      "player_id": 1511063,
+      "player_name": "Jan Ziólkowski",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1511063/jan-ziolkowski"
+    },
+    {
+      "player_id": 1525065,
+      "player_name": "Rodrigo Mora",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1525065/rodrigo-mora"
+    },
+    {
+      "player_id": 1705134,
+      "player_name": "Robinio Vaz",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1705134/robinio-vaz"
+    },
+    {
+      "player_id": 1726757,
+      "player_name": "Antonio Arena",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1726757/antonio-arena"
+    },
+    {
+      "player_id": 1870188,
+      "player_name": "Muhammed Bah",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1870188/muhammed-bah"
+    }
+  ]
+}

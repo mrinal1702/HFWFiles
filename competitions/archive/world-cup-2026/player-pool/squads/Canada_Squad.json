@@ -1,0 +1,187 @@
+{
+  "team_name": "Canada",
+  "team_id": 5810,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/5810/squad/canada",
+  "players": [
+    {
+      "player_id": 69655,
+      "player_name": "Jesse Marsch",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/69655/jesse-marsch"
+    },
+    {
+      "player_id": 432605,
+      "player_name": "Jonathan Osorio",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/432605/jonathan-osorio"
+    },
+    {
+      "player_id": 464919,
+      "player_name": "Maxime Crépeau",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/464919/maxime-crepeau"
+    },
+    {
+      "player_id": 544312,
+      "player_name": "Cyle Larin",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/544312/cyle-larin"
+    },
+    {
+      "player_id": 729506,
+      "player_name": "Richie Laryea",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/729506/richie-laryea"
+    },
+    {
+      "player_id": 751202,
+      "player_name": "Alphonso Davies",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/751202/alphonso-davies"
+    },
+    {
+      "player_id": 789598,
+      "player_name": "Alfie Jones",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/789598/alfie-jones"
+    },
+    {
+      "player_id": 816223,
+      "player_name": "Stephen Eustaquio",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/816223/stephen-eustaquio"
+    },
+    {
+      "player_id": 847629,
+      "player_name": "Derek Cornelius",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/847629/derek-cornelius"
+    },
+    {
+      "player_id": 932308,
+      "player_name": "Liam Millar",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/932308/liam-millar"
+    },
+    {
+      "player_id": 939569,
+      "player_name": "Jonathan David",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/939569/jonathan-david"
+    },
+    {
+      "player_id": 943428,
+      "player_name": "Mathieu Choinière",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/943428/mathieu-choiniere"
+    },
+    {
+      "player_id": 1023070,
+      "player_name": "Zorhan Bassong",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1023070/zorhan-bassong"
+    },
+    {
+      "player_id": 1023943,
+      "player_name": "Jacob Shaffelburg",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1023943/jacob-shaffelburg"
+    },
+    {
+      "player_id": 1026105,
+      "player_name": "Dayne St. Clair",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1026105/dayne-st-clair"
+    },
+    {
+      "player_id": 1026135,
+      "player_name": "Tajon Buchanan",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/1026135/tajon-buchanan"
+    },
+    {
+      "player_id": 1055426,
+      "player_name": "Alistair Johnston",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1055426/alistair-johnston"
+    },
+    {
+      "player_id": 1082106,
+      "player_name": "Jayden Nelson",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1082106/jayden-nelson"
+    },
+    {
+      "player_id": 1082109,
+      "player_name": "Ralph Priso",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1082109/ralph-priso-mbongue"
+    },
+    {
+      "player_id": 1100258,
+      "player_name": "Joel Waterman",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1100258/joel-waterman"
+    },
+    {
+      "player_id": 1186513,
+      "player_name": "Marcelo Flores",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1186513/marcelo-flores"
+    },
+    {
+      "player_id": 1216798,
+      "player_name": "Nathan Saliba",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1216798/nathan-saliba"
+    },
+    {
+      "player_id": 1252132,
+      "player_name": "Promise David",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1252132/promise-david"
+    },
+    {
+      "player_id": 1288119,
+      "player_name": "Ismaël Koné",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1288119/ismael-kone"
+    },
+    {
+      "player_id": 1338740,
+      "player_name": "Tani Oluwaseyi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1338740/tani-oluwaseyi"
+    },
+    {
+      "player_id": 1359536,
+      "player_name": "Ali Ahmed",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1359536/ali-ahmed"
+    },
+    {
+      "player_id": 1399943,
+      "player_name": "Luc De Fougerolles",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1399943/luc-de-fougerolles"
+    },
+    {
+      "player_id": 1415372,
+      "player_name": "Owen Goodman",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1415372/owen-goodman"
+    },
+    {
+      "player_id": 1440009,
+      "player_name": "Moïse Bombito",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1440009/moise-bombito"
+    },
+    {
+      "player_id": 1494508,
+      "player_name": "Niko Sigur",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1494508/niko-sigur"
+    }
+  ]
+}

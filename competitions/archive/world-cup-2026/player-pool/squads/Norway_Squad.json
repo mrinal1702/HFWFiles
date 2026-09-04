@@ -1,0 +1,169 @@
+{
+  "team_name": "Norway",
+  "team_id": 8492,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8492/squad/norway",
+  "players": [
+    {
+      "player_id": 73409,
+      "player_name": "Ørjan Håskjold Nyland",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/73409/orjan-haskjold-nyland"
+    },
+    {
+      "player_id": 78638,
+      "player_name": "Ståle Solbakken",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/78638/stale-solbakken"
+    },
+    {
+      "player_id": 310768,
+      "player_name": "Fredrik Aursnes",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/310768/fredrik-aursnes"
+    },
+    {
+      "player_id": 439148,
+      "player_name": "Morten Thorsby",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/439148/morten-thorsby"
+    },
+    {
+      "player_id": 440330,
+      "player_name": "Alexander Sørloth",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/440330/alexander-sorloth"
+    },
+    {
+      "player_id": 530635,
+      "player_name": "Patrick Berg",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/530635/patrick-berg"
+    },
+    {
+      "player_id": 534670,
+      "player_name": "Martin Ødegaard",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/534670/martin-odegaard"
+    },
+    {
+      "player_id": 540963,
+      "player_name": "Sander Berge",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/540963/sander-berge"
+    },
+    {
+      "player_id": 552718,
+      "player_name": "Kristoffer Ajer",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/552718/kristoffer-ajer"
+    },
+    {
+      "player_id": 630228,
+      "player_name": "Fredrik André Bjørkan",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/630228/fredrik-andre-bjorkan"
+    },
+    {
+      "player_id": 631757,
+      "player_name": "Egil Selvik",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/631757/egil-selvik"
+    },
+    {
+      "player_id": 659272,
+      "player_name": "Julian Ryerson",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/659272/julian-ryerson"
+    },
+    {
+      "player_id": 737066,
+      "player_name": "Erling Haaland",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/737066/erling-haaland"
+    },
+    {
+      "player_id": 740944,
+      "player_name": "Leo Østigard",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/740944/leo-ostigard"
+    },
+    {
+      "player_id": 741397,
+      "player_name": "Jens Petter Hauge",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/741397/jens-petter-hauge"
+    },
+    {
+      "player_id": 821100,
+      "player_name": "Jørgen Strand Larsen",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/821100/jorgen-strand-larsen"
+    },
+    {
+      "player_id": 921921,
+      "player_name": "Kristian Thorstvedt",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/921921/kristian-thorstvedt"
+    },
+    {
+      "player_id": 935550,
+      "player_name": "Torbjørn Heggem",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/935550/torbjorn-heggem"
+    },
+    {
+      "player_id": 935622,
+      "player_name": "Marcus Holmgren Pedersen",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/935622/marcus-holmgren-pedersen"
+    },
+    {
+      "player_id": 1049679,
+      "player_name": "David Møller Wolfe",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1049679/david-moller-wolfe"
+    },
+    {
+      "player_id": 1110550,
+      "player_name": "Henrik Falchener",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1110550/henrik-falchener"
+    },
+    {
+      "player_id": 1113790,
+      "player_name": "Oscar Bobb",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1113790/oscar-bobb"
+    },
+    {
+      "player_id": 1127585,
+      "player_name": "Sondre Klingen Langås",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1127585/sondre-klingen-langas"
+    },
+    {
+      "player_id": 1145714,
+      "player_name": "Sander Tangvik",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1145714/sander-tangvik"
+    },
+    {
+      "player_id": 1184468,
+      "player_name": "Thelo Aasgaard",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1184468/thelo-aasgaard"
+    },
+    {
+      "player_id": 1228558,
+      "player_name": "Andreas Schjelderup",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1228558/andreas-schjelderup"
+    },
+    {
+      "player_id": 1248482,
+      "player_name": "Antonio Nusa",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1248482/antonio-nusa"
+    }
+  ]
+}

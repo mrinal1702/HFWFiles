@@ -1,0 +1,223 @@
+{
+  "team_name": "Slavia Prague",
+  "team_id": 7787,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/7787/squad/slavia-prague",
+  "players": [
+    {
+      "player_id": 306168,
+      "player_name": "Tomás Holes",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/306168/tomas-holes"
+    },
+    {
+      "player_id": 308841,
+      "player_name": "Ivan Schranz",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/308841/ivan-schranz"
+    },
+    {
+      "player_id": 395426,
+      "player_name": "Ondrej Kolár",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/395426/ondrej-kolar"
+    },
+    {
+      "player_id": 463967,
+      "player_name": "Jindrich Stanek",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/463967/jindrich-stanek"
+    },
+    {
+      "player_id": 523217,
+      "player_name": "Tomás Chory",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/523217/tomas-chory"
+    },
+    {
+      "player_id": 658511,
+      "player_name": "Jindrich Trpisovsky",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/658511/jindrich-trpisovsky"
+    },
+    {
+      "player_id": 791682,
+      "player_name": "Lukás Provod",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/791682/lukas-provod"
+    },
+    {
+      "player_id": 806551,
+      "player_name": "Michal Sadílek",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/806551/michal-sadilek"
+    },
+    {
+      "player_id": 883759,
+      "player_name": "David Doudera",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/883759/david-doudera"
+    },
+    {
+      "player_id": 928122,
+      "player_name": "Igoh Ogbu",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/928122/igoh-ogbu"
+    },
+    {
+      "player_id": 979540,
+      "player_name": "Tomás Vlcek",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/979540/tomas-vlcek"
+    },
+    {
+      "player_id": 988769,
+      "player_name": "Mojmír Chytil",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/988769/mojmir-chytil"
+    },
+    {
+      "player_id": 1085401,
+      "player_name": "David Zima",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1085401/david-zima"
+    },
+    {
+      "player_id": 1085744,
+      "player_name": "Jakub Markovic",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1085744/jakub-markovic"
+    },
+    {
+      "player_id": 1247323,
+      "player_name": "David Jurásek",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/1247323/david-jurasek"
+    },
+    {
+      "player_id": 1270718,
+      "player_name": "Danijel Sturm",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1270718/danijel-sturm"
+    },
+    {
+      "player_id": 1288146,
+      "player_name": "Stepán Chaloupek",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1288146/stepan-chaloupek"
+    },
+    {
+      "player_id": 1327747,
+      "player_name": "Emmanuel Ayaosi",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1327747/emmanuel-ayaosi"
+    },
+    {
+      "player_id": 1342781,
+      "player_name": "Denis Halinsky",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1342781/denis-halinsky"
+    },
+    {
+      "player_id": 1395322,
+      "player_name": "Wiktor Nowak",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1395322/wiktor-nowak"
+    },
+    {
+      "player_id": 1405567,
+      "player_name": "Mikulás Konecny",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1405567/mikulas-konecny"
+    },
+    {
+      "player_id": 1421040,
+      "player_name": "Ange N'Guessan",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1421040/ange-nguessan"
+    },
+    {
+      "player_id": 1509423,
+      "player_name": "David Moses",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1509423/david-moses"
+    },
+    {
+      "player_id": 1513367,
+      "player_name": "Sahmkou Camara",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1513367/sahmkou-camara"
+    },
+    {
+      "player_id": 1553486,
+      "player_name": "Eliás Piták",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/1553486/elias-pitak"
+    },
+    {
+      "player_id": 1585595,
+      "player_name": "Pavel Kacor",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1585595/pavel-kacor"
+    },
+    {
+      "player_id": 1647596,
+      "player_name": "Jakub Kolísek",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/1647596/jakub-kolisek"
+    },
+    {
+      "player_id": 1666193,
+      "player_name": "Nazar Domchak",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1666193/nazar-domchak"
+    },
+    {
+      "player_id": 1681812,
+      "player_name": "Youssoupha Sanyang",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1681812/youssoupha-sanyang"
+    },
+    {
+      "player_id": 1744791,
+      "player_name": "Samuel Isife",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/1744791/samuel-isife"
+    },
+    {
+      "player_id": 1760112,
+      "player_name": "Dan Kohout",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1760112/dan-kohout"
+    },
+    {
+      "player_id": 1781770,
+      "player_name": "Toumani Diakité",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1781770/toumani-diakite"
+    },
+    {
+      "player_id": 1782189,
+      "player_name": "Oskar Kubiak",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/1782189/oskar-kubiak"
+    },
+    {
+      "player_id": 1791316,
+      "player_name": "Hamidou Kante",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1791316/hamidou-kante"
+    },
+    {
+      "player_id": 1840847,
+      "player_name": "Mubarak Suleiman",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1840847/mubarak-suleiman"
+    },
+    {
+      "player_id": 1893761,
+      "player_name": "Adonija Ouanda",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1893761/adonija-ouanda"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "team_name": "Nottingham Forest",
+  "team_id": 10203,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/10203/squad/nottingham-forest",
+  "players": [
+    {
+      "player_id": 43009,
+      "player_name": "Oliver Glasner",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/43009/oliver-glasner"
+    },
+    {
+      "player_id": 169719,
+      "player_name": "Chris Wood",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/169719/chris-wood"
+    },
+    {
+      "player_id": 181069,
+      "player_name": "Matz Sels",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/181069/matz-sels"
+    },
+    {
+      "player_id": 620027,
+      "player_name": "Xaver Schlager",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/620027/xaver-schlager"
+    },
+    {
+      "player_id": 643717,
+      "player_name": "Taiwo Awoniyi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/643717/taiwo-awoniyi"
+    },
+    {
+      "player_id": 682548,
+      "player_name": "Ola Aina",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/682548/ola-aina"
+    },
+    {
+      "player_id": 749834,
+      "player_name": "John Victor",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/749834/john-victor"
+    },
+    {
+      "player_id": 766611,
+      "player_name": "Nikola Milenkovic",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/766611/nikola-milenkovic"
+    },
+    {
+      "player_id": 775614,
+      "player_name": "Ryan Yates",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/775614/ryan-yates"
+    },
+    {
+      "player_id": 789502,
+      "player_name": "Morgan Gibbs-White",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/789502/morgan-gibbs-white"
+    },
+    {
+      "player_id": 795371,
+      "player_name": "Ibrahim Sangaré",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/795371/ibrahim-sangare"
+    },
+    {
+      "player_id": 798608,
+      "player_name": "Omar Richards",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/798608/omar-richards"
+    },
+    {
+      "player_id": 827315,
+      "player_name": "Nicolás Dominguez",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/827315/nicolas-dominguez"
+    },
+    {
+      "player_id": 846383,
+      "player_name": "Callum Hudson-Odoi",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/846383/callum-hudson-odoi"
+    },
+    {
+      "player_id": 1022649,
+      "player_name": "Dan Ndoye",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1022649/dan-ndoye"
+    },
+    {
+      "player_id": 1053838,
+      "player_name": "Morato",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1053838/morato"
+    },
+    {
+      "player_id": 1078788,
+      "player_name": "Neco Williams",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1078788/neco-williams"
+    },
+    {
+      "player_id": 1079539,
+      "player_name": "Dilane Bakwa",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1079539/dilane-bakwa"
+    },
+    {
+      "player_id": 1082102,
+      "player_name": "Igor Jesus",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1082102/igor-jesus"
+    },
+    {
+      "player_id": 1095445,
+      "player_name": "Arnaud Kalimuendo-Muinga",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1095445/arnaud-kalimuendo-muinga"
+    },
+    {
+      "player_id": 1107648,
+      "player_name": "James McAtee",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1107648/james-mcatee"
+    },
+    {
+      "player_id": 1155130,
+      "player_name": "Luca Netz",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/1155130/luca-netz"
+    },
+    {
+      "player_id": 1215652,
+      "player_name": "Omari Hutchinson",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1215652/omari-hutchinson"
+    },
+    {
+      "player_id": 1296769,
+      "player_name": "Zach Abbott",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1296769/zach-abbott"
+    },
+    {
+      "player_id": 1391209,
+      "player_name": "Jair Cunha",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1391209/jair-cunha"
+    },
+    {
+      "player_id": 1448031,
+      "player_name": "Jimmy Sinclair",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1448031/jimmy-sinclair"
+    },
+    {
+      "player_id": 1458711,
+      "player_name": "Murillo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1458711/murillo"
+    },
+    {
+      "player_id": 1487909,
+      "player_name": "Eric da Silva Moreira",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1487909/eric-da-silva-moreira"
+    },
+    {
+      "player_id": 1524716,
+      "player_name": "Tyler Bindon",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1524716/tyler-bindon"
+    },
+    {
+      "player_id": 1622290,
+      "player_name": "Nicolò Savona",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1622290/nicolo-savona"
+    },
+    {
+      "player_id": 1844097,
+      "player_name": "Grady McDonnell",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1844097/grady-mcdonnell"
+    }
+  ]
+}

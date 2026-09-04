@@ -1,0 +1,169 @@
+{
+  "team_name": "Japan",
+  "team_id": 6715,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6715/squad/japan",
+  "players": [
+    {
+      "player_id": 98254,
+      "player_name": "Yuto Nagatomo",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/98254/yuto-nagatomo"
+    },
+    {
+      "player_id": 202643,
+      "player_name": "Wataru Endo",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/202643/wataru-endo"
+    },
+    {
+      "player_id": 431269,
+      "player_name": "Hajime Moriyasu",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/431269/hajime-moriyasu"
+    },
+    {
+      "player_id": 523731,
+      "player_name": "Shogo Taniguchi",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/523731/shogo-taniguchi"
+    },
+    {
+      "player_id": 604044,
+      "player_name": "Junya Ito",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/604044/junya-ito"
+    },
+    {
+      "player_id": 620917,
+      "player_name": "Ko Itakura",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/620917/ko-itakura"
+    },
+    {
+      "player_id": 621515,
+      "player_name": "Daichi Kamada",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/621515/daichi-kamada"
+    },
+    {
+      "player_id": 629805,
+      "player_name": "Ritsu Doan",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/629805/ritsu-doan"
+    },
+    {
+      "player_id": 664444,
+      "player_name": "Takehiro Tomiyasu",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/664444/takehiro-tomiyasu"
+    },
+    {
+      "player_id": 727837,
+      "player_name": "Koki Ogawa",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/727837/koki-ogawa"
+    },
+    {
+      "player_id": 728765,
+      "player_name": "Daizen Maeda",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/728765/daizen-maeda"
+    },
+    {
+      "player_id": 848289,
+      "player_name": "Takefusa Kubo",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/848289/takefusa-kubo"
+    },
+    {
+      "player_id": 851626,
+      "player_name": "Hiroki Ito",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/851626/hiroki-ito"
+    },
+    {
+      "player_id": 857120,
+      "player_name": "Ayumu Seko",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/857120/ayumu-seko"
+    },
+    {
+      "player_id": 887704,
+      "player_name": "Keito Nakamura",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/887704/keito-nakamura"
+    },
+    {
+      "player_id": 922808,
+      "player_name": "Keisuke Osako",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/922808/keisuke-osako"
+    },
+    {
+      "player_id": 924610,
+      "player_name": "Yukinari Sugawara",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/924610/yukinari-sugawara"
+    },
+    {
+      "player_id": 935728,
+      "player_name": "Ao Tanaka",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/935728/ao-tanaka"
+    },
+    {
+      "player_id": 942393,
+      "player_name": "Ayase Ueda",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/942393/ayase-ueda"
+    },
+    {
+      "player_id": 1023887,
+      "player_name": "Tsuyoshi Watanabe",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1023887/tsuyoshi-watanabe"
+    },
+    {
+      "player_id": 1033111,
+      "player_name": "Kaishu Sano",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1033111/kaishu-sano"
+    },
+    {
+      "player_id": 1053679,
+      "player_name": "Zion Suzuki",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1053679/zion-suzuki"
+    },
+    {
+      "player_id": 1134467,
+      "player_name": "Yuito Suzuki",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1134467/yuito-suzuki"
+    },
+    {
+      "player_id": 1232143,
+      "player_name": "Tomoki Hayakawa",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1232143/tomoki-hayakawa"
+    },
+    {
+      "player_id": 1337765,
+      "player_name": "Junnosuke Suzuki",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1337765/junnosuke-suzuki"
+    },
+    {
+      "player_id": 1436730,
+      "player_name": "Keisuke Goto",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1436730/keisuke-goto"
+    },
+    {
+      "player_id": 1611223,
+      "player_name": "Kento Shiogai",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1611223/kento-shiogai"
+    }
+  ]
+}

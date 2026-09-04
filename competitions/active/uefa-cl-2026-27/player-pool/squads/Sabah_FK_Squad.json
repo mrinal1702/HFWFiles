@@ -1,0 +1,158 @@
+{
+  "team_name": "Sabah FK",
+  "team_id": 951893,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/951893/stats/sabah-fk/players",
+  "_source_note": "FotMob squad page returns HTTP 500; roster built from recent match lineups.",
+  "players": [
+    {
+      "player_id": 458807,
+      "player_name": "Veljko Simic",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/458807/veljko-simic"
+    },
+    {
+      "player_id": 489507,
+      "player_name": "Stas Pokatilov",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/489507/stas-pokatilov"
+    },
+    {
+      "player_id": 542777,
+      "player_name": "Akim Zedadka",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/542777/akim-zedadka"
+    },
+    {
+      "player_id": 617465,
+      "player_name": "Joy-Lance Mickels",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/617465/joy-lance-mickels"
+    },
+    {
+      "player_id": 688887,
+      "player_name": "Aleksey Isayev",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/688887/aleksey-isaev"
+    },
+    {
+      "player_id": 763300,
+      "player_name": "Tellur Mütallimov",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/763300/tellur-m-tallimov"
+    },
+    {
+      "player_id": 764834,
+      "player_name": "Steve Solvet",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/764834/steve-solvet"
+    },
+    {
+      "player_id": 823121,
+      "player_name": "Tymoteusz Puchacz",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/823121/tymoteusz-puchacz"
+    },
+    {
+      "player_id": 876149,
+      "player_name": "Kaheem Parris",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/876149/kaheem-parris"
+    },
+    {
+      "player_id": 906920,
+      "player_name": "Ivan Lepinjica",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/906920/ivan-lepinjica"
+    },
+    {
+      "player_id": 1106946,
+      "player_name": "Rodrigo Fernandes",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1106946/rodrigo-fernandes"
+    },
+    {
+      "player_id": 1197093,
+      "player_name": "Orphé Mbina",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1197093/orph-mbina"
+    },
+    {
+      "player_id": 1239800,
+      "player_name": "Xander Severina",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1239800/xander-severina"
+    },
+    {
+      "player_id": 1297104,
+      "player_name": "Amin Ramazanov",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1297104/amin-ramazanov"
+    },
+    {
+      "player_id": 1337091,
+      "player_name": "Aden McCarthy",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1337091/aden-mccarthy"
+    },
+    {
+      "player_id": 1351085,
+      "player_name": "Abdulakh Khaybulaev",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1351085/abdulakh-khaybulaev"
+    },
+    {
+      "player_id": 1384982,
+      "player_name": "Rauf Rüstamli",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1384982/rauf-r-stamli"
+    },
+    {
+      "player_id": 1429286,
+      "player_name": "Umarali Rakhmonaliev",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1429286/umarali-rakhmonaliev"
+    },
+    {
+      "player_id": 1441450,
+      "player_name": "Rahman Dasdamirov",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1441450/rahman-dasdamirov"
+    },
+    {
+      "player_id": 1489096,
+      "player_name": "Almeida",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1489096/almeida"
+    },
+    {
+      "player_id": 1526225,
+      "player_name": "Aaron Malouda",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1526225/aaron-malouda"
+    },
+    {
+      "player_id": 1624072,
+      "player_name": "Christian Nwachukwu",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1624072/christian-nwachukwu"
+    },
+    {
+      "player_id": 1667434,
+      "player_name": "Ravan Mirzammadov",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1667434/ravan-mirzammadov"
+    },
+    {
+      "player_id": 1684515,
+      "player_name": "Younes Lachaab",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1684515/younes-lachaab"
+    },
+    {
+      "player_id": 2081019,
+      "player_name": "Jafar Mukhtarov",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/2081019/jafar-mukhtarov"
+    }
+  ]
+}

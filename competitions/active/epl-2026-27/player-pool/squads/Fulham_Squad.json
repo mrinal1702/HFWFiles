@@ -1,0 +1,145 @@
+{
+  "team_name": "Fulham",
+  "team_id": 9879,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/9879/squad/fulham",
+  "players": [
+    {
+      "player_id": 37442,
+      "player_name": "Álvaro Arbeloa",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/37442/alvaro-arbeloa"
+    },
+    {
+      "player_id": 182962,
+      "player_name": "Tom Cairney",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/182962/tom-cairney"
+    },
+    {
+      "player_id": 210114,
+      "player_name": "Benjamin Lecomte",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/210114/benjamin-lecomte"
+    },
+    {
+      "player_id": 215168,
+      "player_name": "Bernd Leno",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/215168/bernd-leno"
+    },
+    {
+      "player_id": 465750,
+      "player_name": "Timothy Castagne",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/465750/timothy-castagne"
+    },
+    {
+      "player_id": 469804,
+      "player_name": "Kenny Tete",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/469804/kenny-tete"
+    },
+    {
+      "player_id": 502420,
+      "player_name": "Harrison Reed",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/502420/harrison-reed"
+    },
+    {
+      "player_id": 503659,
+      "player_name": "Joachim Andersen",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/503659/joachim-andersen"
+    },
+    {
+      "player_id": 540963,
+      "player_name": "Sander Berge",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/540963/sander-berge"
+    },
+    {
+      "player_id": 604785,
+      "player_name": "Alex Iwobi",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/604785/alex-iwobi"
+    },
+    {
+      "player_id": 662428,
+      "player_name": "Antonee Robinson",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/662428/antonee-robinson"
+    },
+    {
+      "player_id": 773991,
+      "player_name": "Ryan Sessegnon",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/773991/ryan-sessegnon"
+    },
+    {
+      "player_id": 821728,
+      "player_name": "Jorge Cuenca",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/821728/jorge-cuenca"
+    },
+    {
+      "player_id": 877401,
+      "player_name": "Calvin Bassey",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/877401/calvin-bassey"
+    },
+    {
+      "player_id": 889534,
+      "player_name": "Emile Smith Rowe",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/889534/emile-smith-rowe"
+    },
+    {
+      "player_id": 1113790,
+      "player_name": "Oscar Bobb",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1113790/oscar-bobb"
+    },
+    {
+      "player_id": 1128945,
+      "player_name": "Rodrigo Muniz",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1128945/rodrigo-muniz"
+    },
+    {
+      "player_id": 1199712,
+      "player_name": "Luke Harris",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1199712/luke-harris"
+    },
+    {
+      "player_id": 1318400,
+      "player_name": "Kevin",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1318400/kevin"
+    },
+    {
+      "player_id": 1403691,
+      "player_name": "César Palacios",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1403691/cesar-palacios"
+    },
+    {
+      "player_id": 1413847,
+      "player_name": "Gonzalo García",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1413847/gonzalo-garcia"
+    },
+    {
+      "player_id": 1422593,
+      "player_name": "Joshua King",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1422593/joshua-king"
+    },
+    {
+      "player_id": 1532672,
+      "player_name": "Jonah Kusi-Asare",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1532672/jonah-kusi-asare"
+    }
+  ]
+}

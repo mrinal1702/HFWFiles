@@ -1,0 +1,169 @@
+{
+  "team_name": "PSV Eindhoven",
+  "team_id": 8640,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8640/squad/psv-eindhoven",
+  "players": [
+    {
+      "player_id": 163670,
+      "player_name": "Ivan Perisic",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/163670/ivan-perisic"
+    },
+    {
+      "player_id": 243556,
+      "player_name": "Peter Bosz",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/243556/peter-bosz"
+    },
+    {
+      "player_id": 281012,
+      "player_name": "Filip Kostic",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/281012/filip-kostic"
+    },
+    {
+      "player_id": 294859,
+      "player_name": "Alassane Pléa",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/294859/alassane-plea"
+    },
+    {
+      "player_id": 772104,
+      "player_name": "Jerdy Schouten",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/772104/jerdy-schouten"
+    },
+    {
+      "player_id": 774947,
+      "player_name": "Guus Til",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/774947/guus-til"
+    },
+    {
+      "player_id": 794244,
+      "player_name": "Armando Obispo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/794244/armando-obispo"
+    },
+    {
+      "player_id": 805767,
+      "player_name": "Dennis Man",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/805767/dennis-man"
+    },
+    {
+      "player_id": 866517,
+      "player_name": "Myron Boadu",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/866517/myron-boadu"
+    },
+    {
+      "player_id": 873556,
+      "player_name": "Mauro Júnior",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/873556/mauro-junior"
+    },
+    {
+      "player_id": 881640,
+      "player_name": "Lutsharel Geertruida",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/881640/lutsharel-geertruida"
+    },
+    {
+      "player_id": 892816,
+      "player_name": "Sergiño Dest",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/892816/sergino-dest"
+    },
+    {
+      "player_id": 1035643,
+      "player_name": "Sven Mijnans",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1035643/sven-mijnans"
+    },
+    {
+      "player_id": 1036401,
+      "player_name": "Ricardo Pepi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1036401/ricardo-pepi"
+    },
+    {
+      "player_id": 1077903,
+      "player_name": "Matej Kovár",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1077903/matej-kovar"
+    },
+    {
+      "player_id": 1124533,
+      "player_name": "Kilian Sildillia",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1124533/kilian-sildillia"
+    },
+    {
+      "player_id": 1237425,
+      "player_name": "Adamo Nagalo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1237425/adamo-nagalo"
+    },
+    {
+      "player_id": 1252642,
+      "player_name": "Isaac Babadi",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1252642/isaac-babadi"
+    },
+    {
+      "player_id": 1327149,
+      "player_name": "Paul Wanner",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1327149/paul-wanner"
+    },
+    {
+      "player_id": 1337282,
+      "player_name": "Kodai Sano",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1337282/kodai-sano"
+    },
+    {
+      "player_id": 1346860,
+      "player_name": "Esmir Bajraktarevic",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1346860/esmir-bajraktarevic"
+    },
+    {
+      "player_id": 1359970,
+      "player_name": "Ruben van Bommel",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1359970/ruben-van-bommel"
+    },
+    {
+      "player_id": 1386551,
+      "player_name": "Ryan Flamingo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1386551/ryan-flamingo"
+    },
+    {
+      "player_id": 1506480,
+      "player_name": "Yarek Gasiorowski",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1506480/yarek-gasiorowski"
+    },
+    {
+      "player_id": 1552456,
+      "player_name": "Jordy Bawuah",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1552456/jordy-bawuah"
+    },
+    {
+      "player_id": 1643772,
+      "player_name": "Joël van den Berg",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1643772/joel-van-den-berg"
+    },
+    {
+      "player_id": 1689729,
+      "player_name": "Fabian Merién",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1689729/fabian-merien"
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "team_name": "Como",
+  "team_id": 10171,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/10171/squad/como",
+  "players": [
+    {
+      "player_id": 30613,
+      "player_name": "Cesc Fàbregas",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/30613/cesc-fabregas"
+    },
+    {
+      "player_id": 111741,
+      "player_name": "Mauro Vigorito",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/111741/mauro-vigorito"
+    },
+    {
+      "player_id": 213501,
+      "player_name": "Álvaro Morata",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/213501/alvaro-morata"
+    },
+    {
+      "player_id": 355356,
+      "player_name": "Marc-Oliver Kempf",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/355356/marc-oliver-kempf"
+    },
+    {
+      "player_id": 362121,
+      "player_name": "Edoardo Goldaniga",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/362121/edoardo-goldaniga"
+    },
+    {
+      "player_id": 513982,
+      "player_name": "Luca Mazzitelli",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/513982/luca-mazzitelli"
+    },
+    {
+      "player_id": 560939,
+      "player_name": "Jean Butez",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/560939/jean-butez"
+    },
+    {
+      "player_id": 566776,
+      "player_name": "Alessandro Gabrielloni",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/566776/alessandro-gabrielloni"
+    },
+    {
+      "player_id": 602845,
+      "player_name": "Emil Audero",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/602845/emil-audero"
+    },
+    {
+      "player_id": 638090,
+      "player_name": "Luis Milla",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/638090/luis-milla"
+    },
+    {
+      "player_id": 793907,
+      "player_name": "Trevoh Chalobah",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/793907/trevoh-chalobah"
+    },
+    {
+      "player_id": 822789,
+      "player_name": "Alberto Dossena",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/822789/alberto-dossena"
+    },
+    {
+      "player_id": 846000,
+      "player_name": "Maxence Caqueret",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/846000/maxence-caqueret"
+    },
+    {
+      "player_id": 873270,
+      "player_name": "Anastasios Douvikas",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/873270/anastasios-douvikas"
+    },
+    {
+      "player_id": 888745,
+      "player_name": "Nicolas-Gerrit Kühn",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/888745/nicolas-gerrit-kuhn"
+    },
+    {
+      "player_id": 1073496,
+      "player_name": "Matthias Braunöder",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1073496/matthias-braunoder"
+    },
+    {
+      "player_id": 1076647,
+      "player_name": "Lucas Da Cunha",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1076647/lucas-da-cunha"
+    },
+    {
+      "player_id": 1082597,
+      "player_name": "Ignace Van Der Brempt",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1082597/ignace-van-der-brempt"
+    },
+    {
+      "player_id": 1109171,
+      "player_name": "Yan Couto",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/1109171/yan-couto"
+    },
+    {
+      "player_id": 1122424,
+      "player_name": "Noel Törnqvist",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1122424/noel-tornqvist"
+    },
+    {
+      "player_id": 1175942,
+      "player_name": "Marlon Mustapha",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1175942/marlon-mustapha"
+    },
+    {
+      "player_id": 1203946,
+      "player_name": "Iván Azon",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1203946/ivan-azon"
+    },
+    {
+      "player_id": 1215064,
+      "player_name": "Martin Baturina",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1215064/martin-baturina"
+    },
+    {
+      "player_id": 1336582,
+      "player_name": "Máximo Perrone",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1336582/maximo-perrone"
+    },
+    {
+      "player_id": 1344550,
+      "player_name": "Willy Kambwala",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1344550/willy-kambwala"
+    },
+    {
+      "player_id": 1347241,
+      "player_name": "Jayden Addai",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1347241/jayden-addai"
+    },
+    {
+      "player_id": 1347574,
+      "player_name": "Nico Paz",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1347574/nico-paz"
+    },
+    {
+      "player_id": 1353289,
+      "player_name": "Ivan Smolcic",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1353289/ivan-smolcic"
+    },
+    {
+      "player_id": 1384881,
+      "player_name": "Álex Valle",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1384881/alex-valle"
+    },
+    {
+      "player_id": 1413963,
+      "player_name": "Jacobo Ramón",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1413963/jacobo-ramon"
+    },
+    {
+      "player_id": 1434889,
+      "player_name": "Assane Diao",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1434889/assane-diao"
+    },
+    {
+      "player_id": 1459564,
+      "player_name": "Kaiki",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1459564/kaiki"
+    },
+    {
+      "player_id": 1593861,
+      "player_name": "Mattia Liberali",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1593861/mattia-liberali"
+    },
+    {
+      "player_id": 1615459,
+      "player_name": "Adrian Lahdo",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1615459/adrian-lahdo"
+    },
+    {
+      "player_id": 1624039,
+      "player_name": "Jesús Rodríguez",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1624039/jesus-rodriguez"
+    },
+    {
+      "player_id": 1695978,
+      "player_name": "Alessio Chiesa",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1695978/alessio-chiesa"
+    },
+    {
+      "player_id": 2141204,
+      "player_name": "Adam Asfour",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/2141204/adam-asfour"
+    }
+  ]
+}

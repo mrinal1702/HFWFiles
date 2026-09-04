@@ -1,0 +1,137 @@
+{
+  "_readme": "Players in match scores but not yet in public.players. Add/remove entries as the tournament goes. After adding to Supabase via add-players-to-pool.mjs, delete the row here. New missing players are also appended when you run npm run upsert:player-scores.",
+  "players": [
+    {
+      "player_id": 1642810,
+      "player_name": "Ahmed Maknzi",
+      "team_id": 5819,
+      "team_name": "Iraq",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1642810/ahmed-maknzi",
+      "reason": "late_callup",
+      "first_seen": "2026-06-17",
+      "first_seen_match": "Iraq Norway",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 1991034,
+      "player_name": "Anas Badawi",
+      "team_id": 5816,
+      "team_name": "Jordan",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1991034/anas-badawi",
+      "reason": "late_callup",
+      "first_seen": "2026-06-17",
+      "first_seen_match": "Austria Jordan",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 861668,
+      "player_name": "Dejan Ljubicic",
+      "team_id": 8255,
+      "team_name": "Austria",
+      "position": "Midfielder",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/861668/dejan-ljubicic",
+      "reason": "late_callup",
+      "first_seen": "2026-06-17",
+      "first_seen_match": "Austria Jordan",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 1708842,
+      "player_name": "Hamza Abdelkarim",
+      "team_id": 10255,
+      "team_name": "Egypt",
+      "position": "Forward",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1708842/hamza-abdelkarim",
+      "reason": "late_callup",
+      "first_seen": "2026-06-17",
+      "first_seen_match": "Belgium Egypt",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 1715492,
+      "player_name": "Khalil Ayari",
+      "team_id": 6719,
+      "team_name": "Tunisia",
+      "position": "Midfielder",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1715492/khalil-ayari",
+      "reason": "late_callup",
+      "first_seen": "2026-06-15",
+      "first_seen_match": "Sweden Tunisia",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 676431,
+      "player_name": "Logan Rogerson",
+      "team_id": 5820,
+      "team_name": "New Zealand",
+      "position": "Forward",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/676431/logan-rogerson",
+      "reason": "late_callup",
+      "first_seen": "2026-06-22",
+      "first_seen_match": "NewZealand Egypt",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 785411,
+      "player_name": "Marcos Senesi",
+      "team_id": 6706,
+      "team_name": "Argentina",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/785411/marcos-senesi",
+      "reason": "late_callup",
+      "first_seen": "2026-06-17",
+      "first_seen_match": "Argentina Algeria",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 1902793,
+      "player_name": "Mohammad Abu Ghoush",
+      "team_id": 5816,
+      "team_name": "Jordan",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1902793/mohammad-abu-ghoush",
+      "reason": "late_callup",
+      "first_seen": "2026-06-17",
+      "first_seen_match": "Austria Jordan",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 1721242,
+      "player_name": "Raed Chikhaoui",
+      "team_id": 6719,
+      "team_name": "Tunisia",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1721242/raed-chikhaoui",
+      "reason": "late_callup",
+      "first_seen": "2026-06-15",
+      "first_seen_match": "Sweden Tunisia",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 1421621,
+      "player_name": "Ruslanbek Jiyanov",
+      "team_id": 8700,
+      "team_name": "Uzbekistan",
+      "position": "Forward",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/1421621/ruslanbek-jiyanov",
+      "reason": "late_callup",
+      "first_seen": "2026-06-18",
+      "first_seen_match": "Uzbekistan Colombia",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    },
+    {
+      "player_id": 793907,
+      "player_name": "Trevoh Chalobah",
+      "team_id": 8491,
+      "team_name": "England",
+      "position": "Defender",
+      "fotmob_url": "https://www.fotmob.com/en-GB/players/793907/trevoh-chalobah",
+      "reason": "late_callup",
+      "first_seen": "2026-06-24",
+      "first_seen_match": "England Ghana",
+      "notes": "Auto-added from upsert:player-scores (not in public.players)."
+    }
+  ]
+}

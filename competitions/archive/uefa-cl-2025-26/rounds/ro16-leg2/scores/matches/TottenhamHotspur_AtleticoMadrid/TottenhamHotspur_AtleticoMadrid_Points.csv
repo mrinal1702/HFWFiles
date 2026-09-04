@@ -1,0 +1,38 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+1173787,Xavi Simons,8586,Tottenham Hotspur,2,midfielder,60.514,-0.30000000000000027,3.0,63.214000000000006,90.0,3,2,7.0,70.214
+974753,Julián Álvarez,9906,Atlético de Madrid,3,forward,51.916666666666664,5.0,2.8,59.71666666666666,84.0,2,2,6.0,65.71666666666667
+609516,Robin Le Normand,9906,Atlético de Madrid,1,defender,47.84,3.0,3.0,53.84,90.0,2,3,-5.0,48.84
+1288111,Mathys Tel,8586,Tottenham Hotspur,3,forward,30.358333333333334,1.4,2.7,34.458333333333336,81.0,2,2,6.0,40.458333333333336
+1226147,Giuliano Simeone,9906,Atlético de Madrid,2,midfielder,25.901999999999997,3.0,2.9,31.801999999999996,87.0,2,2,5.0,36.80199999999999
+823825,Randal Kolo Muani,8586,Tottenham Hotspur,3,forward,18.975,5.0,3.0,26.975,90.0,3,2,9.0,35.975
+1323305,Archie Gray,8586,Tottenham Hotspur,2,midfielder,24.852000000000004,1.9,2.7,29.452,81.0,2,2,5.0,34.452
+789066,Cristian Romero,8586,Tottenham Hotspur,1,defender,25.680000000000003,3.0,2.7,31.380000000000003,81.0,2,2,0.0,31.380000000000003
+690516,Ademola Lookman,9906,Atlético de Madrid,2,midfielder,23.154,3.0,2.1,28.254,64.0,1,2,3.0,31.254
+1107280,Pape Sarr,8586,Tottenham Hotspur,2,midfielder,18.22,3.0,3.0,24.22,90.0,3,2,7.0,31.22
+1173678,Johnny Cardoso,9906,Atlético de Madrid,2,midfielder,16.682000000000002,3.0,3.0,22.682000000000002,90.0,2,3,3.0,25.682000000000002
+1097466,Micky van de Ven,8586,Tottenham Hotspur,1,defender,18.880000000000003,3.0,3.0,24.880000000000003,90.0,3,2,0.0,24.880000000000003
+726345,Nahuel Molina,9906,Atlético de Madrid,1,defender,17.450000000000003,3.0,2.1333333333333333,22.583333333333336,64.0,1,2,0.0,22.583333333333336
+184533,Koke,9906,Atlético de Madrid,2,midfielder,15.042000000000002,3.0,0.8666666666666667,18.90866666666667,26.0,1,1,2.5,21.40866666666667
+184138,Antoine Griezmann,9906,Atlético de Madrid,3,forward,8.25,4.1,2.8,15.149999999999999,84.0,2,2,6.0,21.15
+727897,Dávid Hancko,9906,Atlético de Madrid,1,defender,20.86,1.8,3.0,25.66,90.0,2,3,-5.0,20.66
+1051097,Matteo Ruggeri,9906,Atlético de Madrid,1,defender,18.400000000000002,1.8,3.0,23.200000000000003,90.0,2,3,-5.0,18.200000000000003
+1203661,Radu Dragusin,8586,Tottenham Hotspur,1,defender,4.82,3.0,2.2,10.02,66.0,2,1,5.0,15.02
+754126,Kevin Danso,8586,Tottenham Hotspur,1,defender,4.25,1.8,0.3,6.35,9.0,1,0,5.0,11.35
+966027,Conor Gallagher,8586,Tottenham Hotspur,2,midfielder,1.762,3.0,0.3,5.062,9.0,1,0,4.5,9.562000000000001
+894803,Djed Spence,8586,Tottenham Hotspur,1,defender,7.090000000000001,-0.5999999999999996,3.0,9.490000000000002,90.0,3,2,0.0,9.490000000000002
+602563,Marcos Llorente,9906,Atlético de Madrid,1,defender,9.950000000000001,0.6000000000000001,3.0,13.55,90.0,2,3,-5.0,8.55
+942372,Álex Baena,9906,Atlético de Madrid,2,midfielder,5.444,1.9,0.2,7.544,6.0,0,1,0.5,8.044
+1431275,Callum Olusesi,8586,Tottenham Hotspur,2,midfielder,-0.4760000000000001,3.0,0.3,2.824,9.0,1,0,4.5,7.324
+1386775,Lucas Bergvall,8586,Tottenham Hotspur,2,midfielder,2.2699999999999996,1.9,0.5333333333333333,4.703333333333333,16.0,1,1,2.5,7.203333333333333
+841672,Nicolás González,9906,Atlético de Madrid,2,midfielder,2.444,3.0,0.2,5.644,6.0,0,1,0.5,6.144
+941573,Pedro Porro,8586,Tottenham Hotspur,1,defender,-5.170000000000001,1.8,2.466666666666667,-0.9033333333333342,74.0,2,1,5.0,4.096666666666666
+488412,Clément Lenglet,9906,Atlético de Madrid,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1323897,Marc Pubill,9906,Atlético de Madrid,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1447089,Julio Díaz,9906,Atlético de Madrid,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1531854,James Rowswell,8586,Tottenham Hotspur,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+955271,Thiago Almada,9906,Atlético de Madrid,2,midfielder,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1254394,Obed Vargas,9906,Atlético de Madrid,2,midfielder,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1300529,Rio Kyerematen,8586,Tottenham Hotspur,2,midfielder,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+440330,Alexander Sørloth,9906,Atlético de Madrid,3,forward,-2.616666666666667,4.1,0.9,2.3833333333333324,26.0,1,1,0.5,2.8833333333333324
+474589,José Giménez,9906,Atlético de Madrid,1,defender,-0.71,3.0,0.1,2.39,3.0,0,1,0.0,2.39
+1052898,Destiny Udogie,8586,Tottenham Hotspur,1,defender,-1.4700000000000006,3.0,0.8,2.329999999999999,24.0,1,1,0.0,2.329999999999999

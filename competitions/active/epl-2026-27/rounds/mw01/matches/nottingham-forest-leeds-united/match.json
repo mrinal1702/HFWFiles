@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "nottingham-forest-leeds-united",
+  "fotmob_match_id": 5795367,
+  "source_url": "https://www.fotmob.com/en-GB/matches/leeds-vs-nottm-forest/2vqauu#5795367:tab=stats",
+  "home_team": "Nottingham Forest",
+  "away_team": "Leeds United",
+  "raw_json_path": "intermediates/NottinghamForest_Vs_LeedsUnited.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

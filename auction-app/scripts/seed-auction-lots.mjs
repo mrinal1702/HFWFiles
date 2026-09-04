@@ -1,7 +1,9 @@
 /**
- * Calls seed_auction_lots_for_auction using AUCTION_LAB_AUCTION_ID from .env.local (default 2).
+ * Calls seed_auction_lots_for_auction for an auction (default: AUCTION_LAB_AUCTION_ID from .env.local, else 2).
  *
- * Usage: npm run seed:auction-lots
+ * Usage:
+ *   npm run seed:auction-lots
+ *   node scripts/seed-auction-lots.mjs 3
  *
  * Run scripts/sql/seed-auction-lots-all-players.sql once in Supabase to create the RPC.
  */
@@ -38,7 +40,8 @@ async function main() {
     process.exit(1);
   }
 
-  const raw = process.env.AUCTION_LAB_AUCTION_ID;
+  const argId = process.argv[2]?.trim();
+  const raw = argId || process.env.AUCTION_LAB_AUCTION_ID;
   const auctionId = Number(raw?.trim() || 2);
   if (!Number.isFinite(auctionId) || auctionId < 1) {
     console.error("Invalid AUCTION_LAB_AUCTION_ID");

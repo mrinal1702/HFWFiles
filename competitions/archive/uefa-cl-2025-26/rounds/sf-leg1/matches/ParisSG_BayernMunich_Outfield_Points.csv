@@ -1,0 +1,38 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+194165,Harry Kane,9823,FC Bayern München,3,forward,46.90833333333333,4.1,3.0,54.00833333333333,90.0,4,5,12.0,66.00833333333333
+692984,Ousmane Dembélé,9847,Paris Saint-Germain,3,forward,39.79166666666667,5.0,3.0,47.79166666666667,90.0,5,4,15.0,62.79166666666667
+900433,Khvicha Kvaratskhelia,9847,Paris Saint-Germain,3,forward,39.54166666666667,3.2,2.8,45.54166666666667,84.0,5,4,15.0,60.54166666666667
+1339208,Désiré Doué,9847,Paris Saint-Germain,3,forward,33.625,3.2,2.3333333333333335,39.15833333333334,70.0,5,4,15.0,54.15833333333334
+860914,Luis Díaz,9823,FC Bayern München,2,midfielder,44.698,1.9,3.0,49.598,90.0,4,5,3.0,52.598
+1473580,Aleksandar Pavlovic,9823,FC Bayern München,2,midfielder,39.168000000000006,1.9,2.966666666666667,44.03466666666667,90.0,4,5,3.0,47.03466666666667
+1029063,Michael Olise,9823,FC Bayern München,2,midfielder,35.98,-0.30000000000000027,3.0,38.68,90.0,4,5,3.0,41.68
+1061249,Vitinha,9847,Paris Saint-Germain,2,midfielder,25.712,3.0,3.0,31.712,90.0,5,4,7.0,38.712
+1342757,João Neves,9847,Paris Saint-Germain,2,midfielder,25.416,3.0,3.0,31.416,90.0,5,4,7.0,38.416
+460632,Joshua Kimmich,9823,FC Bayern München,2,midfielder,22.05,3.0,3.0,28.05,90.0,4,5,3.0,31.05
+1367615,Warren Zaïre-Emery,9847,Paris Saint-Germain,2,midfielder,13.624,3.0,2.1333333333333333,18.757333333333335,64.0,5,2,11.0,29.757333333333335
+1156141,Jamal Musiala,9823,FC Bayern München,2,midfielder,19.212,1.9,2.6333333333333333,23.74533333333333,79.0,4,5,3.0,26.74533333333333
+526827,Konrad Laimer,9823,FC Bayern München,1,defender,19.56,3.0,1.5,24.06,44.0,2,2,-5.0,19.06
+658554,Dayot Upamecano,9823,FC Bayern München,1,defender,24.550000000000004,3.0,3.0,30.550000000000004,90.0,4,5,-15.0,15.550000000000004
+1574189,Senny Mayulu,9847,Paris Saint-Germain,2,midfielder,5.648,3.0,0.2,8.847999999999999,6.0,0,0,2.5,11.347999999999999
+504606,Lucas Hernández,9847,Paris Saint-Germain,1,defender,3.14,3.0,0.2,6.340000000000001,6.0,0,0,5.0,11.34
+1137670,Willian Pacho,9847,Paris Saint-Germain,1,defender,14.539999999999997,3.0,3.0,20.54,90.0,5,4,-10.0,10.54
+751202,Alphonso Davies,9823,FC Bayern München,1,defender,9.219999999999999,3.0,1.5,13.719999999999999,46.0,2,3,-5.0,8.719999999999999
+605654,Fabián Ruiz,9847,Paris Saint-Germain,2,midfielder,4.7780000000000005,1.9,0.8666666666666667,7.544666666666668,26.0,0,2,-1.5,6.044666666666668
+343748,Leon Goretzka,9823,FC Bayern München,2,midfielder,-0.3380000000000001,3.0,0.36666666666666664,3.0286666666666666,11.0,0,0,2.5,5.528666666666666
+469700,Jonathan Tah,9823,FC Bayern München,1,defender,14.45,3.0,3.0,20.45,90.0,4,5,-15.0,5.449999999999999
+1197347,Nicolas Jackson,9823,FC Bayern München,3,forward,0.16666666666666666,5.0,0.03333333333333333,5.2,0.0,0,0,0.0,5.2
+940087,Gonçalo Ramos,9847,Paris Saint-Germain,3,forward,0.0,5.0,0.0,5.0,0.0,0,0,0.0,5.0
+1593857,Ibrahim Mbaye,9847,Paris Saint-Germain,3,forward,0.0,5.0,0.0,5.0,0.0,0,0,0.0,5.0
+267365,Marquinhos,9847,Paris Saint-Germain,1,defender,7.37,3.0,3.0,13.370000000000001,90.0,5,4,-10.0,3.370000000000001
+950824,Josip Stanisic,9823,FC Bayern München,1,defender,12.290000000000003,3.0,3.0,18.290000000000003,90.0,4,5,-15.0,3.2900000000000027
+828159,Min-Jae Kim,9823,FC Bayern München,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+851626,Hiroki Ito,9823,FC Bayern München,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1140003,Ilya Zabarnyi,9847,Paris Saint-Germain,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1255209,Lucas Beraldo,9847,Paris Saint-Germain,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1845073,Deniz Ofli,9823,FC Bayern München,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1867094,Filip Pavic,9823,FC Bayern München,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+940976,Kang-In Lee,9847,Paris Saint-Germain,2,midfielder,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1682313,Dro Fernández,9847,Paris Saint-Germain,2,midfielder,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+770881,Achraf Hakimi,9847,Paris Saint-Germain,1,defender,5.639999999999998,3.0,3.0,11.639999999999997,90.0,5,4,-10.0,1.639999999999997
+1158945,Nuno Mendes,9847,Paris Saint-Germain,1,defender,2.2399999999999975,3.0,2.8,8.039999999999997,84.0,5,4,-10.0,-1.9600000000000026
+1297165,Bradley Barcola,9847,Paris Saint-Germain,3,forward,-5.225,5.0,0.6666666666666666,0.441666666666667,20.0,0,0,-2.5,-2.058333333333333

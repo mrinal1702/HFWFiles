@@ -1,0 +1,38 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+460632,Joshua Kimmich,9823,FC Bayern München,2,midfielder,56.848000000000006,3.0,3.0,62.848000000000006,90.0,4,3,7.0,69.84800000000001
+194165,Harry Kane,9823,FC Bayern München,3,forward,35.18333333333333,4.1,3.0,42.28333333333333,90.0,4,3,12.0,54.28333333333333
+701154,Kylian Mbappé,8633,Real Madrid,3,forward,36.0,5.0,3.0,44.0,90.0,3,4,9.0,53.0
+658554,Dayot Upamecano,9823,FC Bayern München,1,defender,45.25000000000001,1.8,3.0,50.050000000000004,90.0,4,3,-5.0,45.050000000000004
+1473580,Aleksandar Pavlovic,9823,FC Bayern München,2,midfielder,31.622,3.0,3.0,37.622,90.0,4,3,7.0,44.622
+1029063,Michael Olise,9823,FC Bayern München,2,midfielder,29.324,3.0,3.0,35.324,90.0,4,3,7.0,42.324
+1253890,Arda Güler,8633,Real Madrid,2,midfielder,28.494,3.0,2.966666666666667,34.46066666666667,90.0,3,3,5.0,39.46066666666667
+1077894,Jude Bellingham,8633,Real Madrid,2,midfielder,29.652,3.0,3.0,35.652,90.0,3,4,3.0,38.652
+860914,Luis Díaz,9823,FC Bayern München,2,midfielder,21.774,-1.4000000000000004,3.0,23.374000000000002,90.0,4,3,7.0,30.374000000000002
+743533,Federico Valverde,8633,Real Madrid,2,midfielder,16.529999999999998,3.0,3.0,22.529999999999998,90.0,3,4,3.0,25.529999999999998
+750027,Brahim Díaz,8633,Real Madrid,3,forward,8.941666666666666,3.2,2.0666666666666664,14.208333333333332,61.0,3,2,9.0,23.208333333333332
+844415,Éder Militao,8633,Real Madrid,1,defender,28.0,1.8,3.0,32.8,90.0,3,4,-10.0,22.799999999999997
+846033,Vinícius Júnior,8633,Real Madrid,3,forward,10.241666666666667,-0.40000000000000036,3.0,12.841666666666667,90.0,3,4,9.0,21.84166666666667
+760712,Trent Alexander-Arnold,8633,Real Madrid,1,defender,20.43,3.0,2.966666666666667,26.39666666666667,90.0,3,3,-5.0,21.39666666666667
+1156141,Jamal Musiala,9823,FC Bayern München,2,midfielder,10.1,0.7999999999999998,0.9666666666666667,11.866666666666665,29.0,2,0,6.5,18.366666666666667
+751202,Alphonso Davies,9823,FC Bayern München,1,defender,8.76,3.0,1.5,13.26,44.0,2,0,5.0,18.259999999999998
+385437,Serge Gnabry,9823,FC Bayern München,2,midfielder,6.374,1.9,2.033333333333333,10.307333333333332,61.0,2,3,3.0,13.307333333333332
+276738,Antonio Rüdiger,8633,Real Madrid,1,defender,16.7,3.0,3.0,22.7,90.0,3,4,-10.0,12.7
+1015185,Eduardo Camavinga,8633,Real Madrid,2,midfielder,7.958,3.0,0.8,11.758000000000001,29.0,0,2,-1.5,10.258000000000001
+950824,Josip Stanisic,9823,FC Bayern München,1,defender,8.73,3.0,1.5,13.23,46.0,2,3,-5.0,8.23
+1607566,Franco Mastantuono,8633,Real Madrid,3,forward,0.16666666666666666,5.0,0.03333333333333333,5.2,0.0,0,0,0.0,5.2
+1197347,Nicolas Jackson,9823,FC Bayern München,3,forward,0.0,5.0,0.0,5.0,0.0,0,0,0.0,5.0
+1413847,Gonzalo García,8633,Real Madrid,3,forward,0.0,5.0,0.0,5.0,0.0,0,0,0.0,5.0
+469700,Jonathan Tah,9823,FC Bayern München,1,defender,2.61,3.0,3.0,8.61,90.0,4,3,-5.0,3.6099999999999994
+1796908,Thiago Pitarch,8633,Real Madrid,2,midfielder,0.154,3.0,0.03333333333333333,3.187333333333333,0.0,0,0,0.0,3.187333333333333
+121633,David Alaba,8633,Real Madrid,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+282674,Daniel Carvajal,8633,Real Madrid,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+352994,Raphaël Guerreiro,9823,FC Bayern München,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+750028,Fran García,8633,Real Madrid,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+828159,Min-Jae Kim,9823,FC Bayern München,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+851626,Hiroki Ito,9823,FC Bayern München,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1190025,Alvaro Carreras,8633,Real Madrid,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1367619,Dean Huijsen,8633,Real Madrid,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+343748,Leon Goretzka,9823,FC Bayern München,2,midfielder,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+531629,Dani Ceballos,8633,Real Madrid,2,midfielder,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+623537,Ferland Mendy,8633,Real Madrid,1,defender,3.6899999999999995,1.8,3.0,8.489999999999998,90.0,3,4,-10.0,-1.5100000000000016
+526827,Konrad Laimer,9823,FC Bayern München,1,defender,-2.5300000000000002,3.0,3.0,3.4699999999999998,90.0,4,3,-5.0,-1.5300000000000002

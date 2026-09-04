@@ -1,0 +1,169 @@
+{
+  "team_name": "Inter",
+  "team_id": 8636,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8636/squad/inter",
+  "players": [
+    {
+      "player_id": 27692,
+      "player_name": "Cristian Chivu",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/27692/cristian-chivu"
+    },
+    {
+      "player_id": 73167,
+      "player_name": "Henrikh Mkhitaryan",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/73167/henrikh-mkhitaryan"
+    },
+    {
+      "player_id": 263653,
+      "player_name": "John Stones",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/263653/john-stones"
+    },
+    {
+      "player_id": 304733,
+      "player_name": "Hakan Çalhanoglu",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/304733/hakan-calhanoglu"
+    },
+    {
+      "player_id": 362212,
+      "player_name": "Piotr Zielinski",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/362212/piotr-zielinski"
+    },
+    {
+      "player_id": 364822,
+      "player_name": "Ivan Provedel",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/364822/ivan-provedel"
+    },
+    {
+      "player_id": 417743,
+      "player_name": "Raffaele Di Gennaro",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/417743/raffaele-di-gennaro"
+    },
+    {
+      "player_id": 521318,
+      "player_name": "Manuel Akanji",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/521318/manuel-akanji"
+    },
+    {
+      "player_id": 541820,
+      "player_name": "Nicolò Barella",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/541820/nicolo-barella"
+    },
+    {
+      "player_id": 605224,
+      "player_name": "Federico Dimarco",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/605224/federico-dimarco"
+    },
+    {
+      "player_id": 611223,
+      "player_name": "Benjamin Pavard",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/611223/benjamin-pavard"
+    },
+    {
+      "player_id": 621562,
+      "player_name": "Marcus Thuram",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/621562/marcus-thuram"
+    },
+    {
+      "player_id": 690230,
+      "player_name": "Lautaro Martínez",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/690230/lautaro-martinez"
+    },
+    {
+      "player_id": 772168,
+      "player_name": "Josep Martínez",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/772168/josep-martinez"
+    },
+    {
+      "player_id": 805451,
+      "player_name": "Alessandro Bastoni",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/805451/alessandro-bastoni"
+    },
+    {
+      "player_id": 889535,
+      "player_name": "Yann Aurel Bisseck",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/889535/yann-aurel-bisseck"
+    },
+    {
+      "player_id": 894803,
+      "player_name": "Djed Spence",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/894803/djed-spence"
+    },
+    {
+      "player_id": 933768,
+      "player_name": "Curtis Jones",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/933768/curtis-jones"
+    },
+    {
+      "player_id": 940829,
+      "player_name": "Carlos Augusto",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/940829/carlos-augusto"
+    },
+    {
+      "player_id": 1114635,
+      "player_name": "Luis Henrique",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/1114635/luis-henrique"
+    },
+    {
+      "player_id": 1199383,
+      "player_name": "Ange-Yoan Bonny",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1199383/ange-yoan-bonny"
+    },
+    {
+      "player_id": 1208969,
+      "player_name": "Kristjan Asllani",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1208969/kristjan-asllani"
+    },
+    {
+      "player_id": 1254297,
+      "player_name": "Andy Diouf",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/1254297/andy-diouf"
+    },
+    {
+      "player_id": 1367618,
+      "player_name": "Francesco Pio Esposito",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1367618/francesco-pio-esposito"
+    },
+    {
+      "player_id": 1382000,
+      "player_name": "Petar Sucic",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1382000/petar-sucic"
+    },
+    {
+      "player_id": 1382392,
+      "player_name": "Yanis Massolin",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1382392/yanis-massolin"
+    },
+    {
+      "player_id": 1410437,
+      "player_name": "Aleksandar Stankovic",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1410437/aleksandar-stankovic"
+    }
+  ]
+}

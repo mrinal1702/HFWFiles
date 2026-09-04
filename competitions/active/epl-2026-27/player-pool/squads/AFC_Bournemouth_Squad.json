@@ -1,0 +1,217 @@
+{
+  "team_name": "AFC Bournemouth",
+  "team_id": 8678,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8678/squad/afc-bournemouth",
+  "players": [
+    {
+      "player_id": 27493,
+      "player_name": "Marco Rose",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/27493/marco-rose"
+    },
+    {
+      "player_id": 95336,
+      "player_name": "Fraser Forster",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/95336/fraser-forster"
+    },
+    {
+      "player_id": 160447,
+      "player_name": "Adam Smith",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/160447/adam-smith"
+    },
+    {
+      "player_id": 439369,
+      "player_name": "Ryan Christie",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/439369/ryan-christie"
+    },
+    {
+      "player_id": 464486,
+      "player_name": "Enes Ünal",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/464486/enes-unal"
+    },
+    {
+      "player_id": 562724,
+      "player_name": "Lewis Cook",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/562724/lewis-cook"
+    },
+    {
+      "player_id": 674014,
+      "player_name": "David Brooks",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/674014/david-brooks"
+    },
+    {
+      "player_id": 729769,
+      "player_name": "Tyler Adams",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/729769/tyler-adams"
+    },
+    {
+      "player_id": 789630,
+      "player_name": "Marcus Tavernier",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/789630/marcus-tavernier"
+    },
+    {
+      "player_id": 794253,
+      "player_name": "Justin Kluivert",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/794253/justin-kluivert"
+    },
+    {
+      "player_id": 904021,
+      "player_name": "Romain Faivre",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/904021/romain-faivre"
+    },
+    {
+      "player_id": 956621,
+      "player_name": "Max Aarons",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/956621/max-aarons"
+    },
+    {
+      "player_id": 959407,
+      "player_name": "James Hill",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/959407/james-hill"
+    },
+    {
+      "player_id": 979752,
+      "player_name": "Bafodé Diakité",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/979752/bafode-diakite"
+    },
+    {
+      "player_id": 1027447,
+      "player_name": "Julián Araujo",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1027447/julian-araujo"
+    },
+    {
+      "player_id": 1067256,
+      "player_name": "Djordje Petrovic",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1067256/djordje-petrovic"
+    },
+    {
+      "player_id": 1079557,
+      "player_name": "Amine Adli",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1079557/amine-adli"
+    },
+    {
+      "player_id": 1096635,
+      "player_name": "Will Dennis",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1096635/will-dennis"
+    },
+    {
+      "player_id": 1098096,
+      "player_name": "Evanilson",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1098096/evanilson"
+    },
+    {
+      "player_id": 1177358,
+      "player_name": "Adrien Truffert",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1177358/adrien-truffert"
+    },
+    {
+      "player_id": 1233655,
+      "player_name": "Alex Scott",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1233655/alex-scott"
+    },
+    {
+      "player_id": 1253827,
+      "player_name": "Daniel Jebbison",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1253827/daniel-jebbison"
+    },
+    {
+      "player_id": 1292092,
+      "player_name": "António Silva",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1292092/antonio-silva"
+    },
+    {
+      "player_id": 1324871,
+      "player_name": "Ben Gannon-Doak",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1324871/ben-gannon-doak"
+    },
+    {
+      "player_id": 1327406,
+      "player_name": "Álvaro Rodriguez",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1327406/alvaro-rodriguez"
+    },
+    {
+      "player_id": 1347568,
+      "player_name": "Matai Akinmboni",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1347568/matai-akinmboni"
+    },
+    {
+      "player_id": 1358655,
+      "player_name": "Julio Soler",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1358655/julio-soler"
+    },
+    {
+      "player_id": 1449690,
+      "player_name": "Alex Tóth",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1449690/alex-toth"
+    },
+    {
+      "player_id": 1460534,
+      "player_name": "Junior Kroupi",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1460534/junior-kroupi"
+    },
+    {
+      "player_id": 1478295,
+      "player_name": "Rayan",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1478295/rayan"
+    },
+    {
+      "player_id": 1666977,
+      "player_name": "Veljko Milosavljevic",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1666977/veljko-milosavljevic"
+    },
+    {
+      "player_id": 1697214,
+      "player_name": "Ben Winterburn",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1697214/ben-winterburn"
+    },
+    {
+      "player_id": 1699539,
+      "player_name": "Jonny Stuttle",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1699539/jonny-stuttle"
+    },
+    {
+      "player_id": 1702426,
+      "player_name": "Remy Rees-Dottin",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1702426/remy-rees-dottin"
+    },
+    {
+      "player_id": 1896299,
+      "player_name": "Charlie Stevens",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1896299/charlie-stevens"
+    }
+  ]
+}

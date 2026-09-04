@@ -1,0 +1,49 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Lionel Messi,30981,Argentina,forward,56.05,6.0,0.0,62
+Facundo Medina,812652,Argentina,defender,37.083333333333336,10.0,0.0,47
+Lisandro Martínez,847983,Argentina,defender,34.11,10.0,0.0,44
+Enzo Fernández,1137705,Argentina,midfielder,30.131999999999994,9.0,0.0,39
+Nicolas Seiwald,1024672,Austria,midfielder,37.066,1.0,0.0,38
+Cristian Romero,789066,Argentina,defender,24.919999999999998,10.0,0.0,35
+Alexis Mac Allister,831489,Argentina,midfielder,25.008000000000003,9.0,0.0,34
+Nahuel Molina,726345,Argentina,defender,23.620000000000005,10.0,0.0,34
+David Alaba,121633,Austria,defender,28.21333333333333,5.0,0.0,33
+Kevin Danso,754126,Austria,defender,26.590000000000003,0.0,0.0,27
+Rodrigo De Paul,324578,Argentina,midfielder,17.059333333333335,7.0,0.0,24
+Thiago Almada,955271,Argentina,midfielder,17.015333333333334,7.0,0.0,24
+Nicolás Otamendi,174321,Argentina,defender,16.73,5.0,0.0,22
+Lautaro Martínez,690230,Argentina,forward,18.575,3.0,0.0,22
+Romano Schmid,749488,Austria,midfielder,17.986,3.0,0.0,21
+Marcel Sabitzer,215151,Austria,midfielder,19.71,1.0,0.0,21
+Xaver Schlager,620027,Austria,midfielder,15.764,1.0,0.0,17
+Michael Gregoritsch,198316,Austria,forward,15.133333333333333,0.0,0.0,15
+Paul Wanner,1327149,Austria,midfielder,11.950666666666667,3.0,0.0,15
+Konrad Laimer,526827,Austria,defender,14.100000000000001,0.0,0.0,14
+Nicolás González,841672,Argentina,midfielder,9.059333333333333,4.5,0.0,14
+Stefan Posch,557325,Austria,defender,8.226666666666667,5.0,0.0,13
+Nicolás Tagliafico,195750,Argentina,defender,7.876666666666667,5.0,0.0,13
+Julián Álvarez,974753,Argentina,forward,10.275,0.5,0.0,11
+Leandro Paredes,237606,Argentina,midfielder,3.6386666666666665,4.5,0.0,8
+Alexander Prass,1027194,Austria,midfielder,7.625333333333333,0.5,0.0,8
+Patrick Wimmer,1073498,Austria,forward,10.1,-2.5,0.0,8
+Marco Friedl,767789,Austria,defender,7.246666666666666,0.0,0.0,7
+Carney Chukwuemeka,1089685,Austria,midfielder,4.0906666666666665,0.5,0.0,5
+Marko Arnautovic,110148,Austria,forward,6.066666666666666,-2.5,0.0,4
+Philipp Lienhart,643724,Austria,defender,0.0,0.0,0.0,0
+Gonzalo Montiel,687008,Argentina,defender,0.0,0.0,0.0,0
+Marcos Senesi,785411,Argentina,defender,0.0,0.0,0.0,0
+Michael Svoboda,951921,Austria,defender,0.0,0.0,0.0,0
+David Affengruber,1073980,Austria,defender,0.0,0.0,0.0,0
+Phillipp Mwene,423812,Austria,midfielder,0.0,0.0,0.0,0
+Alessandro Schöpf,461357,Austria,midfielder,0.0,0.0,0.0,0
+Giovani Lo Celso,604126,Argentina,midfielder,0.0,0.0,0.0,0
+Florian Grillitsch,617044,Austria,midfielder,0.0,0.0,0.0,0
+Exequiel Palacios,693599,Argentina,midfielder,0.0,0.0,0.0,0
+Dejan Ljubicic,861668,Austria,midfielder,0.0,0.0,0.0,0
+Giuliano Simeone,1226147,Argentina,midfielder,0.0,0.0,0.0,0
+Valentín Barco,1272440,Argentina,midfielder,0.0,0.0,0.0,0
+Nico Paz,1347574,Argentina,midfielder,0.0,0.0,0.0,0
+Sasa Kalajdzic,858198,Austria,forward,0.0,0.0,0.0,0
+José López,1216079,Argentina,forward,0.0,0.0,0.0,0
+Argentina Keepers,6706,Argentina,goalkeeper,13.28,18.0,0.0,31
+Austria Keepers,8255,Austria,goalkeeper,13.46,6.0,0.0,19

@@ -75,7 +75,7 @@ export function PlayingAsTeamName({ auctionId, participantName, teamName }: Prop
             onClick={(e) => e.stopPropagation()}
           >
             <h2 id="team-name-dialog-title" className="text-lg font-semibold text-slate-900">
-              Enter your team name
+              Enter your team name for this auction
             </h2>
             <p className="mt-1 text-sm text-slate-600">
               Shown on the leaderboard and here in the header. Leave blank to use your name (

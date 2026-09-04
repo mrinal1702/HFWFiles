@@ -1,0 +1,163 @@
+{
+  "team_name": "Everton",
+  "team_id": 8668,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8668/squad/everton",
+  "players": [
+    {
+      "player_id": 78626,
+      "player_name": "David Moyes",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/78626/david-moyes"
+    },
+    {
+      "player_id": 243138,
+      "player_name": "James Tarkowski",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/243138/james-tarkowski"
+    },
+    {
+      "player_id": 266520,
+      "player_name": "Christian Nørgaard",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/266520/christian-norgaard"
+    },
+    {
+      "player_id": 290410,
+      "player_name": "Michael Keane",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/290410/michael-keane"
+    },
+    {
+      "player_id": 303919,
+      "player_name": "Jordan Pickford",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/303919/jordan-pickford"
+    },
+    {
+      "player_id": 581530,
+      "player_name": "Tom King",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/581530/tom-king"
+    },
+    {
+      "player_id": 731855,
+      "player_name": "Mark Travers",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/731855/mark-travers"
+    },
+    {
+      "player_id": 874025,
+      "player_name": "Vitaliy Mykolenko",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/874025/vitaliy-mykolenko"
+    },
+    {
+      "player_id": 886016,
+      "player_name": "Kiernan Dewsbury-Hall",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/886016/kiernan-dewsbury-hall"
+    },
+    {
+      "player_id": 939542,
+      "player_name": "Dwight McNeil",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/939542/dwight-mcneil"
+    },
+    {
+      "player_id": 950474,
+      "player_name": "James Garner",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/950474/james-garner"
+    },
+    {
+      "player_id": 965764,
+      "player_name": "Iliman Ndiaye",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/965764/iliman-ndiaye"
+    },
+    {
+      "player_id": 982394,
+      "player_name": "Hayden Hackney",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/982394/hayden-hackney"
+    },
+    {
+      "player_id": 1030829,
+      "player_name": "Jarrad Branthwaite",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1030829/jarrad-branthwaite"
+    },
+    {
+      "player_id": 1079485,
+      "player_name": "Beto",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1079485/beto"
+    },
+    {
+      "player_id": 1098607,
+      "player_name": "Jake O'Brien",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1098607/jake-obrien"
+    },
+    {
+      "player_id": 1112684,
+      "player_name": "Nathan Patterson",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1112684/nathan-patterson"
+    },
+    {
+      "player_id": 1128965,
+      "player_name": "Charly Alcaraz",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1128965/charly-alcaraz"
+    },
+    {
+      "player_id": 1203512,
+      "player_name": "Tim Iroegbunam",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1203512/tim-iroegbunam"
+    },
+    {
+      "player_id": 1210384,
+      "player_name": "Merlin Röhl",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1210384/merlin-rohl"
+    },
+    {
+      "player_id": 1292833,
+      "player_name": "Tyler Dibling",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1292833/tyler-dibling"
+    },
+    {
+      "player_id": 1306239,
+      "player_name": "Elijah Campbell",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1306239/elijah-campbell"
+    },
+    {
+      "player_id": 1398392,
+      "player_name": "Thierno Barry",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1398392/thierno-barry"
+    },
+    {
+      "player_id": 1424875,
+      "player_name": "Tyrique George",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1424875/tyrique-george"
+    },
+    {
+      "player_id": 1559637,
+      "player_name": "Harrison Armstrong",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1559637/harrison-armstrong"
+    },
+    {
+      "player_id": 1573563,
+      "player_name": "Adam Aznou",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1573563/adam-aznou"
+    }
+  ]
+}

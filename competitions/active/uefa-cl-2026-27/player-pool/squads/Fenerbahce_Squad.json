@@ -1,0 +1,229 @@
+{
+  "team_name": "Fenerbahce",
+  "team_id": 8695,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8695/squad/fenerbahce",
+  "players": [
+    {
+      "player_id": 150372,
+      "player_name": "Mert Günok",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/150372/mert-gunok"
+    },
+    {
+      "player_id": 181276,
+      "player_name": "Romelu Lukaku",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/181276/romelu-lukaku"
+    },
+    {
+      "player_id": 309328,
+      "player_name": "Milan Skriniar",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/309328/milan-skriniar"
+    },
+    {
+      "player_id": 316544,
+      "player_name": "Irfan Kahveci",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/316544/irfan-kahveci"
+    },
+    {
+      "player_id": 319300,
+      "player_name": "N'Golo Kanté",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/319300/ngolo-kante"
+    },
+    {
+      "player_id": 363364,
+      "player_name": "Ederson",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/363364/ederson"
+    },
+    {
+      "player_id": 417068,
+      "player_name": "Nathan Aké",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/417068/nathan-ake"
+    },
+    {
+      "player_id": 450011,
+      "player_name": "Talisca",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/450011/talisca"
+    },
+    {
+      "player_id": 470834,
+      "player_name": "Nélson Semedo",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/470834/nelson-semedo"
+    },
+    {
+      "player_id": 498033,
+      "player_name": "Marco Asensio",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/498033/marco-asensio"
+    },
+    {
+      "player_id": 517052,
+      "player_name": "Vedat Muriqi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/517052/vedat-muriqi"
+    },
+    {
+      "player_id": 570434,
+      "player_name": "Diego Carlos",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/570434/diego-carlos"
+    },
+    {
+      "player_id": 574952,
+      "player_name": "Ismail Kartal",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/574952/ismail-kartal"
+    },
+    {
+      "player_id": 593116,
+      "player_name": "Sofyan Amrabat",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/593116/sofyan-amrabat"
+    },
+    {
+      "player_id": 602261,
+      "player_name": "Caglar Söyüncü",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/602261/caglar-soyuncu"
+    },
+    {
+      "player_id": 603477,
+      "player_name": "Cengiz Ünder",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/603477/cengiz-under"
+    },
+    {
+      "player_id": 796006,
+      "player_name": "Mert Hakan Yandas",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/796006/mert-hakan-yandas"
+    },
+    {
+      "player_id": 800609,
+      "player_name": "Mattéo Guendouzi",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/800609/matteo-guendouzi"
+    },
+    {
+      "player_id": 844504,
+      "player_name": "Rodrigo Becão",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/844504/rodrigo-becao"
+    },
+    {
+      "player_id": 903995,
+      "player_name": "Tarik Çetin",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/903995/tarik-cetin"
+    },
+    {
+      "player_id": 904098,
+      "player_name": "Mert Müldür",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/904098/mert-muldur"
+    },
+    {
+      "player_id": 950473,
+      "player_name": "Mason Greenwood",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/950473/mason-greenwood"
+    },
+    {
+      "player_id": 1080172,
+      "player_name": "Levent Mercan",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1080172/levent-mercan"
+    },
+    {
+      "player_id": 1092015,
+      "player_name": "Oguz Aydin",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1092015/oguz-aydin"
+    },
+    {
+      "player_id": 1111753,
+      "player_name": "Emre Demir",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1111753/emre-demir"
+    },
+    {
+      "player_id": 1113704,
+      "player_name": "Archie Brown",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1113704/archie-brown"
+    },
+    {
+      "player_id": 1117570,
+      "player_name": "Kerem Aktürkoglu",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1117570/kerem-akturkoglu"
+    },
+    {
+      "player_id": 1174351,
+      "player_name": "Jayden Oosterwolde",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1174351/jayden-oosterwolde"
+    },
+    {
+      "player_id": 1183589,
+      "player_name": "Ismail Yüksek",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1183589/ismail-yuksek"
+    },
+    {
+      "player_id": 1216728,
+      "player_name": "Bartug Elmaz",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1216728/bartug-elmaz"
+    },
+    {
+      "player_id": 1230287,
+      "player_name": "Dorgeles Nene",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1230287/dorgeles-nene"
+    },
+    {
+      "player_id": 1414040,
+      "player_name": "Yigit Efe Demir",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1414040/yigit-efe-demir"
+    },
+    {
+      "player_id": 1537000,
+      "player_name": "Amara Diouf",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1537000/amara-diouf"
+    },
+    {
+      "player_id": 1666975,
+      "player_name": "Ognjen Mimovic",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1666975/ognjen-mimovic"
+    },
+    {
+      "player_id": 1797492,
+      "player_name": "Abdou Fall",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1797492/abdou-aziz-fall"
+    },
+    {
+      "player_id": 2093040,
+      "player_name": "Adem Yesilyurt",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/2093040/adem-yesilyurt"
+    },
+    {
+      "player_id": 2133064,
+      "player_name": "Kuzey Sapaz",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/2133064/kuzey-sapaz"
+    }
+  ]
+}

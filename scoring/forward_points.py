@@ -31,6 +31,7 @@ class ForwardWeights(TypedDict, total=False):
     accurate_passes: float
     inaccurate_passes: float
     chances_created: float
+    passes_into_final_third: float
 
     dribbles_won: float
     dribbles_lost: float
@@ -79,9 +80,10 @@ FORWARDS_WEIGHTS: ForwardWeights = {
     "errors_led_to_goal": -3.0,
 
     # Passing / creation
-    "accurate_passes": 1.0 / 6.0,  # ~= 0.16
-    "inaccurate_passes": -0.125,
+    "accurate_passes": 0.130,
+    "inaccurate_passes": -0.11,
     "chances_created": 3.25,
+    "passes_into_final_third": 0.30,
 
     # Take-ons
     "dribbles_won": 3.0,
@@ -139,6 +141,7 @@ FORWARDS_STAT_KEYS: dict[str, str] = {
     "accurate_passes": "accurate_passes",
     "inaccurate_passes": "inaccurate_passes",
     "chances_created": "chances_created",
+    "passes_into_final_third": "passes_into_final_third",
 
     "dribbles_won": "dribbles_successful",
     "dribbles_lost": "dribbles_failed",
@@ -166,7 +169,7 @@ FORWARDS_STAT_KEYS: dict[str, str] = {
 
 
 FORWARDS_SCORING: dict[str, Any] = {
-    "version": "0.1",
+    "version": "0.2",
     "role": "forward",
     "weights": FORWARDS_WEIGHTS,
     "formulas": FORWARDS_FORMULAS,
@@ -178,6 +181,7 @@ FORWARDS_SCORING: dict[str, Any] = {
     },
     "notes": (
         "Clearances apply to `clearances_total` (clearances + headed_clearance) once. "
+        "Accurate passes 0.130; inaccurate -0.11; passes_into_final_third 0.30. "
         "tackles_lost: -1.0 per dribbled_past (column tackles_lost). "
         "dribbles_lost: -1.0 per dribbles_failed. No separate dribbled_past weight. "
         "Woodwork uses the per-player `woodwork` column (only present when the JSON provides it). "

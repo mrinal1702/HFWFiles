@@ -1,0 +1,144 @@
+{
+  "auctions": [
+    {
+      "id": 7,
+      "name": "HFW WC Fantasy Auction 3 Online",
+      "is_active": true,
+      "hard_deadline_at": "2026-07-15T17:30:00+00:00",
+      "join_code": "ZQ43JMTT",
+      "max_participants": 12,
+      "initiation_deadline_at": null,
+      "raise_deadline_at": null,
+      "transfers_require_admin_approval": true,
+      "transfer_window_open": false,
+      "bidding_deadline_mode": "nation_rolling",
+      "rolling_game_week_id": 7
+    },
+    {
+      "id": 5,
+      "name": "HFW WC 2026 Auction 1 Online",
+      "is_active": true,
+      "hard_deadline_at": "2026-07-15T17:30:00+00:00",
+      "join_code": null,
+      "max_participants": 16,
+      "initiation_deadline_at": null,
+      "raise_deadline_at": null,
+      "transfers_require_admin_approval": true,
+      "transfer_window_open": false,
+      "bidding_deadline_mode": "nation_rolling",
+      "rolling_game_week_id": 7
+    },
+    {
+      "id": 6,
+      "name": "HFW WC 2026 Auction 2 Online",
+      "is_active": true,
+      "hard_deadline_at": "2026-07-15T17:30:00+00:00",
+      "join_code": null,
+      "max_participants": 15,
+      "initiation_deadline_at": null,
+      "raise_deadline_at": null,
+      "transfers_require_admin_approval": true,
+      "transfer_window_open": false,
+      "bidding_deadline_mode": "nation_rolling",
+      "rolling_game_week_id": 7
+    }
+  ],
+  "nation_deadlines": [
+    {
+      "auction_id": 7,
+      "team_name": "France",
+      "kickoff_at": "2026-07-14T19:00:00+00:00",
+      "raise_deadline_at": "2026-07-14T16:30:00+00:00",
+      "hard_deadline_at": "2026-07-14T17:30:00+00:00",
+      "locked_at": "2026-07-14T17:30:00.056191+00:00"
+    },
+    {
+      "auction_id": 7,
+      "team_name": "Spain",
+      "kickoff_at": "2026-07-14T19:00:00+00:00",
+      "raise_deadline_at": "2026-07-14T16:30:00+00:00",
+      "hard_deadline_at": "2026-07-14T17:30:00+00:00",
+      "locked_at": "2026-07-14T17:30:00.120357+00:00"
+    },
+    {
+      "auction_id": 5,
+      "team_name": "France",
+      "kickoff_at": "2026-07-14T19:00:00+00:00",
+      "raise_deadline_at": "2026-07-14T16:30:00+00:00",
+      "hard_deadline_at": "2026-07-14T17:30:00+00:00",
+      "locked_at": "2026-07-14T17:30:02.898325+00:00"
+    },
+    {
+      "auction_id": 5,
+      "team_name": "Spain",
+      "kickoff_at": "2026-07-14T19:00:00+00:00",
+      "raise_deadline_at": "2026-07-14T16:30:00+00:00",
+      "hard_deadline_at": "2026-07-14T17:30:00+00:00",
+      "locked_at": "2026-07-14T17:30:02.904098+00:00"
+    },
+    {
+      "auction_id": 6,
+      "team_name": "France",
+      "kickoff_at": "2026-07-14T19:00:00+00:00",
+      "raise_deadline_at": "2026-07-14T16:30:00+00:00",
+      "hard_deadline_at": "2026-07-14T17:30:00+00:00",
+      "locked_at": "2026-07-14T17:33:21.948196+00:00"
+    },
+    {
+      "auction_id": 6,
+      "team_name": "Spain",
+      "kickoff_at": "2026-07-14T19:00:00+00:00",
+      "raise_deadline_at": "2026-07-14T16:30:00+00:00",
+      "hard_deadline_at": "2026-07-14T17:30:00+00:00",
+      "locked_at": "2026-07-14T17:33:21.954485+00:00"
+    },
+    {
+      "auction_id": 7,
+      "team_name": "Argentina",
+      "kickoff_at": "2026-07-15T19:00:00+00:00",
+      "raise_deadline_at": "2026-07-15T16:30:00+00:00",
+      "hard_deadline_at": "2026-07-15T17:30:00+00:00",
+      "locked_at": "2026-07-15T17:30:03.337884+00:00"
+    },
+    {
+      "auction_id": 7,
+      "team_name": "England",
+      "kickoff_at": "2026-07-15T19:00:00+00:00",
+      "raise_deadline_at": "2026-07-15T16:30:00+00:00",
+      "hard_deadline_at": "2026-07-15T17:30:00+00:00",
+      "locked_at": "2026-07-15T17:30:03.343493+00:00"
+    },
+    {
+      "auction_id": 5,
+      "team_name": "Argentina",
+      "kickoff_at": "2026-07-15T19:00:00+00:00",
+      "raise_deadline_at": "2026-07-15T16:30:00+00:00",
+      "hard_deadline_at": "2026-07-15T17:30:00+00:00",
+      "locked_at": "2026-07-15T17:33:42.983106+00:00"
+    },
+    {
+      "auction_id": 5,
+      "team_name": "England",
+      "kickoff_at": "2026-07-15T19:00:00+00:00",
+      "raise_deadline_at": "2026-07-15T16:30:00+00:00",
+      "hard_deadline_at": "2026-07-15T17:30:00+00:00",
+      "locked_at": "2026-07-15T17:33:42.989262+00:00"
+    },
+    {
+      "auction_id": 6,
+      "team_name": "Argentina",
+      "kickoff_at": "2026-07-15T19:00:00+00:00",
+      "raise_deadline_at": "2026-07-15T16:30:00+00:00",
+      "hard_deadline_at": "2026-07-15T17:30:00+00:00",
+      "locked_at": "2026-07-15T17:50:50.762903+00:00"
+    },
+    {
+      "auction_id": 6,
+      "team_name": "England",
+      "kickoff_at": "2026-07-15T19:00:00+00:00",
+      "raise_deadline_at": "2026-07-15T16:30:00+00:00",
+      "hard_deadline_at": "2026-07-15T17:30:00+00:00",
+      "locked_at": "2026-07-15T17:50:50.769082+00:00"
+    }
+  ]
+}

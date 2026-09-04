@@ -1,0 +1,187 @@
+{
+  "team_name": "Newcastle United",
+  "team_id": 10261,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/10261/squad/newcastle-united",
+  "players": [
+    {
+      "player_id": 59582,
+      "player_name": "Matthias Jaissle",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/59582/matthias-jaissle"
+    },
+    {
+      "player_id": 188058,
+      "player_name": "Daniel Burn",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/188058/daniel-burn"
+    },
+    {
+      "player_id": 189982,
+      "player_name": "Fabian Schär",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/189982/fabian-schar"
+    },
+    {
+      "player_id": 195668,
+      "player_name": "Mark Gillespie",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/195668/mark-gillespie"
+    },
+    {
+      "player_id": 280484,
+      "player_name": "Nick Pope",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/280484/nick-pope"
+    },
+    {
+      "player_id": 304355,
+      "player_name": "Odysseas Vlachodimos",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/304355/odysseas-vlachodimos"
+    },
+    {
+      "player_id": 521148,
+      "player_name": "Jacob Murphy",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/521148/jacob-murphy"
+    },
+    {
+      "player_id": 535936,
+      "player_name": "Joelinton",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/535936/joelinton"
+    },
+    {
+      "player_id": 666857,
+      "player_name": "Yoane Wissa",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/666857/yoane-wissa"
+    },
+    {
+      "player_id": 760359,
+      "player_name": "Harvey Barnes",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/760359/harvey-barnes"
+    },
+    {
+      "player_id": 860975,
+      "player_name": "Joseph Willock",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/860975/joseph-willock"
+    },
+    {
+      "player_id": 956682,
+      "player_name": "Sven Botman",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/956682/sven-botman"
+    },
+    {
+      "player_id": 1021929,
+      "player_name": "Jacob Ramsey",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1021929/jacob-ramsey"
+    },
+    {
+      "player_id": 1050166,
+      "player_name": "Anthony Elanga",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1050166/anthony-elanga"
+    },
+    {
+      "player_id": 1106563,
+      "player_name": "Nick Woltemade",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1106563/nick-woltemade"
+    },
+    {
+      "player_id": 1107910,
+      "player_name": "Valentino Livramento",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1107910/valentino-livramento"
+    },
+    {
+      "player_id": 1137407,
+      "player_name": "Malick Thiaw",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1137407/malick-thiaw"
+    },
+    {
+      "player_id": 1186978,
+      "player_name": "Lukás Hornícek",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1186978/lukas-hornicek"
+    },
+    {
+      "player_id": 1197655,
+      "player_name": "Lewis Hall",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1197655/lewis-hall"
+    },
+    {
+      "player_id": 1258092,
+      "player_name": "William Osula",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1258092/william-osula"
+    },
+    {
+      "player_id": 1296763,
+      "player_name": "Lewis Miley",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1296763/lewis-miley"
+    },
+    {
+      "player_id": 1362341,
+      "player_name": "Alex Murphy",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1362341/alex-murphy"
+    },
+    {
+      "player_id": 1414761,
+      "player_name": "Leo Shahar",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1414761/leo-shahar"
+    },
+    {
+      "player_id": 1418100,
+      "player_name": "Alfie Harrison",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1418100/alfie-harrison"
+    },
+    {
+      "player_id": 1438570,
+      "player_name": "Ewen Jaouen",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1438570/ewen-jaouen"
+    },
+    {
+      "player_id": 1443841,
+      "player_name": "Sean Neave",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1443841/sean-neave"
+    },
+    {
+      "player_id": 1624586,
+      "player_name": "Bazoumana Touré",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1624586/bazoumana-toure"
+    },
+    {
+      "player_id": 1643770,
+      "player_name": "Sean Steur",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1643770/sean-steur"
+    },
+    {
+      "player_id": 1654534,
+      "player_name": "Antoñito Cordero",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/1654534/antonito-cordero"
+    },
+    {
+      "player_id": 1695681,
+      "player_name": "Aladji Bamba",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1695681/aladji-bamba"
+    }
+  ]
+}

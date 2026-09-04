@@ -1,0 +1,37 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+1342757,João Neves,9847,Paris Saint-Germain,2,midfielder,34.538000000000004,3.0,3.0,40.538000000000004,90.0,2,0,9.0,49.538000000000004
+692984,Ousmane Dembélé,9847,Paris Saint-Germain,3,forward,30.516666666666662,5.0,2.933333333333333,38.449999999999996,88.0,2,0,6.0,44.449999999999996
+900433,Khvicha Kvaratskhelia,9847,Paris Saint-Germain,3,forward,29.858333333333334,5.0,3.0,37.858333333333334,90.0,2,0,6.0,43.858333333333334
+1061249,Vitinha,9847,Paris Saint-Germain,2,midfielder,23.772,1.9,3.0,28.671999999999997,90.0,2,0,9.0,37.672
+1137670,Willian Pacho,9847,Paris Saint-Germain,1,defender,21.58,3.0,3.0,27.58,90.0,2,0,10.0,37.58
+1339208,Désiré Doué,9847,Paris Saint-Germain,3,forward,25.35,3.2,2.6,31.150000000000002,78.0,2,0,6.0,37.150000000000006
+1158945,Nuno Mendes,9847,Paris Saint-Germain,1,defender,18.59,3.0,3.0,24.59,90.0,2,0,10.0,34.59
+1367615,Warren Zaïre-Emery,9847,Paris Saint-Germain,2,midfielder,18.76,1.9,3.0,23.66,90.0,2,0,9.0,32.66
+267365,Marquinhos,9847,Paris Saint-Germain,1,defender,14.92,3.0,3.0,20.92,90.0,2,0,10.0,30.92
+1152455,Florian Wirtz,8650,Liverpool,3,forward,19.583333333333336,3.2,2.6,25.383333333333336,78.0,0,2,0.0,25.383333333333336
+770881,Achraf Hakimi,9847,Paris Saint-Germain,1,defender,7.079999999999998,3.0,3.0,13.079999999999998,90.0,2,0,10.0,23.08
+956683,Ryan Gravenberch,8650,Liverpool,2,midfielder,15.145999999999999,3.0,3.0,21.146,90.0,0,2,1.0,22.146
+820140,Ibrahima Konaté,8650,Liverpool,1,defender,13.110000000000001,3.0,3.0,19.11,90.0,0,2,0.0,19.11
+1195281,Milos Kerkez,8650,Liverpool,1,defender,11.239999999999998,3.0,2.6,16.84,78.0,0,2,0.0,16.84
+209405,Virgil van Dijk,8650,Liverpool,1,defender,10.74,3.0,3.0,16.740000000000002,90.0,0,2,0.0,16.740000000000002
+940976,Kang-In Lee,9847,Paris Saint-Germain,2,midfielder,9.030000000000001,3.0,0.4,12.430000000000001,12.0,0,0,2.5,14.930000000000001
+846005,Dominik Szoboszlai,8650,Liverpool,2,midfielder,5.390000000000001,1.9,2.6,9.89,79.0,0,2,1.0,10.89
+1197030,Hugo Ekitiké,8650,Liverpool,3,forward,4.441666666666667,3.2,2.6,10.241666666666667,79.0,0,2,0.0,10.241666666666667
+831489,Alexis Mac Allister,8650,Liverpool,2,midfielder,3.936000000000001,1.9,3.0,8.836,90.0,0,2,1.0,9.836
+933768,Curtis Jones,8650,Liverpool,2,midfielder,3.27,3.0,0.4,6.67,11.0,0,0,2.5,9.17
+357880,Andrew Robertson,8650,Liverpool,1,defender,0.18,3.0,0.4,3.58,12.0,0,0,5.0,8.58
+504606,Lucas Hernández,9847,Paris Saint-Germain,1,defender,-0.11,3.0,0.06666666666666667,2.956666666666667,2.0,0,0,5.0,7.956666666666667
+966018,Jeremie Frimpong,8650,Liverpool,1,defender,0.06000000000000005,3.0,2.966666666666667,6.026666666666667,90.0,0,2,0.0,6.026666666666667
+568571,Joseph Gomez,8650,Liverpool,1,defender,-0.7600000000000006,3.0,3.0,5.239999999999999,90.0,0,2,0.0,5.239999999999999
+292462,Mohamed Salah,8650,Liverpool,3,forward,0.0,5.0,0.0,5.0,0.0,0,0,0.0,5.0
+784510,Federico Chiesa,8650,Liverpool,3,forward,0.0,5.0,0.0,5.0,0.0,0,0,0.0,5.0
+940087,Gonçalo Ramos,9847,Paris Saint-Germain,3,forward,0.0,5.0,0.0,5.0,0.0,0,0,0.0,5.0
+1593857,Ibrahim Mbaye,9847,Paris Saint-Germain,3,forward,0.0,5.0,0.0,5.0,0.0,0,0,0.0,5.0
+1597668,Rio Ngumoha,8650,Liverpool,3,forward,0.0,5.0,0.0,5.0,0.0,0,0,0.0,5.0
+1436258,Trey Nyoni,8650,Liverpool,2,midfielder,0.0,3.0,0.03333333333333333,3.033333333333333,0.0,0,0,0.0,3.033333333333333
+1140003,Ilya Zabarnyi,9847,Paris Saint-Germain,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1255209,Lucas Beraldo,9847,Paris Saint-Germain,1,defender,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1574189,Senny Mayulu,9847,Paris Saint-Germain,2,midfielder,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+1682313,Dro Fernández,9847,Paris Saint-Germain,2,midfielder,0.0,3.0,0.0,3.0,0.0,0,0,0.0,3.0
+806552,Cody Gakpo,8650,Liverpool,3,forward,-1.5,5.0,0.4,3.9,12.0,0,0,-2.5,1.4
+690107,Alexander Isak,8650,Liverpool,3,forward,-0.8333333333333334,4.1,0.4,3.666666666666666,11.0,0,0,-2.5,1.166666666666666

@@ -1,0 +1,241 @@
+{
+  "team_name": "Feyenoord",
+  "team_id": 10235,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/10235/squad/feyenoord",
+  "players": [
+    {
+      "player_id": 30654,
+      "player_name": "Giovanni van Bronckhorst",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/30654/giovanni-van-bronckhorst"
+    },
+    {
+      "player_id": 445926,
+      "player_name": "Liam Bossin",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/445926/liam-bossin"
+    },
+    {
+      "player_id": 611831,
+      "player_name": "Jeremiah St. Juste",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/611831/jeremiah-st-juste"
+    },
+    {
+      "player_id": 630494,
+      "player_name": "Mats Deijl",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/630494/mats-deijl"
+    },
+    {
+      "player_id": 643771,
+      "player_name": "Jordan Lotomba",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/643771/jordan-lotomba"
+    },
+    {
+      "player_id": 680011,
+      "player_name": "Bart Nieuwkoop",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/680011/bart-nieuwkoop"
+    },
+    {
+      "player_id": 688297,
+      "player_name": "Luka Ivanusec",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/688297/luka-ivanusec"
+    },
+    {
+      "player_id": 883503,
+      "player_name": "Gijs Smal",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/883503/gijs-smal"
+    },
+    {
+      "player_id": 891855,
+      "player_name": "Jakub Moder",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/891855/jakub-moder"
+    },
+    {
+      "player_id": 942393,
+      "player_name": "Ayase Ueda",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/942393/ayase-ueda"
+    },
+    {
+      "player_id": 947898,
+      "player_name": "Sem Steijn",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/947898/sem-steijn"
+    },
+    {
+      "player_id": 952057,
+      "player_name": "Charles Vanhoutte",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/952057/charles-vanhoutte"
+    },
+    {
+      "player_id": 1023887,
+      "player_name": "Tsuyoshi Watanabe",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1023887/tsuyoshi-watanabe"
+    },
+    {
+      "player_id": 1080520,
+      "player_name": "Gonçalo Borges",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1080520/goncalo-borges"
+    },
+    {
+      "player_id": 1083890,
+      "player_name": "Neraysho Kasanwirjo",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1083890/neraysho-kasanwirjo"
+    },
+    {
+      "player_id": 1102240,
+      "player_name": "Casper Tengstedt",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1102240/casper-tengstedt"
+    },
+    {
+      "player_id": 1159181,
+      "player_name": "Javi López",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1159181/javi-lopez"
+    },
+    {
+      "player_id": 1225450,
+      "player_name": "Mika Mármol",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1225450/mika-marmol"
+    },
+    {
+      "player_id": 1228273,
+      "player_name": "Oussama Targhalline",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1228273/oussama-targhalline"
+    },
+    {
+      "player_id": 1256180,
+      "player_name": "Luciano Valente",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1256180/luciano-valente"
+    },
+    {
+      "player_id": 1316930,
+      "player_name": "Jordan Bos",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1316930/jordan-bos"
+    },
+    {
+      "player_id": 1336731,
+      "player_name": "Tjark Ernst",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1336731/tjark-ernst"
+    },
+    {
+      "player_id": 1351133,
+      "player_name": "Givairo Read",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1351133/givairo-read"
+    },
+    {
+      "player_id": 1352964,
+      "player_name": "Thomas Beelen",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1352964/thomas-beelen"
+    },
+    {
+      "player_id": 1382019,
+      "player_name": "Nacho Ferri",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1382019/nacho-ferri"
+    },
+    {
+      "player_id": 1523822,
+      "player_name": "Gjivai Zechiël",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1523822/gjivai-zechiel"
+    },
+    {
+      "player_id": 1529470,
+      "player_name": "Mannou Berger",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1529470/mannou-berger"
+    },
+    {
+      "player_id": 1553365,
+      "player_name": "Shaqueel van Persie",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1553365/shaqueel-van-persie"
+    },
+    {
+      "player_id": 1553376,
+      "player_name": "Thijs Kraaijeveld",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1553376/thijs-kraaijeveld"
+    },
+    {
+      "player_id": 1553386,
+      "player_name": "Djomar Giersthove",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1553386/djomar-giersthove"
+    },
+    {
+      "player_id": 1576876,
+      "player_name": "Anis Hadj Moussa",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1576876/anis-hadj-moussa"
+    },
+    {
+      "player_id": 1643842,
+      "player_name": "Kwame Tabiri",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1643842/kwame-tabiri"
+    },
+    {
+      "player_id": 1675966,
+      "player_name": "Gaoussou Diarra",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1675966/gaoussou-diarra"
+    },
+    {
+      "player_id": 1692856,
+      "player_name": "Tobias van den Elshout",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1692856/tobias-van-den-elshout"
+    },
+    {
+      "player_id": 1876640,
+      "player_name": "Jerayno Schaken",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1876640/jerayno-schaken"
+    },
+    {
+      "player_id": 1876641,
+      "player_name": "Hakeem Agboluaje",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1876641/hakeem-agboluaje"
+    },
+    {
+      "player_id": 1946394,
+      "player_name": "Jivayno Zinhagel",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1946394/jivayno-zinhagel"
+    },
+    {
+      "player_id": 1946406,
+      "player_name": "Ilai Grootfaam",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1946406/ilai-grootfaam"
+    },
+    {
+      "player_id": 2088463,
+      "player_name": "Tijme Wessels",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/2088463/tijme-wessels"
+    }
+  ]
+}

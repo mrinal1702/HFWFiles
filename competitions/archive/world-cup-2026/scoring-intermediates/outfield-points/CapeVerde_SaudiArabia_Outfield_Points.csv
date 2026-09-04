@@ -1,0 +1,45 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+1002617,Saud Abdulhamid,7795,Saudi Arabia,1,defender,29.640000000000004,3.0,3.0,35.64,90.0,0,0,10.0,45.64
+866373,Mohamed Kanno,7795,Saudi Arabia,3,forward,39.575,1.4,3.0,43.975,90.0,0,0,0.0,43.975
+1241301,João Paulo,5888,Cape Verde Islands,1,defender,30.099999999999998,0.6000000000000001,3.0,33.7,90.0,0,0,10.0,43.7
+496648,Diney Borges,5888,Cape Verde Islands,1,defender,27.6,3.0,3.0,33.6,90.0,0,0,10.0,43.6
+798069,Deroy Duarte,5888,Cape Verde Islands,2,midfielder,30.826000000000004,1.9,3.0,35.726000000000006,90.0,0,0,5.0,40.726000000000006
+230134,Roberto Lopes,5888,Cape Verde Islands,1,defender,24.470000000000002,3.0,3.0,30.470000000000002,90.0,0,0,10.0,40.47
+848600,Abdulelah Al Amri,7795,Saudi Arabia,1,defender,21.380000000000003,3.0,3.0,27.380000000000003,90.0,0,0,10.0,37.38
+848612,Nasser Al-Dawsari,7795,Saudi Arabia,2,midfielder,23.266000000000002,3.0,3.0,29.266000000000002,90.0,0,0,5.0,34.266000000000005
+890503,Kevin Pina,5888,Cape Verde Islands,2,midfielder,22.392,3.0,3.0,28.392,90.0,0,0,5.0,33.391999999999996
+640284,Ali Lajami,7795,Saudi Arabia,1,defender,18.490000000000002,3.0,1.9,23.39,57.0,0,0,10.0,33.39
+1460591,Wagner Pina,5888,Cape Verde Islands,1,defender,17.27,1.8,2.966666666666667,22.03666666666667,90.0,0,0,10.0,32.03666666666667
+619824,Sultan Mandash,7795,Saudi Arabia,3,forward,21.183333333333334,3.2,2.2,26.583333333333332,65.0,0,0,0.0,26.583333333333332
+1401228,Nawaf Al-Boushail,7795,Saudi Arabia,1,defender,10.83,3.0,2.7333333333333334,16.563333333333333,82.0,0,0,10.0,26.563333333333333
+172615,Ryan Mendes,5888,Cape Verde Islands,3,forward,21.84166666666667,1.4,2.3666666666666667,25.608333333333334,71.0,0,0,0.0,25.608333333333334
+665167,Laros Duarte,5888,Cape Verde Islands,2,midfielder,16.368000000000002,3.0,0.6333333333333333,20.001333333333335,19.0,0,0,2.5,22.501333333333335
+844226,Firas Al-Buraikan,7795,Saudi Arabia,3,forward,9.75,5.0,3.0,17.75,90.0,0,0,0.0,17.75
+873832,Willy Semedo,5888,Cape Verde Islands,3,forward,12.35,3.2,2.033333333333333,17.583333333333336,61.0,0,0,0.0,17.583333333333336
+848607,Hassan Al Tambakti,7795,Saudi Arabia,1,defender,8.040000000000001,3.0,1.1,12.14,33.0,0,0,5.0,17.14
+307753,Salem Al-Dawsari,7795,Saudi Arabia,3,forward,10.15,4.1,2.2,16.45,65.0,0,0,0.0,16.45
+1235341,Musab Al-Juwayr,7795,Saudi Arabia,2,midfielder,9.146,1.9,1.5,12.546000000000001,44.0,0,0,2.5,15.046000000000001
+671326,Nuno da Costa,5888,Cape Verde Islands,3,forward,12.058333333333334,4.1,0.9666666666666667,17.124999999999996,29.0,0,0,-2.5,14.624999999999996
+823457,Abdullah Alkhaibari,7795,Saudi Arabia,2,midfielder,4.044,3.0,1.5,8.544,46.0,0,0,5.0,13.544
+680905,Jamiro Monteiro,5888,Cape Verde Islands,2,midfielder,4.918,0.7999999999999998,2.3666666666666667,8.084666666666667,71.0,0,0,5.0,13.084666666666667
+1543647,Mohammed Abu Al Shamat,7795,Saudi Arabia,2,midfielder,4.966,3.0,0.8,8.766,25.0,0,0,2.5,11.266
+1309634,Dailon Livramento,5888,Cape Verde Islands,3,forward,4.466666666666667,3.2,2.033333333333333,9.7,61.0,0,0,0.0,9.7
+1524518,Hélio Varela,5888,Cape Verde Islands,3,forward,6.083333333333333,4.1,0.9666666666666667,11.15,29.0,0,0,-2.5,8.65
+302912,Garry Rodrigues,5888,Cape Verde Islands,3,forward,5.308333333333334,5.0,0.6333333333333333,10.941666666666666,19.0,0,0,-2.5,8.441666666666666
+1138003,Moteb Al-Harbi,7795,Saudi Arabia,1,defender,0.8800000000000001,1.8,0.26666666666666666,2.9466666666666668,8.0,0,0,5.0,7.946666666666667
+909198,Abdullah Al-Hamdan,7795,Saudi Arabia,3,forward,2.5583333333333336,5.0,0.8,8.358333333333334,25.0,0,0,-2.5,5.858333333333334
+164062,Stopira,5888,Cape Verde Islands,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+431215,Hasan Kadesh,7795,Saudi Arabia,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+444000,Steven Moreira,5888,Cape Verde Islands,1,defender,-0.59,3.0,0.03333333333333333,0.0,0.0,0,0,0.0,0.0
+910986,Ali Majrashi,7795,Saudi Arabia,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+922877,Logan Costa,5888,Cape Verde Islands,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1095207,Ayman Yahya,7795,Saudi Arabia,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1175733,Kelvin Pires,5888,Cape Verde Islands,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1232530,Jehad Thakri,7795,Saudi Arabia,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+697618,Alaa Hajji,7795,Saudi Arabia,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1174962,Ziyad Aljohani,7795,Saudi Arabia,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1205410,Yannick Semedo,5888,Cape Verde Islands,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+384407,Saleh Al-Shehri,7795,Saudi Arabia,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+785716,Jovane Cabral,5888,Cape Verde Islands,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1024928,Khalid Al Ghannam,7795,Saudi Arabia,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1241302,Gilson Benchimol,5888,Cape Verde Islands,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

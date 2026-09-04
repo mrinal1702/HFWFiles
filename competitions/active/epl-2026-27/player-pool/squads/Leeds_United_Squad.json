@@ -1,0 +1,175 @@
+{
+  "team_name": "Leeds United",
+  "team_id": 8463,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8463/squad/leeds-united",
+  "players": [
+    {
+      "player_id": 279481,
+      "player_name": "Alex Cairns",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/279481/alex-cairns"
+    },
+    {
+      "player_id": 363318,
+      "player_name": "Sam Byram",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/363318/sam-byram"
+    },
+    {
+      "player_id": 494417,
+      "player_name": "Harry Wilson",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/494417/harry-wilson"
+    },
+    {
+      "player_id": 612150,
+      "player_name": "Dominic Calvert-Lewin",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/612150/dominic-calvert-lewin"
+    },
+    {
+      "player_id": 637656,
+      "player_name": "Lucas Perri",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/637656/lucas-perri"
+    },
+    {
+      "player_id": 710158,
+      "player_name": "James Justin",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/710158/james-justin"
+    },
+    {
+      "player_id": 717174,
+      "player_name": "Joe Rodon",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/717174/joe-rodon"
+    },
+    {
+      "player_id": 717176,
+      "player_name": "Daniel James",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/717176/daniel-james"
+    },
+    {
+      "player_id": 744494,
+      "player_name": "Gabriel Gudmundsson",
+      "position": "LWB",
+      "href": "https://www.fotmob.com/en-GB/players/744494/gabriel-gudmundsson"
+    },
+    {
+      "player_id": 780432,
+      "player_name": "Ethan Ampadu",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/780432/ethan-ampadu"
+    },
+    {
+      "player_id": 789646,
+      "player_name": "Jayden Bogle",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/789646/jayden-bogle"
+    },
+    {
+      "player_id": 792540,
+      "player_name": "Joël Piroe",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/792540/joel-piroe"
+    },
+    {
+      "player_id": 820024,
+      "player_name": "Sean Longstaff",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/820024/sean-longstaff"
+    },
+    {
+      "player_id": 849545,
+      "player_name": "Daniel Farke",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/849545/daniel-farke"
+    },
+    {
+      "player_id": 861197,
+      "player_name": "Lukas Nmecha",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/861197/lukas-nmecha"
+    },
+    {
+      "player_id": 861805,
+      "player_name": "Jaka Bijol",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/861805/jaka-bijol"
+    },
+    {
+      "player_id": 881735,
+      "player_name": "Anton Stach",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/881735/anton-stach"
+    },
+    {
+      "player_id": 915797,
+      "player_name": "Noah Okafor",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/915797/noah-okafor"
+    },
+    {
+      "player_id": 922892,
+      "player_name": "Sebastiaan Bornauw",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/922892/sebastiaan-bornauw"
+    },
+    {
+      "player_id": 935728,
+      "player_name": "Ao Tanaka",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/935728/ao-tanaka"
+    },
+    {
+      "player_id": 952322,
+      "player_name": "Brenden Aaronson",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/952322/brenden-aaronson"
+    },
+    {
+      "player_id": 956161,
+      "player_name": "Joe Gelhardt",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/956161/joe-gelhardt"
+    },
+    {
+      "player_id": 1077915,
+      "player_name": "Largie Ramazani",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/1077915/largie-ramazani"
+    },
+    {
+      "player_id": 1080983,
+      "player_name": "Ilia Gruev",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1080983/ilia-gruev"
+    },
+    {
+      "player_id": 1107286,
+      "player_name": "Wilfried Gnonto",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1107286/wilfried-gnonto"
+    },
+    {
+      "player_id": 1187213,
+      "player_name": "James Trafford",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1187213/james-trafford"
+    },
+    {
+      "player_id": 1250485,
+      "player_name": "Tarik Muharemovic",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1250485/tarik-muharemovic"
+    },
+    {
+      "player_id": 1344677,
+      "player_name": "Mateo Joseph",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1344677/mateo-joseph"
+    }
+  ]
+}

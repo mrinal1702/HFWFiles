@@ -1,0 +1,164 @@
+﻿source_file,player_name,player_id,team_name,position,stats_score,endowment_score,final_score
+Arsenal_SportingCP_FinalPoints.csv,William Saliba,955406,Arsenal,defender,25.43,10.0,35
+Arsenal_SportingCP_FinalPoints.csv,Gabriel,795179,Arsenal,defender,24.450000000000003,10.0,34
+Arsenal_SportingCP_FinalPoints.csv,Piero Hincapié,1137667,Arsenal,defender,20.210000000000004,10.0,30
+Arsenal_SportingCP_FinalPoints.csv,Cristhian Mosquera,1298907,Arsenal,defender,1.15,10.0,11
+Arsenal_SportingCP_FinalPoints.csv,Ben White,776151,Arsenal,defender,3.0,0.0,3
+Arsenal_SportingCP_FinalPoints.csv,Myles Lewis-Skelly,1406436,Arsenal,defender,3.0,0.0,3
+Arsenal_SportingCP_FinalPoints.csv,Marli Salmon,1787525,Arsenal,defender,3.0,0.0,3
+Arsenal_SportingCP_FinalPoints.csv,Noni Madueke,1084981,Arsenal,forward,20.825,0.0,21
+Arsenal_SportingCP_FinalPoints.csv,Viktor Gyökeres,664500,Arsenal,forward,12.75,0.0,13
+Arsenal_SportingCP_FinalPoints.csv,Gabriel Jesus,576165,Arsenal,forward,9.441666666666666,-2.5,7
+Arsenal_SportingCP_FinalPoints.csv,Gabriel Martinelli,1021586,Arsenal,forward,6.666666666666666,0.0,7
+Arsenal_SportingCP_FinalPoints.csv,Leandro Trossard,318615,Arsenal,forward,6.333333333333332,-2.5,4
+Arsenal_SportingCP_FinalPoints.csv,Arsenal Keepers,9825,Arsenal,goalkeeper,17.16,18.0,35
+Arsenal_SportingCP_FinalPoints.csv,Martín Zubimendi,1031325,Arsenal,midfielder,35.132000000000005,5.0,40
+Arsenal_SportingCP_FinalPoints.csv,Declan Rice,654096,Arsenal,midfielder,34.02,5.0,39
+Arsenal_SportingCP_FinalPoints.csv,Eberechi Eze,818975,Arsenal,midfielder,13.989333333333336,5.0,19
+Arsenal_SportingCP_FinalPoints.csv,Max Dowman,1635773,Arsenal,midfielder,10.13,2.5,13
+Arsenal_SportingCP_FinalPoints.csv,Kai Havertz,749736,Arsenal,midfielder,9.483333333333334,2.5,12
+Arsenal_SportingCP_FinalPoints.csv,Christian Nørgaard,266520,Arsenal,midfielder,3.0,0.0,3
+Arsenal_SportingCP_FinalPoints.csv,Harrison Dudziak,1580550,Arsenal,midfielder,3.0,0.0,3
+AtleticoMadrid_Barcelona_FinalPoints.csv,Marcos Llorente,602563,Atlético de Madrid,defender,38.1,0.0,38
+AtleticoMadrid_Barcelona_FinalPoints.csv,Nahuel Molina,726345,Atlético de Madrid,defender,20.03,0.0,20
+AtleticoMadrid_Barcelona_FinalPoints.csv,Robin Le Normand,609516,Atlético de Madrid,defender,16.560000000000002,0.0,17
+AtleticoMadrid_Barcelona_FinalPoints.csv,Clément Lenglet,488412,Atlético de Madrid,defender,12.14,0.0,12
+AtleticoMadrid_Barcelona_FinalPoints.csv,Matteo Ruggeri,1051097,Atlético de Madrid,defender,6.379999999999999,0.0,6
+AtleticoMadrid_Barcelona_FinalPoints.csv,Javier Boñar,1367926,Atlético de Madrid,defender,3.0,0.0,3
+AtleticoMadrid_Barcelona_FinalPoints.csv,Julio Díaz,1447089,Atlético de Madrid,defender,3.0,0.0,3
+AtleticoMadrid_Barcelona_FinalPoints.csv,Dani Martinez,1531100,Atlético de Madrid,defender,3.0,0.0,3
+AtleticoMadrid_Barcelona_FinalPoints.csv,Julián Álvarez,974753,Atlético de Madrid,forward,19.241666666666667,3.0,22
+AtleticoMadrid_Barcelona_FinalPoints.csv,Antoine Griezmann,184138,Atlético de Madrid,forward,16.541666666666664,3.0,20
+AtleticoMadrid_Barcelona_FinalPoints.csv,Alexander Sørloth,440330,Atlético de Madrid,forward,18.116666666666664,-2.5,16
+AtleticoMadrid_Barcelona_FinalPoints.csv,Atlético de Madrid Keepers,9906,Atlético de Madrid,goalkeeper,37.48,6.0,43
+AtleticoMadrid_Barcelona_FinalPoints.csv,Koke,184533,Atlético de Madrid,midfielder,30.628666666666668,3.0,34
+AtleticoMadrid_Barcelona_FinalPoints.csv,Ademola Lookman,690516,Atlético de Madrid,midfielder,29.642,3.0,33
+AtleticoMadrid_Barcelona_FinalPoints.csv,Nicolás González,841672,Atlético de Madrid,midfielder,9.46,2.5,12
+AtleticoMadrid_Barcelona_FinalPoints.csv,Giuliano Simeone,1226147,Atlético de Madrid,midfielder,7.372000000000001,3.0,10
+AtleticoMadrid_Barcelona_FinalPoints.csv,Álex Baena,942372,Atlético de Madrid,midfielder,4.0920000000000005,2.5,7
+AtleticoMadrid_Barcelona_FinalPoints.csv,Johnny Cardoso,1173678,Atlético de Madrid,midfielder,4.287333333333333,2.5,7
+AtleticoMadrid_Barcelona_FinalPoints.csv,Thiago Almada,955271,Atlético de Madrid,midfielder,3.0,0.0,3
+AtleticoMadrid_Barcelona_FinalPoints.csv,Obed Vargas,1254394,Atlético de Madrid,midfielder,3.0,0.0,3
+AtleticoMadrid_Barcelona_FinalPoints.csv,Rodrigo Mendoza,1419969,Atlético de Madrid,midfielder,3.0,0.0,3
+AtleticoMadrid_Barcelona_FinalPoints.csv,Gerard Martín,1598982,Barcelona,defender,35.71,5.0,41
+AtleticoMadrid_Barcelona_FinalPoints.csv,Jules Koundé,705450,Barcelona,defender,26.61,5.0,32
+AtleticoMadrid_Barcelona_FinalPoints.csv,Eric García,940573,Barcelona,defender,21.25333333333333,5.0,26
+AtleticoMadrid_Barcelona_FinalPoints.csv,João Cancelo,361757,Barcelona,defender,13.236666666666666,5.0,18
+AtleticoMadrid_Barcelona_FinalPoints.csv,Ronald Araujo,921253,Barcelona,defender,7.593333333333333,5.0,13
+AtleticoMadrid_Barcelona_FinalPoints.csv,Alejandro Balde,1254166,Barcelona,defender,3.0,0.0,3
+AtleticoMadrid_Barcelona_FinalPoints.csv,Álvaro Cortés,1695867,Barcelona,defender,3.0,0.0,3
+AtleticoMadrid_Barcelona_FinalPoints.csv,Xavi Espart,1815149,Barcelona,defender,3.0,0.0,3
+AtleticoMadrid_Barcelona_FinalPoints.csv,Ferran Torres,881771,Barcelona,forward,46.75833333333333,6.0,53
+AtleticoMadrid_Barcelona_FinalPoints.csv,Robert Lewandowski,93447,Barcelona,forward,12.608333333333333,-2.5,10
+AtleticoMadrid_Barcelona_FinalPoints.csv,Roony Bardghji,1315475,Barcelona,forward,10.191666666666666,-2.5,8
+AtleticoMadrid_Barcelona_FinalPoints.csv,Marcus Rashford,696365,Barcelona,forward,9.558333333333332,-2.5,7
+AtleticoMadrid_Barcelona_FinalPoints.csv,Barcelona Keepers,8634,Barcelona,goalkeeper,19.68,12.0,32
+AtleticoMadrid_Barcelona_FinalPoints.csv,Lamine Yamal,1467236,Barcelona,midfielder,52.714000000000006,7.0,60
+AtleticoMadrid_Barcelona_FinalPoints.csv,Gavi,1279040,Barcelona,midfielder,36.29600000000001,7.0,43
+AtleticoMadrid_Barcelona_FinalPoints.csv,Pedri,1083323,Barcelona,midfielder,28.546,7.0,36
+AtleticoMadrid_Barcelona_FinalPoints.csv,Dani Olmo,614834,Barcelona,midfielder,26.610666666666667,7.0,34
+AtleticoMadrid_Barcelona_FinalPoints.csv,Fermín López,1404415,Barcelona,midfielder,7.458666666666667,7.0,14
+AtleticoMadrid_Barcelona_FinalPoints.csv,Frenkie de Jong,638622,Barcelona,midfielder,9.040000000000004,2.5,12
+AtleticoMadrid_Barcelona_FinalPoints.csv,Marc Casadó,1384883,Barcelona,midfielder,3.0,0.0,3
+AtleticoMadrid_Barcelona_FinalPoints.csv,Tomás Marqués,1777474,Barcelona,midfielder,3.0,0.0,3
+BayernMunich_RealMadrid_FinalPoints.csv,Dayot Upamecano,658554,FC Bayern München,defender,50.05,-5.0,45
+BayernMunich_RealMadrid_FinalPoints.csv,Alphonso Davies,751202,FC Bayern München,defender,13.26,5.0,18
+BayernMunich_RealMadrid_FinalPoints.csv,Josip Stanisic,950824,FC Bayern München,defender,13.23,-5.0,8
+BayernMunich_RealMadrid_FinalPoints.csv,Jonathan Tah,469700,FC Bayern München,defender,8.61,-5.0,4
+BayernMunich_RealMadrid_FinalPoints.csv,Raphaël Guerreiro,352994,FC Bayern München,defender,3.0,0.0,3
+BayernMunich_RealMadrid_FinalPoints.csv,Min-Jae Kim,828159,FC Bayern München,defender,3.0,0.0,3
+BayernMunich_RealMadrid_FinalPoints.csv,Hiroki Ito,851626,FC Bayern München,defender,3.0,0.0,3
+BayernMunich_RealMadrid_FinalPoints.csv,Konrad Laimer,526827,FC Bayern München,defender,3.47,-5.0,-2
+BayernMunich_RealMadrid_FinalPoints.csv,Harry Kane,194165,FC Bayern München,forward,42.28333333333333,12.0,54
+BayernMunich_RealMadrid_FinalPoints.csv,Nicolas Jackson,1197347,FC Bayern München,forward,5.0,0.0,5
+BayernMunich_RealMadrid_FinalPoints.csv,FC Bayern München Keepers,9823,FC Bayern München,goalkeeper,14.04,0.0,14
+BayernMunich_RealMadrid_FinalPoints.csv,Joshua Kimmich,460632,FC Bayern München,midfielder,62.848000000000006,7.0,70
+BayernMunich_RealMadrid_FinalPoints.csv,Aleksandar Pavlovic,1473580,FC Bayern München,midfielder,37.622,7.0,45
+BayernMunich_RealMadrid_FinalPoints.csv,Michael Olise,1029063,FC Bayern München,midfielder,35.324,7.0,42
+BayernMunich_RealMadrid_FinalPoints.csv,Luis Díaz,860914,FC Bayern München,midfielder,23.374,7.0,30
+BayernMunich_RealMadrid_FinalPoints.csv,Jamal Musiala,1156141,FC Bayern München,midfielder,11.866666666666664,6.5,18
+BayernMunich_RealMadrid_FinalPoints.csv,Serge Gnabry,385437,FC Bayern München,midfielder,10.307333333333332,3.0,13
+BayernMunich_RealMadrid_FinalPoints.csv,Leon Goretzka,343748,FC Bayern München,midfielder,3.0,0.0,3
+Liverpool_ParisStGermain_FinalPoints.csv,Ibrahima Konaté,820140,Liverpool,defender,40.78,0.0,41
+Liverpool_ParisStGermain_FinalPoints.csv,Jeremie Frimpong,966018,Liverpool,defender,21.14,10.0,31
+Liverpool_ParisStGermain_FinalPoints.csv,Milos Kerkez,1195281,Liverpool,defender,28.62,0.0,29
+Liverpool_ParisStGermain_FinalPoints.csv,Virgil van Dijk,209405,Liverpool,defender,24.96,0.0,25
+Liverpool_ParisStGermain_FinalPoints.csv,Joseph Gomez,568571,Liverpool,defender,5.003333333333333,5.0,10
+Liverpool_ParisStGermain_FinalPoints.csv,Andrew Robertson,357880,Liverpool,defender,3.0,0.0,3
+Liverpool_ParisStGermain_FinalPoints.csv,Amara Nallo,1589629,Liverpool,defender,3.0,0.0,3
+Liverpool_ParisStGermain_FinalPoints.csv,Mohamed Salah,292462,Liverpool,forward,21.425,0.0,21
+Liverpool_ParisStGermain_FinalPoints.csv,Rio Ngumoha,1597668,Liverpool,forward,16.025,-2.5,14
+Liverpool_ParisStGermain_FinalPoints.csv,Alexander Isak,690107,Liverpool,forward,9.508333333333333,0.0,10
+Liverpool_ParisStGermain_FinalPoints.csv,Cody Gakpo,806552,Liverpool,forward,12.2,-2.5,10
+Liverpool_ParisStGermain_FinalPoints.csv,Hugo Ekitiké,1197030,Liverpool,forward,10.741666666666664,-2.5,8
+Liverpool_ParisStGermain_FinalPoints.csv,Federico Chiesa,784510,Liverpool,forward,5.0,0.0,5
+Liverpool_ParisStGermain_FinalPoints.csv,Liverpool Keepers,8650,Liverpool,goalkeeper,19.520000000000003,6.0,26
+Liverpool_ParisStGermain_FinalPoints.csv,Dominik Szoboszlai,846005,Liverpool,midfielder,42.218,1.0,43
+Liverpool_ParisStGermain_FinalPoints.csv,Ryan Gravenberch,956683,Liverpool,midfielder,25.378,1.0,26
+Liverpool_ParisStGermain_FinalPoints.csv,Florian Wirtz,1152455,Liverpool,midfielder,21.394,1.0,22
+Liverpool_ParisStGermain_FinalPoints.csv,Alexis Mac Allister,831489,Liverpool,midfielder,6.856666666666667,3.0,10
+Liverpool_ParisStGermain_FinalPoints.csv,Curtis Jones,933768,Liverpool,midfielder,4.455333333333333,0.5,5
+Liverpool_ParisStGermain_FinalPoints.csv,Trey Nyoni,1436258,Liverpool,midfielder,3.0,0.0,3
+Liverpool_ParisStGermain_FinalPoints.csv,Willian Pacho,1137670,Paris Saint-Germain,defender,27.190000000000005,10.0,37
+Liverpool_ParisStGermain_FinalPoints.csv,Lucas Hernández,504606,Paris Saint-Germain,defender,19.863333333333337,10.0,30
+Liverpool_ParisStGermain_FinalPoints.csv,Marquinhos,267365,Paris Saint-Germain,defender,17.69,10.0,28
+Liverpool_ParisStGermain_FinalPoints.csv,Achraf Hakimi,770881,Paris Saint-Germain,defender,14.71,10.0,25
+Liverpool_ParisStGermain_FinalPoints.csv,Nuno Mendes,1158945,Paris Saint-Germain,defender,14.946666666666667,5.0,20
+Liverpool_ParisStGermain_FinalPoints.csv,Lucas Beraldo,1255209,Paris Saint-Germain,defender,4.85,5.0,10
+Liverpool_ParisStGermain_FinalPoints.csv,Ilya Zabarnyi,1140003,Paris Saint-Germain,defender,3.0,0.0,3
+Liverpool_ParisStGermain_FinalPoints.csv,Ousmane Dembélé,692984,Paris Saint-Germain,forward,53.03333333333333,6.0,59
+Liverpool_ParisStGermain_FinalPoints.csv,Khvicha Kvaratskhelia,900433,Paris Saint-Germain,forward,32.1,6.0,38
+Liverpool_ParisStGermain_FinalPoints.csv,Bradley Barcola,1297165,Paris Saint-Germain,forward,16.05,3.5,20
+Liverpool_ParisStGermain_FinalPoints.csv,Désiré Doué,1339208,Paris Saint-Germain,forward,8.866666666666667,0.0,9
+Liverpool_ParisStGermain_FinalPoints.csv,Gonçalo Ramos,940087,Paris Saint-Germain,forward,5.0,0.0,5
+Liverpool_ParisStGermain_FinalPoints.csv,Ibrahim Mbaye,1593857,Paris Saint-Germain,forward,5.0,0.0,5
+Liverpool_ParisStGermain_FinalPoints.csv,Paris Saint-Germain Keepers,9847,Paris Saint-Germain,goalkeeper,37.06,18.0,55
+Liverpool_ParisStGermain_FinalPoints.csv,Vitinha,1061249,Paris Saint-Germain,midfielder,31.65,9.0,41
+Liverpool_ParisStGermain_FinalPoints.csv,João Neves,1342757,Paris Saint-Germain,midfielder,24.0,9.0,33
+Liverpool_ParisStGermain_FinalPoints.csv,Warren Zaïre-Emery,1367615,Paris Saint-Germain,midfielder,7.938,7.0,15
+Liverpool_ParisStGermain_FinalPoints.csv,Kang-In Lee,940976,Paris Saint-Germain,midfielder,3.0,0.0,3
+Liverpool_ParisStGermain_FinalPoints.csv,Senny Mayulu,1574189,Paris Saint-Germain,midfielder,3.0,0.0,3
+Liverpool_ParisStGermain_FinalPoints.csv,Dro Fernández,1682313,Paris Saint-Germain,midfielder,3.0,0.0,3
+BayernMunich_RealMadrid_FinalPoints.csv,Éder Militao,844415,Real Madrid,defender,32.8,-10.0,23
+BayernMunich_RealMadrid_FinalPoints.csv,Trent Alexander-Arnold,760712,Real Madrid,defender,26.39666666666667,-5.0,21
+BayernMunich_RealMadrid_FinalPoints.csv,Antonio Rüdiger,276738,Real Madrid,defender,22.7,-10.0,13
+BayernMunich_RealMadrid_FinalPoints.csv,David Alaba,121633,Real Madrid,defender,3.0,0.0,3
+BayernMunich_RealMadrid_FinalPoints.csv,Daniel Carvajal,282674,Real Madrid,defender,3.0,0.0,3
+BayernMunich_RealMadrid_FinalPoints.csv,Fran García,750028,Real Madrid,defender,3.0,0.0,3
+BayernMunich_RealMadrid_FinalPoints.csv,Alvaro Carreras,1190025,Real Madrid,defender,3.0,0.0,3
+BayernMunich_RealMadrid_FinalPoints.csv,Dean Huijsen,1367619,Real Madrid,defender,3.0,0.0,3
+BayernMunich_RealMadrid_FinalPoints.csv,Ferland Mendy,623537,Real Madrid,defender,8.489999999999998,-10.0,-2
+BayernMunich_RealMadrid_FinalPoints.csv,Kylian Mbappé,701154,Real Madrid,forward,44.0,9.0,53
+BayernMunich_RealMadrid_FinalPoints.csv,Brahim Díaz,750027,Real Madrid,forward,14.208333333333332,9.0,23
+BayernMunich_RealMadrid_FinalPoints.csv,Vinícius Júnior,846033,Real Madrid,forward,12.841666666666669,9.0,22
+BayernMunich_RealMadrid_FinalPoints.csv,Gonzalo García,1413847,Real Madrid,forward,5.0,0.0,5
+BayernMunich_RealMadrid_FinalPoints.csv,Franco Mastantuono,1607566,Real Madrid,forward,5.2,0.0,5
+BayernMunich_RealMadrid_FinalPoints.csv,Real Madrid Keepers,8633,Real Madrid,goalkeeper,20.52,-6.0,15
+BayernMunich_RealMadrid_FinalPoints.csv,Jude Bellingham,1077894,Real Madrid,midfielder,35.652,3.0,39
+BayernMunich_RealMadrid_FinalPoints.csv,Arda Güler,1253890,Real Madrid,midfielder,34.46066666666667,5.0,39
+BayernMunich_RealMadrid_FinalPoints.csv,Federico Valverde,743533,Real Madrid,midfielder,22.53,3.0,26
+BayernMunich_RealMadrid_FinalPoints.csv,Eduardo Camavinga,1015185,Real Madrid,midfielder,11.758,-1.5,10
+BayernMunich_RealMadrid_FinalPoints.csv,Dani Ceballos,531629,Real Madrid,midfielder,3.0,0.0,3
+BayernMunich_RealMadrid_FinalPoints.csv,Thiago Pitarch,1796908,Real Madrid,midfielder,3.187333333333333,0.0,3
+Arsenal_SportingCP_FinalPoints.csv,Eduardo Quaresma,1156380,Sporting Lisbon,defender,32.593333333333334,10.0,43
+Arsenal_SportingCP_FinalPoints.csv,Maxi Araújo,1031656,Sporting Lisbon,defender,27.160000000000004,10.0,37
+Arsenal_SportingCP_FinalPoints.csv,Gonçalo Inácio,1165710,Sporting Lisbon,defender,20.31,10.0,30
+Arsenal_SportingCP_FinalPoints.csv,Ousmane Diomande,1425182,Sporting Lisbon,defender,11.71,10.0,22
+Arsenal_SportingCP_FinalPoints.csv,Georgios Vagiannidis,1119687,Sporting Lisbon,defender,14.856666666666666,5.0,20
+Arsenal_SportingCP_FinalPoints.csv,Ricardo Mangas,824655,Sporting Lisbon,defender,3.0,0.0,3
+Arsenal_SportingCP_FinalPoints.csv,Zeno Debast,1232172,Sporting Lisbon,defender,3.0,0.0,3
+Arsenal_SportingCP_FinalPoints.csv,Pote,875133,Sporting Lisbon,forward,21.416666666666664,0.0,21
+Arsenal_SportingCP_FinalPoints.csv,Geny Catamo,1088753,Sporting Lisbon,forward,9.975,0.0,10
+Arsenal_SportingCP_FinalPoints.csv,Luis Suárez,792303,Sporting Lisbon,forward,8.333333333333332,0.0,8
+Arsenal_SportingCP_FinalPoints.csv,Souleymane Faye,1107257,Sporting Lisbon,forward,5.0,0.0,5
+Arsenal_SportingCP_FinalPoints.csv,Flávio Gonçalves,1691190,Sporting Lisbon,forward,5.0,0.0,5
+Arsenal_SportingCP_FinalPoints.csv,Rafael Nel,1525416,Sporting Lisbon,forward,5.166666666666667,-2.5,3
+Arsenal_SportingCP_FinalPoints.csv,Geovany Quenda,1530314,Sporting Lisbon,forward,5.591666666666667,-2.5,3
+Arsenal_SportingCP_FinalPoints.csv,Sporting Lisbon Keepers,9768,Sporting Lisbon,goalkeeper,15.16,18.0,33
+Arsenal_SportingCP_FinalPoints.csv,Morten Hjulmand,950199,Sporting Lisbon,midfielder,31.646,5.0,37
+Arsenal_SportingCP_FinalPoints.csv,Hidemasa Morita,915102,Sporting Lisbon,midfielder,15.716666666666669,5.0,21
+Arsenal_SportingCP_FinalPoints.csv,Trincão,732282,Sporting Lisbon,midfielder,13.951333333333332,5.0,19
+Arsenal_SportingCP_FinalPoints.csv,Daniel Bragança,1014980,Sporting Lisbon,midfielder,10.183333333333334,2.5,13
+Arsenal_SportingCP_FinalPoints.csv,João Simões,1663855,Sporting Lisbon,midfielder,10.287333333333333,2.5,13
+Arsenal_SportingCP_FinalPoints.csv,Giorgi Kochorashvili,953958,Sporting Lisbon,midfielder,3.0,0.0,3
+Arsenal_SportingCP_FinalPoints.csv,Salvador Blopa,1712326,Sporting Lisbon,midfielder,3.0,0.0,3

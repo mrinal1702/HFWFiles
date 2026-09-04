@@ -1,0 +1,15 @@
+{
+  "match_id": 5795365,
+  "home_team": "Everton",
+  "away_team": "Crystal Palace",
+  "source_url": "https://www.fotmob.com/en-GB/matches/everton-vs-crystal-palace/2tttz7#5795365:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/Everton_Vs_CrystalPalace.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/everton-vs-crystal-palace/2tttz7",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/everton-vs-crystal-palace/2tttz7#5795365:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/everton-vs-crystal-palace/2tttz7#5795365:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/everton-vs-crystal-palace/2tttz7#5795365:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795365"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

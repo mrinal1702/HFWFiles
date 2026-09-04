@@ -1,0 +1,42 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,final_score
+Julián Álvarez,974753,Atlético de Madrid,forward,43.93333333333333,6.0,50
+Lamine Yamal,1467236,Barcelona,midfielder,40.626,1.0,42
+Matteo Ruggeri,1051097,Atlético de Madrid,defender,26.57,10.0,37
+Marcus Rashford,696365,Barcelona,midfielder,29.98333333333333,1.0,31
+Dani Olmo,614834,Barcelona,midfielder,27.934,1.0,29
+Gerard Martín,1598982,Barcelona,defender,28.52,0.0,29
+Giuliano Simeone,1226147,Atlético de Madrid,midfielder,17.826666666666668,9.0,27
+Marcos Llorente,602563,Atlético de Madrid,defender,16.71,10.0,27
+Antoine Griezmann,184138,Atlético de Madrid,forward,19.95833333333333,6.0,26
+Eric García,940573,Barcelona,defender,23.54,0.0,24
+Marc Pubill,1323897,Atlético de Madrid,defender,13.176666666666668,10.0,23
+Ademola Lookman,690516,Atlético de Madrid,midfielder,15.941999999999998,7.0,23
+Robin Le Normand,609516,Atlético de Madrid,defender,12.36,10.0,22
+Fermín López,1404415,Barcelona,midfielder,20.494,0.5,21
+Alexander Sørloth,440330,Atlético de Madrid,forward,20.116666666666667,0.5,21
+Pedri,1083323,Barcelona,midfielder,16.872,3.0,20
+Koke,184533,Atlético de Madrid,midfielder,11.304000000000002,7.0,18
+Gavi,1279040,Barcelona,midfielder,15.658,0.5,16
+Dávid Hancko,727897,Atlético de Madrid,defender,8.233333333333334,5.0,13
+Ronald Araujo,921253,Barcelona,defender,7.976666666666667,5.0,13
+Pau Cubarsí,1532137,Barcelona,defender,12.85666666666667,0.0,13
+João Cancelo,361757,Barcelona,defender,12.716666666666663,0.0,13
+Jules Koundé,705450,Barcelona,defender,12.373333333333337,0.0,12
+Nahuel Molina,726345,Atlético de Madrid,defender,1.8100000000000007,10.0,12
+Alejandro Balde,1254166,Barcelona,defender,6.603333333333334,5.0,12
+Álex Baena,942372,Atlético de Madrid,midfielder,6.356000000000001,4.5,11
+Robert Lewandowski,93447,Barcelona,forward,7.416666666666666,0.0,7
+Roony Bardghji,1315475,Barcelona,forward,5.0,0.0,5
+Thiago Almada,955271,Atlético de Madrid,midfielder,1.8573333333333333,2.5,4
+Nicolás González,841672,Atlético de Madrid,midfielder,1.7853333333333332,2.5,4
+Ferran Torres,881771,Barcelona,forward,5.941666666666666,-2.5,3
+Clément Lenglet,488412,Atlético de Madrid,defender,3.0,0.0,3
+Julio Díaz,1447089,Atlético de Madrid,defender,3.0,0.0,3
+Álvaro Cortés,1695867,Barcelona,defender,3.0,0.0,3
+Obed Vargas,1254394,Atlético de Madrid,midfielder,3.0,0.0,3
+Marc Casadó,1384883,Barcelona,midfielder,3.0,0.0,3
+Rodrigo Mendoza,1419969,Atlético de Madrid,midfielder,3.0,0.0,3
+Tomás Marqués,1777474,Barcelona,midfielder,3.0,0.0,3
+Xavi Espart,1815149,Barcelona,midfielder,3.0,0.0,3
+Atlético de Madrid Keepers,9906,Atlético de Madrid,goalkeeper,27.18,18.0,45
+Barcelona Keepers,8634,Barcelona,goalkeeper,11.28,6.0,17

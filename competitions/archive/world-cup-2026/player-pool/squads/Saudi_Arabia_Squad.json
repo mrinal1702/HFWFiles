@@ -1,0 +1,169 @@
+{
+  "team_name": "Saudi Arabia",
+  "team_id": 7795,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/7795/squad/saudi-arabia",
+  "players": [
+    {
+      "player_id": 307753,
+      "player_name": "Salem Al-Dawsari",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/307753/salem-al-dawsari"
+    },
+    {
+      "player_id": 312235,
+      "player_name": "Georgios Donis",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/312235/georgios-donis"
+    },
+    {
+      "player_id": 384407,
+      "player_name": "Saleh Al-Shehri",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/384407/saleh-al-shehri"
+    },
+    {
+      "player_id": 431215,
+      "player_name": "Hasan Kadesh",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/431215/hassan-kadish"
+    },
+    {
+      "player_id": 535669,
+      "player_name": "Mohammed Al Owais",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/535669/mohammed-al-owais"
+    },
+    {
+      "player_id": 544589,
+      "player_name": "Ahmed Ali Al Kassar",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/544589/ahmed-al-kassar"
+    },
+    {
+      "player_id": 619824,
+      "player_name": "Sultan Mandash",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/619824/sultan-mandash"
+    },
+    {
+      "player_id": 640284,
+      "player_name": "Ali Lajami",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/640284/ali-lajami"
+    },
+    {
+      "player_id": 697618,
+      "player_name": "Alaa Hajji",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/697618/alaa-al-hejji"
+    },
+    {
+      "player_id": 823457,
+      "player_name": "Abdullah Alkhaibari",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/823457/abdullah-al-khaibari"
+    },
+    {
+      "player_id": 844226,
+      "player_name": "Firas Al-Buraikan",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/844226/feras-al-brikan"
+    },
+    {
+      "player_id": 848600,
+      "player_name": "Abdulelah Al Amri",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/848600/abdulelah-al-amri"
+    },
+    {
+      "player_id": 848607,
+      "player_name": "Hassan Al Tambakti",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/848607/hassan-al-tambakti"
+    },
+    {
+      "player_id": 848612,
+      "player_name": "Nasser Al-Dawsari",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/848612/nasser-al-dawsari"
+    },
+    {
+      "player_id": 866373,
+      "player_name": "Mohamed Kanno",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/866373/mohamed-kanno"
+    },
+    {
+      "player_id": 909198,
+      "player_name": "Abdullah Al-Hamdan",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/909198/abdullah-al-hamddan"
+    },
+    {
+      "player_id": 910986,
+      "player_name": "Ali Majrashi",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/910986/ali-majrashi"
+    },
+    {
+      "player_id": 1002617,
+      "player_name": "Saud Abdulhamid",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/1002617/saud-abdulhamid"
+    },
+    {
+      "player_id": 1024928,
+      "player_name": "Khalid Al Ghannam",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1024928/khalid-al-ghannam"
+    },
+    {
+      "player_id": 1095207,
+      "player_name": "Ayman Yahya",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1095207/aiman-yahya"
+    },
+    {
+      "player_id": 1125083,
+      "player_name": "Nawaf Alaqidi",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1125083/nawaf-al-aqidi"
+    },
+    {
+      "player_id": 1138003,
+      "player_name": "Moteb Al-Harbi",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1138003/moteb-al-harbi"
+    },
+    {
+      "player_id": 1174962,
+      "player_name": "Ziyad Aljohani",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1174962/ziyad-al-johani"
+    },
+    {
+      "player_id": 1232530,
+      "player_name": "Jehad Thakri",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1232530/jehad-thikri"
+    },
+    {
+      "player_id": 1235341,
+      "player_name": "Musab Al-Juwayr",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1235341/musab-al-juwayr"
+    },
+    {
+      "player_id": 1401228,
+      "player_name": "Nawaf Al-Boushail",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1401228/nawaf-bu-washl"
+    },
+    {
+      "player_id": 1543647,
+      "player_name": "Mohammed Abu Al Shamat",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1543647/mohammed-abu-al-shamat"
+    }
+  ]
+}

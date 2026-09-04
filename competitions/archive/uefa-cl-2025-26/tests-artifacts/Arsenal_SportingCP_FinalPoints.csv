@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,final_score
+Eduardo Quaresma,1156380,Sporting Lisbon,defender,32.593333333333334,10.0,43
+Martín Zubimendi,1031325,Arsenal,midfielder,35.132000000000005,5.0,40
+Declan Rice,654096,Arsenal,midfielder,34.02,5.0,39
+Maxi Araújo,1031656,Sporting Lisbon,defender,27.160000000000004,10.0,37
+Morten Hjulmand,950199,Sporting Lisbon,midfielder,31.646,5.0,37
+William Saliba,955406,Arsenal,defender,25.43,10.0,35
+Gabriel,795179,Arsenal,defender,24.450000000000003,10.0,34
+Gonçalo Inácio,1165710,Sporting Lisbon,defender,20.31,10.0,30
+Piero Hincapié,1137667,Arsenal,defender,20.210000000000004,10.0,30
+Ousmane Diomande,1425182,Sporting Lisbon,defender,11.71,10.0,22
+Pote,875133,Sporting Lisbon,forward,21.416666666666664,0.0,21
+Noni Madueke,1084981,Arsenal,forward,20.825,0.0,21
+Hidemasa Morita,915102,Sporting Lisbon,midfielder,15.716666666666669,5.0,21
+Georgios Vagiannidis,1119687,Sporting Lisbon,defender,14.856666666666666,5.0,20
+Eberechi Eze,818975,Arsenal,midfielder,13.989333333333336,5.0,19
+Trincão,732282,Sporting Lisbon,midfielder,13.951333333333332,5.0,19
+João Simões,1663855,Sporting Lisbon,midfielder,10.287333333333333,2.5,13
+Viktor Gyökeres,664500,Arsenal,forward,12.75,0.0,13
+Daniel Bragança,1014980,Sporting Lisbon,midfielder,10.183333333333334,2.5,13
+Max Dowman,1635773,Arsenal,midfielder,10.13,2.5,13
+Kai Havertz,749736,Arsenal,midfielder,9.483333333333334,2.5,12
+Cristhian Mosquera,1298907,Arsenal,defender,1.15,10.0,11
+Geny Catamo,1088753,Sporting Lisbon,forward,9.975,0.0,10
+Luis Suárez,792303,Sporting Lisbon,forward,8.333333333333332,0.0,8
+Gabriel Jesus,576165,Arsenal,forward,9.441666666666666,-2.5,7
+Gabriel Martinelli,1021586,Arsenal,forward,6.666666666666666,0.0,7
+Souleymane Faye,1107257,Sporting Lisbon,forward,5.0,0.0,5
+Flávio Gonçalves,1691190,Sporting Lisbon,forward,5.0,0.0,5
+Leandro Trossard,318615,Arsenal,forward,6.333333333333332,-2.5,4
+Geovany Quenda,1530314,Sporting Lisbon,forward,5.591666666666667,-2.5,3
+Ben White,776151,Arsenal,defender,3.0,0.0,3
+Ricardo Mangas,824655,Sporting Lisbon,defender,3.0,0.0,3
+Zeno Debast,1232172,Sporting Lisbon,defender,3.0,0.0,3
+Myles Lewis-Skelly,1406436,Arsenal,defender,3.0,0.0,3
+Marli Salmon,1787525,Arsenal,defender,3.0,0.0,3
+Christian Nørgaard,266520,Arsenal,midfielder,3.0,0.0,3
+Giorgi Kochorashvili,953958,Sporting Lisbon,midfielder,3.0,0.0,3
+Harrison Dudziak,1580550,Arsenal,midfielder,3.0,0.0,3
+Salvador Blopa,1712326,Sporting Lisbon,midfielder,3.0,0.0,3
+Rafael Nel,1525416,Sporting Lisbon,forward,5.166666666666667,-2.5,3
+Arsenal Keepers,9825,Arsenal,goalkeeper,17.16,18.0,35
+Sporting Lisbon Keepers,9768,Sporting Lisbon,goalkeeper,15.16,18.0,33

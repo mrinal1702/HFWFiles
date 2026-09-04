@@ -1,0 +1,169 @@
+{
+  "team_name": "Uzbekistan",
+  "team_id": 8700,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8700/squad/uzbekistan",
+  "players": [
+    {
+      "player_id": 34520,
+      "player_name": "Fabio Cannavaro",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/34520/fabio-cannavaro"
+    },
+    {
+      "player_id": 251915,
+      "player_name": "Igor Sergeev",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/251915/igor-sergeev"
+    },
+    {
+      "player_id": 431169,
+      "player_name": "Jamshid Iskandarov",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/431169/jamshid-iskandarov"
+    },
+    {
+      "player_id": 533382,
+      "player_name": "Jaloliddin Masharipov",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/533382/jaloliddin-masharipov"
+    },
+    {
+      "player_id": 589585,
+      "player_name": "Farrukh Sayfiev",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/589585/farrukh-sayfiev"
+    },
+    {
+      "player_id": 619508,
+      "player_name": "Dostonbek Khamdamov",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/619508/dostonbek-khamdamov"
+    },
+    {
+      "player_id": 619513,
+      "player_name": "Eldor Shomurodov",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/619513/eldor-shomurodov"
+    },
+    {
+      "player_id": 619697,
+      "player_name": "Odiljon Khamrobekov",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/619697/odildzhon-khamrobekov"
+    },
+    {
+      "player_id": 619700,
+      "player_name": "Utkir Yusupov",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/619700/utkir-yusupov"
+    },
+    {
+      "player_id": 624405,
+      "player_name": "Otabek Shukurov",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/624405/otabek-shukurov"
+    },
+    {
+      "player_id": 629823,
+      "player_name": "Aziz G'aniev",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/629823/azizjon-ganiev"
+    },
+    {
+      "player_id": 643624,
+      "player_name": "Rustam Ashurmatov",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/643624/rustamjon-ashurmatov"
+    },
+    {
+      "player_id": 643639,
+      "player_name": "Botirali Ergashev",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/643639/botirali-ergashev"
+    },
+    {
+      "player_id": 922298,
+      "player_name": "Umar Eshmuradov",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/922298/umar-eshmuradov"
+    },
+    {
+      "player_id": 929168,
+      "player_name": "Akmal Mozgovoy",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/929168/akmal-mozgovoy"
+    },
+    {
+      "player_id": 933051,
+      "player_name": "Azizbek Amonov",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/933051/azizbek-amonov"
+    },
+    {
+      "player_id": 940778,
+      "player_name": "Khoziakbar Alidzhanov",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/940778/khoziakbar-alidzhanov"
+    },
+    {
+      "player_id": 1029597,
+      "player_name": "Avazbek Ulasmaliev",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1029597/avazbek-ulasmaliev"
+    },
+    {
+      "player_id": 1057486,
+      "player_name": "Oston Urunov",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/1057486/oston-urunov"
+    },
+    {
+      "player_id": 1249993,
+      "player_name": "Abbosbek Fayzullayev",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1249993/abbosbek-fayzullayev"
+    },
+    {
+      "player_id": 1258316,
+      "player_name": "Sherzod Nasrulloev",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1258316/sherzod-nasrulloev"
+    },
+    {
+      "player_id": 1259187,
+      "player_name": "Abduvohid Nematov",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1259187/abduvohid-nematov"
+    },
+    {
+      "player_id": 1294120,
+      "player_name": "Abdulla Abdullaev",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1294120/abdulla-abdullaev"
+    },
+    {
+      "player_id": 1362998,
+      "player_name": "Abdukodir Khusanov",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1362998/abdukodir-khusanov"
+    },
+    {
+      "player_id": 1477513,
+      "player_name": "Jakhongir Urozov",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1477513/jakhongir-urozov"
+    },
+    {
+      "player_id": 1477517,
+      "player_name": "Sherzod Esanov",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/1477517/sherzod-esanov"
+    },
+    {
+      "player_id": 1898281,
+      "player_name": "Bekhruz Karimov",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1898281/behruzjon-karimov"
+    }
+  ]
+}

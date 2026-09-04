@@ -1,0 +1,169 @@
+{
+  "team_name": "Turkiye",
+  "team_id": 6595,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6595/squad/turkiye",
+  "players": [
+    {
+      "player_id": 30286,
+      "player_name": "Vincenzo Montella",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/30286/vincenzo-montella"
+    },
+    {
+      "player_id": 150372,
+      "player_name": "Mert Günok",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/150372/mert-gunok"
+    },
+    {
+      "player_id": 291399,
+      "player_name": "Abdülkerim Bardakci",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/291399/abdulkerim-bardakci"
+    },
+    {
+      "player_id": 304733,
+      "player_name": "Hakan Çalhanoglu",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/304733/hakan-calhanoglu"
+    },
+    {
+      "player_id": 316544,
+      "player_name": "Irfan Kahveci",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/316544/irfan-kahveci"
+    },
+    {
+      "player_id": 424380,
+      "player_name": "Samet Akaydin",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/424380/samet-akaydin"
+    },
+    {
+      "player_id": 441164,
+      "player_name": "Kaan Ayhan",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/441164/kaan-ayhan"
+    },
+    {
+      "player_id": 602261,
+      "player_name": "Caglar Söyüncü",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/602261/caglar-soyuncu"
+    },
+    {
+      "player_id": 603669,
+      "player_name": "Ugurcan Çakir",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/603669/ugurcan-cakir"
+    },
+    {
+      "player_id": 738064,
+      "player_name": "Salih Özcan",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/738064/salih-ozcan"
+    },
+    {
+      "player_id": 774448,
+      "player_name": "Ferdi Kadioglu",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/774448/ferdi-kadioglu"
+    },
+    {
+      "player_id": 823078,
+      "player_name": "Merih Demiral",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/823078/merih-demiral"
+    },
+    {
+      "player_id": 845990,
+      "player_name": "Ozan Kabak",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/845990/ozan-kabak"
+    },
+    {
+      "player_id": 845991,
+      "player_name": "Yunus Akgün",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/845991/yunus-akgun"
+    },
+    {
+      "player_id": 866967,
+      "player_name": "Altay Bayindir",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/866967/altay-bayindir"
+    },
+    {
+      "player_id": 867225,
+      "player_name": "Zeki Çelik",
+      "position": "RWB",
+      "href": "https://www.fotmob.com/en-GB/players/867225/zeki-celik"
+    },
+    {
+      "player_id": 890232,
+      "player_name": "Baris Alper Yilmaz",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/890232/baris-alper-yilmaz"
+    },
+    {
+      "player_id": 904098,
+      "player_name": "Mert Müldür",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/904098/mert-muldur"
+    },
+    {
+      "player_id": 935409,
+      "player_name": "Orkun Kökcü",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/935409/orkun-kokcu"
+    },
+    {
+      "player_id": 1041660,
+      "player_name": "Eren Elmali",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1041660/eren-elmali"
+    },
+    {
+      "player_id": 1092015,
+      "player_name": "Oguz Aydin",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1092015/oguz-aydin"
+    },
+    {
+      "player_id": 1117570,
+      "player_name": "Kerem Aktürkoglu",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1117570/kerem-akturkoglu"
+    },
+    {
+      "player_id": 1183589,
+      "player_name": "Ismail Yüksek",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1183589/ismail-yuksek"
+    },
+    {
+      "player_id": 1253890,
+      "player_name": "Arda Güler",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1253890/arda-guler"
+    },
+    {
+      "player_id": 1367924,
+      "player_name": "Can Uzun",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1367924/can-uzun"
+    },
+    {
+      "player_id": 1406300,
+      "player_name": "Deniz Gül",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1406300/deniz-gul"
+    },
+    {
+      "player_id": 1412132,
+      "player_name": "Kenan Yildiz",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1412132/kenan-yildiz"
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # How Football Works — Gameweek Flow & Gameplay Logic
 
+> **Superseded for ops:** use [`OPS_INDEX.md`](./OPS_INDEX.md), especially [`OPS_BIDDING_AND_DEADLINES.md`](./OPS_BIDDING_AND_DEADLINES.md) and [`OPS_GAMEWEEK_LOCK.md`](./OPS_GAMEWEEK_LOCK.md). This file is kept for narrative context; some earlier “snapshot TBD” wording is obsolete — `gameweek_squads` is live.
+
 Last updated: June 2026
 
 This document describes the full game cycle for the HFW online auction. It covers how gameweeks work, what happens between them, and which operations are done via the front end vs. the back end (SQL / Cursor agent).

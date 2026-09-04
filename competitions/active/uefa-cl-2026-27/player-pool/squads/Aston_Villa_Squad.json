@@ -1,0 +1,175 @@
+{
+  "team_name": "Aston Villa",
+  "team_id": 10252,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/10252/squad/aston-villa",
+  "players": [
+    {
+      "player_id": 96940,
+      "player_name": "Unai Emery",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/96940/unai-emery"
+    },
+    {
+      "player_id": 195782,
+      "player_name": "Marco Bizot",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/195782/marco-bizot"
+    },
+    {
+      "player_id": 215384,
+      "player_name": "Ross Barkley",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/215384/ross-barkley"
+    },
+    {
+      "player_id": 258269,
+      "player_name": "Victor Nilsson Lindelöf",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/258269/victor-nilsson-lindelof"
+    },
+    {
+      "player_id": 268375,
+      "player_name": "Emiliano Martínez",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/268375/emiliano-martinez"
+    },
+    {
+      "player_id": 343748,
+      "player_name": "Leon Goretzka",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/343748/leon-goretzka"
+    },
+    {
+      "player_id": 356406,
+      "player_name": "John McGinn",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/356406/john-mcginn"
+    },
+    {
+      "player_id": 419664,
+      "player_name": "Tyrone Mings",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/419664/tyrone-mings"
+    },
+    {
+      "player_id": 540088,
+      "player_name": "Ollie Watkins",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/540088/ollie-watkins"
+    },
+    {
+      "player_id": 610184,
+      "player_name": "Emiliano Buendía",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/610184/emiliano-buendia"
+    },
+    {
+      "player_id": 671331,
+      "player_name": "Leon Bailey",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/671331/leon-bailey"
+    },
+    {
+      "player_id": 729731,
+      "player_name": "Matty Cash",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/729731/matty-cash"
+    },
+    {
+      "player_id": 749661,
+      "player_name": "Tammy Abraham",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/749661/tammy-abraham"
+    },
+    {
+      "player_id": 760320,
+      "player_name": "Aaron Wan-Bissaka",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/760320/aaron-wan-bissaka"
+    },
+    {
+      "player_id": 792645,
+      "player_name": "Pau Torres",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/792645/pau-torres"
+    },
+    {
+      "player_id": 816325,
+      "player_name": "Boubacar Kamara",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/816325/boubacar-kamara"
+    },
+    {
+      "player_id": 966026,
+      "player_name": "Ian Maatsen",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/966026/ian-maatsen"
+    },
+    {
+      "player_id": 1051097,
+      "player_name": "Matteo Ruggeri",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1051097/matteo-ruggeri"
+    },
+    {
+      "player_id": 1053679,
+      "player_name": "Zion Suzuki",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1053679/zion-suzuki"
+    },
+    {
+      "player_id": 1174672,
+      "player_name": "João Gomes",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1174672/joao-gomes"
+    },
+    {
+      "player_id": 1185748,
+      "player_name": "Amadou Onana",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1185748/amadou-onana"
+    },
+    {
+      "player_id": 1190033,
+      "player_name": "Lamare Bogarde",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1190033/lamare-bogarde"
+    },
+    {
+      "player_id": 1203665,
+      "player_name": "Alejandro Garnacho",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1203665/alejandro-garnacho"
+    },
+    {
+      "player_id": 1520063,
+      "player_name": "Johan Manzambi",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1520063/johan-manzambi"
+    },
+    {
+      "player_id": 1607333,
+      "player_name": "George Hemmings",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1607333/george-hemmings"
+    },
+    {
+      "player_id": 1656860,
+      "player_name": "Alysson Edward",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1656860/alysson-edward"
+    },
+    {
+      "player_id": 1714552,
+      "player_name": "Modou Kéba Cissé",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1714552/modou-keba-cisse"
+    },
+    {
+      "player_id": 1729841,
+      "player_name": "Brian Madjo",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1729841/brian-madjo"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "team_name": "Morocco",
+  "team_id": 6262,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6262/squad/morocco",
+  "players": [
+    {
+      "player_id": 340020,
+      "player_name": "Yassine Bounou",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/340020/yassine-bounou"
+    },
+    {
+      "player_id": 573787,
+      "player_name": "Munir",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/573787/munir-el-kajoui"
+    },
+    {
+      "player_id": 593116,
+      "player_name": "Sofyan Amrabat",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/593116/sofyan-amrabat"
+    },
+    {
+      "player_id": 617310,
+      "player_name": "Nayef Aguerd",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/617310/nayef-aguerd"
+    },
+    {
+      "player_id": 696443,
+      "player_name": "Issa Diop",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/696443/issa-diop"
+    },
+    {
+      "player_id": 750027,
+      "player_name": "Brahim Díaz",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/750027/brahim-diaz"
+    },
+    {
+      "player_id": 770881,
+      "player_name": "Achraf Hakimi",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/770881/achraf-hakimi"
+    },
+    {
+      "player_id": 775539,
+      "player_name": "Noussair Mazraoui",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/775539/noussair-mazraoui"
+    },
+    {
+      "player_id": 884382,
+      "player_name": "Ayoub El Kaabi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/884382/ayoub-el-kaabi"
+    },
+    {
+      "player_id": 885288,
+      "player_name": "Ahmed Tagnaouti",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/885288/ahmed-reda-tagnaouti"
+    },
+    {
+      "player_id": 909908,
+      "player_name": "Youssef Belammari",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/909908/youssef-belammari"
+    },
+    {
+      "player_id": 988749,
+      "player_name": "Soufiane Rahimi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/988749/soufiane-rahimi"
+    },
+    {
+      "player_id": 1050838,
+      "player_name": "Anass Salah-Eddine",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1050838/anass-salah-eddine"
+    },
+    {
+      "player_id": 1073143,
+      "player_name": "Azzedine Ounahi",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1073143/azzedine-ounahi"
+    },
+    {
+      "player_id": 1180288,
+      "player_name": "Ismael Saibari",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1180288/ismael-saibari"
+    },
+    {
+      "player_id": 1187506,
+      "player_name": "Chadi Riad",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1187506/chadi-riad"
+    },
+    {
+      "player_id": 1209399,
+      "player_name": "Abdessamad Ezzalzouli",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1209399/abde-ezzalzouli"
+    },
+    {
+      "player_id": 1274060,
+      "player_name": "Neil El Aynaoui",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1274060/neil-el-aynaoui"
+    },
+    {
+      "player_id": 1287871,
+      "player_name": "Zakaria El Ouahdi",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1287871/zakaria-el-ouahdi"
+    },
+    {
+      "player_id": 1298186,
+      "player_name": "Redouane Halhal",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1298186/redouane-halhal"
+    },
+    {
+      "player_id": 1340895,
+      "player_name": "Bilal El Khannouss",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1340895/bilal-el-khannouss"
+    },
+    {
+      "player_id": 1368654,
+      "player_name": "Chemsdine Talbi",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1368654/chemsdine-talbi"
+    },
+    {
+      "player_id": 1561552,
+      "player_name": "Ayyoub Bouaddi",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1561552/ayyoub-bouaddi"
+    },
+    {
+      "player_id": 1598170,
+      "player_name": "Samir El Mourabet",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1598170/samir-el-mourabet"
+    },
+    {
+      "player_id": 1603755,
+      "player_name": "Gessime Yassine",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1603755/gessime-yassine"
+    },
+    {
+      "player_id": 1680173,
+      "player_name": "Ayoube Amaimouni-Echghouyab",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1680173/ayoube-amaimouni-echghouyab"
+    },
+    {
+      "player_id": 1816954,
+      "player_name": "Mohamed Ouahbi",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/1816954/mohamed-ouahbi"
+    }
+  ]
+}

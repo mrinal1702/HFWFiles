@@ -1,0 +1,169 @@
+{
+  "team_name": "Iran",
+  "team_id": 6711,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6711/squad/iran",
+  "players": [
+    {
+      "player_id": 117222,
+      "player_name": "Ehsan Hajisafi",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/117222/ehsan-haji-safi"
+    },
+    {
+      "player_id": 431418,
+      "player_name": "Hossein Hosseini",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/431418/hossein-hosseini"
+    },
+    {
+      "player_id": 466890,
+      "player_name": "Alireza Jahanbakhsh",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/466890/alireza-jahanbakhsh"
+    },
+    {
+      "player_id": 500637,
+      "player_name": "Hossein Kanani",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/500637/hossein-kanaani"
+    },
+    {
+      "player_id": 504132,
+      "player_name": "Amir Ghalenoei",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/504132/amir-ghalenoei"
+    },
+    {
+      "player_id": 505281,
+      "player_name": "Saeid Ezatolahi",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/505281/saeid-ezatolahi"
+    },
+    {
+      "player_id": 505313,
+      "player_name": "Alireza Beiranvand",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/505313/alireza-beiranvand"
+    },
+    {
+      "player_id": 505385,
+      "player_name": "Roozbeh Cheshmi",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/505385/roozbeh-cheshmi"
+    },
+    {
+      "player_id": 505959,
+      "player_name": "Ramin Rezaeian",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/505959/ramin-rezaeian"
+    },
+    {
+      "player_id": 505960,
+      "player_name": "Ali Alipour",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/505960/ali-alipour"
+    },
+    {
+      "player_id": 511397,
+      "player_name": "Shoja Khalilzadeh",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/511397/shoja-khalilzadeh"
+    },
+    {
+      "player_id": 532220,
+      "player_name": "Saman Ghoddos",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/532220/saman-ghoddos"
+    },
+    {
+      "player_id": 619506,
+      "player_name": "Mehdi Taremi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/619506/mehdi-taremi"
+    },
+    {
+      "player_id": 621519,
+      "player_name": "Mehdi Torabi",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/621519/mehdi-torabi"
+    },
+    {
+      "player_id": 630459,
+      "player_name": "Milad Mohammadi",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/630459/milad-mohammadi"
+    },
+    {
+      "player_id": 641121,
+      "player_name": "Shahriyar Moghanloo",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/641121/shahriar-moghanlou"
+    },
+    {
+      "player_id": 848314,
+      "player_name": "Mehdi Ghayedi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/848314/mehdi-ghayedi"
+    },
+    {
+      "player_id": 872575,
+      "player_name": "Ali Nemati",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/872575/ali-nemati"
+    },
+    {
+      "player_id": 872590,
+      "player_name": "Payam Niazmand",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/872590/payam-niazmand"
+    },
+    {
+      "player_id": 892709,
+      "player_name": "Dennis Eckert",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/892709/dennis-eckert"
+    },
+    {
+      "player_id": 1031319,
+      "player_name": "Amirhossein Hosseinzadeh",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1031319/amirhossein-hosseinzadeh"
+    },
+    {
+      "player_id": 1073012,
+      "player_name": "Mohammad Mohebi",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1073012/mohammad-mohebi"
+    },
+    {
+      "player_id": 1221526,
+      "player_name": "Saleh Hardani",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1221526/saleh-hardani"
+    },
+    {
+      "player_id": 1350138,
+      "player_name": "Arya Yousefi",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1350138/aria-yousefi"
+    },
+    {
+      "player_id": 1420509,
+      "player_name": "Mohammad Ghorbani",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1420509/mohammad-ghorbani"
+    },
+    {
+      "player_id": 1583232,
+      "player_name": "Amir Mohammad Razzaghinia",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1583232/amirmohammad-razaghinia"
+    },
+    {
+      "player_id": 1729681,
+      "player_name": "Danial Eiri",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1729681/danial-eiri"
+    }
+  ]
+}

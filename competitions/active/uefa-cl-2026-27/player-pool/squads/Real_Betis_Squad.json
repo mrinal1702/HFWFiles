@@ -1,0 +1,217 @@
+{
+  "team_name": "Real Betis",
+  "team_id": 8603,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8603/squad/real-betis",
+  "players": [
+    {
+      "player_id": 78591,
+      "player_name": "Manuel Pellegrini",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/78591/manuel-pellegrini"
+    },
+    {
+      "player_id": 115591,
+      "player_name": "Ricardo Rodríguez",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/115591/ricardo-rodriguez"
+    },
+    {
+      "player_id": 169756,
+      "player_name": "Adrián",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/169756/adrian"
+    },
+    {
+      "player_id": 191315,
+      "player_name": "Isco",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/191315/isco"
+    },
+    {
+      "player_id": 195305,
+      "player_name": "Marc Bartra",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/195305/marc-bartra"
+    },
+    {
+      "player_id": 201939,
+      "player_name": "Cédric Bakambu",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/201939/cedric-bakambu"
+    },
+    {
+      "player_id": 420568,
+      "player_name": "Diego Llorente",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/420568/diego-llorente"
+    },
+    {
+      "player_id": 427438,
+      "player_name": "Héctor Bellerín",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/427438/hector-bellerin"
+    },
+    {
+      "player_id": 604126,
+      "player_name": "Giovani Lo Celso",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/604126/giovani-lo-celso"
+    },
+    {
+      "player_id": 640220,
+      "player_name": "Marc Roca",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/640220/marc-roca"
+    },
+    {
+      "player_id": 676533,
+      "player_name": "Aitor Ruibal",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/676533/aitor-ruibal"
+    },
+    {
+      "player_id": 683450,
+      "player_name": "Pablo Fornals",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/683450/pablo-fornals"
+    },
+    {
+      "player_id": 743192,
+      "player_name": "Júnior Firpo",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/743192/junior-firpo"
+    },
+    {
+      "player_id": 750028,
+      "player_name": "Fran García",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/750028/fran-garcia"
+    },
+    {
+      "player_id": 852071,
+      "player_name": "Juan Hernández",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/852071/juan-hernandez"
+    },
+    {
+      "player_id": 895954,
+      "player_name": "Álvaro Fidalgo",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/895954/alvaro-fidalgo"
+    },
+    {
+      "player_id": 942365,
+      "player_name": "Troy Parrott",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/942365/troy-parrott"
+    },
+    {
+      "player_id": 967622,
+      "player_name": "Antony",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/967622/antony"
+    },
+    {
+      "player_id": 999171,
+      "player_name": "Álvaro Vallés",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/999171/alvaro-valles"
+    },
+    {
+      "player_id": 1022354,
+      "player_name": "Diego Conde",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1022354/diego-conde"
+    },
+    {
+      "player_id": 1072200,
+      "player_name": "Rodrigo Riquelme",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1072200/rodrigo-riquelme"
+    },
+    {
+      "player_id": 1082930,
+      "player_name": "Iker Losada",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1082930/iker-losada"
+    },
+    {
+      "player_id": 1188375,
+      "player_name": "Natan",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1188375/natan"
+    },
+    {
+      "player_id": 1209399,
+      "player_name": "Abdessamad Ezzalzouli",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1209399/abdessamad-ezzalzouli"
+    },
+    {
+      "player_id": 1315711,
+      "player_name": "Nelson Deossa",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1315711/nelson-deossa"
+    },
+    {
+      "player_id": 1338016,
+      "player_name": "Valentín Gómez",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1338016/valentin-gomez"
+    },
+    {
+      "player_id": 1436133,
+      "player_name": "Facundo Bernal",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1436133/facundo-bernal"
+    },
+    {
+      "player_id": 1580220,
+      "player_name": "Yanis Senhadji",
+      "position": "forward",
+      "href": "https://www.fotmob.com/en-GB/players/1580220/yanis-senhadji"
+    },
+    {
+      "player_id": 1580522,
+      "player_name": "Ángel Ortiz",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1580522/angel-ortiz"
+    },
+    {
+      "player_id": 1648518,
+      "player_name": "Gonzalo Petit",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1648518/gonzalo-petit"
+    },
+    {
+      "player_id": 1662379,
+      "player_name": "Pablo García",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1662379/pablo-garcia"
+    },
+    {
+      "player_id": 1693392,
+      "player_name": "Ismael Barea",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1693392/ismael-barea"
+    },
+    {
+      "player_id": 1726794,
+      "player_name": "Dylan Vanney",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1726794/dylan-vanney"
+    },
+    {
+      "player_id": 1841015,
+      "player_name": "Carlos de Roa",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1841015/carlos-de-roa"
+    },
+    {
+      "player_id": 1928170,
+      "player_name": "Alvaro de Pablo",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/1928170/alvaro-de-pablo"
+    }
+  ]
+}

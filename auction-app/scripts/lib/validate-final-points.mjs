@@ -31,13 +31,14 @@ export function validateFinalPointsRows(rows) {
 
     const stats = Number(row.stats_score);
     const endow = Number(row.endowment_score);
+    const shootout = Number(row.shootout_score ?? 0);
     const final = Number(row.score);
     if (!Number.isFinite(stats) || !Number.isFinite(endow) || !Number.isFinite(final)) {
       errors.push(`${row.player_name} [${row.source_file}]: non-numeric score components`);
       continue;
     }
 
-    const rawTotal = stats + endow;
+    const rawTotal = stats + endow + shootout;
     const expected = Math.max(0, roundLikePython(rawTotal));
 
     if (rawTotal > 0.01 && final === 0) {

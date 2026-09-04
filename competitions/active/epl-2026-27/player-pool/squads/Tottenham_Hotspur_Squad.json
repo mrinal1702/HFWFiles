@@ -1,0 +1,235 @@
+{
+  "team_name": "Tottenham Hotspur",
+  "team_id": 8586,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8586/squad/tottenham-hotspur",
+  "players": [
+    {
+      "player_id": 42044,
+      "player_name": "Roberto De Zerbi",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/42044/roberto-de-zerbi"
+    },
+    {
+      "player_id": 72241,
+      "player_name": "Martin Dúbravka",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/72241/martin-dubravka"
+    },
+    {
+      "player_id": 276121,
+      "player_name": "Ben Davies",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/276121/ben-davies"
+    },
+    {
+      "player_id": 357880,
+      "player_name": "Andrew Robertson",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/357880/andrew-robertson"
+    },
+    {
+      "player_id": 493165,
+      "player_name": "James Maddison",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/493165/james-maddison"
+    },
+    {
+      "player_id": 538501,
+      "player_name": "Guglielmo Vicario",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/538501/guglielmo-vicario"
+    },
+    {
+      "player_id": 591734,
+      "player_name": "Dominic Solanke",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/591734/dominic-solanke"
+    },
+    {
+      "player_id": 620618,
+      "player_name": "Rodrigo Bentancur",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/620618/rodrigo-bentancur"
+    },
+    {
+      "player_id": 654908,
+      "player_name": "Richarlison",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/654908/richarlison"
+    },
+    {
+      "player_id": 754126,
+      "player_name": "Kevin Danso",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/754126/kevin-danso"
+    },
+    {
+      "player_id": 785411,
+      "player_name": "Marcos Senesi",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/785411/marcos-senesi"
+    },
+    {
+      "player_id": 789066,
+      "player_name": "Cristian Romero",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/789066/cristian-romero"
+    },
+    {
+      "player_id": 822237,
+      "player_name": "Manor Solomon",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/822237/manor-solomon"
+    },
+    {
+      "player_id": 862993,
+      "player_name": "Brandon Austin",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/862993/brandon-austin"
+    },
+    {
+      "player_id": 867414,
+      "player_name": "Sandro Tonali",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/867414/sandro-tonali"
+    },
+    {
+      "player_id": 891743,
+      "player_name": "Mohammed Kudus",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/891743/mohammed-kudus"
+    },
+    {
+      "player_id": 894803,
+      "player_name": "Djed Spence",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/894803/djed-spence"
+    },
+    {
+      "player_id": 935379,
+      "player_name": "Dejan Kulusevski",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/935379/dejan-kulusevski"
+    },
+    {
+      "player_id": 941573,
+      "player_name": "Pedro Porro",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/941573/pedro-porro"
+    },
+    {
+      "player_id": 966027,
+      "player_name": "Conor Gallagher",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/966027/conor-gallagher"
+    },
+    {
+      "player_id": 974618,
+      "player_name": "Jan Paul van Hecke",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/974618/jan-paul-van-hecke"
+    },
+    {
+      "player_id": 1052898,
+      "player_name": "Destiny Udogie",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1052898/destiny-udogie"
+    },
+    {
+      "player_id": 1097466,
+      "player_name": "Micky van de Ven",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1097466/micky-van-de-ven"
+    },
+    {
+      "player_id": 1107280,
+      "player_name": "Pape Sarr",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1107280/pape-sarr"
+    },
+    {
+      "player_id": 1113753,
+      "player_name": "Dane Scarlett",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1113753/dane-scarlett"
+    },
+    {
+      "player_id": 1173787,
+      "player_name": "Xavi Simons",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1173787/xavi-simons"
+    },
+    {
+      "player_id": 1288111,
+      "player_name": "Mathys Tel",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1288111/mathys-tel"
+    },
+    {
+      "player_id": 1290962,
+      "player_name": "Ashley Phillips",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1290962/ashley-phillips"
+    },
+    {
+      "player_id": 1323305,
+      "player_name": "Archie Gray",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1323305/archie-gray"
+    },
+    {
+      "player_id": 1341387,
+      "player_name": "Wilson Odobert",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1341387/wilson-odobert"
+    },
+    {
+      "player_id": 1341475,
+      "player_name": "Antonín Kinsky",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1341475/antonin-kinsky"
+    },
+    {
+      "player_id": 1356312,
+      "player_name": "Mateus Fernandes",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1356312/mateus-fernandes"
+    },
+    {
+      "player_id": 1386775,
+      "player_name": "Lucas Bergvall",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1386775/lucas-bergvall"
+    },
+    {
+      "player_id": 1407250,
+      "player_name": "Mikey Moore",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1407250/mikey-moore"
+    },
+    {
+      "player_id": 1431275,
+      "player_name": "Callum Olusesi",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1431275/callum-olusesi"
+    },
+    {
+      "player_id": 1609329,
+      "player_name": "Min-Hyeok Yang",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1609329/min-hyeok-yang"
+    },
+    {
+      "player_id": 1636513,
+      "player_name": "Souza",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1636513/souza"
+    },
+    {
+      "player_id": 1693398,
+      "player_name": "Junai Byfield",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1693398/junai-byfield"
+    }
+  ]
+}

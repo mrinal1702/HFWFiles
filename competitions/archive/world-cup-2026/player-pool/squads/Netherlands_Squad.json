@@ -1,0 +1,169 @@
+{
+  "team_name": "Netherlands",
+  "team_id": 6708,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6708/squad/netherlands",
+  "players": [
+    {
+      "player_id": 78673,
+      "player_name": "Ronald Koeman",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/78673/ronald-koeman"
+    },
+    {
+      "player_id": 198559,
+      "player_name": "Marten de Roon",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/198559/marten-de-roon"
+    },
+    {
+      "player_id": 209405,
+      "player_name": "Virgil van Dijk",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/209405/virgil-van-dijk"
+    },
+    {
+      "player_id": 303824,
+      "player_name": "Memphis Depay",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/303824/memphis-depay"
+    },
+    {
+      "player_id": 330643,
+      "player_name": "Mark Flekken",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/330643/mark-flekken"
+    },
+    {
+      "player_id": 351999,
+      "player_name": "Wout Weghorst",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/351999/wout-weghorst"
+    },
+    {
+      "player_id": 417068,
+      "player_name": "Nathan Aké",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/417068/nathan-ake"
+    },
+    {
+      "player_id": 593118,
+      "player_name": "Denzel Dumfries",
+      "position": "RM",
+      "href": "https://www.fotmob.com/en-GB/players/593118/denzel-dumfries"
+    },
+    {
+      "player_id": 638622,
+      "player_name": "Frenkie de Jong",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/638622/frenkie-de-jong"
+    },
+    {
+      "player_id": 660301,
+      "player_name": "Donyell Malen",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/660301/donyell-malen"
+    },
+    {
+      "player_id": 774947,
+      "player_name": "Guus Til",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/774947/guus-til"
+    },
+    {
+      "player_id": 794253,
+      "player_name": "Justin Kluivert",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/794253/justin-kluivert"
+    },
+    {
+      "player_id": 806552,
+      "player_name": "Cody Gakpo",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/806552/cody-gakpo"
+    },
+    {
+      "player_id": 837341,
+      "player_name": "Noa Lang",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/837341/noa-lang"
+    },
+    {
+      "player_id": 866516,
+      "player_name": "Teun Koopmeiners",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/866516/teun-koopmeiners"
+    },
+    {
+      "player_id": 868344,
+      "player_name": "Tijjani Reijnders",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/868344/tijjani-reijnders"
+    },
+    {
+      "player_id": 940446,
+      "player_name": "Brian Brobbey",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/940446/brian-brobbey"
+    },
+    {
+      "player_id": 941213,
+      "player_name": "Crysencio Summerville",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/941213/crysencio-summerville"
+    },
+    {
+      "player_id": 942381,
+      "player_name": "Jurriën Timber",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/942381/jurrien-timber"
+    },
+    {
+      "player_id": 956683,
+      "player_name": "Ryan Gravenberch",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/956683/ryan-gravenberch"
+    },
+    {
+      "player_id": 970243,
+      "player_name": "Mats Wieffer",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/970243/mats-wieffer"
+    },
+    {
+      "player_id": 970563,
+      "player_name": "Quinten Timber",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/970563/quinten-timber"
+    },
+    {
+      "player_id": 974618,
+      "player_name": "Jan Paul van Hecke",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/974618/jan-paul-van-hecke"
+    },
+    {
+      "player_id": 1097466,
+      "player_name": "Micky van de Ven",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1097466/micky-van-de-ven"
+    },
+    {
+      "player_id": 1125720,
+      "player_name": "Robin Roefs",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1125720/robin-roefs"
+    },
+    {
+      "player_id": 1131987,
+      "player_name": "Bart Verbruggen",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1131987/bart-verbruggen"
+    },
+    {
+      "player_id": 1413846,
+      "player_name": "Jorrel Hato",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1413846/jorrel-hato"
+    }
+  ]
+}

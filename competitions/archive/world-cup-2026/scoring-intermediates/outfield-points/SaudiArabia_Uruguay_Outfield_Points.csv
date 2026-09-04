@@ -1,0 +1,45 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+729093,Mathías Olivera,5796,Uruguay,1,defender,41.21000000000001,3.0,3.0,47.21000000000001,90.0,1,1,5.0,52.21000000000001
+848600,Abdulelah Al Amri,7795,Saudi Arabia,1,defender,35.95,3.0,3.0,41.95,90.0,1,1,5.0,46.95
+1031656,Maxi Araújo,5796,Uruguay,1,defender,38.62,-0.5999999999999996,2.7,40.72,81.0,1,1,5.0,45.72
+465614,Guillermo Varela,5796,Uruguay,1,defender,31.369999999999997,3.0,3.0,37.37,90.0,1,1,5.0,42.37
+866373,Mohamed Kanno,7795,Saudi Arabia,2,midfielder,29.042000000000005,3.0,3.0,35.042,90.0,1,1,5.0,40.042
+620618,Rodrigo Bentancur,5796,Uruguay,2,midfielder,25.052000000000003,3.0,3.0,31.052000000000003,90.0,1,1,5.0,36.05200000000001
+1020026,Sebastián Cáceres,5796,Uruguay,1,defender,17.900000000000002,3.0,3.0,23.900000000000002,90.0,1,1,5.0,28.900000000000002
+1138003,Moteb Al-Harbi,7795,Saudi Arabia,1,defender,17.529999999999998,3.0,2.966666666666667,23.496666666666663,90.0,1,1,5.0,28.496666666666663
+1002617,Saud Abdulhamid,7795,Saudi Arabia,2,midfielder,16.936,3.0,2.966666666666667,22.90266666666667,90.0,1,1,5.0,27.90266666666667
+751198,Nicolás de la Cruz,5796,Uruguay,2,midfielder,19.631999999999998,3.0,0.6,23.232,18.0,1,0,4.5,27.732
+743533,Federico Valverde,5796,Uruguay,2,midfielder,16.788000000000004,0.7999999999999998,3.0,20.588000000000005,90.0,1,1,5.0,25.588000000000005
+1035614,Manuel Ugarte,5796,Uruguay,2,midfielder,16.468,3.0,2.4,21.868,72.0,0,1,3.0,24.868
+1032811,Federico Viñas,5796,Uruguay,3,forward,12.983333333333334,5.0,2.966666666666667,20.950000000000003,90.0,1,1,3.0,23.950000000000003
+848607,Hassan Al Tambakti,7795,Saudi Arabia,1,defender,12.200000000000001,3.0,3.0,18.200000000000003,90.0,1,1,5.0,23.200000000000003
+1235341,Musab Al-Juwayr,7795,Saudi Arabia,2,midfielder,10.975999999999999,3.0,2.1,16.076,63.0,1,0,7.0,23.076
+844226,Firas Al-Buraikan,7795,Saudi Arabia,3,forward,11.241666666666665,5.0,2.966666666666667,19.208333333333336,90.0,1,1,3.0,22.208333333333336
+823457,Abdullah Alkhaibari,7795,Saudi Arabia,2,midfielder,11.834,1.9,3.0,16.734,90.0,1,1,5.0,21.734
+1053963,Juan Sanabria,5796,Uruguay,1,defender,10.309999999999999,3.0,1.5,14.809999999999999,44.0,1,0,5.0,19.81
+840212,Agustín Canobbio,5796,Uruguay,3,forward,13.658333333333333,4.1,1.5,19.258333333333333,44.0,1,0,0.5,19.758333333333333
+307753,Salem Al-Dawsari,7795,Saudi Arabia,3,forward,7.874999999999999,5.0,3.0,15.875,90.0,1,1,3.0,18.875
+848612,Nasser Al-Dawsari,7795,Saudi Arabia,2,midfielder,13.724000000000004,3.0,0.9,17.624000000000002,27.0,0,1,0.5,18.124000000000002
+1543647,Mohammed Abu Al Shamat,7795,Saudi Arabia,2,midfielder,5.486,3.0,2.7,11.186,81.0,1,1,5.0,16.186
+950561,Darwin Núñez,5796,Uruguay,3,forward,6.4,5.0,1.5,12.9,46.0,0,1,0.0,12.9
+840184,Matías Viña,5796,Uruguay,1,defender,2.750000000000001,1.8,1.5,6.050000000000001,46.0,0,1,5.0,11.05
+941660,Brian Rodríguez,5796,Uruguay,3,forward,7.233333333333333,5.0,0.3,12.533333333333335,9.0,0,0,-2.5,10.033333333333335
+1401228,Nawaf Al-Boushail,7795,Saudi Arabia,1,defender,0.31000000000000005,3.0,0.3,3.61,9.0,0,0,5.0,8.61
+431215,Hasan Kadesh,7795,Saudi Arabia,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+474589,José Giménez,5796,Uruguay,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+640284,Ali Lajami,7795,Saudi Arabia,1,defender,8.0,3.0,0.03333333333333333,0.0,0.0,0,0,0.0,0.0
+848034,Santiago Bueno,5796,Uruguay,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+861661,Joaquín Piquerez,5796,Uruguay,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+910986,Ali Majrashi,7795,Saudi Arabia,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1095207,Ayman Yahya,7795,Saudi Arabia,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1232530,Jehad Thakri,7795,Saudi Arabia,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+697618,Alaa Hajji,7795,Saudi Arabia,2,midfielder,-0.6,3.0,0.03333333333333333,0.0,0.0,0,0,0.0,0.0
+1137909,Emiliano Martínez,5796,Uruguay,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1174962,Ziyad Aljohani,7795,Saudi Arabia,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+384407,Saleh Al-Shehri,7795,Saudi Arabia,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+401095,Rodrigo Aguirre,5796,Uruguay,3,forward,-0.125,5.0,0.03333333333333333,0.0,0.0,0,0,0.0,0.0
+619824,Sultan Mandash,7795,Saudi Arabia,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+909198,Abdullah Al-Hamdan,7795,Saudi Arabia,3,forward,1.875,5.0,0.03333333333333333,0.0,0.0,0,0,0.0,0.0
+1024928,Khalid Al Ghannam,7795,Saudi Arabia,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1070776,Rodrigo Zalazar,5796,Uruguay,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1073402,Facundo Pellistri,5796,Uruguay,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

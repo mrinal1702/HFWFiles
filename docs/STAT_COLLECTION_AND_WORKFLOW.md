@@ -142,7 +142,7 @@ Rule changes apply to **matches scored after the change** unless a gameweek is e
 **Example (Qatar 1–1 Switzerland, when scored with 2026-06 rules):** Remo Freuler `penalties_won = 1` → **+5** stat points; Breel Embolo gets **+10** via `goals` for the converted pen; Freuler gets **no** assist from FotMob `assists`.
 
 ### Defender rules worth remembering
-- **Clearances**: weight applied once to `(clearances + headed_clearance)`.
+- **Clearances**: scoring uses `clearances_total = clearances + headed_clearance` (unchanged). FotMob’s `headed_clearance` is a **subset** of `clearances` (e.g. 8 total, 5 headed — not 13). For **user-facing breakdowns only**, explain headed clearances at **2×** the foot-clearance rate (1.1 vs 2.2); mathematically equivalent to the sum formula above. No rescore.
 - **`errors_led_to_goal`**: −5 per event.
 - **`tackles_lost`**: −1.6 per FotMob **`dribbled_past`** (defender beaten by a dribble).
 - **`dribbles_lost`**: −0.8 per failed take-on (`dribbles_failed`).

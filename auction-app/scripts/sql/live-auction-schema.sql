@@ -85,3 +85,11 @@ create index if not exists idx_lapart_auction_id
 
 create index if not exists idx_lapart_user_id
   on live_auction_participants (user_id);
+
+-- Enforce at DB level that each player can only have one active (non-voided) sale
+-- at a time. This is a safety net on top of the application-level check in
+-- recordSaleAction — it prevents duplicate sales if two admin actions somehow
+-- submit simultaneously.
+create unique index if not exists live_auction_sales_active_player_unique
+  on live_auction_sales (player_id)
+  where is_voided = false;

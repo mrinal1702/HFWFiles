@@ -1,0 +1,15 @@
+{
+  "match_id": 5795363,
+  "home_team": "Arsenal",
+  "away_team": "Coventry City",
+  "source_url": "https://www.fotmob.com/en-GB/matches/coventry-vs-arsenal/2tttz6#5795363:tab=stats",
+  "json_path": "Matches_Raw/World Cup 2026/Arsenal_Vs_CoventryCity.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/coventry-vs-arsenal/2tttz6",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/coventry-vs-arsenal/2tttz6#5795363:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/coventry-vs-arsenal/2tttz6#5795363:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/coventry-vs-arsenal/2tttz6#5795363:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795363"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

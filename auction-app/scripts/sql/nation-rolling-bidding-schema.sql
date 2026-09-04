@@ -2,7 +2,7 @@
 -- Safe to re-run (IF NOT EXISTS / additive columns).
 -- Does NOT change existing auctions until bidding_deadline_mode = 'nation_rolling'.
 --
--- Run BEFORE: nation-rolling-bidding-rpc.sql, trial-8-setup.sql
+-- Run BEFORE: nation-rolling-bidding-rpc.sql (and any nation_rolling auction open scripts)
 
 -- ---------------------------------------------------------------------------
 -- 1) Auction mode columns

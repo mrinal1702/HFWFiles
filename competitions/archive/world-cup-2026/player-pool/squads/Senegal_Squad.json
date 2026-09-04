@@ -1,0 +1,169 @@
+{
+  "team_name": "Senegal",
+  "team_id": 6395,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6395/squad/senegal",
+  "players": [
+    {
+      "player_id": 33003,
+      "player_name": "Pape Thiaw",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/33003/pape-thiaw"
+    },
+    {
+      "player_id": 179410,
+      "player_name": "Idrissa Gana Gueye",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/179410/idrissa-gana-gueye"
+    },
+    {
+      "player_id": 210428,
+      "player_name": "Kalidou Koulibaly",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/210428/kalidou-koulibaly"
+    },
+    {
+      "player_id": 303339,
+      "player_name": "Sadio Mané",
+      "position": "LM",
+      "href": "https://www.fotmob.com/en-GB/players/303339/sadio-mane"
+    },
+    {
+      "player_id": 466436,
+      "player_name": "Mory Diaw",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/466436/mory-diaw"
+    },
+    {
+      "player_id": 588626,
+      "player_name": "Abdoulaye Seck",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/588626/abdoulaye-seck"
+    },
+    {
+      "player_id": 592102,
+      "player_name": "Moussa Niakhaté",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/592102/moussa-niakhate"
+    },
+    {
+      "player_id": 766574,
+      "player_name": "Yehvann Diouf",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/766574/yehvann-diouf"
+    },
+    {
+      "player_id": 771294,
+      "player_name": "Ismaïla Sarr",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/771294/ismaila-sarr"
+    },
+    {
+      "player_id": 773229,
+      "player_name": "Édouard Mendy",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/773229/edouard-mendy"
+    },
+    {
+      "player_id": 819972,
+      "player_name": "Cherif Ndiaye",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/819972/cherif-ndiaye"
+    },
+    {
+      "player_id": 837061,
+      "player_name": "Krépin Diatta",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/837061/krepin-diatta"
+    },
+    {
+      "player_id": 844544,
+      "player_name": "Pape Gueye",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/844544/pape-gueye"
+    },
+    {
+      "player_id": 872396,
+      "player_name": "Pathé Ciss",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/872396/pathe-ciss"
+    },
+    {
+      "player_id": 906945,
+      "player_name": "Ismail Jakobs",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/906945/ismail-jakobs"
+    },
+    {
+      "player_id": 965764,
+      "player_name": "Iliman Ndiaye",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/965764/iliman-ndiaye"
+    },
+    {
+      "player_id": 1107280,
+      "player_name": "Pape Sarr",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1107280/pape-sarr"
+    },
+    {
+      "player_id": 1197347,
+      "player_name": "Nicolas Jackson",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1197347/nicolas-jackson"
+    },
+    {
+      "player_id": 1230848,
+      "player_name": "Bamba Dieng",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1230848/bamba-dieng"
+    },
+    {
+      "player_id": 1254147,
+      "player_name": "Antoine Mendy",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1254147/antoine-mendy"
+    },
+    {
+      "player_id": 1285866,
+      "player_name": "Habib Diarra",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1285866/habib-diarra"
+    },
+    {
+      "player_id": 1426170,
+      "player_name": "Mamadou Sarr",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1426170/mamadou-sarr"
+    },
+    {
+      "player_id": 1434889,
+      "player_name": "Assane Diao",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1434889/assane-diao"
+    },
+    {
+      "player_id": 1436305,
+      "player_name": "Lamine Camara",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1436305/lamine-camara"
+    },
+    {
+      "player_id": 1451265,
+      "player_name": "Malick Diouf",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1451265/malick-diouf"
+    },
+    {
+      "player_id": 1593857,
+      "player_name": "Ibrahim Mbaye",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1593857/ibrahim-mbaye"
+    },
+    {
+      "player_id": 1798782,
+      "player_name": "Bara Ndiaye",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1798782/bara-ndiaye"
+    }
+  ]
+}

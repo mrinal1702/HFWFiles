@@ -1,0 +1,47 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+30893,Cristiano Ronaldo,8361,Portugal,3,forward,43.31666666666666,5.0,3.0,51.31666666666666,90.0,5,0,15.0,66.31666666666666
+422685,Bruno Fernandes,8361,Portugal,2,midfielder,36.742000000000004,1.9,3.0,41.642,90.0,5,0,15.0,56.642
+1158945,Nuno Mendes,8361,Portugal,1,defender,35.57000000000001,3.0,3.0,41.57000000000001,90.0,5,0,10.0,51.57000000000001
+614006,Rúben Dias,8361,Portugal,1,defender,29.0,0.6000000000000001,3.0,32.6,90.0,5,0,10.0,42.6
+361757,João Cancelo,8361,Portugal,1,defender,29.25,1.8,1.5,32.55,46.0,3,0,10.0,42.55
+1343750,Renato Veiga,8361,Portugal,1,defender,21.6,3.0,3.0,27.6,90.0,5,0,10.0,37.6
+794427,Joao Félix,8361,Portugal,3,forward,18.59166666666667,4.1,2.1,24.79166666666667,63.0,4,0,12.0,36.79166666666667
+1061249,Vitinha,8361,Portugal,2,midfielder,16.75,3.0,2.7666666666666666,22.516666666666666,83.0,4,0,13.0,35.516666666666666
+619513,Eldor Shomurodov,8700,Uzbekistan,3,forward,27.375,5.0,3.0,35.375,90.0,0,5,0.0,35.375
+1342757,João Neves,8361,Portugal,2,midfielder,13.288,3.0,2.533333333333333,18.821333333333335,76.0,4,0,13.0,31.821333333333335
+1185336,Francisco Conceição,8361,Portugal,2,midfielder,15.374000000000002,3.0,1.5,19.874000000000002,44.0,2,0,6.5,26.374000000000002
+848844,Rafael Leão,8361,Portugal,3,forward,18.075,4.1,0.23333333333333334,22.40833333333333,7.0,1,0,0.5,22.90833333333333
+1294120,Abdulla Abdullaev,8700,Uzbekistan,2,midfielder,22.118000000000002,1.9,3.0,27.018,90.0,0,5,-5.0,22.018
+843040,Pedro Neto,8361,Portugal,3,forward,3.916666666666666,5.0,1.5,10.416666666666666,46.0,3,0,9.0,19.416666666666664
+1249993,Abbosbek Fayzullayev,8700,Uzbekistan,2,midfielder,15.111999999999998,1.9,2.433333333333333,19.44533333333333,73.0,0,4,-3.0,16.44533333333333
+643624,Rustamjon Ashurmatov,8700,Uzbekistan,1,defender,25.29,3.0,3.0,31.29,90.0,0,5,-15.0,16.29
+470834,Nélson Semedo,8361,Portugal,1,defender,5.5,3.0,1.5,10.0,44.0,2,0,5.0,15.0
+1362998,Abdukodir Khusanov,8700,Uzbekistan,1,defender,23.57,3.0,3.0,29.57,90.0,0,5,-15.0,14.57
+488139,Bernardo Silva,8361,Portugal,2,midfielder,4.8260000000000005,3.0,0.4666666666666667,8.292666666666667,14.0,1,0,4.5,12.792666666666667
+629823,Azizjon Ganiev,8700,Uzbekistan,2,midfielder,12.190000000000001,1.9,3.0,17.090000000000003,90.0,0,5,-5.0,12.090000000000003
+624405,Otabek Shukurov,8700,Uzbekistan,2,midfielder,11.04,3.0,2.966666666666667,17.006666666666668,90.0,0,5,-5.0,12.006666666666668
+732282,Trincão,8361,Portugal,2,midfielder,2.968000000000001,3.0,0.9,6.868000000000001,27.0,1,0,4.5,11.368000000000002
+940778,Khoziakbar Alidzhanov,8700,Uzbekistan,1,defender,9.42,1.8,1.5,12.72,44.0,0,2,-5.0,7.720000000000001
+1898281,Behruzjon Karimov,8700,Uzbekistan,1,defender,20.33,-0.5999999999999996,2.966666666666667,22.696666666666665,90.0,0,5,-15.0,7.696666666666665
+251915,Igor Sergeev,8700,Uzbekistan,3,forward,1.275,5.0,0.5666666666666667,6.841666666666667,17.0,0,1,-2.5,4.341666666666667
+929168,Akmal Mozgovoy,8700,Uzbekistan,2,midfielder,1.246,3.0,1.5,5.746,44.0,0,2,-1.5,4.246
+1258316,Sherzod Nasrulloev,8700,Uzbekistan,1,defender,3.6,3.0,1.5,8.1,46.0,0,3,-5.0,3.0999999999999996
+619697,Odildzhon Khamrobekov,8700,Uzbekistan,2,midfielder,-0.40800000000000014,3.0,1.5,4.092,46.0,0,3,-1.0,3.0919999999999996
+751550,Diogo Dalot,8361,Portugal,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+922298,Umar Eshmuradov,8700,Uzbekistan,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+955529,Matheus Nunes,8361,Portugal,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1029597,Avazbek Ulasmaliev,8700,Uzbekistan,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1165710,Gonçalo Inácio,8361,Portugal,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1187283,Tomás Araújo,8361,Portugal,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1477513,Jakhongir Urozov,8700,Uzbekistan,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+534684,Rúben Neves,8361,Portugal,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+589585,Farrukh Sayfiev,8700,Uzbekistan,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+619508,Dostonbek Khamdamov,8700,Uzbekistan,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+933051,Azizbek Amonov,8700,Uzbekistan,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1057486,Oston Urunov,8700,Uzbekistan,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1130583,Samú,8361,Portugal,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1477517,Sherzod Esanov,8700,Uzbekistan,2,midfielder,3.6,3.0,0.03333333333333333,0.0,0.0,0,0,0.0,0.0
+431169,Jamshid Iskandarov,8700,Uzbekistan,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+536455,Gonçalo Guedes,8361,Portugal,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+940087,Gonçalo Ramos,8361,Portugal,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1421621,Ruslanbek Jiyanov,8700,Uzbekistan,3,forward,2.6,5.0,0.03333333333333333,0.0,0.0,0,0,0.0,0.0

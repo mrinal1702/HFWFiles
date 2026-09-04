@@ -1,0 +1,199 @@
+{
+  "team_name": "Slovan Bratislava",
+  "team_id": 6019,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/6019/squad/slovan-bratislava",
+  "players": [
+    {
+      "player_id": 36615,
+      "player_name": "Yaya Touré",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/36615/yaya-toure"
+    },
+    {
+      "player_id": 264221,
+      "player_name": "Kevin Wimmer",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/264221/kevin-wimmer"
+    },
+    {
+      "player_id": 315814,
+      "player_name": "Kenan Bajric",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/315814/kenan-bajric"
+    },
+    {
+      "player_id": 338136,
+      "player_name": "Andraz Sporar",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/338136/andraz-sporar"
+    },
+    {
+      "player_id": 552700,
+      "player_name": "Tigran Barseghyan",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/552700/tigran-barseghyan"
+    },
+    {
+      "player_id": 629539,
+      "player_name": "Jurij Medvedev",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/629539/jurij-medvedev"
+    },
+    {
+      "player_id": 630472,
+      "player_name": "Danylo Ignatenko",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/630472/danylo-ignatenko"
+    },
+    {
+      "player_id": 657935,
+      "player_name": "Matús Macík",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/657935/matus-macik"
+    },
+    {
+      "player_id": 727101,
+      "player_name": "Cristian Martínez",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/727101/cristian-martinez"
+    },
+    {
+      "player_id": 862024,
+      "player_name": "Dominik Takác",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/862024/dominik-takac"
+    },
+    {
+      "player_id": 888966,
+      "player_name": "César Blackman",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/888966/cesar-blackman"
+    },
+    {
+      "player_id": 922722,
+      "player_name": "Svetozar Markovic",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/922722/svetozar-markovic"
+    },
+    {
+      "player_id": 949092,
+      "player_name": "Alen Mustafic",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/949092/alen-mustafic"
+    },
+    {
+      "player_id": 949877,
+      "player_name": "Samuel Kozlovsky",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/949877/samuel-kozlovsky"
+    },
+    {
+      "player_id": 951951,
+      "player_name": "Peter Pokorny",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/951951/peter-pokorny"
+    },
+    {
+      "player_id": 1023982,
+      "player_name": "Daiki Matsuoka",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1023982/daiki-matsuoka"
+    },
+    {
+      "player_id": 1045565,
+      "player_name": "Sandro Cruz",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1045565/sandro-cruz"
+    },
+    {
+      "player_id": 1064715,
+      "player_name": "Sharani Zuberu",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1064715/sharani-zuberu"
+    },
+    {
+      "player_id": 1072191,
+      "player_name": "Aleksandar Popovic",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/1072191/aleksandar-popovic"
+    },
+    {
+      "player_id": 1080171,
+      "player_name": "Kelvin Ofori",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1080171/kelvin-ofori"
+    },
+    {
+      "player_id": 1174724,
+      "player_name": "Adam Griger",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1174724/adam-griger"
+    },
+    {
+      "player_id": 1178468,
+      "player_name": "Mykola Kukharevych",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1178468/mykola-kukharevych"
+    },
+    {
+      "player_id": 1201843,
+      "player_name": "Artur Gajdos",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1201843/artur-gajdos"
+    },
+    {
+      "player_id": 1206542,
+      "player_name": "Suleiman Camara",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1206542/suleiman-camara"
+    },
+    {
+      "player_id": 1239580,
+      "player_name": "Rahim Ibrahim",
+      "position": "CM",
+      "href": "https://www.fotmob.com/en-GB/players/1239580/rahim-ibrahim"
+    },
+    {
+      "player_id": 1338948,
+      "player_name": "Roman Cerepkai",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1338948/roman-cerepkai"
+    },
+    {
+      "player_id": 1449716,
+      "player_name": "Nino Marcelli",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1449716/nino-marcelli"
+    },
+    {
+      "player_id": 1557209,
+      "player_name": "Alexej Maros",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1557209/alexej-maros"
+    },
+    {
+      "player_id": 1614857,
+      "player_name": "Alasana Yirajang",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1614857/alasana-yirajang"
+    },
+    {
+      "player_id": 1820841,
+      "player_name": "Matús Tomásko",
+      "position": "defender",
+      "href": "https://www.fotmob.com/en-GB/players/1820841/matus-tomasko"
+    },
+    {
+      "player_id": 1959190,
+      "player_name": "Manasse Kianga",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/1959190/manasse-kianga"
+    },
+    {
+      "player_id": 2093218,
+      "player_name": "Leo Hofstadter",
+      "position": "midfielder",
+      "href": "https://www.fotmob.com/en-GB/players/2093218/leo-hofstadter"
+    }
+  ]
+}

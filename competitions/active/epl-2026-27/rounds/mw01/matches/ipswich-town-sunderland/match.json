@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "ipswich-town-sunderland",
+  "fotmob_match_id": 5795366,
+  "source_url": "https://www.fotmob.com/en-GB/matches/sunderland-vs-ipswich/2sif4z#5795366",
+  "home_team": "Ipswich Town",
+  "away_team": "Sunderland",
+  "raw_json_path": "intermediates/IpswichTown_Vs_Sunderland.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

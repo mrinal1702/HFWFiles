@@ -1,0 +1,175 @@
+{
+  "team_name": "Manchester City",
+  "team_id": 8456,
+  "squad_url": "https://www.fotmob.com/en-GB/teams/8456/squad/manchester-city",
+  "players": [
+    {
+      "player_id": 34000,
+      "player_name": "Enzo Maresca",
+      "position": "Coach",
+      "href": "https://www.fotmob.com/en-GB/players/34000/enzo-maresca"
+    },
+    {
+      "player_id": 239219,
+      "player_name": "Mateo Kovacic",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/239219/mateo-kovacic"
+    },
+    {
+      "player_id": 245555,
+      "player_name": "Gerónimo Rulli",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/245555/geronimo-rulli"
+    },
+    {
+      "player_id": 312765,
+      "player_name": "Jack Grealish",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/312765/jack-grealish"
+    },
+    {
+      "player_id": 363357,
+      "player_name": "Marcus Bettinelli",
+      "position": "keeper",
+      "href": "https://www.fotmob.com/en-GB/players/363357/marcus-bettinelli"
+    },
+    {
+      "player_id": 614006,
+      "player_name": "Rúben Dias",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/614006/ruben-dias"
+    },
+    {
+      "player_id": 618878,
+      "player_name": "Gianluigi Donnarumma",
+      "position": "GK",
+      "href": "https://www.fotmob.com/en-GB/players/618878/gianluigi-donnarumma"
+    },
+    {
+      "player_id": 737066,
+      "player_name": "Erling Haaland",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/737066/erling-haaland"
+    },
+    {
+      "player_id": 815006,
+      "player_name": "Phil Foden",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/815006/phil-foden"
+    },
+    {
+      "player_id": 844425,
+      "player_name": "Marc Guéhi",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/844425/marc-guehi"
+    },
+    {
+      "player_id": 933576,
+      "player_name": "Antoine Semenyo",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/933576/antoine-semenyo"
+    },
+    {
+      "player_id": 933845,
+      "player_name": "Rayan Aït-Nouri",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/933845/rayan-ait-nouri"
+    },
+    {
+      "player_id": 942368,
+      "player_name": "Jérémy Doku",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/942368/jeremy-doku"
+    },
+    {
+      "player_id": 955529,
+      "player_name": "Matheus Nunes",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/955529/matheus-nunes"
+    },
+    {
+      "player_id": 965764,
+      "player_name": "Iliman Ndiaye",
+      "position": "RW",
+      "href": "https://www.fotmob.com/en-GB/players/965764/iliman-ndiaye"
+    },
+    {
+      "player_id": 1070712,
+      "player_name": "Josko Gvardiol",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1070712/josko-gvardiol"
+    },
+    {
+      "player_id": 1089691,
+      "player_name": "Elliot Anderson",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1089691/elliot-anderson"
+    },
+    {
+      "player_id": 1104053,
+      "player_name": "Rayan Cherki",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1104053/rayan-cherki"
+    },
+    {
+      "player_id": 1137705,
+      "player_name": "Enzo Fernández",
+      "position": "AM",
+      "href": "https://www.fotmob.com/en-GB/players/1137705/enzo-fernandez"
+    },
+    {
+      "player_id": 1187225,
+      "player_name": "Josh Wilson-Esbrand",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1187225/josh-wilson-esbrand"
+    },
+    {
+      "player_id": 1288450,
+      "player_name": "Rico Lewis",
+      "position": "RB",
+      "href": "https://www.fotmob.com/en-GB/players/1288450/rico-lewis"
+    },
+    {
+      "player_id": 1300526,
+      "player_name": "Nico O'Reilly",
+      "position": "LB",
+      "href": "https://www.fotmob.com/en-GB/players/1300526/nico-oreilly"
+    },
+    {
+      "player_id": 1362998,
+      "player_name": "Abdukodir Khusanov",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1362998/abdukodir-khusanov"
+    },
+    {
+      "player_id": 1486264,
+      "player_name": "Claudio Echeverri",
+      "position": "ST",
+      "href": "https://www.fotmob.com/en-GB/players/1486264/claudio-echeverri"
+    },
+    {
+      "player_id": 1539619,
+      "player_name": "Juma Bah",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1539619/juma-bah"
+    },
+    {
+      "player_id": 1561552,
+      "player_name": "Ayyoub Bouaddi",
+      "position": "DM",
+      "href": "https://www.fotmob.com/en-GB/players/1561552/ayyoub-bouaddi"
+    },
+    {
+      "player_id": 1580952,
+      "player_name": "Vitor Reis",
+      "position": "CB",
+      "href": "https://www.fotmob.com/en-GB/players/1580952/vitor-reis"
+    },
+    {
+      "player_id": 1677188,
+      "player_name": "Jeremy Monga",
+      "position": "LW",
+      "href": "https://www.fotmob.com/en-GB/players/1677188/jeremy-monga"
+    }
+  ]
+}

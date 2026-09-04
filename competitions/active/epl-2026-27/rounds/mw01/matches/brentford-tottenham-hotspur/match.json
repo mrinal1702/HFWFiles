@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "brentford-tottenham-hotspur",
+  "fotmob_match_id": 5795368,
+  "source_url": "https://www.fotmob.com/en-GB/matches/tottenham-vs-brentford/2u5c8b#5795368:tab=stats",
+  "home_team": "Brentford",
+  "away_team": "Tottenham Hotspur",
+  "raw_json_path": "intermediates/Brentford_Vs_TottenhamHotspur.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

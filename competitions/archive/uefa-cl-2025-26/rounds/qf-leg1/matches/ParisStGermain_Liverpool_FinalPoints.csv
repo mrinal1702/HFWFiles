@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,final_score
+João Neves,1342757,Paris Saint-Germain,midfielder,40.538,9.0,50
+Ousmane Dembélé,692984,Paris Saint-Germain,forward,38.45,6.0,44
+Khvicha Kvaratskhelia,900433,Paris Saint-Germain,forward,37.85833333333333,6.0,44
+Vitinha,1061249,Paris Saint-Germain,midfielder,28.672,9.0,38
+Willian Pacho,1137670,Paris Saint-Germain,defender,27.58,10.0,38
+Désiré Doué,1339208,Paris Saint-Germain,forward,31.15,6.0,37
+Nuno Mendes,1158945,Paris Saint-Germain,defender,24.59,10.0,35
+Warren Zaïre-Emery,1367615,Paris Saint-Germain,midfielder,23.66,9.0,33
+Marquinhos,267365,Paris Saint-Germain,defender,20.92,10.0,31
+Florian Wirtz,1152455,Liverpool,forward,25.383333333333336,0.0,25
+Achraf Hakimi,770881,Paris Saint-Germain,defender,13.079999999999998,10.0,23
+Ryan Gravenberch,956683,Liverpool,midfielder,21.146,1.0,22
+Ibrahima Konaté,820140,Liverpool,defender,19.11,0.0,19
+Milos Kerkez,1195281,Liverpool,defender,16.84,0.0,17
+Virgil van Dijk,209405,Liverpool,defender,16.740000000000002,0.0,17
+Kang-In Lee,940976,Paris Saint-Germain,midfielder,12.43,2.5,15
+Dominik Szoboszlai,846005,Liverpool,midfielder,9.89,1.0,11
+Hugo Ekitiké,1197030,Liverpool,forward,10.241666666666667,0.0,10
+Alexis Mac Allister,831489,Liverpool,midfielder,8.836,1.0,10
+Curtis Jones,933768,Liverpool,midfielder,6.67,2.5,9
+Andrew Robertson,357880,Liverpool,defender,3.58,5.0,9
+Lucas Hernández,504606,Paris Saint-Germain,defender,2.956666666666667,5.0,8
+Jeremie Frimpong,966018,Liverpool,defender,6.026666666666667,0.0,6
+Joseph Gomez,568571,Liverpool,defender,5.239999999999999,0.0,5
+Mohamed Salah,292462,Liverpool,forward,5.0,0.0,5
+Federico Chiesa,784510,Liverpool,forward,5.0,0.0,5
+Gonçalo Ramos,940087,Paris Saint-Germain,forward,5.0,0.0,5
+Ibrahim Mbaye,1593857,Paris Saint-Germain,forward,5.0,0.0,5
+Rio Ngumoha,1597668,Liverpool,forward,5.0,0.0,5
+Trey Nyoni,1436258,Liverpool,midfielder,3.033333333333333,0.0,3
+Ilya Zabarnyi,1140003,Paris Saint-Germain,defender,3.0,0.0,3
+Lucas Beraldo,1255209,Paris Saint-Germain,defender,3.0,0.0,3
+Senny Mayulu,1574189,Paris Saint-Germain,midfielder,3.0,0.0,3
+Dro Fernández,1682313,Paris Saint-Germain,midfielder,3.0,0.0,3
+Cody Gakpo,806552,Liverpool,forward,3.9,-2.5,1
+Alexander Isak,690107,Liverpool,forward,3.666666666666666,-2.5,1
+Paris Saint-Germain Keepers,9847,Paris Saint-Germain,goalkeeper,19.1,18.0,37
+Liverpool Keepers,8650,Liverpool,goalkeeper,20.3,6.0,26
