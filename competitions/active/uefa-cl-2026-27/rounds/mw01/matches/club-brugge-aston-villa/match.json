@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "club-brugge-aston-villa",
+  "fotmob_match_id": 6106295,
+  "source_url": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-aston-villa/2uxjqh#6106295:tab=stats",
+  "home_team": "Club Brugge",
+  "away_team": "Aston Villa",
+  "raw_json_path": "intermediates/ClubBrugge_Vs_AstonVilla.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

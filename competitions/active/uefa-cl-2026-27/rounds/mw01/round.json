@@ -20,6 +20,13 @@
       "home_team": "AEK Athens",
       "away_team": "LASK",
       "status": "scored"
+    },
+    {
+      "match_slug": "club-brugge-aston-villa",
+      "fotmob_match_id": 6106295,
+      "home_team": "Club Brugge",
+      "away_team": "Aston Villa",
+      "status": "scored"
     }
   ]
 }
