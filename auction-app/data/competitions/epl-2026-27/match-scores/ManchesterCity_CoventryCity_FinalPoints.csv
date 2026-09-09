@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Elliot Anderson,1089691,Manchester City,midfielder,47.082,7.0,0.0,54
+Bobby Thomas,1161885,Coventry City,defender,43.635,5.0,0.0,49
+Erling Haaland,737066,Manchester City,forward,44.16,3.0,0.0,47
+Marc Guéhi,844425,Manchester City,defender,36.004999999999995,10.0,0.0,46
+Rúben Dias,614006,Manchester City,defender,30.22,10.0,0.0,40
+Abdukodir Khusanov,1362998,Manchester City,defender,27.615,10.0,0.0,38
+Milan van Ewijk,1074750,Coventry City,midfielder,33.698,3.0,0.0,37
+Joško Gvardiol,1070712,Manchester City,defender,24.945,10.0,0.0,35
+Rayan Cherki,1104053,Manchester City,midfielder,27.942,7.0,0.0,35
+Antoine Semenyo,933576,Manchester City,forward,28.52,3.0,0.0,32
+Enzo Fernández,1137705,Manchester City,midfielder,22.565333333333328,7.0,0.0,30
+Ethan Pinnock,711357,Coventry City,defender,22.505,5.0,0.0,28
+Jay Dasilva,759814,Coventry City,midfielder,24.00333333333333,3.0,0.0,27
+Iliman Ndiaye,965764,Manchester City,forward,23.18,3.0,0.0,26
+Matt Grimes,478357,Coventry City,midfielder,22.784,3.0,0.0,26
+Aurèle Amenda,1257648,Coventry City,defender,17.03,5.0,0.0,22
+Jack Rudoni,1030830,Coventry City,forward,20.700000000000003,0.0,0.0,21
+Loum Tchaouna,1283034,Coventry City,forward,20.07,0.0,0.0,20
+Taiwo Awoniyi,643717,Coventry City,forward,19.956666666666667,0.0,0.0,20
+Ellis Simms,982284,Coventry City,forward,13.373333333333331,0.0,0.0,13
+Ryan McAidoo,1680328,Manchester City,forward,12.56,0.0,0.0,13
+Phil Foden,815006,Manchester City,midfielder,9.144,2.5,0.0,12
+Frank Onyeka,856685,Coventry City,midfielder,8.422,3.0,0.0,11
+Ayyoub Bouaddi,1561552,Manchester City,midfielder,8.894666666666668,2.5,0.0,11
+Brandon Thomas-Asante,776184,Coventry City,forward,10.373333333333331,0.0,0.0,10
+Caleb Yirenkyi,1615927,Coventry City,midfielder,6.44,2.5,0.0,9
+Gustavo Hamer,775355,Coventry City,forward,6.896666666666667,0.0,0.0,7
+Ephron Mason-Clark,798654,Coventry City,forward,6.426666666666666,0.0,0.0,6
+Joel Latibeaudiere,863822,Coventry City,defender,0.0,0.0,0.0,0
+Rayan Aït-Nouri,933845,Manchester City,defender,0.0,0.0,0.0,0
+Matheus Nunes,955529,Manchester City,defender,0.0,0.0,0.0,0
+Rico Lewis,1288450,Manchester City,defender,0.0,0.0,0.0,0
+Mateo Kovačić,239219,Manchester City,midfielder,0.0,0.0,0.0,0
+Victor Torp,845985,Coventry City,midfielder,0.0,0.0,0.0,0
+Floyd Samba,1726962,Manchester City,midfielder,0.0,0.0,0.0,0
+Tatsuhiro Sakamoto,1025603,Coventry City,forward,0.0,0.0,0.0,0
+Manchester City Keepers,8456,Manchester City,goalkeeper,21.2,18.0,0.0,39
+Coventry City Keepers,8669,Coventry City,goalkeeper,22.34,12.0,0.0,34

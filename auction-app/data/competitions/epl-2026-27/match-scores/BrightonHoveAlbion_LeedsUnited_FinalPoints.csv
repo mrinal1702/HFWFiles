@@ -1,0 +1,38 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Lewis Dunk,201690,Brighton and Hove Albion,defender,40.095,5.0,0.0,45
+Luka Vušković,1413996,Brighton and Hove Albion,defender,40.02,5.0,0.0,45
+Olivier Boscagli,613715,Brighton and Hove Albion,defender,34.141666666666666,5.0,0.0,39
+Diego Gómez,1354561,Brighton and Hove Albion,forward,35.14,3.0,0.0,38
+Ao Tanaka,935728,Leeds United,midfielder,32.01133333333333,5.0,0.0,37
+James Justin,710158,Leeds United,defender,29.040000000000003,5.0,0.0,34
+Tarik Muharemović,1250485,Leeds United,defender,26.890000000000004,5.0,0.0,32
+Charalampos Kostoulas,1561249,Brighton and Hove Albion,forward,27.35,3.0,0.0,30
+Nico Elvedi,517346,Leeds United,defender,25.255000000000003,5.0,0.0,30
+Yasin Ayari,1168311,Brighton and Hove Albion,midfielder,25.236,5.0,0.0,30
+Jayden Bogle,789646,Leeds United,midfielder,23.139333333333333,7.0,0.0,30
+Ethan Ampadu,780432,Leeds United,midfielder,24.088,5.0,0.0,29
+Maxim De Cuyper,1134871,Brighton and Hove Albion,midfielder,23.834666666666667,5.0,0.0,29
+Malick Junior Yalcouyé,1602352,Brighton and Hove Albion,midfielder,22.648,5.0,0.0,28
+Anton Stach,881735,Leeds United,midfielder,22.546,5.0,0.0,28
+Gabriel Gudmundsson,744494,Leeds United,midfielder,22.042,5.0,0.0,27
+Dominic Calvert-Lewin,612150,Leeds United,forward,23.98333333333333,3.0,0.0,27
+Ferdi Kadıoğlu,774448,Brighton and Hove Albion,defender,19.355000000000004,5.0,0.0,24
+Pascal Groß,167008,Brighton and Hove Albion,midfielder,15.950000000000005,5.0,0.0,21
+Noah Okafor,915797,Leeds United,forward,14.816666666666666,3.0,0.0,18
+Costinha,1079456,Brighton and Hove Albion,defender,11.875,5.0,0.0,17
+Harry Wilson,494417,Leeds United,forward,11.076666666666666,0.0,0.0,11
+Jaka Bijol,861805,Leeds United,defender,10.601666666666668,0.0,0.0,11
+Lukas Nmecha,861197,Leeds United,forward,4.786666666666666,0.0,0.0,5
+Brenden Aaronson,952322,Leeds United,midfielder,2.237333333333334,0.5,0.0,3
+Promise David,1252132,Brighton and Hove Albion,forward,2.6333333333333337,0.0,0.0,3
+Pascal Struijk,796974,Brighton and Hove Albion,defender,0.0,0.0,0.0,0
+Melvin Bard,1092403,Leeds United,defender,0.0,0.0,0.0,0
+Jaouen Hadjam,1178324,Brighton and Hove Albion,defender,0.0,0.0,0.0,0
+Sean Longstaff,820024,Leeds United,midfielder,0.0,0.0,0.0,0
+Matthew O'Riley,866686,Brighton and Hove Albion,midfielder,0.0,0.0,0.0,0
+Chema Andrés,1586552,Brighton and Hove Albion,midfielder,0.0,0.0,0.0,0
+Daniel James,717176,Leeds United,forward,0.0,0.0,0.0,0
+Ibrahim Osman,1215410,Brighton and Hove Albion,forward,0.0,0.0,0.0,0
+Jean-Mattéo Bahoya,1393672,Leeds United,forward,0.0,0.0,0.0,0
+Leeds United Keepers,8463,Leeds United,goalkeeper,28.0,12.0,0.0,40
+Brighton and Hove Albion Keepers,10204,Brighton and Hove Albion,goalkeeper,18.58,12.0,0.0,31

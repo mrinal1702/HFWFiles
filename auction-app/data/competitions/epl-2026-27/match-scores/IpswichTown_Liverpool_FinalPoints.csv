@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Cody Gakpo,806552,Liverpool,midfielder,49.878,9.0,0.0,59
+Alexander Isak,690107,Liverpool,forward,43.763333333333335,6.0,0.0,50
+Virgil van Dijk,209405,Liverpool,defender,35.965,10.0,0.0,46
+Ronald Araujo,921253,Liverpool,defender,34.315,10.0,0.0,44
+Dominik Szoboszlai,846005,Liverpool,midfielder,31.536,9.0,0.0,41
+Jérémy Jacquet,1473534,Liverpool,defender,30.355000000000004,10.0,0.0,40
+Alexis Mac Allister,831489,Liverpool,midfielder,25.094,9.0,0.0,34
+Issa Diop,696443,Ipswich Town,defender,32.55500000000001,0.0,0.0,33
+Exequiel Palacios,693599,Ipswich Town,midfielder,31.192,1.0,0.0,32
+Florian Wirtz,1152455,Liverpool,midfielder,22.10666666666667,9.0,0.0,31
+Milos Kerkez,1195281,Liverpool,defender,20.165,10.0,0.0,30
+Dara O'Shea,789578,Ipswich Town,defender,29.279999999999998,0.0,0.0,29
+Abdul Fatawu,1265626,Ipswich Town,midfielder,26.44333333333333,1.0,0.0,27
+Leif Davis,980381,Ipswich Town,defender,24.84,0.0,0.0,25
+Jacob Greaves,1079103,Ipswich Town,defender,20.59,0.0,0.0,21
+Sasa Lukic,556972,Ipswich Town,midfielder,18.542,1.0,0.0,20
+Víctor Muñoz,1553105,Liverpool,forward,12.243333333333332,6.0,0.0,18
+Julio Enciso,1073742,Ipswich Town,midfielder,16.666,1.0,0.0,18
+Daizen Maeda,728765,Ipswich Town,forward,14.87,0.0,0.0,15
+Jack Clarke,914402,Ipswich Town,forward,13.21,0.0,0.0,13
+Bradley Barcola,1297165,Liverpool,forward,11.846666666666668,0.0,0.0,12
+Abdoul Ouattara,1343053,Ipswich Town,defender,6.540000000000001,5.0,0.0,12
+Zian Flemming,873559,Ipswich Town,forward,11.53,0.0,0.0,12
+Ryan Gravenberch,956683,Liverpool,midfielder,7.850666666666667,2.5,0.0,10
+Emersonn,1320949,Ipswich Town,forward,9.72,0.0,0.0,10
+Kasey McAteer,1113915,Ipswich Town,forward,8.956666666666667,0.0,0.0,9
+Trey Nyoni,1436258,Liverpool,midfielder,4.0600000000000005,2.5,0.0,7
+Wataru Endo,202643,Liverpool,defender,0.0,0.0,0.0,0
+Darnell Furlong,609733,Ipswich Town,defender,0.0,0.0,0.0,0
+Cédric Kipré,760398,Ipswich Town,defender,0.0,0.0,0.0,0
+Jeremie Frimpong,966018,Liverpool,defender,0.0,0.0,0.0,0
+Konstantinos Tsimikas,671529,Liverpool,midfielder,0.0,0.0,0.0,0
+Florentino,793255,Ipswich Town,midfielder,0.0,0.0,0.0,0
+Marcelino Núñez,1129081,Ipswich Town,midfielder,0.0,0.0,0.0,0
+Lewis Koumas,1364042,Liverpool,forward,0.0,0.0,0.0,0
+Rio Ngumoha,1597668,Liverpool,forward,0.0,0.0,0.0,0
+Liverpool Keepers,8650,Liverpool,goalkeeper,27.62,18.0,0.0,46
+Ipswich Town Keepers,9902,Ipswich Town,goalkeeper,22.52,6.0,0.0,29

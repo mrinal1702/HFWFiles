@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Jair Cunha,1391209,Nottingham Forest,defender,33.29,10.0,0.0,43
+Micky van de Ven,1097466,Tottenham Hotspur,defender,32.379999999999995,10.0,0.0,42
+Rodrigo Bentancur,620618,Tottenham Hotspur,midfielder,36.128,5.0,0.0,41
+James McAtee,1107648,Nottingham Forest,midfielder,33.99999999999999,5.0,0.0,39
+Murillo,1458711,Nottingham Forest,defender,28.576666666666675,10.0,0.0,39
+Nikola Milenković,766611,Nottingham Forest,defender,25.75,10.0,0.0,36
+Pedro Porro,941573,Tottenham Hotspur,defender,25.495,10.0,0.0,35
+Jan Paul van Hecke,974618,Tottenham Hotspur,defender,24.185,10.0,0.0,34
+Sandro Tonali,867414,Tottenham Hotspur,midfielder,27.91,5.0,0.0,33
+Neco Williams,1078788,Nottingham Forest,defender,19.405,10.0,0.0,29
+Ola Aina,682548,Nottingham Forest,defender,17.47666666666667,10.0,0.0,27
+Xaver Schlager,620027,Nottingham Forest,midfielder,21.818,5.0,0.0,27
+Conor Gallagher,966027,Tottenham Hotspur,midfielder,20.906666666666663,5.0,0.0,26
+Destiny Udogie,1052898,Tottenham Hotspur,defender,14.113333333333332,10.0,0.0,24
+Sávio,1174337,Tottenham Hotspur,forward,22.89333333333333,0.0,0.0,23
+Liam Delap,1113903,Nottingham Forest,forward,18.616666666666667,0.0,0.0,19
+Morgan Gibbs-White,789502,Nottingham Forest,midfielder,13.526,5.0,0.0,19
+Mathys Tel,1288111,Tottenham Hotspur,forward,17.99666666666667,0.0,0.0,18
+Mohammed Kudus,891743,Tottenham Hotspur,forward,15.356666666666666,0.0,0.0,15
+Omar Marmoush,839204,Tottenham Hotspur,forward,13.82,0.0,0.0,14
+Andrew Robertson,357880,Tottenham Hotspur,defender,6.386666666666667,5.0,0.0,11
+Igor Jesus,1082102,Nottingham Forest,forward,9.623333333333331,0.0,0.0,10
+Chris Wood,169719,Nottingham Forest,forward,9.293333333333331,0.0,0.0,9
+Dan Ndoye,1022649,Nottingham Forest,forward,8.836666666666666,0.0,0.0,9
+Daniel Muñoz,859282,Nottingham Forest,midfielder,6.333333333333333,2.5,0.0,9
+Dominic Solanke,591734,Tottenham Hotspur,forward,7.03,0.0,0.0,7
+Mateus Fernandes,1356312,Tottenham Hotspur,midfielder,3.019333333333333,2.5,0.0,6
+Mykhaylo Mudryk,976506,Tottenham Hotspur,forward,5.053333333333333,0.0,0.0,5
+Marcos Senesi,785411,Tottenham Hotspur,defender,0.0,0.0,0.0,0
+Ousmane Diomande,1425182,Nottingham Forest,defender,0.0,0.0,0.0,0
+Ryan Yates,775614,Nottingham Forest,midfielder,0.0,0.0,0.0,0
+Nicolás Dominguez,827315,Nottingham Forest,midfielder,0.0,0.0,0.0,0
+Luca Netz,1155130,Nottingham Forest,midfielder,0.0,0.0,0.0,0
+Archie Gray,1323305,Tottenham Hotspur,midfielder,0.0,0.0,0.0,0
+Lucas Bergvall,1386775,Tottenham Hotspur,midfielder,0.0,0.0,0.0,0
+Callum Hudson-Odoi,846383,Nottingham Forest,forward,0.0,0.0,0.0,0
+Tottenham Hotspur Keepers,8586,Tottenham Hotspur,goalkeeper,14.68,18.0,0.0,33
+Nottingham Forest Keepers,10203,Nottingham Forest,goalkeeper,7.439999999999999,18.0,0.0,25
