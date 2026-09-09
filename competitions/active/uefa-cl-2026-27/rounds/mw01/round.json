@@ -41,6 +41,13 @@
       "home_team": "FC Porto",
       "away_team": "Manchester City",
       "status": "scored"
+    },
+    {
+      "match_slug": "real-betis-lille",
+      "fotmob_match_id": 6106311,
+      "home_team": "Lille",
+      "away_team": "Real Betis",
+      "status": "scored"
     }
   ]
 }

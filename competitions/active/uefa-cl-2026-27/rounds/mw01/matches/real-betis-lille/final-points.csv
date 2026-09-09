@@ -1,0 +1,44 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Marc Bartra,195305,Real Betis,defender,54.52,0.0,0.0,55
+Pablo Fornals,683450,Real Betis,midfielder,42.952,7.0,0.0,50
+Alexsandro Ribeiro,1186553,Lille,defender,51.06999999999999,-5.0,0.0,46
+Antony,967622,Real Betis,midfielder,30.678,7.0,0.0,38
+Troy Parrott,942365,Real Betis,forward,28.5,9.0,0.0,38
+Nabil Bentaleb,500520,Lille,midfielder,25.22,7.0,0.0,32
+Isco,191315,Real Betis,midfielder,23.23933333333333,7.0,0.0,30
+Ayase Ueda,942393,Lille,forward,23.30666666666667,6.0,0.0,29
+Ethan Mbappé,1426809,Lille,forward,23.236666666666665,6.0,0.0,29
+Tiago Santos,1397857,Lille,defender,33.14,-5.0,0.0,28
+Rodrigo Riquelme,1072200,Real Betis,midfielder,19.636000000000003,7.0,0.0,27
+Benjamin André,148830,Lille,midfielder,23.255333333333333,3.0,0.0,26
+Facundo Bernal,1436133,Real Betis,midfielder,16.71333333333333,7.0,0.0,24
+Héctor Bellerín,427438,Real Betis,defender,20.78,0.0,0.0,21
+Valentín Gómez,1338016,Real Betis,defender,14.786666666666669,5.0,0.0,20
+Júnior Firpo,743192,Real Betis,defender,19.36,0.0,0.0,19
+Natan,1188375,Real Betis,defender,17.953333333333333,0.0,0.0,18
+Gaëtan Perrin,708435,Lille,midfielder,14.757333333333332,3.0,0.0,18
+Nelson Deossa,1315711,Real Betis,midfielder,13.762000000000002,2.5,0.0,16
+Ngal Ayel Mukau,1428153,Lille,midfielder,16.308,-1.5,0.0,15
+Romain Perraud,815465,Lille,defender,18.04833333333333,-5.0,0.0,13
+Hákon Arnar Haraldsson,1044470,Lille,midfielder,8.952,3.0,0.0,12
+Nathan Ngoy,1252070,Lille,defender,16.595,-5.0,0.0,12
+Álvaro Fidalgo,895954,Real Betis,midfielder,7.438666666666667,2.5,0.0,10
+Marc Roca,640220,Real Betis,midfielder,7.320666666666667,2.5,0.0,10
+Başar Önal,1347229,Lille,midfielder,6.392666666666667,2.5,0.0,9
+Maurits Kjærgaard,1070404,Lille,midfielder,5.750666666666668,2.5,0.0,8
+Dilane Bakwa,1079539,Lille,forward,7.686666666666666,0.0,0.0,8
+Fran García,750028,Real Betis,defender,1.635,5.0,0.0,7
+Olivier Giroud,46469,Lille,forward,4.713333333333334,0.0,0.0,5
+Calvin Verdonk,622137,Lille,defender,0.0,0.0,0.0,0
+Tanguy Nianzou,1070617,Lille,defender,0.0,0.0,0.0,0
+Ángel Ortiz,1580522,Real Betis,defender,0.0,0.0,0.0,0
+Loun Srdanovic,1660370,Lille,defender,0.0,0.0,0.0,0
+Isaac Cossier,1680590,Lille,defender,0.0,0.0,0.0,0
+Dani Ceballos,531629,Real Betis,midfielder,0.0,0.0,0.0,0
+Giovani Lo Celso,604126,Real Betis,midfielder,0.0,0.0,0.0,0
+Juan Hernández,852071,Real Betis,forward,0.0,0.0,0.0,0
+Osame Sahraoui,988160,Lille,forward,0.0,0.0,0.0,0
+Soriba Diaoune,1684579,Lille,forward,0.0,0.0,0.0,0
+José Antonio Morante,1793845,Real Betis,forward,0.0,0.0,0.0,0
+Lille Keepers,8639,Lille,goalkeeper,14.84,0.0,0.0,15
+Real Betis Keepers,8603,Real Betis,goalkeeper,7.92,6.0,0.0,14

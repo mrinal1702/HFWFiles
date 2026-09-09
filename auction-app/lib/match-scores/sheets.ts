@@ -342,6 +342,15 @@ const UCL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 6106286,
     rows: loadMatchScoreCsv("FCPorto_ManchesterCity_FinalPoints.csv", UCL_2026_27),
   },
+  {
+    slug: "lille-real-betis",
+    title: "Lille vs Real Betis",
+    subtitle: "UEFA Champions League · Matchweek 1",
+    groupStageGw: 1,
+    competitionSlug: UCL_2026_27,
+    fotmobMatchId: 6106311,
+    rows: loadMatchScoreCsv("Lille_RealBetis_FinalPoints.csv", UCL_2026_27),
+  },
 ];
 
 const UCL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

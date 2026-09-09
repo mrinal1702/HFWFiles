@@ -1,0 +1,15 @@
+{
+  "match_id": 6106311,
+  "home_team": "Lille",
+  "away_team": "Real Betis",
+  "source_url": "https://www.fotmob.com/en-GB/matches/real-betis-vs-lille/2gib7i#6106311:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw01/matches/real-betis-lille/intermediates/match_raw.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/real-betis-vs-lille/2gib7i",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/real-betis-vs-lille/2gib7i#6106311:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/real-betis-vs-lille/2gib7i#6106311:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/real-betis-vs-lille/2gib7i#6106311:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106311"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
