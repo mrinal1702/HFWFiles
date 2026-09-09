@@ -324,6 +324,15 @@ const UCL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 6106295,
     rows: loadMatchScoreCsv("ClubBrugge_AstonVilla_FinalPoints.csv", UCL_2026_27),
   },
+  {
+    slug: "borussia-dortmund-villarreal",
+    title: "Borussia Dortmund vs Villarreal",
+    subtitle: "UEFA Champions League · Matchweek 1",
+    groupStageGw: 1,
+    competitionSlug: UCL_2026_27,
+    fotmobMatchId: 6106272,
+    rows: loadMatchScoreCsv("BorussiaDortmund_Villarreal_FinalPoints.csv", UCL_2026_27),
+  },
 ];
 
 const UCL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

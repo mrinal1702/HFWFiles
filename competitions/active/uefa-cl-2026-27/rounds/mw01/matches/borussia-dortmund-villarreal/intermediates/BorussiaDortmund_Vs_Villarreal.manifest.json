@@ -1,0 +1,15 @@
+{
+  "match_id": 6106272,
+  "home_team": "Borussia Dortmund",
+  "away_team": "Villarreal",
+  "source_url": "https://www.fotmob.com/en-GB/matches/borussia-dortmund-vs-villarreal/3b0joc#6106272:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw01/matches/borussia-dortmund-villarreal/intermediates/BorussiaDortmund_Vs_Villarreal.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/borussia-dortmund-vs-villarreal/3b0joc",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/borussia-dortmund-vs-villarreal/3b0joc#6106272:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/borussia-dortmund-vs-villarreal/3b0joc#6106272:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/borussia-dortmund-vs-villarreal/3b0joc#6106272:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106272"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
