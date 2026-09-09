@@ -1,0 +1,42 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Erling Haaland,737066,Manchester City,forward,45.58,6.0,0.0,52
+Enzo Fernández,1137705,Manchester City,midfielder,39.386,9.0,0.0,48
+Marc Guéhi,844425,Manchester City,defender,31.95,10.0,0.0,42
+Rúben Dias,614006,Manchester City,defender,25.955,10.0,0.0,36
+Joško Gvardiol,1070712,Manchester City,defender,19.960000000000004,10.0,0.0,30
+Rayan Aït-Nouri,933845,Manchester City,defender,24.71,5.0,0.0,30
+Elliot Anderson,1089691,Manchester City,midfielder,25.09933333333333,4.5,0.0,30
+Ayyoub Bouaddi,1561552,Manchester City,midfielder,21.288,7.0,0.0,28
+Rayan Cherki,1104053,Manchester City,midfielder,20.922666666666668,7.0,0.0,28
+Phil Foden,815006,Manchester City,midfielder,20.61,7.0,0.0,28
+Antoine Semenyo,933576,Manchester City,forward,24.21666666666667,3.0,0.0,27
+Jakub Kiwior,1021834,FC Porto,defender,26.450000000000003,0.0,0.0,26
+Matheus Nunes,955529,Manchester City,defender,14.830000000000002,10.0,0.0,25
+Gabriel Veiga,1116734,FC Porto,midfielder,20.136666666666667,3.0,0.0,23
+Martim Fernandes,1404949,FC Porto,defender,14.313333333333334,5.0,0.0,19
+Alberto Costa,1387439,FC Porto,defender,18.685,0.0,0.0,19
+Nehuén Pérez,902383,FC Porto,defender,18.335,0.0,0.0,18
+Alan Varela,1186684,FC Porto,midfielder,14.526666666666667,3.0,0.0,18
+Pepê,850356,FC Porto,forward,17.5,0.0,0.0,18
+Abdukodir Khusanov,1362998,Manchester City,defender,11.36,5.0,0.0,16
+André Silva,388523,FC Porto,forward,16.32333333333333,0.0,0.0,16
+Iliman Ndiaye,965764,Manchester City,forward,12.933333333333334,3.0,0.0,16
+Santiago Giménez,954092,FC Porto,forward,15.156666666666665,0.0,0.0,15
+Mateo Kovačić,239219,Manchester City,midfielder,9.556,4.5,0.0,14
+Pablo Rosario,664226,FC Porto,midfielder,8.85,1.0,0.0,10
+Borja Sainz,1083204,FC Porto,forward,9.753333333333332,0.0,0.0,10
+William Gomes,1580427,FC Porto,forward,8.046666666666667,0.0,0.0,8
+Francisco Moura,919374,FC Porto,defender,7.056666666666667,0.0,0.0,7
+Seko Fofana,602211,FC Porto,midfielder,3.325333333333333,0.5,0.0,4
+In-Beom Hwang,623698,FC Porto,midfielder,2.9873333333333334,0.5,0.0,3
+Rico Lewis,1288450,Manchester City,defender,0.0,0.0,0.0,0
+Luis Gomes,1559903,FC Porto,defender,0.0,0.0,0.0,0
+Vitor Reis,1580952,Manchester City,defender,0.0,0.0,0.0,0
+Souza,1636513,FC Porto,defender,0.0,0.0,0.0,0
+João Teixeira,1623135,FC Porto,midfielder,0.0,0.0,0.0,0
+Tiago Silva,1759539,FC Porto,midfielder,0.0,0.0,0.0,0
+Ryan McAidoo,1680328,Manchester City,forward,0.0,0.0,0.0,0
+Allan,1721789,Manchester City,forward,0.0,0.0,0.0,0
+Duarte Cunha,1766344,FC Porto,forward,0.0,0.0,0.0,0
+FC Porto Keepers,9773,FC Porto,goalkeeper,36.940000000000005,6.0,0.0,43
+Manchester City Keepers,8456,Manchester City,goalkeeper,10.58,18.0,0.0,29

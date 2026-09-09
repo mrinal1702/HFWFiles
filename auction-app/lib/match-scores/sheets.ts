@@ -333,6 +333,15 @@ const UCL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 6106272,
     rows: loadMatchScoreCsv("BorussiaDortmund_Villarreal_FinalPoints.csv", UCL_2026_27),
   },
+  {
+    slug: "fc-porto-manchester-city",
+    title: "FC Porto vs Manchester City",
+    subtitle: "UEFA Champions League · Matchweek 1",
+    groupStageGw: 1,
+    competitionSlug: UCL_2026_27,
+    fotmobMatchId: 6106286,
+    rows: loadMatchScoreCsv("FCPorto_ManchesterCity_FinalPoints.csv", UCL_2026_27),
+  },
 ];
 
 const UCL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

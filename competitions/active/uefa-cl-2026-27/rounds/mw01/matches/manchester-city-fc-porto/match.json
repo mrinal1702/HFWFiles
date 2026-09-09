@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "manchester-city-fc-porto",
+  "fotmob_match_id": 6106286,
+  "source_url": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-fc-porto/2qxjd0#6106286:tab=stats",
+  "home_team": "FC Porto",
+  "away_team": "Manchester City",
+  "raw_json_path": "intermediates/ManchesterCity_Vs_FCPorto.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

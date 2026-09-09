@@ -34,6 +34,13 @@
       "home_team": "Borussia Dortmund",
       "away_team": "Villarreal",
       "status": "scored"
+    },
+    {
+      "match_slug": "manchester-city-fc-porto",
+      "fotmob_match_id": 6106286,
+      "home_team": "FC Porto",
+      "away_team": "Manchester City",
+      "status": "scored"
     }
   ]
 }
