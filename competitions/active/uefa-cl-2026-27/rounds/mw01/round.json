@@ -48,6 +48,13 @@
       "home_team": "Lille",
       "away_team": "Real Betis",
       "status": "scored"
+    },
+    {
+      "match_slug": "real-madrid-inter",
+      "fotmob_match_id": 6106242,
+      "home_team": "Real Madrid",
+      "away_team": "Inter",
+      "status": "scored"
     }
   ]
 }

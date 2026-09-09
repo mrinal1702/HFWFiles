@@ -1,0 +1,39 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+701154,Kylian Mbappé,8633,Real Madrid,3,forward,32.400000000000006,4.1,2.966666666666667,39.466666666666676,90.0,2,1,6.0,45.466666666666676
+690230,Lautaro Martínez,8636,Internazionale,3,forward,32.44,5.0,3.0,40.44,90.0,1,2,3.0,43.44
+750027,Brahim Díaz,8633,Real Madrid,2,midfielder,32.742000000000004,0.7999999999999998,2.6333333333333333,36.175333333333334,79.0,2,1,7.0,43.175333333333334
+940829,Carlos Augusto,8636,Internazionale,2,midfielder,33.238,1.9,2.7666666666666666,37.904666666666664,83.0,1,2,3.0,40.904666666666664
+743533,Federico Valverde,8633,Real Madrid,2,midfielder,27.636000000000003,3.0,3.0,33.636,90.0,2,1,7.0,40.636
+304733,Hakan Çalhanoglu,8636,Internazionale,2,midfielder,33.088,3.0,2.0,38.088,60.0,0,2,1.0,39.088
+1077894,Jude Bellingham,8633,Real Madrid,2,midfielder,27.094,1.9,3.0,31.994,90.0,2,1,7.0,38.994
+1367619,Dean Huijsen,8633,Real Madrid,1,defender,26.979999999999997,3.0,3.0,32.98,90.0,2,1,5.0,37.98
+805451,Alessandro Bastoni,8636,Internazionale,1,defender,28.785000000000004,3.0,3.0,34.785000000000004,90.0,1,2,0.0,34.785000000000004
+1254297,Andy Diouf,8636,Internazionale,2,midfielder,25.875999999999998,-0.30000000000000027,3.0,28.575999999999997,90.0,1,2,3.0,31.575999999999997
+889535,Yann Aurel Bisseck,8636,Internazionale,1,defender,24.905000000000005,1.8,3.0,29.705000000000005,90.0,1,2,0.0,29.705000000000005
+873289,Marc Cucurella,8633,Real Madrid,1,defender,13.66,3.0,3.0,19.66,90.0,2,1,5.0,24.66
+820140,Ibrahima Konaté,8633,Real Madrid,1,defender,12.689999999999998,3.0,3.0,18.689999999999998,90.0,2,1,5.0,23.689999999999998
+760712,Trent Alexander-Arnold,8633,Real Madrid,1,defender,12.82,3.0,2.6333333333333333,18.453333333333333,79.0,2,1,5.0,23.453333333333333
+933768,Curtis Jones,8636,Internazionale,2,midfielder,16.482000000000003,0.7999999999999998,3.0,20.282000000000004,90.0,1,2,3.0,23.282000000000004
+541820,Nicolò Barella,8636,Internazionale,2,midfielder,18.186,1.9,2.0,22.086,60.0,0,2,1.0,23.086
+846033,Vinícius Júnior,8633,Real Madrid,3,forward,10.739999999999998,3.2,2.9,16.839999999999996,87.0,2,1,6.0,22.839999999999996
+1382000,Petar Sučić,8636,Internazionale,2,midfielder,14.44,0.7999999999999998,1.0,16.24,30.0,1,0,4.5,20.74
+593118,Denzel Dumfries,8633,Real Madrid,2,midfielder,7.522,3.0,3.0,13.522,90.0,2,1,7.0,20.522
+362212,Piotr Zieliński,8636,Internazionale,2,midfielder,11.177999999999999,1.9,1.0,14.078,30.0,1,0,4.5,18.578
+611223,Benjamin Pavard,8636,Internazionale,1,defender,13.065,3.0,1.5,17.564999999999998,46.0,0,2,0.0,17.564999999999998
+263653,John Stones,8636,Internazionale,1,defender,6.3549999999999995,3.0,1.5,10.855,44.0,1,0,5.0,15.855
+621562,Marcus Thuram,8636,Internazionale,3,forward,3.8000000000000003,5.0,2.0,10.8,60.0,0,2,0.0,10.8
+1199383,Ange-Yoan Bonny,8636,Internazionale,3,forward,0.8800000000000001,5.0,1.0,6.88,30.0,1,0,3.0,9.879999999999999
+1735453,Yan Diomande,8633,Real Madrid,3,forward,4.51,4.1,0.36666666666666664,8.976666666666667,11.0,0,0,0.0,8.976666666666667
+73167,Henrikh Mkhitaryan,8636,Internazionale,2,midfielder,3.946,1.9,0.23333333333333334,6.0793333333333335,7.0,0,0,2.5,8.579333333333334
+1190025,Alvaro Carreras,8633,Real Madrid,1,defender,0.0,3.0,0.1,3.1,3.0,0,0,5.0,8.1
+914458,Aurélien Tchouaméni,8633,Real Madrid,2,midfielder,0.336,3.0,0.36666666666666664,3.7026666666666666,11.0,0,0,2.5,6.2026666666666666
+276738,Antonio Rüdiger,8633,Real Madrid,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+521318,Manuel Akanji,8636,Internazionale,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1713217,Mario Rivas,8633,Real Madrid,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1114635,Luis Henrique,8636,Internazionale,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1410437,Aleksandar Stanković,8636,Internazionale,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1796908,Thiago Pitarch,8633,Real Madrid,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1807277,Jorge Cestero,8633,Real Madrid,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1367618,Francesco Pio Esposito,8636,Internazionale,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1406729,Endrick,8633,Real Madrid,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1610744,Carlos Espí,8633,Real Madrid,3,forward,0.0,5.0,0.03333333333333333,0.0,0.0,0,0,0.0,0.0

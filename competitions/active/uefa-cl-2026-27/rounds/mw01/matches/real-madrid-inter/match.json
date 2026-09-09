@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "real-madrid-inter",
+  "fotmob_match_id": 6106242,
+  "source_url": "https://www.fotmob.com/en-GB/matches/real-madrid-vs-inter/2gsapf#6106242:tab=stats",
+  "home_team": "Real Madrid",
+  "away_team": "Inter",
+  "raw_json_path": "intermediates/RealMadrid_Vs_Inter.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

@@ -1,0 +1,41 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Kylian Mbappé,701154,Real Madrid,forward,39.46666666666668,6.0,0.0,45
+Lautaro Martínez,690230,Internazionale,forward,40.44,3.0,0.0,43
+Brahim Díaz,750027,Real Madrid,midfielder,36.17533333333333,7.0,0.0,43
+Carlos Augusto,940829,Internazionale,midfielder,37.90466666666666,3.0,0.0,41
+Federico Valverde,743533,Real Madrid,midfielder,33.636,7.0,0.0,41
+Hakan Çalhanoglu,304733,Internazionale,midfielder,38.088,1.0,0.0,39
+Jude Bellingham,1077894,Real Madrid,midfielder,31.994,7.0,0.0,39
+Dean Huijsen,1367619,Real Madrid,defender,32.98,5.0,0.0,38
+Alessandro Bastoni,805451,Internazionale,defender,34.785000000000004,0.0,0.0,35
+Andy Diouf,1254297,Internazionale,midfielder,28.576,3.0,0.0,32
+Yann Aurel Bisseck,889535,Internazionale,defender,29.705000000000005,0.0,0.0,30
+Marc Cucurella,873289,Real Madrid,defender,19.66,5.0,0.0,25
+Ibrahima Konaté,820140,Real Madrid,defender,18.69,5.0,0.0,24
+Trent Alexander-Arnold,760712,Real Madrid,defender,18.453333333333333,5.0,0.0,23
+Curtis Jones,933768,Internazionale,midfielder,20.282000000000004,3.0,0.0,23
+Nicolò Barella,541820,Internazionale,midfielder,22.086,1.0,0.0,23
+Vinícius Júnior,846033,Real Madrid,forward,16.839999999999996,6.0,0.0,23
+Petar Sučić,1382000,Internazionale,midfielder,16.24,4.5,0.0,21
+Denzel Dumfries,593118,Real Madrid,midfielder,13.522,7.0,0.0,21
+Piotr Zieliński,362212,Internazionale,midfielder,14.078,4.5,0.0,19
+Benjamin Pavard,611223,Internazionale,defender,17.564999999999998,0.0,0.0,18
+John Stones,263653,Internazionale,defender,10.855,5.0,0.0,16
+Marcus Thuram,621562,Internazionale,forward,10.8,0.0,0.0,11
+Ange-Yoan Bonny,1199383,Internazionale,forward,6.88,3.0,0.0,10
+Yan Diomande,1735453,Real Madrid,forward,8.976666666666667,0.0,0.0,9
+Henrikh Mkhitaryan,73167,Internazionale,midfielder,6.0793333333333335,2.5,0.0,9
+Alvaro Carreras,1190025,Real Madrid,defender,3.1,5.0,0.0,8
+Aurélien Tchouaméni,914458,Real Madrid,midfielder,3.7026666666666666,2.5,0.0,6
+Antonio Rüdiger,276738,Real Madrid,defender,0.0,0.0,0.0,0
+Manuel Akanji,521318,Internazionale,defender,0.0,0.0,0.0,0
+Mario Rivas,1713217,Real Madrid,defender,0.0,0.0,0.0,0
+Luis Henrique,1114635,Internazionale,midfielder,0.0,0.0,0.0,0
+Aleksandar Stanković,1410437,Internazionale,midfielder,0.0,0.0,0.0,0
+Thiago Pitarch,1796908,Real Madrid,midfielder,0.0,0.0,0.0,0
+Jorge Cestero,1807277,Real Madrid,midfielder,0.0,0.0,0.0,0
+Francesco Pio Esposito,1367618,Internazionale,forward,0.0,0.0,0.0,0
+Endrick,1406729,Real Madrid,forward,0.0,0.0,0.0,0
+Carlos Espí,1610744,Real Madrid,forward,0.0,0.0,0.0,0
+Real Madrid Keepers,8633,Real Madrid,goalkeeper,29.180000000000003,12.0,0.0,41
+Internazionale Keepers,8636,Internazionale,goalkeeper,26.700000000000003,6.0,0.0,33
