@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "aek-athens-lask",
+  "fotmob_match_id": 6106404,
+  "source_url": "https://www.fotmob.com/en-GB/matches/aek-athens-vs-lask/2uc3cn#6106404:tab=stats",
+  "home_team": "AEK Athens",
+  "away_team": "LASK",
+  "raw_json_path": "intermediates/AEKAthens_Vs_LASK.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

@@ -195,6 +195,96 @@ const EPL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795426,
     rows: loadMatchScoreCsv("AstonVilla_Arsenal_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "ipswich-town-liverpool",
+    title: "Ipswich Town vs Liverpool",
+    subtitle: "Premier League · Matchweek 3",
+    groupStageGw: 3,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795441,
+    rows: loadMatchScoreCsv("IpswichTown_Liverpool_FinalPoints.csv", EPL_2026_27),
+  },
+  {
+    slug: "newcastle-united-afc-bournemouth",
+    title: "Newcastle United vs AFC Bournemouth",
+    subtitle: "Premier League · Matchweek 3",
+    groupStageGw: 3,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795443,
+    rows: loadMatchScoreCsv("NewcastleUnited_AFCBournemouth_FinalPoints.csv", EPL_2026_27),
+  },
+  {
+    slug: "brentford-sunderland",
+    title: "Brentford vs Sunderland",
+    subtitle: "Premier League · Matchweek 3",
+    groupStageGw: 3,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795436,
+    rows: loadMatchScoreCsv("Brentford_Sunderland_FinalPoints.csv", EPL_2026_27),
+  },
+  {
+    slug: "brighton-leeds-united",
+    title: "Brighton & Hove Albion vs Leeds United",
+    subtitle: "Premier League · Matchweek 3",
+    groupStageGw: 3,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795437,
+    rows: loadMatchScoreCsv("BrightonHoveAlbion_LeedsUnited_FinalPoints.csv", EPL_2026_27),
+  },
+  {
+    slug: "fulham-crystal-palace",
+    title: "Fulham vs Crystal Palace",
+    subtitle: "Premier League · Matchweek 3",
+    groupStageGw: 3,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795439,
+    rows: loadMatchScoreCsv("Fulham_CrystalPalace_FinalPoints.csv", EPL_2026_27),
+  },
+  {
+    slug: "manchester-city-coventry-city",
+    title: "Manchester City vs Coventry City",
+    subtitle: "Premier League · Matchweek 3",
+    groupStageGw: 3,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795442,
+    rows: loadMatchScoreCsv("ManchesterCity_CoventryCity_FinalPoints.csv", EPL_2026_27),
+  },
+  {
+    slug: "nottingham-forest-tottenham-hotspur",
+    title: "Nottingham Forest vs Tottenham Hotspur",
+    subtitle: "Premier League · Matchweek 3",
+    groupStageGw: 3,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795444,
+    rows: loadMatchScoreCsv("NottinghamForest_TottenhamHotspur_FinalPoints.csv", EPL_2026_27),
+  },
+  {
+    slug: "hull-city-aston-villa",
+    title: "Hull City vs Aston Villa",
+    subtitle: "Premier League · Matchweek 3",
+    groupStageGw: 3,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795440,
+    rows: loadMatchScoreCsv("HullCity_AstonVilla_FinalPoints.csv", EPL_2026_27),
+  },
+  {
+    slug: "everton-manchester-united",
+    title: "Everton vs Manchester United",
+    subtitle: "Premier League · Matchweek 3",
+    groupStageGw: 3,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795438,
+    rows: loadMatchScoreCsv("Everton_ManchesterUnited_FinalPoints.csv", EPL_2026_27),
+  },
+  {
+    slug: "arsenal-chelsea",
+    title: "Arsenal vs Chelsea",
+    subtitle: "Premier League · Matchweek 3",
+    groupStageGw: 3,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795435,
+    rows: loadMatchScoreCsv("Arsenal_Chelsea_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
@@ -208,11 +298,36 @@ const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
     label: "Premier League GW2",
     sheets: EPL_MATCH_SCORE_SHEETS.filter((s) => s.groupStageGw === 2),
   },
+  {
+    gw: 3,
+    label: "Premier League GW3",
+    sheets: EPL_MATCH_SCORE_SHEETS.filter((s) => s.groupStageGw === 3),
+  },
+];
+
+const UCL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
+  {
+    slug: "aek-athens-lask",
+    title: "AEK Athens vs LASK",
+    subtitle: "UEFA Champions League · Matchweek 1",
+    groupStageGw: 1,
+    competitionSlug: UCL_2026_27,
+    fotmobMatchId: 6106404,
+    rows: loadMatchScoreCsv("AEKAthens_LASK_FinalPoints.csv", UCL_2026_27),
+  },
+];
+
+const UCL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
+  {
+    gw: 1,
+    label: "UEFA Champions League GW1",
+    sheets: UCL_MATCH_SCORE_SHEETS.filter((s) => s.groupStageGw === 1),
+  },
 ];
 
 const MATCH_SCORE_GROUPS_BY_SLUG: Record<string, MatchScoreGroup[]> = {
   [EPL_2026_27]: EPL_MATCH_SCORE_GROUPS,
-  [UCL_2026_27]: [],
+  [UCL_2026_27]: UCL_MATCH_SCORE_GROUPS,
 };
 
 /** Legacy default — EPL matchweek 1 sheets (public /match-scores page). */

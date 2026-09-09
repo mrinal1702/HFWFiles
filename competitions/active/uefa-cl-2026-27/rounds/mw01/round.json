@@ -1,0 +1,25 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "database_competition_id": 4,
+  "database_round_id": null,
+  "round_slug": "mw01",
+  "display_name": "Matchweek 1",
+  "round_number": 1,
+  "legacy_game_week_id": 300,
+  "expected_match_count": null,
+  "_match_count_note": "GW1 fixtures scored as they complete. Match scores + Player_Scores upserts before Best XI.",
+  "auction_ids": [10, 11, 12, 13],
+  "squad_lock_state": "locked",
+  "scoring_state": "in_progress",
+  "publication_state": "partial",
+  "algorithm_version": "1.0",
+  "fixtures": [
+    {
+      "match_slug": "aek-athens-lask",
+      "fotmob_match_id": 6106404,
+      "home_team": "AEK Athens",
+      "away_team": "LASK",
+      "status": "scored"
+    }
+  ]
+}

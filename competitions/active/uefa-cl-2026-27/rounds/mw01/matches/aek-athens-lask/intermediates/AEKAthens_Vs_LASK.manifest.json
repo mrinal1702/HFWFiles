@@ -1,0 +1,15 @@
+{
+  "match_id": 6106404,
+  "home_team": "AEK Athens",
+  "away_team": "LASK",
+  "source_url": "https://www.fotmob.com/en-GB/matches/aek-athens-vs-lask/2uc3cn#6106404:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw01/matches/aek-athens-lask/intermediates/AEKAthens_Vs_LASK.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/aek-athens-vs-lask/2uc3cn",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/aek-athens-vs-lask/2uc3cn#6106404:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/aek-athens-vs-lask/2uc3cn#6106404:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/aek-athens-vs-lask/2uc3cn#6106404:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106404"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
