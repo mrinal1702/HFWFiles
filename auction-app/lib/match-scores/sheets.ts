@@ -378,6 +378,15 @@ const UCL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 6106400,
     rows: loadMatchScoreCsv("VfBStuttgart_Viking_FinalPoints.csv", UCL_2026_27),
   },
+  {
+    slug: "liverpool-atletico-madrid",
+    title: "Liverpool vs Atlético Madrid",
+    subtitle: "UEFA Champions League · Matchweek 1",
+    groupStageGw: 1,
+    competitionSlug: UCL_2026_27,
+    fotmobMatchId: 6106246,
+    rows: loadMatchScoreCsv("Liverpool_AtlticoMadrid_FinalPoints.csv", UCL_2026_27),
+  },
 ];
 
 const UCL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

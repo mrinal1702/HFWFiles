@@ -69,6 +69,13 @@
       "home_team": "VfB Stuttgart",
       "away_team": "Viking",
       "status": "scored"
+    },
+    {
+      "match_slug": "liverpool-atletico-madrid",
+      "fotmob_match_id": 6106246,
+      "home_team": "Liverpool",
+      "away_team": "Atlético Madrid",
+      "status": "scored"
     }
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "liverpool-atletico-madrid",
+  "fotmob_match_id": 6106246,
+  "source_url": "https://www.fotmob.com/en-GB/matches/liverpool-vs-atletico-madrid/2uigag#6106246:tab=stats",
+  "home_team": "Liverpool",
+  "away_team": "Atl\u00e9tico Madrid",
+  "raw_json_path": "intermediates/Liverpool_Vs_AtlticoMadrid.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

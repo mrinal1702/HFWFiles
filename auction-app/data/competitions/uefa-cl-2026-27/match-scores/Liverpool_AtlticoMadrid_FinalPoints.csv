@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Dominik Szoboszlai,846005,Liverpool,midfielder,55.924,7.0,0.0,63
+Alexis Mac Allister,831489,Liverpool,midfielder,35.676,7.0,0.0,43
+Julián Álvarez,974753,Atlético de Madrid,forward,39.02,3.0,0.0,42
+Cristian Romero,789066,Atlético de Madrid,defender,37.19166666666666,0.0,0.0,37
+Pablo Barrios,1338192,Atlético de Madrid,midfielder,33.67866666666666,3.0,0.0,37
+Marcos Llorente,602563,Atlético de Madrid,defender,35.739999999999995,0.0,0.0,36
+Miloš Kerkez,1195281,Liverpool,defender,28.323333333333338,5.0,0.0,33
+Florian Wirtz,1152455,Liverpool,midfielder,25.692,7.0,0.0,33
+Alexander Isak,690107,Liverpool,forward,24.43333333333333,6.0,0.0,30
+Ronald Araujo,921253,Liverpool,defender,23.085,5.0,0.0,28
+Jérémy Jacquet,1473534,Liverpool,defender,22.59,5.0,0.0,28
+Virgil van Dijk,209405,Liverpool,defender,19.975,5.0,0.0,25
+Bradley Barcola,1297165,Liverpool,forward,17.65,6.0,0.0,24
+Giuliano Simeone,1226147,Atlético de Madrid,midfielder,19.456,3.0,0.0,22
+Alejandro Grimaldo,288406,Atlético de Madrid,midfielder,18.851333333333336,2.5,0.0,21
+Koke,184533,Atlético de Madrid,midfielder,16.78066666666667,3.0,0.0,20
+Marc Pubill,1323897,Atlético de Madrid,defender,19.450000000000003,0.0,0.0,19
+Álex Baena,942372,Atlético de Madrid,midfielder,16.275333333333332,3.0,0.0,19
+Kang-In Lee,940976,Atlético de Madrid,forward,15.386666666666663,3.0,0.0,18
+Rio Ngumoha,1597668,Liverpool,forward,11.44,6.0,0.0,17
+Dávid Hancko,727897,Atlético de Madrid,defender,16.845,0.0,0.0,17
+Robin Le Normand,609516,Atlético de Madrid,defender,11.628333333333332,5.0,0.0,17
+Ryan Gravenberch,956683,Liverpool,midfielder,9.58,2.5,0.0,12
+Konstantinos Tsimikas,671529,Liverpool,midfielder,9.226666666666668,2.5,0.0,12
+Víctor Muñoz,1553105,Liverpool,forward,11.37,0.0,0.0,11
+Ademola Lookman,690516,Atlético de Madrid,midfielder,6.551333333333333,2.5,0.0,9
+Morten Hjulmand,950199,Atlético de Madrid,midfielder,5.767333333333333,2.5,0.0,8
+Jeremie Frimpong,966018,Liverpool,defender,2.515,5.0,0.0,8
+Lewis Koumas,1364042,Liverpool,forward,6.616666666666666,0.0,0.0,7
+Jonathan David,939569,Atlético de Madrid,forward,5.876666666666666,0.0,0.0,6
+Dani Martínez,1531100,Atlético de Madrid,defender,0.0,0.0,0.0,0
+Jorge Domínguez,1842329,Atlético de Madrid,defender,0.0,0.0,0.0,0
+Johnny Cardoso,1173678,Atlético de Madrid,midfielder,0.0,0.0,0.0,0
+James McConnell,1231075,Liverpool,midfielder,0.0,0.0,0.0,0
+Luke Chambers,1249634,Liverpool,midfielder,0.0,0.0,0.0,0
+Obed Vargas,1254394,Atlético de Madrid,midfielder,0.0,0.0,0.0,0
+Rodrigo Mendoza,1419969,Atlético de Madrid,midfielder,0.0,0.0,0.0,0
+Trey Nyoni,1436258,Liverpool,midfielder,0.0,0.0,0.0,0
+Jorge Castillo,1692877,Atlético de Madrid,midfielder,0.0,0.0,0.0,0
+Jayden Danns,1416696,Liverpool,forward,0.0,0.0,0.0,0
+Liverpool Keepers,8650,Liverpool,goalkeeper,18.72,12.0,0.0,31
+Atlético de Madrid Keepers,9906,Atlético de Madrid,goalkeeper,16.4,6.0,0.0,22
