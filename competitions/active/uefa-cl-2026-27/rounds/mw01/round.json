@@ -90,6 +90,13 @@
       "home_team": "Sporting CP",
       "away_team": "Galatasaray",
       "status": "scored"
+    },
+    {
+      "match_slug": "arsenal-napoli",
+      "fotmob_match_id": 6106318,
+      "home_team": "Napoli",
+      "away_team": "Arsenal",
+      "status": "scored"
     }
   ]
 }

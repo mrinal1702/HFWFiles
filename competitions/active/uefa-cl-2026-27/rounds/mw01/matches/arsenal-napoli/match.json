@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "arsenal-napoli",
+  "fotmob_match_id": 6106318,
+  "source_url": "https://www.fotmob.com/en-GB/matches/arsenal-vs-napoli/37jhat#6106318:tab=stats",
+  "home_team": "Napoli",
+  "away_team": "Arsenal",
+  "raw_json_path": "intermediates/Napoli_Vs_Arsenal.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

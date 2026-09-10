@@ -405,6 +405,15 @@ const UCL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 6106280,
     rows: loadMatchScoreCsv("SportingCP_Galatasaray_FinalPoints.csv", UCL_2026_27),
   },
+  {
+    slug: "napoli-arsenal",
+    title: "Napoli vs Arsenal",
+    subtitle: "UEFA Champions League · Matchweek 1",
+    groupStageGw: 1,
+    competitionSlug: UCL_2026_27,
+    fotmobMatchId: 6106318,
+    rows: loadMatchScoreCsv("Napoli_Arsenal_FinalPoints.csv", UCL_2026_27),
+  },
 ];
 
 const UCL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

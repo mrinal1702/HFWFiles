@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Martin Ødegaard,534670,Arsenal,midfielder,55.052,7.0,0.0,62
+Ben White,776151,Arsenal,defender,27.31333333333334,10.0,0.0,37
+Gabriel,795179,Arsenal,defender,27.045,10.0,0.0,37
+Rafa Marín,1313884,Napoli,defender,29.375,5.0,0.0,34
+Declan Rice,654096,Arsenal,midfielder,25.744,7.0,0.0,33
+Mathías Olivera,729093,Napoli,defender,27.660000000000004,5.0,0.0,33
+Ezri Konsa,710159,Arsenal,defender,19.79,10.0,0.0,30
+Christos Tzolis,1157237,Arsenal,forward,26.69,3.0,0.0,30
+Mikel Merino,574645,Arsenal,midfielder,22.168666666666667,5.0,0.0,27
+Amir Rrahmani,544693,Napoli,defender,21.6,5.0,0.0,27
+Bukayo Saka,961995,Arsenal,forward,25.73333333333333,0.0,0.0,26
+Piero Hincapié,1137667,Arsenal,defender,15.670000000000003,10.0,0.0,26
+Viktor Gyökeres,664500,Arsenal,forward,22.473333333333333,0.0,0.0,22
+Giovanni Di Lorenzo,414906,Napoli,defender,16.55,5.0,0.0,22
+Billy Gilmour,942549,Napoli,midfielder,17.694,3.0,0.0,21
+Noni Madueke,1084981,Arsenal,forward,15.516666666666666,3.0,0.0,19
+Kevin De Bruyne,169200,Napoli,midfielder,15.2,3.0,0.0,18
+Stanislav Lobotka,308517,Napoli,midfielder,15.040666666666668,3.0,0.0,18
+Matteo Politano,415539,Napoli,midfielder,11.743333333333334,5.0,0.0,17
+Alisson Santos,1355552,Napoli,midfielder,11.453333333333331,5.0,0.0,16
+Eberechi Eze,818975,Arsenal,midfielder,9.592,5.0,0.0,15
+Bruno Guimarães,850354,Arsenal,midfielder,9.901333333333335,4.5,0.0,14
+Kai Havertz,749736,Arsenal,forward,9.576666666666666,3.0,0.0,13
+Costantino Favasuli,1403328,Napoli,midfielder,11.426666666666666,0.5,0.0,12
+Rasmus Højlund,1199272,Napoli,forward,11.553333333333333,0.0,0.0,12
+Martín Zubimendi,1031325,Arsenal,midfielder,7.140666666666667,2.5,0.0,10
+Antonio Vergara,1320863,Napoli,midfielder,7.156666666666666,0.5,0.0,8
+David Neres,793066,Napoli,midfielder,3.3906666666666667,2.5,0.0,6
+Lorenzo Lucca,1212630,Napoli,forward,5.873333333333334,0.0,0.0,6
+Sam Beukema,873573,Napoli,defender,0.0,0.0,0.0,0
+Benoît Badiashile,955376,Napoli,defender,0.0,0.0,0.0,0
+Riccardo Calafiori,1105912,Arsenal,defender,0.0,0.0,0.0,0
+Myles Lewis-Skelly,1406436,Arsenal,defender,0.0,0.0,0.0,0
+Marli Salmon,1787525,Arsenal,defender,0.0,0.0,0.0,0
+Leonardo Spinazzola,215242,Napoli,midfielder,0.0,0.0,0.0,0
+Max Dowman,1635773,Arsenal,midfielder,0.0,0.0,0.0,0
+Arsenal Keepers,9825,Arsenal,goalkeeper,18.22,18.0,0.0,36
+Napoli Keepers,9875,Napoli,goalkeeper,23.040000000000003,12.0,0.0,35
