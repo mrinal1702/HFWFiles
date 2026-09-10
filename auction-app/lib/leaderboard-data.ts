@@ -5,6 +5,10 @@ import { fetchAuctionUserNames } from "@/lib/auction-users-query";
 import { isUserRelegated } from "@/lib/relegated-participants";
 import { loadBestXiOverlay } from "@/lib/best-xi-overlay";
 import { loadMatchPositionsForGameweek } from "@/lib/match-positions-for-gw";
+import {
+  fetchPlayerMetaByIds,
+  resolveAuctionCompetitionId,
+} from "@/lib/players-query";
 
 // ─── Shared types ─────────────────────────────────────────────────────────────
 
@@ -67,6 +71,40 @@ export type GameweekPanel = {
 };
 
 // ─── Loaders ─────────────────────────────────────────────────────────────────
+
+type SquadPlayerMeta = {
+  player_name: string | null;
+  position: string | null;
+  team_name: string | null;
+};
+
+/** Competition-scoped auctions → competition_players; legacy → public.players. */
+async function loadSquadPlayerMetaByIds(
+  admin: ReturnType<typeof createAdminClient>,
+  auctionId: number,
+  playerIds: string[],
+): Promise<Map<string, SquadPlayerMeta>> {
+  const map = new Map<string, SquadPlayerMeta>();
+  if (!playerIds.length) return map;
+
+  const auctionRes = await admin
+    .from("Auctions")
+    .select("competition_id")
+    .eq("id", auctionId)
+    .maybeSingle();
+  if (auctionRes.error) throw new Error(`Auctions: ${auctionRes.error.message}`);
+
+  const competitionId = resolveAuctionCompetitionId(auctionRes.data);
+  const metaById = await fetchPlayerMetaByIds(admin, playerIds, competitionId);
+  for (const [id, meta] of Object.entries(metaById)) {
+    map.set(id, {
+      player_name: meta.player_name,
+      position: meta.position,
+      team_name: meta.club,
+    });
+  }
+  return map;
+}
 
 /** Auction-agnostic GW scores from Player_Scores (keyed by FotMob player_id). */
 async function fetchPlayerGameweekScores(
@@ -219,22 +257,7 @@ export async function getCurrentSquads(
   }>;
 
   const playerIds = [...new Set(teams.map((t) => String(t.player_id)))];
-  let playerById = new Map<string, { player_name: string | null; position: string | null; team_name: string | null }>();
-
-  if (playerIds.length > 0) {
-    const playersRes = await admin
-      .from("players")
-      .select("player_id, player_name, position, team_name")
-      .in("player_id", playerIds);
-    if (!playersRes.error) {
-      playerById = new Map(
-        (playersRes.data ?? []).map((p) => [
-          String(p.player_id),
-          p as { player_name: string | null; position: string | null; team_name: string | null },
-        ]),
-      );
-    }
-  }
+  const playerById = await loadSquadPlayerMetaByIds(admin, auctionId, playerIds);
 
   const byUser = new Map<number, typeof teams>();
   for (const row of teams) {
@@ -441,20 +464,9 @@ export async function getGameweekSquadData(
   if (squads.length === 0) return null;
   const lbRows = lbRes.data ?? [];
 
-  // Fetch player metadata
+  // Fetch player metadata (competition_players when auction is competition-scoped)
   const playerIds = [...new Set(squads.map((s) => String(s.player_id)))];
-  const playersRes = await admin
-    .from("players")
-    .select("player_id, player_name, position, team_name")
-    .in("player_id", playerIds);
-  if (playersRes.error) throw new Error(`players: ${playersRes.error.message}`);
-
-  const playerById = new Map(
-    (playersRes.data ?? []).map((p) => [
-      String(p.player_id),
-      p as { player_name: string | null; position: string | null; team_name: string | null },
-    ]),
-  );
+  const playerById = await loadSquadPlayerMetaByIds(admin, auctionId, playerIds);
 
   const scoreMap = await fetchPlayerGameweekScores(admin, gameWeekId, playerIds);
   const matchPosMap = loadMatchPositionsForGameweek(gameWeekId);
