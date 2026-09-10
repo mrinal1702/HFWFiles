@@ -42,6 +42,11 @@ export function formatFinishLabel(rank: number): string {
   return medal ? `${formatOrdinalRank(rank)} ${medal}` : formatOrdinalRank(rank);
 }
 
+/** First-place finishes only — Trophy Cabinet entries. */
+export function trophiesFromHistory(entries: AuctionHistoryEntry[]): AuctionHistoryEntry[] {
+  return entries.filter((e) => e.rank === 1);
+}
+
 /**
  * Auction History for the signed-in auth user: archived tournaments they joined,
  * with final standings from `auction_leaderboard` (same source as the leaderboard page).

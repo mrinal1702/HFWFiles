@@ -25,7 +25,7 @@ Top nav ([`ParticipantNav`](../app/_components/ParticipantNav.tsx)):
 |-----|-------|---------|
 | **Active Auctions** | `/dashboard` | Current leagues + join code |
 | **Archives** | `/archives` | Completed leagues → Leaderboard / Match scores / Open auction |
-| **Auction History** | `/auction-history` | Personal finishes (rank + year); podium medals 🏆🥈🥉 |
+| **Auction History** | `/auction-history` | Tabs: **Past Finishes** (rank + year; podium medals 🏆🥈🥉) and **Trophy Cabinet** (1st-place only — large trophy image + auction name; empty state if none) |
 | Match scores | `/match-scores` | Public link (plain player names; no auction ownership) |
 
 Archived auction IDs / history years: `lib/archived-auctions.ts`  

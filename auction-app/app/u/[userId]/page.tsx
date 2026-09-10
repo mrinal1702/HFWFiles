@@ -2,8 +2,9 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 
 import { ProfileAvatarZoom } from "@/app/_components/entity/ProfileAvatarZoom";
+import { TrophyCabinet } from "@/app/_components/TrophyCabinet";
 import { getAuthUser } from "@/lib/auth/get-user";
-import { formatFinishLabel } from "@/lib/auction-history";
+import { formatFinishLabel, trophiesFromHistory } from "@/lib/auction-history";
 import { loadPublicProfile } from "@/lib/public-profile";
 
 export const dynamic = "force-dynamic";
@@ -95,6 +96,17 @@ export default async function PublicProfilePage({
             ))}
           </ul>
         )}
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-lg font-semibold text-slate-900">Trophy Cabinet</h2>
+        <p className="mt-1 text-sm text-slate-600">
+          Championship trophies from auctions they finished first in.
+        </p>
+        <TrophyCabinet
+          trophies={trophiesFromHistory(profile.finishes)}
+          emptyMessage="Their trophy cabinet is empty."
+        />
       </section>
 
       <p className="mt-10">
