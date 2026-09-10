@@ -83,6 +83,13 @@
       "home_team": "Paris Saint-Germain",
       "away_team": "Slovan Bratislava",
       "status": "scored"
+    },
+    {
+      "match_slug": "galatasaray-sporting-cp",
+      "fotmob_match_id": 6106280,
+      "home_team": "Sporting CP",
+      "away_team": "Galatasaray",
+      "status": "scored"
     }
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "match_id": 6106280,
+  "home_team": "Sporting CP",
+  "away_team": "Galatasaray",
+  "source_url": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-sporting-cp/2sumx3#6106280:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw01/matches/galatasaray-sporting-cp/intermediates/_fetch.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-sporting-cp/2sumx3",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-sporting-cp/2sumx3#6106280:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-sporting-cp/2sumx3#6106280:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-sporting-cp/2sumx3#6106280:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106280"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

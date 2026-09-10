@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "galatasaray-sporting-cp",
+  "fotmob_match_id": 6106280,
+  "source_url": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-sporting-cp/2sumx3#6106280:tab=stats",
+  "home_team": "Sporting CP",
+  "away_team": "Galatasaray",
+  "raw_json_path": "intermediates/SportingCP_Vs_Galatasaray.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}
