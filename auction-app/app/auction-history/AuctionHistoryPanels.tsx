@@ -4,11 +4,12 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback } from "react";
 
-import { TrophyCabinet, type TrophyCabinetEntry } from "@/app/_components/TrophyCabinet";
+import { TrophyCabinet } from "@/app/_components/TrophyCabinet";
 import {
   formatFinishLabel,
   type AuctionHistoryEntry,
 } from "@/lib/auction-history-shared";
+import type { TrophyCabinetEntry } from "@/lib/trophy-cabinet-awards";
 
 export type HistoryTabId = "past-finishes" | "trophy-cabinet";
 
@@ -121,7 +122,7 @@ export function AuctionHistoryPanels({
       {activeTab === "trophy-cabinet" && (
         <section>
           <p className="text-sm text-slate-600">
-            Championship trophies from auctions you finished first in.
+            Trophies from championships and special cups.
           </p>
           {loadError ? (
             <p className="mt-4 text-sm leading-relaxed text-red-700">

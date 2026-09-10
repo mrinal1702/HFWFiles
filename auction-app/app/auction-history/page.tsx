@@ -4,10 +4,8 @@ import { Suspense } from "react";
 
 import { ParticipantNav } from "@/app/_components/ParticipantNav";
 import { getAuthUser } from "@/lib/auth/get-user";
-import {
-  loadAuctionHistoryForUser,
-  trophiesFromHistory,
-} from "@/lib/auction-history";
+import { loadAuctionHistoryForUser } from "@/lib/auction-history";
+import { buildTrophyCabinet } from "@/lib/trophy-cabinet-awards";
 import { signOutAction } from "@/app/auth/actions";
 
 import {
@@ -43,7 +41,7 @@ export default async function AuctionHistoryPage({
     loadError = e instanceof Error ? e.message : String(e);
   }
 
-  const trophies = trophiesFromHistory(history);
+  const trophies = buildTrophyCabinet(user.id, history);
 
   return (
     <main className="mx-auto max-w-lg flex-1 px-4 py-8 sm:max-w-3xl sm:px-6 sm:py-10">
