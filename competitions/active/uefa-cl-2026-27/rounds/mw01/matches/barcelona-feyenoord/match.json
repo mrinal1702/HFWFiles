@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "barcelona-feyenoord",
+  "fotmob_match_id": 6106264,
+  "source_url": "https://www.fotmob.com/en-GB/matches/barcelona-vs-feyenoord/2xzyq9#6106264:tab=stats",
+  "home_team": "Barcelona",
+  "away_team": "Feyenoord",
+  "raw_json_path": "intermediates/Barcelona_Vs_Feyenoord.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

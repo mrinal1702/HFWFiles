@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Lamine Yamal,1467236,Barcelona,forward,82.64999999999999,15.0,0.0,98
+Raphinha,696679,Barcelona,forward,61.27666666666667,9.0,0.0,70
+João Cancelo,361757,Barcelona,defender,47.12500000000001,5.0,0.0,52
+Pedri,1083323,Barcelona,midfielder,33.662,11.0,0.0,45
+Rodri,675088,Barcelona,midfielder,29.170666666666666,11.0,0.0,40
+Gabriel Jesus,576165,Barcelona,forward,34.18333333333334,3.0,0.0,37
+Pau Cubarsí,1532137,Barcelona,defender,29.160000000000004,5.0,0.0,34
+Karim Adeyemi,959594,Barcelona,forward,23.88,9.0,0.0,33
+Dani Olmo,614834,Barcelona,midfielder,18.866666666666667,11.0,0.0,30
+Andreas Christensen,449232,Barcelona,defender,21.425,5.0,0.0,26
+Jules Koundé,705450,Barcelona,defender,21.21,5.0,0.0,26
+Anthony Gordon,906937,Barcelona,forward,18.5,6.0,0.0,24
+Gonçalo Borges,1080520,Feyenoord,forward,16.05,3.0,0.0,19
+Sem Steijn,947898,Feyenoord,midfielder,17.5,0.5,0.0,18
+Oussama Targhalline,1228273,Feyenoord,midfielder,18.648,-1.5,0.0,17
+Gjivai Zechiël,1523822,Feyenoord,midfielder,19.404,-3.0,0.0,16
+Nacho Ferri,1382019,Feyenoord,forward,16.06,0.0,0.0,16
+Anis Hadj Moussa,1576876,Feyenoord,midfielder,15.944,-1.0,0.0,15
+Tsuyoshi Watanabe,1023887,Feyenoord,defender,29.695,-15.0,0.0,15
+Javi López,1159181,Feyenoord,defender,13.95,0.0,0.0,14
+Fermín López,1404415,Barcelona,midfielder,7.695333333333334,4.5,0.0,12
+Charles Vanhoutte,952057,Feyenoord,midfielder,13.126,-1.0,0.0,12
+Mika Mármol,1225450,Feyenoord,defender,26.25,-15.0,0.0,11
+Marc Bernal,1573126,Barcelona,midfielder,6.586,4.5,0.0,11
+Luciano Valente,1256180,Feyenoord,midfielder,11.314666666666668,-1.0,0.0,10
+Shaqueel van Persie,1553365,Feyenoord,forward,6.43,3.0,0.0,9
+Gavi,1279040,Barcelona,midfielder,4.343333333333334,4.5,0.0,9
+Jeremiah St. Juste,611831,Feyenoord,defender,19.385,-15.0,0.0,4
+Givairo Read,1351133,Feyenoord,defender,17.27,-15.0,0.0,2
+Tobias van den Elshout,1692856,Feyenoord,forward,1.2033333333333331,0.0,0.0,1
+Mats Deijl,630494,Feyenoord,defender,0.0,0.0,0.0,0
+Alejandro Balde,1254166,Barcelona,defender,0.0,0.0,0.0,0
+Thijs Kraaijeveld,1553376,Feyenoord,defender,0.0,0.0,0.0,0
+Gerard Martín,1598982,Barcelona,defender,0.0,0.0,0.0,0
+Tijme Wessels,2088463,Feyenoord,defender,0.0,0.0,0.0,0
+Xavi Espart,1815149,Barcelona,midfielder,0.0,0.0,0.0,0
+Brian Fariñas,1821727,Barcelona,midfielder,0.0,0.0,0.0,0
+Gaoussou Diarra,1675966,Feyenoord,forward,0.0,0.0,0.0,0
+Hamza Abdelkarim,1708842,Barcelona,forward,0.0,0.0,0.0,0
+Jerayno Schaken,1876640,Feyenoord,forward,0.0,0.0,0.0,0
+Barcelona Keepers,8634,Barcelona,goalkeeper,9.5,12.0,0.0,22
+Feyenoord Keepers,10235,Feyenoord,goalkeeper,17.18,-12.0,0.0,5
