@@ -5,7 +5,10 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback } from "react";
 
 import { TrophyCabinet, type TrophyCabinetEntry } from "@/app/_components/TrophyCabinet";
-import { formatFinishLabel, type AuctionHistoryEntry } from "@/lib/auction-history";
+import {
+  formatFinishLabel,
+  type AuctionHistoryEntry,
+} from "@/lib/auction-history-shared";
 
 export type HistoryTabId = "past-finishes" | "trophy-cabinet";
 
