@@ -1,0 +1,45 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Ousmane Dembélé,692984,Paris Saint-Germain,forward,89.68333333333334,15.0,0.0,105
+Ferrán Torres,881771,Paris Saint-Germain,forward,52.07333333333333,15.0,0.0,67
+Maghnes Akliouche,1305618,Paris Saint-Germain,forward,47.82,18.0,0.0,66
+Fabián Ruiz,605654,Paris Saint-Germain,midfielder,41.552,15.0,0.0,57
+Vítinha,1061249,Paris Saint-Germain,midfielder,36.508,15.0,0.0,52
+Dro Fernández,1682313,Paris Saint-Germain,midfielder,30.832,15.0,0.0,46
+Suleiman Camara,1206542,Slovan Bratislava,forward,35.42,3.0,0.0,38
+Achraf Hakimi,770881,Paris Saint-Germain,defender,29.218333333333334,5.0,0.0,34
+Tigran Barseghyan,552700,Slovan Bratislava,forward,30.87,3.0,0.0,34
+Nuno Mendes,1158945,Paris Saint-Germain,defender,24.87333333333333,5.0,0.0,30
+Peter Pokorný,951951,Slovan Bratislava,midfielder,33.428,-5.0,0.0,28
+Ilya Zabarnyi,1140003,Paris Saint-Germain,defender,20.76,5.0,0.0,26
+Andraž Šporar,338136,Slovan Bratislava,forward,18.926666666666662,3.0,0.0,22
+Mika Godts,1396372,Paris Saint-Germain,forward,18.076666666666668,3.0,0.0,21
+Senny Mayulu,1574189,Paris Saint-Germain,midfielder,14.964666666666668,4.5,0.0,19
+Willian Pacho,1137670,Paris Saint-Germain,defender,11.653333333333332,5.0,0.0,17
+Lucas Digne,210111,Paris Saint-Germain,defender,11.526666666666667,5.0,0.0,17
+Kenan Bajrič,315814,Slovan Bratislava,defender,15.118333333333332,0.0,0.0,15
+Cristian Martínez,727101,Slovan Bratislava,midfielder,17.312666666666665,-3.0,0.0,14
+Lucas Beraldo,1255209,Paris Saint-Germain,defender,6.451666666666666,5.0,0.0,11
+Nino Marcelli,1449716,Slovan Bratislava,forward,11.1,0.0,0.0,11
+Rahim Ibrahim,1239580,Slovan Bratislava,midfielder,14.038000000000002,-3.0,0.0,11
+Artur Gajdoš,1201843,Slovan Bratislava,midfielder,9.893333333333334,0.5,0.0,10
+Lucas Hernández,504606,Paris Saint-Germain,defender,4.701666666666666,5.0,0.0,10
+Alexej Maroš,1557209,Slovan Bratislava,forward,7.633333333333333,0.0,0.0,8
+Alen Mustafić,949092,Slovan Bratislava,midfielder,5.806,0.5,0.0,6
+Sandro Cruz,1045565,Slovan Bratislava,defender,20.94,-20.0,0.0,1
+Sahmkou Camara,1513367,Slovan Bratislava,defender,15.246666666666664,-15.0,0.0,0
+Svetozar Marković,922722,Slovan Bratislava,defender,18.345,-20.0,0.0,0
+César Blackman,888966,Slovan Bratislava,defender,10.47,-20.0,0.0,0
+Kevin Wimmer,264221,Slovan Bratislava,defender,0.0,0.0,0.0,0
+Marquinhos,267365,Paris Saint-Germain,defender,0.0,0.0,0.0,0
+Samuel Kozlovský,949877,Slovan Bratislava,defender,0.0,0.0,0.0,0
+Danylo Ignatenko,630472,Slovan Bratislava,midfielder,0.0,0.0,0.0,0
+Daiki Matsuoka,1023982,Slovan Bratislava,midfielder,0.0,0.0,0.0,0
+João Neves,1342757,Paris Saint-Germain,midfielder,0.0,0.0,0.0,0
+Warren Zaïre-Emery,1367615,Paris Saint-Germain,midfielder,0.0,0.0,0.0,0
+Quentin Ndjantou,1699549,Paris Saint-Germain,midfielder,0.0,0.0,0.0,0
+Khvicha Kvaratskhelia,900433,Paris Saint-Germain,forward,0.0,0.0,0.0,0
+Roman Čerepkai,1338948,Slovan Bratislava,forward,0.0,0.0,0.0,0
+Désiré Doué,1339208,Paris Saint-Germain,forward,0.0,0.0,0.0,0
+Alasana Yirajang,1614857,Slovan Bratislava,forward,0.0,0.0,0.0,0
+Paris Saint-Germain Keepers,9847,Paris Saint-Germain,goalkeeper,15.140000000000002,12.0,0.0,27
+Slovan Bratislava Keepers,6019,Slovan Bratislava,goalkeeper,33.7,-18.0,0.0,16

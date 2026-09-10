@@ -1,0 +1,15 @@
+{
+  "match_id": 6106237,
+  "home_team": "Paris Saint-Germain",
+  "away_team": "Slovan Bratislava",
+  "source_url": "https://www.fotmob.com/en-GB/matches/slovan-bratislava-vs-paris-saint-germain/22y3ra#6106237:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw01/matches/slovan-bratislava-paris-saint-germain/intermediates/_fetch.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/slovan-bratislava-vs-paris-saint-germain/22y3ra",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/slovan-bratislava-vs-paris-saint-germain/22y3ra#6106237:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/slovan-bratislava-vs-paris-saint-germain/22y3ra#6106237:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/slovan-bratislava-vs-paris-saint-germain/22y3ra#6106237:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106237"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

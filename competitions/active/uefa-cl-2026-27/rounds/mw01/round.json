@@ -76,6 +76,13 @@
       "home_team": "Liverpool",
       "away_team": "Atlético Madrid",
       "status": "scored"
+    },
+    {
+      "match_slug": "slovan-bratislava-paris-saint-germain",
+      "fotmob_match_id": 6106237,
+      "home_team": "Paris Saint-Germain",
+      "away_team": "Slovan Bratislava",
+      "status": "scored"
     }
   ]
 }

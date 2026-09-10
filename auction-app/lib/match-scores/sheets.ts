@@ -387,6 +387,15 @@ const UCL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 6106246,
     rows: loadMatchScoreCsv("Liverpool_AtlticoMadrid_FinalPoints.csv", UCL_2026_27),
   },
+  {
+    slug: "paris-saint-germain-slovan-bratislava",
+    title: "Paris Saint-Germain vs Slovan Bratislava",
+    subtitle: "UEFA Champions League · Matchweek 1",
+    groupStageGw: 1,
+    competitionSlug: UCL_2026_27,
+    fotmobMatchId: 6106237,
+    rows: loadMatchScoreCsv("ParisSaintGermain_SlovanBratislava_FinalPoints.csv", UCL_2026_27),
+  },
 ];
 
 const UCL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

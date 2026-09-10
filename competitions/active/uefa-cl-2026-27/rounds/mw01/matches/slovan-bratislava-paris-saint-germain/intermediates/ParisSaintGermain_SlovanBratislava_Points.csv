@@ -1,0 +1,43 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+692984,Ousmane Dembélé,9847,Paris Saint-Germain,3,forward,84.35,3.2,2.1333333333333333,89.68333333333334,64.0,5,1,15.0,104.68333333333334
+881771,Ferrán Torres,9847,Paris Saint-Germain,3,forward,48.24,1.4,2.433333333333333,52.07333333333333,73.0,5,1,15.0,67.07333333333332
+1305618,Maghnes Akliouche,9847,Paris Saint-Germain,3,forward,42.52,2.3,3.0,47.82,90.0,6,1,18.0,65.82
+605654,Fabián Ruiz,9847,Paris Saint-Germain,2,midfielder,36.652,1.9,3.0,41.552,90.0,6,1,15.0,56.552
+1061249,Vítinha,9847,Paris Saint-Germain,2,midfielder,30.508000000000003,3.0,3.0,36.508,90.0,6,1,15.0,51.508
+1682313,Dro Fernández,9847,Paris Saint-Germain,2,midfielder,24.832,3.0,3.0,30.832,90.0,6,1,15.0,45.832
+1206542,Suleiman Camara,6019,Slovan Bratislava,3,forward,28.32,4.1,3.0,35.42,90.0,1,6,3.0,38.42
+770881,Achraf Hakimi,9847,Paris Saint-Germain,1,defender,24.085,3.0,2.1333333333333333,29.218333333333334,64.0,5,1,5.0,34.218333333333334
+552700,Tigran Barseghyan,6019,Slovan Bratislava,3,forward,24.77,4.1,2.0,30.869999999999997,60.0,1,5,3.0,33.87
+1158945,Nuno Mendes,9847,Paris Saint-Germain,1,defender,19.74,3.0,2.1333333333333333,24.87333333333333,64.0,5,1,5.0,29.87333333333333
+951951,Peter Pokorný,6019,Slovan Bratislava,2,midfielder,28.528,1.9,3.0,33.428,90.0,1,6,-5.0,28.427999999999997
+1140003,Ilya Zabarnyi,9847,Paris Saint-Germain,1,defender,14.76,3.0,3.0,20.759999999999998,90.0,6,1,5.0,25.759999999999998
+338136,Andraž Šporar,6019,Slovan Bratislava,3,forward,11.26,5.0,2.6666666666666665,18.926666666666666,80.0,1,5,3.0,21.926666666666666
+1396372,Mika Godts,9847,Paris Saint-Germain,3,forward,13.11,4.1,0.8666666666666667,18.076666666666668,26.0,1,0,3.0,21.076666666666668
+1574189,Senny Mayulu,9847,Paris Saint-Germain,2,midfielder,11.098,3.0,0.8666666666666667,14.964666666666668,26.0,1,0,4.5,19.464666666666666
+1137670,Willian Pacho,9847,Paris Saint-Germain,1,defender,6.5200000000000005,3.0,2.1333333333333333,11.653333333333332,64.0,5,1,5.0,16.653333333333332
+210111,Lucas Digne,9847,Paris Saint-Germain,1,defender,7.66,3.0,0.8666666666666667,11.526666666666667,26.0,1,0,5.0,16.526666666666667
+315814,Kenan Bajrič,6019,Slovan Bratislava,1,defender,11.385,3.0,0.7333333333333333,15.118333333333332,22.0,0,1,0.0,15.118333333333332
+727101,Cristian Martínez,6019,Slovan Bratislava,2,midfielder,11.645999999999999,3.0,2.6666666666666665,17.312666666666665,80.0,1,5,-3.0,14.312666666666665
+1255209,Lucas Beraldo,9847,Paris Saint-Germain,1,defender,2.885,3.0,0.5666666666666667,6.451666666666666,17.0,1,0,5.0,11.451666666666666
+1449716,Nino Marcelli,6019,Slovan Bratislava,3,forward,5.1000000000000005,5.0,1.0,11.100000000000001,30.0,0,1,0.0,11.100000000000001
+1239580,Rahim Ibrahim,6019,Slovan Bratislava,2,midfielder,10.138000000000002,1.9,2.0,14.038000000000002,60.0,1,5,-3.0,11.038000000000002
+1201843,Artur Gajdoš,6019,Slovan Bratislava,2,midfielder,6.5600000000000005,3.0,0.3333333333333333,9.893333333333334,10.0,0,1,0.5,10.393333333333334
+504606,Lucas Hernández,9847,Paris Saint-Germain,1,defender,0.8350000000000002,3.0,0.8666666666666667,4.701666666666666,26.0,1,0,5.0,9.701666666666666
+1557209,Alexej Maroš,6019,Slovan Bratislava,3,forward,3.2,4.1,0.3333333333333333,7.633333333333333,10.0,0,1,0.0,7.633333333333333
+949092,Alen Mustafić,6019,Slovan Bratislava,2,midfielder,1.8060000000000003,3.0,1.0,5.806,30.0,0,1,0.5,6.306
+1045565,Sandro Cruz,6019,Slovan Bratislava,1,defender,14.939999999999998,3.0,3.0,20.939999999999998,90.0,1,6,-20.0,0.9399999999999977
+1513367,Sahmkou Camara,6019,Slovan Bratislava,1,defender,9.979999999999997,3.0,2.2666666666666666,15.246666666666663,68.0,1,5,-15.0,0.2466666666666626
+922722,Svetozar Marković,6019,Slovan Bratislava,1,defender,12.344999999999999,3.0,3.0,18.345,90.0,1,6,-20.0,0.0
+888966,César Blackman,6019,Slovan Bratislava,1,defender,5.67,1.8,3.0,10.469999999999999,90.0,1,6,-20.0,0.0
+264221,Kevin Wimmer,6019,Slovan Bratislava,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+267365,Marquinhos,9847,Paris Saint-Germain,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+949877,Samuel Kozlovský,6019,Slovan Bratislava,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+630472,Danylo Ignatenko,6019,Slovan Bratislava,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1023982,Daiki Matsuoka,6019,Slovan Bratislava,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1342757,João Neves,9847,Paris Saint-Germain,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1367615,Warren Zaïre-Emery,9847,Paris Saint-Germain,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1699549,Quentin Ndjantou,9847,Paris Saint-Germain,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+900433,Khvicha Kvaratskhelia,9847,Paris Saint-Germain,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1338948,Roman Čerepkai,6019,Slovan Bratislava,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1339208,Désiré Doué,9847,Paris Saint-Germain,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1614857,Alasana Yirajang,6019,Slovan Bratislava,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
