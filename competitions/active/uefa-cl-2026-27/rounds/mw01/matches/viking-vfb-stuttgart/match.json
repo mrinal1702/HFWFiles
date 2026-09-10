@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "viking-vfb-stuttgart",
+  "fotmob_match_id": 6106400,
+  "source_url": "https://www.fotmob.com/en-GB/matches/viking-vs-vfb-stuttgart/2wms20#6106400:tab=stats",
+  "home_team": "VfB Stuttgart",
+  "away_team": "Viking",
+  "raw_json_path": "intermediates/VfBStuttgart_Vs_Viking.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

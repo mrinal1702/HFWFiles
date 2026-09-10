@@ -62,6 +62,13 @@
       "home_team": "Barcelona",
       "away_team": "Feyenoord",
       "status": "scored"
+    },
+    {
+      "match_slug": "viking-vfb-stuttgart",
+      "fotmob_match_id": 6106400,
+      "home_team": "VfB Stuttgart",
+      "away_team": "Viking",
+      "status": "scored"
     }
   ]
 }

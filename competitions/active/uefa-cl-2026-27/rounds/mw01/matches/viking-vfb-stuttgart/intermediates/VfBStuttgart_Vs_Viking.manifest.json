@@ -1,0 +1,15 @@
+{
+  "match_id": 6106400,
+  "home_team": "VfB Stuttgart",
+  "away_team": "Viking",
+  "source_url": "https://www.fotmob.com/en-GB/matches/viking-vs-vfb-stuttgart/2wms20#6106400:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw01/matches/viking-vfb-stuttgart/intermediates/_fetch.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/viking-vs-vfb-stuttgart/2wms20",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/viking-vs-vfb-stuttgart/2wms20#6106400:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/viking-vs-vfb-stuttgart/2wms20#6106400:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/viking-vs-vfb-stuttgart/2wms20#6106400:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106400"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

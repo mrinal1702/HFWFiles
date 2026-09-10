@@ -369,6 +369,15 @@ const UCL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 6106264,
     rows: loadMatchScoreCsv("Barcelona_Feyenoord_FinalPoints.csv", UCL_2026_27),
   },
+  {
+    slug: "vfb-stuttgart-viking",
+    title: "VfB Stuttgart vs Viking",
+    subtitle: "UEFA Champions League · Matchweek 1",
+    groupStageGw: 1,
+    competitionSlug: UCL_2026_27,
+    fotmobMatchId: 6106400,
+    rows: loadMatchScoreCsv("VfBStuttgart_Viking_FinalPoints.csv", UCL_2026_27),
+  },
 ];
 
 const UCL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
