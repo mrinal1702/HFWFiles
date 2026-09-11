@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "como-rb-leipzig",
+  "fotmob_match_id": 6106411,
+  "source_url": "https://www.fotmob.com/en-GB/matches/como-vs-rb-leipzig/86a1nu8#6106411:tab=stats",
+  "home_team": "Como",
+  "away_team": "RB Leipzig",
+  "raw_json_path": "intermediates/Como_Vs_RBLeipzig.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

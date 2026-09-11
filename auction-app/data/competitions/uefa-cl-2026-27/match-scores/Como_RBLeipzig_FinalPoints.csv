@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Nico Paz,1347574,Como,midfielder,60.334,11.0,0.0,71
+Martin Baturina,1215064,Como,midfielder,45.41,9.0,0.0,54
+Assane Diao,1434889,Como,midfielder,44.43266666666667,9.0,0.0,53
+Luis Milla,638090,Como,midfielder,25.632,11.0,0.0,37
+Castello Lukeba,1253852,RB Leipzig,defender,40.845000000000006,-10.0,0.0,31
+Yan Couto,1109171,Como,midfielder,20.748666666666672,9.0,0.0,30
+Antonio Nusa,1248482,RB Leipzig,midfielder,30.736,-1.0,0.0,30
+Anastasios Douvikas,873270,Como,forward,20.416666666666668,9.0,0.0,29
+Jacobo Ramón,1413963,Como,defender,23.97,5.0,0.0,29
+Máximo Perrone,1336582,Como,midfielder,22.39133333333333,4.5,0.0,27
+Lucas Da Cunha,1076647,Como,midfielder,16.342666666666666,9.0,0.0,25
+Andrija Maksimović,1482209,RB Leipzig,midfielder,23.409333333333333,1.0,0.0,24
+Trevoh Chalobah,793907,Como,defender,16.68,5.0,0.0,22
+Moise Kean,747926,Como,forward,18.58333333333333,3.0,0.0,22
+Christopher Nkunku,704523,RB Leipzig,midfielder,20.314,1.0,0.0,21
+Nicolas Seiwald,1024672,RB Leipzig,midfielder,20.162000000000003,1.0,0.0,21
+Álex Valle,1384881,Como,defender,11.13,5.0,0.0,16
+David Raum,806669,RB Leipzig,defender,25.225,-10.0,0.0,15
+Tidiam Gomis,1482733,RB Leipzig,forward,14.88,0.0,0.0,15
+Neil El Aynaoui,1274060,RB Leipzig,midfielder,15.386,-1.0,0.0,14
+Assan Ouédraogo,1486541,RB Leipzig,midfielder,12.326,0.5,0.0,13
+Brajan Gruda,1430151,RB Leipzig,forward,11.976666666666665,0.0,0.0,12
+Marc-Oliver Kempf,355356,Como,defender,6.275,5.0,0.0,11
+Marc Guiu,1412137,RB Leipzig,forward,7.35,3.0,0.0,10
+Willi Orbán,278856,RB Leipzig,defender,19.26,-10.0,0.0,9
+Ivan Smolčić,1353289,Como,defender,4.168333333333333,5.0,0.0,9
+Ridle Baku,883087,RB Leipzig,defender,12.928333333333336,-5.0,0.0,8
+Samuele Ricci,941656,Como,midfielder,3.2453333333333334,4.5,0.0,8
+Ezechiel Banzuzi,1310001,RB Leipzig,midfielder,5.208,0.5,0.0,6
+Benjamin Henrichs,681383,RB Leipzig,defender,3.4066666666666667,0.0,0.0,3
+Lukas Klostermann,526657,RB Leipzig,defender,0.0,0.0,0.0,0
+Alberto Dossena,822789,Como,defender,0.0,0.0,0.0,0
+Maxime Estève,1250443,RB Leipzig,defender,0.0,0.0,0.0,0
+Kaiki,1459564,Como,defender,0.0,0.0,0.0,0
+Max Finkgräfe,1529161,RB Leipzig,defender,0.0,0.0,0.0,0
+Mattia Liberali,1593861,Como,midfielder,0.0,0.0,0.0,0
+Benno Kaltefleiter,1875892,RB Leipzig,midfielder,0.0,0.0,0.0,0
+Johan Bakayoko,1203194,RB Leipzig,forward,0.0,0.0,0.0,0
+Rômulo,1314412,RB Leipzig,forward,0.0,0.0,0.0,0
+Jesús Rodríguez,1624039,Como,forward,0.0,0.0,0.0,0
+Como Keepers,10171,Como,goalkeeper,21.5,12.0,0.0,34
+RB Leipzig Keepers,178475,RB Leipzig,goalkeeper,17.18,-6.0,0.0,11

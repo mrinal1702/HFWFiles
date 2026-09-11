@@ -441,6 +441,15 @@ const UCL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 6106240,
     rows: loadMatchScoreCsv("BayernMnchen_BodGlimt_FinalPoints.csv", UCL_2026_27),
   },
+  {
+    slug: "como-rb-leipzig",
+    title: "Como vs RB Leipzig",
+    subtitle: "UEFA Champions League · Matchweek 1",
+    groupStageGw: 1,
+    competitionSlug: UCL_2026_27,
+    fotmobMatchId: 6106411,
+    rows: loadMatchScoreCsv("Como_RBLeipzig_FinalPoints.csv", UCL_2026_27),
+  },
 ];
 
 const UCL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
