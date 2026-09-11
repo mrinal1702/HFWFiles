@@ -4,10 +4,12 @@ FotMob match position resolution shared by stat scoring, endowed points, and bes
 usualPlayingPositionId: 0=GK, 1=DEF, 2=MID, 3=FWD.
 
 Resolution order (see resolve_outfield_position_id_for_scoring):
-1. lineup usualPlayingPositionId (or playerStats.usualPosition fallback)
-2. matchFacts.topPlayers positionLabel.key overrides
-3. granular lineup positionId always-mid slots (e.g. 85 = #10 AM)
-4. granular lineup positionId always-forward slots (103 = RW wide, 107 = LW wide)
+SLOT-FIRST POLICY (2026-09): the FotMob granular lineup positionId (the in-game
+formation slot) always decides the scoring role / simulator. Listed pool position
+and usualPlayingPositionId are never used to pick the simulator when a slot exists.
+  1. granular lineup positionId band → DEF (31-39) / MID (62-88) / FWD (103+)
+  2. only if no granular slot: fall back to usualPlayingPositionId
+     (or playerStats.usualPosition), plus legacy topPlayers overrides.
 
 GW policy (2026-06): GW1 group-stage scores in Supabase are FROZEN under the map
 that was live at tag points/gw1-rescore-position-map. Do not batch-rescore GW1.
@@ -30,6 +32,37 @@ GRANULAR_POSITION_IDS_ALWAYS_MIDFIELD: frozenset[int] = frozenset({85})
 # Granular wide-forward slots (FotMob 4-3-3 wings). Always FWD even if usualPlayingPositionId is 2.
 # Example: Amad Diallo granular 103 with usual 2 → forward (Germany vs Ivory Coast GW2).
 GRANULAR_POSITION_IDS_ALWAYS_FORWARD: frozenset[int] = frozenset({103, 107})
+
+# --- Slot-band role mapping (2026-09 policy) --------------------------------
+# FotMob granular `content.lineup.*.positionId` encodes a pitch zone. The in-game
+# slot — not usualPlayingPositionId or the listed pool position — decides which
+# simulator (DEF / MID / FWD) a player is scored in.
+#   GK slot 11 is handled separately via isGoalkeeper.
+#   Defenders:   31-39  → DEF (back line: full-backs 32/38, centre-backs 33-37)
+#   Midfielders: 62-88  → MID (incl. wingers 83/87 and slot 82, which FotMob may
+#                              otherwise tag as forward)
+#   Forwards:    103+   → FWD
+GRANULAR_SLOT_DEFENDER_RANGE: range = range(31, 40)     # 31..39 inclusive
+GRANULAR_SLOT_MIDFIELDER_RANGE: range = range(62, 89)   # 62..88 inclusive
+GRANULAR_SLOT_FORWARD_MIN: int = 103
+
+
+def role_from_granular_slot(slot: int | None) -> int | None:
+    """Map a FotMob granular lineup positionId to 1=DEF / 2=MID / 3=FWD.
+
+    Slot-first policy: the in-game formation slot determines the scoring role.
+    Returns None when the slot is missing or falls in an unmapped band, so the
+    caller can fall back to usualPlayingPositionId.
+    """
+    if slot is None:
+        return None
+    if slot in GRANULAR_SLOT_DEFENDER_RANGE:
+        return 1
+    if slot in GRANULAR_SLOT_MIDFIELDER_RANGE:
+        return 2
+    if slot >= GRANULAR_SLOT_FORWARD_MIN:
+        return 3
+    return None
 
 # --- topPlayers positionLabel.key → counting role (1 DEF / 2 MID / 3 FWD) ---
 
@@ -165,12 +198,24 @@ def resolve_outfield_position_id_for_scoring(
     Same role resolution as stat_collection.row_from_player (for formation / eligibility).
 
     Returns 1=DEF, 2=MID, 3=FWD, or None if goalkeeper or no usable outfield line.
+
+    Slot-first (2026-09): the granular in-game positionId band decides the role.
+    usualPlayingPositionId / listed position are only a fallback when no slot exists.
     """
     if pdata.get("isGoalkeeper") is True:
         return None
+
+    granular = lineup_granular_position_id_by_player(content)
+    g = granular.get(pid)
+
+    # 1) Slot-first: the in-game granular positionId decides the simulator.
+    slot_role = role_from_granular_slot(g)
+    if slot_role is not None:
+        return slot_role
+
+    # 2) Fallback only when no granular slot: usualPlayingPositionId + legacy overrides.
     lineup_pos = lineup_usual_position_by_player(content)
     role_overrides = role_override_by_player(content)
-    granular = lineup_granular_position_id_by_player(content)
     pos = lineup_pos.get(pid)
     if pos is None:
         up = pdata.get("usualPosition")
@@ -183,7 +228,6 @@ def resolve_outfield_position_id_for_scoring(
     if pos not in (1, 2, 3):
         return None
     pos = role_overrides.get(pid, pos)
-    g = granular.get(pid)
     if g is not None and g in GRANULAR_POSITION_IDS_ALWAYS_MIDFIELD:
         pos = 2
     if g is not None and g in GRANULAR_POSITION_IDS_ALWAYS_FORWARD:

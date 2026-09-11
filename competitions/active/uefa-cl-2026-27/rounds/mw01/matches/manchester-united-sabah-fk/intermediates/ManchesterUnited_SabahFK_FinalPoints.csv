@@ -1,5 +1,5 @@
 player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
-Patrick Dorgu,1526560,Manchester United,forward,50.7,12.0,0.0,63
+Patrick Dorgu,1526560,Manchester United,defender,49.425,10.0,0.0,59
 Bruno Fernandes,422685,Manchester United,midfielder,43.492,13.0,0.0,56
 Lisandro Martínez,847983,Manchester United,defender,39.285,10.0,0.0,49
 Bryan Mbeumo,923312,Manchester United,midfielder,34.33,13.0,0.0,47
@@ -14,12 +14,12 @@ Tymoteusz Puchacz,823121,Sabah,defender,37.805,-10.0,0.0,28
 Joy-Lance Mickels,617465,Sabah,forward,26.72,0.0,0.0,27
 Joshua Zirkzee,950830,Manchester United,forward,23.67666666666667,3.0,0.0,27
 Mason Mount,750032,Manchester United,midfielder,20.312,4.5,0.0,25
-Veljko Simić,458807,Sabah,forward,21.92,0.0,0.0,22
 Rəhman Daşdəmirov,1441450,Sabah,defender,26.595,-10.0,0.0,17
 Umarali Rakhmonaliev,1429286,Sabah,midfielder,18.99066666666667,-3.0,0.0,16
 Almeida,1489096,Sabah,defender,9.805,5.0,0.0,15
 Aden McCarthy,1337091,Sabah,defender,24.115,-10.0,0.0,14
 Andrey Santos,1372921,Manchester United,midfielder,9.576666666666668,4.5,0.0,14
+Veljko Simić,458807,Sabah,midfielder,16.966,-3.0,0.0,14
 Akim Zedadka,542777,Sabah,defender,22.790000000000003,-10.0,0.0,13
 Harry Amass,1430832,Manchester United,midfielder,9.992,2.5,0.0,12
 Aleksey Isaev,688887,Sabah,midfielder,7.884,0.5,0.0,8
