@@ -78,6 +78,19 @@ type SquadPlayerMeta = {
   team_name: string | null;
 };
 
+async function fetchAuctionCompetitionId(
+  admin: ReturnType<typeof createAdminClient>,
+  auctionId: number,
+): Promise<number | null> {
+  const auctionRes = await admin
+    .from("Auctions")
+    .select("competition_id")
+    .eq("id", auctionId)
+    .maybeSingle();
+  if (auctionRes.error) throw new Error(`Auctions: ${auctionRes.error.message}`);
+  return resolveAuctionCompetitionId(auctionRes.data);
+}
+
 /** Competition-scoped auctions → competition_players; legacy → public.players. */
 async function loadSquadPlayerMetaByIds(
   admin: ReturnType<typeof createAdminClient>,
@@ -87,14 +100,7 @@ async function loadSquadPlayerMetaByIds(
   const map = new Map<string, SquadPlayerMeta>();
   if (!playerIds.length) return map;
 
-  const auctionRes = await admin
-    .from("Auctions")
-    .select("competition_id")
-    .eq("id", auctionId)
-    .maybeSingle();
-  if (auctionRes.error) throw new Error(`Auctions: ${auctionRes.error.message}`);
-
-  const competitionId = resolveAuctionCompetitionId(auctionRes.data);
+  const competitionId = await fetchAuctionCompetitionId(admin, auctionId);
   const metaById = await fetchPlayerMetaByIds(admin, playerIds, competitionId);
   for (const [id, meta] of Object.entries(metaById)) {
     map.set(id, {
@@ -257,7 +263,10 @@ export async function getCurrentSquads(
   }>;
 
   const playerIds = [...new Set(teams.map((t) => String(t.player_id)))];
-  const playerById = await loadSquadPlayerMetaByIds(admin, auctionId, playerIds);
+  const [playerById, competitionId] = await Promise.all([
+    loadSquadPlayerMetaByIds(admin, auctionId, playerIds),
+    fetchAuctionCompetitionId(admin, auctionId),
+  ]);
 
   const byUser = new Map<number, typeof teams>();
   for (const row of teams) {
@@ -270,7 +279,9 @@ export async function getCurrentSquads(
       ? await fetchPlayerGameweekScores(admin, gameWeekId, playerIds)
       : new Map<string, number>();
   const matchPosMap =
-    gameWeekId != null ? loadMatchPositionsForGameweek(gameWeekId) : new Map<string, string>();
+    gameWeekId != null
+      ? loadMatchPositionsForGameweek(gameWeekId, competitionId)
+      : new Map<string, string>();
 
   return users
     .filter((u) => byUser.has(u.id))
@@ -466,10 +477,13 @@ export async function getGameweekSquadData(
 
   // Fetch player metadata (competition_players when auction is competition-scoped)
   const playerIds = [...new Set(squads.map((s) => String(s.player_id)))];
-  const playerById = await loadSquadPlayerMetaByIds(admin, auctionId, playerIds);
+  const [playerById, competitionId] = await Promise.all([
+    loadSquadPlayerMetaByIds(admin, auctionId, playerIds),
+    fetchAuctionCompetitionId(admin, auctionId),
+  ]);
 
   const scoreMap = await fetchPlayerGameweekScores(admin, gameWeekId, playerIds);
-  const matchPosMap = loadMatchPositionsForGameweek(gameWeekId);
+  const matchPosMap = loadMatchPositionsForGameweek(gameWeekId, competitionId);
 
   // Build total GW score lookup
   const totalScoreByUser = new Map<number, number>(
