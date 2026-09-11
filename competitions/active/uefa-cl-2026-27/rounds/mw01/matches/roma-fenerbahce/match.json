@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "roma-fenerbahce",
+  "fotmob_match_id": 6106331,
+  "source_url": "https://www.fotmob.com/en-GB/matches/roma-vs-fenerbahce/2hxw0m#6106331:tab=stats",
+  "home_team": "Fenerbah\u00e7e",
+  "away_team": "Roma",
+  "raw_json_path": "intermediates/Fenerbahe_Vs_Roma.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

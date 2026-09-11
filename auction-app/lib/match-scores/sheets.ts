@@ -414,6 +414,15 @@ const UCL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 6106318,
     rows: loadMatchScoreCsv("Napoli_Arsenal_FinalPoints.csv", UCL_2026_27),
   },
+  {
+    slug: "fenerbahce-roma",
+    title: "Fenerbahçe vs Roma",
+    subtitle: "UEFA Champions League · Matchweek 1",
+    groupStageGw: 1,
+    competitionSlug: UCL_2026_27,
+    fotmobMatchId: 6106331,
+    rows: loadMatchScoreCsv("Fenerbahe_Roma_FinalPoints.csv", UCL_2026_27),
+  },
 ];
 
 const UCL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

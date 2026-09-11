@@ -1,0 +1,15 @@
+{
+  "match_id": 6106331,
+  "home_team": "Fenerbahçe",
+  "away_team": "Roma",
+  "source_url": "https://www.fotmob.com/en-GB/matches/roma-vs-fenerbahce/2hxw0m#6106331:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw01/matches/roma-fenerbahce/intermediates/_fetch.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/roma-vs-fenerbahce/2hxw0m",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/roma-vs-fenerbahce/2hxw0m#6106331:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/roma-vs-fenerbahce/2hxw0m#6106331:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/roma-vs-fenerbahce/2hxw0m#6106331:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106331"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

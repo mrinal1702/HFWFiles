@@ -1,0 +1,41 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Ismail Yüksek,1183589,Fenerbahçe,midfielder,41.808,5.0,0.0,47
+Bryan Cristante,299799,Roma,midfielder,36.092,5.0,0.0,41
+Mert Müldür,904098,Fenerbahçe,defender,35.365,5.0,0.0,40
+Donyell Malen,660301,Roma,forward,33.22,3.0,0.0,36
+Mason Greenwood,950473,Fenerbahçe,forward,33.11,3.0,0.0,36
+Archie Brown,1113704,Fenerbahçe,defender,28.91,5.0,0.0,34
+Mario Hermoso,671203,Roma,defender,24.755,5.0,0.0,30
+Paulo Dybala,325916,Roma,midfielder,24.686,5.0,0.0,30
+Manu Koné,1016132,Roma,midfielder,24.410666666666664,5.0,0.0,29
+Nathan Aké,417068,Fenerbahçe,defender,23.475,5.0,0.0,28
+Milan Škriniar,309328,Fenerbahçe,defender,22.99,5.0,0.0,28
+Evan N'Dicka,787242,Roma,defender,22.605000000000004,5.0,0.0,28
+Vedat Muriqi,517052,Fenerbahçe,forward,23.43,3.0,0.0,26
+N'Golo Kanté,319300,Fenerbahçe,midfielder,16.016,5.0,0.0,21
+Matias Soulé,1280082,Roma,midfielder,14.690666666666669,5.0,0.0,20
+Devyne Rensch,1180321,Roma,midfielder,13.544666666666666,5.0,0.0,19
+Gianluca Mancini,588687,Roma,defender,13.541666666666666,5.0,0.0,19
+Bartuğ Elmaz,1216728,Fenerbahçe,midfielder,12.578666666666669,5.0,0.0,18
+Wesley,1320176,Roma,midfielder,12.032,5.0,0.0,17
+Kerem Aktürkoglu,1117570,Fenerbahçe,forward,13.53,3.0,0.0,17
+Levent Mercan,1080172,Fenerbahçe,defender,10.483333333333334,5.0,0.0,15
+Niccolò Pisilli,1451196,Roma,midfielder,12.887333333333334,2.5,0.0,15
+Romelu Lukaku,181276,Fenerbahçe,forward,15.24,0.0,0.0,15
+Nahuel Molina,726345,Roma,defender,6.613333333333333,5.0,0.0,12
+Leonardo Balerdi,958464,Roma,defender,6.203333333333333,5.0,0.0,11
+Oğuz Aydın,1092015,Fenerbahçe,forward,10.36,0.0,0.0,10
+Rodrigo Mora,1525065,Roma,midfielder,7.099333333333333,2.5,0.0,10
+Marten de Roon,198559,Roma,midfielder,3.996,2.5,0.0,6
+Nélson Semedo,470834,Fenerbahçe,defender,0.0,0.0,0.0,0
+Konstantinos Koulierakis,1337884,Roma,defender,0.0,0.0,0.0,0
+Daniele Ghilardi,1386006,Roma,defender,0.0,0.0,0.0,0
+Yiğit Efe Demir,1414040,Fenerbahçe,defender,0.0,0.0,0.0,0
+Kojo Peprah Oppong,1429607,Fenerbahçe,defender,0.0,0.0,0.0,0
+Ognjen Mimović,1666975,Fenerbahçe,defender,0.0,0.0,0.0,0
+Emanuele Lulli,1800491,Roma,midfielder,0.0,0.0,0.0,0
+İrfan Kahveci,316544,Fenerbahçe,forward,0.0,0.0,0.0,0
+Dorgeles Nene,1230287,Fenerbahçe,forward,0.0,0.0,0.0,0
+Santiago Castro,1282008,Roma,forward,0.0,0.0,0.0,0
+Roma Keepers,8686,Roma,goalkeeper,23.12,12.0,0.0,35
+Fenerbahçe Keepers,8695,Fenerbahçe,goalkeeper,13.92,12.0,0.0,26
