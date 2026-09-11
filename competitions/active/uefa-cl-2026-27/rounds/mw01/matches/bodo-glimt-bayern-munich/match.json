@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "bodo-glimt-bayern-munich",
+  "fotmob_match_id": 6106240,
+  "source_url": "https://www.fotmob.com/en-GB/matches/bodoglimt-vs-bayern-munchen/2qvz54#6106240:tab=stats",
+  "home_team": "Bayern M\u00fcnchen",
+  "away_team": "Bod\u00f8/Glimt",
+  "raw_json_path": "intermediates/BayernMnchen_Vs_BodGlimt.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

@@ -432,6 +432,15 @@ const UCL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 6106304,
     rows: loadMatchScoreCsv("PSVEindhoven_ShakhtarDonetsk_FinalPoints.csv", UCL_2026_27),
   },
+  {
+    slug: "bayern-munich-bodo-glimt",
+    title: "Bayern München vs Bodø/Glimt",
+    subtitle: "UEFA Champions League · Matchweek 1",
+    groupStageGw: 1,
+    competitionSlug: UCL_2026_27,
+    fotmobMatchId: 6106240,
+    rows: loadMatchScoreCsv("BayernMnchen_BodGlimt_FinalPoints.csv", UCL_2026_27),
+  },
 ];
 
 const UCL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

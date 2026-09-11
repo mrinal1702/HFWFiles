@@ -111,6 +111,13 @@
       "home_team": "PSV Eindhoven",
       "away_team": "Shakhtar Donetsk",
       "status": "scored"
+    },
+    {
+      "match_slug": "bodo-glimt-bayern-munich",
+      "fotmob_match_id": 6106240,
+      "home_team": "Bayern München",
+      "away_team": "Bodø/Glimt",
+      "status": "scored"
     }
   ]
 }

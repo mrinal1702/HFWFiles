@@ -1,0 +1,40 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Michael Olise,1029063,FC Bayern München,midfielder,92.064,15.0,0.0,107
+Harry Kane,194165,FC Bayern München,forward,44.77,15.0,0.0,60
+Alphonso Davies,751202,FC Bayern München,defender,40.97166666666667,10.0,0.0,51
+Dayot Upamecano,658554,FC Bayern München,defender,37.265,10.0,0.0,47
+Aleksandar Pavlović,1473580,FC Bayern München,midfielder,29.658,15.0,0.0,45
+Joshua Kimmich,460632,FC Bayern München,midfielder,33.56666666666666,11.0,0.0,45
+Jonathan Tah,469700,FC Bayern München,defender,29.495,10.0,0.0,39
+Konrad Laimer,526827,FC Bayern München,defender,22.996666666666663,10.0,0.0,33
+Jamal Musiala,1156141,FC Bayern München,midfielder,18.920666666666666,9.0,0.0,28
+Luis Díaz,860914,FC Bayern München,forward,16.836666666666666,9.0,0.0,26
+Lennart Karl,1737700,FC Bayern München,forward,18.25333333333333,6.0,0.0,24
+Joshua Kitolano,902675,Bodø/Glimt,midfielder,21.278666666666663,1.0,0.0,22
+Sondre Brunstad Fet,540975,Bodø/Glimt,midfielder,18.96666666666667,1.0,0.0,20
+Tom Bischof,1286183,FC Bayern München,defender,12.898333333333332,5.0,0.0,18
+Villads Nielsen,1436937,Bodø/Glimt,defender,32.555,-15.0,0.0,18
+Andreas Helmersen,615292,Bodø/Glimt,forward,17.13,0.0,0.0,17
+Ismael Saibari,1180288,FC Bayern München,midfielder,7.805333333333333,8.5,0.0,16
+Ole Blomberg,1086551,Bodø/Glimt,forward,16.14,0.0,0.0,16
+Fredrik André Bjørkan,630228,Bodø/Glimt,defender,20.68,-5.0,0.0,16
+Patrick Berg,530635,Bodø/Glimt,midfielder,18.454,-5.0,0.0,13
+Sondre Auklend,1160076,Bodø/Glimt,forward,13.0,0.0,0.0,13
+Ulrik Saltnes,310763,Bodø/Glimt,midfielder,16.30333333333333,-3.5,0.0,13
+Josip Stanišić,950824,FC Bayern München,defender,6.648333333333333,5.0,0.0,12
+Odin Lurås Bjørtuft,917774,Bodø/Glimt,defender,25.94,-15.0,0.0,11
+Hiroki Ito,851626,FC Bayern München,defender,4.3133333333333335,5.0,0.0,9
+Fredrik Sjøvold,1281021,Bodø/Glimt,defender,23.42,-15.0,0.0,8
+Ola Brynhildsen,837066,Bodø/Glimt,forward,5.34,0.0,0.0,5
+Jens Petter Hauge,741397,Bodø/Glimt,forward,4.263333333333334,0.0,0.0,4
+Isak Dybvik Määttä,1037037,Bodø/Glimt,defender,6.17,-5.0,0.0,1
+Haitam Aleesami,215158,Bodø/Glimt,defender,0.0,0.0,0.0,0
+Min-Jae Kim,828159,FC Bayern München,defender,0.0,0.0,0.0,0
+Sacha Boey,1034808,FC Bayern München,defender,0.0,0.0,0.0,0
+Nathaniel Brown,1395447,FC Bayern München,defender,0.0,0.0,0.0,0
+Kasper Johansen Solhaug,1641114,Bodø/Glimt,defender,0.0,0.0,0.0,0
+Joel Mvuka,1049665,Bodø/Glimt,midfielder,0.0,0.0,0.0,0
+Bara Ndiaye,1798782,FC Bayern München,midfielder,0.0,0.0,0.0,0
+Assan Sanyang,2189218,Bodø/Glimt,midfielder,0.0,0.0,0.0,0
+FC Bayern München Keepers,9823,FC Bayern München,goalkeeper,9.58,18.0,0.0,28
+Bodø/Glimt Keepers,8402,Bodø/Glimt,goalkeeper,17.52,-12.0,0.0,6

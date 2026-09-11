@@ -1,0 +1,15 @@
+{
+  "match_id": 6106240,
+  "home_team": "Bayern München",
+  "away_team": "Bodø/Glimt",
+  "source_url": "https://www.fotmob.com/en-GB/matches/bodoglimt-vs-bayern-munchen/2qvz54#6106240:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw01/matches/bodo-glimt-bayern-munich/intermediates/_fetch.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/bodoglimt-vs-bayern-munchen/2qvz54",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/bodoglimt-vs-bayern-munchen/2qvz54#6106240:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/bodoglimt-vs-bayern-munchen/2qvz54#6106240:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/bodoglimt-vs-bayern-munchen/2qvz54#6106240:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106240"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
