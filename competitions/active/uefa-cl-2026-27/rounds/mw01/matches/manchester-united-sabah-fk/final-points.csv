@@ -1,0 +1,42 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Patrick Dorgu,1526560,Manchester United,forward,50.7,12.0,0.0,63
+Bruno Fernandes,422685,Manchester United,midfielder,43.492,13.0,0.0,56
+Lisandro Martínez,847983,Manchester United,defender,39.285,10.0,0.0,49
+Bryan Mbeumo,923312,Manchester United,midfielder,34.33,13.0,0.0,47
+Matheus Cunha,863098,Manchester United,midfielder,30.612,13.0,0.0,44
+Youri Tielemans,465960,Manchester United,midfielder,30.754,11.0,0.0,42
+Kobbie Mainoo,1292810,Manchester United,midfielder,30.585333333333335,11.0,0.0,42
+Benjamin Šeško,1073977,Manchester United,forward,26.26333333333333,9.0,0.0,35
+Leny Yoro,1358581,Manchester United,defender,22.545,10.0,0.0,33
+Ivan Lepinjica,906920,Sabah,midfielder,34.042,-3.0,0.0,31
+Noussair Mazraoui,775539,Manchester United,defender,19.525,10.0,0.0,30
+Tymoteusz Puchacz,823121,Sabah,defender,37.805,-10.0,0.0,28
+Joy-Lance Mickels,617465,Sabah,forward,26.72,0.0,0.0,27
+Joshua Zirkzee,950830,Manchester United,forward,23.67666666666667,3.0,0.0,27
+Mason Mount,750032,Manchester United,midfielder,20.312,4.5,0.0,25
+Veljko Simić,458807,Sabah,forward,21.92,0.0,0.0,22
+Rəhman Daşdəmirov,1441450,Sabah,defender,26.595,-10.0,0.0,17
+Umarali Rakhmonaliev,1429286,Sabah,midfielder,18.99066666666667,-3.0,0.0,16
+Almeida,1489096,Sabah,defender,9.805,5.0,0.0,15
+Aden McCarthy,1337091,Sabah,defender,24.115,-10.0,0.0,14
+Andrey Santos,1372921,Manchester United,midfielder,9.576666666666668,4.5,0.0,14
+Akim Zedadka,542777,Sabah,defender,22.790000000000003,-10.0,0.0,13
+Harry Amass,1430832,Manchester United,midfielder,9.992,2.5,0.0,12
+Aleksey Isaev,688887,Sabah,midfielder,7.884,0.5,0.0,8
+Abdulakh Khaybulaev,1351085,Sabah,midfielder,5.8693333333333335,2.5,0.0,8
+Orphé Mbina,1197093,Sabah,midfielder,7.286,0.5,0.0,8
+Kaheem Parris,876149,Sabah,forward,7.08,0.0,0.0,7
+Shea Lacey,1436260,Manchester United,forward,6.65,0.0,0.0,7
+Christian Nwachukwu,1624072,Sabah,forward,6.26,0.0,0.0,6
+Du Queiroz,1271367,Sabah,midfielder,2.416,2.5,0.0,5
+Harry Maguire,255610,Manchester United,defender,0.0,0.0,0.0,0
+Diogo Dalot,751550,Manchester United,defender,0.0,0.0,0.0,0
+Tellur Mütallimov,763300,Sabah,defender,0.0,0.0,0.0,0
+Ayden Heaven,1559639,Manchester United,defender,0.0,0.0,0.0,0
+Rodrigo Fernandes,1106946,Sabah,midfielder,0.0,0.0,0.0,0
+Rauf Rüstamli,1384982,Sabah,midfielder,0.0,0.0,0.0,0
+Tyler Fletcher,1676985,Manchester United,midfielder,0.0,0.0,0.0,0
+Jafar Mukhtarov,2081019,Sabah,midfielder,0.0,0.0,0.0,0
+Marcus Rashford,696365,Manchester United,forward,0.0,0.0,0.0,0
+Manchester United Keepers,10260,Manchester United,goalkeeper,10.9,18.0,0.0,29
+Sabah Keepers,951893,Sabah,goalkeeper,28.2,-6.0,0.0,22

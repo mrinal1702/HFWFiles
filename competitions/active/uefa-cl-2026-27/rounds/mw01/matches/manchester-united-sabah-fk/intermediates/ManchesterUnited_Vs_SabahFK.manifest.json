@@ -1,0 +1,15 @@
+{
+  "match_id": 6106293,
+  "home_team": "Manchester United",
+  "away_team": "Sabah FK",
+  "source_url": "https://www.fotmob.com/en-GB/matches/manchester-united-vs-sabah-fk/5wn180eq#6106293:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw01/matches/manchester-united-sabah-fk/intermediates/_fetch.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/manchester-united-vs-sabah-fk/5wn180eq",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/manchester-united-vs-sabah-fk/5wn180eq#6106293:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/manchester-united-vs-sabah-fk/5wn180eq#6106293:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/manchester-united-vs-sabah-fk/5wn180eq#6106293:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106293"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

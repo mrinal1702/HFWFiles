@@ -450,6 +450,15 @@ const UCL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 6106411,
     rows: loadMatchScoreCsv("Como_RBLeipzig_FinalPoints.csv", UCL_2026_27),
   },
+  {
+    slug: "manchester-united-sabah-fk",
+    title: "Manchester United vs Sabah FK",
+    subtitle: "UEFA Champions League · Matchweek 1",
+    groupStageGw: 1,
+    competitionSlug: UCL_2026_27,
+    fotmobMatchId: 6106293,
+    rows: loadMatchScoreCsv("ManchesterUnited_SabahFK_FinalPoints.csv", UCL_2026_27),
+  },
 ];
 
 const UCL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

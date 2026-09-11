@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "manchester-united-sabah-fk",
+  "fotmob_match_id": 6106293,
+  "source_url": "https://www.fotmob.com/en-GB/matches/manchester-united-vs-sabah-fk/5wn180eq#6106293:tab=stats",
+  "home_team": "Manchester United",
+  "away_team": "Sabah FK",
+  "raw_json_path": "intermediates/ManchesterUnited_Vs_SabahFK.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}
