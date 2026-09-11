@@ -1,0 +1,41 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+1697412,Isaque,9728,Shakhtar Donetsk,2,midfielder,39.598,0.7999999999999998,2.966666666666667,43.364666666666665,89.0,1,1,5.0,48.364666666666665
+794244,Armando Obispo,8640,PSV,1,defender,36.2,3.0,3.0,42.2,90.0,1,1,5.0,47.2
+892816,Sergiño Dest,8640,PSV,1,defender,30.835,0.6000000000000001,3.0,34.435,90.0,1,1,5.0,39.435
+1259576,Pedro Henrique,9728,Shakhtar Donetsk,1,defender,25.184999999999995,1.8,3.0,29.984999999999996,90.0,1,1,5.0,34.985
+1337282,Kodai Sano,8640,PSV,2,midfielder,27.159999999999997,-0.30000000000000027,3.0,29.859999999999996,90.0,1,1,5.0,34.86
+1460572,Gleiker Mendoza,9728,Shakhtar Donetsk,3,forward,26.16,2.3,2.2,30.66,67.0,1,1,3.0,33.66
+163670,Ivan Perišić,8640,PSV,3,forward,23.759999999999998,3.2,3.0,29.959999999999997,90.0,1,1,3.0,32.959999999999994
+281012,Filip Kostić,8640,PSV,2,midfielder,20.436,3.0,2.2666666666666666,25.702666666666666,68.0,1,1,5.0,30.702666666666666
+1396465,Marlon Gomes,9728,Shakhtar Donetsk,2,midfielder,18.798,0.7999999999999998,3.0,22.598,90.0,1,1,5.0,27.598
+1314657,Vinícius Tobias,9728,Shakhtar Donetsk,1,defender,19.595,-0.5999999999999996,3.0,21.994999999999997,90.0,1,1,5.0,26.994999999999997
+1359970,Ruben van Bommel,8640,PSV,3,forward,16.369999999999997,4.1,3.0,23.47,90.0,1,1,3.0,26.47
+881640,Lutsharel Geertruida,8640,PSV,1,defender,18.145,-0.5999999999999996,3.0,20.545,90.0,1,1,5.0,25.545
+1036401,Ricardo Pepi,8640,PSV,3,forward,13.540000000000001,4.1,2.7666666666666666,20.406666666666666,83.0,1,1,3.0,23.406666666666666
+1327149,Paul Wanner,8640,PSV,2,midfielder,11.712,3.0,3.0,17.712,90.0,1,1,5.0,22.712
+1024427,Valeriy Bondar,9728,Shakhtar Donetsk,1,defender,9.45,3.0,3.0,15.45,90.0,1,1,5.0,20.45
+774947,Guus Til,8640,PSV,3,forward,8.69,5.0,3.0,16.689999999999998,90.0,1,1,3.0,19.689999999999998
+1192419,Oleg Ocheretko,9728,Shakhtar Donetsk,2,midfielder,8.398,1.9,3.0,13.298,90.0,1,1,5.0,18.298000000000002
+656667,Mykola Matviyenko,9728,Shakhtar Donetsk,1,defender,8.475000000000001,1.8,3.0,13.275000000000002,90.0,1,1,5.0,18.275000000000002
+1503318,Alisson Santana,9728,Shakhtar Donetsk,3,forward,8.52,2.3,2.966666666666667,13.786666666666667,89.0,1,1,3.0,16.78666666666667
+1386551,Ryan Flamingo,8640,PSV,1,defender,8.53,1.8,0.7333333333333333,11.063333333333333,22.0,0,0,5.0,16.063333333333333
+1483508,Kauã Elias,9728,Shakhtar Donetsk,3,forward,2.13,5.0,2.2,9.33,67.0,1,1,3.0,12.33
+850858,Lassina Traoré,9728,Shakhtar Donetsk,3,forward,1.9,5.0,0.8,7.7,23.0,0,0,0.0,7.7
+1516203,Newerton,9728,Shakhtar Donetsk,3,forward,1.57,4.1,0.8,6.47,23.0,0,0,0.0,6.47
+1699018,Lucas Ferreira,9728,Shakhtar Donetsk,3,forward,0.0,5.0,0.03333333333333333,5.033333333333333,1.0,0,0,0.0,5.033333333333333
+1189791,Dmytro Kryskiv,9728,Shakhtar Donetsk,2,midfielder,-0.55,3.0,0.03333333333333333,2.4833333333333334,1.0,0,0,2.5,4.983333333333333
+1035643,Sven Mijnans,8640,PSV,2,midfielder,-1.1,3.0,0.23333333333333334,2.1333333333333333,7.0,0,0,2.5,4.633333333333333
+510843,Oleksandr Karavaev,9728,Shakhtar Donetsk,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1067263,Irakli Azarovi,9728,Shakhtar Donetsk,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1173774,Alaa Ghram,9728,Shakhtar Donetsk,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1506480,Yarek Gąsiorowski,8640,PSV,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1689729,Fabian Merién,8640,PSV,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+728941,Yegor Nazaryna,9728,Shakhtar Donetsk,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1612225,Viktor Tsukanov,9728,Shakhtar Donetsk,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1637478,Gabriel Carvalho,9728,Shakhtar Donetsk,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1678727,Ayoni Santos,8640,PSV,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1699551,Noah Fernandez,8640,PSV,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+805767,Dennis Man,8640,PSV,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1346860,Esmir Bajraktarević,8640,PSV,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1694887,Luca Meirelles,9728,Shakhtar Donetsk,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1834912,Amir Bouhamdi,8640,PSV,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

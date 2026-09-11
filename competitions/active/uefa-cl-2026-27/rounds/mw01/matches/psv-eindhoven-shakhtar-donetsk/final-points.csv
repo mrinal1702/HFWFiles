@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Isaque,1697412,Shakhtar Donetsk,midfielder,43.364666666666665,5.0,0.0,48
+Armando Obispo,794244,PSV,defender,42.2,5.0,0.0,47
+Sergiño Dest,892816,PSV,defender,34.435,5.0,0.0,39
+Pedro Henrique,1259576,Shakhtar Donetsk,defender,29.985,5.0,0.0,35
+Kodai Sano,1337282,PSV,midfielder,29.86,5.0,0.0,35
+Gleiker Mendoza,1460572,Shakhtar Donetsk,forward,30.66,3.0,0.0,34
+Ivan Perišić,163670,PSV,forward,29.96,3.0,0.0,33
+Filip Kostić,281012,PSV,midfielder,25.702666666666666,5.0,0.0,31
+Marlon Gomes,1396465,Shakhtar Donetsk,midfielder,22.598,5.0,0.0,28
+Vinícius Tobias,1314657,Shakhtar Donetsk,defender,21.995,5.0,0.0,27
+Ruben van Bommel,1359970,PSV,forward,23.47,3.0,0.0,26
+Lutsharel Geertruida,881640,PSV,defender,20.545,5.0,0.0,26
+Ricardo Pepi,1036401,PSV,forward,20.406666666666663,3.0,0.0,23
+Paul Wanner,1327149,PSV,midfielder,17.712,5.0,0.0,23
+Valeriy Bondar,1024427,Shakhtar Donetsk,defender,15.45,5.0,0.0,20
+Guus Til,774947,PSV,forward,16.689999999999998,3.0,0.0,20
+Oleg Ocheretko,1192419,Shakhtar Donetsk,midfielder,13.298,5.0,0.0,18
+Mykola Matviyenko,656667,Shakhtar Donetsk,defender,13.275000000000002,5.0,0.0,18
+Alisson Santana,1503318,Shakhtar Donetsk,forward,13.786666666666669,3.0,0.0,17
+Ryan Flamingo,1386551,PSV,defender,11.063333333333333,5.0,0.0,16
+Kauã Elias,1483508,Shakhtar Donetsk,forward,9.33,3.0,0.0,12
+Lassina Traoré,850858,Shakhtar Donetsk,forward,7.7,0.0,0.0,8
+Newerton,1516203,Shakhtar Donetsk,forward,6.47,0.0,0.0,6
+Lucas Ferreira,1699018,Shakhtar Donetsk,forward,5.033333333333333,0.0,0.0,5
+Dmytro Kryskiv,1189791,Shakhtar Donetsk,midfielder,2.4833333333333334,2.5,0.0,5
+Sven Mijnans,1035643,PSV,midfielder,2.1333333333333333,2.5,0.0,5
+Oleksandr Karavaev,510843,Shakhtar Donetsk,defender,0.0,0.0,0.0,0
+Irakli Azarovi,1067263,Shakhtar Donetsk,defender,0.0,0.0,0.0,0
+Alaa Ghram,1173774,Shakhtar Donetsk,defender,0.0,0.0,0.0,0
+Yarek Gąsiorowski,1506480,PSV,defender,0.0,0.0,0.0,0
+Fabian Merién,1689729,PSV,defender,0.0,0.0,0.0,0
+Yegor Nazaryna,728941,Shakhtar Donetsk,midfielder,0.0,0.0,0.0,0
+Viktor Tsukanov,1612225,Shakhtar Donetsk,midfielder,0.0,0.0,0.0,0
+Gabriel Carvalho,1637478,Shakhtar Donetsk,midfielder,0.0,0.0,0.0,0
+Ayoni Santos,1678727,PSV,midfielder,0.0,0.0,0.0,0
+Noah Fernandez,1699551,PSV,midfielder,0.0,0.0,0.0,0
+Dennis Man,805767,PSV,forward,0.0,0.0,0.0,0
+Esmir Bajraktarević,1346860,PSV,forward,0.0,0.0,0.0,0
+Luca Meirelles,1694887,Shakhtar Donetsk,forward,0.0,0.0,0.0,0
+Amir Bouhamdi,1834912,PSV,forward,0.0,0.0,0.0,0
+Shakhtar Donetsk Keepers,9728,Shakhtar Donetsk,goalkeeper,18.06,12.0,0.0,30
+PSV Keepers,8640,PSV,goalkeeper,15.08,12.0,0.0,27
