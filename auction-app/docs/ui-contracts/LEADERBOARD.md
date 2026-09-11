@@ -95,14 +95,24 @@ Ownership for a row = locked `gameweek_squads` for that GW (live `auction_teams`
 
 ### After Best XI is published for that GW
 
-Reuse the World Cup / `GameweekSquadView` precedent — do not invent a new split:
+Reuse the World Cup / `GameweekSquadView` / `GwSquadTable` precedent — do not invent a new split:
 
 - **Starting XI** block with count and **formation** (e.g. `3-5-2`)
 - **Bench / substitutes** block with their scores (dimmed vs XI)
-- Selected-GW header uses **Best XI score** for that week (standings source: `auction_leaderboard.total_score` for that GW)
+- Selected-GW header uses **Best XI score** for that week (standings source: `auction_leaderboard.total_score` for that GW) plus the same **formation** chip
 - Before Best XI publish, flat squad list; optional “squad points so far” is the sum of uploaded player scores for **that GW’s locked squad**, not a season total
 
 Best XI runs when that gameweek’s matches are complete and ops publish — the UI must already support XI + subs + formation so later GWs do not need a redesign.
+
+**Data wiring (ops — not UI redesign):**
+
+| Display field | Source |
+|---------------|--------|
+| Formation chip / Starting XI header | `data/best-xi/auction-{id}-gw{legacyGameWeekId}.json` via `loadBestXiOverlay` (must be committed + deployed) |
+| Match Pos | FinalPoints `position` via competition sheets + `loadMatchPositionsForGameweek(gameWeekId, competitionId)` |
+| Best XI / bench split | `gameweek_squads.is_best_xi` (+ `xi_role`) |
+
+Canonical ops checklist: [OPS_SCORING_AND_LEADERBOARD.md](../OPS_SCORING_AND_LEADERBOARD.md).
 
 ---
 
@@ -113,7 +123,8 @@ Best XI runs when that gameweek’s matches are complete and ops publish — the
 | Standings | Sum of published `auction_leaderboard.total_score` (Best XI after publish) |
 | My Points / Competitors season box | Same season total as standings for that manager |
 | My Points / Competitors table Score | That player’s points in the **selected GW** |
-| Match Pos | Playing role from match stats for that GW; Best XI may use listed **or** match role |
+| Match Pos | In-match / simulator scoring role from FinalPoints for that GW (same role Best XI uses with listed pool position). `—` if they did not play or sheets not deployed |
+| Formation | From published Best XI overlay JSON for that auction + legacy GW id |
 
 Do not show “sum of all currently owned players across all GWs” as the main table.
 

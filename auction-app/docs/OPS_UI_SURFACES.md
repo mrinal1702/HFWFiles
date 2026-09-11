@@ -100,17 +100,18 @@ View-only messaging when `is_relegated` — do not hide the whole auction.
 
 ---
 
-## Leaderboard presentation (`/leaderboard/[auctionId]`)
+## Leaderboard presentation (`/auctions/[auctionId]/leaderboard`)
 
-**Canonical layout contract (agents must follow):** [ui-contracts/LEADERBOARD.md](./ui-contracts/LEADERBOARD.md).
+**Canonical layout contract (agents must follow):** [ui-contracts/LEADERBOARD.md](./ui-contracts/LEADERBOARD.md).  
+**Scoring / Match Pos / formation ops:** [OPS_SCORING_AND_LEADERBOARD.md](./OPS_SCORING_AND_LEADERBOARD.md).
 
-Do not redesign this surface unless the user explicitly asks. Extra gameweeks only add dropdown options.
+Live URL uses auction chrome (`/auctions/…/leaderboard`); `/leaderboard/[auctionId]` redirects. Do not redesign this surface unless the user explicitly asks. Extra gameweeks only add dropdown options.
 
 | Tab / element | Behaviour |
 |---------------|-----------|
 | **Standings** | Season rank + points from `auction_leaderboard` sums. Relegated managers stay listed and flagged. |
 | **My Points / Competitors** | One gameweek at a time via a **dropdown** (not a tab per GW). Default = latest GW with scores uploaded. Table: Player, Club, Listed Pos, Match Pos, Score. Season total is a small header box only. |
-| **Best XI** | After publish for that GW: Starting XI + formation + substitutes (same pattern as parked `GameweekSquadView`). |
+| **Best XI** | After publish for that GW: Starting XI + **formation** + substitutes (`GwSquadTable` / `GameweekSquadView`). Formation requires committed `data/best-xi/auction-{id}-gw{legacyGwId}.json`. Match Pos requires competition FinalPoints sheets deployed. |
 
 Do not add per-GW score columns or endless tabs. World Cup GW **tabs** must not reappear on later auctions.
 
@@ -121,7 +122,8 @@ Do not add per-GW score columns or endless tabs. World Cup GW **tabs** must not 
 - **Public (canonical):** `/match-scores` (grouped by GW) — anyone; player names are plain text
 - **In-auction:** `/auctions/[auctionId]/match-scores` — members only (incl. archived if still a member); same sheets; player names link to `/auctions/[auctionId]/players/[playerId]`
 - Legacy redirects: `/scores/[slug]` → public match-scores
-- Data: `data/match-scores/*_FinalPoints.csv` + `lib/match-scores/sheets.ts`
+- Data: `data/competitions/<slug>/match-scores/*_FinalPoints.csv` (preferred) or legacy flat `data/match-scores/` + `lib/match-scores/sheets.ts`
+- Same FinalPoints `position` column powers leaderboard **Match Pos** (via `loadMatchPositionsForGameweek`)
 
 When a competition ends, sheet registry may be cleared and CSVs archived — keep the **routes** for the next season’s sheets.
 

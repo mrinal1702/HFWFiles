@@ -40,9 +40,15 @@ Behaviour:
 
 1. Ensures `Game_Weeks` row exists (optional name)
 2. Copies current `auction_teams` → `gameweek_squads` for those auctions / GW (duplicates ignored)
-3. Sets that GW’s `Is_Active = true` and others false (as implemented in the script)
+3. Sets that GW’s `Is_Active = true` and **all other** `Game_Weeks.Is_Active = false` (global flip)
 
 Run **once per GW per auction set** after the hard deadline (or after the last nation deadline for that GW).
+
+**Multi-competition caution:** `Is_Active` is global, not per competition. Re-locking a UCL GW (e.g. id 300) will deactivate an EPL active GW (e.g. id 3) and vice versa. Before locking:
+
+1. Query whether `gameweek_squads` already has rows for each auction / GW.
+2. If already locked and counts look right, **skip** the lock script — proceed to scoring / Best XI.
+3. If you must lock while another competition is mid-season, plan how you will restore the correct `Is_Active` afterward.
 
 ---
 

@@ -14,8 +14,9 @@ Before any edit, read `auction-app/docs/ui-contracts/LEADERBOARD.md` and follow 
 3. Default GW = latest gameweek with scores uploaded.
 4. Table columns: Player, Club, Listed Pos, Match Pos, Score.
 5. Season total only as a small header box on My Points; rankings stay on Standings.
-6. After Best XI publish for that GW: Starting XI + formation + substitutes (`GameweekSquadView` precedent).
+6. After Best XI publish for that GW: Starting XI + formation + substitutes (`GwSquadTable` / `GameweekSquadView` precedent).
 7. If the user explicitly changes this UI, update `LEADERBOARD.md` in the same change.
+8. Missing Match Pos or formation is almost always **ops/data** (sheets + `data/best-xi/auction-{id}-gw{legacyGwId}.json` not deployed) — fix via [OPS_SCORING_AND_LEADERBOARD.md](../../auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md), not new UI.
 
 ## Do not
 
@@ -23,3 +24,4 @@ Before any edit, read `auction-app/docs/ui-contracts/LEADERBOARD.md` and follow 
 - Add per-GW score columns beside Total
 - Restyle chrome as a drive-by
 - Mix current live squad with another GW’s scores
+- Invent a second formation or Match Pos mechanism per competition

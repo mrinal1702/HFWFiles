@@ -1,6 +1,6 @@
 # HFW Auction — Operations Index (agent entry)
 
-**Last updated:** July 2026  
+**Last updated:** Sep 2026  
 **HFW** = How Football Works.
 
 This folder is the **canonical ops handbook** for online auctions. Prefer these docs over improvising SQL or one-off scripts during a live competition.
@@ -16,6 +16,7 @@ Tournament-specific archives (e.g. World Cup 2026) live under `archive/world-cup
 3. **Schema changes are manual SQL** in Supabase (`auction-app/scripts/sql/*`). There is no migration runner — document every new script in the relevant OPS doc.
 4. **Scores and standings** always flow through published tables (`Player_Scores`, `gameweek_squads`, `auction_leaderboard`). Never invent standings in the UI from live `auction_teams` alone.
 5. **Competition-specific IDs** (archived auctions, history years) belong in small config modules (`lib/archived-auctions.ts`), not scattered hardcodes.
+6. **Leaderboard display data is part of the publish** — Match Pos needs competition FinalPoints sheets deployed; formation needs `data/best-xi/auction-{id}-gw{legacyGwId}.json` committed after Best XI publish. Same path for every competition ([OPS_SCORING_AND_LEADERBOARD.md](./OPS_SCORING_AND_LEADERBOARD.md)).
 
 ---
 

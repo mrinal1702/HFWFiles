@@ -60,8 +60,11 @@ above.
 | FIFA World Cup 2026 | `world-cup-2026` | 1 | 5, 6, 7 | 1–99 |
 | English Premier League 2026/27 | `epl-2026-27` | 2 | 9 | 100–199 |
 | UEFA Champions League 2025/26 | `uefa-cl-2025-26` | 3 | — | 200–299 |
+| UEFA Champions League 2026/27 | `uefa-cl-2026-27` | 4 | 10, 11, 12, 13 | 300–399 (MW1 = 300) |
 
 (Auction 8 is a test placeholder and is intentionally not attached.)
+
+Scoring / Match Pos / Best XI overlay handoff for live competitions: `auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md`.
 
 ---
 
