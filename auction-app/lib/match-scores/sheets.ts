@@ -459,6 +459,15 @@ const UCL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 6106293,
     rows: loadMatchScoreCsv("ManchesterUnited_SabahFK_FinalPoints.csv", UCL_2026_27),
   },
+  {
+    slug: "slavia-prague-lens",
+    title: "Slavia Prague vs Lens",
+    subtitle: "UEFA Champions League · Matchweek 1",
+    groupStageGw: 1,
+    competitionSlug: UCL_2026_27,
+    fotmobMatchId: 6106392,
+    rows: loadMatchScoreCsv("SlaviaPrague_Lens_FinalPoints.csv", UCL_2026_27),
+  },
 ];
 
 const UCL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

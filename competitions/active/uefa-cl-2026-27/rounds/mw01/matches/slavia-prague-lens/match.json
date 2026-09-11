@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw01",
+  "match_slug": "slavia-prague-lens",
+  "fotmob_match_id": 6106392,
+  "source_url": "https://www.fotmob.com/en-GB/matches/slavia-prague-vs-lens/27ty9c#6106392:tab=stats",
+  "home_team": "Slavia Prague",
+  "away_team": "Lens",
+  "raw_json_path": "intermediates/SlaviaPrague_Vs_Lens.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

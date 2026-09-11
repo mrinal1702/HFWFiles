@@ -132,6 +132,13 @@
       "home_team": "Manchester United",
       "away_team": "Sabah FK",
       "status": "scored"
+    },
+    {
+      "match_slug": "slavia-prague-lens",
+      "fotmob_match_id": 6106392,
+      "home_team": "Slavia Prague",
+      "away_team": "Lens",
+      "status": "scored"
     }
   ]
 }
