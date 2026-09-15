@@ -1,0 +1,24 @@
+{
+  "competition_slug": "epl-2026-27",
+  "database_competition_id": 2,
+  "database_round_id": 104,
+  "round_slug": "mw04",
+  "display_name": "Matchweek 4",
+  "round_number": 4,
+  "legacy_game_week_id": 103,
+  "expected_match_count": 10,
+  "_match_count_note": "GW4 scoring in progress — matches scored/upserted incrementally; Best XI published at end.",
+  "auction_ids": [9],
+  "squad_lock_state": "locked",
+  "scoring_state": "in_progress",
+  "publication_state": "unpublished",
+  "algorithm_version": "1.0",
+  "fixtures": [
+    {
+      "match_slug": "afc-bournemouth-brentford",
+      "fotmob_match_id": 5795445,
+      "home_team": "AFC Bournemouth",
+      "away_team": "Brentford"
+    }
+  ]
+}

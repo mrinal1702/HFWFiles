@@ -285,6 +285,15 @@ const EPL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795435,
     rows: loadMatchScoreCsv("Arsenal_Chelsea_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "afc-bournemouth-brentford",
+    title: "AFC Bournemouth vs Brentford",
+    subtitle: "Premier League · Matchweek 4",
+    groupStageGw: 4,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795445,
+    rows: loadMatchScoreCsv("AFCBournemouth_Brentford_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
@@ -302,6 +311,11 @@ const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
     gw: 3,
     label: "Premier League GW3",
     sheets: EPL_MATCH_SCORE_SHEETS.filter((s) => s.groupStageGw === 3),
+  },
+  {
+    gw: 4,
+    label: "Premier League GW4",
+    sheets: EPL_MATCH_SCORE_SHEETS.filter((s) => s.groupStageGw === 4),
   },
 ];
 
