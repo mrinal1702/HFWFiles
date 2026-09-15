@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw04",
+  "match_slug": "leeds-united-newcastle-united",
+  "fotmob_match_id": 5795450,
+  "source_url": "https://www.fotmob.com/en-GB/matches/leeds-united-vs-newcastle-united/2wdjjd#5795450:tab=stats",
+  "home_team": "Leeds United",
+  "away_team": "Newcastle United",
+  "raw_json_path": "intermediates/LeedsUnited_Vs_NewcastleUnited.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

@@ -366,6 +366,15 @@ const EPL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795452,
     rows: loadMatchScoreCsv("ManchesterUnited_ManchesterCity_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "leeds-united-newcastle-united",
+    title: "Leeds United vs Newcastle United",
+    subtitle: "Premier League · Matchweek 4",
+    groupStageGw: 4,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795450,
+    rows: loadMatchScoreCsv("LeedsUnited_NewcastleUnited_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

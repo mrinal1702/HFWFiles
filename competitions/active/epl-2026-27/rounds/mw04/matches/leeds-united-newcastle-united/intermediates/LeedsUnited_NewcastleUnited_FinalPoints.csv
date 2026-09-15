@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Dominic Calvert-Lewin,612150,Leeds United,forward,43.01,12.0,0.0,55
+Anton Stach,881735,Leeds United,midfielder,31.60133333333333,13.0,0.0,45
+Tarik Muharemović,1250485,Leeds United,defender,38.78,5.0,0.0,44
+Noah Okafor,915797,Leeds United,forward,30.93,12.0,0.0,43
+Jayden Bogle,789646,Leeds United,midfielder,28.906666666666663,13.0,0.0,42
+Ao Tanaka,935728,Leeds United,midfielder,22.172,13.0,0.0,35
+Gabriel Gudmundsson,744494,Leeds United,midfielder,20.278,13.0,0.0,33
+James Justin,710158,Leeds United,defender,26.53,5.0,0.0,32
+Ethan Ampadu,780432,Leeds United,midfielder,20.41,11.0,0.0,31
+Bazoumana Touré,1624586,Newcastle United,forward,25.910000000000004,3.0,0.0,29
+Sven Botman,956682,Newcastle United,defender,37.485,-10.0,0.0,27
+Nico Elvedi,517346,Leeds United,defender,21.65,5.0,0.0,27
+Lewis Hall,1197655,Newcastle United,defender,34.645,-10.0,0.0,25
+Joseph Willock,860975,Newcastle United,midfielder,18.648666666666667,2.5,0.0,21
+Harvey Barnes,760359,Newcastle United,midfielder,21.838,-1.0,0.0,21
+Yoane Wissa,666857,Newcastle United,forward,15.31,3.0,0.0,18
+Sean Steur,1643770,Newcastle United,midfielder,17.954666666666668,-1.0,0.0,17
+Malick Thiaw,1137407,Newcastle United,defender,25.41,-10.0,0.0,15
+Lewis Miley,1296763,Newcastle United,midfielder,15.910666666666666,-3.0,0.0,13
+Valentino Livramento,1107910,Newcastle United,defender,12.206666666666669,0.0,0.0,12
+Melvin Bard,1092403,Leeds United,defender,12.1,0.0,0.0,12
+Daniel James,717176,Leeds United,midfielder,10.83333333333333,0.5,0.0,11
+Harry Wilson,494417,Leeds United,forward,9.85,0.0,0.0,10
+Aladji Bamba,1695681,Newcastle United,midfielder,4.109333333333333,4.5,0.0,9
+Matias Fernandez-Pardo,1444231,Newcastle United,midfielder,9.089333333333334,-1.0,0.0,8
+Amar Dedić,958010,Newcastle United,defender,12.983333333333336,-5.0,0.0,8
+Jacob Murphy,521148,Newcastle United,midfielder,7.396000000000001,-1.0,0.0,6
+Nico González,1280132,Newcastle United,midfielder,3.385333333333333,2.5,0.0,6
+Lukas Nmecha,861197,Leeds United,forward,4.3100000000000005,0.0,0.0,4
+Sean Longstaff,820024,Leeds United,midfielder,3.178666666666667,0.5,0.0,4
+Brenden Aaronson,952322,Leeds United,midfielder,2.616,0.5,0.0,3
+Fabian Schär,189982,Newcastle United,defender,0.0,0.0,0.0,0
+Jaka Bijol,861805,Leeds United,defender,0.0,0.0,0.0,0
+Mason Miley,1867092,Newcastle United,defender,0.0,0.0,0.0,0
+Jacob Ramsey,1021929,Newcastle United,midfielder,0.0,0.0,0.0,0
+Jean-Mattéo Bahoya,1393672,Leeds United,forward,0.0,0.0,0.0,0
+Leeds United Keepers,8463,Leeds United,goalkeeper,30.48,12.0,0.0,42
+Newcastle United Keepers,10261,Newcastle United,goalkeeper,19.44,-6.0,0.0,13

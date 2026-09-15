@@ -7,10 +7,10 @@
   "round_number": 4,
   "legacy_game_week_id": 103,
   "expected_match_count": 10,
-  "_match_count_note": "GW4 scoring in progress — matches scored/upserted incrementally; Best XI published at end.",
+  "_match_count_note": "GW4 all 10 fixtures scored and upserted; Best XI not yet published.",
   "auction_ids": [9],
   "squad_lock_state": "locked",
-  "scoring_state": "in_progress",
+  "scoring_state": "complete",
   "publication_state": "unpublished",
   "algorithm_version": "1.0",
   "fixtures": [
@@ -67,6 +67,12 @@
       "fotmob_match_id": 5795452,
       "home_team": "Manchester United",
       "away_team": "Manchester City"
+    },
+    {
+      "match_slug": "leeds-united-newcastle-united",
+      "fotmob_match_id": 5795450,
+      "home_team": "Leeds United",
+      "away_team": "Newcastle United"
     }
   ]
 }
