@@ -55,6 +55,12 @@
       "fotmob_match_id": 5795453,
       "home_team": "Sunderland",
       "away_team": "Arsenal"
+    },
+    {
+      "match_slug": "coventry-city-brighton-hove-albion",
+      "fotmob_match_id": 5795448,
+      "home_team": "Coventry City",
+      "away_team": "Brighton & Hove Albion"
     }
   ]
 }

@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Pascal Groß,167008,Brighton and Hove Albion,midfielder,70.23400000000001,15.0,0.0,85
+Maxim De Cuyper,1134871,Brighton and Hove Albion,midfielder,33.47,15.0,0.0,48
+Lewis Dunk,201690,Brighton and Hove Albion,defender,37.565,10.0,0.0,48
+Charalampos Kostoulas,1561249,Brighton and Hove Albion,forward,32.33,12.0,0.0,44
+Yasin Ayari,1168311,Brighton and Hove Albion,midfielder,25.738,15.0,0.0,41
+Malick Junior Yalcouyé,1602352,Brighton and Hove Albion,midfielder,29.978666666666665,9.0,0.0,39
+Olivier Boscagli,613715,Brighton and Hove Albion,defender,26.97000000000001,10.0,0.0,37
+Luka Vušković,1413996,Brighton and Hove Albion,defender,26.835,10.0,0.0,37
+Jack Rudoni,1030830,Coventry City,forward,31.91333333333333,0.0,0.0,32
+Chema Andrés,1586552,Brighton and Hove Albion,midfielder,18.421333333333333,8.5,0.0,27
+Diego Gómez,1354561,Brighton and Hove Albion,midfielder,11.452000000000002,13.0,0.0,24
+Ephron Mason-Clark,798654,Coventry City,forward,22.01,0.0,0.0,22
+Ferdi Kadıoğlu,774448,Brighton and Hove Albion,defender,11.31,10.0,0.0,21
+Milan van Ewijk,1074750,Coventry City,midfielder,25.4,-5.0,0.0,20
+Pascal Struijk,796974,Brighton and Hove Albion,defender,11.555,5.0,0.0,17
+Frank Onyeka,856685,Coventry City,midfielder,17.183333333333334,-1.0,0.0,16
+Aurèle Amenda,1257648,Coventry City,defender,29.050000000000004,-15.0,0.0,14
+Ibrahim Osman,1215410,Brighton and Hove Albion,forward,7.5,6.0,0.0,14
+Jay Dasilva,759814,Coventry City,midfielder,17.159999999999997,-5.0,0.0,12
+Taiwo Awoniyi,643717,Coventry City,forward,11.546666666666669,0.0,0.0,12
+Brandon Thomas-Asante,776184,Coventry City,forward,11.456666666666669,0.0,0.0,11
+Costinha,1079456,Brighton and Hove Albion,defender,6.275,5.0,0.0,11
+Bobby Thomas,1161885,Coventry City,defender,26.27,-15.0,0.0,11
+Sidiki Cherif,1524069,Coventry City,forward,10.52,0.0,0.0,11
+Matthew O'Riley,866686,Brighton and Hove Albion,midfielder,5.924,4.5,0.0,10
+Matt Grimes,478357,Coventry City,midfielder,13.366,-3.0,0.0,10
+Caleb Yirenkyi,1615927,Coventry City,midfielder,8.004666666666667,-1.5,0.0,7
+Ethan Pinnock,711357,Coventry City,defender,19.575,-15.0,0.0,5
+Victor Torp,845985,Coventry City,midfielder,3.948,0.5,0.0,4
+Jaouen Hadjam,1178324,Brighton and Hove Albion,defender,0.0,0.0,0.0,0
+Stephen Mfuni,1613300,Coventry City,defender,0.0,0.0,0.0,0
+Younes Ibrahim,1720273,Brighton and Hove Albion,midfielder,0.0,0.0,0.0,0
+Gustavo Hamer,775355,Coventry City,forward,0.0,0.0,0.0,0
+Tatsuhiro Sakamoto,1025603,Coventry City,forward,0.0,0.0,0.0,0
+Promise David,1252132,Brighton and Hove Albion,forward,0.0,0.0,0.0,0
+Loum Tchaouna,1283034,Coventry City,forward,0.0,0.0,0.0,0
+Brighton and Hove Albion Keepers,10204,Brighton and Hove Albion,goalkeeper,37.64,18.0,0.0,56
+Coventry City Keepers,8669,Coventry City,goalkeeper,15.6,-12.0,0.0,4

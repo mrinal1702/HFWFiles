@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw04",
+  "match_slug": "coventry-city-brighton-hove-albion",
+  "fotmob_match_id": 5795448,
+  "source_url": "https://www.fotmob.com/en-GB/matches/coventry-city-vs-brighton-hove-albion/2y1l02#5795448:tab=stats",
+  "home_team": "Coventry City",
+  "away_team": "Brighton & Hove Albion",
+  "raw_json_path": "intermediates/CoventryCity_Vs_BrightonHoveAlbion.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}
