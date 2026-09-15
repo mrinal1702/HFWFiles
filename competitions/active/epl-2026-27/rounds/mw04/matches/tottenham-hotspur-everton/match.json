@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw04",
+  "match_slug": "tottenham-hotspur-everton",
+  "fotmob_match_id": 5795454,
+  "source_url": "https://www.fotmob.com/en-GB/matches/tottenham-hotspur-vs-everton/2gmqxt#5795454:tab=stats",
+  "home_team": "Tottenham Hotspur",
+  "away_team": "Everton",
+  "raw_json_path": "intermediates/TottenhamHotspur_Vs_Everton.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

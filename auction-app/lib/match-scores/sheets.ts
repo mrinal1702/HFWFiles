@@ -330,6 +330,15 @@ const EPL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795451,
     rows: loadMatchScoreCsv("Liverpool_Fulham_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "tottenham-hotspur-everton",
+    title: "Tottenham Hotspur vs Everton",
+    subtitle: "Premier League · Matchweek 4",
+    groupStageGw: 4,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795454,
+    rows: loadMatchScoreCsv("TottenhamHotspur_Everton_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
