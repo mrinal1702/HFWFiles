@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw04",
+  "match_slug": "chelsea-hull-city",
+  "fotmob_match_id": 5795447,
+  "source_url": "https://www.fotmob.com/en-GB/matches/chelsea-vs-hull-city/2fa49a#5795447:tab=stats",
+  "home_team": "Chelsea",
+  "away_team": "Hull City",
+  "raw_json_path": "intermediates/Chelsea_Vs_HullCity.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

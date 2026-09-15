@@ -1,0 +1,15 @@
+{
+  "match_id": 5795447,
+  "home_team": "Chelsea",
+  "away_team": "Hull City",
+  "source_url": "https://www.fotmob.com/en-GB/matches/chelsea-vs-hull-city/2fa49a#5795447:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw04/matches/chelsea-hull-city/intermediates/_fetch.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/chelsea-vs-hull-city/2fa49a",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/chelsea-vs-hull-city/2fa49a#5795447:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/chelsea-vs-hull-city/2fa49a#5795447:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/chelsea-vs-hull-city/2fa49a#5795447:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795447"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
