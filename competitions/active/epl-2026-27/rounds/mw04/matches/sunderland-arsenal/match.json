@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw04",
+  "match_slug": "sunderland-arsenal",
+  "fotmob_match_id": 5795453,
+  "source_url": "https://www.fotmob.com/en-GB/matches/sunderland-vs-arsenal/2ro5o6#5795453:tab=stats",
+  "home_team": "Sunderland",
+  "away_team": "Arsenal",
+  "raw_json_path": "intermediates/Sunderland_Vs_Arsenal.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

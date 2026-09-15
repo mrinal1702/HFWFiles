@@ -1,0 +1,37 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+654096,Declan Rice,9825,Arsenal,2,midfielder,40.618,3.0,2.7,46.318000000000005,81.0,1,0,7.0,53.318000000000005
+795179,Gabriel,9825,Arsenal,1,defender,32.505,3.0,3.0,38.505,90.0,2,0,10.0,48.505
+961995,Bukayo Saka,9825,Arsenal,2,midfielder,29.842000000000002,3.0,3.0,35.842,90.0,2,0,9.0,44.842
+534670,Martin Ødegaard,9825,Arsenal,2,midfielder,28.293999999999997,3.0,2.8333333333333335,34.12733333333333,85.0,1,0,7.0,41.12733333333333
+710159,Ezri Konsa,9825,Arsenal,1,defender,24.97,3.0,3.0,30.97,90.0,2,0,10.0,40.97
+207236,Granit Xhaka,8472,Sunderland,2,midfielder,29.458,1.9,3.0,34.358,90.0,0,2,1.0,35.358
+850354,Bruno Guimarães,9825,Arsenal,2,midfielder,20.184,1.9,1.5,23.584,44.0,2,0,6.5,30.084
+974268,Daniel Ballard,8472,Sunderland,1,defender,24.695,1.8,3.0,29.495,90.0,0,2,0.0,29.495
+749736,Kai Havertz,9825,Arsenal,3,forward,13.75,5.0,3.0,21.75,90.0,2,0,6.0,27.75
+600524,Reinildo,8472,Sunderland,1,defender,18.04,3.0,3.0,24.04,90.0,0,2,0.0,24.04
+776151,Ben White,9825,Arsenal,1,defender,7.455,3.0,1.5,11.955,46.0,0,0,10.0,21.955
+602304,Nordi Mukiele,8472,Sunderland,1,defender,15.850000000000001,3.0,3.0,21.85,90.0,0,2,0.0,21.85
+1359649,Noah Sadiki,8472,Sunderland,2,midfielder,14.75,3.0,3.0,20.75,90.0,0,2,1.0,21.75
+1105912,Riccardo Calafiori,9825,Arsenal,1,defender,3.720000000000001,3.0,3.0,9.72,90.0,2,0,10.0,19.72
+1157237,Christos Tzolis,9825,Arsenal,2,midfielder,7.104,1.9,2.7,11.704,81.0,1,0,7.0,18.704
+277771,Thomas Meunier,8472,Sunderland,2,midfielder,6.708,3.0,2.533333333333333,12.241333333333333,76.0,0,1,3.0,15.241333333333333
+942381,Jurriën Timber,9825,Arsenal,1,defender,5.089999999999999,3.0,1.5,9.59,44.0,2,0,5.0,14.59
+1049999,Enzo Le Fée,8472,Sunderland,2,midfielder,7.419999999999998,3.0,3.0,13.419999999999998,90.0,0,2,1.0,14.419999999999998
+754126,Kevin Danso,8472,Sunderland,1,defender,6.925000000000001,3.0,3.0,12.925,90.0,0,2,0.0,12.925
+1031325,Martín Zubimendi,9825,Arsenal,2,midfielder,4.338000000000001,3.0,0.3,7.638000000000001,9.0,1,0,4.5,12.138000000000002
+1287010,Nilson Angulo,8472,Sunderland,2,midfielder,2.422,1.9,2.3333333333333335,6.655333333333333,70.0,0,1,3.0,9.655333333333333
+1406436,Myles Lewis-Skelly,9825,Arsenal,2,midfielder,1.1039999999999999,0.7999999999999998,1.5,3.404,46.0,0,0,5.0,8.404
+940446,Brian Brobbey,8472,Sunderland,3,forward,2.17,3.2,3.0,8.370000000000001,90.0,0,2,0.0,8.370000000000001
+818975,Eberechi Eze,9825,Arsenal,2,midfielder,-0.198,3.0,0.3,3.102,9.0,1,0,4.5,7.602
+887703,Wilson Isidor,8472,Sunderland,3,forward,2.03,4.1,0.6666666666666666,6.796666666666666,20.0,0,1,0.0,6.796666666666666
+574645,Mikel Merino,9825,Arsenal,2,midfielder,-1.488,1.9,0.16666666666666666,0.5786666666666666,5.0,1,0,4.5,5.078666666666667
+1364069,Malick Fofana,8472,Sunderland,3,forward,0.94,3.2,0.4666666666666667,4.606666666666667,14.0,0,1,0.0,4.606666666666667
+480253,Luke O'Nien,8472,Sunderland,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+751998,Omar Alderete,8472,Sunderland,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1067763,Trai Hume,8472,Sunderland,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1137667,Piero Hincapié,9825,Arsenal,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1327319,Chris Rigg,8472,Sunderland,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1664716,Dayann Méthalie,8472,Sunderland,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+664500,Viktor Gyökeres,9825,Arsenal,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1084981,Noni Madueke,9825,Arsenal,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1368654,Chemsdine Talbi,8472,Sunderland,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

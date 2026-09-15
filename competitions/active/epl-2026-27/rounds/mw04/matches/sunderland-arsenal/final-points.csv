@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Declan Rice,654096,Arsenal,midfielder,46.318000000000005,7.0,0.0,53
+Gabriel,795179,Arsenal,defender,38.505,10.0,0.0,49
+Bukayo Saka,961995,Arsenal,midfielder,35.842,9.0,0.0,45
+Martin Ødegaard,534670,Arsenal,midfielder,34.12733333333333,7.0,0.0,41
+Ezri Konsa,710159,Arsenal,defender,30.97,10.0,0.0,41
+Granit Xhaka,207236,Sunderland,midfielder,34.358,1.0,0.0,35
+Bruno Guimarães,850354,Arsenal,midfielder,23.584,6.5,0.0,30
+Daniel Ballard,974268,Sunderland,defender,29.495,0.0,0.0,29
+Kai Havertz,749736,Arsenal,forward,21.75,6.0,0.0,28
+Reinildo,600524,Sunderland,defender,24.04,0.0,0.0,24
+Ben White,776151,Arsenal,defender,11.955,10.0,0.0,22
+Nordi Mukiele,602304,Sunderland,defender,21.85,0.0,0.0,22
+Noah Sadiki,1359649,Sunderland,midfielder,20.75,1.0,0.0,22
+Riccardo Calafiori,1105912,Arsenal,defender,9.72,10.0,0.0,20
+Christos Tzolis,1157237,Arsenal,midfielder,11.704,7.0,0.0,19
+Thomas Meunier,277771,Sunderland,midfielder,12.241333333333332,3.0,0.0,15
+Jurriën Timber,942381,Arsenal,defender,9.59,5.0,0.0,15
+Enzo Le Fée,1049999,Sunderland,midfielder,13.419999999999998,1.0,0.0,14
+Kevin Danso,754126,Sunderland,defender,12.925,0.0,0.0,13
+Martín Zubimendi,1031325,Arsenal,midfielder,7.638000000000001,4.5,0.0,12
+Nilson Angulo,1287010,Sunderland,midfielder,6.655333333333333,3.0,0.0,10
+Myles Lewis-Skelly,1406436,Arsenal,midfielder,3.404,5.0,0.0,8
+Brian Brobbey,940446,Sunderland,forward,8.370000000000001,0.0,0.0,8
+Eberechi Eze,818975,Arsenal,midfielder,3.102,4.5,0.0,8
+Wilson Isidor,887703,Sunderland,forward,6.796666666666666,0.0,0.0,7
+Mikel Merino,574645,Arsenal,midfielder,0.5786666666666666,4.5,0.0,5
+Malick Fofana,1364069,Sunderland,forward,4.606666666666667,0.0,0.0,5
+Luke O'Nien,480253,Sunderland,defender,0.0,0.0,0.0,0
+Omar Alderete,751998,Sunderland,defender,0.0,0.0,0.0,0
+Trai Hume,1067763,Sunderland,defender,0.0,0.0,0.0,0
+Piero Hincapié,1137667,Arsenal,defender,0.0,0.0,0.0,0
+Chris Rigg,1327319,Sunderland,midfielder,0.0,0.0,0.0,0
+Dayann Méthalie,1664716,Sunderland,midfielder,0.0,0.0,0.0,0
+Viktor Gyökeres,664500,Arsenal,forward,0.0,0.0,0.0,0
+Noni Madueke,1084981,Arsenal,forward,0.0,0.0,0.0,0
+Chemsdine Talbi,1368654,Sunderland,forward,0.0,0.0,0.0,0
+Arsenal Keepers,9825,Arsenal,goalkeeper,28.22,18.0,0.0,46
+Sunderland Keepers,8472,Sunderland,goalkeeper,16.36,6.0,0.0,22

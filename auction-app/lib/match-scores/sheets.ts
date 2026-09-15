@@ -339,6 +339,15 @@ const EPL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795454,
     rows: loadMatchScoreCsv("TottenhamHotspur_Everton_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "sunderland-arsenal",
+    title: "Sunderland vs Arsenal",
+    subtitle: "Premier League · Matchweek 4",
+    groupStageGw: 4,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795453,
+    rows: loadMatchScoreCsv("Sunderland_Arsenal_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
