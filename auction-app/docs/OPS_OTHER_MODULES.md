@@ -47,10 +47,11 @@ Managers may have multiple `auction_users` rows (rare) or commissioners need to 
 | Feature | Config / code |
 |---------|----------------|
 | Which auctions are archived | `lib/archived-auctions.ts` → `ARCHIVED_AUCTION_IDS` |
-| History years | `AUCTION_HISTORY_YEARS` in same file |
+| History years / Past Finishes eligibility | `AUCTION_HISTORY_YEARS` (keys = history auctions; may include non-archived) |
 | History ranks | `lib/auction-history.ts` ← live `auction_leaderboard` |
+| Extra Trophy Cabinet cups | `lib/trophy-cabinet-awards.ts` → `MANUAL_TROPHY_AWARDS` |
 
-After a competition ends: add IDs to the archived set (and years). Do not leave finished leagues on Active Auctions.
+After a competition ends: add the auction id + year to `AUCTION_HISTORY_YEARS` so Past Finishes / champion trophies appear. Add to `ARCHIVED_AUCTION_IDS` only when it should leave Active Auctions and show under Archives.
 
 Optional SQL: set `is_active = false` on those auctions (bidding closed) — UI archive filter is ID-based.
 

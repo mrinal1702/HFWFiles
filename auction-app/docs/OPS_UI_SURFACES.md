@@ -29,7 +29,9 @@ Top nav ([`ParticipantNav`](../app/_components/ParticipantNav.tsx)):
 | Match scores | `/match-scores` | Public link (plain player names; no auction ownership) |
 
 Archived auction IDs / history years: `lib/archived-auctions.ts`  
-History ranks: `lib/auction-history.ts` (from `auction_leaderboard`)
+(`AUCTION_HISTORY_YEARS` drives Past Finishes; archive set is separate — finished auctions can stay Active until archived.)  
+History ranks: `lib/auction-history.ts` (from `auction_leaderboard`)  
+Manual Trophy Cabinet cups: `lib/trophy-cabinet-awards.ts`
 
 ### Active Auctions page contents (standard)
 

@@ -44,6 +44,13 @@ const MANUAL_TROPHY_AWARDS: readonly ManualTrophyAward[] = [
     year: 2026,
     awardLabel: "HFW 5-a-side Cup",
   },
+  {
+    authUserId: "d7ca460e-6ba3-497d-ba4a-4d430bdf258b", // Armaan Vardhan
+    auctionId: 9,
+    auctionName: "HFW PL 26/27 Auction 1",
+    year: 2026,
+    awardLabel: "HFW Premier League 5-a-side Cup",
+  },
 ];
 
 type HistoryLike = {

@@ -1,6 +1,6 @@
 import { cache } from "react";
 
-import { auctionHistoryYear, isArchivedAuctionId } from "@/lib/archived-auctions";
+import { auctionHistoryYear, isHistoryAuctionId } from "@/lib/archived-auctions";
 import {
   type AuctionHistoryEntry,
 } from "@/lib/auction-history-shared";
@@ -16,7 +16,8 @@ export {
 } from "@/lib/auction-history-shared";
 
 /**
- * Auction History for the signed-in auth user: archived tournaments they joined,
+ * Auction History for the signed-in auth user: finished tournaments they joined
+ * (see AUCTION_HISTORY_YEARS — may include auctions still on Active Auctions),
  * with final standings from `auction_leaderboard` (same source as the leaderboard page).
  * Sorted by year desc, then auction id desc (latest first).
  */
@@ -30,7 +31,7 @@ export const loadAuctionHistoryForUser = cache(
     if (seatErr) throw new Error(seatErr.message);
 
     const seatsInHistory = (seats ?? []).filter((s: { auction_id: number }) =>
-      isArchivedAuctionId(Number(s.auction_id)),
+      isHistoryAuctionId(Number(s.auction_id)),
     ) as Array<{ id: number; auction_id: number }>;
 
     if (seatsInHistory.length === 0) return [];
