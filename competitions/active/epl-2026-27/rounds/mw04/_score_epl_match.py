@@ -88,9 +88,6 @@ merged.to_csv(fp, index=False, encoding="utf-8")
 (MATCH_DIR / "final-points.csv").write_text(fp.read_text(encoding="utf-8"), encoding="utf-8")
 (MS / f"{label}_FinalPoints.csv").write_text(fp.read_text(encoding="utf-8"), encoding="utf-8")
 
-print("rows", len(merged))
-print(merged.sort_values("final_score", ascending=False).head(12).to_string(index=False))
-
 meta = {
     "competition_slug": COMP_SLUG,
     "round_slug": ROUND_SLUG,
@@ -106,6 +103,12 @@ meta = {
     "file_hashes": {},
 }
 (MATCH_DIR / "match.json").write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
+print("rows", len(merged))
 print(f"FINAL_CSV={fp}")
 print(f"LABEL={label}")
 print(f"TITLE={home} vs {away}")
+top = merged.sort_values("final_score", ascending=False).head(12)
+try:
+    print(top.to_string(index=False))
+except UnicodeEncodeError:
+    print(top.to_string(index=False).encode("ascii", "replace").decode("ascii"))

@@ -312,6 +312,15 @@ const EPL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795447,
     rows: loadMatchScoreCsv("Chelsea_HullCity_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "crystal-palace-ipswich-town",
+    title: "Crystal Palace vs Ipswich Town",
+    subtitle: "Premier League · Matchweek 4",
+    groupStageGw: 4,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795449,
+    rows: loadMatchScoreCsv("CrystalPalace_IpswichTown_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

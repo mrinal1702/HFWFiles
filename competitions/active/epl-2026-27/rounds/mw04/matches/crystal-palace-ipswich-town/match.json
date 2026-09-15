@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw04",
+  "match_slug": "crystal-palace-ipswich-town",
+  "fotmob_match_id": 5795449,
+  "source_url": "https://www.fotmob.com/en-GB/matches/crystal-palace-vs-ipswich-town/37vb92#5795449:tab=stats",
+  "home_team": "Crystal Palace",
+  "away_team": "Ipswich Town",
+  "raw_json_path": "intermediates/CrystalPalace_Vs_IpswichTown.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

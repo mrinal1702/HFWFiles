@@ -1,0 +1,15 @@
+{
+  "match_id": 5795449,
+  "home_team": "Crystal Palace",
+  "away_team": "Ipswich Town",
+  "source_url": "https://www.fotmob.com/en-GB/matches/crystal-palace-vs-ipswich-town/37vb92#5795449:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw04/matches/crystal-palace-ipswich-town/intermediates/_fetch.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/crystal-palace-vs-ipswich-town/37vb92",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/crystal-palace-vs-ipswich-town/37vb92#5795449:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/crystal-palace-vs-ipswich-town/37vb92#5795449:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/crystal-palace-vs-ipswich-town/37vb92#5795449:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795449"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
