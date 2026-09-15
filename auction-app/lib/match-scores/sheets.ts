@@ -357,6 +357,15 @@ const EPL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795448,
     rows: loadMatchScoreCsv("CoventryCity_BrightonHoveAlbion_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "manchester-united-manchester-city",
+    title: "Manchester United vs Manchester City",
+    subtitle: "Premier League · Matchweek 4",
+    groupStageGw: 4,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795452,
+    rows: loadMatchScoreCsv("ManchesterUnited_ManchesterCity_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

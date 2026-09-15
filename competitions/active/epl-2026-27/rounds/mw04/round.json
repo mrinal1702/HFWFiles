@@ -61,6 +61,12 @@
       "fotmob_match_id": 5795448,
       "home_team": "Coventry City",
       "away_team": "Brighton & Hove Albion"
+    },
+    {
+      "match_slug": "manchester-united-manchester-city",
+      "fotmob_match_id": 5795452,
+      "home_team": "Manchester United",
+      "away_team": "Manchester City"
     }
   ]
 }

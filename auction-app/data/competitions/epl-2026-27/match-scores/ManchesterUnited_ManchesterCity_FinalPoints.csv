@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Matheus Nunes,955529,Manchester City,defender,35.815,10.0,0.0,46
+Kobbie Mainoo,1292810,Manchester United,midfielder,41.896,3.0,0.0,45
+Joško Gvardiol,1070712,Manchester City,defender,31.25,10.0,0.0,41
+Patrick Dorgu,1526560,Manchester United,defender,33.565,5.0,0.0,39
+Enzo Fernández,1137705,Manchester City,midfielder,29.509333333333327,7.0,0.0,37
+Erling Haaland,737066,Manchester City,forward,31.41,3.0,0.0,34
+Elliot Anderson,1089691,Manchester City,midfielder,26.044,7.0,0.0,33
+Lisandro Martínez,847983,Manchester United,defender,26.765000000000004,5.0,0.0,32
+Rúben Dias,614006,Manchester City,defender,21.0,10.0,0.0,31
+Youri Tielemans,465960,Manchester United,midfielder,27.25133333333333,3.0,0.0,30
+Bruno Fernandes,422685,Manchester United,midfielder,27.004,3.0,0.0,30
+Marc Guéhi,844425,Manchester City,defender,18.31,10.0,0.0,28
+Harry Maguire,255610,Manchester United,defender,23.005,5.0,0.0,28
+Diogo Dalot,751550,Manchester United,defender,21.07,5.0,0.0,26
+Marcus Rashford,696365,Manchester United,midfielder,18.752666666666663,3.0,0.0,22
+Iliman Ndiaye,965764,Manchester City,forward,18.1,3.0,0.0,21
+Matheus Cunha,863098,Manchester United,forward,18.99,0.0,0.0,19
+Bryan Mbeumo,923312,Manchester United,midfielder,11.72,3.0,0.0,15
+Rayan Cherki,1104053,Manchester City,midfielder,9.208,5.0,0.0,14
+Antoine Semenyo,933576,Manchester City,midfielder,6.521999999999999,7.0,0.0,14
+Benjamin Šeško,1073977,Manchester United,forward,9.716666666666663,0.0,0.0,10
+Joshua Zirkzee,950830,Manchester United,forward,9.163333333333332,0.0,0.0,9
+Phil Foden,815006,Manchester City,midfielder,0.1626666666666665,7.0,0.0,7
+Nico O'Reilly,1300526,Manchester City,defender,-0.2833333333333334,5.0,0.0,5
+Noussair Mazraoui,775539,Manchester United,defender,0.0,0.0,0.0,0
+Rico Lewis,1288450,Manchester City,defender,0.0,0.0,0.0,0
+Leny Yoro,1358581,Manchester United,defender,0.0,0.0,0.0,0
+Abdukodir Khusanov,1362998,Manchester City,defender,0.0,0.0,0.0,0
+Ayden Heaven,1559639,Manchester United,defender,0.0,0.0,0.0,0
+Vitor Reis,1580952,Manchester City,defender,0.0,0.0,0.0,0
+Mateo Kovačić,239219,Manchester City,midfielder,0.0,0.0,0.0,0
+Mason Mount,750032,Manchester United,midfielder,0.0,0.0,0.0,0
+Andrey Santos,1372921,Manchester United,midfielder,0.0,0.0,0.0,0
+Ayyoub Bouaddi,1561552,Manchester City,midfielder,0.0,0.0,0.0,0
+Shea Lacey,1436260,Manchester United,forward,0.0,0.0,0.0,0
+Allan,1721789,Manchester City,forward,0.0,0.0,0.0,0
+Manchester City Keepers,8456,Manchester City,goalkeeper,22.34,18.0,0.0,40
+Manchester United Keepers,10260,Manchester United,goalkeeper,10.68,12.0,0.0,23
