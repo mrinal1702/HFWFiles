@@ -1,0 +1,15 @@
+{
+  "match_id": 5795446,
+  "home_team": "Aston Villa",
+  "away_team": "Nottingham Forest",
+  "source_url": "https://www.fotmob.com/en-GB/matches/nottingham-forest-vs-aston-villa/3gke9k#5795446:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw04/matches/nottingham-forest-aston-villa/intermediates/_fetch.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/nottingham-forest-vs-aston-villa/3gke9k",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/nottingham-forest-vs-aston-villa/3gke9k#5795446:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/nottingham-forest-vs-aston-villa/3gke9k#5795446:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/nottingham-forest-vs-aston-villa/3gke9k#5795446:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795446"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

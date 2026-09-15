@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw04",
+  "match_slug": "aston-villa-nottingham-forest",
+  "fotmob_match_id": 5795446,
+  "source_url": "https://www.fotmob.com/en-GB/matches/nottingham-forest-vs-aston-villa/3gke9k#5795446:tab=stats",
+  "home_team": "Aston Villa",
+  "away_team": "Nottingham Forest",
+  "raw_json_path": "intermediates/AstonVilla_Vs_NottinghamForest.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

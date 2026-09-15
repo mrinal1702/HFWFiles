@@ -294,6 +294,15 @@ const EPL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795445,
     rows: loadMatchScoreCsv("AFCBournemouth_Brentford_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "aston-villa-nottingham-forest",
+    title: "Aston Villa vs Nottingham Forest",
+    subtitle: "Premier League · Matchweek 4",
+    groupStageGw: 4,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795446,
+    rows: loadMatchScoreCsv("AstonVilla_NottinghamForest_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [
