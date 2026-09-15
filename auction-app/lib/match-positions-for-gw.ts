@@ -10,6 +10,10 @@ import {
 const UCL_2026_27_COMPETITION_ID = 4;
 const UCL_2026_27_LEGACY_GW_START = 300;
 
+/** English Premier League 2026/27 — competition_id 2. MW1–3 reused ids 1–3; MW4+ use 100–199. */
+const EPL_2026_27_COMPETITION_ID = 2;
+const EPL_2026_27_LEGACY_GW_START = 100;
+
 function isLegacyWorldCupGameweek(gameWeekId: number): gameWeekId is GroupStageGw {
   return gameWeekId >= 1 && gameWeekId <= 7;
 }
@@ -44,11 +48,31 @@ function loadUclMatchPositions(gameWeekId: number): Map<string, string> {
   return sheetsToPositionMap(group.sheets);
 }
 
+function eplOrdinalFromGameWeekId(gameWeekId: number): number | null {
+  if (!Number.isFinite(gameWeekId)) return null;
+  if (gameWeekId >= EPL_2026_27_LEGACY_GW_START && gameWeekId <= 199) {
+    return gameWeekId - EPL_2026_27_LEGACY_GW_START + 1;
+  }
+  if (gameWeekId >= 1 && gameWeekId <= 7) return gameWeekId;
+  return null;
+}
+
+function loadEplMatchPositions(gameWeekId: number): Map<string, string> {
+  const ordinal = eplOrdinalFromGameWeekId(gameWeekId);
+  if (ordinal == null) return new Map();
+
+  const groups = getMatchScoreGroupsForCompetitionId(EPL_2026_27_COMPETITION_ID);
+  const group = groups.find((g) => g.gw === ordinal);
+  if (!group) return new Map();
+  return sheetsToPositionMap(group.sheets);
+}
+
 /**
  * player_id → in-match scoring role from FinalPoints (defender/midfielder/forward/goalkeeper).
  *
  * Pass competitionId for competition-scoped auctions. UCL (id 4) maps legacy GW 300+ to
- * registered UCL sheets. Other / omitted competitionId keeps the legacy WC-style 1–7 path
+ * registered UCL sheets. EPL (id 2) maps MW1–3 (ids 1–3) and MW4+ (ids 100–199) to EPL sheets.
+ * Other / omitted competitionId keeps the legacy WC-style 1–7 path
  * (meme-builds and older callers).
  */
 export function loadMatchPositionsForGameweek(
@@ -57,6 +81,10 @@ export function loadMatchPositionsForGameweek(
 ): Map<string, string> {
   if (competitionId === UCL_2026_27_COMPETITION_ID) {
     return loadUclMatchPositions(gameWeekId);
+  }
+
+  if (competitionId === EPL_2026_27_COMPETITION_ID) {
+    return loadEplMatchPositions(gameWeekId);
   }
 
   if (!isLegacyWorldCupGameweek(gameWeekId)) return new Map();
