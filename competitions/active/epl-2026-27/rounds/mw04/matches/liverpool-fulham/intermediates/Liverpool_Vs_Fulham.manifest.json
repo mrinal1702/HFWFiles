@@ -1,0 +1,15 @@
+{
+  "match_id": 5795451,
+  "home_team": "Liverpool",
+  "away_team": "Fulham",
+  "source_url": "https://www.fotmob.com/en-GB/matches/liverpool-vs-fulham/2u7pyg#5795451:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw04/matches/liverpool-fulham/intermediates/_fetch.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/liverpool-vs-fulham/2u7pyg",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/liverpool-vs-fulham/2u7pyg#5795451:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/liverpool-vs-fulham/2u7pyg#5795451:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/liverpool-vs-fulham/2u7pyg#5795451:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795451"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

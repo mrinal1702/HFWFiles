@@ -321,6 +321,15 @@ const EPL_MATCH_SCORE_SHEETS: MatchScoreSheet[] = [
     fotmobMatchId: 5795449,
     rows: loadMatchScoreCsv("CrystalPalace_IpswichTown_FinalPoints.csv", EPL_2026_27),
   },
+  {
+    slug: "liverpool-fulham",
+    title: "Liverpool vs Fulham",
+    subtitle: "Premier League · Matchweek 4",
+    groupStageGw: 4,
+    competitionSlug: EPL_2026_27,
+    fotmobMatchId: 5795451,
+    rows: loadMatchScoreCsv("Liverpool_Fulham_FinalPoints.csv", EPL_2026_27),
+  },
 ];
 
 const EPL_MATCH_SCORE_GROUPS: MatchScoreGroup[] = [

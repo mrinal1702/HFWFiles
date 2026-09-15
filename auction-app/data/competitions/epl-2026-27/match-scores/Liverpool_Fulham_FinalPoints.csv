@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Jérémy Jacquet,1473534,Liverpool,defender,36.835,10.0,0.0,47
+Virgil van Dijk,209405,Liverpool,defender,35.19,10.0,0.0,45
+Antonee Robinson,662428,Fulham,defender,29.840000000000003,10.0,0.0,40
+Shea Charles,1281452,Fulham,midfielder,32.514,5.0,0.0,38
+Calvin Bassey,877401,Fulham,defender,26.555,10.0,0.0,37
+David Affengruber,1073980,Fulham,defender,25.07,10.0,0.0,35
+Dominik Szoboszlai,846005,Liverpool,midfielder,28.304,5.0,0.0,33
+Ryan Gravenberch,956683,Liverpool,midfielder,27.978,5.0,0.0,33
+Sander Berge,540963,Fulham,midfielder,23.244000000000003,5.0,0.0,28
+Florian Wirtz,1152455,Liverpool,midfielder,21.338,5.0,0.0,26
+Jeremie Frimpong,966018,Liverpool,defender,20.31,5.0,0.0,25
+Joshua King,1422593,Fulham,midfielder,19.992666666666665,5.0,0.0,25
+Ronald Araujo,921253,Liverpool,defender,13.885,10.0,0.0,24
+Konstantinos Tsimikas,671529,Liverpool,defender,13.18,10.0,0.0,23
+Timothy Castagne,465750,Fulham,defender,12.905,10.0,0.0,23
+Alex Iwobi,604785,Fulham,midfielder,17.390666666666668,5.0,0.0,22
+Oscar Bobb,1113790,Fulham,midfielder,17.058,5.0,0.0,22
+Gonzalo García,1413847,Fulham,forward,19.686666666666667,0.0,0.0,20
+Bradley Barcola,1297165,Liverpool,midfielder,14.468000000000002,5.0,0.0,19
+Alexis Mac Allister,831489,Liverpool,midfielder,16.896,2.5,0.0,19
+Miloš Kerkez,1195281,Liverpool,defender,12.405,5.0,0.0,17
+Alexander Isak,690107,Liverpool,forward,17.25,0.0,0.0,17
+Víctor Muñoz,1553105,Liverpool,midfielder,11.436,5.0,0.0,16
+Kenny Tete,469804,Fulham,defender,7.1850000000000005,5.0,0.0,12
+Kevin,1318400,Fulham,forward,8.24,0.0,0.0,8
+Emile Smith Rowe,889534,Fulham,midfielder,5.649333333333333,2.5,0.0,8
+Rodrigo Muniz,1128945,Fulham,forward,7.693333333333333,0.0,0.0,8
+Cody Gakpo,806552,Liverpool,forward,6.53,0.0,0.0,7
+Rio Ngumoha,1597668,Liverpool,forward,6.319999999999999,0.0,0.0,6
+Hugo Larsson,1339269,Fulham,midfielder,3.769333333333333,2.5,0.0,6
+Wataru Endo,202643,Liverpool,defender,0.0,0.0,0.0,0
+Joachim Andersen,503659,Fulham,defender,0.0,0.0,0.0,0
+Trey Nyoni,1436258,Liverpool,midfielder,0.0,0.0,0.0,0
+Manuel Ángel,1508427,Fulham,midfielder,0.0,0.0,0.0,0
+Lewis Koumas,1364042,Liverpool,forward,0.0,0.0,0.0,0
+César Palacios,1403691,Fulham,forward,0.0,0.0,0.0,0
+Liverpool Keepers,8650,Liverpool,goalkeeper,18.82,18.0,0.0,37
+Fulham Keepers,9879,Fulham,goalkeeper,16.740000000000002,18.0,0.0,35
