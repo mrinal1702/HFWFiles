@@ -1,5 +1,10 @@
 import "server-only";
 
+import {
+  fetchPlayerMetaByIds,
+  resolveAuctionCompetitionId,
+  type PlayerMetaRow,
+} from "@/lib/players-query";
 import { createAdminClient } from "@/lib/supabase-server";
 import type { PlayerMeta } from "@/lib/transfers";
 
@@ -163,7 +168,11 @@ export async function loadAnnouncements(auctionId: number): Promise<Announcement
   const supabase = createAdminClient();
 
   const [auctionRes, teamsRes, releasesRes, transfersRes, bidsRes] = await Promise.all([
-    supabase.from("Auctions").select("hard_deadline_at").eq("id", auctionId).maybeSingle(),
+    supabase
+      .from("Auctions")
+      .select("hard_deadline_at, competition_id")
+      .eq("id", auctionId)
+      .maybeSingle(),
     supabase
       .from("auction_teams")
       .select("player_id, auction_user_id, purchase_price")
@@ -191,6 +200,9 @@ export async function loadAnnouncements(auctionId: number): Promise<Announcement
   if (bidsRes.error) throw new Error(`auction_bids: ${bidsRes.error.message}`);
 
   const hardDeadlineAt = (auctionRes.data?.hard_deadline_at as string | null) ?? null;
+  const competitionId = resolveAuctionCompetitionId(
+    auctionRes.data as { competition_id?: number | null } | null,
+  );
   const teams = teamsRes.data ?? [];
   const releases = releasesRes.data ?? [];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -242,28 +254,22 @@ export async function loadAnnouncements(auctionId: number): Promise<Announcement
     ]),
   ].filter((id): id is number => typeof id === "number");
 
-  const [playersRes, usersRes] = await Promise.all([
+  const [playerMeta, usersRes] = await Promise.all([
     allPlayerIds.length
-      ? supabase
-          .from("players")
-          .select("player_id, player_name, position")
-          .in("player_id", allPlayerIds)
-      : Promise.resolve({ data: [] as { player_id: unknown; player_name: string | null; position: string | null }[], error: null }),
+      ? fetchPlayerMetaByIds(supabase, allPlayerIds, competitionId)
+      : Promise.resolve({} as Record<string, PlayerMetaRow>),
     allUserIds.length
       ? supabase.from("auction_users").select("id, name").in("id", allUserIds)
       : Promise.resolve({ data: [] as { id: number; name: string | null }[], error: null }),
   ]);
 
-  if (playersRes.error) throw new Error(`players: ${(playersRes.error as { message: string }).message}`);
   if (usersRes.error) throw new Error(`auction_users: ${(usersRes.error as { message: string }).message}`);
 
   const playerById = new Map<string, { player_name: string | null; position: string | null }>();
-  for (const p of playersRes.data ?? []) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const row = p as any;
-    playerById.set(String(row.player_id), {
-      player_name: row.player_name,
-      position: row.position,
+  for (const [id, meta] of Object.entries(playerMeta)) {
+    playerById.set(id, {
+      player_name: meta.player_name,
+      position: meta.position,
     });
   }
 
@@ -360,22 +366,28 @@ export async function loadEliminationReleases(auctionId: number): Promise<Elimin
   const playerIds = [...new Set(refunds.map((r) => String(r.player_id)))];
   const userIds = [...new Set(refunds.map((r) => r.auction_user_id as number))];
 
-  const [playersRes, usersRes] = await Promise.all([
-    supabase
-      .from("players")
-      .select("player_id, player_name, position")
-      .in("player_id", playerIds),
+  const auctionRes = await supabase
+    .from("Auctions")
+    .select("competition_id")
+    .eq("id", auctionId)
+    .maybeSingle();
+  if (auctionRes.error) throw new Error(`Auctions: ${auctionRes.error.message}`);
+  const competitionId = resolveAuctionCompetitionId(
+    auctionRes.data as { competition_id?: number | null } | null,
+  );
+
+  const [playerMeta, usersRes] = await Promise.all([
+    fetchPlayerMetaByIds(supabase, playerIds, competitionId),
     supabase.from("auction_users").select("id, name").in("id", userIds),
   ]);
 
-  if (playersRes.error) throw new Error(`players: ${playersRes.error.message}`);
   if (usersRes.error) throw new Error(`auction_users: ${usersRes.error.message}`);
 
   const playerById = new Map<string, { player_name: string | null; position: string | null }>();
-  for (const p of playersRes.data ?? []) {
-    playerById.set(String(p.player_id), {
-      player_name: p.player_name,
-      position: p.position,
+  for (const [id, meta] of Object.entries(playerMeta)) {
+    playerById.set(id, {
+      player_name: meta.player_name,
+      position: meta.position,
     });
   }
 
