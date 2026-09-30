@@ -28,14 +28,14 @@
       "database_round_id": 103,
       "display_name": "Matchweek 3",
       "round_number": 3,
-      "status": "scheduled",
+      "status": "published",
       "expected_match_count": 10
     },
     "mw04": {
       "database_round_id": 104,
       "display_name": "Matchweek 4",
       "round_number": 4,
-      "status": "scheduled",
+      "status": "published",
       "expected_match_count": 10
     }
   },
