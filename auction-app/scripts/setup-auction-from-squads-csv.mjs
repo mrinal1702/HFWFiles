@@ -402,7 +402,7 @@ async function main() {
   });
   if (seedErr) {
     throw new Error(
-      `seed_auction_lots_for_auction failed: ${seedErr.message}\nRun scripts/sql/seed-auction-lots-all-players.sql in Supabase first.`,
+      `seed_auction_lots_for_auction failed: ${seedErr.message}\nRun scripts/sql/seed-auction-lots-competition-aware.sql in Supabase first.`,
     );
   }
   console.log(`✅  Seeded lots:`, seedResult);

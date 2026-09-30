@@ -1,3 +1,7 @@
+-- ⚠️ PARTIALLY SUPERSEDED — see scripts/sql/README.md for the canonical map.
+--   LIVE here: trg_auction_bids_block_relegated (+ its trigger), _participant_is_relegated.
+--   SUPERSEDED here: release_player → the live version is in nation-rolling-bidding-rpc.sql.
+-- ---------------------------------------------------------------------------
 -- Participant relegation — RPC guards. Run after participant-relegation-schema.sql.
 -- Safe to re-run (CREATE OR REPLACE / DROP IF EXISTS).
 

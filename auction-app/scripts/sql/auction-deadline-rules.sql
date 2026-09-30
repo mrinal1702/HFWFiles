@@ -1,3 +1,7 @@
+-- ⚠️ PARTIALLY SUPERSEDED — see scripts/sql/README.md for the canonical map.
+--   LIVE here: the initiation_deadline_at + raise_deadline_at columns on "Auctions".
+--   SUPERSEDED here: place_bid → the live version is in nation-rolling-bidding-rpc.sql.
+-- ---------------------------------------------------------------------------
 -- Auction deadline rules: initiation + raise deadlines
 -- Run this once in the Supabase SQL Editor after auction-bidding.sql has been applied.
 -- Safe to re-run: ADD COLUMN IF NOT EXISTS is idempotent; CREATE OR REPLACE updates place_bid in place.

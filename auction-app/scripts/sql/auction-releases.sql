@@ -1,3 +1,7 @@
+-- ⚠️ PARTIALLY SUPERSEDED — see scripts/sql/README.md for the canonical map.
+--   LIVE here: the auction_releases table.
+--   SUPERSEDED here: release_player → the live version is in nation-rolling-bidding-rpc.sql.
+-- ---------------------------------------------------------------------------
 -- ─── Player Release System ────────────────────────────────────────────────────
 --
 -- Run this entire file in the Supabase SQL Editor.

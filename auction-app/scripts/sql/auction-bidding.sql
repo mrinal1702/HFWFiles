@@ -1,3 +1,8 @@
+-- ⚠️ PARTIALLY SUPERSEDED — see scripts/sql/README.md for the canonical map.
+--   LIVE here: auction_lots + auction_bids tables, _player_is_goalkeeper,
+--              finalize_auction_hard_deadline, finalize_expired_lots.
+--   SUPERSEDED here: place_bid → the live version is in nation-rolling-bidding-rpc.sql.
+-- ---------------------------------------------------------------------------
 -- Bidding schema + place_bid RPC. Run in Supabase SQL Editor (once per project).
 -- Requires: "Auctions", auction_users, auction_teams, players (with player_id + position).
 

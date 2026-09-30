@@ -5,7 +5,7 @@
  *   npm run seed:auction-lots
  *   node scripts/seed-auction-lots.mjs 3
  *
- * Run scripts/sql/seed-auction-lots-all-players.sql once in Supabase to create the RPC.
+ * Run scripts/sql/seed-auction-lots-competition-aware.sql once in Supabase to create the RPC.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -57,7 +57,7 @@ async function main() {
     console.error("RPC error:", error.message);
     console.error(JSON.stringify(error, null, 2));
     console.error(
-      "\nIf the function is missing, run scripts/sql/seed-auction-lots-all-players.sql in the Supabase SQL Editor (full file).",
+      "\nIf the function is missing, run scripts/sql/seed-auction-lots-competition-aware.sql in the Supabase SQL Editor (full file).",
     );
     process.exit(1);
   }
