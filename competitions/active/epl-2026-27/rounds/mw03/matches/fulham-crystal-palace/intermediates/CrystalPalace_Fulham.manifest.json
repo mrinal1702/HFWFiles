@@ -1,0 +1,15 @@
+{
+  "match_id": 5795439,
+  "home_team": "Fulham",
+  "away_team": "Crystal Palace",
+  "source_url": "https://www.fotmob.com/en-GB/matches/crystal-palace-vs-fulham/37llbg#5795439:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw03/matches/crystal-palace-fulham/intermediates/CrystalPalace_Fulham.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/crystal-palace-vs-fulham/37llbg",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/crystal-palace-vs-fulham/37llbg#5795439:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/crystal-palace-vs-fulham/37llbg#5795439:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/crystal-palace-vs-fulham/37llbg#5795439:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795439"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

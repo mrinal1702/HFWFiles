@@ -1,0 +1,15 @@
+{
+  "match_id": 5795440,
+  "home_team": "Hull City",
+  "away_team": "Aston Villa",
+  "source_url": "https://www.fotmob.com/en-GB/matches/hull-city-vs-aston-villa/2yk7pj#5795440:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw03/matches/hull-city-aston-villa/intermediates/HullCity_AstonVilla.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/hull-city-vs-aston-villa/2yk7pj",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/hull-city-vs-aston-villa/2yk7pj#5795440:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/hull-city-vs-aston-villa/2yk7pj#5795440:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/hull-city-vs-aston-villa/2yk7pj#5795440:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795440"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

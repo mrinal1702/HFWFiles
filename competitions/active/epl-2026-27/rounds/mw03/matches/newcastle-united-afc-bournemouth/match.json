@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw03",
+  "match_slug": "newcastle-united-afc-bournemouth",
+  "fotmob_match_id": 5795443,
+  "source_url": "https://www.fotmob.com/en-GB/matches/afc-bournemouth-vs-newcastle-united/2ysbu8#5795443:tab=stats",
+  "home_team": "Newcastle United",
+  "away_team": "AFC Bournemouth",
+  "raw_json_path": "intermediates/AFCBournemouth_NewcastleUnited.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

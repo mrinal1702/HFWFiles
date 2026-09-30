@@ -1,0 +1,15 @@
+{
+  "match_id": 5795438,
+  "home_team": "Everton",
+  "away_team": "Manchester United",
+  "source_url": "https://www.fotmob.com/en-GB/matches/everton-vs-manchester-united/2ynv4k#5795438:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw03/matches/everton-manchester-united/intermediates/Everton_ManchesterUnited.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/everton-vs-manchester-united/2ynv4k",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/everton-vs-manchester-united/2ynv4k#5795438:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/everton-vs-manchester-united/2ynv4k#5795438:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/everton-vs-manchester-united/2ynv4k#5795438:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795438"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

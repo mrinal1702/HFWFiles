@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw03",
+  "match_slug": "everton-manchester-united",
+  "fotmob_match_id": 5795438,
+  "source_url": "https://www.fotmob.com/en-GB/matches/everton-vs-manchester-united/2ynv4k#5795438:tab=stats",
+  "home_team": "Everton",
+  "away_team": "Manchester United",
+  "raw_json_path": "intermediates/Everton_ManchesterUnited.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

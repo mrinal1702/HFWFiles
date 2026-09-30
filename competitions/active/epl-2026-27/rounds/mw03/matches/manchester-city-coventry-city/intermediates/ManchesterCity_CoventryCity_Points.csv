@@ -1,0 +1,37 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+1089691,Elliot Anderson,8456,Manchester City,2,midfielder,41.082,3.0,3.0,47.082,90.0,1,0,7.0,54.082
+1161885,Bobby Thomas,8669,Coventry City,1,defender,37.635,3.0,3.0,43.635,90.0,0,1,5.0,48.635
+737066,Erling Haaland,8456,Manchester City,3,forward,36.16,5.0,3.0,44.16,90.0,1,0,3.0,47.16
+844425,Marc Guéhi,8456,Manchester City,1,defender,30.005,3.0,3.0,36.004999999999995,90.0,1,0,10.0,46.004999999999995
+614006,Rúben Dias,8456,Manchester City,1,defender,24.220000000000002,3.0,3.0,30.220000000000002,90.0,1,0,10.0,40.22
+1362998,Abdukodir Khusanov,8456,Manchester City,1,defender,21.615,3.0,3.0,27.615,90.0,1,0,10.0,37.614999999999995
+1074750,Milan van Ewijk,8669,Coventry City,2,midfielder,27.698,3.0,3.0,33.698,90.0,0,1,3.0,36.698
+1070712,Joško Gvardiol,8456,Manchester City,1,defender,18.945,3.0,3.0,24.945,90.0,1,0,10.0,34.945
+1104053,Rayan Cherki,8456,Manchester City,2,midfielder,24.941999999999997,0.7999999999999998,2.2,27.941999999999997,66.0,1,0,7.0,34.94199999999999
+933576,Antoine Semenyo,8456,Manchester City,3,forward,22.32,3.2,3.0,28.52,90.0,1,0,3.0,31.52
+1137705,Enzo Fernández,8456,Manchester City,2,midfielder,17.031999999999996,3.0,2.533333333333333,22.565333333333328,76.0,1,0,7.0,29.565333333333328
+711357,Ethan Pinnock,8669,Coventry City,1,defender,16.505,3.0,3.0,22.505,90.0,0,1,5.0,27.505
+759814,Jay Dasilva,8669,Coventry City,2,midfielder,18.169999999999998,3.0,2.8333333333333335,24.00333333333333,85.0,0,1,3.0,27.00333333333333
+965764,Iliman Ndiaye,8456,Manchester City,3,forward,17.08,3.2,2.9,23.179999999999996,87.0,1,0,3.0,26.179999999999996
+478357,Matt Grimes,8669,Coventry City,2,midfielder,16.784,3.0,3.0,22.784,90.0,0,1,3.0,25.784
+1257648,Aurèle Amenda,8669,Coventry City,1,defender,12.230000000000002,1.8,3.0,17.03,90.0,0,1,5.0,22.03
+1030830,Jack Rudoni,8669,Coventry City,3,forward,13.600000000000001,5.0,2.1,20.700000000000003,63.0,0,1,0.0,20.700000000000003
+1283034,Loum Tchaouna,8669,Coventry City,3,forward,14.169999999999998,5.0,0.9,20.069999999999997,27.0,0,0,0.0,20.069999999999997
+643717,Taiwo Awoniyi,8669,Coventry City,3,forward,12.59,5.0,2.3666666666666667,19.956666666666667,71.0,0,1,0.0,19.956666666666667
+982284,Ellis Simms,8669,Coventry City,3,forward,7.74,5.0,0.6333333333333333,13.373333333333333,19.0,0,0,0.0,13.373333333333333
+1680328,Ryan McAidoo,8456,Manchester City,3,forward,7.460000000000001,5.0,0.1,12.56,3.0,0,0,0.0,12.56
+815006,Phil Foden,8456,Manchester City,2,midfielder,6.444,1.9,0.8,9.144,24.0,0,0,2.5,11.644
+856685,Frank Onyeka,8669,Coventry City,2,midfielder,3.322000000000001,3.0,2.1,8.422,63.0,0,1,3.0,11.422
+1561552,Ayyoub Bouaddi,8456,Manchester City,2,midfielder,5.428,3.0,0.4666666666666667,8.894666666666668,14.0,0,0,2.5,11.394666666666668
+776184,Brandon Thomas-Asante,8669,Coventry City,3,forward,4.74,5.0,0.6333333333333333,10.373333333333333,19.0,0,0,0.0,10.373333333333333
+1615927,Caleb Yirenkyi,8669,Coventry City,2,midfielder,2.5399999999999996,3.0,0.9,6.4399999999999995,27.0,0,0,2.5,8.94
+775355,Gustavo Hamer,8669,Coventry City,3,forward,1.73,5.0,0.16666666666666666,6.896666666666667,5.0,0,0,0.0,6.896666666666667
+798654,Ephron Mason-Clark,8669,Coventry City,3,forward,-0.04000000000000026,4.1,2.3666666666666667,6.426666666666666,71.0,0,1,0.0,6.426666666666666
+863822,Joel Latibeaudiere,8669,Coventry City,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+933845,Rayan Aït-Nouri,8456,Manchester City,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+955529,Matheus Nunes,8456,Manchester City,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1288450,Rico Lewis,8456,Manchester City,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+239219,Mateo Kovačić,8456,Manchester City,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+845985,Victor Torp,8669,Coventry City,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1726962,Floyd Samba,8456,Manchester City,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1025603,Tatsuhiro Sakamoto,8669,Coventry City,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

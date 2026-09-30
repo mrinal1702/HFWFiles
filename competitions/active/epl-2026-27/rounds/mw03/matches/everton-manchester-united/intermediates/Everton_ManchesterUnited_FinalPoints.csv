@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Kobbie Mainoo,1292810,Manchester United,midfielder,39.95799999999999,5.0,0.0,45
+Luke Shaw,362694,Manchester United,defender,39.90166666666667,5.0,0.0,45
+Tyrique George,1424875,Everton,midfielder,37.892,5.0,0.0,43
+James Tarkowski,243138,Everton,defender,41.555,0.0,0.0,42
+Jarrad Branthwaite,1030829,Everton,defender,37.66,0.0,0.0,38
+Bryan Mbeumo,923312,Manchester United,midfielder,28.610000000000003,5.0,0.0,34
+Kiernan Dewsbury-Hall,886016,Everton,midfielder,28.448,5.0,0.0,33
+Thierno Barry,1398392,Everton,forward,25.61,6.0,0.0,32
+Harry Maguire,255610,Manchester United,defender,30.255,0.0,0.0,30
+Youri Tielemans,465960,Manchester United,midfielder,23.918000000000003,5.0,0.0,29
+Vitaliy Mykolenko,874025,Everton,defender,27.995,0.0,0.0,28
+James Garner,950474,Everton,midfielder,24.180666666666664,3.0,0.0,27
+Diogo Dalot,751550,Manchester United,defender,21.045,5.0,0.0,26
+Hayden Hackney,982394,Everton,midfielder,21.186,4.5,0.0,26
+Lisandro Martínez,847983,Manchester United,defender,23.135,0.0,0.0,23
+Bruno Fernandes,422685,Manchester United,midfielder,17.876,5.0,0.0,23
+Brennan Johnson,1076756,Everton,forward,22.7,0.0,0.0,23
+Harrison Armstrong,1559637,Everton,midfielder,17.158,5.0,0.0,22
+Benjamin Šeško,1073977,Manchester United,forward,19.03666666666667,3.0,0.0,22
+Marcus Rashford,696365,Manchester United,midfielder,14.247333333333334,7.0,0.0,21
+Jack Grealish,312765,Everton,forward,14.840000000000002,6.0,0.0,21
+Matheus Cunha,863098,Manchester United,forward,14.433333333333332,3.0,0.0,17
+Patrick Dorgu,1526560,Manchester United,forward,14.186666666666666,3.0,0.0,17
+Merlin Röhl,1210384,Everton,defender,10.16,5.0,0.0,15
+Ainsley Maitland-Niles,604089,Everton,defender,14.573333333333334,0.0,0.0,15
+Andrey Santos,1372921,Manchester United,midfielder,11.496,2.5,0.0,14
+Leny Yoro,1358581,Manchester United,defender,9.805,0.0,0.0,10
+Michael Keane,290410,Everton,defender,0.0,0.0,0.0,0
+Noussair Mazraoui,775539,Manchester United,defender,0.0,0.0,0.0,0
+Jake O'Brien,1098607,Everton,defender,0.0,0.0,0.0,0
+Ayden Heaven,1559639,Manchester United,defender,0.0,0.0,0.0,0
+Mason Mount,750032,Manchester United,midfielder,0.0,0.0,0.0,0
+Charly Alcaraz,1128965,Everton,midfielder,0.0,0.0,0.0,0
+Joshua Zirkzee,950830,Manchester United,forward,0.0,0.0,0.0,0
+Tyler Dibling,1292833,Everton,forward,0.0,0.0,0.0,0
+Braiden Graham,1589726,Everton,forward,0.0,0.0,0.0,0
+Manchester United Keepers,10260,Manchester United,goalkeeper,18.84,6.0,0.0,25
+Everton Keepers,8668,Everton,goalkeeper,10.06,6.0,0.0,16

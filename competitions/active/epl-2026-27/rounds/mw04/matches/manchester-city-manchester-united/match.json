@@ -1,0 +1,14 @@
+{
+  "competition_slug": "epl-2026-27",
+  "round_slug": "mw04",
+  "match_slug": "manchester-united-manchester-city",
+  "fotmob_match_id": 5795452,
+  "source_url": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-manchester-united/2wabz2#5795452:tab=stats",
+  "home_team": "Manchester United",
+  "away_team": "Manchester City",
+  "raw_json_path": "intermediates/ManchesterUnited_Vs_ManchesterCity.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

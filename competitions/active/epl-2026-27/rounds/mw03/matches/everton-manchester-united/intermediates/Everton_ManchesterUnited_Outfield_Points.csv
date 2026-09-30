@@ -1,0 +1,37 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+1292810,Kobbie Mainoo,10260,Manchester United,2,midfielder,35.257999999999996,1.9,2.8,39.95799999999999,84.0,1,1,5.0,44.95799999999999
+362694,Luke Shaw,10260,Manchester United,1,defender,33.935,3.0,2.966666666666667,39.90166666666667,90.0,2,1,5.0,44.90166666666667
+1424875,Tyrique George,8668,Everton,2,midfielder,32.992,1.9,3.0,37.891999999999996,90.0,2,2,5.0,42.891999999999996
+243138,James Tarkowski,8668,Everton,1,defender,35.555,3.0,3.0,41.555,90.0,2,2,0.0,41.555
+1030829,Jarrad Branthwaite,8668,Everton,1,defender,31.659999999999997,3.0,3.0,37.66,90.0,2,2,0.0,37.66
+923312,Bryan Mbeumo,10260,Manchester United,2,midfielder,22.610000000000003,3.0,3.0,28.610000000000003,90.0,2,2,5.0,33.61
+886016,Kiernan Dewsbury-Hall,8668,Everton,2,midfielder,25.747999999999998,-0.30000000000000027,3.0,28.447999999999997,90.0,2,2,5.0,33.44799999999999
+1398392,Thierno Barry,8668,Everton,3,forward,17.61,5.0,3.0,25.61,90.0,2,2,6.0,31.61
+255610,Harry Maguire,10260,Manchester United,1,defender,24.255,3.0,3.0,30.255,90.0,2,2,0.0,30.255
+465960,Youri Tielemans,10260,Manchester United,2,midfielder,17.918000000000003,3.0,3.0,23.918000000000003,90.0,2,2,5.0,28.918000000000003
+874025,Vitaliy Mykolenko,8668,Everton,1,defender,21.995,3.0,3.0,27.995,90.0,2,2,0.0,27.995
+950474,James Garner,8668,Everton,2,midfielder,18.613999999999997,3.0,2.5666666666666664,24.180666666666664,77.0,0,1,3.0,27.180666666666664
+751550,Diogo Dalot,10260,Manchester United,1,defender,15.245,3.0,2.8,21.044999999999998,84.0,1,1,5.0,26.044999999999998
+982394,Hayden Hackney,8668,Everton,2,midfielder,18.786,1.9,0.5,21.186,15.0,2,1,4.5,25.686
+847983,Lisandro Martínez,10260,Manchester United,1,defender,17.135,3.0,3.0,23.135,90.0,2,2,0.0,23.135
+422685,Bruno Fernandes,10260,Manchester United,2,midfielder,12.976,1.9,3.0,17.876,90.0,2,2,5.0,22.876
+1076756,Brennan Johnson,8668,Everton,3,forward,16.400000000000002,4.1,2.2,22.7,66.0,0,1,0.0,22.7
+1559637,Harrison Armstrong,8668,Everton,2,midfielder,12.258000000000001,1.9,3.0,17.158,90.0,2,2,5.0,22.158
+1073977,Benjamin Šeško,10260,Manchester United,3,forward,13.370000000000001,5.0,0.6666666666666666,19.03666666666667,20.0,1,2,3.0,22.03666666666667
+696365,Marcus Rashford,10260,Manchester United,2,midfielder,8.914,3.0,2.3333333333333335,14.247333333333334,70.0,1,0,7.0,21.247333333333334
+312765,Jack Grealish,8668,Everton,3,forward,9.040000000000001,5.0,0.8,14.840000000000002,24.0,2,1,6.0,20.840000000000003
+863098,Matheus Cunha,10260,Manchester United,3,forward,8.899999999999999,3.2,2.3333333333333335,14.433333333333332,70.0,1,0,3.0,17.43333333333333
+1526560,Patrick Dorgu,10260,Manchester United,3,forward,9.42,4.1,0.6666666666666666,14.186666666666666,20.0,1,2,3.0,17.186666666666667
+1210384,Merlin Röhl,8668,Everton,1,defender,4.660000000000001,3.0,2.5,10.16,75.0,0,1,5.0,15.16
+604089,Ainsley Maitland-Niles,8668,Everton,1,defender,11.14,3.0,0.43333333333333335,14.573333333333334,13.0,2,1,0.0,14.573333333333334
+1372921,Andrey Santos,10260,Manchester United,2,midfielder,8.296000000000001,3.0,0.2,11.496,6.0,1,1,2.5,13.996
+1358581,Leny Yoro,10260,Manchester United,1,defender,7.805000000000001,1.8,0.2,9.805,6.0,1,1,0.0,9.805
+290410,Michael Keane,8668,Everton,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+775539,Noussair Mazraoui,10260,Manchester United,1,defender,3.255,3.0,0.03333333333333333,0.0,0.0,0,0,0.0,0.0
+1098607,Jake O'Brien,8668,Everton,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1559639,Ayden Heaven,10260,Manchester United,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+750032,Mason Mount,10260,Manchester United,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1128965,Charly Alcaraz,8668,Everton,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+950830,Joshua Zirkzee,10260,Manchester United,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1292833,Tyler Dibling,8668,Everton,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1589726,Braiden Graham,8668,Everton,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

@@ -1,0 +1,15 @@
+{
+  "match_id": 5795444,
+  "home_team": "Nottingham Forest",
+  "away_team": "Tottenham Hotspur",
+  "source_url": "https://www.fotmob.com/en-GB/matches/tottenham-hotspur-vs-nottingham-forest/2x3odl#5795444:tab=stats",
+  "json_path": "competitions/active/epl-2026-27/rounds/mw03/matches/nottingham-forest-tottenham-hotspur/intermediates/TottenhamHotspur_NottinghamForest.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/tottenham-hotspur-vs-nottingham-forest/2x3odl",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/tottenham-hotspur-vs-nottingham-forest/2x3odl#5795444:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/tottenham-hotspur-vs-nottingham-forest/2x3odl#5795444:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/tottenham-hotspur-vs-nottingham-forest/2x3odl#5795444:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=5795444"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

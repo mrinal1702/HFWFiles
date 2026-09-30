@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Marcus Tavernier,789630,Bournemouth,midfielder,36.98866666666667,5.0,0.0,42
+Lewis Hall,1197655,Newcastle United,defender,34.93166666666667,0.0,0.0,35
+Alex Scott,1233655,Bournemouth,midfielder,28.000666666666667,5.0,0.0,33
+António Silva,1292092,Bournemouth,defender,30.305,0.0,0.0,30
+Evanilson,1098096,Bournemouth,forward,23.43,6.0,0.0,29
+James Hill,959407,Bournemouth,defender,28.925,0.0,0.0,29
+Harvey Barnes,760359,Newcastle United,midfielder,22.612,5.0,0.0,28
+Rayan,1478295,Bournemouth,forward,20.976666666666667,6.0,0.0,27
+Sven Botman,956682,Newcastle United,defender,26.28,0.0,0.0,26
+Malick Thiaw,1137407,Newcastle United,defender,26.085,0.0,0.0,26
+Tyler Adams,729769,Bournemouth,midfielder,18.699333333333332,7.0,0.0,26
+Adrien Truffert,1177358,Bournemouth,defender,25.145,0.0,0.0,25
+Yoane Wissa,666857,Newcastle United,forward,18.56,6.0,0.0,25
+Adam Smith,160447,Bournemouth,defender,23.975,0.0,0.0,24
+Amar Dedić,958010,Newcastle United,defender,22.545,0.0,0.0,23
+Jacob Ramsey,1021929,Newcastle United,midfielder,17.238,4.5,0.0,22
+Justin Kluivert,794253,Bournemouth,midfielder,10.397333333333334,7.0,0.0,17
+Anthony Elanga,1050166,Newcastle United,midfielder,14.062666666666669,3.0,0.0,17
+Nico González,1280132,Newcastle United,midfielder,12.902666666666663,3.0,0.0,16
+Lewis Miley,1296763,Newcastle United,midfielder,10.126,3.0,0.0,13
+Joseph Willock,860975,Newcastle United,midfielder,9.584,3.0,0.0,13
+Matias Fernandez-Pardo,1444231,Newcastle United,forward,8.7,3.0,0.0,12
+Sean Steur,1643770,Newcastle United,midfielder,5.1433333333333335,4.5,0.0,10
+Jacob Murphy,521148,Newcastle United,forward,5.583333333333334,3.0,0.0,9
+Ben Gannon-Doak,1324871,Bournemouth,forward,8.023333333333333,0.0,0.0,8
+Lewis Cook,562724,Bournemouth,midfielder,4.942666666666667,0.5,0.0,5
+Daniel Jebbison,1253827,Bournemouth,forward,5.033333333333333,0.0,0.0,5
+David Brooks,674014,Bournemouth,forward,4.8566666666666665,0.0,0.0,5
+Fabian Schär,189982,Newcastle United,defender,0.0,0.0,0.0,0
+Bafodé Diakité,979752,Bournemouth,defender,0.0,0.0,0.0,0
+Valentino Livramento,1107910,Newcastle United,defender,0.0,0.0,0.0,0
+Julio Soler,1358655,Bournemouth,defender,0.0,0.0,0.0,0
+Ryan Christie,439369,Bournemouth,midfielder,0.0,0.0,0.0,0
+Juanlu Sánchez,1158512,Bournemouth,midfielder,0.0,0.0,0.0,0
+Aladji Bamba,1695681,Newcastle United,midfielder,0.0,0.0,0.0,0
+Bazoumana Touré,1624586,Newcastle United,forward,0.0,0.0,0.0,0
+Newcastle United Keepers,10261,Newcastle United,goalkeeper,17.64,6.0,0.0,24
+Bournemouth Keepers,8678,Bournemouth,goalkeeper,13.8,6.0,0.0,20

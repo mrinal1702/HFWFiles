@@ -1,0 +1,78 @@
+{
+  "competition_slug": "epl-2026-27",
+  "database_competition_id": 2,
+  "database_round_id": 103,
+  "round_slug": "mw03",
+  "display_name": "Matchweek 3",
+  "round_number": 3,
+  "legacy_game_week_id": 102,
+  "expected_match_count": 10,
+  "_match_count_note": "GW3 complete — all 10 fixtures scored; Best XI published.",
+  "auction_ids": [9],
+  "squad_lock_state": "locked",
+  "scoring_state": "complete",
+  "publication_state": "published",
+  "algorithm_version": "1.0",
+  "fixtures": [
+    {
+      "match_slug": "ipswich-town-liverpool",
+      "fotmob_match_id": 5795441,
+      "home_team": "Ipswich Town",
+      "away_team": "Liverpool"
+    },
+    {
+      "match_slug": "newcastle-united-afc-bournemouth",
+      "fotmob_match_id": 5795443,
+      "home_team": "Newcastle United",
+      "away_team": "AFC Bournemouth"
+    },
+    {
+      "match_slug": "brentford-sunderland",
+      "fotmob_match_id": 5795436,
+      "home_team": "Brentford",
+      "away_team": "Sunderland"
+    },
+    {
+      "match_slug": "brighton-leeds-united",
+      "fotmob_match_id": 5795437,
+      "home_team": "Brighton & Hove Albion",
+      "away_team": "Leeds United"
+    },
+    {
+      "match_slug": "fulham-crystal-palace",
+      "fotmob_match_id": 5795439,
+      "home_team": "Fulham",
+      "away_team": "Crystal Palace"
+    },
+    {
+      "match_slug": "manchester-city-coventry-city",
+      "fotmob_match_id": 5795442,
+      "home_team": "Manchester City",
+      "away_team": "Coventry City"
+    },
+    {
+      "match_slug": "nottingham-forest-tottenham-hotspur",
+      "fotmob_match_id": 5795444,
+      "home_team": "Nottingham Forest",
+      "away_team": "Tottenham Hotspur"
+    },
+    {
+      "match_slug": "hull-city-aston-villa",
+      "fotmob_match_id": 5795440,
+      "home_team": "Hull City",
+      "away_team": "Aston Villa"
+    },
+    {
+      "match_slug": "everton-manchester-united",
+      "fotmob_match_id": 5795438,
+      "home_team": "Everton",
+      "away_team": "Manchester United"
+    },
+    {
+      "match_slug": "arsenal-chelsea",
+      "fotmob_match_id": 5795435,
+      "home_team": "Arsenal",
+      "away_team": "Chelsea"
+    }
+  ]
+}
