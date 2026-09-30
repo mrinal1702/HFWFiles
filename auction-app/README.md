@@ -1,6 +1,9 @@
 This is the HFW Auction App — a fantasy football auction platform for a private group.
 
-**For agents / new contributors: read [`docs/AGENT_HANDOFF.md`](./docs/AGENT_HANDOFF.md) first.** It covers the full project context, architecture, conventions, and current state of all modules.
+**For agents / new contributors, start with these three:**
+- [`docs/AGENT_HANDOFF.md`](./docs/AGENT_HANDOFF.md) — product orientation, tech stack, conventions, and current state.
+- [`docs/OPS_INDEX.md`](./docs/OPS_INDEX.md) — day-to-day ops (bidding, locks, scoring, relegations, UI standards).
+- [`scripts/sql/README.md`](./scripts/sql/README.md) — the canonical database schema index (tables, views, RPCs → SQL file).
 
 ---
 
