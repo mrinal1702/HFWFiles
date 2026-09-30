@@ -50,7 +50,8 @@ This index maps **every object that exists in the live database** to the **one f
 | `auction_elimination_refunds` | `auction-elimination-refunds-setup.sql` | |
 | `gameweek_squads` | `gameweek-squads.sql` | `xi_role` col added by `gameweek-squads-xi-role.sql` |
 | `competitions`, `competition_rounds`, `competition_matches`, `competition_players` | `competition-isolation-migrate-all.sql` | |
-| `player_scores_scoped` (view) | `competition-isolation-migrate-all.sql` | over `"Player_Scores"` |
+| `player_scores` (view) | `player-scores.sql` | lowercase alias of `"Player_Scores"` — exposes `"Score"` as `score` |
+| `player_scores_scoped` (view) | `competition-isolation-migrate-all.sql` | `"Player_Scores"` joined to competition/round/match |
 | `profiles` | `auth-and-join.sql` | `avatar_url` col + storage policies in `profile-avatars.sql` |
 | `live_auctions`, `live_auction_participants`, `live_auction_players`, `live_auction_sales` | `live-auction-schema.sql` | |
 | `live_auction_admin_grants` (+ `join_code`/`admin_code`/`max_participants`) | `live-auction-dashboard-codes.sql` | |
@@ -91,5 +92,5 @@ Each object below is **not** what's live; the live version is in the canonical f
 
 ## Known, deferred (separate future tasks — not part of this tidy)
 
-- **Score-table redundancy:** the live DB has `"Player_Scores"` (canonical), a lowercase `player_scores` mirror, and the `player_scores_scoped` view — all ~2,255 rows. `player_scores` is not defined by any file in this folder. Decide later whether to drop the mirror.
+- **Scoring is one table + two views (not a redundancy):** `"Player_Scores"` is the only score **table** (canonical). `player_scores` and `player_scores_scoped` are **views** over it (defined in `player-scores.sql` and `competition-isolation-migrate-all.sql`), so they always match it (~2,255 rows) and cannot drift. The app reads the lowercase `player_scores` view by preference and falls back to `"Player_Scores"`. No action needed.
 - **Backup tables in production:** `_backup_auctions_pre_r16` and `_backup_game_weeks_pre_trial8` are leftover migration backups. Candidates for cleanup.
