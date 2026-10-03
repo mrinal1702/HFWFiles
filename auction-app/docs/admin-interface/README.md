@@ -58,7 +58,8 @@ New isolated route group `app/auction-admin/[auctionId]/` (separate from the par
 | `/auction-admin/[auctionId]/players/[participantId]` | Team + budget profile, bids held, Add/Remove entry points |
 | `/auction-admin/[auctionId]/players/[participantId]/add` | Free-agent list + filters → buy-price prompt |
 | `/auction-admin/[auctionId]/players/[participantId]/remove` | Team list → confirm removal |
-| `/auction-admin/[auctionId]/budget` · `/cancel-bids` · `/transfers` | Menu placeholders ("Coming soon") |
+| `/auction-admin/[auctionId]/budget` | Modify Budget — Give / Take money per participant |
+| `/auction-admin/[auctionId]/cancel-bids` · `/transfers` | Menu placeholders ("Coming soon") |
 
 Key files: `lib/online-auction-admin.ts` (admin auth + display name + squad grouping),
 `app/auction-admin/[auctionId]/actions.ts` (`adminAddPlayerToTeam`, `adminRemovePlayerFromTeam`),
@@ -69,14 +70,15 @@ Key files: `lib/online-auction-admin.ts` (admin auth + display name + squad grou
 ### Done
 - Spec/decisions locked.
 - **Add / Remove Players section built** (header = auction name + admin name; burger menu with all 4 items; participant list → profile → add/remove flows with Back at every step). Add enforces ≤1 GK and ≤18 players counting bids held; prompts for an admin-set buy price; **does not deduct budget**. Remove returns the player to the unsold pool as a free agent; **does not change budget**. Typecheck + lint clean.
+- **Modify Budget section built**: participants listed with Remaining + Active budget and Give money / Take money buttons per row. Give adds to both budgets; Take subtracts from both and is blocked if it would push active (or remaining) budget below £0.
+- **Dashboard `Admin - <Auction>` links built** and deployed; admins assigned for auctions 10/11/12/13.
 - Lab auction seeded: **"HFW Admin Lab"** (set via `AUCTION_LAB_AUCTION_ID` in `.env.local`) — participants Mrinal / Antonio / Conrad (Conrad = admin+participant), nations Argentina/France/England/Spain, random squads + budgets.
 - Committed helpers:
   - `scripts/setup-admin-lab-auction.mjs` (seed/reset the lab auction)
   - `scripts/sql/auction-admin-column.sql` (adds `Auctions.admin_user_id` + one-admin-per-auction unique index)
 
 ### Not built yet
-- Dashboard `Admin - …` links (step 2).
-- Modify Budget, Cancel Bids, Transfer Monitor sections (placeholders only).
+- Cancel Bids, Transfer Monitor sections (placeholders only).
 - Re-open sold player directly from the admin UI (today: remove returns them to free-agent pool).
 - Confirm whether `auction-admin-column.sql` has actually been run on the live DB, and set `admin_user_id` per auction (10/11/12/13) — required before anyone can open the interface.
 

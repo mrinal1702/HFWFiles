@@ -226,3 +226,91 @@ export async function adminRemovePlayerFromTeam(
   revalidateAdmin(auctionId, participantId);
   return { ok: true, message: "Player removed — they are back in the unsold player list as a free agent." };
 }
+
+/**
+ * Admin budget adjustment. "give" adds fresh money to both budget_remaining and
+ * active_budget (new money is not tied up in any bid). "take" subtracts from both
+ * and is blocked if it would push active_budget (or budget_remaining) below 0.
+ */
+export async function adminModifyBudget(
+  auctionId: number,
+  _prevState: AdminActionState,
+  formData: FormData,
+): Promise<AdminActionState> {
+  const user = await getAuthUser();
+  if (!user) return { error: "Not authenticated." };
+
+  const authError = await requireAuctionAdmin(auctionId, user.id);
+  if (authError) return { error: authError };
+
+  const participantId = Number((formData.get("participantId") as string | null)?.trim() ?? "");
+  const direction = (formData.get("direction") as string | null)?.trim() ?? "";
+  const amountRaw = (formData.get("amount") as string | null)?.trim() ?? "";
+
+  if (!Number.isFinite(participantId) || participantId <= 0) return { error: "Invalid participant." };
+  if (direction !== "give" && direction !== "take") return { error: "Invalid action." };
+
+  const amountNum = Number(amountRaw);
+  const amount = parseInt(amountRaw, 10);
+  if (!amountRaw || Number.isNaN(amountNum) || amountNum <= 0 || !Number.isInteger(amountNum)) {
+    return { error: "Enter a valid whole-number amount (e.g. 5, 25, 100)." };
+  }
+
+  const admin = createAdminClient();
+
+  const { data: participant, error: partErr } = await admin
+    .from("auction_users")
+    .select("id, name, budget_remaining, active_budget")
+    .eq("id", participantId)
+    .eq("auction_id", auctionId)
+    .maybeSingle();
+  if (partErr) return { error: `Participant lookup failed: ${partErr.message}` };
+  if (!participant) return { error: "Participant not found in this auction." };
+
+  const p = participant as {
+    name: string | null;
+    budget_remaining: number;
+    active_budget: number;
+  };
+  const name = p.name ?? "this participant";
+
+  let newRemaining: number;
+  let newActive: number;
+
+  if (direction === "give") {
+    newRemaining = p.budget_remaining + amount;
+    newActive = p.active_budget + amount;
+  } else {
+    if (amount > p.active_budget) {
+      return {
+        error: `${name} only has £${p.active_budget} active budget — taking £${amount} would go negative.`,
+      };
+    }
+    if (amount > p.budget_remaining) {
+      return {
+        error: `${name} only has £${p.budget_remaining} remaining budget — taking £${amount} would go negative.`,
+      };
+    }
+    newRemaining = p.budget_remaining - amount;
+    newActive = p.active_budget - amount;
+  }
+
+  const { error: updateErr } = await admin
+    .from("auction_users")
+    .update({ budget_remaining: newRemaining, active_budget: newActive })
+    .eq("id", participantId)
+    .eq("auction_id", auctionId);
+  if (updateErr) return { error: `Failed to update budget: ${updateErr.message}` };
+
+  revalidatePath(`/auction-admin/${auctionId}/budget`);
+  revalidatePath(`/auction-admin/${auctionId}/players`);
+  revalidatePath(`/auction-admin/${auctionId}/players/${participantId}`);
+  revalidatePath(`/auctions/${auctionId}`);
+
+  const verb = direction === "give" ? "Added" : "Took";
+  const prep = direction === "give" ? "to" : "from";
+  return {
+    ok: true,
+    message: `${verb} £${amount} ${prep} ${name}. Remaining £${newRemaining}, Active £${newActive}.`,
+  };
+}
