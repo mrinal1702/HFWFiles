@@ -7,6 +7,8 @@ import { createAdminClient } from "@/lib/supabase-server";
 import { requireAuctionAdmin, isGoalkeeperPosition } from "@/lib/online-auction-admin";
 import { fetchPlayerMetaByIds, resolveAuctionCompetitionId } from "@/lib/players-query";
 import { SQUAD_LIMIT } from "@/lib/squad-limit";
+import { adminApproveTransfer, adminRejectTransfer } from "@/lib/transfers";
+import { transferErrorMessage } from "@/lib/transfer-messages";
 
 export type AdminActionState = { ok?: boolean; error?: string; message?: string } | null;
 
@@ -418,4 +420,136 @@ export async function adminCancelBid(
     ok: true,
     message: `Bid cancelled — the player is back on the market and £${amount} was credited to ${name}'s active budget.`,
   };
+}
+
+// ─── Transfer Monitor ─────────────────────────────────────────────────────────
+
+/** Feasibility failures that mean "a party couldn't complete the transfer". */
+const TRANSFER_FEASIBILITY_CODES = new Set([
+  "proposer_insufficient_funds",
+  "recipient_insufficient_funds",
+  "proposer_squad_size_exceeded",
+  "recipient_squad_size_exceeded",
+  "proposer_goalkeeper_limit_exceeded",
+  "recipient_goalkeeper_limit_exceeded",
+]);
+
+const TRANSFER_FEASIBILITY_MESSAGE =
+  "Transfer did not go through as one or more parties was not able to complete the transfer. " +
+  "This could be due to budget constraints or 18 player squad limit rule being violated.";
+
+/** Turn admin approval for transfers on/off for this auction. */
+export async function adminSetTransferApproval(
+  auctionId: number,
+  _prevState: AdminActionState,
+  formData: FormData,
+): Promise<AdminActionState> {
+  const user = await getAuthUser();
+  if (!user) return { error: "Not authenticated." };
+
+  const authError = await requireAuctionAdmin(auctionId, user.id);
+  if (authError) return { error: authError };
+
+  const value = (formData.get("require_approval") as string | null)?.trim() === "true";
+
+  const admin = createAdminClient();
+  const { error } = await admin
+    .from("Auctions")
+    .update({ transfers_require_admin_approval: value })
+    .eq("id", auctionId);
+  if (error) return { error: `Couldn't update setting: ${error.message}` };
+
+  revalidatePath(`/auction-admin/${auctionId}/transfers`);
+  revalidatePath(`/auctions/${auctionId}`);
+
+  return {
+    ok: true,
+    message: value
+      ? "Admin approval is ON — every transfer now requires your approval."
+      : "Admin approval is OFF — transfers no longer require approval.",
+  };
+}
+
+/** Helper: confirm a transfer exists and belongs to this auction. */
+async function transferBelongsToAuction(
+  admin: ReturnType<typeof createAdminClient>,
+  auctionId: number,
+  transferId: string,
+): Promise<boolean> {
+  const { data } = await admin
+    .from("auction_transfers")
+    .select("id, auction_id")
+    .eq("id", transferId)
+    .maybeSingle();
+  return !!data && (data as { auction_id: number }).auction_id === auctionId;
+}
+
+/** Allow (approve + execute) a pending-admin transfer, re-running feasibility. */
+export async function adminApproveTransferAction(
+  auctionId: number,
+  _prevState: AdminActionState,
+  formData: FormData,
+): Promise<AdminActionState> {
+  const user = await getAuthUser();
+  if (!user) return { error: "Not authenticated." };
+
+  const authError = await requireAuctionAdmin(auctionId, user.id);
+  if (authError) return { error: authError };
+
+  const transferId = (formData.get("transferId") as string | null)?.trim() ?? "";
+  if (!transferId) return { error: "Missing transfer." };
+
+  const admin = createAdminClient();
+  if (!(await transferBelongsToAuction(admin, auctionId, transferId))) {
+    return { error: "Transfer not found in this auction." };
+  }
+
+  const { data, rpcError } = await adminApproveTransfer(admin, { transferId });
+  if (rpcError) return { error: "Couldn't approve the transfer. Try again." };
+  if (!data) return { error: "No response. Try again." };
+  if (!data.ok) {
+    const code = (data as { ok: false; error: string }).error;
+    if (TRANSFER_FEASIBILITY_CODES.has(code)) return { error: TRANSFER_FEASIBILITY_MESSAGE };
+    return { error: transferErrorMessage(code) };
+  }
+
+  revalidatePath(`/auction-admin/${auctionId}/transfers`);
+  revalidatePath(`/auction-admin/${auctionId}/players`);
+  revalidatePath(`/auction-admin/${auctionId}/budget`);
+  revalidatePath(`/auctions/${auctionId}`);
+
+  return { ok: true, message: "Transfer successful" };
+}
+
+/** Disallow (reject) a pending-admin transfer. */
+export async function adminRejectTransferAction(
+  auctionId: number,
+  _prevState: AdminActionState,
+  formData: FormData,
+): Promise<AdminActionState> {
+  const user = await getAuthUser();
+  if (!user) return { error: "Not authenticated." };
+
+  const authError = await requireAuctionAdmin(auctionId, user.id);
+  if (authError) return { error: authError };
+
+  const transferId = (formData.get("transferId") as string | null)?.trim() ?? "";
+  if (!transferId) return { error: "Missing transfer." };
+
+  const admin = createAdminClient();
+  if (!(await transferBelongsToAuction(admin, auctionId, transferId))) {
+    return { error: "Transfer not found in this auction." };
+  }
+
+  const { data, rpcError } = await adminRejectTransfer(admin, { transferId });
+  if (rpcError) return { error: "Couldn't reject the transfer. Try again." };
+  if (!data) return { error: "No response. Try again." };
+  if (!data.ok) {
+    return { error: transferErrorMessage((data as { ok: false; error: string }).error) };
+  }
+
+  revalidatePath(`/auction-admin/${auctionId}/transfers`);
+  revalidatePath(`/auctions/${auctionId}`);
+
+  return { ok: true, message: "Transfer disallowed — it has been rejected." };
 }
