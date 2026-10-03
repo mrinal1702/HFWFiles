@@ -314,3 +314,108 @@ export async function adminModifyBudget(
     message: `${verb} £${amount} ${prep} ${name}. Remaining £${newRemaining}, Active £${newActive}.`,
   };
 }
+
+/**
+ * Admin cancel bid: void a participant's leading bid. The player returns to the
+ * unsold market (lot -> 'uninitiated', biddable again) and the reserved money is
+ * credited back to the bidder's active budget (budget_remaining is unchanged — a
+ * held bid never spent it). We do NOT revert to any previous bid.
+ */
+export async function adminCancelBid(
+  auctionId: number,
+  _prevState: AdminActionState,
+  formData: FormData,
+): Promise<AdminActionState> {
+  const user = await getAuthUser();
+  if (!user) return { error: "Not authenticated." };
+
+  const authError = await requireAuctionAdmin(auctionId, user.id);
+  if (authError) return { error: authError };
+
+  const participantId = Number((formData.get("participantId") as string | null)?.trim() ?? "");
+  const playerId = (formData.get("playerId") as string | null)?.trim() ?? "";
+
+  if (!Number.isFinite(participantId) || participantId <= 0) return { error: "Invalid participant." };
+  if (!playerId) return { error: "Missing player." };
+
+  const admin = createAdminClient();
+
+  const { data: lot, error: lotErr } = await admin
+    .from("auction_lots")
+    .select("status, current_high_bid_id, current_high_bidder_id")
+    .eq("auction_id", auctionId)
+    .eq("player_id", playerId)
+    .maybeSingle();
+  if (lotErr) return { error: `Lot lookup failed: ${lotErr.message}` };
+  if (!lot) return { error: "Player is not part of this auction." };
+
+  const l = lot as {
+    status: string;
+    current_high_bid_id: number | null;
+    current_high_bidder_id: number | null;
+  };
+  if (String(l.status) !== "bidding") {
+    return { error: "There is no active bid on that player right now." };
+  }
+  if (l.current_high_bidder_id !== participantId) {
+    return { error: "This participant is not the current high bidder on that player." };
+  }
+
+  // Amount reserved in the bidder's active budget = their current high bid.
+  let amount = 0;
+  if (l.current_high_bid_id != null) {
+    const { data: bid, error: bidErr } = await admin
+      .from("auction_bids")
+      .select("amount")
+      .eq("id", l.current_high_bid_id)
+      .maybeSingle();
+    if (bidErr) return { error: `Bid lookup failed: ${bidErr.message}` };
+    amount = (bid as { amount: number } | null)?.amount ?? 0;
+  }
+
+  const { data: participant, error: partErr } = await admin
+    .from("auction_users")
+    .select("name, active_budget")
+    .eq("id", participantId)
+    .eq("auction_id", auctionId)
+    .maybeSingle();
+  if (partErr) return { error: `Participant lookup failed: ${partErr.message}` };
+  if (!participant) return { error: "Participant not found in this auction." };
+  const p = participant as { name: string | null; active_budget: number };
+  const name = p.name ?? "this participant";
+
+  // Return the player to the unsold market (fresh, biddable).
+  const { error: lotUpdateErr } = await admin
+    .from("auction_lots")
+    .update({
+      status: "uninitiated",
+      current_high_bid_id: null,
+      current_high_bidder_id: null,
+      expires_at: null,
+    })
+    .eq("auction_id", auctionId)
+    .eq("player_id", playerId);
+  if (lotUpdateErr) return { error: `Failed to cancel bid: ${lotUpdateErr.message}` };
+
+  // Credit the reserved money back to the bidder's active budget.
+  const { error: budgetErr } = await admin
+    .from("auction_users")
+    .update({ active_budget: p.active_budget + amount })
+    .eq("id", participantId)
+    .eq("auction_id", auctionId);
+  if (budgetErr) {
+    return { error: `Bid cancelled, but crediting budget failed: ${budgetErr.message}` };
+  }
+
+  revalidatePath(`/auction-admin/${auctionId}/cancel-bids`);
+  revalidatePath(`/auction-admin/${auctionId}/cancel-bids/${participantId}`);
+  revalidatePath(`/auction-admin/${auctionId}/players`);
+  revalidatePath(`/auction-admin/${auctionId}/players/${participantId}`);
+  revalidatePath(`/auction-admin/${auctionId}/budget`);
+  revalidatePath(`/auctions/${auctionId}`);
+
+  return {
+    ok: true,
+    message: `Bid cancelled — the player is back on the market and £${amount} was credited to ${name}'s active budget.`,
+  };
+}
