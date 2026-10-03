@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { ParticipantNav } from "@/app/_components/ParticipantNav";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadMyActiveAuctionsForUser } from "@/lib/auction-dashboard";
+import { loadMyAdminAuctionsForUser } from "@/lib/online-auction-admin";
 import { loadMyLiveAuctionsForDashboard } from "@/lib/live-auction-data";
 import type { DashboardLiveAuctionRow } from "@/lib/live-auction-types";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
@@ -40,11 +41,13 @@ export default async function DashboardPage({
   const avatarUrl = (profile as { avatar_url?: string | null } | null)?.avatar_url ?? null;
 
   let auctions: Awaited<ReturnType<typeof loadMyActiveAuctionsForUser>> = [];
+  let adminAuctions: Awaited<ReturnType<typeof loadMyAdminAuctionsForUser>> = [];
   let liveAuctions: DashboardLiveAuctionRow[] = [];
   let loadError: string | null = null;
   try {
-    [auctions, liveAuctions] = await Promise.all([
+    [auctions, adminAuctions, liveAuctions] = await Promise.all([
       loadMyActiveAuctionsForUser(user.id),
+      loadMyAdminAuctionsForUser(user.id),
       loadMyLiveAuctionsForDashboard(user.id),
     ]);
   } catch (e) {
@@ -113,6 +116,19 @@ export default async function DashboardPage({
               </Link>
             </li>
           ))}
+          {adminAuctions.map((a) => (
+            <li key={`admin-${a.id}`}>
+              <Link
+                href={`/auction-admin/${a.id}`}
+                className="block min-h-[3.5rem] rounded-xl border border-violet-200 bg-white px-4 py-3 shadow-sm hover:border-violet-300 hover:bg-violet-50/50"
+              >
+                <span className="font-medium text-slate-900">Admin - {a.name ?? `Auction #${a.id}`}</span>
+                <span className="mt-1 block text-xs leading-relaxed text-slate-600">
+                  Admin controls — manage squads, budgets, and bids
+                </span>
+              </Link>
+            </li>
+          ))}
           {liveAuctions.map((a) => {
             const label =
               a.access === "admin" ? `Admin - ${a.name}` : a.name;
@@ -137,7 +153,7 @@ export default async function DashboardPage({
             );
           })}
         </ul>
-        {auctions.length === 0 && liveAuctions.length === 0 && !loadError && (
+        {auctions.length === 0 && adminAuctions.length === 0 && liveAuctions.length === 0 && !loadError && (
           <p className="mt-4 text-sm leading-relaxed text-slate-600">
             No active auctions right now. Finished tournaments are in{" "}
             <Link href="/archives" className="font-medium text-sky-700 underline hover:text-sky-900">

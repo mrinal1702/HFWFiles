@@ -67,6 +67,7 @@ This index maps **every object that exists in the live database** to the **one f
 | `"Auctions".transfers_require_admin_approval`, `.transfer_window_open` | `auction-transfers.sql` |
 | `"Auctions".competition_id` | `competition-isolation-migrate-all.sql` |
 | `"Auctions".join_code`, `.max_participants` | `auth-and-join.sql` |
+| `"Auctions".admin_user_id` (+ non-unique admin lookup index) | `auction-admin-column.sql` |
 | `auction_users.paid_release_used` | `auction-releases.sql` |
 | `auction_users.team_name` | `auction-team-names.sql` |
 | `auction_users.is_relegated`, `.relegated_at` | `participant-relegation-schema.sql` |

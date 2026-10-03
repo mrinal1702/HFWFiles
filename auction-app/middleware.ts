@@ -40,6 +40,7 @@ export async function middleware(request: NextRequest) {
     path === "/meme-builds" ||
     path === "/auctions" ||
     /^\/auctions\/[^/]+/.test(path) ||
+    /^\/auction-admin\/[^/]+/.test(path) ||
     path === "/live-auction" ||
     /^\/live-auction\/[^/]+\/admin/.test(path) ||
     path.startsWith("/u/");
@@ -62,6 +63,7 @@ export const config = {
     "/meme-builds",
     "/auctions",
     "/auctions/:path*",
+    "/auction-admin/:path*",
     "/live-auction",
     "/live-auction/:path*",
     "/u/:path*",
