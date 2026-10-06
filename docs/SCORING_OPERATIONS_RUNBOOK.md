@@ -1,5 +1,7 @@
 # Scoring Operations Runbook
 
+> **Historical (pre-competition-isolation, CL/World Cup era).** Procedure 2’s `publish-active-gameweek-scores.mjs` now lives in `auction-app/scripts/_archive/legacy-pre-isolation/` and its npm aliases were removed. For current scoring use [`auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md`](../auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md).
+
 This runbook formalizes two operational procedures for your current admin workflow.
 
 **World Cup 2026 agent workflow** (archived with tournament records): see [`archive/world-cup-2026/docs/AGENT_SCORES_AND_LEADERBOARD_WORKFLOW.md`](../archive/world-cup-2026/docs/AGENT_SCORES_AND_LEADERBOARD_WORKFLOW.md).

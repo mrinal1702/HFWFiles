@@ -9,11 +9,12 @@ Scoring data is organized **per competition** under **`competitions/`** so multi
 ```
 competitions/
 ├── active/
-│   └── epl-2026-27/            # English Premier League 2026/27 (active)
+│   └── uefa-cl-2026-27/        # UEFA Champions League 2026/27 (auctions 10–13)
 │       ├── competition.json
 │       ├── player-pool/        # master_player_list.csv + squads/
 │       └── rounds/mw01/        # round.json + matches/<slug>/{match.json, final-points.csv, intermediates/}
 └── archive/
+    ├── epl-2026-27/            # English Premier League 2026/27 (auction 9) — same layout as active
     ├── world-cup-2026/         # FIFA World Cup 2026 (auctions 5/6/7)
     │   ├── records/            # match FinalPoints, Best XI, rollups, rosters
     │   ├── scoring-intermediates/, player-pool/, ops/, docs/, tests/
@@ -24,7 +25,7 @@ competitions/
 
 A **round is a gameweek** (one fixture per team), so a player's round score is their match score — never summed. Every score is tagged with its FotMob **match ID** (see `competition-matches` in the schema and each `match.json`).
 
-> Note: archived competitions are read-only. Active scoring tools must reject archive paths.
+> Note: archived competitions are read-only. Archiving a competition (Supabase `competitions.status = 'archived'`) moves its auctions to the Archives page; nothing is deleted, and archived leaderboards, match scores and Auction History keep working. Commissioner write scripts refuse archived competitions unless run with `--allow-archived`. See `auction-app/docs/OPS_OTHER_MODULES.md` §4.
 
 ## Auction app — UI & deployment (read this)
 

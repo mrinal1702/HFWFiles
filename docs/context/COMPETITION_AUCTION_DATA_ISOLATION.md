@@ -1,28 +1,32 @@
 # Competition and Auction Data Isolation
 
-**Status:** Partially implemented (folder + manifest + Vercel-data layers done; Supabase migration drafted, not yet applied)  
+**Status:** Implemented for day-to-day use (folders, manifests, Vercel data, Supabase competition tables, competition-scoped player pools, archiving). Some target-model pieces below are still partial — see "Current status".  
 **Purpose:** Canonical context for organizing active competitions, historical data, scoring, auctions, Supabase, and Vercel.  
 **Scope:** Online auctions and their scoring workflows. The separate live-auction product is not covered here.
 
-## Implementation status (2026-08-23)
+## Current status (2026-10-06)
+
+| Competition | `competition_id` | Auctions | Folder | DB status |
+|---|---|---|---|---|
+| UEFA Champions League 2026/27 | 4 | 10, 11, 12, 13 | `competitions/active/uefa-cl-2026-27/` | active |
+| English Premier League 2026/27 | 2 | 9 | `competitions/archive/epl-2026-27/` | archived (Oct 2026) |
+| FIFA World Cup 2026 | 1 | 5, 6, 7 | `competitions/archive/world-cup-2026/` | archived |
+| UEFA Champions League 2025/26 | 3 | — | `competitions/archive/uefa-cl-2025-26/` | archived |
 
 Done:
 
-- `competitions/active/epl-2026-27/`, `competitions/archive/world-cup-2026/`, and `competitions/archive/uefa-cl-2025-26/` created, each with a `competition.json`.
-- EPL Matchweek 1 has a `round.json` and per-match folders (`match.json`, `final-points.csv`, `intermediates/`) with real FotMob match IDs (5795363–5795368).
-- All Champions League rounds (RO16 L2 → SF L2) have `round.json` files with real FotMob match IDs; CL raw/scored files relocated from `Matches_Raw/CL*`, `Scores/CL_RO16_Leg2`, and CL test artifacts from `Tests/`.
-- World Cup archive consolidated into `competitions/archive/world-cup-2026/`; leftover `Matches_Raw/World Cup 2026/` files staged in `_pending-dedup-from-matches-raw/` for review (not deleted).
-- Legacy `Matches_Raw/`, `Scores/`, and `Player_List/` emptied; the old top-level `archive/` removed.
-- Vercel display data is now competition-scoped under `auction-app/data/competitions/<slug>/match-scores/`; `loadMatchScoreCsv()` resolves by slug with a legacy fallback, and match sheets carry `competitionSlug` + `fotmobMatchId`.
-- Supabase migration drafted in `auction-app/scripts/sql/competition-isolation-schema.sql` (new tables, auction FK, match-tagged `player_scores`, competition-aware upsert). **Not yet run.**
+- Supabase: `competitions`, `competition_rounds`, `competition_matches`, `competition_players` exist; every online auction except lab auction 8 has `Auctions.competition_id`. Player names/positions for competition-scoped auctions come from `competition_players` (never the global `players` pool), which is what keeps EPL and UCL apart for clubs in both (Arsenal, Aston Villa, Liverpool, Manchester City, Manchester United).
+- Vercel display data is competition-scoped under `auction-app/data/competitions/<slug>/match-scores/`; sheets are registered per competition in `auction-app/lib/match-scores/competitions/<slug>.ts`. The legacy flat `data/match-scores/` folder and fallback are gone.
+- **Archiving:** an auction is archived when its competition has `competitions.status = 'archived'` (`lib/archived-auctions.ts`). Archived auctions move to the Archives page and stay fully readable; Auction History is driven separately by `AUCTION_HISTORY_YEARS`. Procedure: `auction-app/docs/OPS_OTHER_MODULES.md` §4 and `scripts/sql/archive-competition.sql`.
+- Commissioner write scripts (lock / upsert / publish Best XI) refuse archived competitions unless run with `--allow-archived`.
 
-Still to do:
+Still partial / known caveats:
 
-- Run `competition-isolation-schema.sql` in Supabase, then backfill `competition_round_id` / match IDs on existing `Player_Scores` and add the `(competition_round_id, player_id)` unique constraint.
-- Confirm and fill the `auction_ids` TODOs in each `competition.json`, and the World Cup `database_round_id` values.
-- Update Python tooling defaults (`Tests/fetch_fotmob_match.py`, `procedures/`, root `scripts/`) that still reference `Matches_Raw/`, `Scores/`, and `Player_List/`.
-- Review and dedupe `competitions/archive/world-cup-2026/_pending-dedup-from-matches-raw/`.
-- Update app player-page/leaderboard reads to filter by the auction's competition.
+- Scores are still keyed by legacy `game_week_id` (`Player_Scores` unique on `(player_id, game_week_id)`), relying on per-competition ID ranges. `competition_rounds` only holds EPL MW1 and the CL 2025/26 rounds; UCL 2026/27 rounds are not in it yet.
+- EPL 2026/27 MW1–MW3 actually used `game_week_id` 1, 2, 3 (inside the World Cup range, which also has squads/leaderboard rows at GW 1–3); MW4 used 103. Do not reuse 1–99 for anything new.
+- `"Game_Weeks".Is_Active` is still global across competitions.
+- Python tooling defaults (`Tests/fetch_fotmob_match.py --copy-to-app`, etc.) still point at legacy folders; harmless (the app no longer reads them) but worth tidying.
+- `competitions/archive/world-cup-2026/_pending-dedup-from-matches-raw/` still needs review.
 
 ## 1. Core principle
 
@@ -534,7 +538,7 @@ Until competition-aware database keys are implemented:
 1. Allocate non-overlapping legacy `game_week_id` ranges by competition.
 2. Record those ranges in each `competition.json`.
 3. Never use bare GW numbers in filenames or commands.
-4. Do not use `publish-active-gameweek-scores.mjs` for production.
+4. Do not use `publish-active-gameweek-scores.mjs` (archived under `auction-app/scripts/_archive/legacy-pre-isolation/`).
 5. Require explicit FinalPoints file paths and competition/round confirmation before upsert.
 6. Never run `--prune-gw` without verifying the competition's reserved ID range.
 7. Filter player pages and owned-points views to gameweeks attached to the auction.

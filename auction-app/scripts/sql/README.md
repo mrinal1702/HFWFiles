@@ -73,6 +73,13 @@ This index maps **every object that exists in the live database** to the **one f
 | `auction_users.is_relegated`, `.relegated_at` | `participant-relegation-schema.sql` |
 | `"Player_Scores".competition_round_id`, `.competition_match_id`, `.fotmob_match_id` | `competition-isolation-migrate-all.sql` |
 
+**Data-only ops scripts (no schema change):**
+
+| Script | Use |
+|---|---|
+| `archive-competition.sql` | Archive a finished competition: `competitions.status = 'archived'` + `archived_at`, and `is_active = false` on its auctions. The UI derives Active vs Archives from this. Applied Oct 2026 for EPL 2026/27 (competition 2). |
+| `archive-wc-auctions-5-6-7.sql` | Earlier World Cup equivalent (`is_active = false` on 5/6/7). Superseded by `archive-competition.sql`. |
+
 ---
 
 ## Superseded copies (do not run)

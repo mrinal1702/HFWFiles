@@ -46,14 +46,22 @@ Managers may have multiple `auction_users` rows (rare) or commissioners need to 
 
 | Feature | Config / code |
 |---------|----------------|
-| Which auctions are archived | `lib/archived-auctions.ts` → `ARCHIVED_AUCTION_IDS` |
+| Which auctions are archived | Supabase `competitions.status = 'archived'` → every auction with that `competition_id` (`lib/archived-auctions.ts` → `loadArchivedCompetitionIds`) |
 | History years / Past Finishes eligibility | `AUCTION_HISTORY_YEARS` (keys = history auctions; may include non-archived) |
 | History ranks | `lib/auction-history.ts` ← live `auction_leaderboard` |
 | Extra Trophy Cabinet cups | `lib/trophy-cabinet-awards.ts` → `MANUAL_TROPHY_AWARDS` |
 
-After a competition ends: add the auction id + year to `AUCTION_HISTORY_YEARS` so Past Finishes / champion trophies appear. Add to `ARCHIVED_AUCTION_IDS` only when it should leave Active Auctions and show under Archives.
+After a competition ends:
 
-Optional SQL: set `is_active = false` on those auctions (bidding closed) — UI archive filter is ID-based.
+1. Add each auction id + year to `AUCTION_HISTORY_YEARS` so Past Finishes / champion trophies appear.
+2. Archive the competition with `scripts/sql/archive-competition.sql` (sets `competitions.status = 'archived'`, `archived_at`, and `is_active = false` on its auctions). Its auctions move to Archives immediately — no deploy needed. Nothing is deleted.
+3. Move its folder `competitions/active/<slug>/` → `competitions/archive/<slug>/` and set `status: archived` in `competition.json`.
+
+Archiving is per competition. To run a new league against a competition that is already archived (e.g. a later-stage EPL auction), create a **new** `competitions` row rather than un-archiving the old one.
+
+Auctions with no `competition_id` (lab auction 8) always count as active.
+
+The commissioner write scripts (`lock-gameweek-squads`, `upsert-player-scores-from-finalpoints`, `publish-best-xi-from-json`) refuse archived competitions unless run with `--allow-archived` (`scripts/lib/archived-competition-guard.mjs`).
 
 ---
 
@@ -95,9 +103,10 @@ Experimental side game under `/meme-builds`. **Not** part of standard auction op
 | `publish-best-xi-from-json.mjs` | Publish XI + leaderboard |
 | `apply-elimination-refunds.mjs` | Nation knockouts |
 | `apply-participant-relegations.mjs` | Cut managers |
-| `delete-trial-auction-8.mjs` | Example of full auction wipe (lab only) |
 
 Prefer these over ad-hoc SQL dumps when an equivalent exists.
+
+Completed one-off scripts (per-auction bidding openers, one-time setups, pre-isolation tools) live in `scripts/_archive/` — reference only, do not run.
 
 ---
 

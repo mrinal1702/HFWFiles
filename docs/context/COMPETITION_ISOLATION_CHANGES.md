@@ -28,7 +28,7 @@ round, so a player's round score **is** their match score — never summed.
 ```
 competitions/
 ├── active/
-│   └── epl-2026-27/                     # English Premier League 2026/27 (active)
+│   └── epl-2026-27/                     # English Premier League 2026/27 (moved to archive/ Oct 2026)
 │       ├── competition.json             # slug, DB ids, auctions, rounds, GW-id range
 │       ├── player-pool/
 │       │   ├── master_player_list.csv
@@ -98,11 +98,10 @@ Split versions also exist if you prefer to run them in two passes:
 
 - Match-score display data now lives at
   `auction-app/data/competitions/<slug>/match-scores/`. The EPL CSVs were copied
-  there; the legacy `auction-app/data/match-scores/` still exists as a fallback.
-- `lib/match-scores/parse-final-points.ts` — `loadMatchScoreCsv(file, slug?)`
-  reads the competition-scoped path first and falls back to the legacy path, so
-  nothing breaks during the transition.
-- `lib/match-scores/sheets.ts` — each sheet now carries `competitionSlug` and
+  there. (The legacy flat `auction-app/data/match-scores/` fallback was removed in Oct 2026.)
+- `lib/match-scores/parse-final-points.ts` — `loadMatchScoreCsv(file, slug)`
+  reads the competition-scoped path (slug required since Oct 2026).
+- `lib/match-scores/sheets.ts` (per-competition sheet lists now in `lib/match-scores/competitions/<slug>.ts`) — each sheet now carries `competitionSlug` and
   `fotmobMatchId`.
 - `lib/match-scores/types.ts` — `MatchScoreSheet` gained optional
   `competitionSlug` and `fotmobMatchId`.

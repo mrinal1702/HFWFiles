@@ -1,6 +1,6 @@
 # HFW Auction App — Agent Handoff (product orientation)
 
-Last updated: September 2026
+Last updated: October 2026
 
 > **IMPORTANT — HFW = "How Football Works"** (not "Half Full Whistle" or any other expansion). Do not get this wrong.
 
@@ -51,14 +51,14 @@ Its tables (`live_auctions`, `live_auction_participants`, `live_auction_players`
 
 ---
 
-## Current state (September 2026)
+## Current state (October 2026)
 
-The database is competition-scoped (see repo-root `docs/context/COMPETITION_AUCTION_DATA_ISOLATION.md`). Active vs archived competitions are defined in each `competitions/**/competition.json`.
+The database is competition-scoped (see repo-root `docs/context/COMPETITION_AUCTION_DATA_ISOLATION.md`). Active vs archived competitions are defined by `competitions.status` in Supabase (mirrored in each `competitions/**/competition.json`). **An auction is archived when its competition is archived** — it moves from Active Auctions to Archives, and stays readable (leaderboard, squads, match scores, Auction History). See `OPS_OTHER_MODULES.md` §4.
 
 | Competition | `competition_id` | Auctions | Status |
 |-------------|------------------|----------|--------|
-| English Premier League 2026/27 | 2 | 9 | **active** (through MW3 published; MW4 in progress) |
 | UEFA Champions League 2026/27 | 4 | 10, 11, 12, 13 | **active** |
+| English Premier League 2026/27 | 2 | 9 | archived Oct 2026 (season complete, MW1–MW4 published) |
 | FIFA World Cup 2026 | 1 | 5, 6, 7 | archived |
 | UEFA Champions League 2025/26 | 3 | — | archived |
 

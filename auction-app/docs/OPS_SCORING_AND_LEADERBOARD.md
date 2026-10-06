@@ -15,7 +15,7 @@ Tournament-specific examples (WC 2026) may live under `archive/world-cup-2026/` 
 FotMob match → match JSON (keep under competition round)
         → score to *FinalPoints.csv
         → copy FinalPoints into auction-app/data/competitions/<slug>/match-scores/
-        → register sheet in lib/match-scores/sheets.ts (competition group)
+        → register sheet in lib/match-scores/competitions/<slug>.ts
         → upsert Player_Scores (Supabase) using that competition’s legacy game_week_id
         → confirm gameweek_squads locked for every target auction
         → compute Best XI (Python) → Scores/best_xi_auction_{id}_gw{N}.json
@@ -38,7 +38,7 @@ Scores and locks use global `Game_Weeks.id` / `Player_Scores.game_week_id`. Comp
 | Competition | Slug | `competition_id` | Auctions (examples) | Legacy GW range | Example MW1 |
 |-------------|------|------------------|---------------------|-----------------|-------------|
 | FIFA World Cup 2026 | `world-cup-2026` | 1 | 5, 6, 7 | 1–99 | 1 |
-| English Premier League 2026/27 | `epl-2026-27` | 2 | 9 | 100–199 | 100 |
+| English Premier League 2026/27 (archived) | `epl-2026-27` | 2 | 9 | 100–199 | MW1–3 actually used **1, 2, 3**; MW4 = 103 |
 | UEFA Champions League 2025/26 | `uefa-cl-2025-26` | 3 | — | 200–299 | — |
 | UEFA Champions League 2026/27 | `uefa-cl-2026-27` | 4 | 10, 11, 12, 13 | 300–399 | **300** |
 
@@ -55,7 +55,7 @@ Always use the **legacy** id (`competition.json` / `rounds/mwNN/round.json` → 
 **Public / in-auction match scores + Match Pos source (required for UI):**
 
 1. Copy `*_FinalPoints.csv` → `auction-app/data/competitions/<slug>/match-scores/`
-2. Register the match in [`lib/match-scores/sheets.ts`](../lib/match-scores/sheets.ts) under that competition’s sheet list (`groupStageGw` = **ordinal** matchweek 1, 2, 3… within the competition — not the legacy id)
+2. Register the match in that competition’s sheet file [`lib/match-scores/competitions/<slug>.ts`](../lib/match-scores/competitions/) (e.g. `uefa-cl-2026-27.ts`; a new competition also needs an entry in [`sheets.ts`](../lib/match-scores/sheets.ts)) (`groupStageGw` = **ordinal** matchweek 1, 2, 3… within the competition — not the legacy id)
 3. Commit + deploy
 
 Match Pos on My Points / Competitors is loaded by [`lib/match-positions-for-gw.ts`](../lib/match-positions-for-gw.ts):
@@ -167,7 +167,7 @@ Relegated managers **remain** on Standings (flagged).
 - Git push to the connected branch triggers deploy.
 - Vercel **Root Directory** = `auction-app` (required).
 - Smoke: `https://hfwauction.vercel.app/api/health` → `{ "ok": true }`.
-- **Must commit for production UI:** competition match-score CSVs, `sheets.ts` registrations, and `data/best-xi/auction-*-gw*.json` overlays.
+- **Must commit for production UI:** competition match-score CSVs, `lib/match-scores/competitions/<slug>.ts` registrations, and `data/best-xi/auction-*-gw*.json` overlays.
 
 See `docs/VERCEL_DEPLOYMENT_PLAYBOOK.md`.
 
@@ -211,3 +211,4 @@ Schema: `scripts/sql/player-scores.sql`, `scripts/create-auction-score-tables.sq
 - Do not treat formation overlay or Match Pos sheets as “optional local-only” artifacts — production UI depends on them in-repo.
 - Do not add leaderboard UI columns/tabs for a new competition; only data and registry grow.
 - When locking, remember `Is_Active` is **global** — concurrent competitions need care (see OPS_GAMEWEEK_LOCK).
+- Upsert / lock / publish scripts refuse auctions and GW ids that belong to an **archived** competition. `--allow-archived` exists for commissioner-approved amendments only.

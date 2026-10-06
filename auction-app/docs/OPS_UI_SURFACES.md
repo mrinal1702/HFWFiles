@@ -28,8 +28,8 @@ Top nav ([`ParticipantNav`](../app/_components/ParticipantNav.tsx)):
 | **Auction History** | `/auction-history` | Tabs: **Past Finishes** (rank + year; podium medals 🏆🥈🥉) and **Trophy Cabinet** (1st-place only — large trophy image + auction name; empty state if none) |
 | Match scores | `/match-scores` | Public link (plain player names; no auction ownership) |
 
-Archived auction IDs / history years: `lib/archived-auctions.ts`  
-(`AUCTION_HISTORY_YEARS` drives Past Finishes; archive set is separate — finished auctions can stay Active until archived.)  
+Archive status / history years: `lib/archived-auctions.ts`  
+(an auction is archived when its competition's `competitions.status = 'archived'`; `AUCTION_HISTORY_YEARS` separately drives Past Finishes — finished auctions can stay Active until their competition is archived.)  
 History ranks: `lib/auction-history.ts` (from `auction_leaderboard`)  
 Manual Trophy Cabinet cups: `lib/trophy-cabinet-awards.ts`
 
@@ -124,10 +124,10 @@ Do not add per-GW score columns or endless tabs. World Cup GW **tabs** must not 
 - **Public (canonical):** `/match-scores` (grouped by GW) — anyone; player names are plain text
 - **In-auction:** `/auctions/[auctionId]/match-scores` — members only (incl. archived if still a member); same sheets; player names link to `/auctions/[auctionId]/players/[playerId]`
 - Legacy redirects: `/scores/[slug]` → public match-scores
-- Data: `data/competitions/<slug>/match-scores/*_FinalPoints.csv` (preferred) or legacy flat `data/match-scores/` + `lib/match-scores/sheets.ts`
+- Data: `data/competitions/<slug>/match-scores/*_FinalPoints.csv`, registered in `lib/match-scores/competitions/<slug>.ts` (wired up in `lib/match-scores/sheets.ts`)
 - Same FinalPoints `position` column powers leaderboard **Match Pos** (via `loadMatchPositionsForGameweek`)
 
-When a competition ends, sheet registry may be cleared and CSVs archived — keep the **routes** for the next season’s sheets.
+When a competition ends, **keep** its sheet file and CSVs registered — archived auctions’ match-score pages and Match Pos still read them. Keep the **routes** for the next season’s sheets.
 
 ---
 

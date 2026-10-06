@@ -377,7 +377,7 @@ The auction app treats goalkeeper ownership at **club level**: owning any GK fro
 
 ### Supabase / app upload
 - SQL helper: `auction-app/scripts/sql/player-scores.sql` (`upsert_player_scores`)
-- Publish script: `auction-app/scripts/publish-active-gameweek-scores.mjs` (see runbook)
+- Upsert script: `auction-app/scripts/upsert-player-scores-from-finalpoints.mjs` (see `auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md`; the older `publish-active-gameweek-scores.mjs` is archived under `scripts/_archive/legacy-pre-isolation/`)
 
 Ensure keeper unit rows use `player_id` values that exist in `players` (typically seeded as club-level keeper placeholders) or appear in the missing-player report after publish.
 

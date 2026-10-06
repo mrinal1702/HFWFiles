@@ -44,6 +44,8 @@ Behaviour:
 
 Run **once per GW per auction set** after the hard deadline (or after the last nation deadline for that GW).
 
+The script refuses auctions whose competition is archived (pass `--allow-archived` only for an approved amendment).
+
 **Multi-competition caution:** `Is_Active` is global, not per competition. Re-locking a UCL GW (e.g. id 300) will deactivate an EPL active GW (e.g. id 3) and vice versa. Before locking:
 
 1. Query whether `gameweek_squads` already has rows for each auction / GW.
