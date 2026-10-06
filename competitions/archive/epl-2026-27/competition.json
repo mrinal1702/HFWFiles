@@ -1,12 +1,13 @@
 {
   "slug": "epl-2026-27",
   "display_name": "English Premier League 2026/27",
-  "status": "active",
+  "status": "archived",
   "database_competition_id": 2,
   "auction_ids": [9],
-  "_auction_ids_note": "Auction 9 is the active EPL online auction. Auction 8 is a test placeholder (not attached). World Cup online auctions 5, 6, 7 belong to world-cup-2026.",
+  "_auction_ids_note": "Auction 9 was the EPL online auction (archived Oct 2026; still visible under Archives and Auction History). Auction 8 is a test placeholder (not attached). World Cup online auctions 5, 6, 7 belong to world-cup-2026.",
   "player_pool": "player-pool/master_player_list.csv",
   "legacy_game_week_id_range": [100, 199],
+  "_legacy_gw_note": "DB game_week_ids actually used: MW1-3 = 1, 2, 3 (same numbers as World Cup GW1-3 squads) and MW4 = 103.",
   "team_count": 20,
   "matches_per_round": 10,
   "rounds": {
@@ -39,5 +40,5 @@
       "expected_match_count": 10
     }
   },
-  "archived_at": null
+  "archived_at": "2026-10-06"
 }

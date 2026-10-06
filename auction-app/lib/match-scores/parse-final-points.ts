@@ -66,23 +66,11 @@ export function parseFinalPointsCsv(csvText: string): MatchScoreRow[] {
 }
 
 /**
- * Load a FinalPoints CSV for a match.
- *
- * When `competitionSlug` is provided, reads the competition-scoped path
- * `data/competitions/<slug>/match-scores/<filename>`. Falls back to the legacy
- * flat `data/match-scores/<filename>` if the scoped file is not present, so the
- * app keeps working during the competition-isolation migration.
+ * Load a FinalPoints CSV for a match from the competition-scoped path
+ * `data/competitions/<slug>/match-scores/<filename>`.
  */
-export function loadMatchScoreCsv(filename: string, competitionSlug?: string): MatchScoreRow[] {
-  const dataRoot = path.join(process.cwd(), "data");
-  const candidates = competitionSlug
-    ? [
-        path.join(dataRoot, "competitions", competitionSlug, "match-scores", filename),
-        path.join(dataRoot, "match-scores", filename),
-      ]
-    : [path.join(dataRoot, "match-scores", filename)];
-
-  const filePath = candidates.find((p) => fs.existsSync(p)) ?? candidates[candidates.length - 1];
+export function loadMatchScoreCsv(filename: string, competitionSlug: string): MatchScoreRow[] {
+  const filePath = path.join(process.cwd(), "data", "competitions", competitionSlug, "match-scores", filename);
   const csvText = fs.readFileSync(filePath, "utf8");
   return parseFinalPointsCsv(csvText);
 }
