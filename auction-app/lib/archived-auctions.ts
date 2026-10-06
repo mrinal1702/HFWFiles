@@ -1,29 +1,45 @@
+import "server-only";
+
+import { cache } from "react";
+
+import { createAdminClient } from "@/lib/supabase-server";
+
 /**
- * Auctions treated as archived in the participant UI (Active vs Archives).
- * World Cup 2026 parallel leagues — completed July 2026.
+ * Archive status is driven by the database: an online auction is archived when its
+ * competition (`"Auctions".competition_id` → `competitions`) has `status = 'archived'`.
+ * Archiving a competition (see scripts/sql/archive-competition.sql) archives every
+ * auction attached to it. Auctions with no competition (e.g. lab auction 8) stay active.
  *
- * Add future completed auction IDs here until a DB `archived_at` column exists.
- * History can include auctions that are not archived yet (see AUCTION_HISTORY_YEARS).
+ * To run a new league against a competition that is already archived, create a new
+ * `competitions` row for it rather than un-archiving the old one.
  */
-export const ARCHIVED_AUCTION_IDS: ReadonlySet<number> = new Set([5, 6, 7]);
+export const loadArchivedCompetitionIds = cache(async (): Promise<ReadonlySet<number>> => {
+  const admin = createAdminClient();
+  const { data, error } = await admin.from("competitions").select("id").eq("status", "archived");
+  if (error) throw new Error(`competitions(archived): ${error.message}`);
+  return new Set((data ?? []).map((r: { id: number }) => Number(r.id)));
+});
+
+export function isArchivedCompetition(
+  competitionId: number | null | undefined,
+  archivedCompetitionIds: ReadonlySet<number>,
+): boolean {
+  return competitionId != null && archivedCompetitionIds.has(Number(competitionId));
+}
 
 /**
  * Competition year shown on Auction History rows.
  * Presence in this map = eligible for Past Finishes / Trophy Cabinet champions,
- * even if the auction is still on Active Auctions (not in ARCHIVED_AUCTION_IDS).
+ * whether or not the auction is archived yet.
  * Newer seasons: add `{ auctionId, year }` entries; history sorts newest first.
  */
 export const AUCTION_HISTORY_YEARS: ReadonlyMap<number, number> = new Map([
   [5, 2026],
   [6, 2026],
   [7, 2026],
-  // EPL 2026/27 online auction — finished (4 GWs) but kept on Active for now
+  // EPL 2026/27 online auction (competition 2, archived Oct 2026)
   [9, 2026],
 ]);
-
-export function isArchivedAuctionId(auctionId: number): boolean {
-  return ARCHIVED_AUCTION_IDS.has(auctionId);
-}
 
 /** Auctions that appear in Auction History (Past Finishes / champion trophies). */
 export function isHistoryAuctionId(auctionId: number): boolean {

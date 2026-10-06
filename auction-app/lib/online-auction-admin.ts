@@ -2,7 +2,7 @@ import "server-only";
 
 import { createAdminClient } from "@/lib/supabase-server";
 import { isGoalkeeperPosition, positionSortRank } from "@/lib/bid-ui-messages";
-import { isArchivedAuctionId } from "@/lib/archived-auctions";
+import { isArchivedCompetition, loadArchivedCompetitionIds } from "@/lib/archived-auctions";
 
 /**
  * Online-auction admin (commissioner) helpers.
@@ -62,7 +62,7 @@ export async function loadMyAdminAuctionsForUser(authUserId: string): Promise<Ad
   const admin = createAdminClient();
   const { data, error } = await admin
     .from("Auctions")
-    .select("id, name, admin_user_id")
+    .select("id, name, admin_user_id, competition_id")
     .eq("admin_user_id", authUserId)
     .order("id", { ascending: false });
 
@@ -71,9 +71,10 @@ export async function loadMyAdminAuctionsForUser(authUserId: string): Promise<Ad
     throw new Error(`Auctions(admin): ${error.message}`);
   }
 
-  return (data ?? [])
-    .map((r) => ({ id: (r as { id: number }).id, name: (r as { name: string | null }).name }))
-    .filter((r) => !isArchivedAuctionId(r.id));
+  const archivedCompetitionIds = await loadArchivedCompetitionIds();
+  return ((data ?? []) as { id: number; name: string | null; competition_id: number | null }[])
+    .filter((r) => !isArchivedCompetition(r.competition_id, archivedCompetitionIds))
+    .map((r) => ({ id: r.id, name: r.name }));
 }
 
 /** Display name for the admin, from profiles.display_name (falls back to "Admin"). */

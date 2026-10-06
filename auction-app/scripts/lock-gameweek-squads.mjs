@@ -11,11 +11,15 @@
  * Usage:
  *   node scripts/lock-gameweek-squads.mjs --gw-id 5 --gw-name "FIFA World Cup Round of 16" --auction-ids 5,6,7
  *   node scripts/lock-gameweek-squads.mjs --gw-id 5 --auction-ids 5,6,7 --dry-run
+ *
+ * Refuses auctions in an archived competition unless --allow-archived is passed.
  */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createClient } from "@supabase/supabase-js";
+
+import { assertAuctionsNotArchived } from "./lib/archived-competition-guard.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(__dirname, "..");
@@ -35,10 +39,11 @@ function loadEnvLocal() {
 }
 
 function parseArgs(argv) {
-  const opts = { gwId: null, gwName: null, auctionIds: [], dryRun: false };
+  const opts = { gwId: null, gwName: null, auctionIds: [], dryRun: false, allowArchived: false };
   for (let i = 2; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === "--dry-run") opts.dryRun = true;
+    else if (arg === "--allow-archived") opts.allowArchived = true;
     else if (arg === "--gw-id" && argv[i + 1]) opts.gwId = Number(argv[++i]);
     else if (arg === "--gw-name" && argv[i + 1]) opts.gwName = argv[++i];
     else if (arg === "--auction-ids" && argv[i + 1]) {
@@ -78,6 +83,7 @@ async function main() {
     throw new Error("Need NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in .env.local");
   }
   const supabase = createClient(url, key);
+  await assertAuctionsNotArchived(supabase, opts.auctionIds, { allowArchived: opts.allowArchived });
 
   console.log(`Locking GW${opts.gwId} for auctions [${opts.auctionIds.join(", ")}]`);
 

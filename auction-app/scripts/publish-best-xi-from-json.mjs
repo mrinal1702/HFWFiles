@@ -11,11 +11,15 @@
  *   node scripts/publish-best-xi-from-json.mjs --auction-id 6 --gw-id 1
  *   node scripts/publish-best-xi-from-json.mjs --auction-id 6 --gw-id 1 --json ../Scores/best_xi_auction_6_gw1.json
  *   node scripts/publish-best-xi-from-json.mjs --auction-id 5 --gw-id 1 --dry-run
+ *
+ * Refuses auctions in an archived competition unless --allow-archived is passed.
  */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createClient } from "@supabase/supabase-js";
+
+import { assertAuctionsNotArchived } from "./lib/archived-competition-guard.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(__dirname, "..");
@@ -43,10 +47,12 @@ function parseArgs(argv) {
     gwId: 1,
     jsonPath: null,
     dryRun: false,
+    allowArchived: false,
   };
   for (let i = 2; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === "--dry-run") opts.dryRun = true;
+    else if (arg === "--allow-archived") opts.allowArchived = true;
     else if (arg === "--auction-id" && argv[i + 1]) opts.auctionId = Number(argv[++i]);
     else if (arg === "--gw-id" && argv[i + 1]) opts.gwId = Number(argv[++i]);
     else if (arg === "--json" && argv[i + 1]) opts.jsonPath = argv[++i];
@@ -119,6 +125,7 @@ async function main() {
   }
 
   const supabase = createClient(url, key);
+  await assertAuctionsNotArchived(supabase, [opts.auctionId], { allowArchived: opts.allowArchived });
 
   const { data: squadRows, error: squadErr } = await supabase
     .from("gameweek_squads")

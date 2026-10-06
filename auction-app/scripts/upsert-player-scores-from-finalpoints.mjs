@@ -15,11 +15,14 @@
  * --competition-round-id  Uses upsert_player_scores_for_round (stamps round/match IDs).
  * --fotmob-match-id       Required with --competition-round-id for a single-match upsert.
  * --prune-gw              Delete GW rows for players not in the supplied FinalPoints files.
+ * --allow-archived        Permit writing to a GW used by an archived competition (approved amendments only).
  */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createClient } from "@supabase/supabase-js";
+
+import { assertGameWeekNotArchived } from "./lib/archived-competition-guard.mjs";
 
 import { isKeeperUnitRow, resolveScorePlayerId } from "./lib/keeper-player-id.mjs";
 import { mergeMissingIntoPendingPool, PENDING_POOL_PATH } from "./lib/pending-pool-additions.mjs";
@@ -178,6 +181,7 @@ async function pruneGameweekScores(supabase, gameWeekId, allowedPlayerIds) {
 
 function parseCliArgs(argv) {
   let pruneGw = false;
+  let allowArchived = false;
   let competitionRoundId = null;
   let fotmobMatchId = null;
   const positional = [];
@@ -186,6 +190,10 @@ function parseCliArgs(argv) {
     const arg = argv[i];
     if (arg === "--prune-gw") {
       pruneGw = true;
+      continue;
+    }
+    if (arg === "--allow-archived") {
+      allowArchived = true;
       continue;
     }
     if (arg === "--competition-round-id" && argv[i + 1]) {
@@ -199,13 +207,13 @@ function parseCliArgs(argv) {
     positional.push(arg);
   }
 
-  return { pruneGw, competitionRoundId, fotmobMatchId, positional };
+  return { pruneGw, allowArchived, competitionRoundId, fotmobMatchId, positional };
 }
 
 async function main() {
   loadEnvLocal();
 
-  const { pruneGw, competitionRoundId, fotmobMatchId, positional } = parseCliArgs(
+  const { pruneGw, allowArchived, competitionRoundId, fotmobMatchId, positional } = parseCliArgs(
     process.argv.slice(2),
   );
   const gameWeekId = Number(positional[0]);
@@ -234,6 +242,7 @@ async function main() {
   }
 
   const supabase = createClient(supabaseUrl, supabaseKey);
+  await assertGameWeekNotArchived(supabase, gameWeekId, { competitionRoundId, allowArchived });
 
   const parsed = [];
   for (const csvPath of csvPaths) {

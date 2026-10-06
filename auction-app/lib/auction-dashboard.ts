@@ -6,7 +6,7 @@ import {
   parseActorCookie,
   resolveActorFromIds,
 } from "@/lib/auction-actor-cookie";
-import { isArchivedAuctionId } from "@/lib/archived-auctions";
+import { isArchivedCompetition, loadArchivedCompetitionIds } from "@/lib/archived-auctions";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { isGoalkeeperPosition } from "@/lib/bid-ui-messages";
 import type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
@@ -473,6 +473,9 @@ export type MyAuctionRow = {
   hard_deadline_at: string | null;
   join_code: string | null;
   max_participants: number | null;
+  competition_id: number | null;
+  /** True when the auction's competition is archived (see lib/archived-auctions.ts). */
+  archived: boolean;
 };
 
 export const loadMyAuctionsForUser = cache(async (authUserId: string): Promise<MyAuctionRow[]> => {
@@ -487,21 +490,25 @@ export const loadMyAuctionsForUser = cache(async (authUserId: string): Promise<M
 
   const { data: auctions, error: aErr } = await admin
     .from("Auctions")
-    .select("id,name,is_active,hard_deadline_at,join_code,max_participants")
+    .select("id,name,is_active,hard_deadline_at,join_code,max_participants,competition_id")
     .in("id", ids)
     .order("id", { ascending: false });
   if (aErr) throw new Error(aErr.message);
-  return (auctions ?? []) as MyAuctionRow[];
+  const archivedCompetitionIds = await loadArchivedCompetitionIds();
+  return ((auctions ?? []) as Omit<MyAuctionRow, "archived">[]).map((a) => ({
+    ...a,
+    archived: isArchivedCompetition(a.competition_id, archivedCompetitionIds),
+  }));
 });
 
 export async function loadMyActiveAuctionsForUser(authUserId: string): Promise<MyAuctionRow[]> {
   const all = await loadMyAuctionsForUser(authUserId);
-  return all.filter((a) => !isArchivedAuctionId(a.id));
+  return all.filter((a) => !a.archived);
 }
 
 export async function loadMyArchivedAuctionsForUser(authUserId: string): Promise<MyAuctionRow[]> {
   const all = await loadMyAuctionsForUser(authUserId);
-  return all.filter((a) => isArchivedAuctionId(a.id));
+  return all.filter((a) => a.archived);
 }
 
 /** Use in auction pages: resolves current Supabase user and loads dashboard (cached per user + auction). */
