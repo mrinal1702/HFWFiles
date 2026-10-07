@@ -2,7 +2,7 @@
 
 This is the **end-to-end procedure** for building the fantasy **player pool** used by the auction app and downstream scripts: canonical names, mapped positions, and a single master CSV ready for import or seeding.
 
-It is separate from **weekly scoring** (match JSON → scores CSV → Supabase). For that, see [`SCORING_OPERATIONS_RUNBOOK.md`](./SCORING_OPERATIONS_RUNBOOK.md).
+It is separate from **weekly scoring** (match JSON → scores CSV → Supabase). For that, see [`OPS_SCORING_AND_LEADERBOARD.md`](../auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md).
 
 ---
 
@@ -109,7 +109,7 @@ python "C:\Users\trive\HFWFiles\Tests\build_master_player_csv.py"
 ## After the player pool is ready
 
 - Seed or sync **Supabase** `players` (and related tables) using your chosen script (e.g. auction app seed scripts that read `master_player_list.csv`).
-- Auction scoring and uploads follow **`SCORING_OPERATIONS_RUNBOOK.md`**, not this document.
+- Auction scoring and uploads follow **`auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md`**, not this document.
 
 ---
 

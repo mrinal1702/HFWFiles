@@ -1,3 +1,5 @@
+> **ARCHIVED (Oct 2026) — historical, do not follow.** Superseded by: ui-contracts/AUCTION_PAGES.md, ui-contracts/LEADERBOARD.md, OPS_UI_SURFACES.md, repo docs/VERCEL_DEPLOYMENT_PLAYBOOK.md. Paths and procedures below may be out of date.
+
 # Auction app — user interface & deployment
 
 This document describes the **current user-facing UI** for the fantasy auction (`auction-app`), how it maps to data, and **how to deploy** it in this monorepo. Use it alongside the technical handoff in **`BIDDING_SYSTEM_AND_UI_HANDOFF.md`** (schema, RPCs, SQL).
@@ -65,7 +67,7 @@ After changing env vars, **redeploy**. After local commits, **`git push`** so Ve
 - **Filters:** Club, position, status (on “All”), bidder (on “Ongoing”), plus **Sort** (see below).
 - **Player names** link to the **player detail** URL; **Back** respects `returnTo` when present so users return to bidding room, competitor view, etc., not always the room.
 - **Search loop:** player detail has **Back to search**, returning to bidding room search tab (`?tab=search`) for quick multi-player bidding.
-- **Bid errors:** User-facing copy is centralized (`lib/bid-ui-messages.ts`, `lib/auction-bid-gates.ts`, server actions) so messages match product rules (minimum bid, increments, budget, roster caps, etc.).
+- **Bid errors:** User-facing copy is centralized (`lib/auction-state/bid-ui-messages.ts`, `lib/auction-state/auction-bid-gates.ts`, server actions) so messages match product rules (minimum bid, increments, budget, roster caps, etc.).
 - **Scroll continuity after bid:** before bid submit, the app stores scroll position; after a successful bid, it scrolls the **same player row** back into view (`scrollIntoView` with `nearest`), with a fallback to the saved pixel offset. That covers both “jump to top” and **default sort reordering** (e.g. your bid moving up the list).
 
 ---
@@ -81,7 +83,7 @@ When **Sort** is the default (label in UI: **Default (ongoing → unsold → sol
 **Implementation notes:**
 
 - **`team_id`** and **`team_name`** (shown as “club”) come from Supabase **`players`**; `EnrichedLot` includes `team_id` for sorting.
-- **Position order** uses `positionSortRank()` in `lib/bid-ui-messages.ts` (normalized substring checks on `position` text).
+- **Position order** uses `positionSortRank()` in `lib/auction-state/bid-ui-messages.ts` (normalized substring checks on `position` text).
 
 Other sort options (deadline ↑/↓, bid high/low) override this for manual analysis.
 
@@ -89,7 +91,7 @@ Other sort options (deadline ↑/↓, bid high/low) override this for manual ana
 
 ## 5. Data the UI relies on (summary)
 
-The dashboard loader (`lib/auction-dashboard.ts`) builds **`EnrichedLot`** rows per auction:
+The dashboard loader (`lib/auction-state/auction-dashboard.ts`) builds **`EnrichedLot`** rows per auction:
 
 - Identity: `player_id`, `player_name`
 - Club / sort: `club` (from `team_name`), **`team_id`**

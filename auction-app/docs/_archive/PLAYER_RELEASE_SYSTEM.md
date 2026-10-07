@@ -1,3 +1,5 @@
+> **ARCHIVED (Oct 2026) — historical, do not follow.** Superseded by: OPS_RELEASES.md. Paths and procedures below may be out of date.
+
 # Player Release System — Online Auction
 
 > **Ops canonical:** [`OPS_RELEASES.md`](./OPS_RELEASES.md) (July 2026). Prefer that doc for agent training and commissioner steps.
@@ -140,7 +142,7 @@ Defined in `scripts/sql/auction-releases.sql`. Runs as a single atomic transacti
 |------|------|
 | `scripts/sql/auction-releases.sql` | Schema migration + RPC (run once in Supabase SQL Editor) |
 | `lib/auction-types.ts` | `paid_release_used` field on `AuctionUserRow` |
-| `lib/auction-dashboard.ts` | Selects `paid_release_used` when loading auction users |
+| `lib/auction-state/auction-dashboard.ts` | Selects `paid_release_used` when loading auction users |
 | `app/auctions/[auctionId]/team/actions.ts` | `releasePlayerAction` server action (auth + RPC call + revalidation) |
 | `app/auctions/[auctionId]/team/_components/ReleaseButton.tsx` | Client component: Release button + conditional modal |
 | `app/auctions/[auctionId]/team/page.tsx` | Passes `paid_release_used` and player data to `ReleaseButton` |

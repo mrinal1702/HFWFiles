@@ -1,6 +1,6 @@
 # Ops: Player releases (paid & free)
 
-**Canonical for agents.** Older detail also in [PLAYER_RELEASE_SYSTEM.md](./PLAYER_RELEASE_SYSTEM.md) — if they conflict, prefer this file + current SQL.
+**Canonical for agents.** (The older `_archive/PLAYER_RELEASE_SYSTEM.md` is historical only.)
 
 Related: [OPS_BIDDING_AND_DEADLINES.md](./OPS_BIDDING_AND_DEADLINES.md), [OPS_ELIMINATIONS.md](./OPS_ELIMINATIONS.md).
 

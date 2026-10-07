@@ -42,7 +42,8 @@ This index is primarily about the **online** product.
 | [OPS_RELEGATIONS.md](./OPS_RELEGATIONS.md) | Cutting managers; view-only behaviour |
 | [OPS_ELIMINATIONS.md](./OPS_ELIMINATIONS.md) | Real-world team knockouts; half-price refunds |
 | [OPS_UI_SURFACES.md](./OPS_UI_SURFACES.md) | Participant UI map; mobile chrome (zoom / side menu / deadlines); what may change vs must stay stable |
-| [ui-contracts/LEADERBOARD.md](./ui-contracts/LEADERBOARD.md) | Frozen leaderboard layout (Standings / My Points / Competitors) — do not improvise UI |
+| [ui-contracts/AUCTION_PAGES.md](./ui-contracts/AUCTION_PAGES.md) | Frozen **current-state** pages (bidding room, My team, Bids held, Competitors – Bidding) — no scoring here |
+| [ui-contracts/LEADERBOARD.md](./ui-contracts/LEADERBOARD.md) | Frozen **scoring** surface (Standings / My Points / Competitors – Points) — do not improvise UI |
 | [OPS_OTHER_MODULES.md](./OPS_OTHER_MODULES.md) | Transfers, announcements, acting-as, archives/history, live auction |
 | [ENTITY_INTERCONNECT_PLAN.md](./ENTITY_INTERCONNECT_PLAN.md) | Planned manager/player/profile links, avatars, phased delivery |
 
@@ -52,9 +53,6 @@ This index is primarily about the **online** product.
 |-----|--------|
 | [TRANSFER_ROOM.md](./TRANSFER_ROOM.md) | Peer-to-peer transfers (detail) |
 | [ANNOUNCEMENTS.md](./ANNOUNCEMENTS.md) | Feed composition |
-| [PLAYER_RELEASE_SYSTEM.md](./PLAYER_RELEASE_SYSTEM.md) | Older release write-up (superseded in part by OPS_RELEASES) |
-| [BIDDING_SYSTEM_AND_UI_HANDOFF.md](./BIDDING_SYSTEM_AND_UI_HANDOFF.md) | Legacy technical handoff — prefer OPS_BIDDING for ops |
-| [USER_UI_AND_DEPLOYMENT.md](./USER_UI_AND_DEPLOYMENT.md) | Deploy / route notes |
 | [TESTING_OPERATIONS.md](./TESTING_OPERATIONS.md) | Lab / reset helpers |
 | [LIVE_AUCTION_COMMISSIONER_GUIDE.md](./LIVE_AUCTION_COMMISSIONER_GUIDE.md) | Live module |
 
@@ -62,7 +60,6 @@ This index is primarily about the **online** product.
 
 | Doc | Topic |
 |-----|--------|
-| `docs/SCORING_OPERATIONS_RUNBOOK.md` | Older GW CSV path (CL-era) |
 | `docs/STAT_COLLECTION_AND_WORKFLOW.md` | Stat collection |
 | `docs/MAIN_PIPELINE_FUNCTIONS.md` | Python scoring functions |
 | `docs/VERCEL_DEPLOYMENT_PLAYBOOK.md` | Vercel root = `auction-app` |
@@ -89,7 +86,7 @@ Credentials: `auction-app/.env.local` (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_
 1. Open bidding window (`hard_deadline_at` and/or nation deadlines) — [OPS_BIDDING_AND_DEADLINES.md](./OPS_BIDDING_AND_DEADLINES.md)
 2. Managers bid / release / transfer
 3. Lock squads at deadline — [OPS_GAMEWEEK_LOCK.md](./OPS_GAMEWEEK_LOCK.md)
-4. Score matches → upsert → Best XI → publish leaderboard — [OPS_SCORING_AND_LEADERBOARD.md](./OPS_SCORING_AND_LEADERBOARD.md)
+4. Score matches → upsert → Best XI → publish leaderboard — [OPS_SCORING_AND_LEADERBOARD.md](./OPS_SCORING_AND_LEADERBOARD.md); verify with `node scripts/check-gameweek-surfaces.mjs`
 5. Optional: eliminations / relegations between stages
 6. Reset `paid_release_used`, reopen next window
 

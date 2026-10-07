@@ -4,7 +4,7 @@ This document captures **what actually mattered** when deploying the Next.js fan
 
 **Related files**
 
-- `auction-app/docs/USER_UI_AND_DEPLOYMENT.md` — product UI (routes, bidding room, default sort), deployment summary, links here  
+- `auction-app/docs/ui-contracts/` — product UI contracts (routes, bidding room, default sort, leaderboard)  
 - `docs/GIT_AND_VERCEL.md` — Git push + env vars summary  
 - `docs/VERCEL_404_TROUBLESHOOTING.md` — 404 checklist, SPA rewrite warning, `/vercel-check.txt` + `/api/health`  
 - Repo root `README.md` — **Root Directory must be `auction-app`**

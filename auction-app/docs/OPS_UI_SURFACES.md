@@ -3,7 +3,9 @@
 **Canonical map of what participants see.**  
 Goal: **UI stays stable across competitions**; competition data changes, chrome does not.
 
-Related: [USER_UI_AND_DEPLOYMENT.md](./USER_UI_AND_DEPLOYMENT.md), [OPS_INDEX.md](./OPS_INDEX.md), [ENTITY_INTERCONNECT_PLAN.md](./ENTITY_INTERCONNECT_PLAN.md).
+Related: [OPS_INDEX.md](./OPS_INDEX.md), [ENTITY_INTERCONNECT_PLAN.md](./ENTITY_INTERCONNECT_PLAN.md).
+
+**Page-level specs (canonical):** [ui-contracts/AUCTION_PAGES.md](./ui-contracts/AUCTION_PAGES.md) — current state (squads, budgets, bids) · [ui-contracts/LEADERBOARD.md](./ui-contracts/LEADERBOARD.md) — everything scoring. The two surfaces never mix.
 
 ---
 
@@ -30,8 +32,8 @@ Top nav ([`ParticipantNav`](../app/_components/ParticipantNav.tsx)):
 
 Archive status / history years: `lib/archived-auctions.ts`  
 (an auction is archived when its competition's `competitions.status = 'archived'`; `AUCTION_HISTORY_YEARS` separately drives Past Finishes — finished auctions can stay Active until their competition is archived.)  
-History ranks: `lib/auction-history.ts` (from `auction_leaderboard`)  
-Manual Trophy Cabinet cups: `lib/trophy-cabinet-awards.ts`
+History ranks: `lib/scoring/auction-history.ts` (from `auction_leaderboard`)  
+Manual Trophy Cabinet cups: `lib/scoring/trophy-cabinet-awards.ts`
 
 ### Active Auctions page contents (standard)
 
@@ -48,16 +50,16 @@ Removed / parked: large Match Scores card; Meme Builds entry (routes may still e
 | Area | Notes |
 |------|--------|
 | Header | Auction name; deadlines (full width); Dashboard / Announcements / Refresh |
-| **Side menu** | Thin left rail (desktop) or floating menu button (mobile) + overlay drawer (`AuctionSideNav`): Bidding room, Fixtures (modal when configured), My team, Bids held, Transfer Room, Match scores, Leaderboard |
+| **Side menu** | Thin left rail (desktop) or floating menu button (mobile) + overlay drawer (`AuctionSideNav`): Bidding room (+ Fixtures modal when configured), My team, Announcements, Competitors – Bidding, Bids held, Transfer Room, Match scores, Leaderboard |
 | **Bidding room** | Lot list, filters, deadlines, bid forms; sticky Playing as + Remaining / Active budgets (**bidding room only**) |
 | **My Team** | Squad + release buttons |
 | **Bids held** | Current high bids |
-| **Competitors** | Other managers’ squads (also via Leaderboard → Competitors) |
+| **Competitors – Bidding** | Other managers’ **current** squads, budgets and bids. Not points — those are Leaderboard → **Competitors – Points** |
 | **Player page** | Ownership, GW points, bid/release history, bid form |
 | **Match scores** | In-auction sheets; player names → player page |
 | **Announcements** | Sales, releases, eliminations (header button for now) |
 | **Transfers** | Propose / respond (when window open) |
-| **Leaderboard / Points** | `/auctions/[id]/leaderboard` (under auction chrome). Legacy `/leaderboard/[id]` redirects here |
+| **Leaderboard** | `/auctions/[id]/leaderboard` — Standings · My Points · Competitors – Points (locked GW squads, points, Best XI, formation). Legacy `/leaderboard/[id]` redirects here |
 
 ### Mobile auction chrome (validated — keep)
 
@@ -81,7 +83,7 @@ Any **new participant-facing page** inside an online auction must:
 
 1. Live under `/auctions/[auctionId]/…` so it inherits auction chrome (`layout.tsx` + left rail).
 2. Be added to the **left side menu** in [`AuctionSideNav.tsx`](../app/auctions/_components/AuctionSideNav.tsx) (label + href + active-match rules).
-3. Be listed in the table above (and in [USER_UI_AND_DEPLOYMENT.md](./USER_UI_AND_DEPLOYMENT.md)) when it becomes a standard surface.
+3. Be listed in the table above and in the matching UI contract ([AUCTION_PAGES.md](./ui-contracts/AUCTION_PAGES.md) or [LEADERBOARD.md](./ui-contracts/LEADERBOARD.md)) when it becomes a standard surface.
 
 Do **not** add a parallel top/horizontal nav, a one-off header-only link, or a page that participants can only reach by URL. Header actions (Dashboard, Announcements, Refresh) are reserved for chrome utilities — new *sections* go in the side menu. Dev-only tools (e.g. Auction Lab) stay unlinked from participant nav.
 
@@ -90,11 +92,11 @@ Do **not** add a parallel top/horizontal nav, a one-off header-only link, or a p
 | Mode | UI |
 |------|-----|
 | `global` | `AuctionDeadlines.tsx` — **full width under** title/actions (not beside them). Mobile: label above each date. `sm+`: three columns. |
-| `nation_rolling` | Nation schedule control (`NationRollingDeadlinesButton.tsx` + `lib/nation-deadlines-data.ts`) |
+| `nation_rolling` | Nation schedule control (`NationRollingDeadlinesButton.tsx` + `lib/auction-state/nation-deadlines-data.ts`) |
 
 ### Acting-as
 
-Commissioners / dual seats: `ActingAsPicker` — act as a manager or **view only (no bidding)**. Cookie-based actor resolution in `lib/auction-dashboard.ts`.
+Commissioners / dual seats: `ActingAsPicker` — act as a manager or **view only (no bidding)**. Cookie-based actor resolution in `lib/auction-state/auction-dashboard.ts`.
 
 ### Relegated banner
 
@@ -124,7 +126,7 @@ Do not add per-GW score columns or endless tabs. World Cup GW **tabs** must not 
 - **Public (canonical):** `/match-scores` (grouped by GW) — anyone; player names are plain text
 - **In-auction:** `/auctions/[auctionId]/match-scores` — members only (incl. archived if still a member); same sheets; player names link to `/auctions/[auctionId]/players/[playerId]`
 - Legacy redirects: `/scores/[slug]` → public match-scores
-- Data: `data/competitions/<slug>/match-scores/*_FinalPoints.csv`, registered in `lib/match-scores/competitions/<slug>.ts` (wired up in `lib/match-scores/sheets.ts`)
+- Data: `data/competitions/<slug>/match-scores/*_FinalPoints.csv`, registered in `lib/scoring/match-scores/competitions/<slug>.ts` (wired up in `lib/scoring/match-scores/sheets.ts`)
 - Same FinalPoints `position` column powers leaderboard **Match Pos** (via `loadMatchPositionsForGameweek`)
 
 When a competition ends, **keep** its sheet file and CSVs registered — archived auctions’ match-score pages and Match Pos still read them. Keep the **routes** for the next season’s sheets.

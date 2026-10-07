@@ -1,3 +1,5 @@
+> **ARCHIVED (Oct 2026) — historical, do not follow.** Superseded by: auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md. Paths and procedures below may be out of date.
+
 # Scoring Operations Runbook
 
 > **Historical (pre-competition-isolation, CL/World Cup era).** Procedure 2’s `publish-active-gameweek-scores.mjs` now lives in `auction-app/scripts/_archive/legacy-pre-isolation/` and its npm aliases were removed. For current scoring use [`auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md`](../auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md).

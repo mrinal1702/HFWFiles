@@ -3,7 +3,7 @@
 Handoff reference for how FotMob-style match JSON becomes per-player stat tables, fantasy points, and gameweek upload rows. Use when continuing work in a new chat or with another agent.
 
 **Pipeline overview and scoring paths:** [`MAIN_PIPELINE_FUNCTIONS.md`](./MAIN_PIPELINE_FUNCTIONS.md)  
-**Weekly ops (build CSV → publish):** [`SCORING_OPERATIONS_RUNBOOK.md`](./SCORING_OPERATIONS_RUNBOOK.md)
+**Weekly ops (build CSV → publish):** [`OPS_SCORING_AND_LEADERBOARD.md`](../auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md)
 
 ## Repository layout (relevant parts)
 
@@ -177,13 +177,13 @@ Individual GKs are scored internally, but **gameweek and FinalPoints outputs exp
 
 Multiple GKs in one match: endowment is not split; only the highest stat-points GK receives the unit row.
 
-Auction ownership: owning any goalkeeper from a club credits that club's keeper unit — see [`OWNER_SCORE_REPORT_WORKFLOW.md`](./OWNER_SCORE_REPORT_WORKFLOW.md) § goalkeeper ownership.
+Auction ownership: owning any goalkeeper from a club credits that club's keeper unit — see [`_archive/OWNER_SCORE_REPORT_WORKFLOW.md`](./_archive/OWNER_SCORE_REPORT_WORKFLOW.md) § goalkeeper ownership.
 
 ## Next steps for a new agent
 
 1. Read `Tests/stat_collection.py` and `Tests/position_roles.py` for extraction and role rules.
 2. Read the relevant `scoring/<role>_points.py` for weights.
 3. For a single-match audit, run Path A in `MAIN_PIPELINE_FUNCTIONS.md`.
-4. For production upload, follow `SCORING_OPERATIONS_RUNBOOK.md`.
+4. For production upload, follow `auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md`.
 5. For woodwork or rare events, grep match JSON for player-level keys and update scoring config / `STATS_STILL_MISSING_OR_EXTERNAL`.
 6. To change winger→midfielder behaviour, edit `WINGER_TOPPLAYERS_TO_MIDFIELD_POSITION_IDS` — do not change master-list LW/RW → Forward mapping unless auction pool rules change.

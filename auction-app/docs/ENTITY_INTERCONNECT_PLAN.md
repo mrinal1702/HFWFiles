@@ -2,7 +2,7 @@
 
 **Status:** Phase 1 done (deployed). Phase 2 implemented locally (rich player + in-auction scores). Phase 3 profiles started (`/u/[userId]` + competitor link).  
 **Audience:** Humans and agents working on auction-app UI.  
-**Related:** [OPS_UI_SURFACES.md](./OPS_UI_SURFACES.md), [USER_UI_AND_DEPLOYMENT.md](./USER_UI_AND_DEPLOYMENT.md), [AGENT_HANDOFF.md](./AGENT_HANDOFF.md)
+**Related:** [OPS_UI_SURFACES.md](./OPS_UI_SURFACES.md), [ui-contracts/AUCTION_PAGES.md](./ui-contracts/AUCTION_PAGES.md), [AGENT_HANDOFF.md](./AGENT_HANDOFF.md)
 
 ---
 
@@ -37,7 +37,7 @@ Make the auction app feel like a real website: every meaningful name (manager, p
 | Avatars | `profiles.avatar_url` + Storage `avatars` bucket | Dashboard upload only (`ProfileAvatar`) |
 | Profiles RLS | `auth-and-join.sql` | Select/update **own** row only |
 
-Key loaders/types: `lib/auction-dashboard.ts` (`CompetitorView`, `loadCompetitorView`), `lib/auction-history.ts`, `lib/leaderboard-data.ts`, `lib/auction-users-query.ts` (`user_id` on seats).  
+Key loaders/types: `lib/auction-state/auction-dashboard.ts` (`CompetitorView`, `loadCompetitorView`), `lib/scoring/auction-history.ts`, `lib/scoring/leaderboard-data.ts`, `lib/auction-users-query.ts` (`user_id` on seats).  
 SQL already supporting richer player pages: `auction_bids`, `auction_teams`, `auction_releases`, `player_scores`.
 
 ---

@@ -10,7 +10,7 @@ This is the **product orientation** doc for an agent or new contributor. Read it
 |------|------|
 | **Day-to-day ops** (bidding, locks, scoring, relegations, eliminations, UI standards) | **[`OPS_INDEX.md`](./OPS_INDEX.md)** and the `OPS_*.md` docs it links |
 | **The live database schema** (every table, view, RPC → its canonical SQL file) | **[`../scripts/sql/README.md`](../scripts/sql/README.md)** |
-| **Frozen leaderboard UI** | **[`ui-contracts/LEADERBOARD.md`](./ui-contracts/LEADERBOARD.md)** |
+| **Frozen participant UI** | **[`ui-contracts/AUCTION_PAGES.md`](./ui-contracts/AUCTION_PAGES.md)** (current state) · **[`ui-contracts/LEADERBOARD.md`](./ui-contracts/LEADERBOARD.md)** (scoring) |
 
 Do **not** improvise one-off SQL or procedures when an OPS doc and a script already exist.
 
@@ -129,9 +129,10 @@ The `sb_publishable_*` / `sb_secret_*` keys work only via the `@supabase/supabas
 |-----|--------|
 | `OPS_INDEX.md` | Ops handbook entry point (bidding, locks, scoring, relegations, eliminations, UI) |
 | `../scripts/sql/README.md` | Canonical schema index (tables, views, RPCs → SQL file) |
-| `GAMEWEEK_FLOW.md` | Full GW cycle: bidding windows, snapshots, commissioner checklist |
-| `PLAYER_RELEASE_SYSTEM.md` | Release types, windows, refunds (see also `OPS_RELEASES.md`) |
+| `ui-contracts/AUCTION_PAGES.md` | **UI contract:** current-state pages (bidding room, My team, Bids held, Competitors – Bidding) |
+| `ui-contracts/LEADERBOARD.md` | **UI contract:** everything scoring (Standings, My Points, Competitors – Points) |
+| `OPS_RELEASES.md` | Release types, windows, refunds |
 | `TRANSFER_ROOM.md` | Peer-to-peer transfers |
 | `LIVE_AUCTION_COMMISSIONER_GUIDE.md` | Live auction setup + admin workflow |
-| `USER_UI_AND_DEPLOYMENT.md` | User routes + deploy summary |
+| `OPS_UI_SURFACES.md` | Participant UI map + mobile chrome |
 | `TESTING_OPERATIONS.md` | Reset/seed helpers, multi-auction test setup |

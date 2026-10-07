@@ -1,3 +1,5 @@
+> **ARCHIVED (Oct 2026) — historical, do not follow.** Superseded by: auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md (Best XI + leaderboard pipeline). Paths and procedures below may be out of date.
+
 # Owner Score Report Workflow
 
 This document records the one-off workflow used to turn a fantasy ownership file into owner score outputs for a specific real-world round.

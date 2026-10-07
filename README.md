@@ -29,7 +29,8 @@ A **round is a gameweek** (one fixture per team), so a player's round score is t
 ## Auction app — UI & deployment (read this)
 
 - **`auction-app/docs/OPS_INDEX.md`** — **canonical ops handbook** for agents (bidding, locks, scoring, relegations, eliminations, UI standards).
-- **`auction-app/docs/USER_UI_AND_DEPLOYMENT.md`** — user-facing routes, bidding room behavior (including default list sorting), data summary, and pointers to Vercel setup.
+- **`CLAUDE.md`** (repo root) — one-page map of which folder does what.
+- **`auction-app/docs/ui-contracts/`** — frozen participant UI: `AUCTION_PAGES.md` (current squads/budgets/bids) and `LEADERBOARD.md` (everything scoring).
 - **`docs/VERCEL_DEPLOYMENT_PLAYBOOK.md`** — full Vercel checklist (root directory, webpack build, env vars, `/api/health`, common 404 causes).
 
 ## Deploying on Vercel (important)

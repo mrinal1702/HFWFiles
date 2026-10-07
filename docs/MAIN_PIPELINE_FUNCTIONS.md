@@ -4,7 +4,7 @@ This document describes the core scoring pipeline: stat extraction, point calcul
 
 **Auction player pool (squad scrape → master CSV):** see [`AUCTION_PREPARATION_PROCEDURE.md`](./AUCTION_PREPARATION_PROCEDURE.md).
 
-**Operational runbook (build GW CSV → publish to Supabase):** see [`SCORING_OPERATIONS_RUNBOOK.md`](./SCORING_OPERATIONS_RUNBOOK.md).
+**Operational runbook (build GW CSV → publish to Supabase):** see [`OPS_SCORING_AND_LEADERBOARD.md`](../auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md).
 
 **Agent handoff (WC match scoring, public scores page, leaderboard upload, breakdowns):** see [`AGENT_SCORES_AND_LEADERBOARD_WORKFLOW.md`](./AGENT_SCORES_AND_LEADERBOARD_WORKFLOW.md).
 
@@ -394,7 +394,7 @@ Ensure keeper unit rows use `player_id` values that exist in `players` (typicall
 ### Full gameweek (production upload)
 1. Place match JSON files in `Matches_Raw/<round>/`
 2. `python procedures/generate_gameweek_scores.py --matches-dir … --gw-id …`
-3. Publish CSV via auction-app procedure (see [`SCORING_OPERATIONS_RUNBOOK.md`](./SCORING_OPERATIONS_RUNBOOK.md))
+3. Publish CSV via auction-app procedure (see [`OPS_SCORING_AND_LEADERBOARD.md`](../auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md))
 
 ### Full round (per-match artefacts + GW CSV)
 1. `python scripts/run_round_pipeline.py --matches-dir … --gw-id …`

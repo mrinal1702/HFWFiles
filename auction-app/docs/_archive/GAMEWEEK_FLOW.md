@@ -1,3 +1,5 @@
+> **ARCHIVED (Oct 2026) — historical, do not follow.** Superseded by: OPS_GAMEWEEK_LOCK.md + OPS_BIDDING_AND_DEADLINES.md. Paths and procedures below may be out of date.
+
 # How Football Works — Gameweek Flow & Gameplay Logic
 
 > **Superseded for ops:** use [`OPS_INDEX.md`](./OPS_INDEX.md), especially [`OPS_BIDDING_AND_DEADLINES.md`](./OPS_BIDDING_AND_DEADLINES.md) and [`OPS_GAMEWEEK_LOCK.md`](./OPS_GAMEWEEK_LOCK.md). This file is kept for narrative context; some earlier “snapshot TBD” wording is obsolete — `gameweek_squads` is live.

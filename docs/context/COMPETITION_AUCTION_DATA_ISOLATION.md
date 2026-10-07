@@ -16,7 +16,7 @@
 Done:
 
 - Supabase: `competitions`, `competition_rounds`, `competition_matches`, `competition_players` exist; every online auction except lab auction 8 has `Auctions.competition_id`. Player names/positions for competition-scoped auctions come from `competition_players` (never the global `players` pool), which is what keeps EPL and UCL apart for clubs in both (Arsenal, Aston Villa, Liverpool, Manchester City, Manchester United).
-- Vercel display data is competition-scoped under `auction-app/data/competitions/<slug>/match-scores/`; sheets are registered per competition in `auction-app/lib/match-scores/competitions/<slug>.ts`. The legacy flat `data/match-scores/` folder and fallback are gone.
+- Vercel display data is competition-scoped under `auction-app/data/competitions/<slug>/match-scores/`; sheets are registered per competition in `auction-app/lib/scoring/match-scores/competitions/<slug>.ts`. The legacy flat `data/match-scores/` folder and fallback are gone.
 - **Archiving:** an auction is archived when its competition has `competitions.status = 'archived'` (`lib/archived-auctions.ts`). Archived auctions move to the Archives page and stay fully readable; Auction History is driven separately by `AUCTION_HISTORY_YEARS`. Procedure: `auction-app/docs/OPS_OTHER_MODULES.md` §4 and `scripts/sql/archive-competition.sql`.
 - Commissioner write scripts (lock / upsert / publish Best XI) refuse archived competitions unless run with `--allow-archived`.
 

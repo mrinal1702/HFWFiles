@@ -1,3 +1,5 @@
+> **ARCHIVED (Oct 2026) — historical, do not follow.** Superseded by: OPS_BIDDING_AND_DEADLINES.md + scripts/sql/README.md (schema). Paths and procedures below may be out of date.
+
 # Bidding system & UI handoff
 
 > **Ops canonical:** [`OPS_BIDDING_AND_DEADLINES.md`](./OPS_BIDDING_AND_DEADLINES.md) and [`OPS_INDEX.md`](./OPS_INDEX.md). This file remains a technical deep-dive; it may lag on `nation_rolling` — trust OPS + current SQL (`nation-rolling-bidding-rpc.sql`) when they differ.
@@ -13,7 +15,7 @@ This document is the **technical handoff** for the **Supabase + Next.js** biddin
 | **PostgreSQL (Supabase)** | Source of truth: lots, bids, budgets, rosters, deadlines. **Business rules** live in RPC functions (`place_bid`, `finalize_auction_hard_deadline`, etc.). |
 | **Next.js server** | `lib/supabase-server.ts` — **service role** client only on the server. Never expose the service key to the browser. |
 | **`/auction-lab`** | Minimal **integration test** page: lists `auction_users` + `auction_lots`, submits bids via Server Action. **Not** a polished product UI. |
-| **`lib/bidding.ts`** | Typed wrappers for `place_bid` and `finalize_auction_hard_deadline`. |
+| **`lib/auction-state/bidding.ts`** | Typed wrappers for `place_bid` and `finalize_auction_hard_deadline`. |
 
 **Multi-auction rule:** Almost every query and mutation is scoped by **`auction_id`**. The UI must always know **which auction** the user is in (selector, route segment, or session).
 
@@ -87,7 +89,7 @@ set
 where id = <auction_id>;
 ```
 
-**TypeScript:** `placeBid(client, { auctionId, playerId, auctionUserId, amount })` in `lib/bidding.ts`.
+**TypeScript:** `placeBid(client, { auctionId, playerId, auctionUserId, amount })` in `lib/auction-state/bidding.ts`.
 
 ### `finalize_auction_hard_deadline(p_auction_id, p_force default false)` → JSON
 
@@ -141,11 +143,11 @@ Surface **`budget_remaining`**, **`active_budget`**, **current high bid**, **lot
 
 ## 6) UI entry points (for reference)
 
-- **Product UI** — See **`USER_UI_AND_DEPLOYMENT.md`**: bidding room (`app/auctions/.../bidding-room`), dashboard, team, bids held, player detail pages, etc. Loaders use **`lib/auction-dashboard.ts`** and **`lib/bidding.ts`**.
+- **Product UI** — See **`USER_UI_AND_DEPLOYMENT.md`**: bidding room (`app/auctions/.../bidding-room`), dashboard, team, bids held, player detail pages, etc. Loaders use **`lib/auction-state/auction-dashboard.ts`** and **`lib/auction-state/bidding.ts`**.
 - **`app/auction-lab/page.tsx`** — Server Component: reads auction, users, lots (+ joins `players`, `auction_bids` for display).  
 - **`app/auction-lab/BidForm.tsx`** — Client form + `useActionState` → **`app/auction-lab/actions.ts`** → `placeBid` + `revalidatePath`.  
 
-Reuse **`lib/bidding.ts`** and the same RPC contracts everywhere; Auction Lab remains a dev/integration surface.
+Reuse **`lib/auction-state/bidding.ts`** and the same RPC contracts everywhere; Auction Lab remains a dev/integration surface.
 
 ---
 
@@ -173,7 +175,7 @@ Reuse **`lib/bidding.ts`** and the same RPC contracts everywhere; Auction Lab re
 
 ## 9) Hard deadline & Supabase (product behavior + pitfalls)
 
-- **Settlement is not a cron at T+0.** On the **first server load** of an auction after `hard_deadline_at`, `loadAuctionDashboard` (`lib/auction-dashboard.ts`) calls `finalize_auction_hard_deadline` if any lot is still `bidding` or `uninitiated`, then refetches lots/users. Any page using that loader (layout, bidding room, My team, Bids held, etc.) triggers it. Idempotent after lots are terminal.
+- **Settlement is not a cron at T+0.** On the **first server load** of an auction after `hard_deadline_at`, `loadAuctionDashboard` (`lib/auction-state/auction-dashboard.ts`) calls `finalize_auction_hard_deadline` if any lot is still `bidding` or `uninitiated`, then refetches lots/users. Any page using that loader (layout, bidding room, My team, Bids held, etc.) triggers it. Idempotent after lots are terminal.
 - **UI:** `biddingClosed` follows browser time vs `hard_deadline_at`; the RPC uses Postgres `clock_timestamp()`. They should match within normal skew.
 - **Sold display:** After finalize, `current_high_bid_id` is cleared on sold lots; the dashboard joins **`auction_teams`** to show winner and price on sold rows.
 - **Resolved production issue:** If `auction_teams.player_id` is **int4** while `auction_lots.player_id` is **text**, the finalize function must use **`t.player_id::text = v_lot.player_id::text`** in the existence check and **`v_lot.player_id::integer`** in the `INSERT`. Use **`standalone-finalize-auction-hard-deadline.sql`** in Supabase so the deployed function matches the repo (partial pastes of `auction-bidding.sql` left an old body in place).
@@ -191,4 +193,4 @@ Reuse **`lib/bidding.ts`** and the same RPC contracts everywhere; Auction Lab re
 
 When in doubt, compare behavior to **`/auction-lab`** and the JSON returned by RPCs.
 
-**New chats:** Point the agent at this file + **`lib/auction-dashboard.ts`** + **`scripts/sql/auction-bidding.sql`** so bidding context does not depend on prior threads.
+**New chats:** Point the agent at this file + **`lib/auction-state/auction-dashboard.ts`** + **`scripts/sql/auction-bidding.sql`** so bidding context does not depend on prior threads.

@@ -1,12 +1,14 @@
 # Leaderboard UI contract
 
-**Status:** Implemented 24 Aug 2026 (one-GW dropdown; default = latest GW with scores uploaded).  
-**Live reference:** https://hfwauction.vercel.app/leaderboard/9?tab=my-points  
+**Status:** Implemented 24 Aug 2026 (one-GW dropdown; default = latest GW with scores uploaded). Updated Oct 2026: tab renamed **Competitors – Points**; components moved under `app/auctions/[auctionId]/leaderboard/`.  
+**Live reference:** https://hfwauction.vercel.app/auctions/10/leaderboard?tab=my-points  
 **Product owner rule:** Do not change layout, copy, columns, chrome, or interaction unless the user **explicitly** asks. Adding a gameweek is data, not a UI redesign.
 
-This is the canonical spec for `/leaderboard/[auctionId]`. Prefer it over improvising from World Cup archives, screenshots, or “improvements.”
+This is the canonical spec for `/auctions/[auctionId]/leaderboard` (legacy `/leaderboard/[auctionId]` only redirects). Prefer it over improvising from World Cup archives, screenshots, or “improvements.”
 
-Related: [OPS_UI_SURFACES.md](../OPS_UI_SURFACES.md), [OPS_SCORING_AND_LEADERBOARD.md](../OPS_SCORING_AND_LEADERBOARD.md), parked Best XI UI in `GameweekSquadView.tsx`.
+Related: [AUCTION_PAGES.md](./AUCTION_PAGES.md) (the **current-state** surface — never mix the two), [OPS_UI_SURFACES.md](../OPS_UI_SURFACES.md), [OPS_SCORING_AND_LEADERBOARD.md](../OPS_SCORING_AND_LEADERBOARD.md).
+
+**This surface is everything scoring:** locked GW squads (mine and competitors'), player points, Best XI, formation, Listed vs Match Pos, standings. It never shows budgets, bids, timers or live squads (those are on the auction pages — [AUCTION_PAGES.md](./AUCTION_PAGES.md)).
 
 ---
 
@@ -19,11 +21,15 @@ Related: [OPS_UI_SURFACES.md](../OPS_UI_SURFACES.md), [OPS_SCORING_AND_LEADERBOA
 
 ### Files in scope
 
-- `app/leaderboard/[auctionId]/layout.tsx`
-- `app/leaderboard/[auctionId]/page.tsx`
-- `app/leaderboard/[auctionId]/_components/*`
-- `app/auctions/[auctionId]/competitors/**` (owned-points / competitor GW view)
-- `lib/leaderboard-data.ts` (only as needed to feed this UI)
+- `app/auctions/[auctionId]/leaderboard/page.tsx` (tabs page)
+- `app/auctions/[auctionId]/leaderboard/competitors/[auctionUserId]/page.tsx` (one competitor's points)
+- `app/auctions/[auctionId]/leaderboard/_components/*` — `LeaderboardTabs`, `StandingsTable`, `GwPointsView`, `GwSquadTable`, `GwSelect`, `CompetitorsPointsList`
+- `lib/scoring/*` (only as needed to feed this UI)
+
+**Not in scope:** `app/auctions/[auctionId]/competitors/**` — that is **Competitors – Bidding** (current squads/budgets/bids), governed by [AUCTION_PAGES.md](./AUCTION_PAGES.md).
+`app/leaderboard/[auctionId]/` is only a legacy redirect.
+
+Run `node scripts/check-gameweek-surfaces.mjs` after any change here: it fails on per-gameweek / per-auction special cases and on incomplete published gameweeks.
 
 ---
 
@@ -32,7 +38,7 @@ Related: [OPS_UI_SURFACES.md](../OPS_UI_SURFACES.md), [OPS_SCORING_AND_LEADERBOA
 Keep the existing auction-app light theme unless explicitly told otherwise:
 
 - Page shell: `max-w-5xl`, header “← Back to auction”, `{auction name} · Leaderboard`, `RefreshButton`
-- Top tabs (exactly three, pill switcher, URL `?tab=`): **Standings** | **My Points** | **Competitors**
+- Top tabs (exactly three, pill switcher, URL `?tab=`): **Standings** | **My Points** | **Competitors – Points**
 - Palette: white cards, `border-slate-200`, sky header rows / active tab, slate body text, `font-mono` for numbers
 - Manager identity: `ManagerChip` (team name preferred) + manager name underneath when a team name exists
 - Mobile: card list; desktop: table — same pattern as today
@@ -57,7 +63,7 @@ Standings tab (unchanged by this redesign unless later specified): season rank +
 
 ---
 
-## Target: My Points and Competitors (agreed)
+## Target: My Points and Competitors – Points (agreed)
 
 ### Interaction
 
@@ -68,7 +74,7 @@ Standings tab (unchanged by this redesign unless later specified): season rank +
 | Default | **Latest gameweek that has scores uploaded.** When GW2 scores are uploaded, default becomes GW2 without a code change per week |
 | Revisit | User can pick an earlier GW in the same dropdown |
 | URL | Persist selection (`tab` + `gw`) so refresh/share keeps the same week. Omitting `gw` uses the default |
-| Competitors | Same dropdown + same table. Opening a competitor shows **their** squad for the **default current GW**; the dropdown still switches that competitor’s past weeks. Competitors list columns: Manager, Season total (no Players column; no intro blurb) |
+| Competitors – Points | Same dropdown + same table. Opening a competitor shows **their** squad for the **default current GW**; the dropdown still switches that competitor’s past weeks. Competitors list columns: Manager, Season total (no Players column; no intro blurb) |
 
 ### My Points header
 
@@ -95,7 +101,7 @@ Ownership for a row = locked `gameweek_squads` for that GW (live `auction_teams`
 
 ### After Best XI is published for that GW
 
-Reuse the World Cup / `GameweekSquadView` / `GwSquadTable` precedent — do not invent a new split:
+Implemented in `GwPointsView` + `GwSquadTable` — reuse them; do not invent a new split:
 
 - **Starting XI** block with count and **formation** (e.g. `3-5-2`)
 - **Bench / substitutes** block with their scores (dimmed vs XI)

@@ -48,8 +48,8 @@ Managers may have multiple `auction_users` rows (rare) or commissioners need to 
 |---------|----------------|
 | Which auctions are archived | Supabase `competitions.status = 'archived'` → every auction with that `competition_id` (`lib/archived-auctions.ts` → `loadArchivedCompetitionIds`) |
 | History years / Past Finishes eligibility | `AUCTION_HISTORY_YEARS` (keys = history auctions; may include non-archived) |
-| History ranks | `lib/auction-history.ts` ← live `auction_leaderboard` |
-| Extra Trophy Cabinet cups | `lib/trophy-cabinet-awards.ts` → `MANUAL_TROPHY_AWARDS` |
+| History ranks | `lib/scoring/auction-history.ts` ← live `auction_leaderboard` |
+| Extra Trophy Cabinet cups | `lib/scoring/trophy-cabinet-awards.ts` → `MANUAL_TROPHY_AWARDS` |
 
 After a competition ends:
 

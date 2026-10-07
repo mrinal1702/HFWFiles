@@ -109,8 +109,8 @@ Also resets `paid_release_used` for those auctions and re-opens `unsold` lots to
 | Roster | Max **18** players counting sold + current high bids |
 | GK / outfield | Max **1** GK, **17** outfield (same counting) |
 
-TS wrappers: `lib/bidding.ts`  
-UI gate messages: `lib/auction-bid-gates.ts`, `lib/bid-ui-messages.ts`
+TS wrappers: `lib/auction-state/bidding.ts`  
+UI gate messages: `lib/auction-state/auction-bid-gates.ts`, `lib/auction-state/bid-ui-messages.ts`
 
 ---
 
@@ -133,7 +133,7 @@ Winning a lot moves money from active commitment into owned price on `auction_te
 | `finalize_auction_hard_deadline` | Global hard close |
 | `finalize_due_nation_deadlines` | Nation-rolling: close nations past hard |
 
-The app may call these when loading auction dashboards (`lib/auction-dashboard.ts`). Commissioners can also invoke via SQL/tools if stuck.
+The app may call these when loading auction dashboards (`lib/auction-state/auction-dashboard.ts`). Commissioners can also invoke via SQL/tools if stuck.
 
 ---
 

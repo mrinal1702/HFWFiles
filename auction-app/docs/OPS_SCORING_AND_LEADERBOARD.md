@@ -15,7 +15,7 @@ Tournament-specific examples (WC 2026) may live under `archive/world-cup-2026/` 
 FotMob match → match JSON (keep under competition round)
         → score to *FinalPoints.csv
         → copy FinalPoints into auction-app/data/competitions/<slug>/match-scores/
-        → register sheet in lib/match-scores/competitions/<slug>.ts
+        → register sheet in lib/scoring/match-scores/competitions/<slug>.ts
         → upsert Player_Scores (Supabase) using that competition’s legacy game_week_id
         → confirm gameweek_squads locked for every target auction
         → compute Best XI (Python) → Scores/best_xi_auction_{id}_gw{N}.json
@@ -25,7 +25,7 @@ FotMob match → match JSON (keep under competition round)
         → Vercel deploy → Standings / My Points / Competitors / Match Pos / formation
 ```
 
-**Standings are never computed in the browser from raw player scores.** They sum `auction_leaderboard.total_score` per manager ([`lib/leaderboard-data.ts`](../lib/leaderboard-data.ts) → `getLeaderboardData`).
+**Standings are never computed in the browser from raw player scores.** They sum `auction_leaderboard.total_score` per manager ([`lib/scoring/leaderboard-data.ts`](../lib/scoring/leaderboard-data.ts) → `getLeaderboardData`).
 
 **UI for My Points / Competitors is frozen.** Do not add columns or tabs. Populate existing fields via data + overlays only — see [LEADERBOARD.md](./ui-contracts/LEADERBOARD.md).
 
@@ -55,10 +55,10 @@ Always use the **legacy** id (`competition.json` / `rounds/mwNN/round.json` → 
 **Public / in-auction match scores + Match Pos source (required for UI):**
 
 1. Copy `*_FinalPoints.csv` → `auction-app/data/competitions/<slug>/match-scores/`
-2. Register the match in that competition’s sheet file [`lib/match-scores/competitions/<slug>.ts`](../lib/match-scores/competitions/) (e.g. `uefa-cl-2026-27.ts`; a new competition also needs an entry in [`sheets.ts`](../lib/match-scores/sheets.ts)) (`groupStageGw` = **ordinal** matchweek 1, 2, 3… within the competition — not the legacy id)
+2. Register the match in that competition’s sheet file [`lib/scoring/match-scores/competitions/<slug>.ts`](../lib/scoring/match-scores/competitions/) (e.g. `uefa-cl-2026-27.ts`; a new competition also needs an entry in [`sheets.ts`](../lib/scoring/match-scores/sheets.ts)) (`groupStageGw` = **ordinal** matchweek 1, 2, 3… within the competition — not the legacy id)
 3. Commit + deploy
 
-Match Pos on My Points / Competitors is loaded by [`lib/match-positions-for-gw.ts`](../lib/match-positions-for-gw.ts):
+Match Pos on My Points / Competitors is loaded by [`lib/scoring/match-positions-for-gw.ts`](../lib/scoring/match-positions-for-gw.ts):
 
 - Resolves the auction’s `competition_id`
 - Maps legacy `game_week_id` → ordinal MW (UCL: `300 → 1`, `301 → 2`, …)
@@ -135,8 +135,8 @@ Effects:
 | Piece | Role |
 |-------|------|
 | Overlay file | `auction-app/data/best-xi/auction-{auctionId}-gw{legacyGameWeekId}.json` |
-| Loader | [`lib/best-xi-overlay.ts`](../lib/best-xi-overlay.ts) → `loadBestXiOverlay` |
-| UI | [`GwPointsView`](../app/leaderboard/[auctionId]/_components/GwPointsView.tsx) / [`GwSquadTable`](../app/leaderboard/[auctionId]/_components/GwSquadTable.tsx) — Best XI score + formation chip + Starting XI / Bench |
+| Loader | [`lib/scoring/best-xi-overlay.ts`](../lib/scoring/best-xi-overlay.ts) → `loadBestXiOverlay` |
+| UI | [`GwPointsView`](../app/auctions/[auctionId]/leaderboard/_components/GwPointsView.tsx) / [`GwSquadTable`](../app/auctions/[auctionId]/leaderboard/_components/GwSquadTable.tsx) — Best XI score + formation chip + Starting XI / Bench |
 
 Filename **must** use the same legacy `game_week_id` as Supabase (e.g. UCL MW1 → `auction-10-gw300.json`, not `…-gw1.json`).
 
@@ -167,7 +167,7 @@ Relegated managers **remain** on Standings (flagged).
 - Git push to the connected branch triggers deploy.
 - Vercel **Root Directory** = `auction-app` (required).
 - Smoke: `https://hfwauction.vercel.app/api/health` → `{ "ok": true }`.
-- **Must commit for production UI:** competition match-score CSVs, `lib/match-scores/competitions/<slug>.ts` registrations, and `data/best-xi/auction-*-gw*.json` overlays.
+- **Must commit for production UI:** competition match-score CSVs, `lib/scoring/match-scores/competitions/<slug>.ts` registrations, and `data/best-xi/auction-*-gw*.json` overlays.
 
 See `docs/VERCEL_DEPLOYMENT_PLAYBOOK.md`.
 
@@ -184,7 +184,8 @@ Use this before calling the GW “live” for participants:
 5. [ ] Best XI computed + published for every auction → `auction_leaderboard` rows exist
 6. [ ] Overlay JSON files exist under `data/best-xi/` named with legacy GW id
 7. [ ] Git commit + push of CSVs / sheets / overlays (and any loader fixes)
-8. [ ] Smoke: Standings totals; My Points shows Best XI + **formation**; Match Pos filled for players who played
+8. [ ] `node scripts/check-gameweek-surfaces.mjs --auction-ids …` passes (read-only: squads, scores, standings rows, Best XI flags, overlay, match sheets for every published GW)
+9. [ ] Smoke: Standings totals; My Points shows Best XI + **formation**; Match Pos filled for players who played
 
 ---
 

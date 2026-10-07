@@ -3,7 +3,7 @@
 **Canonical for agents.**  
 Related: [OPS_BIDDING_AND_DEADLINES.md](./OPS_BIDDING_AND_DEADLINES.md), [OPS_SCORING_AND_LEADERBOARD.md](./OPS_SCORING_AND_LEADERBOARD.md).
 
-> Note: Older `GAMEWEEK_FLOW.md` may still say snapshots were “to be designed.” **That is obsolete.** Use this document.
+> Note: the old `GAMEWEEK_FLOW.md` is archived (`docs/_archive/`). Use this document.
 
 ---
 

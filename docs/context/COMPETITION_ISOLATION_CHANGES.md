@@ -98,11 +98,11 @@ Split versions also exist if you prefer to run them in two passes:
 - Match-score display data now lives at
   `auction-app/data/competitions/<slug>/match-scores/`. The EPL CSVs were copied
   there. (The legacy flat `auction-app/data/match-scores/` fallback was removed in Oct 2026.)
-- `lib/match-scores/parse-final-points.ts` — `loadMatchScoreCsv(file, slug)`
+- `lib/scoring/match-scores/parse-final-points.ts` — `loadMatchScoreCsv(file, slug)`
   reads the competition-scoped path (slug required since Oct 2026).
-- `lib/match-scores/sheets.ts` (per-competition sheet lists now in `lib/match-scores/competitions/<slug>.ts`) — each sheet now carries `competitionSlug` and
+- `lib/scoring/match-scores/sheets.ts` (per-competition sheet lists now in `lib/scoring/match-scores/competitions/<slug>.ts`) — each sheet now carries `competitionSlug` and
   `fotmobMatchId`.
-- `lib/match-scores/types.ts` — `MatchScoreSheet` gained optional
+- `lib/scoring/match-scores/types.ts` — `MatchScoreSheet` gained optional
   `competitionSlug` and `fotmobMatchId`.
 
 > Run `npm install && npm run build` in `auction-app/` before deploying to

@@ -1,3 +1,5 @@
+> **ARCHIVED (Oct 2026) — historical, do not follow.** Superseded by: auction-app/docs/OPS_INDEX.md. Paths and procedures below may be out of date.
+
 # Auction bidding app (Next.js + Supabase)
 
 The **live bidding engine**, SQL procedures, and **UI** for the fantasy auction live in the **`auction-app`** package:
