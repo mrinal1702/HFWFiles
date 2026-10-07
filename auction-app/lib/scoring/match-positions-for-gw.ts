@@ -18,12 +18,23 @@ function isWorldCupGameweek(gameWeekId: number): gameWeekId is GroupStageGw {
   return gameWeekId >= 1 && gameWeekId <= 8;
 }
 
+/** FinalPoints keeper rows use the club's team_id; squads own the keeper unit as 90_000_000 + team_id. */
+const KEEPER_UNIT_OFFSET = 90_000_000;
+
+function addRow(map: Map<string, string>, playerId: string, position: string): void {
+  map.set(String(playerId), position);
+  if (position.trim().toLowerCase() === "goalkeeper") {
+    const teamId = Number(playerId);
+    if (Number.isFinite(teamId) && teamId < KEEPER_UNIT_OFFSET) {
+      map.set(String(KEEPER_UNIT_OFFSET + teamId), position);
+    }
+  }
+}
+
 function sheetsToPositionMap(sheets: MatchScoreSheet[]): Map<string, string> {
   const map = new Map<string, string>();
   for (const sheet of sheets) {
-    for (const row of sheet.rows) {
-      map.set(String(row.playerId), row.position);
-    }
+    for (const row of sheet.rows) addRow(map, row.playerId, row.position);
   }
   return map;
 }
@@ -92,9 +103,7 @@ export function loadMatchPositionsForGameweek(
   const map = new Map<string, string>();
   for (const sheet of WC_SHEETS) {
     if (sheet.groupStageGw !== gameWeekId) continue;
-    for (const row of sheet.rows) {
-      map.set(String(row.playerId), row.position);
-    }
+    for (const row of sheet.rows) addRow(map, row.playerId, row.position);
   }
   return map;
 }

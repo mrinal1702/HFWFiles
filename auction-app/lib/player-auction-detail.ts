@@ -7,6 +7,8 @@ import {
 } from "@/lib/auction-state/auction-dashboard";
 import type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
 import { createAdminClient } from "@/lib/supabase-server";
+import { getLockedGameWeeksForAuction } from "@/lib/scoring/leaderboard-data";
+import { readPlayerScores } from "@/lib/scoring/player-scores";
 
 export type PlayerGwScore = {
   gameWeekId: number;
@@ -124,54 +126,30 @@ async function fetchPlayerMeta(
   return { playerName: row.player_name, position: row.position, club: null };
 }
 
+/** This player's scores for THIS auction's gameweeks only (never other competitions'). */
 async function fetchGwScoresForPlayer(
   admin: ReturnType<typeof createAdminClient>,
+  auctionId: number,
   playerId: string,
 ): Promise<PlayerGwScore[]> {
   const numericId = Number(playerId);
   if (!Number.isFinite(numericId)) return [];
 
-  let rows: Array<{ game_week_id: number; score: number }> = [];
+  const gameWeeks = await getLockedGameWeeksForAuction(auctionId);
+  if (!gameWeeks.length) return [];
+  const byGw = await readPlayerScores(
+    admin,
+    gameWeeks.map((gw) => gw.id),
+    [numericId],
+  );
 
-  const viewRes = await admin
-    .from("player_scores")
-    .select("game_week_id, score")
-    .eq("player_id", numericId);
-  if (!viewRes.error) {
-    rows = (viewRes.data ?? []).map((r) => ({
-      game_week_id: Number((r as { game_week_id: number }).game_week_id),
-      score: Number((r as { score: number }).score),
+  return gameWeeks
+    .filter((gw) => byGw.get(gw.id)?.has(String(numericId)))
+    .map((gw) => ({
+      gameWeekId: gw.id,
+      gameWeekName: gw.name,
+      score: byGw.get(gw.id)!.get(String(numericId))!,
     }));
-  } else {
-    const tableRes = await admin
-      .from("Player_Scores")
-      .select("game_week_id, Score")
-      .eq("player_id", numericId);
-    if (tableRes.error) throw new Error(`Player_Scores: ${tableRes.error.message}`);
-    rows = (tableRes.data ?? []).map((r) => ({
-      game_week_id: Number((r as { game_week_id: number }).game_week_id),
-      score: Number((r as { Score: number }).Score),
-    }));
-  }
-
-  if (rows.length === 0) return [];
-
-  const gwIds = [...new Set(rows.map((r) => r.game_week_id))].sort((a, b) => a - b);
-  const gwRes = await admin.from("Game_Weeks").select("id, GW_Name").in("id", gwIds);
-  if (gwRes.error) throw new Error(`Game_Weeks: ${gwRes.error.message}`);
-
-  const nameById = new Map<number, string>();
-  for (const g of gwRes.data ?? []) {
-    nameById.set(Number((g as { id: number }).id), String((g as { GW_Name: string }).GW_Name));
-  }
-
-  return rows
-    .map((r) => ({
-      gameWeekId: r.game_week_id,
-      gameWeekName: nameById.get(r.game_week_id) ?? `GW ${r.game_week_id}`,
-      score: r.score,
-    }))
-    .sort((a, b) => a.gameWeekId - b.gameWeekId);
 }
 
 function managerFields(
@@ -238,7 +216,7 @@ export const loadPlayerAuctionDetail = cache(
         .eq("auction_id", auctionId)
         .eq("player_id", playerId)
         .order("created_at", { ascending: true }),
-      fetchGwScoresForPlayer(admin, playerId),
+      fetchGwScoresForPlayer(admin, auctionId, playerId),
     ]);
 
     if (teamRes.error) throw new Error(`auction_teams: ${teamRes.error.message}`);

@@ -34,5 +34,9 @@ after leaderboard/scoring changes.
 - `export const dynamic = "force-dynamic"` on DB pages; `params` is a Promise — always `await params`.
 - Scope every query by `auction_id` / `competition_id`; competition-scoped player names come from
   `competition_players`, never the global `players` table.
+- **Player scores are read only via `readPlayerScores()` (`lib/scoring/player-scores.ts`) with the
+  auction's gameweek ids** (`getLockedGameWeeksForAuction`). Never look a player up across all
+  gameweeks, and never use the global `Game_Weeks.Is_Active` flag — both show other competitions'
+  points. `check-gameweek-surfaces.mjs` enforces this.
 - Schema changes: manual SQL in `scripts/sql/` + update `scripts/sql/README.md` in the same commit.
 - Pushing to `main` deploys production. Active auctions: UCL 2026/27 (10–13) — do not disturb.

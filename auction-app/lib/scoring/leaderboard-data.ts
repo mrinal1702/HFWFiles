@@ -5,6 +5,7 @@ import { fetchAuctionUserNames } from "@/lib/auction-users-query";
 import { isUserRelegated } from "@/lib/relegated-participants";
 import { loadBestXiOverlay } from "@/lib/scoring/best-xi-overlay";
 import { loadMatchPositionsForGameweek } from "@/lib/scoring/match-positions-for-gw";
+import { gameWeeksWithScores, readPlayerScores } from "@/lib/scoring/player-scores";
 import {
   fetchPlayerMetaByIds,
   resolveAuctionCompetitionId,
@@ -112,46 +113,14 @@ async function loadSquadPlayerMetaByIds(
   return map;
 }
 
-/** Auction-agnostic GW scores from Player_Scores (keyed by FotMob player_id). */
+/** Scores for one of this auction's gameweeks (keyed by FotMob player_id). */
 async function fetchPlayerGameweekScores(
   admin: ReturnType<typeof createAdminClient>,
   gameWeekId: number,
   playerIds: string[],
 ): Promise<Map<string, number>> {
-  const scoreMap = new Map<string, number>();
-  const uniqueIds = [
-    ...new Set(playerIds.map((id) => Number(id)).filter((n) => Number.isFinite(n))),
-  ];
-  if (!uniqueIds.length) return scoreMap;
-
-  const batchSize = 300;
-  for (let i = 0; i < uniqueIds.length; i += batchSize) {
-    const batch = uniqueIds.slice(i, i + batchSize);
-    const viewRes = await admin
-      .from("player_scores")
-      .select("player_id, score")
-      .eq("game_week_id", gameWeekId)
-      .in("player_id", batch);
-
-    if (!viewRes.error) {
-      for (const row of viewRes.data ?? []) {
-        scoreMap.set(String(row.player_id), Number(row.score));
-      }
-      continue;
-    }
-
-    const tableRes = await admin
-      .from("Player_Scores")
-      .select("player_id, Score")
-      .eq("game_week_id", gameWeekId)
-      .in("player_id", batch);
-    if (tableRes.error) throw new Error(`Player_Scores: ${tableRes.error.message}`);
-    for (const row of tableRes.data ?? []) {
-      scoreMap.set(String(row.player_id), Number(row.Score));
-    }
-  }
-
-  return scoreMap;
+  const byGw = await readPlayerScores(admin, [gameWeekId], playerIds);
+  return byGw.get(gameWeekId) ?? new Map<string, number>();
 }
 
 /** All-GW standings for the Standings tab. */
@@ -373,7 +342,7 @@ export async function resolveGameweekPanel(
   return { gw, squads: null, squadsAreLocked: false };
 }
 
-/** Active gameweek for an auction (rolling trials use rolling_game_week_id, not global Is_Active). */
+/** Current gameweek for an auction with no locked squads yet: nation-rolling auctions use rolling_game_week_id; otherwise none. */
 export async function getActiveGameWeekForAuction(auctionId: number): Promise<GwInfo | null> {
   const admin = createAdminClient();
 
@@ -398,20 +367,10 @@ export async function getActiveGameWeekForAuction(auctionId: number): Promise<Gw
     return { id: gwRes.data.id as number, name: gwRes.data.GW_Name as string };
   }
 
-  return getActiveGameWeek();
-}
-
-/** Active gameweek from Game_Weeks where Is_Active = true. */
-export async function getActiveGameWeek(): Promise<GwInfo | null> {
-  const admin = createAdminClient();
-  const { data, error } = await admin
-    .from("Game_Weeks")
-    .select("id, GW_Name")
-    .eq("Is_Active", true)
-    .maybeSingle();
-  if (error) throw new Error(`Game_Weeks: ${error.message}`);
-  if (!data) return null;
-  return { id: data.id as number, name: data.GW_Name as string };
+  // Global-mode auctions have no gameweek until their first lock. Never fall back to the
+  // global Game_Weeks.Is_Active flag: it belongs to whichever competition locked last and
+  // would show another competition's scores.
+  return null;
 }
 
 /** Locked gameweek_squads rows for one auction/GW. */
@@ -596,7 +555,7 @@ export async function getParticipantsOwnedPoints(
       if (squads?.length) squadsByGw.push({ gw, squads });
     }
   } else {
-    const activeGw = (await getActiveGameWeekForAuction(auctionId)) ?? (await getActiveGameWeek());
+    const activeGw = await getActiveGameWeekForAuction(auctionId);
     const current = await getCurrentSquads(auctionId, activeGw?.id);
     if (activeGw && current.length > 0) {
       gameWeeks = [activeGw];
@@ -691,32 +650,8 @@ export type PointsGwContext = {
 };
 
 async function findGwIdsWithUploadedScores(gwIds: number[]): Promise<Set<number>> {
-  const scored = new Set<number>();
-  if (gwIds.length === 0) return scored;
-  const admin = createAdminClient();
-
-  for (const gwId of gwIds) {
-    const viewRes = await admin
-      .from("player_scores")
-      .select("player_id")
-      .eq("game_week_id", gwId)
-      .limit(1);
-    if (!viewRes.error && (viewRes.data?.length ?? 0) > 0) {
-      scored.add(gwId);
-      continue;
-    }
-
-    const tableRes = await admin
-      .from("Player_Scores")
-      .select("player_id")
-      .eq("game_week_id", gwId)
-      .limit(1);
-    if (!tableRes.error && (tableRes.data?.length ?? 0) > 0) {
-      scored.add(gwId);
-    }
-  }
-
-  return scored;
+  if (gwIds.length === 0) return new Set<number>();
+  return gameWeeksWithScores(createAdminClient(), gwIds);
 }
 
 function pickDefaultGwId(gameWeeks: GwInfo[], scoredGwIds: Set<number>): number | null {

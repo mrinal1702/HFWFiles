@@ -9,6 +9,7 @@ import {
   type MemeBuildScoreMap,
 } from "@/lib/meme-builds/types";
 import { createAdminClient } from "@/lib/supabase-server";
+import { readPlayerScores } from "@/lib/scoring/player-scores";
 
 export type MemeBuildsPageData = {
   pool: MemeBuildPoolPlayer[];
@@ -62,47 +63,11 @@ export async function fetchMemeBuildScores(
   playerIds: string[],
   gameWeekIds: number[],
 ): Promise<MemeBuildScoreMap> {
-  const admin = createAdminClient();
+  // Meme builds are a World Cup 2026 side game: gameWeekIds are WC gameweeks (1–8).
+  const byGw = await readPlayerScores(createAdminClient(), gameWeekIds, playerIds);
   const result: MemeBuildScoreMap = {};
-
   for (const gwId of gameWeekIds) {
-    result[String(gwId)] = {};
+    result[String(gwId)] = Object.fromEntries(byGw.get(gwId) ?? new Map<string, number>());
   }
-
-  const uniqueIds = [
-    ...new Set(playerIds.map((id) => Number(id)).filter((n) => Number.isFinite(n))),
-  ];
-  if (!uniqueIds.length || !gameWeekIds.length) return result;
-
-  const batchSize = 300;
-  for (const gwId of gameWeekIds) {
-    const gwKey = String(gwId);
-    for (let i = 0; i < uniqueIds.length; i += batchSize) {
-      const batch = uniqueIds.slice(i, i + batchSize);
-      const viewRes = await admin
-        .from("player_scores")
-        .select("player_id, score")
-        .eq("game_week_id", gwId)
-        .in("player_id", batch);
-
-      if (!viewRes.error) {
-        for (const row of viewRes.data ?? []) {
-          result[gwKey][String(row.player_id)] = Number(row.score);
-        }
-        continue;
-      }
-
-      const tableRes = await admin
-        .from("Player_Scores")
-        .select("player_id, Score")
-        .eq("game_week_id", gwId)
-        .in("player_id", batch);
-      if (tableRes.error) throw new Error(`Player_Scores: ${tableRes.error.message}`);
-      for (const row of tableRes.data ?? []) {
-        result[gwKey][String(row.player_id)] = Number(row.Score);
-      }
-    }
-  }
-
   return result;
 }

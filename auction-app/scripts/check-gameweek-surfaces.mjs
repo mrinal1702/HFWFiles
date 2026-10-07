@@ -6,7 +6,9 @@
  *    leaderboard needs are all present — locked squads, player scores, auction_leaderboard
  *    rows, Best XI flags, the formation overlay file and registered match sheets (Match Pos).
  * 2) Code: scans leaderboard UI + scoring loaders for per-gameweek / per-auction special cases
- *    (e.g. `gw === 3`, hardcoded "GW2" labels). A new gameweek must be data, never code.
+ *    (e.g. `gw === 3`, hardcoded "GW2" labels) — a new gameweek must be data, never code — and
+ *    the whole app for direct player-score reads outside lib/scoring/player-scores.ts or reads of
+ *    the global Game_Weeks.Is_Active flag (both leak other competitions' points).
  *
  * Usage (from auction-app/):
  *   node scripts/check-gameweek-surfaces.mjs                 # auctions of active competitions
@@ -74,8 +76,34 @@ function walk(p, out = []) {
   return out;
 }
 
-function scanCode() {
+// Score reads must go through lib/scoring/player-scores.ts with the auction's gameweek ids.
+const SCORE_READ_SCOPE = ["app", "lib"];
+const SCORE_READ_ALLOWED = new Set(["lib/scoring/player-scores.ts"]);
+const SCORE_READ_PATTERNS = [
+  { re: /from\(\s*["'`](Player_Scores|player_scores|player_scores_scoped)["'`]\s*\)/, why: "reads player scores directly — use readPlayerScores() from lib/scoring/player-scores.ts with the auction's gameweek ids" },
+  { re: /["'`]Is_Active["'`]/, why: "reads the global Game_Weeks.Is_Active flag — it belongs to whichever competition locked last; use the auction's locked gameweeks" },
+];
+
+function scanScoreReads() {
   const hits = [];
+  for (const file of SCORE_READ_SCOPE.flatMap((p) => walk(p))) {
+    if (!/\.(tsx?|mjs)$/.test(file)) continue;
+    const rel = path.relative(appRoot, file).split(path.sep).join("/");
+    if (SCORE_READ_ALLOWED.has(rel)) continue;
+    fs.readFileSync(file, "utf8")
+      .split(/\r?\n/)
+      .forEach((line, i) => {
+        if (line.trim().startsWith("//") || line.trim().startsWith("*")) return;
+        for (const { re, why } of SCORE_READ_PATTERNS) {
+          if (re.test(line)) hits.push(`${rel}:${i + 1}  ${why}`);
+        }
+      });
+  }
+  return hits;
+}
+
+function scanCode() {
+  const hits = [...scanScoreReads()];
   for (const file of CODE_SCOPE.flatMap((p) => walk(p))) {
     if (!/\.(tsx?|mjs)$/.test(file)) continue;
     fs.readFileSync(file, "utf8")
@@ -183,8 +211,8 @@ async function main() {
   const issues = [];
 
   const codeHits = scanCode();
-  console.log("── Code scan (leaderboard UI + scoring loaders) ──");
-  console.log(codeHits.length ? codeHits.map((h) => `  ✗ ${h}`).join("\n") : "  ✓ no per-gameweek / per-auction special cases");
+  console.log("── Code scan (score access + leaderboard UI + scoring loaders) ──");
+  console.log(codeHits.length ? codeHits.map((h) => `  ✗ ${h}`).join("\n") : "  ✓ scores only read via lib/scoring/player-scores.ts; no per-gameweek / per-auction special cases");
   issues.push(...codeHits);
 
   if (!opts.codeOnly) {

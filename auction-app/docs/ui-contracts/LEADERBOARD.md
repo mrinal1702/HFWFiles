@@ -115,7 +115,8 @@ Best XI runs when that gameweek’s matches are complete and ops publish — the
 | Display field | Source |
 |---------------|--------|
 | Formation chip / Starting XI header | `data/best-xi/auction-{id}-gw{legacyGameWeekId}.json` via `loadBestXiOverlay` (must be committed + deployed) |
-| Match Pos | FinalPoints `position` via competition sheets + `loadMatchPositionsForGameweek(gameWeekId, competitionId)` |
+| Match Pos | FinalPoints `position` via competition sheets + `loadMatchPositionsForGameweek(gameWeekId, competitionId)` (goalkeeper units: FinalPoints `team_id` ↔ squad `90_000_000 + team_id`, shown as **GK**) |
+| Player scores | `readPlayerScores()` (`lib/scoring/player-scores.ts`) for this auction's locked gameweeks only. Before an auction's first lock there are no scores (no global `Is_Active` fallback) |
 | Best XI / bench split | `gameweek_squads.is_best_xi` (+ `xi_role`) |
 
 Canonical ops checklist: [OPS_SCORING_AND_LEADERBOARD.md](../OPS_SCORING_AND_LEADERBOARD.md).
