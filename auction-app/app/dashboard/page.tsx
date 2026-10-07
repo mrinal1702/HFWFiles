@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
+import { AuctionCard } from "@/app/_components/AuctionCard";
 import { ParticipantNav } from "@/app/_components/ParticipantNav";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadMyActiveAuctionsForUser } from "@/lib/auction-state/auction-dashboard";
@@ -101,54 +102,45 @@ export default async function DashboardPage({
         <ul className="mt-4 space-y-3">
           {auctions.map((a) => (
             <li key={`online-${a.id}`}>
-              <Link
+              <AuctionCard
                 href={`/auctions/${a.id}/bidding-room`}
-                className="block min-h-[3.5rem] rounded-xl border border-sky-100 bg-white px-4 py-3 shadow-sm hover:border-sky-300 hover:bg-sky-50/50"
-              >
-                <span className="font-medium text-slate-900">{a.name ?? `Auction #${a.id}`}</span>
-                <span className="mt-1 block text-xs leading-relaxed text-slate-600">
-                  Code: <span className="font-mono text-slate-800">{a.join_code ?? "—"}</span>
-                  {a.is_active === false ? " · inactive" : ""}
-                  {a.hard_deadline_at
-                    ? ` · deadline ${new Date(a.hard_deadline_at).toLocaleString()} (local)`
-                    : ""}
-                </span>
-              </Link>
+                tone="participant"
+                title={a.name ?? `Auction #${a.id}`}
+                chips={[
+                  { label: "Code", value: a.join_code ?? "—", mono: true },
+                  ...(a.is_active === false ? [{ value: "inactive" }] : []),
+                  ...(a.hard_deadline_at
+                    ? [{ label: "Deadline", value: `${new Date(a.hard_deadline_at).toLocaleString()} (local)` }]
+                    : []),
+                ]}
+              />
             </li>
           ))}
           {adminAuctions.map((a) => (
             <li key={`admin-${a.id}`}>
-              <Link
+              <AuctionCard
                 href={`/auction-admin/${a.id}`}
-                className="block min-h-[3.5rem] rounded-xl border border-violet-200 bg-white px-4 py-3 shadow-sm hover:border-violet-300 hover:bg-violet-50/50"
-              >
-                <span className="font-medium text-slate-900">Admin - {a.name ?? `Auction #${a.id}`}</span>
-                <span className="mt-1 block text-xs leading-relaxed text-slate-600">
-                  Admin controls — manage squads, budgets, and bids
-                </span>
-              </Link>
+                tone="admin"
+                title={a.name ?? `Auction #${a.id}`}
+                subtitle="Admin controls — manage squads, budgets, and bids"
+              />
             </li>
           ))}
           {liveAuctions.map((a) => {
-            const label =
-              a.access === "admin" ? `Admin - ${a.name}` : a.name;
             const href =
               a.access === "admin"
                 ? `/live-auction/${a.id}/admin`
                 : `/live-auction/${a.id}`;
+            const status =
+              a.status === "live" ? "in progress" : a.status === "setup" ? "setting up" : a.status === "paused" ? "paused" : null;
             return (
               <li key={`live-${a.access}-${a.id}`}>
-                <Link
+                <AuctionCard
                   href={href}
-                  className="block min-h-[3.5rem] rounded-xl border border-sky-100 bg-white px-4 py-3 shadow-sm hover:border-sky-300 hover:bg-sky-50/50"
-                >
-                  <span className="font-medium text-slate-900">{label}</span>
-                  <span className="mt-1 block text-xs leading-relaxed text-slate-600">
-                    Live auction{a.status === "live" ? " · in progress" : ""}
-                    {a.status === "setup" ? " · setting up" : ""}
-                    {a.status === "paused" ? " · paused" : ""}
-                  </span>
-                </Link>
+                  tone={a.access === "admin" ? "admin" : "participant"}
+                  title={a.name}
+                  chips={[{ value: "Live auction" }, ...(status ? [{ value: status }] : [])]}
+                />
               </li>
             );
           })}
@@ -164,14 +156,22 @@ export default async function DashboardPage({
         )}
       </section>
 
-      <section className="mt-10 rounded-xl border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
-        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Join an auction</h2>
-        <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          Enter the code your commissioner shared — participant code to join the auction, or admin
-          code to record sales. You can enter both codes for the same live auction if you are
-          commissioner and a bidder.
-        </p>
-        <div className="mt-5">
+      <section className="relative mt-10 overflow-hidden rounded-2xl border border-sky-100 bg-gradient-to-br from-white via-white to-sky-50 p-5 pl-6 shadow-sm sm:p-6 sm:pl-7">
+        <span aria-hidden className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-sky-400 to-sky-600" />
+        <span
+          aria-hidden
+          className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-sky-200/30 blur-3xl"
+        />
+        <div className="relative flex items-center gap-3">
+          <span
+            aria-hidden
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-100 text-sky-700 ring-1 ring-sky-200"
+          >
+            <KeyIcon />
+          </span>
+          <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Join an auction</h2>
+        </div>
+        <div className="relative mt-5">
           <JoinAuctionForm />
         </div>
       </section>
@@ -196,5 +196,13 @@ export default async function DashboardPage({
         </Link>
       </p>
     </main>
+  );
+}
+
+function KeyIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 7.5a3 3 0 1 1 0 .01M21 8a6 6 0 0 1-7.7 5.75L11 16H9v2H7v2H4v-3l6.25-6.25A6 6 0 1 1 21 8Z" />
+    </svg>
   );
 }

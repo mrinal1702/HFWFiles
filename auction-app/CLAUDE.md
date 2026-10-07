@@ -11,6 +11,8 @@ Two products: **online auction** (`/auctions/*`, live in production) and **live 
 | **Auction pages** — current squads, budgets, bids | `app/auctions/[auctionId]/{bidding-room,team,bids-held,competitors,transfers,announcements,match-scores,players}` | `docs/ui-contracts/AUCTION_PAGES.md` | `lib/auction-state/` |
 | **Leaderboard** — everything scoring | `app/auctions/[auctionId]/leaderboard/**` | `docs/ui-contracts/LEADERBOARD.md` | `lib/scoring/` |
 
+**UI/visual work: start with `docs/UI_MAP.md`** (route → file map, styling entry points, local preview).
+
 Read the contract before touching a page. Do not change layout, labels or columns unless the
 user explicitly asks; a new gameweek is **data only** — follow `docs/GAMEWEEK_RUNBOOK.md`. Run `node scripts/check-gameweek-surfaces.mjs`
 after leaderboard/scoring changes.

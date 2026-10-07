@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback } from "react";
 
+import { AuctionCard, MedalIcon } from "@/app/_components/AuctionCard";
 import { TrophyCabinet } from "@/app/_components/TrophyCabinet";
 import {
   formatFinishLabel,
@@ -17,6 +17,14 @@ const TABS: Array<{ id: HistoryTabId; label: string }> = [
   { id: "past-finishes", label: "Past Finishes" },
   { id: "trophy-cabinet", label: "Trophy Cabinet" },
 ];
+
+/** Soft podium tints for the finish badge; other finishes stay in the sky theme. */
+function finishBadgeClass(rank: number): string {
+  if (rank === 1) return "border-amber-200 bg-amber-50 text-amber-800";
+  if (rank === 2) return "border-slate-200 bg-slate-100 text-slate-700";
+  if (rank === 3) return "border-orange-200 bg-orange-50 text-orange-800";
+  return "border-sky-100 bg-white/80 text-slate-700";
+}
 
 function parseTab(value: string | null | undefined): HistoryTabId {
   if (value === "trophy-cabinet") return "trophy-cabinet";
@@ -75,10 +83,6 @@ export function AuctionHistoryPanels({
 
       {activeTab === "past-finishes" && (
         <section>
-          <p className="text-sm text-slate-600">
-            Your finishes across completed auctions — newest first.
-          </p>
-
           {loadError && (
             <p className="mt-4 text-sm leading-relaxed text-red-700">
               Couldn&apos;t load auction history.{" "}
@@ -97,21 +101,23 @@ export function AuctionHistoryPanels({
             <ul className="mt-4 space-y-3">
               {history.map((row) => (
                 <li key={row.auctionId}>
-                  <Link
+                  <AuctionCard
                     href={`/leaderboard/${row.auctionId}`}
-                    className="block min-h-[3.5rem] rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm hover:border-sky-300 hover:bg-sky-50/50"
-                  >
-                    <div className="flex flex-wrap items-baseline justify-between gap-2">
-                      <span className="font-medium text-slate-900">{row.auctionName}</span>
-                      <span className="text-sm font-semibold text-slate-800">
+                    tone="participant"
+                    title={row.auctionName}
+                    icon={<MedalIcon />}
+                    chips={[
+                      { value: String(row.year) },
+                      ...(row.totalPoints > 0 ? [{ value: `${row.totalPoints} pts` }] : []),
+                    ]}
+                    aside={
+                      <span
+                        className={`inline-flex rounded-full border px-3 py-1 text-sm font-semibold ${finishBadgeClass(row.rank)}`}
+                      >
                         {formatFinishLabel(row.rank)}
                       </span>
-                    </div>
-                    <span className="mt-1 block text-xs leading-relaxed text-slate-600">
-                      {row.year}
-                      {row.totalPoints > 0 ? ` · ${row.totalPoints} pts` : ""}
-                    </span>
-                  </Link>
+                    }
+                  />
                 </li>
               ))}
             </ul>

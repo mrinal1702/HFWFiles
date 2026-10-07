@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "auction-app",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "auction-app", "run", "dev"],
+      "port": 3000
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { ArchiveIcon, AuctionCard, CardAction } from "@/app/_components/AuctionCard";
 import { ParticipantNav } from "@/app/_components/ParticipantNav";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadMyArchivedAuctionsForUser } from "@/lib/auction-state/auction-dashboard";
@@ -47,9 +48,6 @@ export default async function ArchivesPage() {
           </button>
         </form>
       </div>
-      <p className="mt-2 text-sm text-slate-600">
-        Past auctions you took part in — standings, squads, and history stay available here.
-      </p>
 
       <section className="mt-10">
         <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Archived auctions</h2>
@@ -62,32 +60,18 @@ export default async function ArchivesPage() {
         <ul className="mt-4 space-y-3">
           {auctions.map((a) => (
             <li key={a.id}>
-              <div className="rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
-                <span className="font-medium text-slate-900">{a.name ?? `Auction #${a.id}`}</span>
-                <span className="mt-1 block text-xs leading-relaxed text-slate-600">
-                  Archived · standings, squads, match scores, and player pages stay available
-                </span>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  <Link
-                    href={`/leaderboard/${a.id}`}
-                    className="inline-flex min-h-10 items-center rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-sm font-medium text-sky-900 hover:bg-sky-100"
-                  >
-                    Leaderboard
-                  </Link>
-                  <Link
-                    href={`/auctions/${a.id}/match-scores`}
-                    className="inline-flex min-h-10 items-center rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
-                  >
-                    Match scores
-                  </Link>
-                  <Link
-                    href={`/auctions/${a.id}/bidding-room`}
-                    className="inline-flex min-h-10 items-center rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
-                  >
-                    Open auction
-                  </Link>
-                </div>
-              </div>
+              <AuctionCard
+                tone="participant"
+                title={a.name ?? `Auction #${a.id}`}
+                icon={<ArchiveIcon />}
+                subtitle="Archived · standings, squads, match scores, and player pages stay available"
+              >
+                <CardAction href={`/leaderboard/${a.id}`} primary>
+                  Leaderboard
+                </CardAction>
+                <CardAction href={`/auctions/${a.id}/match-scores`}>Match scores</CardAction>
+                <CardAction href={`/auctions/${a.id}/bidding-room`}>Open auction</CardAction>
+              </AuctionCard>
             </li>
           ))}
         </ul>

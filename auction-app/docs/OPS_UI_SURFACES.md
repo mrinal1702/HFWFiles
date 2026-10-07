@@ -28,7 +28,10 @@ Top nav ([`ParticipantNav`](../app/_components/ParticipantNav.tsx)):
 | **Active Auctions** | `/dashboard` | Current leagues + join code |
 | **Archives** | `/archives` | Completed leagues → Leaderboard / Match scores / Open auction |
 | **Auction History** | `/auction-history` | Tabs: **Past Finishes** (rank + year; podium medals 🏆🥈🥉) and **Trophy Cabinet** (1st-place only — large trophy image + auction name; empty state if none) |
-| Match scores | `/match-scores` | Public link (plain player names; no auction ownership) |
+| Rules | `/rules` | Plain link |
+
+`/match-scores` still exists but is unlinked from the top nav (removed Oct 2026 on request).
+Shell cards (Active / Archives / History) share `app/_components/AuctionCard.tsx`; admin cards use the rose tone.
 
 Archive status / history years: `lib/archived-auctions.ts`  
 (an auction is archived when its competition's `competitions.status = 'archived'`; `AUCTION_HISTORY_YEARS` separately drives Past Finishes — finished auctions can stay Active until their competition is archived.)  
@@ -140,7 +143,7 @@ These were validated in production and should be the default for future seasons 
 1. Split **Active / Archives / History** instead of one mixed “Your auctions” list  
 2. Archives deep-link to **leaderboard**, not bidding room  
 3. History shows **ordinal finish + year** with podium emojis only for 1–3  
-4. Match scores as a **nav link**, not a dashboard card  
+4. Match scores is **not** a dashboard card (top-nav link removed Oct 2026; per-auction access via Archives / side menu)  
 5. Nation-rolling deadlines as a **dedicated control**, not fake global columns  
 6. Leaderboard Best XI / bench split after publish  
 7. **Left side menu** for in-auction sections (not horizontal tab strip) — see [Mobile auction chrome](#mobile-auction-chrome-validated--keep)  

@@ -29,12 +29,6 @@ export function ParticipantNav({ active }: ParticipantNavProps) {
       </Link>
       <span className="mx-1 hidden h-5 w-px bg-slate-200 sm:inline-block" aria-hidden />
       <Link
-        href="/match-scores"
-        className="inline-flex min-h-10 items-center rounded-lg px-3 py-2 text-sm font-medium text-slate-600 underline-offset-2 hover:text-sky-800 hover:underline"
-      >
-        Match scores
-      </Link>
-      <Link
         href="/rules"
         className="inline-flex min-h-10 items-center rounded-lg px-3 py-2 text-sm font-medium text-slate-600 underline-offset-2 hover:text-sky-800 hover:underline"
       >
