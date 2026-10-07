@@ -1,7 +1,7 @@
 import "server-only";
 
-import type { GroupStageGw, MatchScoreSheet } from "@/lib/match-scores/types";
-import { getMatchScoreGroupsForCompetitionId, WC_SHEETS } from "@/lib/match-scores/sheets";
+import type { GroupStageGw, MatchScoreSheet } from "@/lib/scoring/match-scores/types";
+import { getMatchScoreGroupsForCompetitionId, WC_SHEETS } from "@/lib/scoring/match-scores/sheets";
 
 /** UEFA Champions League 2026/27 — competition_id 4, legacy GW ids 300–399. */
 const UCL_2026_27_COMPETITION_ID = 4;

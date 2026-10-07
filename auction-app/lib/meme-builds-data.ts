@@ -1,6 +1,6 @@
 import "server-only";
 
-import { loadMatchPositionsForGameweek } from "@/lib/match-positions-for-gw";
+import { loadMatchPositionsForGameweek } from "@/lib/scoring/match-positions-for-gw";
 import {
   MEME_BUILD_GAME_WEEK_IDS,
   type MemeBuildGwInfo,

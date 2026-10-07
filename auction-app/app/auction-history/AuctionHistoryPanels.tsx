@@ -8,8 +8,8 @@ import { TrophyCabinet } from "@/app/_components/TrophyCabinet";
 import {
   formatFinishLabel,
   type AuctionHistoryEntry,
-} from "@/lib/auction-history-shared";
-import type { TrophyCabinetEntry } from "@/lib/trophy-cabinet-awards";
+} from "@/lib/scoring/auction-history-shared";
+import type { TrophyCabinetEntry } from "@/lib/scoring/trophy-cabinet-awards";
 
 export type HistoryTabId = "past-finishes" | "trophy-cabinet";
 

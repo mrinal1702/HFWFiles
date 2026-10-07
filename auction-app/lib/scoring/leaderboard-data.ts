@@ -1,10 +1,10 @@
 import { createAdminClient } from "@/lib/supabase-server";
-import type { XiRole } from "@/lib/best-xi-display";
-import { parseXiRole } from "@/lib/best-xi-display";
+import type { XiRole } from "@/lib/scoring/best-xi-display";
+import { parseXiRole } from "@/lib/scoring/best-xi-display";
 import { fetchAuctionUserNames } from "@/lib/auction-users-query";
 import { isUserRelegated } from "@/lib/relegated-participants";
-import { loadBestXiOverlay } from "@/lib/best-xi-overlay";
-import { loadMatchPositionsForGameweek } from "@/lib/match-positions-for-gw";
+import { loadBestXiOverlay } from "@/lib/scoring/best-xi-overlay";
+import { loadMatchPositionsForGameweek } from "@/lib/scoring/match-positions-for-gw";
 import {
   fetchPlayerMetaByIds,
   resolveAuctionCompetitionId,

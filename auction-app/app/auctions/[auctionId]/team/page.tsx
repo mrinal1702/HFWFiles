@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { createAdminClient } from "@/lib/supabase-server";
-import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
+import { loadAuctionDashboardForViewer } from "@/lib/auction-state/auction-dashboard";
 import { ReleaseButton } from "./_components/ReleaseButton";
 
 export const dynamic = "force-dynamic";

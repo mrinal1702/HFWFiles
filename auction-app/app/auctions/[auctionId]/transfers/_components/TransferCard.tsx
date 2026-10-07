@@ -11,8 +11,8 @@ import {
   rejectTransferAction,
   type TransferActionState,
 } from "@/app/auctions/[auctionId]/transfers/actions";
-import { transferStatusColor, transferStatusLabel } from "@/lib/transfer-messages";
-import type { EnrichedTransfer } from "@/lib/transfers";
+import { transferStatusColor, transferStatusLabel } from "@/lib/auction-state/transfer-messages";
+import type { EnrichedTransfer } from "@/lib/auction-state/transfers";
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
 
 function DealSide({

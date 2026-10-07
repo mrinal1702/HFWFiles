@@ -1,5 +1,5 @@
 import { ScoresTabs } from "@/app/scores/_components/ScoresTabs";
-import { MATCH_SCORE_GROUPS } from "@/lib/match-scores/sheets";
+import { MATCH_SCORE_GROUPS } from "@/lib/scoring/match-scores/sheets";
 
 export default async function MatchScoresPage({
   searchParams,

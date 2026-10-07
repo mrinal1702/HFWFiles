@@ -3,7 +3,7 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback } from "react";
 
-import type { GwInfo } from "@/lib/leaderboard-data";
+import type { GwInfo } from "@/lib/scoring/leaderboard-data";
 
 interface GwSelectProps {
   gameWeeks: GwInfo[];

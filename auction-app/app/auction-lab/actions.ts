@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 
 import { getLabAuctionId } from "@/lib/auction-lab-config";
-import { placeBid } from "@/lib/bidding";
+import { placeBid } from "@/lib/auction-state/bidding";
 import { createAdminClient } from "@/lib/supabase-server";
 
 export type BidFormState =

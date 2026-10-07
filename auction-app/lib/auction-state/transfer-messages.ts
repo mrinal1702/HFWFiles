@@ -1,4 +1,4 @@
-import type { TransferErrorCode } from "@/lib/transfers";
+import type { TransferErrorCode } from "@/lib/auction-state/transfers";
 
 export function transferErrorMessage(code: TransferErrorCode): string {
   switch (code) {

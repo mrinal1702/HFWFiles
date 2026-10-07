@@ -1,4 +1,4 @@
-import { loadCompetitorsSummary } from "@/lib/auction-dashboard";
+import { loadCompetitorsSummary } from "@/lib/auction-state/auction-dashboard";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { adminModifyBudget } from "../actions";
 import { ModifyBudgetClient, type BudgetParticipant } from "./_components/ModifyBudgetClient";

@@ -1,6 +1,6 @@
 import { createAdminClient } from "@/lib/supabase-server";
 import { resolveAuctionCompetitionId } from "@/lib/players-query";
-import { loadTransfersForAuction } from "@/lib/transfers";
+import { loadTransfersForAuction } from "@/lib/auction-state/transfers";
 import {
   adminApproveTransferAction,
   adminRejectTransferAction,

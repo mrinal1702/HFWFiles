@@ -1,6 +1,6 @@
 "use client";
 
-import { formatListedPosition, listedPositionSortKey } from "@/lib/best-xi-display";
+import { formatListedPosition, listedPositionSortKey } from "@/lib/scoring/best-xi-display";
 import { MAX_STARTING_XI, type MemeBuild, type MemeBuildPoolPlayer } from "@/lib/meme-builds/types";
 import { PlayerPoolPicker } from "./PlayerPoolPicker";
 

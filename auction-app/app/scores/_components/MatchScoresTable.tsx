@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import type { MatchScoreRow } from "@/lib/match-scores/types";
+import type { MatchScoreRow } from "@/lib/scoring/match-scores/types";
 
 function formatScore(value: number): string {
   if (Number.isInteger(value)) return String(value);

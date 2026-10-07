@@ -11,8 +11,8 @@ import {
 } from "@/lib/auction-actor-cookie";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { assertActiveParticipant } from "@/lib/relegated-guard";
-import { placeBidErrorMessage } from "@/lib/bid-ui-messages";
-import { placeBid } from "@/lib/bidding";
+import { placeBidErrorMessage } from "@/lib/auction-state/bid-ui-messages";
+import { placeBid } from "@/lib/auction-state/bidding";
 import { createAdminClient } from "@/lib/supabase-server";
 
 export type AuctionBidState =

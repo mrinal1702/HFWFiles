@@ -7,7 +7,7 @@ import {
   formatMatchPosition,
   listedPositionSortKey,
   type XiRole,
-} from "@/lib/best-xi-display";
+} from "@/lib/scoring/best-xi-display";
 import { computeBuildGwTotal } from "@/lib/meme-builds/scoring";
 import type {
   MemeBuild,

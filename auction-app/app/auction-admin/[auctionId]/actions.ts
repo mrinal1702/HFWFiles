@@ -6,9 +6,9 @@ import { getAuthUser } from "@/lib/auth/get-user";
 import { createAdminClient } from "@/lib/supabase-server";
 import { requireAuctionAdmin, isGoalkeeperPosition } from "@/lib/online-auction-admin";
 import { fetchPlayerMetaByIds, resolveAuctionCompetitionId } from "@/lib/players-query";
-import { SQUAD_LIMIT } from "@/lib/squad-limit";
-import { adminApproveTransfer, adminRejectTransfer } from "@/lib/transfers";
-import { transferErrorMessage } from "@/lib/transfer-messages";
+import { SQUAD_LIMIT } from "@/lib/auction-state/squad-limit";
+import { adminApproveTransfer, adminRejectTransfer } from "@/lib/auction-state/transfers";
+import { transferErrorMessage } from "@/lib/auction-state/transfer-messages";
 
 export type AdminActionState = { ok?: boolean; error?: string; message?: string } | null;
 

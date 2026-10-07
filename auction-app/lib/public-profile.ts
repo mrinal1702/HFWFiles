@@ -3,7 +3,7 @@ import { cache } from "react";
 import {
   loadAuctionHistoryForUser,
   type AuctionHistoryEntry,
-} from "@/lib/auction-history";
+} from "@/lib/scoring/auction-history";
 import { createAdminClient } from "@/lib/supabase-server";
 
 /** Strict public fields for another signed-in user's HFW profile. */

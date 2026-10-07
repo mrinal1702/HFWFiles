@@ -8,10 +8,10 @@ import {
 } from "@/lib/auction-actor-cookie";
 import { isArchivedCompetition, loadArchivedCompetitionIds } from "@/lib/archived-auctions";
 import { getAuthUser } from "@/lib/auth/get-user";
-import { isGoalkeeperPosition } from "@/lib/bid-ui-messages";
+import { isGoalkeeperPosition } from "@/lib/auction-state/bid-ui-messages";
 import type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
 import { fetchAuctionUsers } from "@/lib/auction-users-query";
-import { finalizeAuctionHardDeadline, finalizeDueNationDeadlines, finalizeExpiredLots } from "@/lib/bidding";
+import { finalizeAuctionHardDeadline, finalizeDueNationDeadlines, finalizeExpiredLots } from "@/lib/auction-state/bidding";
 import { fetchPlayersByIds, resolveAuctionCompetitionId } from "@/lib/players-query";
 import { createAdminClient } from "@/lib/supabase-server";
 

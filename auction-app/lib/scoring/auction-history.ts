@@ -3,17 +3,17 @@ import { cache } from "react";
 import { auctionHistoryYear, isHistoryAuctionId } from "@/lib/archived-auctions";
 import {
   type AuctionHistoryEntry,
-} from "@/lib/auction-history-shared";
-import { getLeaderboardData } from "@/lib/leaderboard-data";
+} from "@/lib/scoring/auction-history-shared";
+import { getLeaderboardData } from "@/lib/scoring/leaderboard-data";
 import { createAdminClient } from "@/lib/supabase-server";
 
-export type { AuctionHistoryEntry } from "@/lib/auction-history-shared";
+export type { AuctionHistoryEntry } from "@/lib/scoring/auction-history-shared";
 export {
   finishMedalEmoji,
   formatFinishLabel,
   formatOrdinalRank,
   trophiesFromHistory,
-} from "@/lib/auction-history-shared";
+} from "@/lib/scoring/auction-history-shared";
 
 /**
  * Auction History for the signed-in auth user: finished tournaments they joined

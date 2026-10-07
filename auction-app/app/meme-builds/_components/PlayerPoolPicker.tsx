@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { formatListedPosition, listedPositionSortKey } from "@/lib/best-xi-display";
+import { formatListedPosition, listedPositionSortKey } from "@/lib/scoring/best-xi-display";
 import type { MemeBuildPoolPlayer } from "@/lib/meme-builds/types";
 
 type PositionFilter = "all" | "gk" | "def" | "mid" | "fwd";

@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 import { ManagerChip } from "@/app/_components/entity/ManagerChip";
-import type { GwInfo, ParticipantGwSquad } from "@/lib/leaderboard-data";
+import type { GwInfo, ParticipantGwSquad } from "@/lib/scoring/leaderboard-data";
 
 import { GwSelect } from "./GwSelect";
 import { GwSquadTable } from "./GwSquadTable";

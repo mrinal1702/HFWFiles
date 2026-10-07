@@ -3,10 +3,10 @@ import "server-only";
 import fs from "node:fs";
 import path from "node:path";
 
-import type { XiRole } from "@/lib/best-xi-display";
-import { parseXiRole } from "@/lib/best-xi-display";
+import type { XiRole } from "@/lib/scoring/best-xi-display";
+import { parseXiRole } from "@/lib/scoring/best-xi-display";
 
-export type { XiRole } from "@/lib/best-xi-display";
+export type { XiRole } from "@/lib/scoring/best-xi-display";
 
 type BestXiJsonManager = {
   auction_user_id: string;

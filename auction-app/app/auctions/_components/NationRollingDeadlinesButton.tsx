@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
-import type { NationDeadlineRow } from "@/lib/nation-deadlines-data";
+import type { NationDeadlineRow } from "@/lib/auction-state/nation-deadlines-data";
 
 type Props = {
   deadlines: NationDeadlineRow[];

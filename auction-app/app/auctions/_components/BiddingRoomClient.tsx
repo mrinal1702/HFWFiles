@@ -5,9 +5,9 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 
 import { ManagerChip } from "@/app/_components/entity/ManagerChip";
-import { getBidDisabledReason, lotRaiseModeActive } from "@/lib/auction-bid-gates";
-import { lotRowAnchorId } from "@/lib/lot-row-anchor";
-import { nextMinimumBidAmount, positionSortRank } from "@/lib/bid-ui-messages";
+import { getBidDisabledReason, lotRaiseModeActive } from "@/lib/auction-state/auction-bid-gates";
+import { lotRowAnchorId } from "@/lib/auction-state/lot-row-anchor";
+import { nextMinimumBidAmount, positionSortRank } from "@/lib/auction-state/bid-ui-messages";
 import type { BidGateContext, EnrichedLot } from "@/lib/auction-types";
 
 import { BidRowForm } from "./BidRowForm";

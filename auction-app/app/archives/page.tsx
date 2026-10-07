@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { ParticipantNav } from "@/app/_components/ParticipantNav";
 import { getAuthUser } from "@/lib/auth/get-user";
-import { loadMyArchivedAuctionsForUser } from "@/lib/auction-dashboard";
+import { loadMyArchivedAuctionsForUser } from "@/lib/auction-state/auction-dashboard";
 import { signOutAction } from "@/app/auth/actions";
 
 export const dynamic = "force-dynamic";

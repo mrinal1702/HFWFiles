@@ -1,4 +1,4 @@
-import type { PlaceBidErrorCode } from "@/lib/bidding";
+import type { PlaceBidErrorCode } from "@/lib/auction-state/bidding";
 
 /** User-facing copy for place_bid JSON error codes (see auction-bidding.sql + auction-deadline-rules.sql). */
 const MESSAGES: Record<PlaceBidErrorCode, string> = {

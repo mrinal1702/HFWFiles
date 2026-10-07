@@ -1,10 +1,10 @@
 import { notFound, redirect } from "next/navigation";
 
 import { RespondTransferClient } from "@/app/auctions/[auctionId]/transfers/[transferId]/respond/_components/RespondTransferClient";
-import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
+import { loadAuctionDashboardForViewer } from "@/lib/auction-state/auction-dashboard";
 import { fetchPlayerMetaByIds, resolveAuctionCompetitionId } from "@/lib/players-query";
 import { createAdminClient } from "@/lib/supabase-server";
-import type { AuctionTransfer } from "@/lib/transfers";
+import type { AuctionTransfer } from "@/lib/auction-state/transfers";
 
 export const dynamic = "force-dynamic";
 

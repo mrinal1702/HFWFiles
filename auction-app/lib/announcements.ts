@@ -6,7 +6,7 @@ import {
   type PlayerMetaRow,
 } from "@/lib/players-query";
 import { createAdminClient } from "@/lib/supabase-server";
-import type { PlayerMeta } from "@/lib/transfers";
+import type { PlayerMeta } from "@/lib/auction-state/transfers";
 
 /** Rolling lot window length — matches place_bid (24h from winning bid, capped at hard deadline). */
 const SALE_WINDOW_MS = 24 * 60 * 60 * 1000;

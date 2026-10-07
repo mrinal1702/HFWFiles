@@ -1,7 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 
 import { ProposeTransferClient } from "@/app/auctions/[auctionId]/transfers/new/_components/ProposeTransferClient";
-import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
+import { loadAuctionDashboardForViewer } from "@/lib/auction-state/auction-dashboard";
 import { fetchPlayerMetaByIds, resolveAuctionCompetitionId } from "@/lib/players-query";
 import { createAdminClient } from "@/lib/supabase-server";
 

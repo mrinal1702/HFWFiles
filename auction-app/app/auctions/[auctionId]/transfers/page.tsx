@@ -3,11 +3,11 @@ import Link from "next/link";
 import { TransferCard } from "@/app/auctions/[auctionId]/transfers/_components/TransferCard";
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
 import { getAuthUser } from "@/lib/auth/get-user";
-import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
+import { loadAuctionDashboardForViewer } from "@/lib/auction-state/auction-dashboard";
 import { createAdminClient } from "@/lib/supabase-server";
-import { transferStatusColor, transferStatusLabel } from "@/lib/transfer-messages";
+import { transferStatusColor, transferStatusLabel } from "@/lib/auction-state/transfer-messages";
 import { resolveAuctionCompetitionId } from "@/lib/players-query";
-import { loadTransfersForAuction, voidExpiredTransfers } from "@/lib/transfers";
+import { loadTransfersForAuction, voidExpiredTransfers } from "@/lib/auction-state/transfers";
 
 export const dynamic = "force-dynamic";
 

@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 
 import { MatchScoresTable } from "@/app/scores/_components/MatchScoresTable";
-import type { GroupStageGw, MatchScoreGroup, MatchScoreSheet } from "@/lib/match-scores/types";
+import type { GroupStageGw, MatchScoreGroup, MatchScoreSheet } from "@/lib/scoring/match-scores/types";
 
 function resolveInitialSelection(
   groups: MatchScoreGroup[],

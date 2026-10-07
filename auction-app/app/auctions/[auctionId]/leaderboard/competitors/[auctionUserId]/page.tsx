@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
 
-import { GwPointsView } from "@/app/leaderboard/[auctionId]/_components/GwPointsView";
+import { GwPointsView } from "@/app/auctions/[auctionId]/leaderboard/_components/GwPointsView";
 import { fetchAuctionUserNames } from "@/lib/auction-users-query";
 import {
   getLeaderboardData,
   getPointsGwContext,
   parseGwSearchParam,
-} from "@/lib/leaderboard-data";
+} from "@/lib/scoring/leaderboard-data";
 import { createAdminClient } from "@/lib/supabase-server";
 
 export const dynamic = "force-dynamic";
@@ -58,7 +58,7 @@ export default async function LeaderboardCompetitorPointsPage({
         seasonTotal={seasonTotal}
         basePath={basePath}
         backHref={backHref}
-        backLabel="← Competitors"
+        backLabel="← Competitors – Points"
       />
     </section>
   );

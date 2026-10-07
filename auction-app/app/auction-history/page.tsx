@@ -4,8 +4,8 @@ import { Suspense } from "react";
 
 import { ParticipantNav } from "@/app/_components/ParticipantNav";
 import { getAuthUser } from "@/lib/auth/get-user";
-import { loadAuctionHistoryForUser } from "@/lib/auction-history";
-import { buildTrophyCabinet } from "@/lib/trophy-cabinet-awards";
+import { loadAuctionHistoryForUser } from "@/lib/scoring/auction-history";
+import { buildTrophyCabinet } from "@/lib/scoring/trophy-cabinet-awards";
 import { signOutAction } from "@/app/auth/actions";
 
 import {

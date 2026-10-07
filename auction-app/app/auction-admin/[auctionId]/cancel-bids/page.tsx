@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { loadCompetitorsSummary } from "@/lib/auction-dashboard";
+import { loadCompetitorsSummary } from "@/lib/auction-state/auction-dashboard";
 import { getAuthUser } from "@/lib/auth/get-user";
 
 export const dynamic = "force-dynamic";

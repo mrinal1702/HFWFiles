@@ -1,6 +1,6 @@
-import { isGoalkeeperPosition } from "@/lib/bid-ui-messages";
+import { isGoalkeeperPosition } from "@/lib/auction-state/bid-ui-messages";
 import type { BidGateContext, EnrichedLot } from "@/lib/auction-types";
-import { SQUAD_LIMIT } from "@/lib/squad-limit";
+import { SQUAD_LIMIT } from "@/lib/auction-state/squad-limit";
 
 export function lotRaiseModeActive(lot: EnrichedLot, ctx: BidGateContext): boolean {
   if (ctx.nationRollingMode) return lot.nation_raise_mode_active;

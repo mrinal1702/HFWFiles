@@ -1,5 +1,5 @@
 import { ManagerChip } from "@/app/_components/entity/ManagerChip";
-import type { CompetitorSummaryRow } from "@/lib/auction-dashboard";
+import type { CompetitorSummaryRow } from "@/lib/auction-state/auction-dashboard";
 
 type Props = {
   auctionId: number;

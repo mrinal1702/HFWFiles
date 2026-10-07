@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { loadAuctionDashboard } from "@/lib/auction-dashboard";
+import { loadAuctionDashboard } from "@/lib/auction-state/auction-dashboard";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { positionSortRank } from "@/lib/online-auction-admin";
 import { adminAddPlayerToTeam } from "../../../actions";

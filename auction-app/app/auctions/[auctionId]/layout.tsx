@@ -7,9 +7,9 @@ import { AuctionSideNav } from "@/app/auctions/_components/AuctionSideNav";
 import { NationRollingDeadlinesButton } from "@/app/auctions/_components/NationRollingDeadlinesButton";
 import { RefreshButton } from "@/app/auctions/_components/RefreshButton";
 import { getAuthUser } from "@/lib/auth/get-user";
-import { loadAuctionDashboard } from "@/lib/auction-dashboard";
+import { loadAuctionDashboard } from "@/lib/auction-state/auction-dashboard";
 import { isAuctionSpectator } from "@/lib/auction-spectators";
-import { loadNationDeadlinesForAuction } from "@/lib/nation-deadlines-data";
+import { loadNationDeadlinesForAuction } from "@/lib/auction-state/nation-deadlines-data";
 
 export const dynamic = "force-dynamic";
 

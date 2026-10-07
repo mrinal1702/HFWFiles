@@ -10,7 +10,7 @@ import type {
   ReleaseAnnouncement,
   TransferAnnouncement,
 } from "@/lib/announcements";
-import type { PlayerMeta } from "@/lib/transfers";
+import type { PlayerMeta } from "@/lib/auction-state/transfers";
 
 const FILTERS: { id: AnnouncementFilter; label: string }[] = [
   { id: "all", label: "All" },

@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 
 import { ParticipantNav } from "@/app/_components/ParticipantNav";
 import { getAuthUser } from "@/lib/auth/get-user";
-import { loadMyActiveAuctionsForUser } from "@/lib/auction-dashboard";
+import { loadMyActiveAuctionsForUser } from "@/lib/auction-state/auction-dashboard";
 import { loadMyAdminAuctionsForUser } from "@/lib/online-auction-admin";
 import { loadMyLiveAuctionsForDashboard } from "@/lib/live-auction-data";
 import type { DashboardLiveAuctionRow } from "@/lib/live-auction-types";

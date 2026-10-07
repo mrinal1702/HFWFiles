@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useState } from "react";
 
-import type { AuctionMatchweek } from "@/lib/auction-fixtures";
+import type { AuctionMatchweek } from "@/lib/auction-state/auction-fixtures";
 
 type Props = {
   matchweeks: AuctionMatchweek[];

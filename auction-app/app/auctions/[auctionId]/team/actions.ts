@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 
 import { getAuthUser } from "@/lib/auth/get-user";
-import { loadAuctionDashboard } from "@/lib/auction-dashboard";
+import { loadAuctionDashboard } from "@/lib/auction-state/auction-dashboard";
 import { assertActiveParticipant } from "@/lib/relegated-guard";
 import { createAdminClient } from "@/lib/supabase-server";
 

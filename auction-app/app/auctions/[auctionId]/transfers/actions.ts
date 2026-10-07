@@ -5,7 +5,7 @@ import { revalidatePath } from "next/cache";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { assertActiveParticipant } from "@/lib/relegated-guard";
 import { createAdminClient } from "@/lib/supabase-server";
-import { transferErrorMessage } from "@/lib/transfer-messages";
+import { transferErrorMessage } from "@/lib/auction-state/transfer-messages";
 import {
   adminApproveTransfer,
   adminRejectTransfer,
@@ -14,7 +14,7 @@ import {
   proposeTransfer,
   rejectTransfer,
   respondToTransfer,
-} from "@/lib/transfers";
+} from "@/lib/auction-state/transfers";
 
 export type TransferActionState =
   | { ok: true; message: string }

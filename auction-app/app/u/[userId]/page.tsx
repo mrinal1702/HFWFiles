@@ -4,9 +4,9 @@ import { notFound, redirect } from "next/navigation";
 import { ProfileAvatarZoom } from "@/app/_components/entity/ProfileAvatarZoom";
 import { TrophyCabinet } from "@/app/_components/TrophyCabinet";
 import { getAuthUser } from "@/lib/auth/get-user";
-import { formatFinishLabel } from "@/lib/auction-history";
+import { formatFinishLabel } from "@/lib/scoring/auction-history";
 import { loadPublicProfile } from "@/lib/public-profile";
-import { buildTrophyCabinet } from "@/lib/trophy-cabinet-awards";
+import { buildTrophyCabinet } from "@/lib/scoring/trophy-cabinet-awards";
 
 export const dynamic = "force-dynamic";
 

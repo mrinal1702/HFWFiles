@@ -5,9 +5,9 @@ import { ManagerChip } from "@/app/_components/entity/ManagerChip";
 import { BidRowForm } from "@/app/auctions/_components/BidRowForm";
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
 import { getAuthUser } from "@/lib/auth/get-user";
-import { getBidDisabledReason, lotRaiseModeActive } from "@/lib/auction-bid-gates";
-import { nextMinimumBidAmount } from "@/lib/bid-ui-messages";
-import { lotRowAnchorId } from "@/lib/lot-row-anchor";
+import { getBidDisabledReason, lotRaiseModeActive } from "@/lib/auction-state/auction-bid-gates";
+import { nextMinimumBidAmount } from "@/lib/auction-state/bid-ui-messages";
+import { lotRowAnchorId } from "@/lib/auction-state/lot-row-anchor";
 import { loadPlayerAuctionDetail } from "@/lib/player-auction-detail";
 
 export const dynamic = "force-dynamic";

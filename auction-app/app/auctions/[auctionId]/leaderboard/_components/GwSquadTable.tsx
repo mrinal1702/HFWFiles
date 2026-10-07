@@ -1,12 +1,12 @@
 "use client";
 
-import type { GwSquadPlayer } from "@/lib/leaderboard-data";
+import type { GwSquadPlayer } from "@/lib/scoring/leaderboard-data";
 import {
   compareXiPlayersForDisplay,
   formatListedPosition,
   formatMatchPosition,
   listedPositionSortKey,
-} from "@/lib/best-xi-display";
+} from "@/lib/scoring/best-xi-display";
 
 function scoreLabel(player: GwSquadPlayer): string {
   return player.score != null ? String(player.score) : "—";

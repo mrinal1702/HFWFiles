@@ -4,7 +4,7 @@ import {
   loadAuctionDashboard,
   toBidGateContext,
   type AuctionDashboard,
-} from "@/lib/auction-dashboard";
+} from "@/lib/auction-state/auction-dashboard";
 import type { AuctionUserRow, BidGateContext, EnrichedLot } from "@/lib/auction-types";
 import { createAdminClient } from "@/lib/supabase-server";
 

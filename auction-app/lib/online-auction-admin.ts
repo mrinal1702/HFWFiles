@@ -1,7 +1,7 @@
 import "server-only";
 
 import { createAdminClient } from "@/lib/supabase-server";
-import { isGoalkeeperPosition, positionSortRank } from "@/lib/bid-ui-messages";
+import { isGoalkeeperPosition, positionSortRank } from "@/lib/auction-state/bid-ui-messages";
 import { isArchivedCompetition, loadArchivedCompetitionIds } from "@/lib/archived-auctions";
 
 /**

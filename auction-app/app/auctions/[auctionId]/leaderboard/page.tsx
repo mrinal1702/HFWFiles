@@ -1,13 +1,13 @@
 import { Suspense } from "react";
 
-import { LeaderboardTabs, type LeaderboardTabId } from "@/app/leaderboard/[auctionId]/_components/LeaderboardTabs";
+import { LeaderboardTabs, type LeaderboardTabId } from "@/app/auctions/[auctionId]/leaderboard/_components/LeaderboardTabs";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { fetchAuctionUserNames } from "@/lib/auction-users-query";
 import {
   getLeaderboardData,
   getPointsGwContext,
   parseGwSearchParam,
-} from "@/lib/leaderboard-data";
+} from "@/lib/scoring/leaderboard-data";
 import { createAdminClient } from "@/lib/supabase-server";
 
 export const dynamic = "force-dynamic";

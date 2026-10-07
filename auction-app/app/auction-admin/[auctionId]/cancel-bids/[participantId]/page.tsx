@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { loadCompetitorView } from "@/lib/auction-dashboard";
+import { loadCompetitorView } from "@/lib/auction-state/auction-dashboard";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { adminCancelBid } from "../../actions";
 import { CancelBidsClient, type HeldBid } from "./_components/CancelBidsClient";

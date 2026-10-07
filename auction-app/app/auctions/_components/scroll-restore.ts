@@ -1,6 +1,6 @@
 "use client";
 
-import { lotRowAnchorId } from "@/lib/lot-row-anchor";
+import { lotRowAnchorId } from "@/lib/auction-state/lot-row-anchor";
 
 const SCROLL_KEY_PREFIX = "hfw:scroll-restore:";
 const MAX_AGE_MS = 5 * 60 * 1000;

@@ -1,5 +1,5 @@
 import { BiddingRoomClient } from "@/app/auctions/_components/BiddingRoomClient";
-import { loadAuctionDashboardForViewer, toBidGateContext } from "@/lib/auction-dashboard";
+import { loadAuctionDashboardForViewer, toBidGateContext } from "@/lib/auction-state/auction-dashboard";
 
 export const dynamic = "force-dynamic";
 

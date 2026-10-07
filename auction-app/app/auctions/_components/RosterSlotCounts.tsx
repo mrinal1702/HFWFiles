@@ -1,4 +1,4 @@
-import { remainingBidSlots, SQUAD_LIMIT } from "@/lib/squad-limit";
+import { remainingBidSlots, SQUAD_LIMIT } from "@/lib/auction-state/squad-limit";
 
 type Props = {
   owned: number;

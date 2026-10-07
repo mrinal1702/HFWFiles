@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { loadAuctionDashboardForViewer } from "@/lib/auction-dashboard";
+import { loadAuctionDashboardForViewer } from "@/lib/auction-state/auction-dashboard";
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
 import { RosterSlotCounts } from "@/app/auctions/_components/RosterSlotCounts";
 

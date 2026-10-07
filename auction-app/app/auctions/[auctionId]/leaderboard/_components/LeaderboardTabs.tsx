@@ -3,7 +3,7 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useMemo } from "react";
 
-import type { GwInfo, ParticipantGwSquad, StandingEntry } from "@/lib/leaderboard-data";
+import type { GwInfo, ParticipantGwSquad, StandingEntry } from "@/lib/scoring/leaderboard-data";
 
 import { CompetitorsPointsList, type CompetitorListEntry } from "./CompetitorsPointsList";
 import { GwPointsView } from "./GwPointsView";
@@ -15,7 +15,7 @@ export type LeaderboardTabId = "standings" | "my-points" | "competitors";
 const TABS: Array<{ id: LeaderboardTabId; label: string }> = [
   { id: "standings", label: "Standings" },
   { id: "my-points", label: "My Points" },
-  { id: "competitors", label: "Competitors" },
+  { id: "competitors", label: "Competitors – Points" },
 ];
 
 function parseTab(value: string | null | undefined): LeaderboardTabId {

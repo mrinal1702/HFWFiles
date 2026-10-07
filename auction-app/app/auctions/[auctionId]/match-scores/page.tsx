@@ -1,5 +1,5 @@
 import { ScoresTabs } from "@/app/scores/_components/ScoresTabs";
-import { getMatchScoreGroupsForCompetitionId } from "@/lib/match-scores/sheets";
+import { getMatchScoreGroupsForCompetitionId } from "@/lib/scoring/match-scores/sheets";
 import { createAdminClient } from "@/lib/supabase-server";
 
 export const dynamic = "force-dynamic";

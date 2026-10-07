@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 
 import { Avatar } from "@/app/_components/entity/Avatar";
 import { getAuthUser } from "@/lib/auth/get-user";
-import { loadCompetitorView } from "@/lib/auction-dashboard";
+import { loadCompetitorView } from "@/lib/auction-state/auction-dashboard";
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
 import { RosterSlotCounts } from "@/app/auctions/_components/RosterSlotCounts";
 import { fantasyTeamLabel } from "@/lib/team-name";
@@ -70,7 +70,7 @@ export default async function CompetitorDetailPage({
           href={`/auctions/${auctionId}/competitors`}
           className="inline-block min-h-10 py-2 text-sm font-medium text-sky-700 underline hover:text-sky-900"
         >
-          ← Competitors
+          ← Competitors – Bidding
         </Link>
         <div className="mt-2 flex items-center gap-3">
           {v.competitor.user_id ? (

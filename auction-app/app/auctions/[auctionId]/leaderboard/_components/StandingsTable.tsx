@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 
 import { ManagerChip } from "@/app/_components/entity/ManagerChip";
-import type { StandingEntry, GwInfo } from "@/lib/leaderboard-data";
+import type { StandingEntry, GwInfo } from "@/lib/scoring/leaderboard-data";
 import { fantasyTeamLabel } from "@/lib/team-name";
 
 interface StandingsTableProps {
