@@ -1,0 +1,1589 @@
+{
+  "auction_id": 6,
+  "gw_id": 4,
+  "managers": [
+    {
+      "auction_user_id": "50",
+      "user_name": "Advait Trivedi",
+      "gw_id": 4,
+      "formation": "5-4-1",
+      "formation_tuple": [
+        5,
+        4,
+        1
+      ],
+      "total_points": 497,
+      "goalkeeper": {
+        "player_id": 90006262,
+        "player_name": "Morocco Keepers",
+        "score": 30
+      },
+      "outfield": [
+        {
+          "player_id": 847983,
+          "player_name": "Lisandro Mart\u00ednez",
+          "role": "D",
+          "score": 60,
+          "flexible": false
+        },
+        {
+          "player_id": 411617,
+          "player_name": "Aymeric Laporte",
+          "role": "D",
+          "score": 54,
+          "flexible": false
+        },
+        {
+          "player_id": 1418549,
+          "player_name": "Marwan Ateya",
+          "role": "M",
+          "score": 53,
+          "flexible": false
+        },
+        {
+          "player_id": 1089691,
+          "player_name": "Elliot Anderson",
+          "role": "M",
+          "score": 51,
+          "flexible": false
+        },
+        {
+          "player_id": 194165,
+          "player_name": "Harry Kane",
+          "role": "F",
+          "score": 48,
+          "flexible": false
+        },
+        {
+          "player_id": 860913,
+          "player_name": "Jhon Lucum\u00ed",
+          "role": "D",
+          "score": 48,
+          "flexible": false
+        },
+        {
+          "player_id": 465750,
+          "player_name": "Timothy Castagne",
+          "role": "D",
+          "score": 43,
+          "flexible": false
+        },
+        {
+          "player_id": 860752,
+          "player_name": "Rub\u00e9n Vargas",
+          "role": "M",
+          "score": 37,
+          "flexible": true
+        },
+        {
+          "player_id": 1342757,
+          "player_name": "Jo\u00e3o Neves",
+          "role": "M",
+          "score": 37,
+          "flexible": false
+        },
+        {
+          "player_id": 198444,
+          "player_name": "Tim Ream",
+          "role": "D",
+          "score": 36,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        194165,
+        198444,
+        411617,
+        465750,
+        847983,
+        860752,
+        860913,
+        1089691,
+        1342757,
+        1418549,
+        90006262
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 17,
+      "missing_score_player_ids": []
+    },
+    {
+      "auction_user_id": "59",
+      "user_name": "Ali Sharafally",
+      "gw_id": 4,
+      "formation": "5-4-1",
+      "formation_tuple": [
+        5,
+        4,
+        1
+      ],
+      "total_points": 465,
+      "goalkeeper": {
+        "player_id": 90006708,
+        "player_name": "Netherlands Keepers",
+        "score": 35
+      },
+      "outfield": [
+        {
+          "player_id": 1029063,
+          "player_name": "Michael Olise",
+          "role": "M",
+          "score": 71,
+          "flexible": true
+        },
+        {
+          "player_id": 552718,
+          "player_name": "Kristoffer Ajer",
+          "role": "D",
+          "score": 55,
+          "flexible": false
+        },
+        {
+          "player_id": 720560,
+          "player_name": "Juli\u00e1n Qui\u00f1ones",
+          "role": "F",
+          "score": 51,
+          "flexible": false
+        },
+        {
+          "player_id": 720737,
+          "player_name": "Roberto Alvarado",
+          "role": "M",
+          "score": 45,
+          "flexible": true
+        },
+        {
+          "player_id": 942372,
+          "player_name": "\u00c1lex Baena",
+          "role": "M",
+          "score": 42,
+          "flexible": true
+        },
+        {
+          "player_id": 955406,
+          "player_name": "William Saliba",
+          "role": "D",
+          "score": 38,
+          "flexible": false
+        },
+        {
+          "player_id": 346000,
+          "player_name": "Douglas Santos",
+          "role": "D",
+          "score": 37,
+          "flexible": false
+        },
+        {
+          "player_id": 705450,
+          "player_name": "Jules Kound\u00e9",
+          "role": "D",
+          "score": 31,
+          "flexible": false
+        },
+        {
+          "player_id": 1114979,
+          "player_name": "Emmanuel Agbadou",
+          "role": "D",
+          "score": 31,
+          "flexible": false
+        },
+        {
+          "player_id": 1520063,
+          "player_name": "Johan Manzambi",
+          "role": "M",
+          "score": 29,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        346000,
+        552718,
+        705450,
+        720560,
+        720737,
+        942372,
+        955406,
+        1029063,
+        1114979,
+        1520063,
+        90006708
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 17,
+      "missing_score_player_ids": []
+    },
+    {
+      "auction_user_id": "61",
+      "user_name": "Arnav Gupta",
+      "gw_id": 4,
+      "formation": "5-4-1",
+      "formation_tuple": [
+        5,
+        4,
+        1
+      ],
+      "total_points": 454,
+      "goalkeeper": {
+        "player_id": 90006723,
+        "player_name": "France Keepers",
+        "score": 32
+      },
+      "outfield": [
+        {
+          "player_id": 521318,
+          "player_name": "Manuel Akanji",
+          "role": "D",
+          "score": 52,
+          "flexible": false
+        },
+        {
+          "player_id": 664644,
+          "player_name": "C\u00e9sar Montes",
+          "role": "D",
+          "score": 50,
+          "flexible": false
+        },
+        {
+          "player_id": 1532137,
+          "player_name": "Pau Cubars\u00ed",
+          "role": "D",
+          "score": 48,
+          "flexible": false
+        },
+        {
+          "player_id": 950829,
+          "player_name": "Chris Richards",
+          "role": "D",
+          "score": 47,
+          "flexible": false
+        },
+        {
+          "player_id": 1107735,
+          "player_name": "Sphephelo Sithole",
+          "role": "M",
+          "score": 41,
+          "flexible": false
+        },
+        {
+          "player_id": 267365,
+          "player_name": "Marquinhos",
+          "role": "D",
+          "score": 40,
+          "flexible": false
+        },
+        {
+          "player_id": 1084981,
+          "player_name": "Noni Madueke",
+          "role": "F",
+          "score": 40,
+          "flexible": true
+        },
+        {
+          "player_id": 848266,
+          "player_name": "Weston McKennie",
+          "role": "M",
+          "score": 35,
+          "flexible": true
+        },
+        {
+          "player_id": 1083323,
+          "player_name": "Pedri",
+          "role": "M",
+          "score": 35,
+          "flexible": false
+        },
+        {
+          "player_id": 1331597,
+          "player_name": "Gustavo Puerta",
+          "role": "M",
+          "score": 34,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        267365,
+        521318,
+        664644,
+        848266,
+        950829,
+        1083323,
+        1084981,
+        1107735,
+        1331597,
+        1532137,
+        90006723
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 18,
+      "missing_score_player_ids": []
+    },
+    {
+      "auction_user_id": "62",
+      "user_name": "Karan Vira",
+      "gw_id": 4,
+      "formation": "5-4-1",
+      "formation_tuple": [
+        5,
+        4,
+        1
+      ],
+      "total_points": 439,
+      "goalkeeper": {
+        "player_id": 90006710,
+        "player_name": "Mexico Keepers",
+        "score": 37
+      },
+      "outfield": [
+        {
+          "player_id": 941573,
+          "player_name": "Pedro Porro",
+          "role": "D",
+          "score": 64,
+          "flexible": false
+        },
+        {
+          "player_id": 1152455,
+          "player_name": "Florian Wirtz",
+          "role": "M",
+          "score": 58,
+          "flexible": true
+        },
+        {
+          "player_id": 771294,
+          "player_name": "Isma\u00efla Sarr",
+          "role": "F",
+          "score": 53,
+          "flexible": true
+        },
+        {
+          "player_id": 445873,
+          "player_name": "Brandon Mechele",
+          "role": "D",
+          "score": 45,
+          "flexible": false
+        },
+        {
+          "player_id": 361757,
+          "player_name": "Jo\u00e3o Cancelo",
+          "role": "D",
+          "score": 35,
+          "flexible": false
+        },
+        {
+          "player_id": 201704,
+          "player_name": "Remo Freuler",
+          "role": "M",
+          "score": 33,
+          "flexible": false
+        },
+        {
+          "player_id": 654096,
+          "player_name": "Declan Rice",
+          "role": "M",
+          "score": 33,
+          "flexible": false
+        },
+        {
+          "player_id": 812652,
+          "player_name": "Facundo Medina",
+          "role": "D",
+          "score": 29,
+          "flexible": false
+        },
+        {
+          "player_id": 559065,
+          "player_name": "Ramy Bensebaini",
+          "role": "D",
+          "score": 27,
+          "flexible": false
+        },
+        {
+          "player_id": 729769,
+          "player_name": "Tyler Adams",
+          "role": "M",
+          "score": 25,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        201704,
+        361757,
+        445873,
+        559065,
+        654096,
+        729769,
+        771294,
+        812652,
+        941573,
+        1152455,
+        90006710
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 17,
+      "missing_score_player_ids": []
+    },
+    {
+      "auction_user_id": "54",
+      "user_name": "Sumair Patel",
+      "gw_id": 4,
+      "formation": "3-5-2",
+      "formation_tuple": [
+        3,
+        5,
+        2
+      ],
+      "total_points": 419,
+      "goalkeeper": {
+        "player_id": 90008256,
+        "player_name": "Brazil Keepers",
+        "score": 19
+      },
+      "outfield": [
+        {
+          "player_id": 775539,
+          "player_name": "Noussair Mazraoui",
+          "role": "D",
+          "score": 60,
+          "flexible": false
+        },
+        {
+          "player_id": 208494,
+          "player_name": "Casemiro",
+          "role": "M",
+          "score": 54,
+          "flexible": false
+        },
+        {
+          "player_id": 292462,
+          "player_name": "Mohamed Salah",
+          "role": "M",
+          "score": 49,
+          "flexible": true
+        },
+        {
+          "player_id": 737066,
+          "player_name": "Erling Haaland",
+          "role": "F",
+          "score": 43,
+          "flexible": false
+        },
+        {
+          "player_id": 848844,
+          "player_name": "Rafael Le\u00e3o",
+          "role": "F",
+          "score": 40,
+          "flexible": true
+        },
+        {
+          "player_id": 1173250,
+          "player_name": "Arthur Theate",
+          "role": "D",
+          "score": 35,
+          "flexible": false
+        },
+        {
+          "player_id": 540963,
+          "player_name": "Sander Berge",
+          "role": "M",
+          "score": 32,
+          "flexible": false
+        },
+        {
+          "player_id": 638622,
+          "player_name": "Frenkie de Jong",
+          "role": "M",
+          "score": 30,
+          "flexible": false
+        },
+        {
+          "player_id": 1137667,
+          "player_name": "Piero Hincapi\u00e9",
+          "role": "D",
+          "score": 29,
+          "flexible": false
+        },
+        {
+          "player_id": 1216798,
+          "player_name": "Nathan Saliba",
+          "role": "M",
+          "score": 28,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        208494,
+        292462,
+        540963,
+        638622,
+        737066,
+        775539,
+        848844,
+        1137667,
+        1173250,
+        1216798,
+        90008256
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 18,
+      "missing_score_player_ids": []
+    },
+    {
+      "auction_user_id": "58",
+      "user_name": "Krish Sanghvi",
+      "gw_id": 4,
+      "formation": "5-3-2",
+      "formation_tuple": [
+        5,
+        3,
+        2
+      ],
+      "total_points": 414,
+      "goalkeeper": {
+        "player_id": 90006713,
+        "player_name": "USA Keepers",
+        "score": 35
+      },
+      "outfield": [
+        {
+          "player_id": 795179,
+          "player_name": "Gabriel",
+          "role": "D",
+          "score": 54,
+          "flexible": false
+        },
+        {
+          "player_id": 831489,
+          "player_name": "Alexis Mac Allister",
+          "role": "M",
+          "score": 49,
+          "flexible": false
+        },
+        {
+          "player_id": 614006,
+          "player_name": "R\u00faben Dias",
+          "role": "D",
+          "score": 48,
+          "flexible": false
+        },
+        {
+          "player_id": 914103,
+          "player_name": "Johan V\u00e1squez",
+          "role": "D",
+          "score": 43,
+          "flexible": false
+        },
+        {
+          "player_id": 789066,
+          "player_name": "Cristian Romero",
+          "role": "D",
+          "score": 40,
+          "flexible": false
+        },
+        {
+          "player_id": 163670,
+          "player_name": "Ivan Perisic",
+          "role": "F",
+          "score": 36,
+          "flexible": true
+        },
+        {
+          "player_id": 592102,
+          "player_name": "Moussa Niakhat\u00e9",
+          "role": "D",
+          "score": 36,
+          "flexible": false
+        },
+        {
+          "player_id": 1248482,
+          "player_name": "Antonio Nusa",
+          "role": "F",
+          "score": 30,
+          "flexible": false
+        },
+        {
+          "player_id": 1061249,
+          "player_name": "Vitinha",
+          "role": "M",
+          "score": 28,
+          "flexible": false
+        },
+        {
+          "player_id": 310768,
+          "player_name": "Fredrik Aursnes",
+          "role": "M",
+          "score": 15,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        163670,
+        310768,
+        592102,
+        614006,
+        789066,
+        795179,
+        831489,
+        914103,
+        1061249,
+        1248482,
+        90006713
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 17,
+      "missing_score_player_ids": []
+    },
+    {
+      "auction_user_id": "60",
+      "user_name": "Dhruv Gupta",
+      "gw_id": 4,
+      "formation": "4-5-1",
+      "formation_tuple": [
+        4,
+        5,
+        1
+      ],
+      "total_points": 409,
+      "goalkeeper": {
+        "player_id": 90006720,
+        "player_name": "Spain Keepers",
+        "score": 29
+      },
+      "outfield": [
+        {
+          "player_id": 662428,
+          "player_name": "Antonee Robinson",
+          "role": "M",
+          "score": 45,
+          "flexible": true
+        },
+        {
+          "player_id": 318615,
+          "player_name": "Leandro Trossard",
+          "role": "M",
+          "score": 42,
+          "flexible": true
+        },
+        {
+          "player_id": 974618,
+          "player_name": "Jan Paul van Hecke",
+          "role": "D",
+          "score": 41,
+          "flexible": false
+        },
+        {
+          "player_id": 460632,
+          "player_name": "Joshua Kimmich",
+          "role": "M",
+          "score": 40,
+          "flexible": true
+        },
+        {
+          "player_id": 575735,
+          "player_name": "Nicolas P\u00e9p\u00e9",
+          "role": "M",
+          "score": 38,
+          "flexible": true
+        },
+        {
+          "player_id": 906937,
+          "player_name": "Anthony Gordon",
+          "role": "F",
+          "score": 38,
+          "flexible": false
+        },
+        {
+          "player_id": 210111,
+          "player_name": "Lucas Digne",
+          "role": "D",
+          "score": 37,
+          "flexible": false
+        },
+        {
+          "player_id": 1318686,
+          "player_name": "Alessandro Circati",
+          "role": "D",
+          "score": 36,
+          "flexible": false
+        },
+        {
+          "player_id": 469700,
+          "player_name": "Jonathan Tah",
+          "role": "D",
+          "score": 32,
+          "flexible": false
+        },
+        {
+          "player_id": 795371,
+          "player_name": "Ibrahim Sangar\u00e9",
+          "role": "M",
+          "score": 31,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        210111,
+        318615,
+        460632,
+        469700,
+        575735,
+        662428,
+        795371,
+        906937,
+        974618,
+        1318686,
+        90006720
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 17,
+      "missing_score_player_ids": []
+    },
+    {
+      "auction_user_id": "49",
+      "user_name": "Mrinal Trivedi",
+      "gw_id": 4,
+      "formation": "4-5-1",
+      "formation_tuple": [
+        4,
+        5,
+        1
+      ],
+      "total_points": 405,
+      "goalkeeper": {
+        "player_id": 90008491,
+        "player_name": "England Keepers",
+        "score": 22
+      },
+      "outfield": [
+        {
+          "player_id": 675088,
+          "player_name": "Rodri",
+          "role": "M",
+          "score": 56,
+          "flexible": false
+        },
+        {
+          "player_id": 770881,
+          "player_name": "Achraf Hakimi",
+          "role": "D",
+          "score": 45,
+          "flexible": false
+        },
+        {
+          "player_id": 534670,
+          "player_name": "Martin \u00d8degaard",
+          "role": "M",
+          "score": 43,
+          "flexible": false
+        },
+        {
+          "player_id": 1137705,
+          "player_name": "Enzo Fern\u00e1ndez",
+          "role": "M",
+          "score": 39,
+          "flexible": false
+        },
+        {
+          "player_id": 1395447,
+          "player_name": "Nathaniel Brown",
+          "role": "D",
+          "score": 38,
+          "flexible": false
+        },
+        {
+          "player_id": 529625,
+          "player_name": "Andr\u00e9s Cubas",
+          "role": "M",
+          "score": 37,
+          "flexible": false
+        },
+        {
+          "player_id": 1137670,
+          "player_name": "Willian Pacho",
+          "role": "D",
+          "score": 35,
+          "flexible": false
+        },
+        {
+          "player_id": 1070052,
+          "player_name": "Amad Diallo",
+          "role": "M",
+          "score": 33,
+          "flexible": true
+        },
+        {
+          "player_id": 760320,
+          "player_name": "Aaron Wan-Bissaka",
+          "role": "D",
+          "score": 32,
+          "flexible": false
+        },
+        {
+          "player_id": 776299,
+          "player_name": "Houssem Aouar",
+          "role": "F",
+          "score": 25,
+          "flexible": true
+        }
+      ],
+      "best_xi_player_ids": [
+        529625,
+        534670,
+        675088,
+        760320,
+        770881,
+        776299,
+        1070052,
+        1137670,
+        1137705,
+        1395447,
+        90008491
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 18,
+      "missing_score_player_ids": []
+    },
+    {
+      "auction_user_id": "52",
+      "user_name": "Armaan Vardhan",
+      "gw_id": 4,
+      "formation": "4-4-2",
+      "formation_tuple": [
+        4,
+        4,
+        2
+      ],
+      "total_points": 394,
+      "goalkeeper": {
+        "player_id": 90006717,
+        "player_name": "Switzerland Keepers",
+        "score": 32
+      },
+      "outfield": [
+        {
+          "player_id": 465960,
+          "player_name": "Youri Tielemans",
+          "role": "M",
+          "score": 60,
+          "flexible": false
+        },
+        {
+          "player_id": 1023030,
+          "player_name": "Jhon Arias",
+          "role": "M",
+          "score": 46,
+          "flexible": true
+        },
+        {
+          "player_id": 181276,
+          "player_name": "Romelu Lukaku",
+          "role": "F",
+          "score": 44,
+          "flexible": false
+        },
+        {
+          "player_id": 933845,
+          "player_name": "Rayan A\u00eft-Nouri",
+          "role": "D",
+          "score": 42,
+          "flexible": false
+        },
+        {
+          "player_id": 527103,
+          "player_name": "Breel Embolo",
+          "role": "F",
+          "score": 37,
+          "flexible": false
+        },
+        {
+          "player_id": 1133495,
+          "player_name": "Juan C\u00e1ceres",
+          "role": "D",
+          "score": 37,
+          "flexible": false
+        },
+        {
+          "player_id": 1395704,
+          "player_name": "Gu\u00e9la Dou\u00e9",
+          "role": "D",
+          "score": 32,
+          "flexible": false
+        },
+        {
+          "player_id": 1055426,
+          "player_name": "Alistair Johnston",
+          "role": "D",
+          "score": 27,
+          "flexible": false
+        },
+        {
+          "player_id": 806552,
+          "player_name": "Cody Gakpo",
+          "role": "M",
+          "score": 20,
+          "flexible": true
+        },
+        {
+          "player_id": 169200,
+          "player_name": "Kevin De Bruyne",
+          "role": "M",
+          "score": 17,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        169200,
+        181276,
+        465960,
+        527103,
+        806552,
+        933845,
+        1023030,
+        1055426,
+        1133495,
+        1395704,
+        90006717
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 18,
+      "missing_score_player_ids": []
+    },
+    {
+      "auction_user_id": "51",
+      "user_name": "Aman Chokshi",
+      "gw_id": 4,
+      "formation": "3-5-2",
+      "formation_tuple": [
+        3,
+        5,
+        2
+      ],
+      "total_points": 387,
+      "goalkeeper": {
+        "player_id": 90008361,
+        "player_name": "Portugal Keepers",
+        "score": 35
+      },
+      "outfield": [
+        {
+          "player_id": 30981,
+          "player_name": "Lionel Messi",
+          "role": "F",
+          "score": 69,
+          "flexible": false
+        },
+        {
+          "player_id": 678234,
+          "player_name": "Mikel Oyarzabal",
+          "role": "F",
+          "score": 55,
+          "flexible": false
+        },
+        {
+          "player_id": 1126058,
+          "player_name": "Malik Tillman",
+          "role": "M",
+          "score": 47,
+          "flexible": false
+        },
+        {
+          "player_id": 352879,
+          "player_name": "Adrien Rabiot",
+          "role": "M",
+          "score": 43,
+          "flexible": false
+        },
+        {
+          "player_id": 517346,
+          "player_name": "Nico Elvedi",
+          "role": "D",
+          "score": 37,
+          "flexible": false
+        },
+        {
+          "player_id": 710159,
+          "player_name": "Ezri Konsa",
+          "role": "D",
+          "score": 29,
+          "flexible": false
+        },
+        {
+          "player_id": 195750,
+          "player_name": "Nicol\u00e1s Tagliafico",
+          "role": "D",
+          "score": 24,
+          "flexible": false
+        },
+        {
+          "player_id": 955271,
+          "player_name": "Thiago Almada",
+          "role": "M",
+          "score": 20,
+          "flexible": false
+        },
+        {
+          "player_id": 1346860,
+          "player_name": "Esmir Bajraktarevic",
+          "role": "M",
+          "score": 18,
+          "flexible": true
+        },
+        {
+          "player_id": 488139,
+          "player_name": "Bernardo Silva",
+          "role": "M",
+          "score": 10,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        30981,
+        195750,
+        352879,
+        488139,
+        517346,
+        678234,
+        710159,
+        955271,
+        1126058,
+        1346860,
+        90008361
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 17,
+      "missing_score_player_ids": []
+    },
+    {
+      "auction_user_id": "53",
+      "user_name": "Ishaan Shah",
+      "gw_id": 4,
+      "formation": "5-3-2",
+      "formation_tuple": [
+        5,
+        3,
+        2
+      ],
+      "total_points": 387,
+      "goalkeeper": {
+        "player_id": 90008263,
+        "player_name": "Belgium Keepers",
+        "score": 29
+      },
+      "outfield": [
+        {
+          "player_id": 701154,
+          "player_name": "Kylian Mbapp\u00e9",
+          "role": "F",
+          "score": 81,
+          "flexible": false
+        },
+        {
+          "player_id": 643533,
+          "player_name": "Davinson S\u00e1nchez",
+          "role": "D",
+          "score": 49,
+          "flexible": false
+        },
+        {
+          "player_id": 671518,
+          "player_name": "Harry Souttar",
+          "role": "D",
+          "score": 46,
+          "flexible": false
+        },
+        {
+          "player_id": 873289,
+          "player_name": "Marc Cucurella",
+          "role": "D",
+          "score": 46,
+          "flexible": false
+        },
+        {
+          "player_id": 115591,
+          "player_name": "Ricardo Rodr\u00edguez",
+          "role": "D",
+          "score": 39,
+          "flexible": false
+        },
+        {
+          "player_id": 894803,
+          "player_name": "Djed Spence",
+          "role": "D",
+          "score": 25,
+          "flexible": false
+        },
+        {
+          "player_id": 892816,
+          "player_name": "Sergi\u00f1o Dest",
+          "role": "F",
+          "score": 24,
+          "flexible": true
+        },
+        {
+          "player_id": 1666494,
+          "player_name": "Christ Inao Oula\u00ef",
+          "role": "M",
+          "score": 20,
+          "flexible": false
+        },
+        {
+          "player_id": 1457626,
+          "player_name": "Ibrahim Maza",
+          "role": "M",
+          "score": 15,
+          "flexible": false
+        },
+        {
+          "player_id": 843040,
+          "player_name": "Pedro Neto",
+          "role": "M",
+          "score": 13,
+          "flexible": true
+        }
+      ],
+      "best_xi_player_ids": [
+        115591,
+        643533,
+        671518,
+        701154,
+        843040,
+        873289,
+        892816,
+        894803,
+        1457626,
+        1666494,
+        90008263
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 18,
+      "missing_score_player_ids": []
+    },
+    {
+      "auction_user_id": "56",
+      "user_name": "Shanay Surana",
+      "gw_id": 4,
+      "formation": "4-4-2",
+      "formation_tuple": [
+        4,
+        4,
+        2
+      ],
+      "total_points": 380,
+      "goalkeeper": {
+        "player_id": 90008570,
+        "player_name": "Germany Keepers",
+        "score": 38
+      },
+      "outfield": [
+        {
+          "player_id": 850354,
+          "player_name": "Bruno Guimar\u00e3es",
+          "role": "M",
+          "score": 49,
+          "flexible": false
+        },
+        {
+          "player_id": 1022649,
+          "player_name": "Dan Ndoye",
+          "role": "M",
+          "score": 45,
+          "flexible": true
+        },
+        {
+          "player_id": 1478295,
+          "player_name": "Rayan",
+          "role": "F",
+          "score": 43,
+          "flexible": false
+        },
+        {
+          "player_id": 1343750,
+          "player_name": "Renato Veiga",
+          "role": "D",
+          "score": 39,
+          "flexible": false
+        },
+        {
+          "player_id": 292313,
+          "player_name": "Raul Jim\u00e9nez",
+          "role": "F",
+          "score": 35,
+          "flexible": false
+        },
+        {
+          "player_id": 207236,
+          "player_name": "Granit Xhaka",
+          "role": "M",
+          "score": 32,
+          "flexible": false
+        },
+        {
+          "player_id": 324578,
+          "player_name": "Rodrigo De Paul",
+          "role": "M",
+          "score": 32,
+          "flexible": false
+        },
+        {
+          "player_id": 1049679,
+          "player_name": "David M\u00f8ller Wolfe",
+          "role": "D",
+          "score": 26,
+          "flexible": false
+        },
+        {
+          "player_id": 873227,
+          "player_name": "Jerome Opoku",
+          "role": "D",
+          "score": 25,
+          "flexible": false
+        },
+        {
+          "player_id": 724371,
+          "player_name": "Theo Hern\u00e1ndez",
+          "role": "D",
+          "score": 16,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        207236,
+        292313,
+        324578,
+        724371,
+        850354,
+        873227,
+        1022649,
+        1049679,
+        1343750,
+        1478295,
+        90008570
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 17,
+      "missing_score_player_ids": [
+        1270002
+      ]
+    },
+    {
+      "auction_user_id": "55",
+      "user_name": "Pratham Arora",
+      "gw_id": 4,
+      "formation": "3-5-2",
+      "formation_tuple": [
+        3,
+        5,
+        2
+      ],
+      "total_points": 378,
+      "goalkeeper": {
+        "player_id": 90006706,
+        "player_name": "Argentina Keepers",
+        "score": 22
+      },
+      "outfield": [
+        {
+          "player_id": 846033,
+          "player_name": "Vin\u00edcius J\u00fanior",
+          "role": "F",
+          "score": 43,
+          "flexible": false
+        },
+        {
+          "player_id": 979376,
+          "player_name": "Emam Ashour",
+          "role": "M",
+          "score": 43,
+          "flexible": false
+        },
+        {
+          "player_id": 914458,
+          "player_name": "Aur\u00e9lien Tchouam\u00e9ni",
+          "role": "M",
+          "score": 41,
+          "flexible": false
+        },
+        {
+          "player_id": 276738,
+          "player_name": "Antonio R\u00fcdiger",
+          "role": "D",
+          "score": 39,
+          "flexible": false
+        },
+        {
+          "player_id": 277771,
+          "player_name": "Thomas Meunier",
+          "role": "D",
+          "score": 38,
+          "flexible": false
+        },
+        {
+          "player_id": 859282,
+          "player_name": "Daniel Mu\u00f1oz",
+          "role": "M",
+          "score": 38,
+          "flexible": true
+        },
+        {
+          "player_id": 30893,
+          "player_name": "Cristiano Ronaldo",
+          "role": "F",
+          "score": 29,
+          "flexible": false
+        },
+        {
+          "player_id": 31097,
+          "player_name": "Luka Modric",
+          "role": "M",
+          "score": 29,
+          "flexible": false
+        },
+        {
+          "player_id": 597976,
+          "player_name": "Jes\u00fas Gallardo",
+          "role": "D",
+          "score": 29,
+          "flexible": false
+        },
+        {
+          "player_id": 179410,
+          "player_name": "Idrissa Gana Gueye",
+          "role": "M",
+          "score": 27,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        30893,
+        31097,
+        179410,
+        276738,
+        277771,
+        597976,
+        846033,
+        859282,
+        914458,
+        979376,
+        90006706
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 18,
+      "missing_score_player_ids": []
+    },
+    {
+      "auction_user_id": "63",
+      "user_name": "Rohaan Raheja",
+      "gw_id": 4,
+      "formation": "4-4-2",
+      "formation_tuple": [
+        4,
+        4,
+        2
+      ],
+      "total_points": 350,
+      "goalkeeper": {
+        "player_id": 90006709,
+        "player_name": "Ivory Coast Keepers",
+        "score": 15
+      },
+      "outfield": [
+        {
+          "player_id": 696443,
+          "player_name": "Issa Diop",
+          "role": "D",
+          "score": 53,
+          "flexible": false
+        },
+        {
+          "player_id": 1274060,
+          "player_name": "Neil El Aynaoui",
+          "role": "M",
+          "score": 50,
+          "flexible": false
+        },
+        {
+          "player_id": 1467236,
+          "player_name": "Lamine Yamal",
+          "role": "F",
+          "score": 45,
+          "flexible": false
+        },
+        {
+          "player_id": 474673,
+          "player_name": "Johan Mojica",
+          "role": "D",
+          "score": 36,
+          "flexible": false
+        },
+        {
+          "player_id": 614834,
+          "player_name": "Dani Olmo",
+          "role": "M",
+          "score": 32,
+          "flexible": false
+        },
+        {
+          "player_id": 239219,
+          "player_name": "Mateo Kovacic",
+          "role": "M",
+          "score": 27,
+          "flexible": false
+        },
+        {
+          "player_id": 950824,
+          "player_name": "Josip Stanisic",
+          "role": "D",
+          "score": 27,
+          "flexible": false
+        },
+        {
+          "player_id": 1300526,
+          "player_name": "Nico O'Reilly",
+          "role": "D",
+          "score": 25,
+          "flexible": false
+        },
+        {
+          "player_id": 696365,
+          "player_name": "Marcus Rashford",
+          "role": "F",
+          "score": 22,
+          "flexible": false
+        },
+        {
+          "player_id": 1174630,
+          "player_name": "Richard R\u00edos",
+          "role": "M",
+          "score": 18,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        239219,
+        474673,
+        614834,
+        696365,
+        696443,
+        950824,
+        1174630,
+        1274060,
+        1300526,
+        1467236,
+        90006709
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 16,
+      "missing_score_player_ids": []
+    },
+    {
+      "auction_user_id": "57",
+      "user_name": "Vedant Mehra",
+      "gw_id": 4,
+      "formation": "3-5-2",
+      "formation_tuple": [
+        3,
+        5,
+        2
+      ],
+      "total_points": 341,
+      "goalkeeper": {
+        "player_id": null,
+        "player_name": "(none)",
+        "score": 0
+      },
+      "outfield": [
+        {
+          "player_id": 816223,
+          "player_name": "Stephen Eustaquio",
+          "role": "M",
+          "score": 61,
+          "flexible": false
+        },
+        {
+          "player_id": 1158945,
+          "player_name": "Nuno Mendes",
+          "role": "D",
+          "score": 45,
+          "flexible": false
+        },
+        {
+          "player_id": 692984,
+          "player_name": "Ousmane Demb\u00e9l\u00e9",
+          "role": "M",
+          "score": 44,
+          "flexible": true
+        },
+        {
+          "player_id": 303339,
+          "player_name": "Sadio Man\u00e9",
+          "role": "M",
+          "score": 39,
+          "flexible": true
+        },
+        {
+          "player_id": 844425,
+          "player_name": "Marc Gu\u00e9hi",
+          "role": "D",
+          "score": 33,
+          "flexible": false
+        },
+        {
+          "player_id": 792303,
+          "player_name": "Luis Su\u00e1rez",
+          "role": "F",
+          "score": 28,
+          "flexible": false
+        },
+        {
+          "player_id": 1077894,
+          "player_name": "Jude Bellingham",
+          "role": "M",
+          "score": 26,
+          "flexible": false
+        },
+        {
+          "player_id": 688295,
+          "player_name": "Christian Pulisic",
+          "role": "F",
+          "score": 24,
+          "flexible": false
+        },
+        {
+          "player_id": 1473580,
+          "player_name": "Aleksandar Pavlovic",
+          "role": "M",
+          "score": 24,
+          "flexible": false
+        },
+        {
+          "player_id": 1134871,
+          "player_name": "Maxim De Cuyper",
+          "role": "D",
+          "score": 17,
+          "flexible": false
+        }
+      ],
+      "best_xi_player_ids": [
+        303339,
+        688295,
+        692984,
+        792303,
+        816223,
+        844425,
+        1077894,
+        1134871,
+        1158945,
+        1473580
+      ],
+      "empty_outfield_slots": 0,
+      "squad_size": 16,
+      "missing_score_player_ids": [
+        939780
+      ]
+    }
+  ],
+  "meta": {
+    "squad_rows": 259,
+    "match_json_files": 88,
+    "players_with_scores": 257
+  }
+}

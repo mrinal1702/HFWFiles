@@ -4,21 +4,23 @@ import {
   EPL_MATCH_SCORE_SHEETS,
 } from "./competitions/epl-2026-27";
 import { UCL_2026_27, UCL_MATCH_SCORE_GROUPS } from "./competitions/uefa-cl-2026-27";
+import { WC_2026, WC_MATCH_SCORE_GROUPS, WC_MATCH_SCORE_SHEETS } from "./competitions/world-cup-2026";
 import type { MatchScoreGroup, MatchScoreSheet } from "./types";
 
 /**
  * Match score sheet registry. Each competition's sheets live in their own file under
  * ./competitions/<slug>.ts — add new matches there, not here.
- * World Cup 2026 sheets were archived — see competitions/archive/world-cup-2026/ops/lib/match-scores-sheets.ts
  */
 
 /** Matches public.competitions rows used by online auctions. */
 export const COMPETITION_ID_TO_SLUG: Record<number, string> = {
+  1: WC_2026,
   2: EPL_2026_27,
   4: UCL_2026_27,
 };
 
 const MATCH_SCORE_GROUPS_BY_SLUG: Record<string, MatchScoreGroup[]> = {
+  [WC_2026]: WC_MATCH_SCORE_GROUPS,
   [EPL_2026_27]: EPL_MATCH_SCORE_GROUPS,
   [UCL_2026_27]: UCL_MATCH_SCORE_GROUPS,
 };
@@ -41,6 +43,9 @@ export function getMatchScoreGroupsForCompetitionId(competitionId: number | null
   if (!slug) return [];
   return getMatchScoreGroupsForCompetitionSlug(slug);
 }
+
+/** World Cup 2026 sheets — legacy callers with no competition (e.g. meme-builds) use these. */
+export const WC_SHEETS: MatchScoreSheet[] = WC_MATCH_SCORE_SHEETS;
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
   return MATCH_SCORE_SHEETS.find((s) => s.slug === slug);

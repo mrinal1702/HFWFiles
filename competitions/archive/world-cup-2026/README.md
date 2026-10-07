@@ -23,6 +23,15 @@ This tree is the **local record** of the tournament: match scores, Best XI, play
 
 ---
 
+## Supabase per-player scores (restored Oct 2026)
+
+`Player_Scores` for GW1–8 (legacy `game_week_id` 1–8) were restored by
+`ops/restore-wc-player-scores.mjs` from the FinalPoints the app showed during the
+tournament (now deployed at `auction-app/data/competitions/world-cup-2026/match-scores/`).
+They match all 2,625 published Best XI picks. Note: `records/match-final-points/` holds a
+**post-tournament GW1 re-score** (13 Best XI picks differ) that was never published — use the
+app copy, not that folder, as the published record.
+
 ## `records/` — keep forever
 
 Canonical outputs you will reopen for history, algorithm work, or restoring score pages.

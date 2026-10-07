@@ -1,0 +1,48 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Lionel Messi,30981,Argentina,forward,72.59166666666667,6.0,0.0,79
+Cristian Romero,789066,Argentina,defender,49.470000000000006,5.0,0.0,54
+Enzo Fernández,1137705,Argentina,midfielder,39.408,7.0,0.0,46
+Declan Rice,654096,England,midfielder,35.43533333333333,7.0,0.0,42
+Leandro Paredes,237606,Argentina,midfielder,34.33533333333333,3.0,0.0,37
+Elliot Anderson,1089691,England,midfielder,33.822,3.0,0.0,37
+Julián Álvarez,974753,Argentina,forward,29.891666666666666,6.0,0.0,36
+Reece James,807729,England,defender,22.933333333333337,10.0,0.0,33
+John Stones,263653,England,defender,32.236666666666665,0.0,0.0,32
+Nicolás González,841672,Argentina,midfielder,23.530666666666665,6.5,0.0,30
+Djed Spence,894803,England,defender,27.36666666666666,0.0,0.0,27
+Nicolás Tagliafico,195750,Argentina,defender,19.66,5.0,0.0,25
+Alexis Mac Allister,831489,Argentina,midfielder,16.61,7.0,0.0,24
+Morgan Rogers,883080,England,midfielder,19.834,3.0,0.0,23
+Lautaro Martínez,690230,Argentina,forward,18.5,3.5,0.0,22
+Rodrigo De Paul,324578,Argentina,midfielder,15.448,6.5,0.0,22
+Marc Guéhi,844425,England,defender,21.82,0.0,0.0,22
+Nahuel Molina,726345,Argentina,defender,16.169999999999998,5.0,0.0,21
+Giuliano Simeone,1226147,Argentina,midfielder,16.253999999999998,3.0,0.0,19
+Anthony Gordon,906937,England,forward,15.325,3.0,0.0,18
+Nicolás Otamendi,174321,Argentina,defender,13.28,5.0,0.0,18
+Lisandro Martínez,847983,Argentina,defender,13.18,5.0,0.0,18
+Jude Bellingham,1077894,England,midfielder,14.846,3.0,0.0,18
+Harry Kane,194165,England,forward,10.925,3.0,0.0,14
+Gonzalo Montiel,687008,Argentina,defender,3.3400000000000003,5.0,0.0,8
+Ezri Konsa,710159,England,defender,6.449999999999999,-5.0,0.0,1
+Nico O'Reilly,1300526,England,defender,5.166666666666667,-5.0,0.0,0
+Daniel Burn,188058,England,defender,3.2266666666666666,-5.0,0.0,0
+Marcos Senesi,785411,Argentina,defender,0.0,0.0,0.0,0
+Trevoh Chalobah,793907,England,defender,0.0,0.0,0.0,0
+Facundo Medina,812652,Argentina,defender,0.0,0.0,0.0,0
+Jordan Henderson,156008,England,midfielder,0.0,0.0,0.0,0
+Giovani Lo Celso,604126,Argentina,midfielder,0.0,0.0,0.0,0
+Exequiel Palacios,693599,Argentina,midfielder,0.0,0.0,0.0,0
+Eberechi Eze,818975,England,midfielder,0.0,0.0,0.0,0
+Thiago Almada,955271,Argentina,midfielder,0.0,0.0,0.0,0
+Valentín Barco,1272440,Argentina,midfielder,0.0,0.0,0.0,0
+Kobbie Mainoo,1292810,England,midfielder,0.0,0.0,0.0,0
+Nico Paz,1347574,Argentina,midfielder,0.0,0.0,0.0,0
+Ivan Toney,408987,England,forward,0.0,0.0,0.0,0
+Ollie Watkins,540088,England,forward,0.0,0.0,0.0,0
+Marcus Rashford,696365,England,forward,0.0,0.0,0.0,0
+Bukayo Saka,961995,England,forward,0.0,0.0,0.0,0
+Noni Madueke,1084981,England,forward,0.0,0.0,0.0,0
+José López,1216079,Argentina,forward,0.0,0.0,0.0,0
+Argentina Keepers,6706,Argentina,goalkeeper,9.48,12.0,0.0,21
+England Keepers,8491,England,goalkeeper,14.28,6.0,0.0,20

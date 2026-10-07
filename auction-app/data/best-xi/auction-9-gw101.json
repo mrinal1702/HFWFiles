@@ -1,11 +1,11 @@
 {
   "auction_id": 9,
-  "gw_id": 2,
+  "gw_id": 101,
   "managers": [
     {
       "auction_user_id": "107",
       "user_name": "Arnav Gupta",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "4-5-1",
       "formation_tuple": [
         4,
@@ -110,7 +110,7 @@
     {
       "auction_user_id": "115",
       "user_name": "Sujay Choksey",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "5-3-2",
       "formation_tuple": [
         5,
@@ -217,7 +217,7 @@
     {
       "auction_user_id": "103",
       "user_name": "Mrinal Trivedi",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "4-4-2",
       "formation_tuple": [
         4,
@@ -322,7 +322,7 @@
     {
       "auction_user_id": "113",
       "user_name": "Vedant Mehra",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "5-4-1",
       "formation_tuple": [
         5,
@@ -431,7 +431,7 @@
     {
       "auction_user_id": "118",
       "user_name": "Abhishek Khanna",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "5-3-2",
       "formation_tuple": [
         5,
@@ -538,7 +538,7 @@
     {
       "auction_user_id": "104",
       "user_name": "Dhruv Chawla",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "3-5-2",
       "formation_tuple": [
         3,
@@ -645,7 +645,7 @@
     {
       "auction_user_id": "108",
       "user_name": "Armaan Vardhan",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "4-3-3",
       "formation_tuple": [
         4,
@@ -752,7 +752,7 @@
     {
       "auction_user_id": "105",
       "user_name": "Pratham Arora",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "3-4-3",
       "formation_tuple": [
         3,
@@ -859,7 +859,7 @@
     {
       "auction_user_id": "106",
       "user_name": "Sumair Patel",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "5-4-1",
       "formation_tuple": [
         5,
@@ -968,7 +968,7 @@
     {
       "auction_user_id": "117",
       "user_name": "Ali Sharafally",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "3-5-2",
       "formation_tuple": [
         3,
@@ -1076,7 +1076,7 @@
     {
       "auction_user_id": "116",
       "user_name": "Rushabh Shah",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "4-4-2",
       "formation_tuple": [
         4,
@@ -1183,7 +1183,7 @@
     {
       "auction_user_id": "114",
       "user_name": "Viv",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "4-3-3",
       "formation_tuple": [
         4,
@@ -1284,7 +1284,7 @@
     {
       "auction_user_id": "109",
       "user_name": "Vihaan Shah",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "4-3-3",
       "formation_tuple": [
         4,
@@ -1385,7 +1385,7 @@
     {
       "auction_user_id": "111",
       "user_name": "Dhruv Gupta",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "3-4-3",
       "formation_tuple": [
         3,
@@ -1486,7 +1486,7 @@
     {
       "auction_user_id": "112",
       "user_name": "Nik Desai",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "5-3-2",
       "formation_tuple": [
         5,
@@ -1586,7 +1586,7 @@
     {
       "auction_user_id": "110",
       "user_name": "Advait Trivedi",
-      "gw_id": 2,
+      "gw_id": 101,
       "formation": "3-5-2",
       "formation_tuple": [
         3,

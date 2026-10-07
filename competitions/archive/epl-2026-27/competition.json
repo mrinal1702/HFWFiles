@@ -7,7 +7,7 @@
   "_auction_ids_note": "Auction 9 was the EPL online auction (archived Oct 2026; still visible under Archives and Auction History). Auction 8 is a test placeholder (not attached). World Cup online auctions 5, 6, 7 belong to world-cup-2026.",
   "player_pool": "player-pool/master_player_list.csv",
   "legacy_game_week_id_range": [100, 199],
-  "_legacy_gw_note": "DB game_week_ids actually used: MW1-3 = 1, 2, 3 (same numbers as World Cup GW1-3 squads) and MW4 = 103.",
+  "_legacy_gw_note": "DB game_week_ids: MW1-4 = 100, 101, 102, 103. MW1-3 were originally stored at 1, 2, 3 and moved to 100-102 in Oct 2026 (ops/rekey-epl-mw1-3-to-100-102.mjs; backup in ops/backups/).",
   "team_count": 20,
   "matches_per_round": 10,
   "rounds": {

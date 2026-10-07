@@ -1,0 +1,49 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Pedro Porro,941573,Spain,defender,32.91,10.0,0.0,43
+Fabián Ruiz,605654,Spain,midfielder,33.774,9.0,0.0,43
+Aymeric Laporte,411617,Spain,defender,29.28,10.0,0.0,39
+Rodri,675088,Spain,midfielder,28.642000000000003,9.0,0.0,38
+Marc Cucurella,873289,Spain,defender,25.83,10.0,0.0,36
+Pau Cubarsí,1532137,Spain,defender,24.630000000000003,10.0,0.0,35
+Mikel Oyarzabal,678234,Spain,forward,28.28333333333333,6.0,0.0,34
+Aurélien Tchouaméni,914458,France,midfielder,28.096,1.0,0.0,29
+Dani Olmo,614834,Spain,midfielder,19.356,9.0,0.0,28
+Adrien Rabiot,352879,France,midfielder,23.086,3.0,0.0,26
+Maxence Lacroix,950485,France,defender,20.85,5.0,0.0,26
+Lamine Yamal,1467236,Spain,forward,15.125,6.0,0.0,21
+Désiré Doué,1339208,France,forward,23.6,-2.5,0.0,21
+Ousmane Dembélé,692984,France,midfielder,18.944,1.0,0.0,20
+Dayot Upamecano,658554,France,defender,18.92,0.0,0.0,19
+Jules Koundé,705450,France,defender,17.98,0.0,0.0,18
+Michael Olise,1029063,France,midfielder,16.874,1.0,0.0,18
+Álex Baena,942372,Spain,midfielder,8.678,9.0,0.0,18
+Rayan Cherki,1104053,France,midfielder,12.352,2.5,0.0,15
+Mikel Merino,574645,Spain,midfielder,12.275999999999998,2.5,0.0,15
+Marcos Llorente,602563,Spain,defender,7.77,5.0,0.0,13
+Bradley Barcola,1297165,France,forward,12.15,0.0,0.0,12
+Pedri,1083323,Spain,midfielder,8.798,2.5,0.0,11
+Kylian Mbappé,701154,France,forward,11.2,0.0,0.0,11
+Lucas Digne,210111,France,defender,10.59,0.0,0.0,11
+Theo Hernández,724371,France,defender,4.38,5.0,0.0,9
+Ferran Torres,881771,Spain,forward,10.991666666666664,-2.5,0.0,8
+Nico Williams,1202110,Spain,forward,8.166666666666666,-2.5,0.0,6
+William Saliba,955406,France,defender,3.7,0.0,0.0,4
+Kouadio Koné,1016132,France,midfielder,2.3559999999999994,0.5,0.0,3
+Lucas Hernández,504606,France,defender,0.0,0.0,0.0,0
+Ibrahima Konaté,820140,France,defender,0.0,0.0,0.0,0
+Eric García,940573,Spain,defender,0.0,0.0,0.0,0
+Malo Gusto,1197250,France,defender,0.0,0.0,0.0,0
+Marc Pubill,1323897,Spain,defender,0.0,0.0,0.0,0
+Alejandro Grimaldo,288406,Spain,midfielder,0.0,0.0,0.0,0
+N'Golo Kanté,319300,France,midfielder,0.0,0.0,0.0,0
+Martín Zubimendi,1031325,Spain,midfielder,0.0,0.0,0.0,0
+Yéremi Pino,1047676,Spain,midfielder,0.0,0.0,0.0,0
+Gavi,1279040,Spain,midfielder,0.0,0.0,0.0,0
+Warren Zaïre-Emery,1367615,France,midfielder,0.0,0.0,0.0,0
+Borja Iglesias,609505,Spain,forward,0.0,0.0,0.0,0
+Marcus Thuram,621562,France,forward,0.0,0.0,0.0,0
+Jean-Philippe Mateta,706297,France,forward,0.0,0.0,0.0,0
+Maghnes Akliouche,1305618,France,forward,0.0,0.0,0.0,0
+Víctor Muñoz,1553105,Spain,forward,0.0,0.0,0.0,0
+Spain Keepers,6720,Spain,goalkeeper,19.24,18.0,0.0,37
+France Keepers,6723,France,goalkeeper,7.76,6.0,0.0,14

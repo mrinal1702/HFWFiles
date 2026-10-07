@@ -23,7 +23,7 @@ Done:
 Still partial / known caveats:
 
 - Scores are still keyed by legacy `game_week_id` (`Player_Scores` unique on `(player_id, game_week_id)`), relying on per-competition ID ranges. `competition_rounds` only holds EPL MW1 and the CL 2025/26 rounds; UCL 2026/27 rounds are not in it yet.
-- EPL 2026/27 MW1–MW3 actually used `game_week_id` 1, 2, 3 (inside the World Cup range, which also has squads/leaderboard rows at GW 1–3); MW4 used 103. Do not reuse 1–99 for anything new.
+- EPL 2026/27 MW1–MW3 were originally stored at `game_week_id` 1, 2, 3 (inside the World Cup range), overwriting the World Cup GW1–3 player scores. Fixed Oct 2026: EPL moved to 100–102 (`competitions/archive/epl-2026-27/ops/rekey-epl-mw1-3-to-100-102.mjs`, backup in `ops/backups/`) and World Cup GW1–8 player scores restored (`competitions/archive/world-cup-2026/ops/restore-wc-player-scores.mjs`, validated against all 2,625 published Best XI picks). Each competition now uses only its own range: WC 1–8, EPL 100–103, UCL 300+.
 - `"Game_Weeks".Is_Active` is still global across competitions.
 - Python tooling defaults (`Tests/fetch_fotmob_match.py --copy-to-app`, etc.) still point at legacy folders; harmless (the app no longer reads them) but worth tidying.
 - `competitions/archive/world-cup-2026/_pending-dedup-from-matches-raw/` still needs review.

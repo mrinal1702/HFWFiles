@@ -1,0 +1,49 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Kylian Mbappé,701154,France,forward,49.925,6.0,0.0,56
+Ousmane Dembélé,692984,France,midfielder,39.522000000000006,9.0,0.0,49
+Désiré Doué,1339208,France,midfielder,39.17866666666667,9.0,0.0,48
+Adrien Rabiot,352879,France,midfielder,31.804,9.0,0.0,41
+Michael Olise,1029063,France,midfielder,29.66,9.0,0.0,39
+Dayot Upamecano,658554,France,defender,27.930000000000003,10.0,0.0,38
+Jules Koundé,705450,France,defender,25.31,10.0,0.0,35
+Lucas Digne,210111,France,defender,25.29,10.0,0.0,35
+Azzedine Ounahi,1073143,Morocco,midfielder,33.144000000000005,1.0,0.0,34
+William Saliba,955406,France,defender,22.7,10.0,0.0,33
+Kouadio Koné,1016132,France,midfielder,18.12666666666667,9.0,0.0,27
+Noussair Mazraoui,775539,Morocco,defender,24.200000000000003,0.0,0.0,24
+Achraf Hakimi,770881,Morocco,defender,21.93,0.0,0.0,22
+Neil El Aynaoui,1274060,Morocco,midfielder,20.436,1.0,0.0,21
+Issa Diop,696443,Morocco,defender,21.130000000000003,0.0,0.0,21
+Brahim Díaz,750027,Morocco,midfielder,16.958666666666666,1.0,0.0,18
+Anass Salah-Eddine,1050838,Morocco,defender,17.70666666666667,0.0,0.0,18
+Bilal El Khannouss,1340895,Morocco,midfielder,11.686666666666667,3.0,0.0,15
+Chemsdine Talbi,1368654,Morocco,forward,14.483333333333333,0.0,0.0,14
+Sofyan Amrabat,593116,Morocco,midfielder,13.299333333333337,0.5,0.0,14
+Ayyoub Bouaddi,1561552,Morocco,midfielder,10.056666666666668,3.0,0.0,13
+Bradley Barcola,1297165,France,forward,15.008333333333333,-2.5,0.0,13
+Malo Gusto,1197250,France,defender,6.35,5.0,0.0,11
+Jean-Philippe Mateta,706297,France,forward,13.108333333333333,-2.5,0.0,11
+Warren Zaïre-Emery,1367615,France,midfielder,6.657333333333334,2.5,0.0,9
+Zakaria El Ouahdi,1287871,Morocco,defender,3.803333333333333,5.0,0.0,9
+Gessime Yassine,1603755,Morocco,forward,5.275,-2.5,0.0,3
+Soufiane Rahimi,988749,Morocco,forward,4.308333333333334,-2.5,0.0,2
+Amine Sbaï,1242587,Morocco,forward,3.5416666666666665,-2.5,0.0,1
+Lucas Hernández,504606,France,defender,0.0,0.0,0.0,0
+Marwane Saadane,614912,Morocco,defender,0.0,0.0,0.0,0
+Theo Hernández,724371,France,defender,0.0,0.0,0.0,0
+Ibrahima Konaté,820140,France,defender,0.0,0.0,0.0,0
+Youssef Belammari,909908,Morocco,defender,0.0,0.0,0.0,0
+Maxence Lacroix,950485,France,defender,0.0,0.0,0.0,0
+Chadi Riad,1187506,Morocco,defender,0.0,0.0,0.0,0
+Redouane Halhal,1298186,Morocco,defender,0.0,0.0,0.0,0
+N'Golo Kanté,319300,France,midfielder,0.0,0.0,0.0,0
+Aurélien Tchouaméni,914458,France,midfielder,0.0,0.0,0.0,0
+Rayan Cherki,1104053,France,midfielder,0.0,0.0,0.0,0
+Ismael Saibari,1180288,Morocco,midfielder,0.0,0.0,0.0,0
+Samir El Mourabet,1598170,Morocco,midfielder,0.0,0.0,0.0,0
+Marcus Thuram,621562,France,forward,0.0,0.0,0.0,0
+Ayoub El Kaabi,884382,Morocco,forward,0.0,0.0,0.0,0
+Maghnes Akliouche,1305618,France,forward,0.0,0.0,0.0,0
+Ayoube Amaimouni-Echghouyab,1680173,Morocco,forward,0.0,0.0,0.0,0
+Morocco Keepers,6262,Morocco,goalkeeper,30.62,6.0,0.0,37
+France Keepers,6723,France,goalkeeper,10.28,18.0,0.0,28

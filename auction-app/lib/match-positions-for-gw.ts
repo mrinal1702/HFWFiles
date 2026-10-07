@@ -1,21 +1,21 @@
 import "server-only";
 
 import type { GroupStageGw, MatchScoreSheet } from "@/lib/match-scores/types";
-import {
-  getMatchScoreGroupsForCompetitionId,
-  MATCH_SCORE_SHEETS,
-} from "@/lib/match-scores/sheets";
+import { getMatchScoreGroupsForCompetitionId, WC_SHEETS } from "@/lib/match-scores/sheets";
 
 /** UEFA Champions League 2026/27 — competition_id 4, legacy GW ids 300–399. */
 const UCL_2026_27_COMPETITION_ID = 4;
 const UCL_2026_27_LEGACY_GW_START = 300;
 
-/** English Premier League 2026/27 — competition_id 2. MW1–3 reused ids 1–3; MW4+ use 100–199. */
+/** English Premier League 2026/27 — competition_id 2, legacy GW ids 100–199 (MW1 = 100). */
 const EPL_2026_27_COMPETITION_ID = 2;
 const EPL_2026_27_LEGACY_GW_START = 100;
 
-function isLegacyWorldCupGameweek(gameWeekId: number): gameWeekId is GroupStageGw {
-  return gameWeekId >= 1 && gameWeekId <= 7;
+/** FIFA World Cup 2026 — competition_id 1, legacy GW ids 1–8 (= the WC gameweek). */
+const WC_2026_COMPETITION_ID = 1;
+
+function isWorldCupGameweek(gameWeekId: number): gameWeekId is GroupStageGw {
+  return gameWeekId >= 1 && gameWeekId <= 8;
 }
 
 function sheetsToPositionMap(sheets: MatchScoreSheet[]): Map<string, string> {
@@ -53,7 +53,6 @@ function eplOrdinalFromGameWeekId(gameWeekId: number): number | null {
   if (gameWeekId >= EPL_2026_27_LEGACY_GW_START && gameWeekId <= 199) {
     return gameWeekId - EPL_2026_27_LEGACY_GW_START + 1;
   }
-  if (gameWeekId >= 1 && gameWeekId <= 7) return gameWeekId;
   return null;
 }
 
@@ -71,9 +70,9 @@ function loadEplMatchPositions(gameWeekId: number): Map<string, string> {
  * player_id → in-match scoring role from FinalPoints (defender/midfielder/forward/goalkeeper).
  *
  * Pass competitionId for competition-scoped auctions. UCL (id 4) maps legacy GW 300+ to
- * registered UCL sheets. EPL (id 2) maps MW1–3 (ids 1–3) and MW4+ (ids 100–199) to EPL sheets.
- * Other / omitted competitionId keeps the legacy WC-style 1–7 path
- * (meme-builds and older callers).
+ * registered UCL sheets; EPL (id 2) maps ids 100–199. World Cup (id 1) and callers that
+ * omit competitionId (meme-builds) use the World Cup sheets for GW 1–8. Any other
+ * competition gets no positions rather than another competition's.
  */
 export function loadMatchPositionsForGameweek(
   gameWeekId: number,
@@ -87,10 +86,11 @@ export function loadMatchPositionsForGameweek(
     return loadEplMatchPositions(gameWeekId);
   }
 
-  if (!isLegacyWorldCupGameweek(gameWeekId)) return new Map();
+  if (competitionId != null && competitionId !== WC_2026_COMPETITION_ID) return new Map();
+  if (!isWorldCupGameweek(gameWeekId)) return new Map();
 
   const map = new Map<string, string>();
-  for (const sheet of MATCH_SCORE_SHEETS) {
+  for (const sheet of WC_SHEETS) {
     if (sheet.groupStageGw !== gameWeekId) continue;
     for (const row of sheet.rows) {
       map.set(String(row.playerId), row.position);

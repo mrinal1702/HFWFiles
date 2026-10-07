@@ -38,7 +38,7 @@ Scores and locks use global `Game_Weeks.id` / `Player_Scores.game_week_id`. Comp
 | Competition | Slug | `competition_id` | Auctions (examples) | Legacy GW range | Example MW1 |
 |-------------|------|------------------|---------------------|-----------------|-------------|
 | FIFA World Cup 2026 | `world-cup-2026` | 1 | 5, 6, 7 | 1–99 | 1 |
-| English Premier League 2026/27 (archived) | `epl-2026-27` | 2 | 9 | 100–199 | MW1–3 actually used **1, 2, 3**; MW4 = 103 |
+| English Premier League 2026/27 (archived) | `epl-2026-27` | 2 | 9 | 100–199 | 100 (MW1–MW4 = 100–103) |
 | UEFA Champions League 2025/26 | `uefa-cl-2025-26` | 3 | — | 200–299 | — |
 | UEFA Champions League 2026/27 | `uefa-cl-2026-27` | 4 | 10, 11, 12, 13 | 300–399 | **300** |
 
