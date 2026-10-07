@@ -1,6 +1,6 @@
 # Auction pages UI contract (current state)
 
-**Status:** Canonical. Agreed Oct 2026. Companion: [LEADERBOARD.md](./LEADERBOARD.md) (everything scoring).
+**Status:** Canonical. Agreed Oct 2026; verified against production (auction 10) on 7 Oct 2026. Companion: [LEADERBOARD.md](./LEADERBOARD.md) (everything scoring).
 **Product owner rule:** do not change layout, copy, columns or navigation unless the user
 **explicitly** asks. After an explicit change ships, update this file in the same commit.
 
@@ -28,8 +28,11 @@ added here — see [OPS_UI_SURFACES.md](../OPS_UI_SURFACES.md).
 ## Pages
 
 ### Bidding room — `/auctions/[id]/bidding-room`
+- Intro line ("You can see everyone's budgets, high bids, and rosters…") and a Refresh hint.
 - Tabs: **All players · Ongoing bids · Unsold (no bids) · Sold · Search player**.
-- Filters: club, position, status (All tab), bidder (Ongoing tab), **Sort**.
+- **Filters & sort** panel (collapsed by default): club, position, status (All tab), bidder (Ongoing tab), **Sort**.
+- Table columns: **Player · Club · Pos · State · High bid · High bidder · Lot deadline · Bid**
+  (bid form, or the reason bidding is unavailable, e.g. full roster). High bidder links to their Competitors – Bidding page.
 - Default sort **"Default (ongoing → unsold → sold)"**:
   1. Active `bidding` lots (auction still open), `expires_at` descending, tie-break `player_id`.
   2. Unsold / not sold (`uninitiated`, `unsold`, or `bidding` after close): `players.team_id` ↑,
@@ -37,22 +40,26 @@ added here — see [OPS_UI_SURFACES.md](../OPS_UI_SURFACES.md).
      `lib/auction-state/bid-ui-messages.ts`), then `player_id`.
   3. Sold: same secondary order as (2).
   Other sort options (deadline, bid high/low) override for manual analysis.
-- Sticky **Playing as / Remaining / Active** budget strip — **bidding room only**.
+- Sticky **Playing as / Remaining / Active** budget strip — **Bidding room and My team only**.
 - Player names link to the player page; after a bid the same row scrolls back into view.
 - Bid error copy is centralised in `lib/auction-state/bid-ui-messages.ts` + `auction-bid-gates.ts`.
 
 ### My team — `/auctions/[id]/team`
-Current owned squad grouped by position. Columns: **Player · Club · Pos · Price · (release)**.
+Budget strip, intro line, **Players purchased: N**, then the current owned squad grouped by
+position (Goalkeepers / Defenders / Midfielders / Forwards). Columns: **Player · Club · Pos · Price · Release**.
 Release buttons per OPS_RELEASES. Current bids live under Bids held, not here.
 
 ### Bids held — `/auctions/[id]/bids-held`
-My current high bids. Columns: **Player · Club · Pos · Your bid · Timer (local)**.
+Intro line, then my current high bids — columns **Player · Club · Pos · Your bid · Timer (local)** —
+or the empty state "You're not winning any bids at the moment.", plus slot counts
+**Players owned (n/18) · Bids held · Can still bid on**.
 
 ### Competitors – Bidding — `/auctions/[id]/competitors` and `/competitors/[auctionUserId]`
-- List columns: **Manager · Remaining · Active · Players purchased · Bids held**.
-- Detail: manager identity, **Remaining / Active** budgets, **View Team** (current squad by
-  position: **Player · Club · Pos · Price**) and their current bids (**Player · Club · Pos · Bid ·
-  Timer (local)**). Back link: "← Competitors – Bidding".
+- List: intro line, then columns **Manager · Remaining · Active · Players purchased · Bids held**.
+- Detail: back link "← Competitors – Bidding", manager identity + "View HFW profile", stats
+  **Remaining · Active · Players owned (n/18) · Bids held · Can still bid on**; **View Team**
+  ("Players they've won in this auction") grouped by position — **Player · Club · Pos · Price**;
+  **Bids they're winning** — **Player · Club · Pos · Bid · Timer (local)**, or "None right now."
 - **No points, gameweeks or formations here.** Those are on Leaderboard → Competitors – Points.
 
 ### Transfer Room, Announcements
@@ -63,8 +70,10 @@ Per-match FinalPoints sheets for the auction's competition (grouped by matchweek
 not manager scoring; player names link to the player page.
 
 ### Player page — `/auctions/[id]/players/[playerId]`
-The one deliberate cross-over: a single player's ownership, bid form, bid history, releases and
-**"Points this auction"** (that player's GW scores). It never shows a manager's squad points.
+The one deliberate cross-over. Sections: lot status (state, high bid, high bidder, lot timer) with
+← Back / Back to search / Match scores links; **Place a bid**; **Points this auction** (that
+player's scores for **this auction's gameweeks only**, + Total); **Bid history**; **Ownership & releases**.
+It never shows a manager's squad points.
 
 ## Chrome (unchanged)
 Light white + sky theme, `max-w` shell, header with auction name and full-width deadlines,

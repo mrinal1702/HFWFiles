@@ -59,7 +59,7 @@ What production showed on My Points (auction 9):
 
 **Why that is wrong:** squads change GW to GW. A sold GW1 player must not sit in the GW2 view. A bought GW2 player must not appear in the GW1 view.
 
-Standings tab (unchanged by this redesign unless later specified): season rank + filterable GW totals from `auction_leaderboard`.
+Standings tab (verified 7 Oct 2026): **GAMEWEEK FILTER** checkboxes (Select all + one per GW), caption "Showing: …", table **# · Position · Team · Points** (Team = ManagerChip; Position = overall season rank, ties share rank). Source: `auction_leaderboard`.
 
 ---
 
@@ -81,7 +81,7 @@ Standings tab (unchanged by this redesign unless later specified): season rank +
 - Keep team / manager identity as today.
 - **Small season-total box** at the top (Best XI season sum from standings / `auction_leaderboard`). Full ranking stays on **Standings**.
 - Primary number on this tab is **the selected GW**, not a career squad sum.
-- No helper copy under season total. No “squad points so far” explanatory paragraph under the GW total.
+- No helper copy under season total. Under the selected-GW header exactly one helper line (verified 7 Oct 2026): *"Only Starting XI points count toward this total. Match Pos is the playing role from uploaded stats."* No other explanatory paragraphs.
 
 ### Table for the selected GW only
 

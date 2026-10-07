@@ -51,7 +51,7 @@ Removed / parked: large Match Scores card; Meme Builds entry (routes may still e
 |------|--------|
 | Header | Auction name; deadlines (full width); Dashboard / Announcements / Refresh |
 | **Side menu** | Thin left rail (desktop) or floating menu button (mobile) + overlay drawer (`AuctionSideNav`): Bidding room (+ Fixtures modal when configured), My team, Announcements, Competitors – Bidding, Bids held, Transfer Room, Match scores, Leaderboard |
-| **Bidding room** | Lot list, filters, deadlines, bid forms; sticky Playing as + Remaining / Active budgets (**bidding room only**) |
+| **Bidding room** | Lot list, filters, deadlines, bid forms; sticky Playing as + Remaining / Active budgets (**Bidding room and My team only**) |
 | **My Team** | Squad + release buttons |
 | **Bids held** | Current high bids |
 | **Competitors – Bidding** | Other managers’ **current** squads, budgets and bids. Not points — those are Leaderboard → **Competitors – Points** |
@@ -71,7 +71,7 @@ Validated on production phones (EPL auction UI pass, Aug 2026). Treat as the def
 | **Overlay drawer** | Same open/close model on phone and desktop (tap/click; backdrop + Escape; closes on navigate). No hover-open in v1. | `AuctionSideNav` overlay |
 | **Compact scale** | Slightly smaller UI so more lots fit; users can pinch-zoom if needed. | `.auction-mobile-compact { zoom: 0.88; }` under `max-width: 767px` in `app/globals.css` (class on auction layout content). **Do not raise toward 1.0 without checking phones.** Nudge only if product asks (e.g. `0.85` / `0.92`). |
 | **Dense bidding list** | Smaller mobile lot cards, tabs, filters, and bid controls; desktop table unchanged. | `BiddingRoomClient`, `BidRowForm`, bidding-room page padding |
-| **Budget strip scope** | Playing as / Remaining / Active only on the bidding room (not My team, Leaderboard, etc.). | `AuctionBudgetStrip` pathname gate |
+| **Budget strip scope** | Playing as / Remaining / Active on the Bidding room and My team only (not Leaderboard, Competitors, etc.). | `AuctionBudgetStrip` pathname gate |
 | **Deadlines full width** | Putting deadlines in a `flex-1` column beside Dashboard / Announcements / Refresh squeezed the date into one-word-per-line wraps. | Header stacks: title + actions on one block; **deadlines below at full width**. `AuctionDeadlines`: mobile = label above value; `sm+` = three columns. |
 | **New pages → side menu** | See [New in-auction pages](#new-in-auction-pages-required) above. | `AuctionSideNav` |
 
