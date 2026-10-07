@@ -1,51 +1,104 @@
-import {
-  EPL_2026_27,
-  EPL_MATCH_SCORE_GROUPS,
-  EPL_MATCH_SCORE_SHEETS,
-} from "./competitions/epl-2026-27";
-import { UCL_2026_27, UCL_MATCH_SCORE_GROUPS } from "./competitions/uefa-cl-2026-27";
-import { WC_2026, WC_MATCH_SCORE_GROUPS, WC_MATCH_SCORE_SHEETS } from "./competitions/world-cup-2026";
+import fs from "node:fs";
+import path from "node:path";
+
+import { loadMatchScoreCsv } from "./parse-final-points";
 import type { MatchScoreGroup, MatchScoreSheet } from "./types";
 
 /**
- * Match score sheet registry. Each competition's sheets live in their own file under
- * ./competitions/<slug>.ts — add new matches there, not here.
+ * Match score sheet registry — DATA ONLY. Each competition has
+ * `data/competitions/<slug>/sheets.json` (written by `scoring-engine/score_match.py`) plus its
+ * FinalPoints CSVs in `data/competitions/<slug>/match-scores/`. A new match or a new gameweek is a
+ * new entry in sheets.json — never a code change. A new gameweek becomes a new tab automatically.
  */
+export type CompetitionSheetsManifest = {
+  competition_slug: string;
+  competition_id: number;
+  display_name: string;
+  /** Legacy game_week_id of matchweek 1 (UCL 2026/27 = 300, EPL 2026/27 = 100, WC 2026 = 1). */
+  legacy_game_week_start: number;
+  /** Tab label, e.g. "UEFA Champions League GW{n}". Overridden per gameweek by group_labels. */
+  group_label_template: string;
+  subtitle_template: string;
+  group_labels: Record<string, string>;
+  /** Shown on the public /match-scores page (and for auctions without a competition). */
+  public_default?: boolean;
+  sheets: Array<{
+    slug: string;
+    title: string;
+    subtitle: string;
+    gw: number;
+    fotmob_match_id?: number;
+    file: string;
+  }>;
+};
+
+type LoadedCompetition = {
+  manifest: CompetitionSheetsManifest;
+  sheets: MatchScoreSheet[];
+  groups: MatchScoreGroup[];
+};
+
+function loadCompetitions(): LoadedCompetition[] {
+  const root = path.join(process.cwd(), "data", "competitions");
+  if (!fs.existsSync(root)) return [];
+  const out: LoadedCompetition[] = [];
+  for (const dir of fs.readdirSync(root).sort()) {
+    const manifestPath = path.join(root, dir, "sheets.json");
+    if (!fs.existsSync(manifestPath)) continue;
+    const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8")) as CompetitionSheetsManifest;
+    const sheets: MatchScoreSheet[] = manifest.sheets.map((s) => ({
+      slug: s.slug,
+      title: s.title,
+      subtitle: s.subtitle,
+      groupStageGw: s.gw,
+      competitionSlug: manifest.competition_slug,
+      fotmobMatchId: s.fotmob_match_id,
+      rows: loadMatchScoreCsv(s.file, manifest.competition_slug),
+    }));
+    const gws = [...new Set(sheets.map((s) => s.groupStageGw))].sort((a, b) => a - b);
+    const groups: MatchScoreGroup[] = gws.map((gw) => ({
+      gw,
+      label: manifest.group_labels[String(gw)] ?? manifest.group_label_template.replace("{n}", String(gw)),
+      sheets: sheets.filter((s) => s.groupStageGw === gw),
+    }));
+    out.push({ manifest, sheets, groups });
+  }
+  return out;
+}
+
+const COMPETITIONS = loadCompetitions();
+const BY_SLUG = new Map(COMPETITIONS.map((c) => [c.manifest.competition_slug, c]));
+const BY_ID = new Map(COMPETITIONS.map((c) => [Number(c.manifest.competition_id), c]));
+const PUBLIC_DEFAULT = COMPETITIONS.find((c) => c.manifest.public_default) ?? null;
 
 /** Matches public.competitions rows used by online auctions. */
-export const COMPETITION_ID_TO_SLUG: Record<number, string> = {
-  1: WC_2026,
-  2: EPL_2026_27,
-  4: UCL_2026_27,
-};
+export const COMPETITION_ID_TO_SLUG: Record<number, string> = Object.fromEntries(
+  COMPETITIONS.map((c) => [c.manifest.competition_id, c.manifest.competition_slug]),
+);
 
-const MATCH_SCORE_GROUPS_BY_SLUG: Record<string, MatchScoreGroup[]> = {
-  [WC_2026]: WC_MATCH_SCORE_GROUPS,
-  [EPL_2026_27]: EPL_MATCH_SCORE_GROUPS,
-  [UCL_2026_27]: UCL_MATCH_SCORE_GROUPS,
-};
+/** Public /match-scores page (competition flagged `public_default` in its sheets.json). */
+export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = PUBLIC_DEFAULT?.sheets ?? [];
 
-/** Legacy default — EPL matchweek 1 sheets (public /match-scores page). */
-export const MATCH_SCORE_SHEETS: MatchScoreSheet[] = EPL_MATCH_SCORE_SHEETS;
+export const MATCH_SCORE_GROUPS: MatchScoreGroup[] = PUBLIC_DEFAULT?.groups ?? [];
 
-export const MATCH_SCORE_GROUPS: MatchScoreGroup[] = EPL_MATCH_SCORE_GROUPS;
+export function getSheetsManifestForCompetitionId(
+  competitionId: number | null | undefined,
+): CompetitionSheetsManifest | null {
+  if (competitionId == null || !Number.isFinite(competitionId)) return null;
+  return BY_ID.get(Number(competitionId))?.manifest ?? null;
+}
 
 export function getMatchScoreGroupsForCompetitionSlug(slug: string | null | undefined): MatchScoreGroup[] {
   if (!slug) return [];
-  return MATCH_SCORE_GROUPS_BY_SLUG[slug] ?? [];
+  return BY_SLUG.get(slug)?.groups ?? [];
 }
 
 export function getMatchScoreGroupsForCompetitionId(competitionId: number | null | undefined): MatchScoreGroup[] {
   if (competitionId == null || !Number.isFinite(competitionId)) {
-    return EPL_MATCH_SCORE_GROUPS;
+    return MATCH_SCORE_GROUPS;
   }
-  const slug = COMPETITION_ID_TO_SLUG[competitionId];
-  if (!slug) return [];
-  return getMatchScoreGroupsForCompetitionSlug(slug);
+  return BY_ID.get(Number(competitionId))?.groups ?? [];
 }
-
-/** World Cup 2026 sheets — legacy callers with no competition (e.g. meme-builds) use these. */
-export const WC_SHEETS: MatchScoreSheet[] = WC_MATCH_SCORE_SHEETS;
 
 export function getMatchScoreSheet(slug: string): MatchScoreSheet | undefined {
   return MATCH_SCORE_SHEETS.find((s) => s.slug === slug);

@@ -3,7 +3,11 @@
 Reuse these — do not write ad-hoc SQL or new scripts when one exists. Always dry-run first where
 offered. Write scripts refuse archived competitions unless `--allow-archived` (approved amendments only).
 
-## Gameweek pipeline (in order — full checklist: `docs/OPS_SCORING_AND_LEADERBOARD.md`)
+## Gameweek pipeline — use `gameweek.mjs` (runbook: `docs/GAMEWEEK_RUNBOOK.md`)
+`node scripts/gameweek.mjs <init-round|status|open|lock|upload-scores|best-xi|verify> --competition <slug> --round mwNN [--apply]`
+reads the round manifest and calls the scripts below. Never write a per-gameweek script.
+
+Underlying scripts (called by gameweek.mjs; use directly only for repairs):
 | Step | Script |
 |---|---|
 | Open bidding window | `open-nation-rolling-round.mjs` (knockouts) or set deadlines on `"Auctions"`; `open-transfer-window.mjs`, `close-auction-bidding.mjs` |

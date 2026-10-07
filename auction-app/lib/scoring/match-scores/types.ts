@@ -8,7 +8,8 @@ export type MatchScoreRow = {
   finalScore: number;
 };
 
-export type GroupStageGw = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+/** Matchweek number within a competition (1, 2, 3 …). */
+export type GroupStageGw = number;
 
 export type MatchScoreSheet = {
   slug: string;

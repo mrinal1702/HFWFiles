@@ -42,7 +42,11 @@ test fixtures — do not move them without updating the scripts.
 `docs/MAIN_PIPELINE_FUNCTIONS.md` (pipeline detail), `docs/STAT_COLLECTION_AND_WORKFLOW.md`
 (stats + scoring rule changelog), `docs/AUCTION_PREPARATION_PROCEDURE.md` (player pool).
 
-## Active use — do not break
-The live UCL 2026/27 scorer (`competitions/active/uefa-cl-2026-27/rounds/mw01/_score_ucl_match.py`)
-runs `point_simulator.py` + `calculate_keeper_points.py` from this folder and imports
-`final_points`. Renaming files here breaks it — coordinate first.
+## Scoring a match (standard, any competition)
+`python scoring-engine/score_match.py --competition <slug> --round mwNN --url <FotMob URL>` — scores,
+writes the match folder + app CSV, and registers the match in `round.json` and the app's
+`sheets.json`. Part of `auction-app/docs/GAMEWEEK_RUNBOOK.md`. (It reproduces UCL MW1 byte-for-byte;
+`competitions/active/uefa-cl-2026-27/rounds/mw01/_score_ucl_match.py` is the superseded MW1-only version.)
+
+`score_match.py` runs `point_simulator.py` + `calculate_keeper_points.py` and imports `final_points` —
+renaming those breaks it.

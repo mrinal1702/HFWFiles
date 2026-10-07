@@ -126,7 +126,7 @@ Do not add per-GW score columns or endless tabs. World Cup GW **tabs** must not 
 - **Public (canonical):** `/match-scores` (grouped by GW) — anyone; player names are plain text
 - **In-auction:** `/auctions/[auctionId]/match-scores` — members only (incl. archived if still a member); same sheets; player names link to `/auctions/[auctionId]/players/[playerId]`
 - Legacy redirects: `/scores/[slug]` → public match-scores
-- Data: `data/competitions/<slug>/match-scores/*_FinalPoints.csv`, registered in `lib/scoring/match-scores/competitions/<slug>.ts` (wired up in `lib/scoring/match-scores/sheets.ts`)
+- Data: `data/competitions/<slug>/match-scores/*_FinalPoints.csv`, listed in `data/competitions/<slug>/sheets.json` (loaded by `lib/scoring/match-scores/sheets.ts`); each gameweek is one tab
 - Same FinalPoints `position` column powers leaderboard **Match Pos** (via `loadMatchPositionsForGameweek`)
 
 When a competition ends, **keep** its sheet file and CSVs registered — archived auctions’ match-score pages and Match Pos still read them. Keep the **routes** for the next season’s sheets.

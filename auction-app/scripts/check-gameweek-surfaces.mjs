@@ -127,13 +127,19 @@ function findCompetitionJson(slug) {
   return null;
 }
 
-/** ordinal matchweek → number of registered match sheets, from lib/scoring/match-scores/competitions/<slug>.ts */
+/** The competition's app sheet manifest (data/competitions/<slug>/sheets.json), or null. */
+function sheetsManifest(slug) {
+  const p = path.join(appRoot, "data/competitions", slug, "sheets.json");
+  return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, "utf8")) : null;
+}
+
+/** ordinal matchweek → number of registered match sheets (whose CSV exists). */
 function registeredSheetsByOrdinal(slug) {
-  const p = path.join(appRoot, "lib/scoring/match-scores/competitions", `${slug}.ts`);
   const counts = new Map();
-  if (!fs.existsSync(p)) return counts;
-  for (const m of fs.readFileSync(p, "utf8").matchAll(/groupStageGw:\s*(\d+)/g)) {
-    counts.set(Number(m[1]), (counts.get(Number(m[1])) ?? 0) + 1);
+  const m = sheetsManifest(slug);
+  for (const s of m?.sheets ?? []) {
+    if (!fs.existsSync(path.join(appRoot, "data/competitions", slug, "match-scores", s.file))) continue;
+    counts.set(Number(s.gw), (counts.get(Number(s.gw)) ?? 0) + 1);
   }
   return counts;
 }
@@ -152,7 +158,7 @@ async function checkAuction(sb, auction, comp) {
   const problems = [];
   const slug = comp?.slug ?? null;
   const manifest = slug ? findCompetitionJson(slug) : null;
-  const gwStart = manifest?.legacy_game_week_id_range?.[0] ?? null;
+  const gwStart = sheetsManifest(slug ?? "")?.legacy_game_week_start ?? manifest?.legacy_game_week_id_range?.[0] ?? null;
   const sheets = slug ? registeredSheetsByOrdinal(slug) : new Map();
 
   const squads = await allRows(sb, "gameweek_squads", "game_week_id, auction_user_id, player_id, is_best_xi", (q) =>

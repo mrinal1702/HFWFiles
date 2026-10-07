@@ -41,6 +41,10 @@ FinalPoints format is unchanged; the same holds for the Best XI JSON.
 | English Premier League 2026/27 | 2 | 9 | 100–103 | archived |
 | FIFA World Cup 2026 | 1 | 5, 6, 7 | 1–8 | archived |
 
+## Running a gameweek
+`auction-app/docs/GAMEWEEK_RUNBOOK.md` — fill `competitions/active/<slug>/rounds/mwNN/round.json`,
+then `scoring-engine/score_match.py` + `auction-app/scripts/gameweek.mjs`. No new code per gameweek.
+
 ## Hard rules
 - Never mix competitions: scope every read/write by `competition_id` / `auction_id`, never by
   player id or club name (the same player/club can exist in several competitions).

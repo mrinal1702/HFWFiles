@@ -100,7 +100,7 @@ Split versions also exist if you prefer to run them in two passes:
   there. (The legacy flat `auction-app/data/match-scores/` fallback was removed in Oct 2026.)
 - `lib/scoring/match-scores/parse-final-points.ts` — `loadMatchScoreCsv(file, slug)`
   reads the competition-scoped path (slug required since Oct 2026).
-- `lib/scoring/match-scores/sheets.ts` (per-competition sheet lists now in `lib/scoring/match-scores/competitions/<slug>.ts`) — each sheet now carries `competitionSlug` and
+- `lib/scoring/match-scores/sheets.ts` (per-competition sheet lists now in `auction-app/data/competitions/<slug>/sheets.json`) — each sheet now carries `competitionSlug` and
   `fotmobMatchId`.
 - `lib/scoring/match-scores/types.ts` — `MatchScoreSheet` gained optional
   `competitionSlug` and `fotmobMatchId`.

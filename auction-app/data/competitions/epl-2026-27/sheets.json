@@ -1,0 +1,332 @@
+{
+  "competition_slug": "epl-2026-27",
+  "competition_id": 2,
+  "display_name": "English Premier League 2026/27",
+  "legacy_game_week_start": 100,
+  "group_label_template": "Premier League GW{n}",
+  "subtitle_template": "Premier League · Matchweek {n}",
+  "group_labels": {},
+  "public_default": true,
+  "sheets": [
+    {
+      "slug": "arsenal-coventry-city",
+      "title": "Arsenal vs Coventry City",
+      "subtitle": "Premier League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 5795363,
+      "file": "Arsenal_CoventryCity_FinalPoints.csv"
+    },
+    {
+      "slug": "hull-city-manchester-united",
+      "title": "Hull City vs Manchester United",
+      "subtitle": "Premier League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 5795364,
+      "file": "HullCity_ManchesterUnited_FinalPoints.csv"
+    },
+    {
+      "slug": "ipswich-town-sunderland",
+      "title": "Ipswich Town vs Sunderland",
+      "subtitle": "Premier League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 5795366,
+      "file": "IpswichTown_Sunderland_FinalPoints.csv"
+    },
+    {
+      "slug": "everton-crystal-palace",
+      "title": "Everton vs Crystal Palace",
+      "subtitle": "Premier League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 5795365,
+      "file": "Everton_CrystalPalace_FinalPoints.csv"
+    },
+    {
+      "slug": "leeds-nottingham-forest",
+      "title": "Leeds United vs Nottingham Forest",
+      "subtitle": "Premier League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 5795367,
+      "file": "NottinghamForest_LeedsUnited_FinalPoints.csv"
+    },
+    {
+      "slug": "brentford-tottenham-hotspur",
+      "title": "Brentford vs Tottenham Hotspur",
+      "subtitle": "Premier League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 5795368,
+      "file": "Brentford_TottenhamHotspur_FinalPoints.csv"
+    },
+    {
+      "slug": "brighton-aston-villa",
+      "title": "Brighton & Hove Albion vs Aston Villa",
+      "subtitle": "Premier League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 5795369,
+      "file": "BrightonHoveAlbion_AstonVilla_FinalPoints.csv"
+    },
+    {
+      "slug": "manchester-city-afc-bournemouth",
+      "title": "Manchester City vs AFC Bournemouth",
+      "subtitle": "Premier League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 5795370,
+      "file": "ManchesterCity_AFCBournemouth_FinalPoints.csv"
+    },
+    {
+      "slug": "liverpool-newcastle-united",
+      "title": "Newcastle United vs Liverpool",
+      "subtitle": "Premier League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 5795371,
+      "file": "NewcastleUnited_Liverpool_FinalPoints.csv"
+    },
+    {
+      "slug": "chelsea-fulham",
+      "title": "Fulham vs Chelsea",
+      "subtitle": "Premier League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 5795372,
+      "file": "Fulham_Chelsea_FinalPoints.csv"
+    },
+    {
+      "slug": "crystal-palace-manchester-city",
+      "title": "Crystal Palace vs Manchester City",
+      "subtitle": "Premier League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 5795429,
+      "file": "CrystalPalace_ManchesterCity_FinalPoints.csv"
+    },
+    {
+      "slug": "liverpool-nottingham-forest",
+      "title": "Liverpool vs Nottingham Forest",
+      "subtitle": "Premier League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 5795431,
+      "file": "Liverpool_NottinghamForest_FinalPoints.csv"
+    },
+    {
+      "slug": "afc-bournemouth-everton",
+      "title": "AFC Bournemouth vs Everton",
+      "subtitle": "Premier League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 5795425,
+      "file": "AFCBournemouth_Everton_FinalPoints.csv"
+    },
+    {
+      "slug": "coventry-city-hull-city",
+      "title": "Coventry City vs Hull City",
+      "subtitle": "Premier League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 5795428,
+      "file": "CoventryCity_HullCity_FinalPoints.csv"
+    },
+    {
+      "slug": "tottenham-hotspur-newcastle-united",
+      "title": "Tottenham Hotspur vs Newcastle United",
+      "subtitle": "Premier League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 5795434,
+      "file": "TottenhamHotspur_NewcastleUnited_FinalPoints.csv"
+    },
+    {
+      "slug": "chelsea-brighton-hove-albion",
+      "title": "Chelsea vs Brighton & Hove Albion",
+      "subtitle": "Premier League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 5795427,
+      "file": "Chelsea_BrightonHoveAlbion_FinalPoints.csv"
+    },
+    {
+      "slug": "leeds-united-brentford",
+      "title": "Leeds United vs Brentford",
+      "subtitle": "Premier League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 5795430,
+      "file": "LeedsUnited_Brentford_FinalPoints.csv"
+    },
+    {
+      "slug": "sunderland-fulham",
+      "title": "Sunderland vs Fulham",
+      "subtitle": "Premier League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 5795433,
+      "file": "Sunderland_Fulham_FinalPoints.csv"
+    },
+    {
+      "slug": "manchester-united-ipswich-town",
+      "title": "Manchester United vs Ipswich Town",
+      "subtitle": "Premier League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 5795432,
+      "file": "ManchesterUnited_IpswichTown_FinalPoints.csv"
+    },
+    {
+      "slug": "aston-villa-arsenal",
+      "title": "Aston Villa vs Arsenal",
+      "subtitle": "Premier League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 5795426,
+      "file": "AstonVilla_Arsenal_FinalPoints.csv"
+    },
+    {
+      "slug": "ipswich-town-liverpool",
+      "title": "Ipswich Town vs Liverpool",
+      "subtitle": "Premier League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 5795441,
+      "file": "IpswichTown_Liverpool_FinalPoints.csv"
+    },
+    {
+      "slug": "newcastle-united-afc-bournemouth",
+      "title": "Newcastle United vs AFC Bournemouth",
+      "subtitle": "Premier League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 5795443,
+      "file": "NewcastleUnited_AFCBournemouth_FinalPoints.csv"
+    },
+    {
+      "slug": "brentford-sunderland",
+      "title": "Brentford vs Sunderland",
+      "subtitle": "Premier League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 5795436,
+      "file": "Brentford_Sunderland_FinalPoints.csv"
+    },
+    {
+      "slug": "brighton-leeds-united",
+      "title": "Brighton & Hove Albion vs Leeds United",
+      "subtitle": "Premier League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 5795437,
+      "file": "BrightonHoveAlbion_LeedsUnited_FinalPoints.csv"
+    },
+    {
+      "slug": "fulham-crystal-palace",
+      "title": "Fulham vs Crystal Palace",
+      "subtitle": "Premier League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 5795439,
+      "file": "Fulham_CrystalPalace_FinalPoints.csv"
+    },
+    {
+      "slug": "manchester-city-coventry-city",
+      "title": "Manchester City vs Coventry City",
+      "subtitle": "Premier League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 5795442,
+      "file": "ManchesterCity_CoventryCity_FinalPoints.csv"
+    },
+    {
+      "slug": "nottingham-forest-tottenham-hotspur",
+      "title": "Nottingham Forest vs Tottenham Hotspur",
+      "subtitle": "Premier League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 5795444,
+      "file": "NottinghamForest_TottenhamHotspur_FinalPoints.csv"
+    },
+    {
+      "slug": "hull-city-aston-villa",
+      "title": "Hull City vs Aston Villa",
+      "subtitle": "Premier League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 5795440,
+      "file": "HullCity_AstonVilla_FinalPoints.csv"
+    },
+    {
+      "slug": "everton-manchester-united",
+      "title": "Everton vs Manchester United",
+      "subtitle": "Premier League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 5795438,
+      "file": "Everton_ManchesterUnited_FinalPoints.csv"
+    },
+    {
+      "slug": "arsenal-chelsea",
+      "title": "Arsenal vs Chelsea",
+      "subtitle": "Premier League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 5795435,
+      "file": "Arsenal_Chelsea_FinalPoints.csv"
+    },
+    {
+      "slug": "afc-bournemouth-brentford",
+      "title": "AFC Bournemouth vs Brentford",
+      "subtitle": "Premier League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 5795445,
+      "file": "AFCBournemouth_Brentford_FinalPoints.csv"
+    },
+    {
+      "slug": "aston-villa-nottingham-forest",
+      "title": "Aston Villa vs Nottingham Forest",
+      "subtitle": "Premier League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 5795446,
+      "file": "AstonVilla_NottinghamForest_FinalPoints.csv"
+    },
+    {
+      "slug": "chelsea-hull-city",
+      "title": "Chelsea vs Hull City",
+      "subtitle": "Premier League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 5795447,
+      "file": "Chelsea_HullCity_FinalPoints.csv"
+    },
+    {
+      "slug": "crystal-palace-ipswich-town",
+      "title": "Crystal Palace vs Ipswich Town",
+      "subtitle": "Premier League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 5795449,
+      "file": "CrystalPalace_IpswichTown_FinalPoints.csv"
+    },
+    {
+      "slug": "liverpool-fulham",
+      "title": "Liverpool vs Fulham",
+      "subtitle": "Premier League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 5795451,
+      "file": "Liverpool_Fulham_FinalPoints.csv"
+    },
+    {
+      "slug": "tottenham-hotspur-everton",
+      "title": "Tottenham Hotspur vs Everton",
+      "subtitle": "Premier League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 5795454,
+      "file": "TottenhamHotspur_Everton_FinalPoints.csv"
+    },
+    {
+      "slug": "sunderland-arsenal",
+      "title": "Sunderland vs Arsenal",
+      "subtitle": "Premier League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 5795453,
+      "file": "Sunderland_Arsenal_FinalPoints.csv"
+    },
+    {
+      "slug": "coventry-city-brighton-hove-albion",
+      "title": "Coventry City vs Brighton & Hove Albion",
+      "subtitle": "Premier League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 5795448,
+      "file": "CoventryCity_BrightonHoveAlbion_FinalPoints.csv"
+    },
+    {
+      "slug": "manchester-united-manchester-city",
+      "title": "Manchester United vs Manchester City",
+      "subtitle": "Premier League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 5795452,
+      "file": "ManchesterUnited_ManchesterCity_FinalPoints.csv"
+    },
+    {
+      "slug": "leeds-united-newcastle-united",
+      "title": "Leeds United vs Newcastle United",
+      "subtitle": "Premier League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 5795450,
+      "file": "LeedsUnited_NewcastleUnited_FinalPoints.csv"
+    }
+  ]
+}

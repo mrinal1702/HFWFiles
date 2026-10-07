@@ -11,6 +11,10 @@ const supabaseHost = (() => {
 })();
 
 const nextConfig: NextConfig = {
+  // Match-score manifests + CSVs and Best XI overlays are read from disk at runtime.
+  outputFileTracingIncludes: {
+    "/**": ["./data/**/*"],
+  },
   images: {
     remotePatterns: [
       {

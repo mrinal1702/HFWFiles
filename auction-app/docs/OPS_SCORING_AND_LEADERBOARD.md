@@ -11,14 +11,16 @@ Tournament-specific examples (WC 2026) may live under `archive/world-cup-2026/` 
 
 ## End-to-end pipeline (standard)
 
+**Run it with [GAMEWEEK_RUNBOOK.md](./GAMEWEEK_RUNBOOK.md)** — `scoring-engine/score_match.py` + `scripts/gameweek.mjs` do every step below from the round manifest. This section explains what those steps do.
+
 ```
 FotMob match → match JSON (keep under competition round)
         → score to *FinalPoints.csv
         → copy FinalPoints into auction-app/data/competitions/<slug>/match-scores/
-        → register sheet in lib/scoring/match-scores/competitions/<slug>.ts
+        → add the sheet to auction-app/data/competitions/<slug>/sheets.json (score_match.py does both)
         → upsert Player_Scores (Supabase) using that competition’s legacy game_week_id
         → confirm gameweek_squads locked for every target auction
-        → compute Best XI (Python) → Scores/best_xi_auction_{id}_gw{N}.json
+        → compute Best XI (Python) → competitions/<…>/<slug>/auction-outputs/auction-{id}/best-xi/best_xi_auction_{id}_gw{N}.json
         → publish Best XI → gameweek_squads + auction_leaderboard
              + writes data/best-xi/auction-{id}-gw{N}.json
         → git commit + push: sheets/CSVs + best-xi overlays (+ any app wiring)
@@ -55,7 +57,7 @@ Always use the **legacy** id (`competition.json` / `rounds/mwNN/round.json` → 
 **Public / in-auction match scores + Match Pos source (required for UI):**
 
 1. Copy `*_FinalPoints.csv` → `auction-app/data/competitions/<slug>/match-scores/`
-2. Register the match in that competition’s sheet file [`lib/scoring/match-scores/competitions/<slug>.ts`](../lib/scoring/match-scores/competitions/) (e.g. `uefa-cl-2026-27.ts`; a new competition also needs an entry in [`sheets.ts`](../lib/scoring/match-scores/sheets.ts)) (`groupStageGw` = **ordinal** matchweek 1, 2, 3… within the competition — not the legacy id)
+2. Add the match to `auction-app/data/competitions/<slug>/sheets.json` (`gw` = **ordinal** matchweek 1, 2, 3… within the competition — not the legacy id). `score_match.py` does steps 1–2. A new competition needs a new `sheets.json` (copy an existing one: `competition_id`, `legacy_game_week_start`, label templates) — no code.
 3. Commit + deploy
 
 Match Pos on My Points / Competitors is loaded by [`lib/scoring/match-positions-for-gw.ts`](../lib/scoring/match-positions-for-gw.ts):
@@ -167,7 +169,7 @@ Relegated managers **remain** on Standings (flagged).
 - Git push to the connected branch triggers deploy.
 - Vercel **Root Directory** = `auction-app` (required).
 - Smoke: `https://hfwauction.vercel.app/api/health` → `{ "ok": true }`.
-- **Must commit for production UI:** competition match-score CSVs, `lib/scoring/match-scores/competitions/<slug>.ts` registrations, and `data/best-xi/auction-*-gw*.json` overlays.
+- **Must commit for production UI:** competition match-score CSVs, `sheets.json`, and `data/best-xi/auction-*-gw*.json` overlays.
 
 See `docs/VERCEL_DEPLOYMENT_PLAYBOOK.md`.
 

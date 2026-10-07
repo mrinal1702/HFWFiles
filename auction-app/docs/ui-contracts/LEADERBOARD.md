@@ -141,6 +141,10 @@ Do not show “sum of all currently owned players across all GWs” as the main 
 
 As GWs are added: dropdown options increase; table width and tab count stay the same.
 
+- **Standings:** each published gameweek adds one checkbox to the GAMEWEEK FILTER; any subset sums only those gameweeks; "Select all" = overall season standings (all scoring gameweeks).
+- **My Points / Competitors – Points:** each locked gameweek adds one dropdown option; default = latest gameweek with scores.
+- All of this comes from data (`auction_leaderboard`, `gameweek_squads`, `sheets.json`, overlays) produced by `docs/GAMEWEEK_RUNBOOK.md` — no code per gameweek.
+
 ---
 
 ## Explicitly out of scope unless the user asks

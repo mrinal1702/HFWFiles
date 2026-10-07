@@ -13,7 +13,7 @@ Contract (read first): `auction-app/docs/ui-contracts/LEADERBOARD.md`.
 
 **A new gameweek is data, not code.** If a GW looks wrong (no formation, blank Match Pos, missing
 standings), the publish step is incomplete — fix the data (see `docs/OPS_SCORING_AND_LEADERBOARD.md`),
-do not patch the UI. Diagnose with:
+do not patch the UI (runbook: `docs/GAMEWEEK_RUNBOOK.md`). Diagnose with:
 
 ```bash
 node scripts/check-gameweek-surfaces.mjs --auction-ids <id>

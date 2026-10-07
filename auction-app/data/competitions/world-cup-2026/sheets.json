@@ -1,0 +1,741 @@
+{
+  "competition_slug": "world-cup-2026",
+  "competition_id": 1,
+  "display_name": "FIFA World Cup 2026",
+  "legacy_game_week_start": 1,
+  "group_label_template": "GW{n}",
+  "subtitle_template": "World Cup 2026 · GW{n}",
+  "group_labels": {
+    "1": "Group Stage GW1",
+    "2": "Group Stage GW2",
+    "3": "Group Stage GW3",
+    "4": "Round of 32",
+    "5": "Round of 16",
+    "6": "Quarter-finals",
+    "7": "Semi-finals",
+    "8": "Finals"
+  },
+  "sheets": [
+    {
+      "slug": "mexico-south-africa",
+      "title": "Mexico vs South Africa",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Mexico_SouthAfrica_FinalPoints.csv"
+    },
+    {
+      "slug": "south-korea-czechia",
+      "title": "South Korea vs Czechia",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "SouthKorea_Czechia_FinalPoints.csv"
+    },
+    {
+      "slug": "canada-bosnia-herzegovina",
+      "title": "Canada vs Bosnia and Herzegovina",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Canada_BosniaandHerzegovina_FinalPoints.csv"
+    },
+    {
+      "slug": "usa-paraguay",
+      "title": "USA vs Paraguay",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "USA_Paraguay_FinalPoints.csv"
+    },
+    {
+      "slug": "qatar-switzerland",
+      "title": "Qatar vs Switzerland",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Qatar_Switzerland_FinalPoints.csv"
+    },
+    {
+      "slug": "brazil-morocco",
+      "title": "Brazil vs Morocco",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Brazil_Morocco_FinalPoints.csv"
+    },
+    {
+      "slug": "haiti-scotland",
+      "title": "Haiti vs Scotland",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Haiti_Scotland_FinalPoints.csv"
+    },
+    {
+      "slug": "australia-turkiye",
+      "title": "Australia vs Turkiye",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Australia_Turkiye_FinalPoints.csv"
+    },
+    {
+      "slug": "germany-curacao",
+      "title": "Germany vs Curacao",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Germany_Curacao_FinalPoints.csv"
+    },
+    {
+      "slug": "netherlands-japan",
+      "title": "Netherlands vs Japan",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Netherlands_Japan_FinalPoints.csv"
+    },
+    {
+      "slug": "ivory-coast-ecuador",
+      "title": "Ivory Coast vs Ecuador",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "IvoryCoast_Ecuador_FinalPoints.csv"
+    },
+    {
+      "slug": "sweden-tunisia",
+      "title": "Sweden vs Tunisia",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Sweden_Tunisia_FinalPoints.csv"
+    },
+    {
+      "slug": "cape-verde-spain",
+      "title": "Cape Verde vs Spain",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Spain_CapeVerde_FinalPoints.csv"
+    },
+    {
+      "slug": "belgium-egypt",
+      "title": "Belgium vs Egypt",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Belgium_Egypt_FinalPoints.csv"
+    },
+    {
+      "slug": "saudi-arabia-uruguay",
+      "title": "Saudi Arabia vs Uruguay",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "SaudiArabia_Uruguay_FinalPoints.csv"
+    },
+    {
+      "slug": "iran-new-zealand",
+      "title": "Iran vs New Zealand",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Iran_NewZealand_FinalPoints.csv"
+    },
+    {
+      "slug": "france-senegal",
+      "title": "France vs Senegal",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "France_Senegal_FinalPoints.csv"
+    },
+    {
+      "slug": "iraq-norway",
+      "title": "Iraq vs Norway",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Iraq_Norway_FinalPoints.csv"
+    },
+    {
+      "slug": "argentina-algeria",
+      "title": "Argentina vs Algeria",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Argentina_Algeria_FinalPoints.csv"
+    },
+    {
+      "slug": "austria-jordan",
+      "title": "Austria vs Jordan",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Austria_Jordan_FinalPoints.csv"
+    },
+    {
+      "slug": "portugal-dr-congo",
+      "title": "Portugal vs DR Congo",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Portugal_DRCongo_FinalPoints.csv"
+    },
+    {
+      "slug": "england-croatia",
+      "title": "England vs Croatia",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "England_Croatia_FinalPoints.csv"
+    },
+    {
+      "slug": "ghana-panama",
+      "title": "Ghana vs Panama",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Ghana_Panama_FinalPoints.csv"
+    },
+    {
+      "slug": "uzbekistan-colombia",
+      "title": "Uzbekistan vs Colombia",
+      "subtitle": "World Cup 2026 · Group stage · GW1",
+      "gw": 1,
+      "file": "Uzbekistan_Colombia_FinalPoints.csv"
+    },
+    {
+      "slug": "czechia-south-africa",
+      "title": "Czechia vs South Africa",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Czechia_SouthAfrica_FinalPoints.csv"
+    },
+    {
+      "slug": "switzerland-bosnia-herzegovina",
+      "title": "Switzerland vs Bosnia and Herzegovina",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Switzerland_BosniaandHerzegovina_FinalPoints.csv"
+    },
+    {
+      "slug": "canada-qatar",
+      "title": "Canada vs Qatar",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Canada_Qatar_FinalPoints.csv"
+    },
+    {
+      "slug": "mexico-south-korea",
+      "title": "Mexico vs South Korea",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Mexico_SouthKorea_FinalPoints.csv"
+    },
+    {
+      "slug": "usa-australia",
+      "title": "USA vs Australia",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "USA_Australia_FinalPoints.csv"
+    },
+    {
+      "slug": "scotland-morocco",
+      "title": "Scotland vs Morocco",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Scotland_Morocco_FinalPoints.csv"
+    },
+    {
+      "slug": "brazil-haiti",
+      "title": "Brazil vs Haiti",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Brazil_Haiti_FinalPoints.csv"
+    },
+    {
+      "slug": "turkiye-paraguay",
+      "title": "Turkiye vs Paraguay",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Turkiye_Paraguay_FinalPoints.csv"
+    },
+    {
+      "slug": "netherlands-sweden",
+      "title": "Netherlands vs Sweden",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Netherlands_Sweden_FinalPoints.csv"
+    },
+    {
+      "slug": "germany-ivory-coast",
+      "title": "Germany vs Ivory Coast",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Germany_IvoryCoast_FinalPoints.csv"
+    },
+    {
+      "slug": "ecuador-curacao",
+      "title": "Ecuador vs Curacao",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Ecuador_Curacao_FinalPoints.csv"
+    },
+    {
+      "slug": "tunisia-japan",
+      "title": "Tunisia vs Japan",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Tunisia_Japan_FinalPoints.csv"
+    },
+    {
+      "slug": "spain-saudi-arabia",
+      "title": "Spain vs Saudi Arabia",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Spain_SaudiArabia_FinalPoints.csv"
+    },
+    {
+      "slug": "belgium-iran",
+      "title": "Belgium vs Iran",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Belgium_Iran_FinalPoints.csv"
+    },
+    {
+      "slug": "uruguay-cape-verde",
+      "title": "Uruguay vs Cape Verde",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Uruguay_CapeVerde_FinalPoints.csv"
+    },
+    {
+      "slug": "new-zealand-egypt",
+      "title": "New Zealand vs Egypt",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "NewZealand_Egypt_FinalPoints.csv"
+    },
+    {
+      "slug": "argentina-austria",
+      "title": "Argentina vs Austria",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Argentina_Austria_FinalPoints.csv"
+    },
+    {
+      "slug": "france-iraq",
+      "title": "France vs Iraq",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "France_Iraq_FinalPoints.csv"
+    },
+    {
+      "slug": "norway-senegal",
+      "title": "Norway vs Senegal",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Norway_Senegal_FinalPoints.csv"
+    },
+    {
+      "slug": "jordan-algeria",
+      "title": "Jordan vs Algeria",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Jordan_Algeria_FinalPoints.csv"
+    },
+    {
+      "slug": "portugal-uzbekistan",
+      "title": "Portugal vs Uzbekistan",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Portugal_Uzbekistan_FinalPoints.csv"
+    },
+    {
+      "slug": "england-ghana",
+      "title": "England vs Ghana",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "England_Ghana_FinalPoints.csv"
+    },
+    {
+      "slug": "panama-croatia",
+      "title": "Panama vs Croatia",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Panama_Croatia_FinalPoints.csv"
+    },
+    {
+      "slug": "colombia-dr-congo",
+      "title": "Colombia vs DR Congo",
+      "subtitle": "World Cup 2026 · Group stage · GW2",
+      "gw": 2,
+      "file": "Colombia_DRCongo_FinalPoints.csv"
+    },
+    {
+      "slug": "morocco-haiti",
+      "title": "Morocco vs Haiti",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Morocco_Haiti_FinalPoints.csv"
+    },
+    {
+      "slug": "scotland-brazil",
+      "title": "Brazil vs Scotland",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Scotland_Brazil_FinalPoints.csv"
+    },
+    {
+      "slug": "switzerland-canada",
+      "title": "Switzerland vs Canada",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Switzerland_Canada_FinalPoints.csv"
+    },
+    {
+      "slug": "bosnia-herzegovina-qatar",
+      "title": "Bosnia and Herzegovina vs Qatar",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "BosniaandHerzegovina_Qatar_FinalPoints.csv"
+    },
+    {
+      "slug": "czechia-mexico",
+      "title": "Czechia vs Mexico",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Czechia_Mexico_FinalPoints.csv"
+    },
+    {
+      "slug": "south-africa-south-korea",
+      "title": "South Africa vs South Korea",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "SouthAfrica_SouthKorea_FinalPoints.csv"
+    },
+    {
+      "slug": "curacao-ivory-coast",
+      "title": "Curacao vs Ivory Coast",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Curacao_IvoryCoast_FinalPoints.csv"
+    },
+    {
+      "slug": "ecuador-germany",
+      "title": "Ecuador vs Germany",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Ecuador_Germany_FinalPoints.csv"
+    },
+    {
+      "slug": "tunisia-netherlands",
+      "title": "Tunisia vs Netherlands",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Tunisia_Netherlands_FinalPoints.csv"
+    },
+    {
+      "slug": "japan-sweden",
+      "title": "Japan vs Sweden",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Japan_Sweden_FinalPoints.csv"
+    },
+    {
+      "slug": "turkiye-usa",
+      "title": "Turkiye vs USA",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Turkiye_USA_FinalPoints.csv"
+    },
+    {
+      "slug": "paraguay-australia",
+      "title": "Paraguay vs Australia",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Paraguay_Australia_FinalPoints.csv"
+    },
+    {
+      "slug": "norway-france",
+      "title": "Norway vs France",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Norway_France_FinalPoints.csv"
+    },
+    {
+      "slug": "senegal-iraq",
+      "title": "Senegal vs Iraq",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Senegal_Iraq_FinalPoints.csv"
+    },
+    {
+      "slug": "cape-verde-saudi-arabia",
+      "title": "Cape Verde vs Saudi Arabia",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "CapeVerde_SaudiArabia_FinalPoints.csv"
+    },
+    {
+      "slug": "uruguay-spain",
+      "title": "Uruguay vs Spain",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Uruguay_Spain_FinalPoints.csv"
+    },
+    {
+      "slug": "new-zealand-belgium",
+      "title": "New Zealand vs Belgium",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "NewZealand_Belgium_FinalPoints.csv"
+    },
+    {
+      "slug": "egypt-iran",
+      "title": "Egypt vs Iran",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Egypt_Iran_FinalPoints.csv"
+    },
+    {
+      "slug": "panama-england",
+      "title": "Panama vs England",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Panama_England_FinalPoints.csv"
+    },
+    {
+      "slug": "croatia-ghana",
+      "title": "Croatia vs Ghana",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Croatia_Ghana_FinalPoints.csv"
+    },
+    {
+      "slug": "colombia-portugal",
+      "title": "Colombia vs Portugal",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Colombia_Portugal_FinalPoints.csv"
+    },
+    {
+      "slug": "dr-congo-uzbekistan",
+      "title": "DR Congo vs Uzbekistan",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "DRCongo_Uzbekistan_FinalPoints.csv"
+    },
+    {
+      "slug": "algeria-austria",
+      "title": "Algeria vs Austria",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Algeria_Austria_FinalPoints.csv"
+    },
+    {
+      "slug": "jordan-argentina",
+      "title": "Jordan vs Argentina",
+      "subtitle": "World Cup 2026 · Group stage · GW3",
+      "gw": 3,
+      "file": "Jordan_Argentina_FinalPoints.csv"
+    },
+    {
+      "slug": "south-africa-canada",
+      "title": "South Africa vs Canada",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "SouthAfrica_Canada_FinalPoints.csv"
+    },
+    {
+      "slug": "brazil-japan",
+      "title": "Brazil vs Japan",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "Brazil_Japan_FinalPoints.csv"
+    },
+    {
+      "slug": "germany-paraguay",
+      "title": "Germany vs Paraguay",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "Germany_Paraguay_FinalPoints.csv"
+    },
+    {
+      "slug": "netherlands-morocco",
+      "title": "Netherlands vs Morocco",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "Netherlands_Morocco_FinalPoints.csv"
+    },
+    {
+      "slug": "ivory-coast-norway",
+      "title": "Ivory Coast vs Norway",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "IvoryCoast_Norway_FinalPoints.csv"
+    },
+    {
+      "slug": "france-sweden",
+      "title": "France vs Sweden",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "France_Sweden_FinalPoints.csv"
+    },
+    {
+      "slug": "mexico-ecuador",
+      "title": "Mexico vs Ecuador",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "Mexico_Ecuador_FinalPoints.csv"
+    },
+    {
+      "slug": "england-drcongo",
+      "title": "England vs DR Congo",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "England_DRCongo_FinalPoints.csv"
+    },
+    {
+      "slug": "belgium-senegal",
+      "title": "Belgium vs Senegal",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "Belgium_Senegal_FinalPoints.csv"
+    },
+    {
+      "slug": "usa-bosnia",
+      "title": "USA vs Bosnia and Herzegovina",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "USA_BosniaandHerzegovina_FinalPoints.csv"
+    },
+    {
+      "slug": "spain-austria",
+      "title": "Spain vs Austria",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "Spain_Austria_FinalPoints.csv"
+    },
+    {
+      "slug": "portugal-croatia",
+      "title": "Portugal vs Croatia",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "Portugal_Croatia_FinalPoints.csv"
+    },
+    {
+      "slug": "switzerland-algeria",
+      "title": "Switzerland vs Algeria",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "Switzerland_Algeria_FinalPoints.csv"
+    },
+    {
+      "slug": "australia-egypt",
+      "title": "Australia vs Egypt",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "Australia_Egypt_FinalPoints.csv"
+    },
+    {
+      "slug": "argentina-capeverde",
+      "title": "Argentina vs Cape Verde",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "Argentina_CapeVerde_FinalPoints.csv"
+    },
+    {
+      "slug": "colombia-ghana",
+      "title": "Colombia vs Ghana",
+      "subtitle": "World Cup 2026 · Round of 32",
+      "gw": 4,
+      "file": "Colombia_Ghana_FinalPoints.csv"
+    },
+    {
+      "slug": "canada-morocco",
+      "title": "Canada vs Morocco",
+      "subtitle": "World Cup 2026 · Round of 16",
+      "gw": 5,
+      "file": "Canada_Morocco_FinalPoints.csv"
+    },
+    {
+      "slug": "paraguay-france",
+      "title": "Paraguay vs France",
+      "subtitle": "World Cup 2026 · Round of 16",
+      "gw": 5,
+      "file": "Paraguay_France_FinalPoints.csv"
+    },
+    {
+      "slug": "brazil-norway",
+      "title": "Brazil vs Norway",
+      "subtitle": "World Cup 2026 · Round of 16",
+      "gw": 5,
+      "file": "Brazil_Norway_FinalPoints.csv"
+    },
+    {
+      "slug": "mexico-england",
+      "title": "Mexico vs England",
+      "subtitle": "World Cup 2026 · Round of 16",
+      "gw": 5,
+      "file": "Mexico_England_FinalPoints.csv"
+    },
+    {
+      "slug": "portugal-spain",
+      "title": "Portugal vs Spain",
+      "subtitle": "World Cup 2026 · Round of 16",
+      "gw": 5,
+      "file": "Portugal_Spain_FinalPoints.csv"
+    },
+    {
+      "slug": "usa-belgium",
+      "title": "USA vs Belgium",
+      "subtitle": "World Cup 2026 · Round of 16",
+      "gw": 5,
+      "file": "USA_Belgium_FinalPoints.csv"
+    },
+    {
+      "slug": "argentina-egypt",
+      "title": "Argentina vs Egypt",
+      "subtitle": "World Cup 2026 · Round of 16",
+      "gw": 5,
+      "file": "Argentina_Egypt_FinalPoints.csv"
+    },
+    {
+      "slug": "switzerland-colombia",
+      "title": "Switzerland vs Colombia",
+      "subtitle": "World Cup 2026 · Round of 16",
+      "gw": 5,
+      "file": "Switzerland_Colombia_FinalPoints.csv"
+    },
+    {
+      "slug": "france-morocco",
+      "title": "France vs Morocco",
+      "subtitle": "World Cup 2026 · Quarter-finals",
+      "gw": 6,
+      "file": "France_Morocco_FinalPoints.csv"
+    },
+    {
+      "slug": "spain-belgium",
+      "title": "Spain vs Belgium",
+      "subtitle": "World Cup 2026 · Quarter-finals",
+      "gw": 6,
+      "file": "Spain_Belgium_FinalPoints.csv"
+    },
+    {
+      "slug": "norway-england",
+      "title": "Norway vs England",
+      "subtitle": "World Cup 2026 · Quarter-finals",
+      "gw": 6,
+      "file": "Norway_England_FinalPoints.csv"
+    },
+    {
+      "slug": "argentina-switzerland",
+      "title": "Argentina vs Switzerland",
+      "subtitle": "World Cup 2026 · Quarter-finals",
+      "gw": 6,
+      "file": "Argentina_Switzerland_FinalPoints.csv"
+    },
+    {
+      "slug": "france-spain",
+      "title": "France vs Spain",
+      "subtitle": "World Cup 2026 · Semi-finals",
+      "gw": 7,
+      "file": "France_Spain_FinalPoints.csv"
+    },
+    {
+      "slug": "england-argentina",
+      "title": "England vs Argentina",
+      "subtitle": "World Cup 2026 · Semi-finals",
+      "gw": 7,
+      "file": "England_Argentina_FinalPoints.csv"
+    },
+    {
+      "slug": "spain-argentina",
+      "title": "Spain vs Argentina",
+      "subtitle": "World Cup 2026 · Finals",
+      "gw": 8,
+      "file": "Spain_Argentina_FinalPoints.csv"
+    }
+  ]
+}

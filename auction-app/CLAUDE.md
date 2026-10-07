@@ -12,7 +12,7 @@ Two products: **online auction** (`/auctions/*`, live in production) and **live 
 | **Leaderboard** — everything scoring | `app/auctions/[auctionId]/leaderboard/**` | `docs/ui-contracts/LEADERBOARD.md` | `lib/scoring/` |
 
 Read the contract before touching a page. Do not change layout, labels or columns unless the
-user explicitly asks; a new gameweek is **data only**. Run `node scripts/check-gameweek-surfaces.mjs`
+user explicitly asks; a new gameweek is **data only** — follow `docs/GAMEWEEK_RUNBOOK.md`. Run `node scripts/check-gameweek-surfaces.mjs`
 after leaderboard/scoring changes.
 
 ## Map
@@ -22,9 +22,9 @@ after leaderboard/scoring changes.
 | `app/auction-admin/` | Commissioner admin UI (gated by `Auctions.admin_user_id`) |
 | `app/dashboard`, `app/archives`, `app/auction-history` | Post-login shell |
 | `lib/auction-state/` | Current-state loaders/rules: dashboard, bidding, bid gates/messages, squad limit, transfers, deadlines |
-| `lib/scoring/` | Scoring loaders: leaderboard data, Best XI overlay/display, Match Pos, match-score sheets (`match-scores/competitions/<slug>.ts`), auction history |
+| `lib/scoring/` | Scoring loaders: leaderboard data, Best XI overlay/display, Match Pos, match-score sheet loader (reads `data/competitions/<slug>/sheets.json`), auction history |
 | `lib/` (root) | Shared: Supabase clients, auth, players/users queries, archive status, team names, relegation |
-| `data/competitions/<slug>/match-scores/` | Deployed FinalPoints CSVs (Match scores + Match Pos) |
+| `data/competitions/<slug>/sheets.json` + `match-scores/` | Match-score manifest + deployed FinalPoints CSVs (Match scores tabs + Match Pos); written by `scoring-engine/score_match.py` |
 | `data/best-xi/auction-{id}-gw{legacyGwId}.json` | Deployed formation overlays |
 | `scripts/` | Commissioner ops scripts (see `scripts/CLAUDE.md`); `scripts/sql/` = manual SQL + schema index |
 | `docs/` | `OPS_INDEX.md` (ops handbook), `ui-contracts/`, `_archive/` (historical — do not follow) |

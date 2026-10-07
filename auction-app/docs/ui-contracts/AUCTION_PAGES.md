@@ -66,8 +66,10 @@ or the empty state "You're not winning any bids at the moment.", plus slot count
 See [TRANSFER_ROOM.md](../TRANSFER_ROOM.md) and [ANNOUNCEMENTS.md](../ANNOUNCEMENTS.md).
 
 ### Match scores — `/auctions/[id]/match-scores`
-Per-match FinalPoints sheets for the auction's competition (grouped by matchweek). Match data,
-not manager scoring; player names link to the player page.
+Per-match FinalPoints sheets for the auction's competition — **one tab per gameweek**, each listing
+that gameweek's matches. A new gameweek appears as a new tab automatically when its matches are
+scored (`data/competitions/<slug>/sheets.json`). Match data, not manager scoring; player names
+link to the player page.
 
 ### Player page — `/auctions/[id]/players/[playerId]`
 The one deliberate cross-over. Sections: lot status (state, high bid, high bidder, lot timer) with

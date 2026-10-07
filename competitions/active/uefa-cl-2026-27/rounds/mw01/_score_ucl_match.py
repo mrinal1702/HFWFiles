@@ -1,3 +1,5 @@
+# SUPERSEDED (Oct 2026) by scoring-engine/score_match.py --competition uefa-cl-2026-27 --round <mwNN>,
+# which reproduces this script's MW1 output byte-for-byte for any round. Kept as the MW1 record.
 from pathlib import Path
 import json
 import re

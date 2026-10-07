@@ -1,0 +1,155 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "competition_id": 4,
+  "display_name": "UEFA Champions League 2026/27",
+  "legacy_game_week_start": 300,
+  "group_label_template": "UEFA Champions League GW{n}",
+  "subtitle_template": "UEFA Champions League · Matchweek {n}",
+  "group_labels": {},
+  "sheets": [
+    {
+      "slug": "aek-athens-lask",
+      "title": "AEK Athens vs LASK",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106404,
+      "file": "AEKAthens_LASK_FinalPoints.csv"
+    },
+    {
+      "slug": "club-brugge-aston-villa",
+      "title": "Club Brugge vs Aston Villa",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106295,
+      "file": "ClubBrugge_AstonVilla_FinalPoints.csv"
+    },
+    {
+      "slug": "borussia-dortmund-villarreal",
+      "title": "Borussia Dortmund vs Villarreal",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106272,
+      "file": "BorussiaDortmund_Villarreal_FinalPoints.csv"
+    },
+    {
+      "slug": "fc-porto-manchester-city",
+      "title": "FC Porto vs Manchester City",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106286,
+      "file": "FCPorto_ManchesterCity_FinalPoints.csv"
+    },
+    {
+      "slug": "lille-real-betis",
+      "title": "Lille vs Real Betis",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106311,
+      "file": "Lille_RealBetis_FinalPoints.csv"
+    },
+    {
+      "slug": "real-madrid-inter",
+      "title": "Real Madrid vs Inter",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106242,
+      "file": "RealMadrid_Inter_FinalPoints.csv"
+    },
+    {
+      "slug": "barcelona-feyenoord",
+      "title": "Barcelona vs Feyenoord",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106264,
+      "file": "Barcelona_Feyenoord_FinalPoints.csv"
+    },
+    {
+      "slug": "vfb-stuttgart-viking",
+      "title": "VfB Stuttgart vs Viking",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106400,
+      "file": "VfBStuttgart_Viking_FinalPoints.csv"
+    },
+    {
+      "slug": "liverpool-atletico-madrid",
+      "title": "Liverpool vs Atlético Madrid",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106246,
+      "file": "Liverpool_AtlticoMadrid_FinalPoints.csv"
+    },
+    {
+      "slug": "paris-saint-germain-slovan-bratislava",
+      "title": "Paris Saint-Germain vs Slovan Bratislava",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106237,
+      "file": "ParisSaintGermain_SlovanBratislava_FinalPoints.csv"
+    },
+    {
+      "slug": "sporting-cp-galatasaray",
+      "title": "Sporting CP vs Galatasaray",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106280,
+      "file": "SportingCP_Galatasaray_FinalPoints.csv"
+    },
+    {
+      "slug": "napoli-arsenal",
+      "title": "Napoli vs Arsenal",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106318,
+      "file": "Napoli_Arsenal_FinalPoints.csv"
+    },
+    {
+      "slug": "fenerbahce-roma",
+      "title": "Fenerbahçe vs Roma",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106331,
+      "file": "Fenerbahe_Roma_FinalPoints.csv"
+    },
+    {
+      "slug": "psv-eindhoven-shakhtar-donetsk",
+      "title": "PSV Eindhoven vs Shakhtar Donetsk",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106304,
+      "file": "PSVEindhoven_ShakhtarDonetsk_FinalPoints.csv"
+    },
+    {
+      "slug": "bayern-munich-bodo-glimt",
+      "title": "Bayern München vs Bodø/Glimt",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106240,
+      "file": "BayernMnchen_BodGlimt_FinalPoints.csv"
+    },
+    {
+      "slug": "como-rb-leipzig",
+      "title": "Como vs RB Leipzig",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106411,
+      "file": "Como_RBLeipzig_FinalPoints.csv"
+    },
+    {
+      "slug": "manchester-united-sabah-fk",
+      "title": "Manchester United vs Sabah FK",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106293,
+      "file": "ManchesterUnited_SabahFK_FinalPoints.csv"
+    },
+    {
+      "slug": "slavia-prague-lens",
+      "title": "Slavia Prague vs Lens",
+      "subtitle": "UEFA Champions League · Matchweek 1",
+      "gw": 1,
+      "fotmob_match_id": 6106392,
+      "file": "SlaviaPrague_Lens_FinalPoints.csv"
+    }
+  ]
+}

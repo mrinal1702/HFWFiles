@@ -31,6 +31,10 @@ This index is primarily about the **online** product.
 
 ---
 
+## Running a gameweek → [GAMEWEEK_RUNBOOK.md](./GAMEWEEK_RUNBOOK.md)
+
+One manifest per gameweek (`round.json`) + standard commands (`scripts/gameweek.mjs`, `scoring-engine/score_match.py`). The docs below explain what each step does.
+
 ## Ops docs (read in this order for a new competition)
 
 | Doc | Topic |
