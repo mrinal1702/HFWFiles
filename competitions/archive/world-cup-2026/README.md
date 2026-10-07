@@ -55,7 +55,7 @@ scoring-intermediates/
   keeper-points/        # *KeeperPoints.csv (103)
   outfield-points/      # *Outfield_Points.csv (103)
   points/               # intermediate *Points.csv (103)
-  match-json/           # small JSON kept from SF/Final scoring runs
+  match-json/           # raw FotMob match JSON + manifests for 29 of the 103 matches
   audits/               # GW1 position-map audits + helper .py scripts
 ```
 
@@ -79,7 +79,7 @@ WC-specific runbooks (elimination, trial rolling deadlines, Auction 3 import, sc
 
 ## Intentionally deleted earlier
 
-**FotMob match JSON extracts** (~204 files, ~56 MB) were removed when this archive was first created. Calculated points remain in `records/match-final-points/` and `scoring-intermediates/`. Re-fetch with `Tests/fetch_fotmob_match.py` if needed.
+**FotMob match JSON extracts:** raw JSON for 29 matches survives in `scoring-intermediates/match-json/` (merged in Oct 2026 from the former `_pending-dedup-from-matches-raw/` folder, whose 146 other files were exact duplicates and were deleted). The rest were removed when this archive was first created; older copies may exist in git history under `Matches_Raw/World Cup 2026/`. Calculated points remain in `records/match-final-points/` and `scoring-intermediates/`. Re-fetch with `Tests/fetch_fotmob_match.py` if needed.
 
 Duplicate copies under the old `auction-app/data/match-scores/` and `auction-app/data/best-xi/` paths were removed after consolidating into `records/`.
 

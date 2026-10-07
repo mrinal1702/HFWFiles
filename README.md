@@ -17,8 +17,7 @@ competitions/
     ├── epl-2026-27/            # English Premier League 2026/27 (auction 9) — same layout as active
     ├── world-cup-2026/         # FIFA World Cup 2026 (auctions 5/6/7)
     │   ├── records/            # match FinalPoints, Best XI, rollups, rosters
-    │   ├── scoring-intermediates/, player-pool/, ops/, docs/, tests/
-    │   └── _pending-dedup-from-matches-raw/   # leftovers to review vs canonical records
+    │   └── scoring-intermediates/, player-pool/, ops/, docs/, tests/
     └── uefa-cl-2025-26/        # UEFA Champions League 2025/26 (RO16 L2 → SF L2)
         └── rounds/<round>/     # round.json + matches/, tables/, scores/
 ```

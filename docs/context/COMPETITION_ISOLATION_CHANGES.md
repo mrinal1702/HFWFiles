@@ -44,7 +44,6 @@ competitions/
 └── archive/
     ├── world-cup-2026/                  # auctions 5/6/7 (read-only)
     │   ├── records/ scoring-intermediates/ player-pool/ ops/ docs/ tests/
-    │   └── _pending-dedup-from-matches-raw/   # leftovers to review vs canonical
     └── uefa-cl-2025-26/                  # RO16 L2 → SF L2 (read-only)
         └── rounds/<round>/ (round.json, matches/, tables/, scores/)
 ```
@@ -139,8 +138,7 @@ yet, so there is nothing to tag until their match is scored.
   root `scripts/`) that still point at `Matches_Raw/`, `Scores/`, `Player_List/`.
 - Wire `auction-app/scripts/upsert-player-scores-from-finalpoints.mjs` to call
   `upsert_player_scores_for_round` (pass match ids per row).
-- Review and dedupe
-  `competitions/archive/world-cup-2026/_pending-dedup-from-matches-raw/`.
+- ~~Review and dedupe `_pending-dedup-from-matches-raw/`~~ (done Oct 2026; folder removed).
 - Fill World Cup `database_round_id` values in its `competition.json`.
 - Confirm the Vercel interface (match-scores, leaderboard, archives) is
   unaffected by the data-path changes.

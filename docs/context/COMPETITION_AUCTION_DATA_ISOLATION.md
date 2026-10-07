@@ -26,7 +26,7 @@ Still partial / known caveats:
 - EPL 2026/27 MW1–MW3 were originally stored at `game_week_id` 1, 2, 3 (inside the World Cup range), overwriting the World Cup GW1–3 player scores. Fixed Oct 2026: EPL moved to 100–102 (`competitions/archive/epl-2026-27/ops/rekey-epl-mw1-3-to-100-102.mjs`, backup in `ops/backups/`) and World Cup GW1–8 player scores restored (`competitions/archive/world-cup-2026/ops/restore-wc-player-scores.mjs`, validated against all 2,625 published Best XI picks). Each competition now uses only its own range: WC 1–8, EPL 100–103, UCL 300+.
 - `"Game_Weeks".Is_Active` is still global across competitions.
 - Python tooling defaults (`Tests/fetch_fotmob_match.py --copy-to-app`, etc.) still point at legacy folders; harmless (the app no longer reads them) but worth tidying.
-- `competitions/archive/world-cup-2026/_pending-dedup-from-matches-raw/` still needs review.
+- ~~`competitions/archive/world-cup-2026/_pending-dedup-from-matches-raw/` review~~ — done Oct 2026: 146 duplicate CSVs (and 2 duplicate match JSONs) deleted, 27 unique raw FotMob match JSONs + 29 manifests kept in `scoring-intermediates/match-json/`.
 
 ## 1. Core principle
 
