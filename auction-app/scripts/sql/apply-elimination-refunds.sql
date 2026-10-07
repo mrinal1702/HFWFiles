@@ -1,3 +1,6 @@
+-- ⚠️  WORLD CUP-ERA VERSION — reads global players.team_name. Do NOT use for UCL or any
+--     competition-scoped auction: use scripts/apply-elimination-refunds.mjs instead.
+--
 -- Elimination release: remove eliminated-nation players from live squads + half refund.
 -- Does NOT touch gameweek_squads (GW3 snapshots stay frozen for scoring).
 -- Does NOT consume paid_release_used.

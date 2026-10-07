@@ -29,15 +29,17 @@ Creates audit table `auction_elimination_refunds`.
 
 ```bash
 cd auction-app
-node scripts/apply-elimination-refunds.mjs --dry-run Haiti Turkiye Tunisia
-node scripts/apply-elimination-refunds.mjs Haiti Turkiye Tunisia
-# optional:
-node scripts/apply-elimination-refunds.mjs --auction-ids 5,6,7 NationA NationB
+# --auction-ids is required; all ids must belong to the same (non-archived) competition
+node scripts/apply-elimination-refunds.mjs --auction-ids 10,11,12,13 --dry-run "Club Brugge" LASK
+node scripts/apply-elimination-refunds.mjs --auction-ids 10,11,12,13 "Club Brugge" LASK
 ```
 
-SQL twin (if preferred): `scripts/sql/apply-elimination-refunds.sql` (edit nation / auction lists carefully).
+- Players are taken from **that competition's pool** (`competition_players`), never the global `players` table. A player's club can differ between competitions (e.g. Konsa: Aston Villa in EPL, Arsenal in UCL), and most UCL players are not in `players` at all.
+- **Team names must match the competition pool's `team_name` exactly** (e.g. `Paris Saint-Germain`, `Bayern Munich`). An unknown name aborts the run and suggests close matches.
+- Mixed competitions, auctions with no competition, and archived competitions are refused (`--allow-archived` only for approved amendments).
+- Always dry-run first and check the owner/refund list.
 
-**Team names must match `players.team_name` exactly** (e.g. `Bosnia and Herzegovina`, not abbreviations).
+SQL twin: `scripts/sql/apply-elimination-refunds.sql` is the old World Cup version (reads global `players.team_name`) — **do not use it for UCL**; use the script.
 
 ---
 

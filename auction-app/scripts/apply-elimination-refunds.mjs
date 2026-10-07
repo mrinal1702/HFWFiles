@@ -1,23 +1,29 @@
 /**
- * Apply elimination refunds across WC auctions (commissioner tool).
+ * Apply elimination refunds when real-world teams are knocked out (commissioner tool).
  *
  * Usage:
- *   node scripts/apply-elimination-refunds.mjs --dry-run Haiti Turkiye Tunisia
- *   node scripts/apply-elimination-refunds.mjs Haiti Turkiye Tunisia
+ *   node scripts/apply-elimination-refunds.mjs --auction-ids 10,11,12,13 --dry-run "Club Brugge" LASK
+ *   node scripts/apply-elimination-refunds.mjs --auction-ids 10,11,12,13 "Club Brugge" LASK
  *
  * Options:
- *   --dry-run          Preview only (no writes)
- *   --auction-ids 5,6,7  Override auction ids (default: 5,6,7)
+ *   --auction-ids 10,11  Required. All auctions must belong to the same competition.
+ *   --dry-run            Preview only (no writes)
+ *   --allow-archived     Permit an archived competition (approved amendments only)
+ *
+ * Eliminated players are looked up in that competition's player pool
+ * (competition_players), never the global players table: a player's club can differ
+ * between competitions (e.g. EPL vs UCL). Team names must match the pool exactly;
+ * unknown names abort the run before anything is written.
  */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createClient } from "@supabase/supabase-js";
 
+import { assertAuctionsNotArchived } from "./lib/archived-competition-guard.mjs";
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(__dirname, "..");
-
-const DEFAULT_AUCTION_IDS = [5, 6, 7];
 
 function loadEnvLocal() {
   const envPath = path.join(appRoot, ".env.local");
@@ -34,17 +40,78 @@ function loadEnvLocal() {
 }
 
 function parseArgs(argv) {
-  const opts = { dryRun: false, auctionIds: DEFAULT_AUCTION_IDS, teams: [] };
+  const opts = { dryRun: false, allowArchived: false, auctionIds: [], teams: [] };
   for (let i = 2; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === "--dry-run") opts.dryRun = true;
-    else if (arg === "--auction-ids") {
+    else if (arg === "--allow-archived") opts.allowArchived = true;
+    else if (arg === "--auction-ids" && argv[i + 1]) {
       opts.auctionIds = argv[++i].split(",").map((n) => Number(n.trim()));
-    } else if (!arg.startsWith("--")) {
+    } else if (arg.startsWith("--")) {
+      console.error(`Unknown argument: ${arg}`);
+      process.exit(1);
+    } else {
       opts.teams.push(arg);
     }
   }
   return opts;
+}
+
+/** Resolve the single competition shared by every auction id; abort otherwise. */
+async function resolveCompetitionId(supabase, auctionIds) {
+  const { data, error } = await supabase
+    .from("Auctions")
+    .select("id, name, competition_id")
+    .in("id", auctionIds);
+  if (error) throw error;
+  const found = new Map((data ?? []).map((a) => [Number(a.id), a]));
+  const missing = auctionIds.filter((id) => !found.has(id));
+  if (missing.length) throw new Error(`Auction(s) not found: ${missing.join(", ")}`);
+  const noComp = [...found.values()].filter((a) => a.competition_id == null);
+  if (noComp.length) {
+    throw new Error(`Auction(s) ${noComp.map((a) => a.id).join(", ")} have no competition_id.`);
+  }
+  const compIds = [...new Set([...found.values()].map((a) => Number(a.competition_id)))];
+  if (compIds.length > 1) {
+    throw new Error(
+      `Auctions span several competitions (${[...found.values()]
+        .map((a) => `${a.id}->${a.competition_id}`)
+        .join(", ")}). Run once per competition.`,
+    );
+  }
+  return compIds[0];
+}
+
+/**
+ * Eliminated players from the competition pool. Aborts if any team name is not in
+ * the pool, suggesting close matches.
+ */
+async function fetchEliminatedPlayers(supabase, competitionId, eliminatedTeams) {
+  const { data: players, error } = await supabase
+    .from("competition_players")
+    .select("player_id, player_name, team_name")
+    .eq("competition_id", competitionId)
+    .in("team_name", eliminatedTeams);
+  if (error) throw error;
+  const matched = new Set((players ?? []).map((p) => p.team_name));
+  const unknown = eliminatedTeams.filter((t) => !matched.has(t));
+  if (unknown.length) {
+    const hints = [];
+    for (const t of unknown) {
+      const { data: near } = await supabase
+        .from("competition_players")
+        .select("team_name")
+        .eq("competition_id", competitionId)
+        .ilike("team_name", `%${t.slice(0, 4)}%`)
+        .limit(200);
+      const names = [...new Set((near ?? []).map((n) => n.team_name))].slice(0, 5);
+      hints.push(`  "${t}"${names.length ? ` (did you mean: ${names.map((n) => `"${n}"`).join(", ")}?)` : ""}`);
+    }
+    throw new Error(
+      `Team name(s) not in competition ${competitionId} player pool:\n${hints.join("\n")}`,
+    );
+  }
+  return players ?? [];
 }
 
 function refundAmount(purchasePrice) {
@@ -68,12 +135,7 @@ async function fetchAlreadyRefunded(supabase, auctionIds) {
   return set;
 }
 
-async function fetchTargets(supabase, auctionIds, eliminatedTeams, refundedSet) {
-  const { data: players, error: pErr } = await supabase
-    .from("players")
-    .select("player_id, player_name, team_name")
-    .in("team_name", eliminatedTeams);
-  if (pErr) throw pErr;
+async function fetchTargets(supabase, auctionIds, players, refundedSet) {
   if (!players?.length) return [];
 
   const playerById = new Map(players.map((p) => [String(p.player_id), p]));
@@ -113,12 +175,7 @@ async function fetchTargets(supabase, auctionIds, eliminatedTeams, refundedSet) 
     });
 }
 
-async function fetchOpenBids(supabase, auctionIds, eliminatedTeams) {
-  const { data: players, error: pErr } = await supabase
-    .from("players")
-    .select("player_id, player_name, team_name")
-    .in("team_name", eliminatedTeams);
-  if (pErr) throw pErr;
+async function fetchOpenBids(supabase, auctionIds, players) {
   if (!players?.length) return [];
 
   const playerIds = players.map((p) => String(p.player_id));
@@ -340,8 +397,14 @@ async function main() {
   loadEnvLocal();
   const opts = parseArgs(process.argv);
 
+  if (!opts.auctionIds.length || opts.auctionIds.some((n) => !Number.isFinite(n))) {
+    console.error("❌  --auction-ids is required (e.g. --auction-ids 10,11,12,13)");
+    process.exit(1);
+  }
   if (!opts.teams.length) {
-    console.error("Usage: node scripts/apply-elimination-refunds.mjs [--dry-run] Team1 Team2 ...");
+    console.error(
+      'Usage: node scripts/apply-elimination-refunds.mjs --auction-ids 10,11 [--dry-run] "Team 1" "Team 2" ...',
+    );
     process.exit(1);
   }
 
@@ -353,12 +416,17 @@ async function main() {
   }
 
   const supabase = createClient(url, key);
-  const refundedSet = await fetchAlreadyRefunded(supabase, opts.auctionIds);
-  const targets = await fetchTargets(supabase, opts.auctionIds, opts.teams, refundedSet);
-  const openBids = await fetchOpenBids(supabase, opts.auctionIds, opts.teams);
+  const competitionId = await resolveCompetitionId(supabase, opts.auctionIds);
+  await assertAuctionsNotArchived(supabase, opts.auctionIds, { allowArchived: opts.allowArchived });
+  const players = await fetchEliminatedPlayers(supabase, competitionId, opts.teams);
 
-  console.log(`Eliminated nations: ${opts.teams.join(", ")}`);
-  console.log(`Auctions: ${opts.auctionIds.join(", ")}`);
+  const refundedSet = await fetchAlreadyRefunded(supabase, opts.auctionIds);
+  const targets = await fetchTargets(supabase, opts.auctionIds, players, refundedSet);
+  const openBids = await fetchOpenBids(supabase, opts.auctionIds, players);
+
+  console.log(`Eliminated teams: ${opts.teams.join(", ")}`);
+  console.log(`Auctions: ${opts.auctionIds.join(", ")} (competition ${competitionId})`);
+  console.log(`Players in pool for those teams: ${players.length}`);
   console.log(opts.dryRun ? "\n🔍 DRY RUN" : "\n⚡ APPLYING");
 
   printPreview(targets, openBids);
@@ -370,5 +438,5 @@ async function main() {
 
 main().catch((err) => {
   console.error("❌", err.message ?? err);
-  process.exit(1);
+  process.exitCode = 1;
 });
