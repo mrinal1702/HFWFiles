@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -19,7 +20,11 @@ from endowed_points import (
     endowment_points_for_position,
     player_meta_from_playerstats,
 )
-from position_roles import resolve_outfield_position_id_for_scoring
+_POSITIONS_DIR = Path(__file__).resolve().parent.parent / "positions"
+if str(_POSITIONS_DIR) not in sys.path:
+    sys.path.insert(0, str(_POSITIONS_DIR))
+
+from position_roles import resolve_outfield_position_id_for_scoring  # noqa: E402
 
 
 def calculate_endowed_points(match_data: dict[str, Any]) -> pd.DataFrame:

@@ -1,7 +1,7 @@
 # Ops: Scoring, Best XI, leaderboard & deploy
 
 **Canonical pipeline for online auctions.**  
-Related: [OPS_GAMEWEEK_LOCK.md](./OPS_GAMEWEEK_LOCK.md), [ui-contracts/LEADERBOARD.md](./ui-contracts/LEADERBOARD.md), repo `docs/MAIN_PIPELINE_FUNCTIONS.md`.
+Related: [OPS_GAMEWEEK_LOCK.md](./OPS_GAMEWEEK_LOCK.md), [ui-contracts/LEADERBOARD.md](./ui-contracts/LEADERBOARD.md), repo `../../scoring-engine/docs/MAIN_PIPELINE_FUNCTIONS.md`.
 
 Tournament-specific examples (WC 2026) may live under `archive/world-cup-2026/` — extract **process**, not hard-coded paths, when training agents.
 
@@ -104,7 +104,7 @@ node scripts/lock-gameweek-squads.mjs --gw-id N --auction-ids 10,11,12,13 --gw-n
 
 ```bash
 # from repo root — use THIS competition’s master list and a flat folder of *Vs*.json
-python procedures/compute_auction_best_xi.py \
+python formation-engine/compute_auction_best_xi.py \
   --auction-id ID \
   --gw-id N \
   --master competitions/active/<slug>/player-pool/master_player_list.csv \
@@ -113,7 +113,7 @@ python procedures/compute_auction_best_xi.py \
 ```
 
 - `--matches-dir` must be a **flat** directory of match JSON files named like `*_Vs_*.json` (no manifests). For competition round trees, stage copies into a temp folder first.
-- Core logic: `procedures/best_xi.py` — legal formations; eligibility = listed pool role ∪ in-match roles; rest bench.
+- Core logic: `formation-engine/best_xi.py` — legal formations; eligibility = listed pool role ∪ in-match roles; rest bench.
 
 **Publish (writes Supabase + overlay file):**
 

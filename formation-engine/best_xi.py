@@ -18,7 +18,7 @@ from typing import Any, Iterable
 
 _ROOT = Path(__file__).resolve().parent.parent
 _PROC = Path(__file__).resolve().parent
-_TESTS = _ROOT / "Tests"
+_TESTS = _ROOT / "positions"  # shared position map
 if str(_TESTS) not in sys.path:
     sys.path.insert(0, str(_TESTS))
 if str(_PROC) not in sys.path:

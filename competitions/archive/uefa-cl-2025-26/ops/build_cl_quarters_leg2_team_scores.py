@@ -1,3 +1,5 @@
+# ARCHIVED one-off (CL 2025/26). Written for the old layout (procedures/, Tests/);
+# now formation-engine/ and scoring-engine/. Kept for reference, not maintained.
 from __future__ import annotations
 
 import csv

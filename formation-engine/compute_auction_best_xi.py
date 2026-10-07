@@ -4,8 +4,8 @@ Fetch locked gameweek squads from Supabase and compute Best XI locally.
 Does not write to Supabase — prints a summary and optionally saves JSON.
 
 Usage (repo root):
-  python procedures/compute_auction_best_xi.py --auction-id 7 --gw-id 1
-  python procedures/compute_auction_best_xi.py --auction-id 7 --gw-id 1 --output out/best_xi_7_gw1.json
+  python formation-engine/compute_auction_best_xi.py --auction-id 7 --gw-id 1
+  python formation-engine/compute_auction_best_xi.py --auction-id 7 --gw-id 1 --output out/best_xi_7_gw1.json
 """
 
 from __future__ import annotations

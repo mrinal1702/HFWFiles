@@ -27,7 +27,11 @@ try:
 except ImportError:
     STATS_STILL_MISSING_OR_EXTERNAL = ()
 
-from position_roles import resolve_outfield_position_id_for_scoring
+_POSITIONS_DIR = Path(__file__).resolve().parent.parent / "positions"
+if str(_POSITIONS_DIR) not in sys.path:
+    sys.path.insert(0, str(_POSITIONS_DIR))
+
+from position_roles import resolve_outfield_position_id_for_scoring  # noqa: E402
 
 # --- Config ---
 TESTS_DIR = Path(__file__).resolve().parent

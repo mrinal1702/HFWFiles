@@ -27,7 +27,7 @@ It is separate from **weekly scoring** (match JSON → scores CSV → Supabase).
 
 Teams are **not** passed as ad-hoc JSON links on the command line. You edit the **`TEAMS`** list inside:
 
-`C:\Users\trive\HFWFiles\Tests\fetch_fotmob_squads.py`
+`C:\Users\trive\HFWFiles\scoring-engine\fetch_fotmob_squads.py`
 
 Each entry has:
 
@@ -47,10 +47,10 @@ Save the file before running the scrape.
 
 ## Step 2 — Scrape squad pages and every player profile
 
-**Script:** `C:\Users\trive\HFWFiles\Tests\fetch_fotmob_squads.py`
+**Script:** `C:\Users\trive\HFWFiles\scoring-engine\fetch_fotmob_squads.py`
 
 ```bash
-python "C:\Users\trive\HFWFiles\Tests\fetch_fotmob_squads.py"
+python "C:\Users\trive\HFWFiles\scoring-engine\fetch_fotmob_squads.py"
 ```
 
 **What it does**
@@ -68,10 +68,10 @@ python "C:\Users\trive\HFWFiles\Tests\fetch_fotmob_squads.py"
 
 ## Step 3 — Build the master player list CSV
 
-**Script:** `C:\Users\trive\HFWFiles\Tests\build_master_player_csv.py`
+**Script:** `C:\Users\trive\HFWFiles\scoring-engine\build_master_player_csv.py`
 
 ```bash
-python "C:\Users\trive\HFWFiles\Tests\build_master_player_csv.py"
+python "C:\Users\trive\HFWFiles\scoring-engine\build_master_player_csv.py"
 ```
 
 **What it does**
@@ -84,7 +84,7 @@ python "C:\Users\trive\HFWFiles\Tests\build_master_player_csv.py"
 4. **Names** — Runs **`finalize_player_display_name`** again on the merged `player_name` so the export stays consistent with the scrape (cleanup, NFC, mojibake repair).
 5. Writes **`Player_List/master_player_list.csv`** as **UTF-8 with BOM** so Excel on Windows usually opens accented names correctly.
 
-**Shared name logic** lives in `Tests/fotmob_player_profile.py` (`finalize_player_display_name`, injury-text stripping, etc.).
+**Shared name logic** lives in `scoring-engine/fotmob_player_profile.py` (`finalize_player_display_name`, injury-text stripping, etc.).
 
 ---
 
@@ -100,9 +100,9 @@ python "C:\Users\trive\HFWFiles\Tests\build_master_player_csv.py"
 
 | File | Role |
 |------|------|
-| `Tests/fetch_fotmob_squads.py` | Config `TEAMS`, squad + profile scrape → `Raw_Files/*.json`. |
-| `Tests/fotmob_player_profile.py` | HTTP fetch, `__NEXT_DATA__` parse, display name + position helpers, `finalize_player_display_name`. |
-| `Tests/build_master_player_csv.py` | Merge JSONs, role map, CSV output. |
+| `scoring-engine/fetch_fotmob_squads.py` | Config `TEAMS`, squad + profile scrape → `Raw_Files/*.json`. |
+| `scoring-engine/fotmob_player_profile.py` | HTTP fetch, `__NEXT_DATA__` parse, display name + position helpers, `finalize_player_display_name`. |
+| `scoring-engine/build_master_player_csv.py` | Merge JSONs, role map, CSV output. |
 
 ---
 
@@ -117,6 +117,6 @@ python "C:\Users\trive\HFWFiles\Tests\build_master_player_csv.py"
 
 Edit **`POSITION_ROLE_MAP`** (and related logic if you add new codes) in:
 
-`Tests/build_master_player_csv.py`
+`scoring-engine/build_master_player_csv.py`
 
 Re-run **only** Step 3 if squad JSON is already up to date and you only changed the map.

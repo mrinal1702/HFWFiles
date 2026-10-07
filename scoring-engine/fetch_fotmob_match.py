@@ -2,9 +2,9 @@
 Fetch FotMob match JSON from a match page URL or match id, then optionally run scoring.
 
 Examples:
-  python Tests/fetch_fotmob_match.py "https://www.fotmob.com/en-GB/matches/canada-vs-bosnia-herzegovina/23f1qo#4667757:tab=stats"
-  python Tests/fetch_fotmob_match.py --match-id 4667757 --out "Matches_Raw/World Cup 2026/Canada_Vs_BosniaAndHerzegovina.json"
-  python Tests/fetch_fotmob_match.py <url> --score --scores-dir "Matches_Raw/World Cup 2026"
+  python scoring-engine/fetch_fotmob_match.py "https://www.fotmob.com/en-GB/matches/canada-vs-bosnia-herzegovina/23f1qo#4667757:tab=stats"
+  python scoring-engine/fetch_fotmob_match.py --match-id 4667757 --out "Matches_Raw/World Cup 2026/Canada_Vs_BosniaAndHerzegovina.json"
+  python scoring-engine/fetch_fotmob_match.py <url> --score --scores-dir "Matches_Raw/World Cup 2026"
 """
 
 from __future__ import annotations
@@ -118,7 +118,7 @@ def run_scoring(json_path: Path, scores_dir: Path) -> None:
     ):
         subprocess.run([py, str(_TESTS / script), str(json_path), *extra], check=True, cwd=str(_TESTS))
 
-    # presentation_final_points reads from Tests/ by default — run inline merge instead
+    # presentation_final_points reads from scoring-engine/ by default — run inline merge instead
     data = json.loads(json_path.read_text(encoding="utf-8"))
     base = _match_label(data)
     _merge_final_points(

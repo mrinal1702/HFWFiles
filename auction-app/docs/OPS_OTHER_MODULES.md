@@ -122,7 +122,7 @@ Completed one-off scripts (per-auction bidding openers, one-time setups, pre-iso
 
 Before an auction exists:
 
-- `docs/AUCTION_PREPARATION_PROCEDURE.md` (repo root)
+- `scoring-engine/docs/AUCTION_PREPARATION_PROCEDURE.md`
 - Import tools under `auction-app/scripts/` (`import-master-player-list.mjs`, `seed-auction-lots.mjs`, etc.)
 
 Pool quality (IDs, `team_name` spelling) affects eliminations and nation-rolling — treat as part of ops readiness.

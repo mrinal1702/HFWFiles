@@ -4,7 +4,7 @@ Calculate goalkeeper points end-to-end:
 2) compute stat-based points
 3) compute endowed points per team and assign to the best-stat GK for that team
 
-Output CSV: <HomeTeamNoSpaces>_<AwayTeamNoSpaces>_KeeperPoints.csv in `Tests/`.
+Output CSV: <HomeTeamNoSpaces>_<AwayTeamNoSpaces>_KeeperPoints.csv in `scoring-engine/`.
 """
 
 from __future__ import annotations

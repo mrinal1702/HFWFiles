@@ -5,11 +5,11 @@ Input:
   - a match JSON path
 
 Reads:
-  - `Tests/<Home>_<Away>_Points.csv` from `point_simulator.py`
-  - `Tests/<Home>_<Away>_KeeperPoints.csv` from `calculate_keeper_points.py`
+  - `scoring-engine/<Home>_<Away>_Points.csv` from `point_simulator.py`
+  - `scoring-engine/<Home>_<Away>_KeeperPoints.csv` from `calculate_keeper_points.py`
 
 Output:
-  - `Tests/<Home>_<Away>_FinalPoints.csv`
+  - `scoring-engine/<Home>_<Away>_FinalPoints.csv`
 
 Output columns:
   - player_name

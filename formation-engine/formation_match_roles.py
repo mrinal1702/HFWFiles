@@ -1,7 +1,7 @@
 """
 Helpers for best-XI / formation: match-level outfield roles using the same rules as scoring.
 
-Import from procedures/ with repo root working directory, or ensure `Tests` is on PYTHONPATH.
+Import from formation-engine/; the shared position map lives in ../positions/.
 """
 
 from __future__ import annotations
@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Any
 
 _ROOT = Path(__file__).resolve().parent.parent
-_TESTS = _ROOT / "Tests"
+_TESTS = _ROOT / "positions"  # shared position map
 if str(_TESTS) not in sys.path:
     sys.path.insert(0, str(_TESTS))
 

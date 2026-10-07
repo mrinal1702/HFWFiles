@@ -2,8 +2,8 @@
 Audit whether Best XI formation logic used in-game (match) positions.
 
 Usage (repo root):
-  python procedures/audit_ingame_formation_usage.py --gw-id 4 --auction-id 6
-  python procedures/audit_ingame_formation_usage.py --gw-id 4 --auction-id 6 --player-id 839204
+  python formation-engine/audit_ingame_formation_usage.py --gw-id 4 --auction-id 6
+  python formation-engine/audit_ingame_formation_usage.py --gw-id 4 --auction-id 6 --player-id 839204
 """
 
 from __future__ import annotations
@@ -29,6 +29,10 @@ from formation_match_roles import (  # noqa: E402
     load_match_json,
     outfield_roles_by_player_for_match,
 )
+_POSITIONS_DIR = _ROOT / "positions"
+if str(_POSITIONS_DIR) not in sys.path:
+    sys.path.insert(0, str(_POSITIONS_DIR))
+
 from position_roles import (  # noqa: E402
     lineup_granular_position_id_by_player,
     role_override_by_player,

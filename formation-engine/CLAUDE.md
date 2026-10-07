@@ -1,8 +1,8 @@
-# Formation engine (currently `procedures/` — planned rename: `formation-engine/`)
+# Formation engine (`formation-engine/`)
 
 Picks each manager's **Best XI** for one auction gameweek under the formation rule. Pure Python,
 runs locally; output is published to Supabase by `auction-app/scripts/publish-best-xi-from-json.mjs`.
-**Scope:** formation / eligibility only. Do not change scoring (`Tests/`) or the website from here.
+**Scope:** formation / eligibility only. Do not change scoring (`../scoring-engine/`) or the website from here.
 
 ## Input → output
 - **In:**
@@ -17,7 +17,7 @@ runs locally; output is published to Supabase by `auction-app/scripts/publish-be
 ## Rules (in code — change here, never in the UI)
 - `best_xi.py` → `ALLOWED_FORMATIONS` (D-M-F): 3-5-2, 3-4-3, 4-5-1, 4-4-2, 4-3-3, 5-4-1, 5-3-2; one goalkeeper unit.
 - Eligibility = listed pool role ∪ roles played in that GW's matches (`formation_match_roles.py`,
-  which uses the shared position map `../Tests/position_roles.py`).
+  which uses the shared position map `../positions/position_roles.py`).
 - Highest legal total wins; everyone else is bench.
 
 ## Files

@@ -25,7 +25,7 @@ Still partial / known caveats:
 - Scores are still keyed by legacy `game_week_id` (`Player_Scores` unique on `(player_id, game_week_id)`), relying on per-competition ID ranges. `competition_rounds` only holds EPL MW1 and the CL 2025/26 rounds; UCL 2026/27 rounds are not in it yet.
 - EPL 2026/27 MW1–MW3 were originally stored at `game_week_id` 1, 2, 3 (inside the World Cup range), overwriting the World Cup GW1–3 player scores. Fixed Oct 2026: EPL moved to 100–102 (`competitions/archive/epl-2026-27/ops/rekey-epl-mw1-3-to-100-102.mjs`, backup in `ops/backups/`) and World Cup GW1–8 player scores restored (`competitions/archive/world-cup-2026/ops/restore-wc-player-scores.mjs`, validated against all 2,625 published Best XI picks). Each competition now uses only its own range: WC 1–8, EPL 100–103, UCL 300+.
 - `"Game_Weeks".Is_Active` is still global across competitions.
-- Python tooling defaults (`Tests/fetch_fotmob_match.py --copy-to-app`, etc.) still point at legacy folders; harmless (the app no longer reads them) but worth tidying.
+- Python tooling defaults (`scoring-engine/fetch_fotmob_match.py --copy-to-app`, etc.) still point at legacy folders; harmless (the app no longer reads them) but worth tidying.
 - ~~`competitions/archive/world-cup-2026/_pending-dedup-from-matches-raw/` review~~ — done Oct 2026: 146 duplicate CSVs (and 2 duplicate match JSONs) deleted, 27 unique raw FotMob match JSONs + 29 manifests kept in `scoring-intermediates/match-json/`.
 
 ## 1. Core principle
@@ -64,7 +64,7 @@ For these competitions a **round is a gameweek**, and every team plays exactly o
 
 - Each player features in at most one match per round, so a player's round score **is** their match score. Scores are never summed across matches within a round.
 - Every player round score is anchored to the FotMob match it came from. The match ID is a first-class identifier stored alongside the score for historical traceability and querying, not a value that has to be aggregated.
-- The match ID is a real FotMob identifier. It already exists in this project: the raw match JSON carries `general.matchId`, and every match manifest stores it as `match_id` (for example, Arsenal vs Coventry City is FotMob match `5795363`). It is extracted automatically from the match URL by `Tests/fetch_fotmob_match.py`.
+- The match ID is a real FotMob identifier. It already exists in this project: the raw match JSON carries `general.matchId`, and every match manifest stores it as `match_id` (for example, Arsenal vs Coventry City is FotMob match `5795363`). It is extracted automatically from the match URL by `scoring-engine/fetch_fotmob_match.py`.
 
 ## 2. Required terminology
 
@@ -138,7 +138,7 @@ HFWFiles/
 ├── tools/
 │   ├── scoring/                           # Fetch, score, validate, publish commands
 │   └── investigation/                     # Explicit one-off audits
-├── procedures/                            # Auction/GW orchestration
+├── formation-engine/                            # Auction/GW orchestration
 ├── tests/                                 # Unit/integration tests and curated fixtures
 ├── docs/
 │   └── context/                           # High-level architecture and agent context
@@ -197,7 +197,7 @@ HFWFiles/
 
 ### Why this shape
 
-- `src/`, `tools/`, `procedures/`, and `tests/` contain reusable software.
+- `src/`, `tools/`, `formation-engine/`, and `tests/` contain reusable software.
 - `competitions/active/` contains writable operational data for live competitions.
 - `competitions/archive/` contains completed, read-only competition records.
 - Each competition owns its player pool, rounds, match inputs, validated outputs, and run history.
@@ -508,7 +508,7 @@ Move after deduplication:
 - `Matches_Raw/CL Semis Leg 2/`;
 - `Matches_Raw/CL Quarters Leg2 Tables/`;
 - related `Scores/` rollups and match outputs;
-- related CL artifacts currently stored in `Tests/`.
+- related CL artifacts currently stored in `scoring-engine/`.
 
 The exact competition season and which rounds form one archive must be confirmed before migration.
 
@@ -598,7 +598,7 @@ Before implementation, confirm:
 ## 16. Recommended implementation order
 
 1. Approve terminology and folder structure.
-2. Confirm a resolvable FotMob match ID exists for every match to be migrated or scored. *(Confirmed available: raw JSON `general.matchId` and manifest `match_id`, extracted by `Tests/fetch_fotmob_match.py`.)*
+2. Confirm a resolvable FotMob match ID exists for every match to be migrated or scored. *(Confirmed available: raw JSON `general.matchId` and manifest `match_id`, extracted by `scoring-engine/fetch_fotmob_match.py`.)*
 3. Create competition manifests for EPL, World Cup, and completed Champions League data.
 4. Introduce temporary non-overlapping gameweek ID ranges.
 5. Add `competitions`, `competition_rounds`, and `competition_matches` to Supabase.

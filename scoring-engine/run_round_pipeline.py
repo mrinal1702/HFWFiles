@@ -6,9 +6,9 @@ Steps per match:
   2) point_simulator → <Home>_<Away>_Points.csv (stat + endowed)
 
 Then builds a single GW upload CSV (outfield + keeper team units), same rules as
-Tests/build_gw_scores_from_matches.py.
+scoring-engine/build_gw_scores_from_matches.py.
 
-Outputs go under Scores/<round_folder_name>/ — never under Tests/.
+Outputs go under Scores/<round_folder_name>/ — never under scoring-engine/.
 
 Usage (from repo root HFWFiles):
   python scripts/run_round_pipeline.py
@@ -26,7 +26,7 @@ from pathlib import Path
 import pandas as pd
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
-_TESTS = _REPO_ROOT / "Tests"
+_TESTS = _REPO_ROOT / "scoring-engine"
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 if str(_TESTS) not in sys.path:

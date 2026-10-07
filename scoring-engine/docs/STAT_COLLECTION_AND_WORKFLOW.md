@@ -2,22 +2,22 @@
 
 Handoff reference for how FotMob-style match JSON becomes per-player stat tables, fantasy points, and gameweek upload rows. Use when continuing work in a new chat or with another agent.
 
-**Pipeline overview and scoring paths:** [`MAIN_PIPELINE_FUNCTIONS.md`](./MAIN_PIPELINE_FUNCTIONS.md)  
+**Pipeline overview and scoring paths:** [`MAIN_PIPELINE_FUNCTIONS.md`](MAIN_PIPELINE_FUNCTIONS.md)  
 **Weekly ops (build CSV → publish):** [`OPS_SCORING_AND_LEADERBOARD.md`](../auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md)
 
 ## Repository layout (relevant parts)
 
 | Path | Role |
 |------|------|
-| `Tests/stat_collection.py` | Extract outfield stats; split by scoring role |
-| `Tests/position_roles.py` | In-match position resolution and winger/striker overrides |
-| `Tests/Calculate_stat_points.py` | Apply role weights → stat points |
-| `Tests/endowed_points.py` / `calculate_endowed_points.py` | On-pitch intervals → endowed points |
-| `Tests/point_simulator.py` | Merge stat + endowed (outfield); per-match `*_Points.csv` |
-| `Tests/keeper_stat_collection.py` | Extract goalkeeper stats |
-| `Tests/calculate_keeper_points.py` | GK stat + team endowment; best-stat GK selection |
-| `Tests/presentation_final_points.py` | Merge outfield + keeper → `*_FinalPoints.csv` |
-| `procedures/generate_gameweek_scores.py` | All matches in a folder → one GW upload CSV |
+| `scoring-engine/stat_collection.py` | Extract outfield stats; split by scoring role |
+| `positions/position_roles.py` | In-match position resolution and winger/striker overrides |
+| `scoring-engine/Calculate_stat_points.py` | Apply role weights → stat points |
+| `scoring-engine/endowed_points.py` / `calculate_endowed_points.py` | On-pitch intervals → endowed points |
+| `scoring-engine/point_simulator.py` | Merge stat + endowed (outfield); per-match `*_Points.csv` |
+| `scoring-engine/keeper_stat_collection.py` | Extract goalkeeper stats |
+| `scoring-engine/calculate_keeper_points.py` | GK stat + team endowment; best-stat GK selection |
+| `scoring-engine/presentation_final_points.py` | Merge outfield + keeper → `*_FinalPoints.csv` |
+| `formation-engine/generate_gameweek_scores.py` | All matches in a folder → one GW upload CSV |
 | `scripts/run_round_pipeline.py` | Round folder → per-match exports + GW rollup |
 | `scoring/*.py` | Versioned weights per role (DEF / MID / FWD / GK) |
 | `Matches_Raw/` | Raw match JSON by competition round |
@@ -35,7 +35,7 @@ Handoff reference for how FotMob-style match JSON becomes per-player stat tables
 
 ## What `stat_collection.py` does
 
-1. Loads JSON (default `Tests/Match1.json`, or first CLI argument, or env `STAT_COLLECTION_JSON`).
+1. Loads JSON (default `scoring-engine/Match1.json`, or first CLI argument, or env `STAT_COLLECTION_JSON`).
 2. Builds **position map** from `content.lineup` (`usualPlayingPositionId`); falls back to `usualPosition` on the player blob if needed.
 3. Applies **role overrides** from `position_roles.role_override_by_player()` (see below).
 4. **Excludes goalkeepers** (`isGoalkeeper` or position 0).
@@ -44,19 +44,19 @@ Handoff reference for how FotMob-style match JSON becomes per-player stat tables
 7. **Derived fields**: inaccurate passes = total − accurate; **ground-duel lost** = total − won on `ground_duels_won` (column `ground_duels_lost` — audit only, **not** scored as tackles lost); same for aerial duels; **dribbles failed** = attempts − successes on `dribbles_succeeded`; **`tackles_lost`** = FotMob **`dribbled_past`** (times beaten by an opponent dribble when defending).
 8. **Defaults**: cross/long-ball, `missed_penalty`, and `penalties_won` use **0** when the stat block is absent.
 9. **Red cards** and **own goals** from timeline events (not playerStats keys).
-10. Writes three CSVs: `stat_collection_defenders.csv`, `stat_collection_midfielders.csv`, `stat_collection_forwards.csv` (or `Tests/export_run/` if locked).
+10. Writes three CSVs: `stat_collection_defenders.csv`, `stat_collection_midfielders.csv`, `stat_collection_forwards.csv` (or `scoring-engine/export_run/` if locked).
 
 ### Running
 
 ```text
-python Tests/stat_collection.py
-python Tests/stat_collection.py "C:\path\to\match.json"
-set STAT_COLLECTION_JSON=C:\path\to\match.json && python Tests/stat_collection.py
+python scoring-engine/stat_collection.py
+python scoring-engine/stat_collection.py "C:\path\to\match.json"
+set STAT_COLLECTION_JSON=C:\path\to\match.json && python scoring-engine/stat_collection.py
 ```
 
-Importing programmatically: `from stat_collection import stat_collection` (add repo root and `Tests` to `PYTHONPATH`).
+Importing programmatically: `from stat_collection import stat_collection` (add repo root and `scoring-engine` to `PYTHONPATH`).
 
-## Position overrides (`Tests/position_roles.py`)
+## Position overrides (`positions/position_roles.py`)
 
 Scoring role for a match may differ from the player's auction-pool position in `master_player_list.csv`. Overrides apply **per match** to both stat weights and endowed rules.
 
@@ -160,11 +160,11 @@ Derived from substitution timeline + goal events while player is on field. Role 
 
 | Goal | Script(s) | Output |
 |------|-----------|--------|
-| Debug one match, full breakdown | `point_simulator.py`, `calculate_keeper_points.py`, `presentation_final_points.py` | `Tests/*_Points.csv`, `*_KeeperPoints.csv`, `*_FinalPoints.csv` |
-| Upload gameweek to app | `procedures/generate_gameweek_scores.py` | `Scores/GW<n>_scores.csv` |
+| Debug one match, full breakdown | `point_simulator.py`, `calculate_keeper_points.py`, `presentation_final_points.py` | `scoring-engine/*_Points.csv`, `*_KeeperPoints.csv`, `*_FinalPoints.csv` |
+| Upload gameweek to app | `formation-engine/generate_gameweek_scores.py` | `Scores/GW<n>_scores.csv` |
 | Round folder + per-match files | `scripts/run_round_pipeline.py` | `Scores/<round>/matches/…` + GW CSV |
 
-**Path difference:** `point_simulator.simulate_points()` also zeroes players with `minutes_played_derived <= 0` and floors `total_points` at 0. GW rollup scripts merge stat + endowed directly (normally equivalent). Details in [`MAIN_PIPELINE_FUNCTIONS.md` § Scoring paths](./MAIN_PIPELINE_FUNCTIONS.md#8-scoring-paths).
+**Path difference:** `point_simulator.simulate_points()` also zeroes players with `minutes_played_derived <= 0` and floors `total_points` at 0. GW rollup scripts merge stat + endowed directly (normally equivalent). Details in [`MAIN_PIPELINE_FUNCTIONS.md` § Scoring paths](MAIN_PIPELINE_FUNCTIONS.md#8-scoring-paths).
 
 ## Goalkeeper representation
 
@@ -181,7 +181,7 @@ Auction ownership: owning any goalkeeper from a club credits that club's keeper 
 
 ## Next steps for a new agent
 
-1. Read `Tests/stat_collection.py` and `Tests/position_roles.py` for extraction and role rules.
+1. Read `scoring-engine/stat_collection.py` and `positions/position_roles.py` for extraction and role rules.
 2. Read the relevant `scoring/<role>_points.py` for weights.
 3. For a single-match audit, run Path A in `MAIN_PIPELINE_FUNCTIONS.md`.
 4. For production upload, follow `auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md`.

@@ -11,7 +11,7 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parent.parent
-TESTS_DIR = ROOT / "Tests"
+TESTS_DIR = ROOT / "scoring-engine"
 if str(TESTS_DIR) not in sys.path:
     sys.path.insert(0, str(TESTS_DIR))
 

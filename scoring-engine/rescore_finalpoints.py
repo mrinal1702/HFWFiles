@@ -21,7 +21,7 @@ from pathlib import Path
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
-TESTS = ROOT / "Tests"
+TESTS = ROOT / "scoring-engine"
 sys.path.insert(0, str(TESTS))
 
 from calculate_keeper_points import (  # noqa: E402

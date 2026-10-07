@@ -2,8 +2,8 @@
 Validate one or more *_FinalPoints.csv files before Supabase upload.
 
 Usage:
-  python Tests/validate_final_points.py path/to/Match_FinalPoints.csv [more...]
-  python Tests/validate_final_points.py "Matches_Raw/World Cup 2026/*_FinalPoints.csv"
+  python scoring-engine/validate_final_points.py path/to/Match_FinalPoints.csv [more...]
+  python scoring-engine/validate_final_points.py "Matches_Raw/World Cup 2026/*_FinalPoints.csv"
 """
 
 from __future__ import annotations

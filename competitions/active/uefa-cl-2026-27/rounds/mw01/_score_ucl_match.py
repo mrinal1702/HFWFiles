@@ -5,7 +5,7 @@ import sys
 import subprocess
 
 REPO = Path(r"c:\Users\trive\HFWFiles")
-TESTS = REPO / "Tests"
+TESTS = REPO / "scoring-engine"
 sys.path.insert(0, str(TESTS))
 
 URL = sys.argv[1]

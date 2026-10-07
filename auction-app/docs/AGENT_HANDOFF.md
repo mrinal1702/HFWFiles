@@ -79,7 +79,7 @@ HFWFiles/                     ← git repo root
 │   ├── data/                 ← Committed publish artifacts (best-xi/, match-scores/)
 │   └── docs/                 ← Project documentation (this folder)
 ├── competitions/             ← Competition-scoped scoring data (active/ + archive/)
-├── Tests/, procedures/, scripts/  ← Python scoring pipeline (run locally; not deployed)
+├── scoring-engine/, formation-engine/, scripts/  ← Python scoring pipeline (run locally; not deployed)
 └── docs/                     ← Repo-root deploy/scoring/context docs
 ```
 

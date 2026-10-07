@@ -2,7 +2,7 @@
 
 This document describes the core scoring pipeline: stat extraction, point calculation, output paths, and how goalkeeper units are represented in gameweek CSVs.
 
-**Auction player pool (squad scrape → master CSV):** see [`AUCTION_PREPARATION_PROCEDURE.md`](./AUCTION_PREPARATION_PROCEDURE.md).
+**Auction player pool (squad scrape → master CSV):** see [`AUCTION_PREPARATION_PROCEDURE.md`](AUCTION_PREPARATION_PROCEDURE.md).
 
 **Operational runbook (build GW CSV → publish to Supabase):** see [`OPS_SCORING_AND_LEADERBOARD.md`](../auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md).
 
@@ -11,9 +11,9 @@ This document describes the core scoring pipeline: stat extraction, point calcul
 ## 0) FotMob squad scrape + master player list
 
 ### Files
-- `Tests/fetch_fotmob_squads.py` — fetches each configured team squad page, then each player profile for **canonical `data.name`** and **primary position** (`positionDescription` in `__NEXT_DATA__`). Writes `Player_List/Raw_Files/*_Squad.json`. Rate limits: ~0.5s between player profile requests, ~1–2s between clubs.
-- `Tests/fotmob_player_profile.py` — shared helpers for profile HTML / JSON parsing.
-- `Tests/build_master_player_csv.py` — merges squad JSONs into `Player_List/master_player_list.csv` (one row per `player_id`; **single** `position` from the best row). **Before writing the CSV**, it maps raw FotMob codes to fantasy roles (`Defender`, `Midfielder`, `Forward`, `Goalkeeper`); **LW** and **RW** map to **Forward**. Rows with empty `position`, **Coach**, or an unknown code are omitted from the export.
+- `scoring-engine/fetch_fotmob_squads.py` — fetches each configured team squad page, then each player profile for **canonical `data.name`** and **primary position** (`positionDescription` in `__NEXT_DATA__`). Writes `Player_List/Raw_Files/*_Squad.json`. Rate limits: ~0.5s between player profile requests, ~1–2s between clubs.
+- `scoring-engine/fotmob_player_profile.py` — shared helpers for profile HTML / JSON parsing.
+- `scoring-engine/build_master_player_csv.py` — merges squad JSONs into `Player_List/master_player_list.csv` (one row per `player_id`; **single** `position` from the best row). **Before writing the CSV**, it maps raw FotMob codes to fantasy roles (`Defender`, `Midfielder`, `Forward`, `Goalkeeper`); **LW** and **RW** map to **Forward**. Rows with empty `position`, **Coach**, or an unknown code are omitted from the export.
 
 ### Output
 - `Player_List/Raw_Files/<Team>_Squad.json`
@@ -26,7 +26,7 @@ This document describes the core scoring pipeline: stat extraction, point calcul
 ## 1) Statistic Collection
 
 ### File
-`Tests/stat_collection.py`
+`scoring-engine/stat_collection.py`
 
 ### Purpose
 Reads one match JSON and produces per-player outfield stats (defenders, midfielders, forwards).
@@ -36,7 +36,7 @@ Reads one match JSON and produces per-player outfield stats (defenders, midfield
   - `content.playerStats`
   - `content.lineup` (for `usualPlayingPositionId`)
   - `content.matchFacts.events.events` (for red cards and own goals)
-  - `Tests/position_roles.py` (for winger/striker overrides — see below)
+  - `positions/position_roles.py` (for winger/striker overrides — see below)
 - Excludes goalkeepers.
 - Derives extra fields such as:
   - `inaccurate_passes`
@@ -53,16 +53,16 @@ Reads one match JSON and produces per-player outfield stats (defenders, midfield
   - `clearance_off_the_line`
 
 ### Output files (standalone CLI)
-- `Tests/stat_collection_defenders.csv`
-- `Tests/stat_collection_midfielders.csv`
-- `Tests/stat_collection_forwards.csv`
+- `scoring-engine/stat_collection_defenders.csv`
+- `scoring-engine/stat_collection_midfielders.csv`
+- `scoring-engine/stat_collection_forwards.csv`
 
 ---
 
 ## 1a) Position overrides (in-match scoring)
 
 ### File
-`Tests/position_roles.py`
+`positions/position_roles.py`
 
 ### Purpose
 Resolves which **scoring role** (defender / midfielder / forward) applies to each outfield player **for a specific match**. Used by `stat_collection.py`, `endowed_points.py`, and best-XI helpers.
@@ -118,7 +118,7 @@ Formulas include:
 - minutes term (`minutes_per_point`, typically `1/30`)
 - dispossessed term (`dispossessed_base` and `dispossessed_per_event`) — outfield only
 
-See **Scoring rule changelog** in [`STAT_COLLECTION_AND_WORKFLOW.md`](./STAT_COLLECTION_AND_WORKFLOW.md#scoring-rule-changelog).
+See **Scoring rule changelog** in [`STAT_COLLECTION_AND_WORKFLOW.md`](STAT_COLLECTION_AND_WORKFLOW.md#scoring-rule-changelog).
 
 ### Duels, tackles, and take-ons (all outfield roles)
 
@@ -140,7 +140,7 @@ Weights per role: defender `tackles_lost` −1.6 / `dribbles_lost` −0.8; midfi
 | Goals (penalty) | `goals` + timeline | **+10** | Scorer only; separate from `penalties_won`. |
 | Assists | `assists` | **+8** | FotMob `assists` only; does **not** include penalty won. |
 
-See **Scoring rule changelog** in [`STAT_COLLECTION_AND_WORKFLOW.md`](./STAT_COLLECTION_AND_WORKFLOW.md#scoring-rule-changelog).
+See **Scoring rule changelog** in [`STAT_COLLECTION_AND_WORKFLOW.md`](STAT_COLLECTION_AND_WORKFLOW.md#scoring-rule-changelog).
 
 ### Role-specific notes (2026-06)
 
@@ -162,7 +162,7 @@ Goalkeeper config additionally documents endowment rules in `GOALKEEPER_ENDOWMEN
 ## 3) Stat Points Calculator
 
 ### File
-`Tests/Calculate_stat_points.py`
+`scoring-engine/Calculate_stat_points.py`
 
 ### Purpose
 Applies role scoring configs to stat-collection output and calculates stat-only points.
@@ -183,8 +183,8 @@ Applies role scoring configs to stat-collection output and calculates stat-only 
 ## 4) Endowed Points Calculator
 
 ### Files
-- `Tests/endowed_points.py`
-- `Tests/calculate_endowed_points.py`
+- `scoring-engine/endowed_points.py`
+- `scoring-engine/calculate_endowed_points.py`
 
 ### Purpose
 Derives on-field intervals and computes endowed points from match state while player is on pitch.
@@ -213,7 +213,7 @@ Derives on-field intervals and computes endowed points from match state while pl
 ## 5) Full Match Point Simulator (outfield)
 
 ### File
-`Tests/point_simulator.py`
+`scoring-engine/point_simulator.py`
 
 ### Purpose
 Combines stat points and endowed points for **outfield players only**.
@@ -226,7 +226,7 @@ Combines stat points and endowed points for **outfield players only**.
 
 ### Output
 - One CSV per match named `<HomeTeamNoSpaces>_<AwayTeamNoSpaces>_Points.csv`
-- Default location when run standalone: `Tests/`
+- Default location when run standalone: `scoring-engine/`
 - Example: `Barcelona_NewcastleUnited_Points.csv`
 
 ---
@@ -234,8 +234,8 @@ Combines stat points and endowed points for **outfield players only**.
 ## 6) Goalkeeper pipeline
 
 ### Files
-- `Tests/keeper_stat_collection.py` — extracts GK-only stats from `content.playerStats`
-- `Tests/calculate_keeper_points.py` — stat + endowed points; picks best-stat GK per team
+- `scoring-engine/keeper_stat_collection.py` — extracts GK-only stats from `content.playerStats`
+- `scoring-engine/calculate_keeper_points.py` — stat + endowed points; picks best-stat GK per team
 - `scoring/goalkeeper_points.py` — weights and endowment rule constants
 
 ### Stat points
@@ -253,7 +253,7 @@ When more than one goalkeeper plays for a team:
 - Only that GK row receives the team's endowed points in the output.
 
 ### Output
-- `<HomeTeamNoSpaces>_<AwayTeamNoSpaces>_KeeperPoints.csv` (default: `Tests/` when run standalone)
+- `<HomeTeamNoSpaces>_<AwayTeamNoSpaces>_KeeperPoints.csv` (default: `scoring-engine/` when run standalone)
 - Columns include `stat_points_total`, `endowed_points`, `total_points` for the selected GK per team.
 
 ---
@@ -261,7 +261,7 @@ When more than one goalkeeper plays for a team:
 ## 7) Final presentation merge
 
 ### File
-`Tests/presentation_final_points.py`
+`scoring-engine/presentation_final_points.py`
 
 ### Purpose
 Merges outfield `*_Points.csv` and `*_KeeperPoints.csv` into one audit-friendly file.
@@ -287,13 +287,13 @@ There are **three ways** to run scoring. They share the same underlying modules 
 ```text
 Match JSON
     │
-    ├─► Path A: Per-match analysis (Tests/)
+    ├─► Path A: Per-match analysis (scoring-engine/)
     │       point_simulator.py          → *_Points.csv (outfield)
     │       calculate_keeper_points.py    → *_KeeperPoints.csv
     │       presentation_final_points.py → *_FinalPoints.csv
     │
     ├─► Path B: Gameweek upload CSV
-    │       procedures/generate_gameweek_scores.py
+    │       formation-engine/generate_gameweek_scores.py
     │       → Scores/GW<gw_id>_scores.csv (all matches, one file)
     │
     └─► Path C: Round folder + GW rollup
@@ -302,19 +302,19 @@ Match JSON
             → Scores/<round>/<round>_GW<gw_id>_scores.csv
 ```
 
-### Path A — Per-match (`Tests/`)
+### Path A — Per-match (`scoring-engine/`)
 
 **Use when:** debugging a single match, auditing stat vs endowment breakdown, generating `FinalPoints` for owner reports.
 
 | Step | Script | Output |
 |------|--------|--------|
-| 1 | `point_simulator.py <match.json>` | `Tests/<Home>_<Away>_Points.csv` |
-| 2 | `calculate_keeper_points.py <match.json>` | `Tests/<Home>_<Away>_KeeperPoints.csv` |
-| 3 | `presentation_final_points.py <match.json>` | `Tests/<Home>_<Away>_FinalPoints.csv` |
+| 1 | `point_simulator.py <match.json>` | `scoring-engine/<Home>_<Away>_Points.csv` |
+| 2 | `calculate_keeper_points.py <match.json>` | `scoring-engine/<Home>_<Away>_KeeperPoints.csv` |
+| 3 | `presentation_final_points.py <match.json>` | `scoring-engine/<Home>_<Away>_FinalPoints.csv` |
 
 `point_simulator` uses `simulate_points()` — includes `minutes_played_derived` zeroing and `clip(min=0)`.
 
-### Path B — Gameweek CSV (`procedures/generate_gameweek_scores.py`)
+### Path B — Gameweek CSV (`formation-engine/generate_gameweek_scores.py`)
 
 **Use when:** uploading scores to the auction app for an active gameweek.
 
@@ -325,7 +325,7 @@ Match JSON
 - Default output: `Scores/GW<gw_id>_scores.csv`
 
 ```bash
-python procedures/generate_gameweek_scores.py \
+python formation-engine/generate_gameweek_scores.py \
   --matches-dir "Matches_Raw/CL_RO16_Leg2" \
   --gw-id 1
 ```
@@ -393,7 +393,7 @@ Ensure keeper unit rows use `player_id` values that exist in `players` (typicall
 
 ### Full gameweek (production upload)
 1. Place match JSON files in `Matches_Raw/<round>/`
-2. `python procedures/generate_gameweek_scores.py --matches-dir … --gw-id …`
+2. `python formation-engine/generate_gameweek_scores.py --matches-dir … --gw-id …`
 3. Publish CSV via auction-app procedure (see [`OPS_SCORING_AND_LEADERBOARD.md`](../auction-app/docs/OPS_SCORING_AND_LEADERBOARD.md))
 
 ### Full round (per-match artefacts + GW CSV)

@@ -44,7 +44,7 @@ Then **restart** `npm run dev` so Next.js reloads `.env.local` (the script updat
 **Players are global** (`public.players`). Auctions do **not** own a separate copy of player rows; **`auction_lots`** ties `(auction_id, player_id)` to bidding state.
 
 1. **Update the pool** (your choice):
-   - Re-import CSV into Supabase / sync from `Player_List/master_player_list.csv` (see repo `docs/AUCTION_PREPARATION_PROCEDURE.md`), **or**
+   - Re-import CSV into Supabase / sync from `Player_List/master_player_list.csv` (see repo `scoring-engine/docs/AUCTION_PREPARATION_PROCEDURE.md`), **or**
    - Edit `players` in the Supabase Table Editor.
 2. **Re-seed lots** for the auction you care about (usually `AUCTION_LAB_AUCTION_ID`):
 

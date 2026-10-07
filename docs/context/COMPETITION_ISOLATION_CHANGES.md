@@ -114,7 +114,7 @@ Split versions also exist if you prefer to run them in two passes:
 
 EPL rounds hold 10 fixtures (20 teams); the auction runs 4 gameweeks.
 
-1. Fetch the match: `python Tests/fetch_fotmob_match.py "<fotmob-url>" --score`.
+1. Fetch the match: `python scoring-engine/fetch_fotmob_match.py "<fotmob-url>" --score`.
    The FotMob match id comes from `general.matchId` / the manifest.
 2. Add it under the round: create
    `competitions/active/epl-2026-27/rounds/<mwNN>/matches/<slug>/` with
@@ -134,7 +134,7 @@ yet, so there is nothing to tag until their match is scored.
 
 ## 6. Still pending
 
-- Update Python tooling defaults (`Tests/fetch_fotmob_match.py`, `procedures/`,
+- Update Python tooling defaults (`scoring-engine/fetch_fotmob_match.py`, `formation-engine/`,
   root `scripts/`) that still point at `Matches_Raw/`, `Scores/`, `Player_List/`.
 - Wire `auction-app/scripts/upsert-player-scores-from-finalpoints.mjs` to call
   `upsert_player_scores_for_round` (pass match ids per row).

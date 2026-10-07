@@ -12,7 +12,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 _REPO = Path(__file__).resolve().parents[4]
-_TESTS = _REPO / "Tests"
+_TESTS = _REPO / "scoring-engine"
 if str(_TESTS) not in sys.path:
     sys.path.insert(0, str(_TESTS))
 

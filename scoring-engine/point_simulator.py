@@ -3,7 +3,7 @@ Point simulator: full pipeline from match JSON -> stat points + endowed points -
 
 Output file naming:
     <HomeTeamNoSpaces>_<AwayTeamNoSpaces>_Points.csv
-Saved under `Tests/`.
+Saved under `scoring-engine/`.
 """
 
 from __future__ import annotations

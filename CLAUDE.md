@@ -9,9 +9,9 @@ inputs, outputs and rules. Do not edit outside the folder you were asked to work
 
 | Task | Folder | Guide |
 |------|--------|-------|
-| Point-scoring algorithm, FotMob fetch, stat collection, FinalPoints | `Tests/` *(→ `scoring-engine/` in a planned rename)* | `Tests/CLAUDE.md` |
-| Position-ID → role map (shared by scoring and formation) | `Tests/position_roles.py` *(→ `positions/`)* | `Tests/CLAUDE.md` |
-| Formation rule / Best XI, listed vs match position eligibility | `procedures/` *(→ `formation-engine/`)* | `procedures/CLAUDE.md` |
+| Point-scoring algorithm + weights, FotMob fetch, stat collection, FinalPoints | `scoring-engine/` | `scoring-engine/CLAUDE.md` |
+| Position-ID → role map (shared by scoring **and** formation) | `positions/` | `positions/CLAUDE.md` |
+| Formation rule / Best XI, listed vs match position eligibility | `formation-engine/` | `formation-engine/CLAUDE.md` |
 | Raw match data, FinalPoints, player pools, per-competition records | `competitions/` | `competitions/CLAUDE.md` |
 | Website UI, Supabase reads/writes, commissioner ops scripts | `auction-app/` | `auction-app/CLAUDE.md` |
 | Deploy, architecture context | `docs/` | `docs/context/` |

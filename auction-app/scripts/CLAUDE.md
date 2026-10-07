@@ -9,7 +9,7 @@ offered. Write scripts refuse archived competitions unless `--allow-archived` (a
 | Open bidding window | `open-nation-rolling-round.mjs` (knockouts) or set deadlines on `"Auctions"`; `open-transfer-window.mjs`, `close-auction-bidding.mjs` |
 | Lock squads | `lock-gameweek-squads.mjs --gw-id <legacy id> --auction-ids …` (flips global `Game_Weeks.Is_Active` — check first) |
 | Load scores | `upsert-player-scores-from-finalpoints.mjs <legacy gw id> <FinalPoints.csv …>` |
-| Best XI | compute in `../procedures/compute_auction_best_xi.py`, then `publish-best-xi-from-json.mjs` |
+| Best XI | compute in `../formation-engine/compute_auction_best_xi.py`, then `publish-best-xi-from-json.mjs` |
 | **Verify** | `check-gameweek-surfaces.mjs [--auction-ids …]` — read-only; confirms every published GW has squads, scores, standings rows, Best XI flags, formation overlay and match sheets |
 
 ## Other operations

@@ -2,7 +2,7 @@
 Collect goalkeeper-only stats from a FotMob-style match JSON.
 
 Output CSV default:
-    Tests/keeper_stat_collection.csv
+    scoring-engine/keeper_stat_collection.csv
 """
 
 from __future__ import annotations

@@ -6,8 +6,8 @@ from pathlib import Path
 
 ROOT = Path(r"C:\Users\trive\HFWFiles")
 RAW_FILES_DIR = ROOT / "Player_List" / "Raw_Files"
-MATCH_FILE = ROOT / "Tests" / "Match1.json"
-OUTPUT_FILE = ROOT / "Tests" / "player_core_extracted.json"
+MATCH_FILE = ROOT / "scoring-engine" / "Match1.json"
+OUTPUT_FILE = ROOT / "scoring-engine" / "player_core_extracted.json"
 
 
 def parse_player_id(href: str) -> int | None:

@@ -1,7 +1,8 @@
 """
-Midfielder point scoring system (v0 — user-provided weights).
+Forward point scoring system (v0 — user-provided weights).
 
-This config is intended to be used with the CSV produced by `Tests/stat_collection.py`.
+This module is intended to be consumed alongside the CSVs produced by
+`scoring-engine/stat_collection.py`.
 """
 
 from __future__ import annotations
@@ -9,16 +10,19 @@ from __future__ import annotations
 from typing import Any, TypedDict
 
 
-class MidfielderWeights(TypedDict, total=False):
+class ForwardWeights(TypedDict, total=False):
     aerial_duels_won: float
     aerial_duels_lost: float
+
     tackles_won: float
     last_man_tackle: float
     clearance_off_the_line: float
     tackles_lost: float
     dribbled_past: float
+
     interceptions: float
     clearances: float
+
     fouls_committed: float
     caught_offside: float
     own_goals: float
@@ -38,9 +42,9 @@ class MidfielderWeights(TypedDict, total=False):
 
     shots_off_target: float
     shots_on_target: float
+
     woodwork: float
 
-    # Outcomes (not specified in the user list; assumed same as defender rules)
     goals: float
     assists: float
 
@@ -49,128 +53,140 @@ class MidfielderWeights(TypedDict, total=False):
     red_card: float
 
 
-class MidfielderFormulas(TypedDict, total=False):
+class ForwardFormulas(TypedDict, total=False):
     dispossessed_base: float
     dispossessed_per_event: float
     minutes_per_point: float
 
 
-MIDFIELDER_WEIGHTS: MidfielderWeights = {
+FORWARDS_WEIGHTS: ForwardWeights = {
     # Duels / defending
-    "aerial_duels_won": 1.3,
-    "aerial_duels_lost": -0.8,
+    "aerial_duels_won": 1.4,
+    "aerial_duels_lost": 0.0,  # forwards: no reward or penalty for lost aerials
     "tackles_won": 2.6,
     "last_man_tackle": 3.0,
     "clearance_off_the_line": 3.0,
-    # Tackles lost and/or times dribbled past are both -0.6
-    "tackles_lost": -0.6,
-    "interceptions": 2.5,
-    "clearances": 1.1,  # applied to clearances_total (clearances + headed_clearance)
-    # Possession/pressure consequences
-    "fouls_committed": -0.55,
-    "caught_offside": -0.55,
-    "own_goals": -3.3,
-    "errors_led_to_goal": -5.0,
+    # Same weight for failed tackle proxy (dribbled_past → tackles_lost column)
+    "tackles_lost": -1.0,
+    "interceptions": 2.7,
+
+    # Clearances (combine with headed to avoid double counting)
+    "clearances": 1.0,
+
+    # Discipline / negatives
+    "fouls_committed": -0.5,
+    "caught_offside": -0.5,
+    "own_goals": -1.5,
+    "errors_led_to_goal": -3.0,
 
     # Passing / creation
-    "accurate_passes": 0.112,
-    "inaccurate_passes": -0.31,
-    "chances_created": 2.5,
+    "accurate_passes": 0.130,
+    "inaccurate_passes": -0.11,
+    "chances_created": 3.25,
     "passes_into_final_third": 0.30,
 
     # Take-ons
-    "dribbles_won": 2.9,
-    "dribbles_lost": -0.8,
+    "dribbles_won": 3.0,
+    "dribbles_lost": -1.0,
 
-    # Delivery
-    "blocks": 1.1,
-    "long_balls": 0.4,  # per long_balls_completed
-    "crosses_completed": 1.5,
+    # Blocks / delivery
+    "blocks": 0.8,
+    "long_balls": 0.75,
+
+    "crosses_completed": 1.2,
 
     # Shooting
-    "shots_off_target": 0.25,
-    "shots_on_target": 2.2,
-
-    # Shooting delivery
+    "shots_off_target": -0.3,
+    "shots_on_target": 3.2,
     "woodwork": 3.0,
 
-    # Outcomes (assumption: same as defender)
+    # Outcomes (same as defenders)
     "goals": 10.0,
     "assists": 8.0,
 
-    # Cards / penalties
+    # Cards / penalties (same as defenders)
     "penalties_won": 5.0,
     "penalty_miss": -5.0,
     "red_card": -4.0,
 }
 
 
-MIDFIELDER_FORMULAS: MidfielderFormulas = {
-    # Dispossessed: points = 3 - 1.1*(times dispossessed)
-    "dispossessed_base": 3.0,
-    "dispossessed_per_event": 1.1,
-    # Time played: 1/30 per minute
+FORWARDS_FORMULAS: ForwardFormulas = {
+    # points = 5 - 0.9 * times_dispossessed
+    "dispossessed_base": 5.0,
+    "dispossessed_per_event": 0.9,
     "minutes_per_point": 1.0 / 30.0,
 }
 
 
-# Mapping logical keys -> actual `stat_collection.py` CSV columns.
-MIDFIELDER_STAT_KEYS: dict[str, str] = {
+# Mapping logical keys -> actual columns exported by `scoring-engine/stat_collection.py`
+FORWARDS_STAT_KEYS: dict[str, str] = {
     "aerial_duels_won": "aerial_duels_won",
     "aerial_duels_lost": "aerial_duels_lost",
+
     "tackles_won": "tackles",
     "last_man_tackle": "last_man_tackle",
     "clearance_off_the_line": "clearance_off_the_line",
     "tackles_lost": "tackles_lost",
     "dribbled_past": "dribbled_past",
+
     "interceptions": "interceptions",
     "clearances": "clearances_total",
+
     "fouls_committed": "fouls_committed",
     "caught_offside": "caught_offside",
     "own_goals": "own_goals",
     "errors_led_to_goal": "errors_led_to_goal",
+
     "accurate_passes": "accurate_passes",
     "inaccurate_passes": "inaccurate_passes",
     "chances_created": "chances_created",
     "passes_into_final_third": "passes_into_final_third",
+
     "dribbles_won": "dribbles_successful",
     "dribbles_lost": "dribbles_failed",
+
     "blocks": "blocks",
     "long_balls": "long_balls_completed",
     "crosses_completed": "crosses_completed",
+
     "shots_off_target": "shots_off_target",
     "shots_on_target": "shots_on_target",
+
     "woodwork": "woodwork",
+
     "goals": "goals",
     "assists": "assists",
+
     "penalties_won": "penalties_won",
     "penalty_miss": "missed_penalty",
     "red_card": "red_cards",
-    # Formulas inputs
+
+    # Formula-only inputs
     "dispossessed": "dispossessed",
     "minutes_played": "minutes_played",
 }
 
 
-MIDFIELDER_SCORING: dict[str, Any] = {
+FORWARDS_SCORING: dict[str, Any] = {
     "version": "0.2",
-    "role": "midfielder",
-    "weights": MIDFIELDER_WEIGHTS,
-    "formulas": MIDFIELDER_FORMULAS,
-    "stat_keys": MIDFIELDER_STAT_KEYS,
+    "role": "forward",
+    "weights": FORWARDS_WEIGHTS,
+    "formulas": FORWARDS_FORMULAS,
+    "stat_keys": FORWARDS_STAT_KEYS,
     "pending": {
-        # These are expected to exist because we now export them:
-        # - caught_offside: derived from playerStats['Offsides']
-        # - own_goals: derived from timeline Goal events marked isOwnGoal
-        # If a match JSON doesn't label the event in that way, values may be 0.
+        # Not explicitly available as aggregated playerStats in our current sample JSON.
+        # If/when event-level defensive parsing is added, these can be wired in.
+        "last_man_tackle_off_line": None,
     },
     "notes": (
-        "Clearances apply once via clearances_total. "
-        "Accurate passes 0.112; passes_into_final_third 0.30 (revenue-neutral shift from 0.154). "
-        "Inaccurate passes unchanged at -0.31. "
-        "tackles_lost: -0.6 per dribbled_past (column tackles_lost). "
-        "dribbles_lost: -0.8 per dribbles_failed. No separate dribbled_past weight. "
-        "Goals/assists are assumed same as defenders (10/8) since not explicitly listed for midfielders."
+        "Clearances apply to `clearances_total` (clearances + headed_clearance) once. "
+        "Accurate passes 0.130; inaccurate -0.11; passes_into_final_third 0.30. "
+        "tackles_lost: -1.0 per dribbled_past (column tackles_lost). "
+        "dribbles_lost: -1.0 per dribbles_failed. No separate dribbled_past weight. "
+        "Woodwork uses the per-player `woodwork` column (only present when the JSON provides it). "
+        "penalties_won: +5 each (all roles; not tied to conversion). "
+        "aerial_duels_lost: 0 for forwards (2026-06)."
     ),
 }
 

@@ -60,10 +60,10 @@ This index is primarily about the **online** product.
 
 | Doc | Topic |
 |-----|--------|
-| `docs/STAT_COLLECTION_AND_WORKFLOW.md` | Stat collection |
-| `docs/MAIN_PIPELINE_FUNCTIONS.md` | Python scoring functions |
+| `scoring-engine/docs/STAT_COLLECTION_AND_WORKFLOW.md` | Stat collection |
+| `scoring-engine/docs/MAIN_PIPELINE_FUNCTIONS.md` | Python scoring functions |
 | `docs/VERCEL_DEPLOYMENT_PLAYBOOK.md` | Vercel root = `auction-app` |
-| `docs/AUCTION_PREPARATION_PROCEDURE.md` | Building the player pool |
+| `scoring-engine/docs/AUCTION_PREPARATION_PROCEDURE.md` | Building the player pool |
 
 ---
 

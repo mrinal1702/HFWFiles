@@ -3,7 +3,7 @@
  * See docs/AGENT_SCORING_LESSONS_GW1_RESCORE.md
  */
 
-/** Match Python 3 round() so keeper rows with .5 totals validate the same as Tests/validate_final_points.py */
+/** Match Python 3 round() so keeper rows with .5 totals validate the same as scoring-engine/validate_final_points.py */
 function roundLikePython(value) {
   const rounded = Math.round(value);
   if (Math.abs(value - rounded) === 0.5) {
@@ -56,7 +56,7 @@ export function validateFinalPointsRows(rows) {
   if (errors.length) {
     throw new Error(
       `FinalPoints validation failed (${errors.length} keeper issue(s)):\n  ${errors.join("\n  ")}\n` +
-        "Run: python Tests/validate_final_points.py <csv files>",
+        "Run: python scoring-engine/validate_final_points.py <csv files>",
     );
   }
 }

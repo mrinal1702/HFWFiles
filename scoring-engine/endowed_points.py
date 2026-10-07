@@ -11,7 +11,7 @@ Then compute:
 - Midfielders: base 5 (or 2.5 if <45 mins) and +2 per goal scored, -2 per goal conceded while on field
 - Forwards: base 0 (regardless of minutes) and +3 per goal scored while on field
 
-Output: CSVs in `Tests/` or `Tests/export_run/` if target files are locked.
+Output: CSVs in `scoring-engine/` or `scoring-engine/export_run/` if target files are locked.
 """
 
 from __future__ import annotations
@@ -31,7 +31,11 @@ TESTS_DIR = Path(__file__).resolve().parent
 if str(TESTS_DIR) not in sys.path:
     sys.path.insert(0, str(TESTS_DIR))
 
-from position_roles import lineup_usual_position_by_player, resolve_outfield_position_id_for_scoring
+_POSITIONS_DIR = Path(__file__).resolve().parent.parent / "positions"
+if str(_POSITIONS_DIR) not in sys.path:
+    sys.path.insert(0, str(_POSITIONS_DIR))
+
+from position_roles import lineup_usual_position_by_player, resolve_outfield_position_id_for_scoring  # noqa: E402
 
 DEFAULT_JSON = TESTS_DIR / "Match1.json"
 

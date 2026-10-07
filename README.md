@@ -2,6 +2,19 @@
 
 This repository contains multiple projects. The **Next.js fantasy auction app** lives in **`auction-app/`**.
 
+## Repository layout
+
+| Folder | What | Guide |
+|---|---|---|
+| `scoring-engine/` | FotMob fetch, stat collection, point algorithm + weights → `*_FinalPoints.csv` | `scoring-engine/CLAUDE.md` |
+| `positions/` | Shared position-ID → role map (used by scoring **and** formation) | `positions/CLAUDE.md` |
+| `formation-engine/` | Best XI formation rule (listed vs in-match position eligibility) | `formation-engine/CLAUDE.md` |
+| `competitions/` | Data only: raw match JSON, FinalPoints, player pools, records | `competitions/CLAUDE.md` |
+| `auction-app/` | Next.js website + Supabase ops scripts (Vercel root) | `auction-app/CLAUDE.md` |
+| `docs/` | Deploy + architecture context | — |
+
+Start with **`CLAUDE.md`** (one-page map) and open only the folder your task needs.
+
 ## Competition data isolation
 
 Scoring data is organized **per competition** under **`competitions/`** so multiple competitions can run without colliding. See **`docs/context/COMPETITION_AUCTION_DATA_ISOLATION.md`** for the full architecture, and each competition's **`competition.json`** for its slug, database IDs, auctions, and legacy gameweek-ID range.
