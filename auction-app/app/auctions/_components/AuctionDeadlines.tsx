@@ -3,6 +3,14 @@
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
+import { InfoTip } from "@/app/_components/InfoTip";
+
+const DEADLINE_HELP = {
+  initiation: "After this deadline, no NEW players can be bid for. Only existing bids can be raised",
+  raise: "After this deadline, all raises on players being bid for must be by 5 or more",
+  hard: "After this deadline, all bids expire and the competitor with the highest bid on a player wins the player",
+} as const;
+
 type Props = {
   initiationDeadlineAt: string | null;
   raiseDeadlineAt: string | null;
@@ -35,8 +43,11 @@ function DeadlineRow({
   iso,
   past,
   next,
+  help,
 }: {
   label: string;
+  /** Info icon text explaining what the deadline means. */
+  help: string;
   iso: string | null;
   past: boolean;
   /** The next deadline still to come — highlighted. */
@@ -53,11 +64,14 @@ function DeadlineRow({
     >
       {next && <span aria-hidden className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-sky-400 to-sky-600" />}
       <dt
-        className={`shrink-0 text-[11px] font-semibold uppercase tracking-wide ${
+        className={`inline-flex shrink-0 items-center gap-0.5 text-[11px] font-semibold uppercase tracking-wide ${
           past ? "text-amber-700" : next ? "text-sky-700" : "text-slate-500"
         }`}
       >
         {label}
+        <span className="-my-1 normal-case">
+          <InfoTip text={help} label={`What the ${label.toLowerCase()} means`} />
+        </span>
       </dt>
       <dd className={`text-right text-slate-800 sm:mt-0.5 sm:text-left ${past ? "text-amber-800" : ""}`}>
         <span className={next ? "font-semibold" : "font-medium"}>{formatDeadline(iso)}</span>
@@ -97,18 +111,21 @@ export function AuctionDeadlines({ initiationDeadlineAt, raiseDeadlineAt, hardDe
       <dl className="grid w-full grid-cols-1 gap-2 text-sm sm:grid-cols-3">
         <DeadlineRow
           label="Initiation deadline"
+          help={DEADLINE_HELP.initiation}
           iso={initiationDeadlineAt}
           past={initiationPast}
           next={!initiationPast && !!initiationDeadlineAt}
         />
         <DeadlineRow
           label="Raise deadline"
+          help={DEADLINE_HELP.raise}
           iso={raiseDeadlineAt}
           past={raisePast}
           next={initiationPast && !raisePast && !!raiseDeadlineAt}
         />
         <DeadlineRow
           label="Hard deadline"
+          help={DEADLINE_HELP.hard}
           iso={hardDeadlineAt}
           past={hardPast}
           next={raisePast && !hardPast && !!hardDeadlineAt}

@@ -94,7 +94,7 @@ Do **not** add a parallel top/horizontal nav, a one-off header-only link, or a p
 
 | Mode | UI |
 |------|-----|
-| `global` | `AuctionDeadlines.tsx` — **full width under** title/actions (not beside them). Mobile: label above each date. `sm+`: three columns. |
+| `global` | `AuctionDeadlines.tsx` — **full width under** the header banner. Mobile: label left, date right; `sm+`: three tiles. Next deadline highlighted, passed ones amber. Each label has an info icon (`DEADLINE_HELP`: initiation = no NEW players after it; raise = raises must be +5 or more; hard = all bids expire, highest bidder wins). |
 | `nation_rolling` | Nation schedule control (`NationRollingDeadlinesButton.tsx` + `lib/auction-state/nation-deadlines-data.ts`) |
 
 ### Acting-as
