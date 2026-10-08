@@ -54,7 +54,7 @@ export default async function AdminCancelBidsForParticipantPage({
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">
           Cancelling a bid returns the player to the unsold market (biddable again) and credits the bid
-          amount back to {participantName}&apos;s active budget. The previous bid is not restored.
+          amount back to {participantName}&apos;s disposable budget. The previous bid is not restored.
         </p>
       </div>
 

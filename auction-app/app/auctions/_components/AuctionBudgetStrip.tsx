@@ -2,7 +2,9 @@
 
 import { usePathname } from "next/navigation";
 
+import { InfoTip } from "@/app/_components/InfoTip";
 import { PlayingAsTeamName } from "@/app/auctions/_components/PlayingAsTeamName";
+import { BUDGET_HELP, DISPOSABLE_LABEL, REMAINING_LABEL } from "@/lib/auction-state/budget-copy";
 
 type Props = {
   auctionId: number;
@@ -35,17 +37,20 @@ export function AuctionBudgetStrip({
           participantName={participantName}
           teamName={teamName}
         />
-        <div className="grid grid-cols-2 gap-2 text-sm sm:flex sm:gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-2">
+        <div className="grid flex-1 grid-cols-2 gap-2 text-sm sm:flex sm:flex-none sm:gap-3">
           <div className="min-w-0 rounded-xl bg-gradient-to-br from-sky-500 to-sky-700 px-3 py-1.5 text-white shadow-sm shadow-sky-200 sm:min-w-[6.5rem]">
-            <div className="text-[11px] font-medium uppercase tracking-wide text-sky-100">Remaining</div>
+            <div className="text-[11px] font-medium uppercase tracking-wide text-sky-100">{REMAINING_LABEL}</div>
             <div className="font-mono text-lg font-semibold leading-tight tabular-nums">{budgetRemaining ?? "—"}</div>
           </div>
           <div className="min-w-0 rounded-xl border border-sky-200 bg-white px-3 py-1.5 sm:min-w-[6.5rem]">
-            <div className="text-[11px] font-medium uppercase tracking-wide text-slate-500">Active</div>
+            <div className="text-[11px] font-medium uppercase tracking-wide text-slate-500">{DISPOSABLE_LABEL}</div>
             <div className="font-mono text-lg font-semibold leading-tight tabular-nums text-slate-900">
               {activeBudget ?? "—"}
             </div>
           </div>
+        </div>
+        <InfoTip text={BUDGET_HELP} label="About Remaining and Disposable budgets" />
         </div>
       </div>
     </div>

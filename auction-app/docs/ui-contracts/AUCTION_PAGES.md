@@ -46,7 +46,8 @@ added here — see [OPS_UI_SURFACES.md](../OPS_UI_SURFACES.md).
 - Squad cap reached: Bid column reads **"You are at the squad limit"** + info icon
   (`SQUAD_LIMIT_REASON` / `SQUAD_LIMIT_HELP` in `lib/auction-state/squad-limit.ts`).
 - Bid amount box never narrower than ~5.5rem and 16px text on phones (no iOS zoom-on-focus).
-- Sticky **Team Name / Remaining / Active** budget strip — **Bidding room and My team only**.
+- Sticky **Team Name / Remaining / Disposable** budget strip with an info icon (copy in
+  `lib/auction-state/budget-copy.ts`; "Disposable" = DB `active_budget`) — **Bidding room and My team only**.
 - Player names link to the player page; after a bid the same row scrolls back into view.
 - Bid error copy is centralised in `lib/auction-state/bid-ui-messages.ts` + `auction-bid-gates.ts`.
 
@@ -61,9 +62,9 @@ or the empty state "You're not winning any bids at the moment.", plus slot count
 **Players owned (n/18) · Bids held · Can still bid on**.
 
 ### Competitors – Bidding — `/auctions/[id]/competitors` and `/competitors/[auctionUserId]`
-- List: intro line, then columns **Manager · Remaining · Active · Players purchased · Bids held**.
+- List: intro line, then columns **Manager · Remaining · Disposable · Players purchased · Bids held**.
 - Detail: back link "← Competitors – Bidding", manager identity + "View HFW profile", stats
-  **Remaining · Active · Players owned (n/18) · Bids held · Can still bid on**; **View Team**
+  **Remaining · Disposable · Players owned (n/18) · Bids held · Can still bid on**; **View Team**
   ("Players they've won in this auction") grouped by position — **Player · Club · Pos · Price**;
   **Bids they're winning** — **Player · Club · Pos · Bid · Timer (local)**, or "None right now."
 - **No points, gameweeks or formations here.** Those are on Leaderboard → Competitors – Points.

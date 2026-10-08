@@ -49,7 +49,7 @@ export function CompetitorsAuctionList({ auctionId, rows }: Props) {
                 <dd className="font-mono tabular-nums text-slate-900">{row.user.budget_remaining}</dd>
               </div>
               <div>
-                <dt className="text-xs font-medium text-slate-600">Active</dt>
+                <dt className="text-xs font-medium text-slate-600">Disposable</dt>
                 <dd className="font-mono tabular-nums text-slate-900">{row.user.active_budget}</dd>
               </div>
               <div>
@@ -71,7 +71,7 @@ export function CompetitorsAuctionList({ auctionId, rows }: Props) {
             <tr>
               <th className="px-3 py-3 font-semibold">Manager</th>
               <th className="px-3 py-3 font-semibold">Remaining</th>
-              <th className="px-3 py-3 font-semibold">Active</th>
+              <th className="px-3 py-3 font-semibold">Disposable</th>
               <th className="px-3 py-3 text-right font-semibold">Players purchased</th>
               <th className="px-3 py-3 text-right font-semibold">Bids held</th>
             </tr>

@@ -97,7 +97,7 @@ export function ModifyBudgetClient({
                     <span className="block font-mono text-sm tabular-nums text-slate-900">
                       {p.active_budget}
                     </span>
-                    <span className="text-[11px] text-slate-500">Active</span>
+                    <span className="text-[11px] text-slate-500">Disposable</span>
                   </span>
                 </div>
 

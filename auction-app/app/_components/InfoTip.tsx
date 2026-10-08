@@ -92,7 +92,7 @@ export function InfoTip({ text, label = "More info" }: { text: string; label?: s
               width: Math.min(WIDTH, window.innerWidth - MARGIN * 2),
               transform: pos.above ? "translateY(-100%)" : undefined,
             }}
-            className="z-50 rounded-xl border border-sky-100 bg-white px-3.5 py-2.5 text-[13px] font-normal normal-case leading-relaxed tracking-normal text-slate-700 shadow-lg shadow-sky-100"
+            className="z-50 whitespace-pre-line rounded-xl border border-sky-100 bg-white px-3.5 py-2.5 text-[13px] font-normal normal-case leading-relaxed tracking-normal text-slate-700 shadow-lg shadow-sky-100"
           >
             {text}
           </div>,

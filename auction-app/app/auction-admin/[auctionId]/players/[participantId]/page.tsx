@@ -68,7 +68,7 @@ export default async function AdminParticipantProfilePage({
             </div>
           </div>
           <div className="rounded-lg border border-sky-100 bg-white px-3 py-2 shadow-sm">
-            <div className="text-[11px] font-medium text-slate-600 sm:text-xs">Active budget</div>
+            <div className="text-[11px] font-medium text-slate-600 sm:text-xs">Disposable budget</div>
             <div className="font-mono text-base tabular-nums text-slate-900">
               {participant.active_budget}
             </div>

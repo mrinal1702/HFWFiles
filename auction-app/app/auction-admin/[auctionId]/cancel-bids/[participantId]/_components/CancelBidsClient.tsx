@@ -110,7 +110,7 @@ export function CancelBidsClient({
             <p className="mt-2 text-sm text-slate-700">
               {selected.player_name ?? "This player"} will go back to the unsold market and become
               biddable again, and £{selected.amount ?? 0} will be credited back to {participantName}&apos;s
-              active budget.
+              disposable budget.
             </p>
             <p className="mt-1 text-xs text-slate-500">The previous bid is not restored.</p>
 

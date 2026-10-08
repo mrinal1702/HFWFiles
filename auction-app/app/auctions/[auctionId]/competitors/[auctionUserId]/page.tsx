@@ -120,7 +120,7 @@ export default async function CompetitorDetailPage({
             <div className="font-mono text-base tabular-nums text-slate-900">{v.competitor.budget_remaining}</div>
           </div>
           <div className="rounded-lg border border-sky-100 bg-sky-50/50 px-3 py-2">
-            <div className="text-xs font-medium text-slate-600">Active</div>
+            <div className="text-xs font-medium text-slate-600">Disposable</div>
             <div className="font-mono text-base tabular-nums text-slate-900">{v.competitor.active_budget}</div>
           </div>
         </div>

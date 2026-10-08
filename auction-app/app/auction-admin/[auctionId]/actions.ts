@@ -285,7 +285,7 @@ export async function adminModifyBudget(
   } else {
     if (amount > p.active_budget) {
       return {
-        error: `${name} only has £${p.active_budget} active budget — taking £${amount} would go negative.`,
+        error: `${name} only has £${p.active_budget} disposable budget — taking £${amount} would go negative.`,
       };
     }
     if (amount > p.budget_remaining) {
@@ -418,7 +418,7 @@ export async function adminCancelBid(
 
   return {
     ok: true,
-    message: `Bid cancelled — the player is back on the market and £${amount} was credited to ${name}'s active budget.`,
+    message: `Bid cancelled — the player is back on the market and £${amount} was credited to ${name}'s disposable budget.`,
   };
 }
 
