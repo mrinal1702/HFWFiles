@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
+import { PositionPill } from "@/app/auctions/_components/position-theme";
 import type {
   Announcement,
   AnnouncementFilter,
@@ -12,6 +13,8 @@ import type {
 } from "@/lib/announcements";
 import type { PlayerMeta } from "@/lib/auction-state/transfers";
 
+import { EventCard, ManagerLink } from "./announcement-parts";
+
 const FILTERS: { id: AnnouncementFilter; label: string }[] = [
   { id: "all", label: "All" },
   { id: "buy", label: "Buys" },
@@ -19,7 +22,13 @@ const FILTERS: { id: AnnouncementFilter; label: string }[] = [
   { id: "release", label: "Releases" },
 ];
 
-export function AnnouncementsFeed({ announcements }: { announcements: Announcement[] }) {
+export function AnnouncementsFeed({
+  announcements,
+  auctionId,
+}: {
+  announcements: Announcement[];
+  auctionId: number;
+}) {
   const [filter, setFilter] = useState<AnnouncementFilter>("all");
 
   const filtered = useMemo(() => {
@@ -52,8 +61,8 @@ export function AnnouncementsFeed({ announcements }: { announcements: Announceme
               onClick={() => setFilter(id)}
               className={
                 active
-                  ? "rounded-full bg-slate-800 px-3 py-1.5 text-sm font-medium text-white shadow-sm"
-                  : "rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50"
+                  ? "rounded-full bg-gradient-to-r from-sky-500 to-sky-700 px-3 py-1.5 text-sm font-medium text-white shadow-sm shadow-sky-200"
+                  : "rounded-full border border-sky-100 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm transition hover:border-sky-300 hover:text-sky-800"
               }
             >
               {label}
@@ -64,7 +73,7 @@ export function AnnouncementsFeed({ announcements }: { announcements: Announceme
       </div>
 
       {filtered.length === 0 ? (
-        <div className="rounded-xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+        <div className="rounded-2xl border border-dashed border-sky-200 bg-white p-6 text-center">
           <p className="text-sm text-slate-500">
             {announcements.length === 0
               ? "No announcements yet. Check back once bidding is underway."
@@ -75,7 +84,7 @@ export function AnnouncementsFeed({ announcements }: { announcements: Announceme
         <ol className="space-y-3">
           {filtered.map((a) => (
             <li key={announcementKey(a)}>
-              <AnnouncementCard announcement={a} />
+              <AnnouncementCard announcement={a} auctionId={auctionId} />
             </li>
           ))}
         </ol>
@@ -94,47 +103,40 @@ function announcementKey(a: Announcement): string {
   return `transfer:${a.timestamp}:${a.proposerName}:${a.recipientName}:${a.summary ?? ""}`;
 }
 
-function AnnouncementCard({ announcement: a }: { announcement: Announcement }) {
-  if (a.type === "buy") return <BuyCard a={a} />;
-  if (a.type === "release") return <ReleaseCard a={a} />;
-  return <TransferCard a={a} />;
+function AnnouncementCard({ announcement: a, auctionId }: { announcement: Announcement; auctionId: number }) {
+  if (a.type === "buy") return <BuyCard a={a} auctionId={auctionId} />;
+  if (a.type === "release") return <ReleaseCard a={a} auctionId={auctionId} />;
+  return <TransferCard a={a} auctionId={auctionId} />;
 }
 
-function BuyCard({ a }: { a: BuyAnnouncement }) {
+function BuyCard({ a, auctionId }: { a: BuyAnnouncement; auctionId: number }) {
   return (
-    <div className="flex gap-4 rounded-xl border border-emerald-100 bg-emerald-50 p-4 shadow-sm sm:p-5">
-      <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white shadow-sm">
-        <BuyIcon />
-      </div>
-      <div className="min-w-0 flex-1">
+    <EventCard tone="buy" icon={<BuyIcon />}>
         <p className="text-sm font-semibold text-slate-900">
-          <span className="text-emerald-700">{a.buyerName ?? "Unknown"}</span>
+          <ManagerLink auctionId={auctionId} managerId={a.buyerId} name={a.buyerName} className="text-emerald-700" />
           {" signed "}
           <span className="font-semibold text-slate-900">{a.playerName ?? a.playerId}</span>
           {" for "}
           <span className="font-mono text-emerald-700">£{a.price}m</span>
         </p>
         {a.playerPosition && (
-          <p className="mt-0.5 text-xs text-slate-500">{a.playerPosition}</p>
+          <p className="mt-1.5">
+            <PositionPill position={a.playerPosition} />
+          </p>
         )}
-        <p className="mt-1 text-xs text-slate-400">
+        <p className="mt-1.5 text-xs text-slate-400">
           <LocalTime iso={a.timestamp} />
         </p>
-      </div>
-    </div>
+    </EventCard>
   );
 }
 
-function ReleaseCard({ a }: { a: ReleaseAnnouncement }) {
+function ReleaseCard({ a, auctionId }: { a: ReleaseAnnouncement; auctionId: number }) {
   const isPaid = a.releaseType === "paid";
   return (
-    <div className="flex gap-4 rounded-xl border border-amber-100 bg-amber-50 p-4 shadow-sm sm:p-5">
-      <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-500 text-white shadow-sm">
-        <ReleaseIcon />
-      </div>
-      <div className="min-w-0 flex-1">
+    <EventCard tone="release" icon={<ReleaseIcon />}>
         <p className="text-sm font-semibold text-slate-900">
-          <span className="text-amber-700">{a.ownerName ?? "Unknown"}</span>
+          <ManagerLink auctionId={auctionId} managerId={a.ownerId} name={a.ownerName} className="text-amber-700" />
           {" released "}
           <span className="font-semibold text-slate-900">{a.playerName ?? a.playerId}</span>
           {isPaid ? (
@@ -148,41 +150,43 @@ function ReleaseCard({ a }: { a: ReleaseAnnouncement }) {
             <span className="font-normal text-slate-600"> — free release</span>
           )}
         </p>
-        {a.playerPosition && (
-          <p className="mt-0.5 text-xs text-slate-500">
-            {a.playerPosition}
-            {" · "}
+        <p className="mt-1.5 flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
+          {a.playerPosition && <PositionPill position={a.playerPosition} />}
+          <span>
             originally bought for <span className="font-mono">£{a.purchasePrice}m</span>
-          </p>
-        )}
-        <p className="mt-1 text-xs text-slate-400">
+          </span>
+        </p>
+        <p className="mt-1.5 text-xs text-slate-400">
           <LocalTime iso={a.timestamp} />
         </p>
-      </div>
-    </div>
+    </EventCard>
   );
 }
 
-function TransferCard({ a }: { a: TransferAnnouncement }) {
+function TransferCard({ a, auctionId }: { a: TransferAnnouncement; auctionId: number }) {
   const hasProposerPlayers = a.proposerPlayers.length > 0;
   const hasRecipientPlayers = a.recipientPlayers.length > 0;
 
   return (
-    <div className="flex gap-4 rounded-xl border border-sky-100 bg-sky-50 p-4 shadow-sm sm:p-5">
-      <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sky-500 text-white shadow-sm">
-        <TransferIcon />
-      </div>
-      <div className="min-w-0 flex-1">
+    <EventCard tone="transfer" icon={<TransferIcon />}>
         <p className="text-sm font-semibold text-slate-900">Transfer completed</p>
 
-        <div className="mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <div className="mt-2 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
           <TransferSide
-            managerName={a.proposerName}
+            auctionId={auctionId}
+            fromId={a.proposerId}
+            fromName={a.proposerName}
+            toId={a.recipientId}
+            toName={a.recipientName}
             players={a.proposerPlayers}
             cash={a.proposerCash}
           />
           <TransferSide
-            managerName={a.recipientName}
+            auctionId={auctionId}
+            fromId={a.recipientId}
+            fromName={a.recipientName}
+            toId={a.proposerId}
+            toName={a.proposerName}
             players={a.recipientPlayers}
             cash={a.recipientCash}
           />
@@ -195,17 +199,25 @@ function TransferCard({ a }: { a: TransferAnnouncement }) {
         <p className="mt-2 text-xs text-slate-400">
           <LocalTime iso={a.timestamp} />
         </p>
-      </div>
-    </div>
+    </EventCard>
   );
 }
 
+/** One direction of a completed transfer: "From → To" with players (position tags) and cash. */
 function TransferSide({
-  managerName,
+  auctionId,
+  fromId,
+  fromName,
+  toId,
+  toName,
   players,
   cash,
 }: {
-  managerName: string | null;
+  auctionId: number;
+  fromId: number | null;
+  fromName: string | null;
+  toId: number | null;
+  toName: string | null;
   players: PlayerMeta[];
   cash: number;
 }) {
@@ -214,19 +226,26 @@ function TransferSide({
   if (!hasPlayers && !hasCash) return null;
 
   return (
-    <div className="rounded-lg border border-sky-200 bg-white/70 px-3 py-2.5">
-      <p className="text-xs font-semibold text-sky-700">{managerName ?? "Unknown"} gave</p>
-      <ul className="mt-1 space-y-0.5">
+    <div className="rounded-xl border border-sky-200 bg-white/80 px-3 py-2.5">
+      <p className="flex flex-wrap items-center gap-x-1.5 text-xs font-semibold text-sky-800">
+        <ManagerLink auctionId={auctionId} managerId={fromId} name={fromName} />
+        <span aria-hidden className="text-sky-400">→</span>
+        <ManagerLink auctionId={auctionId} managerId={toId} name={toName} />
+      </p>
+      <ul className="mt-1.5 flex flex-wrap gap-1.5">
         {players.map((p) => (
-          <li key={p.player_id} className="text-sm text-slate-800">
-            {p.player_name ?? p.player_id}
-            {p.position && (
-              <span className="ml-1 text-xs text-slate-400">({p.position})</span>
-            )}
+          <li
+            key={p.player_id}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-2 py-1 text-sm text-slate-800"
+          >
+            <span className="font-medium">{p.player_name ?? p.player_id}</span>
+            {p.position && <PositionPill position={p.position} />}
           </li>
         ))}
         {hasCash && (
-          <li className="font-mono text-sm font-medium text-sky-700">£{cash}m cash</li>
+          <li className="inline-flex items-center rounded-lg border border-amber-200 bg-amber-50 px-2 py-1 font-mono text-sm font-semibold text-amber-900">
+            £{cash}m
+          </li>
         )}
       </ul>
     </div>

@@ -29,7 +29,10 @@ The page is **static on load** — data is fetched fresh every time the page is 
 
 - **Route:** `/auctions/[auctionId]/announcements`
 - **Button:** A dark "Announcements" button (with a newsreel icon) sits in the top-right of the auction header, alongside the Dashboard link and Refresh button. It is **not** a nav tab — it intentionally sits above the tab strip.
-- **Back button:** A `← Back` button at the top of the page content uses `router.back()` to return to wherever the user came from.
+- **No Back button / intro text** (removed Oct 2026 — the side menu covers navigation). Header card shows just "Announcements".
+- **Manager names link** to their Competitors – Bidding page (`/auctions/[id]/competitors/[auctionUserId]`); announcement data carries `buyerId` / `ownerId` / `proposerId` / `recipientId`.
+- **Position tags** use the shared position colours (`app/auctions/_components/position-theme.tsx`).
+- **Times** render on the viewer's device in its own time zone (`LocalTime`).
 
 ---
 

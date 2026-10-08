@@ -19,6 +19,7 @@ export type BuyAnnouncement = {
   playerName: string | null;
   playerPosition: string | null;
   buyerName: string | null;
+  buyerId: number | null;
   price: number;
 };
 
@@ -29,6 +30,7 @@ export type ReleaseAnnouncement = {
   playerName: string | null;
   playerPosition: string | null;
   ownerName: string | null;
+  ownerId: number | null;
   releaseType: "paid" | "free";
   purchasePrice: number;
   refundAmount: number;
@@ -40,6 +42,8 @@ export type TransferAnnouncement = {
   summary: string | null;
   proposerName: string | null;
   recipientName: string | null;
+  proposerId: number | null;
+  recipientId: number | null;
   proposerPlayers: PlayerMeta[];
   recipientPlayers: PlayerMeta[];
   proposerCash: number;
@@ -55,6 +59,7 @@ export type EliminationRelease = {
   playerName: string | null;
   playerPosition: string | null;
   ownerName: string | null;
+  ownerId: number | null;
   teamName: string;
   purchasePrice: number;
   refundAmount: number;
@@ -124,6 +129,7 @@ function buildBuyAnnouncements(
           playerName: player?.player_name ?? null,
           playerPosition: player?.position ?? null,
           buyerName: userById.get(winning.auction_user_id) ?? null,
+          buyerId: winning.auction_user_id ?? null,
           price: winning.amount,
         });
       }
@@ -140,6 +146,7 @@ function buildBuyAnnouncements(
         playerName: player?.player_name ?? null,
         playerPosition: player?.position ?? null,
         buyerName: userById.get(winning.auction_user_id) ?? null,
+        buyerId: winning.auction_user_id ?? null,
         price: winning.amount,
       });
     }
@@ -157,6 +164,7 @@ function buildBuyAnnouncements(
       playerName: player?.player_name ?? null,
       playerPosition: player?.position ?? null,
       buyerName: userById.get(team.auction_user_id) ?? null,
+      buyerId: team.auction_user_id ?? null,
       price: team.purchase_price,
     });
   }
@@ -304,6 +312,7 @@ export async function loadAnnouncements(auctionId: number): Promise<Announcement
       playerName: player?.player_name ?? null,
       playerPosition: player?.position ?? null,
       ownerName: userById.get(release.auction_user_id as number) ?? null,
+      ownerId: (release.auction_user_id as number) ?? null,
       releaseType: release.release_type as "paid" | "free",
       purchasePrice: release.purchase_price as number,
       refundAmount: release.refund_amount as number,
@@ -328,6 +337,8 @@ export async function loadAnnouncements(auctionId: number): Promise<Announcement
       summary: t.summary ?? null,
       proposerName: userById.get(t.proposer_id) ?? null,
       recipientName: userById.get(t.recipient_id) ?? null,
+      proposerId: (t.proposer_id as number) ?? null,
+      recipientId: (t.recipient_id as number) ?? null,
       proposerPlayers,
       recipientPlayers,
       proposerCash: t.proposer_cash ?? 0,
@@ -405,6 +416,7 @@ export async function loadEliminationReleases(auctionId: number): Promise<Elimin
       playerName: player?.player_name ?? null,
       playerPosition: player?.position ?? null,
       ownerName: userById.get(row.auction_user_id as number) ?? null,
+      ownerId: (row.auction_user_id as number) ?? null,
       teamName: row.team_name as string,
       purchasePrice: row.purchase_price as number,
       refundAmount: row.refund_amount as number,

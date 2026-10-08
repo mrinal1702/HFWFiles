@@ -1,14 +1,19 @@
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
+import { PositionPill } from "@/app/auctions/_components/position-theme";
 import type { EliminationRelease } from "@/lib/announcements";
+
+import { EventCard, ManagerLink } from "./announcement-parts";
 
 export function EliminationReleasesFeed({
   releases,
+  auctionId,
 }: {
   releases: EliminationRelease[];
+  auctionId: number;
 }) {
   if (releases.length === 0) {
     return (
-      <div className="rounded-xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+      <div className="rounded-2xl border border-dashed border-sky-200 bg-white p-6 text-center">
         <p className="text-sm text-slate-500">
           No elimination releases yet. When nations are knocked out of the World Cup, managers
           who owned their players receive half their purchase price back here.
@@ -30,7 +35,7 @@ export function EliminationReleasesFeed({
       <ol className="space-y-3">
         {releases.map((r) => (
           <li key={`${r.playerId}:${r.timestamp}:${r.ownerName}`}>
-            <EliminationReleaseCard release={r} />
+            <EliminationReleaseCard release={r} auctionId={auctionId} />
           </li>
         ))}
       </ol>
@@ -38,15 +43,11 @@ export function EliminationReleasesFeed({
   );
 }
 
-function EliminationReleaseCard({ release: r }: { release: EliminationRelease }) {
+function EliminationReleaseCard({ release: r, auctionId }: { release: EliminationRelease; auctionId: number }) {
   return (
-    <div className="flex gap-4 rounded-xl border border-rose-100 bg-rose-50 p-4 shadow-sm sm:p-5">
-      <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-500 text-white shadow-sm">
-        <EliminationIcon />
-      </div>
-      <div className="min-w-0 flex-1">
+    <EventCard tone="elimination" icon={<EliminationIcon />}>
         <p className="text-sm font-semibold text-slate-900">
-          <span className="text-rose-700">{r.ownerName ?? "Unknown"}</span>
+          <ManagerLink auctionId={auctionId} managerId={r.ownerId} name={r.ownerName} className="text-rose-700" />
           {" — "}
           <span className="font-semibold text-slate-900">{r.playerName ?? r.playerId}</span>
           <span className="font-normal text-slate-600"> ({r.teamName} eliminated)</span>
@@ -55,15 +56,16 @@ function EliminationReleaseCard({ release: r }: { release: EliminationRelease })
           <span className="font-mono text-rose-700">£{r.refundAmount}m</span>
           <span className="font-normal text-slate-600"> received back</span>
         </p>
-        <p className="mt-0.5 text-xs text-slate-500">
-          {r.playerPosition && <>{r.playerPosition} · </>}
-          originally bought for <span className="font-mono">£{r.purchasePrice}m</span>
+        <p className="mt-1.5 flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
+          {r.playerPosition && <PositionPill position={r.playerPosition} />}
+          <span>
+            originally bought for <span className="font-mono">£{r.purchasePrice}m</span>
+          </span>
         </p>
-        <p className="mt-1 text-xs text-slate-400">
+        <p className="mt-1.5 text-xs text-slate-400">
           <LocalTime iso={r.timestamp} />
         </p>
-      </div>
-    </div>
+    </EventCard>
   );
 }
 

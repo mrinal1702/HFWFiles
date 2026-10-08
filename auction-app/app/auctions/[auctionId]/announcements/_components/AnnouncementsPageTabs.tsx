@@ -17,16 +17,18 @@ const TABS: { id: PageTab; label: string }[] = [
 export function AnnouncementsPageTabs({
   announcements,
   eliminationReleases,
+  auctionId,
 }: {
   announcements: Announcement[];
   eliminationReleases: EliminationRelease[];
+  auctionId: number;
 }) {
   const [tab, setTab] = useState<PageTab>("activity");
 
   return (
     <div className="space-y-4">
       <div
-        className="flex flex-wrap gap-2 border-b border-slate-200 pb-3"
+        className="flex gap-1 overflow-x-auto rounded-xl border border-sky-100 bg-sky-50/60 p-1"
         role="tablist"
         aria-label="Announcements sections"
       >
@@ -42,8 +44,8 @@ export function AnnouncementsPageTabs({
               onClick={() => setTab(id)}
               className={
                 active
-                  ? "rounded-lg bg-slate-800 px-4 py-2 text-sm font-medium text-white shadow-sm"
-                  : "rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50"
+                  ? "flex-1 shrink-0 whitespace-nowrap rounded-lg bg-gradient-to-r from-sky-500 to-sky-700 px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-sky-200"
+                  : "flex-1 shrink-0 whitespace-nowrap rounded-lg px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-white hover:text-sky-800"
               }
             >
               {label}
@@ -55,11 +57,11 @@ export function AnnouncementsPageTabs({
 
       {tab === "activity" ? (
         <div role="tabpanel">
-          <AnnouncementsFeed announcements={announcements} />
+          <AnnouncementsFeed announcements={announcements} auctionId={auctionId} />
         </div>
       ) : (
         <div role="tabpanel">
-          <EliminationReleasesFeed releases={eliminationReleases} />
+          <EliminationReleasesFeed releases={eliminationReleases} auctionId={auctionId} />
         </div>
       )}
     </div>
