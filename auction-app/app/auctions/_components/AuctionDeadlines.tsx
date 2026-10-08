@@ -34,19 +34,33 @@ function DeadlineRow({
   label,
   iso,
   past,
+  next,
 }: {
   label: string;
   iso: string | null;
   past: boolean;
+  /** The next deadline still to come — highlighted. */
+  next: boolean;
 }) {
+  const tone = past
+    ? "border-amber-200 bg-amber-50/70"
+    : next
+      ? "border-sky-300 bg-gradient-to-br from-white to-sky-50 shadow-sm shadow-sky-100"
+      : "border-sky-100 bg-white";
   return (
-    <div className="min-w-0">
-      <dt className="font-medium text-slate-600">{label}</dt>
-      <dd
-        className={`mt-0.5 text-slate-700 sm:mt-0 ${past ? "font-medium text-amber-700" : ""}`}
+    <div
+      className={`relative min-w-0 overflow-hidden rounded-xl border px-3 py-2 max-sm:flex max-sm:items-baseline max-sm:justify-between max-sm:gap-3 ${tone}`}
+    >
+      {next && <span aria-hidden className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-sky-400 to-sky-600" />}
+      <dt
+        className={`shrink-0 text-[11px] font-semibold uppercase tracking-wide ${
+          past ? "text-amber-700" : next ? "text-sky-700" : "text-slate-500"
+        }`}
       >
-        {/* Inline on sm+ next to label; full-width line on mobile so the date isn't squeezed. */}
-        <span className="sm:ml-2">{formatDeadline(iso)}</span>
+        {label}
+      </dt>
+      <dd className={`text-right text-slate-800 sm:mt-0.5 sm:text-left ${past ? "text-amber-800" : ""}`}>
+        <span className={next ? "font-semibold" : "font-medium"}>{formatDeadline(iso)}</span>
         {past && <span className="ml-1 text-xs">(passed)</span>}
       </dd>
     </div>
@@ -77,23 +91,38 @@ export function AuctionDeadlines({ initiationDeadlineAt, raiseDeadlineAt, hardDe
   return (
     <div className="w-full min-w-0 space-y-2">
       {/*
-        Mobile: one full-width stack (label above value) — avoids the old squeezed
-        side-by-side column next to header actions. sm+: three columns, label + value inline.
+        Mobile: full-width tiles with label left / date right. sm+: three tiles side by side
+        (label above date). The next deadline still to come is highlighted.
       */}
-      <dl className="grid w-full grid-cols-1 gap-x-6 gap-y-2 text-sm sm:grid-cols-3 sm:gap-y-1 sm:[&>div]:flex sm:[&>div]:items-baseline sm:[&>div]:gap-0">
-        <DeadlineRow label="Initiation deadline" iso={initiationDeadlineAt} past={initiationPast} />
-        <DeadlineRow label="Raise deadline" iso={raiseDeadlineAt} past={raisePast} />
-        <DeadlineRow label="Hard deadline" iso={hardDeadlineAt} past={hardPast} />
+      <dl className="grid w-full grid-cols-1 gap-2 text-sm sm:grid-cols-3">
+        <DeadlineRow
+          label="Initiation deadline"
+          iso={initiationDeadlineAt}
+          past={initiationPast}
+          next={!initiationPast && !!initiationDeadlineAt}
+        />
+        <DeadlineRow
+          label="Raise deadline"
+          iso={raiseDeadlineAt}
+          past={raisePast}
+          next={initiationPast && !raisePast && !!raiseDeadlineAt}
+        />
+        <DeadlineRow
+          label="Hard deadline"
+          iso={hardDeadlineAt}
+          past={hardPast}
+          next={raisePast && !hardPast && !!hardDeadlineAt}
+        />
       </dl>
 
       {initiationPast && !raisePast && (
-        <p className="rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-xs text-sky-900">
+        <p className="rounded-xl border border-sky-200 bg-sky-50 px-3 py-2 text-xs text-sky-900">
           <span className="font-semibold">Initiation closed.</span> Players with no bids can no longer
           be opened — you can only raise on players already in play.
         </p>
       )}
       {raisePast && !hardPast && (
-        <p className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-950">
+        <p className="rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-950">
           <span className="font-semibold">Raise mode active.</span> Every bid must increase the
           current high by at least 5.
         </p>

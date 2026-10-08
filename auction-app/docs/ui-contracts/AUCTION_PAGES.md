@@ -28,7 +28,8 @@ added here — see [OPS_UI_SURFACES.md](../OPS_UI_SURFACES.md).
 ## Pages
 
 ### Bidding room — `/auctions/[id]/bidding-room`
-- Intro line ("You can see everyone's budgets, high bids, and rosters…") and a Refresh hint.
+- Heading **Bidding room** with an info icon (hover on desktop / tap on phone) explaining the page
+  (copy in `bidding-room/page.tsx`); no intro paragraph. Refresh hint above the list.
 - Tabs: **All players · Ongoing bids · Unsold (no bids) · Sold · Search player**.
 - **Filters & sort** panel (collapsed by default): club, position, status (All tab), bidder (Ongoing tab), **Sort**.
 - Table columns: **Player · Club · Pos · State · High bid · High bidder · Lot deadline · Bid**
@@ -40,7 +41,12 @@ added here — see [OPS_UI_SURFACES.md](../OPS_UI_SURFACES.md).
      `lib/auction-state/bid-ui-messages.ts`), then `player_id`.
   3. Sold: same secondary order as (2).
   Other sort options (deadline, bid high/low) override for manual analysis.
-- Sticky **Playing as / Remaining / Active** budget strip — **Bidding room and My team only**.
+- Player rows are separate cards tinted by position (GK / DEF / MID / FWD); the colour convention
+  lives in `POSITION_THEME` in `BiddingRoomClient.tsx`. Position tag and State pill stay.
+- Squad cap reached: Bid column reads **"You are at the squad limit"** + info icon
+  (`SQUAD_LIMIT_REASON` / `SQUAD_LIMIT_HELP` in `lib/auction-state/squad-limit.ts`).
+- Bid amount box never narrower than ~5.5rem and 16px text on phones (no iOS zoom-on-focus).
+- Sticky **Team Name / Remaining / Active** budget strip — **Bidding room and My team only**.
 - Player names link to the player page; after a bid the same row scrolls back into view.
 - Bid error copy is centralised in `lib/auction-state/bid-ui-messages.ts` + `auction-bid-gates.ts`.
 

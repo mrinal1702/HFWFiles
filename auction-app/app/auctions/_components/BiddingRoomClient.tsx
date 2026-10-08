@@ -52,12 +52,55 @@ function defaultSortTier(lot: EnrichedLot, biddingClosed: boolean): 0 | 1 | 2 {
 }
 
 const selectClass =
-  "min-h-9 w-full rounded-lg border border-slate-300 bg-white px-2.5 py-1.5 text-sm text-slate-900 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/25 sm:min-h-10 sm:px-3 sm:py-2";
+  "min-h-9 w-full rounded-xl border border-sky-100 bg-white px-2.5 py-1.5 text-sm text-slate-900 shadow-sm transition focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/15 sm:min-h-10 sm:px-3 sm:py-2";
+
+/** Soft tints per lot state (labels unchanged). */
+const STATUS_TONE: Record<string, { pill: string; dot: string; stripe: string }> = {
+  bidding: { pill: "border-sky-200 bg-sky-50 text-sky-800", dot: "bg-sky-500 animate-pulse", stripe: "bg-sky-500" },
+  uninitiated: { pill: "border-slate-200 bg-slate-50 text-slate-600", dot: "bg-slate-300", stripe: "bg-slate-200" },
+  sold: { pill: "border-emerald-200 bg-emerald-50 text-emerald-800", dot: "bg-emerald-500", stripe: "bg-emerald-400" },
+  unsold: { pill: "border-slate-200 bg-slate-100 text-slate-600", dot: "bg-slate-400", stripe: "bg-slate-300" },
+  closed_bidding_after_deadline: {
+    pill: "border-amber-200 bg-amber-50 text-amber-800",
+    dot: "bg-amber-500",
+    stripe: "bg-amber-400",
+  },
+};
+const statusTone = (status: string) => STATUS_TONE[status] ?? STATUS_TONE.uninitiated;
 
 function StatusBadge({ status }: { status: string }) {
+  const t = statusTone(status);
   return (
-    <span className="inline-flex max-w-[min(100%,12rem)] shrink-0 items-center rounded-full border border-sky-200 bg-sky-50 px-2 py-0.5 text-left text-[11px] font-medium leading-snug text-slate-800 sm:max-w-[min(100%,14rem)] sm:px-2.5 sm:py-1 sm:text-xs">
+    <span
+      className={`inline-flex max-w-[min(100%,12rem)] shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border px-2 py-0.5 text-left text-[11px] font-medium leading-snug sm:max-w-[min(100%,14rem)] sm:px-2.5 sm:py-1 sm:text-xs ${t.pill}`}
+    >
+      <span aria-hidden className={`h-1.5 w-1.5 shrink-0 rounded-full ${t.dot}`} />
       {statusLabel(status)}
+    </span>
+  );
+}
+
+/**
+ * Position colour convention — change colours here only.
+ * Index = positionSortRank: GK, DEF, MID, FWD, other.
+ * row = desktop table row, card = phone card, stripe = phone card left edge, pill = position tag.
+ */
+const POSITION_THEME = [
+  { row: "[&>td]:bg-amber-50 [&>td]:border-amber-200 [&>td:first-child]:border-l-amber-400", card: "bg-amber-50 border-amber-200", stripe: "bg-amber-400", pill: "bg-white text-amber-800 ring-amber-300" },
+  { row: "[&>td]:bg-sky-50 [&>td]:border-sky-200 [&>td:first-child]:border-l-sky-400", card: "bg-sky-50 border-sky-200", stripe: "bg-sky-400", pill: "bg-white text-sky-800 ring-sky-300" },
+  { row: "[&>td]:bg-emerald-50 [&>td]:border-emerald-200 [&>td:first-child]:border-l-emerald-400", card: "bg-emerald-50 border-emerald-200", stripe: "bg-emerald-400", pill: "bg-white text-emerald-800 ring-emerald-300" },
+  { row: "[&>td]:bg-violet-50 [&>td]:border-violet-200 [&>td:first-child]:border-l-violet-400", card: "bg-violet-50 border-violet-200", stripe: "bg-violet-400", pill: "bg-white text-violet-800 ring-violet-300" },
+  { row: "[&>td]:bg-slate-50 [&>td]:border-slate-200 [&>td:first-child]:border-l-slate-300", card: "bg-slate-50 border-slate-200", stripe: "bg-slate-300", pill: "bg-white text-slate-600 ring-slate-300" },
+];
+const positionTheme = (position: string | null) => POSITION_THEME[positionSortRank(position)];
+
+function PositionPill({ position }: { position: string | null }) {
+  if (!position) return <span className="text-slate-400">—</span>;
+  return (
+    <span
+      className={`inline-flex whitespace-nowrap rounded-md px-1.5 py-0.5 text-[11px] font-medium ring-1 sm:text-xs ${positionTheme(position).pill}`}
+    >
+      {position}
     </span>
   );
 }
@@ -279,16 +322,16 @@ export function BiddingRoomClient({
 
   return (
     <div className="space-y-3 sm:space-y-5">
-      <div className="-mx-1 flex gap-1.5 overflow-x-auto overflow-y-hidden px-1 pb-1 [scrollbar-width:thin] sm:gap-2">
+      <div className="flex gap-1 overflow-x-auto overflow-y-hidden rounded-xl border border-sky-100 bg-sky-50/60 p-1 [scrollbar-width:thin]">
         {TAB_DEFS.map(([k, label]) => (
           <button
             key={k}
             type="button"
             onClick={() => setTab(k)}
-            className={`shrink-0 rounded-md px-2.5 py-1.5 text-xs font-medium leading-tight sm:rounded-lg sm:px-4 sm:py-2 sm:text-sm ${
+            className={`shrink-0 rounded-lg px-2.5 py-1.5 text-xs font-medium leading-tight transition sm:px-4 sm:py-2 sm:text-sm ${
               tab === k
-                ? "bg-sky-600 text-white shadow-sm"
-                : "bg-slate-100 text-slate-800 hover:bg-sky-100"
+                ? "bg-gradient-to-r from-sky-500 to-sky-700 text-white shadow-sm shadow-sky-200"
+                : "text-slate-700 hover:bg-white hover:text-sky-800"
             }`}
           >
             {label}
@@ -297,7 +340,7 @@ export function BiddingRoomClient({
       </div>
 
       {tab === "search" ? (
-        <div className="rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
+        <div className="rounded-2xl border border-sky-100 bg-gradient-to-br from-white via-white to-sky-50 p-4 shadow-sm sm:p-5">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div className="min-w-0">
               <h3 className="text-base font-semibold text-slate-900 sm:text-lg">Search player</h3>
@@ -355,8 +398,8 @@ export function BiddingRoomClient({
                     <Link
                       href={playerHref(l.player_id)}
                       prefetch={false}
-                      className={`block rounded-xl border border-sky-100 px-4 py-3 shadow-sm ${
-                        i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
+                      className={`block rounded-xl border border-sky-100 px-4 py-3 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md ${
+                        i % 2 === 0 ? "bg-white" : "bg-sky-50/60"
                       }`}
                     >
                       <div className="flex items-start justify-between gap-3">
@@ -386,31 +429,45 @@ export function BiddingRoomClient({
       ) : (
         <>
           <div className="lg:hidden">
-        <details className="rounded-lg border border-sky-100 bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
+        <details className="group rounded-xl border border-sky-100 bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 text-sm font-medium text-slate-900 sm:py-2.5">
             <span>Filters &amp; sort</span>
-            <span className="text-xs font-normal text-slate-600">Tap to expand</span>
+            <span className="inline-flex items-center gap-1 text-xs font-normal text-slate-500">
+              Tap to expand
+              <svg
+                aria-hidden
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-4 w-4 text-sky-500 transition group-open:rotate-180"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.22 7.22a.75.75 0 0 1 1.06 0L10 10.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 8.28a.75.75 0 0 1 0-1.06Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </span>
           </summary>
-          <div className="border-t border-slate-200 px-4 pb-4 pt-3">{filterFields}</div>
+          <div className="border-t border-sky-100 px-4 pb-4 pt-3">{filterFields}</div>
         </details>
       </div>
 
       <div className="hidden lg:block">{filterFields}</div>
 
-      <p className="text-xs leading-relaxed text-slate-600">
-        High bids and timers update when anyone bids. After yours goes through, tap{" "}
-        <span className="font-medium text-slate-800">Refresh</span> at the top so you&apos;re looking at
-        the latest numbers.
+      <p className="text-xs leading-relaxed text-slate-500">
+        Winning bids and player deadlines update when a bid is placed. Hit the{" "}
+        <span className="font-medium text-slate-800">Refresh</span> button at the top to see the latest
+        bids.
       </p>
 
       {filtered.length === 0 ? (
-        <div className="rounded-lg border border-slate-200 bg-white px-4 py-10 text-center text-slate-600 shadow-sm">
+        <div className="rounded-2xl border border-dashed border-sky-200 bg-white px-4 py-10 text-center text-slate-500">
           No rows match this view.
         </div>
       ) : (
         <>
-          <div className="space-y-2 md:hidden">
-            {filtered.map((lot, i) => {
+          <div className="space-y-3 md:hidden">
+            {filtered.map((lot) => {
               const disabledReason = getBidDisabledReason(lot, gate);
               const minBid = nextMinimumBidAmount(lot.high_amount, lotRaiseModeActive(lot, gate));
               const highDisplay =
@@ -425,27 +482,30 @@ export function BiddingRoomClient({
                 <article
                   key={lot.player_id}
                   id={lotRowAnchorId(lot.player_id)}
-                  className={`scroll-mt-28 rounded-lg border border-sky-100 px-3 py-2.5 shadow-sm ${
-                    i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
-                  }`}
+                  className={`relative scroll-mt-28 overflow-hidden rounded-xl border py-2.5 pl-4 pr-3 shadow-sm ${positionTheme(lot.position).card}`}
                 >
+                  <span
+                    aria-hidden
+                    className={`absolute inset-y-0 left-0 w-1.5 ${positionTheme(lot.position).stripe}`}
+                  />
                   <div className="flex flex-wrap items-start justify-between gap-1.5 gap-y-2">
                     <div className="min-w-0 flex-1">
-                      <h3 className="text-sm font-medium leading-snug text-slate-900">
+                      <h3 className="text-sm font-semibold leading-snug text-slate-900">
                         <Link href={playerHref(lot.player_id)} prefetch={false} className="hover:underline">
                           {lot.player_name ?? `Player #${lot.player_id}`}
                         </Link>
                       </h3>
-                      <p className="mt-0.5 text-xs text-slate-600">
-                        {(lot.club ?? "—") + " · " + (lot.position ?? "—")}
+                      <p className="mt-1 flex flex-wrap items-center gap-1.5 text-xs text-slate-600">
+                        <span>{lot.club ?? "—"}</span>
+                        <PositionPill position={lot.position} />
                       </p>
                     </div>
                     <StatusBadge status={displayLotStatus(lot, gate.biddingClosed)} />
                   </div>
-                  <dl className="mt-2 space-y-1 text-xs">
+                  <dl className="mt-2 space-y-1 rounded-lg bg-white/80 px-2 py-1.5 text-xs ring-1 ring-black/5">
                     <div className="flex justify-between gap-2">
                       <dt className="text-slate-600">High bid</dt>
-                      <dd className="font-mono font-medium text-slate-900">{highDisplay}</dd>
+                      <dd className="font-mono text-sm font-semibold tabular-nums text-slate-900">{highDisplay}</dd>
                     </div>
                     <div className="flex justify-between gap-2">
                       <dt className="text-slate-600">High bidder</dt>
@@ -482,7 +542,7 @@ export function BiddingRoomClient({
                     )}
                   </dl>
                   {showBidCol && (
-                    <div className="mt-2 border-t border-slate-200 pt-2">
+                    <div className="mt-2 pt-1">
                       {lot.status === "sold" || lot.status === "unsold" || gate.biddingClosed ? (
                         <span className="text-xs text-slate-500">—</span>
                       ) : (
@@ -500,23 +560,23 @@ export function BiddingRoomClient({
             })}
           </div>
 
-          <div className="hidden overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm md:block">
-            <table className="w-full min-w-[44rem] border-collapse text-left text-sm lg:min-w-[56rem]">
-              <thead className="border-b border-slate-200 bg-sky-50 text-slate-700">
+          <div className="hidden overflow-x-auto md:block">
+            <table className="w-full min-w-[44rem] border-separate border-spacing-y-2 text-left text-sm lg:min-w-[56rem]">
+              <thead className="text-xs uppercase tracking-wide text-slate-500">
                 <tr>
-                  <th className="px-3 py-3 font-semibold">Player</th>
-                  <th className="px-3 py-3 font-semibold">Club</th>
-                  <th className="px-3 py-3 font-semibold">Pos</th>
-                  <th className="px-3 py-3 font-semibold">State</th>
-                  <th className="px-3 py-3 font-semibold">High bid</th>
-                  <th className="px-3 py-3 font-semibold">High bidder</th>
-                  {showDeadlineCol && <th className="px-3 py-3 font-semibold">Lot deadline</th>}
-                  {tab === "sold" && <th className="px-3 py-3 font-semibold">Sold at (local)</th>}
-                  {showBidCol && <th className="px-3 py-3 font-semibold">Bid</th>}
+                  <th className="px-3 py-2 font-semibold">Player</th>
+                  <th className="px-3 py-2 font-semibold">Club</th>
+                  <th className="px-3 py-2 font-semibold">Pos</th>
+                  <th className="px-3 py-2 font-semibold">State</th>
+                  <th className="px-3 py-2 font-semibold">High bid</th>
+                  <th className="px-3 py-2 font-semibold">High bidder</th>
+                  {showDeadlineCol && <th className="px-3 py-2 font-semibold">Lot deadline</th>}
+                  {tab === "sold" && <th className="px-3 py-2 font-semibold">Sold at (local)</th>}
+                  {showBidCol && <th className="px-3 py-2 font-semibold">Bid</th>}
                 </tr>
               </thead>
               <tbody>
-                {filtered.map((lot, i) => {
+                {filtered.map((lot) => {
                   const disabledReason = getBidDisabledReason(lot, gate);
                   const minBid = nextMinimumBidAmount(lot.high_amount, lotRaiseModeActive(lot, gate));
                   const highDisplay =
@@ -531,9 +591,9 @@ export function BiddingRoomClient({
                     <tr
                       key={lot.player_id}
                       id={lotRowAnchorId(lot.player_id)}
-                      className={`scroll-mt-28 border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
+                      className={`scroll-mt-28 [&>td]:border-y [&>td:first-child]:rounded-l-xl [&>td:first-child]:border-l-[6px] [&>td:last-child]:rounded-r-xl [&>td:last-child]:border-r ${positionTheme(lot.position).row}`}
                     >
-                      <td className="px-3 py-3 align-top text-slate-900">
+                      <td className="px-3 py-3 align-top font-medium text-slate-900">
                         <Link
                           href={playerHref(lot.player_id)}
                           prefetch={false}
@@ -545,11 +605,13 @@ export function BiddingRoomClient({
                       <td className="max-w-[10rem] truncate px-3 py-3 align-top text-slate-600">
                         {lot.club ?? "—"}
                       </td>
-                      <td className="px-3 py-3 align-top text-slate-600">{lot.position ?? "—"}</td>
-                      <td className="px-3 py-3 align-top text-slate-800">
-                        {statusLabel(displayLotStatus(lot, gate.biddingClosed))}
+                      <td className="px-3 py-3 align-top">
+                        <PositionPill position={lot.position} />
                       </td>
-                      <td className="px-3 py-3 align-top font-mono font-medium text-slate-900">
+                      <td className="px-3 py-3 align-top">
+                        <StatusBadge status={displayLotStatus(lot, gate.biddingClosed)} />
+                      </td>
+                      <td className="px-3 py-3 align-top font-mono text-base font-semibold tabular-nums text-slate-900">
                         {highDisplay}
                       </td>
                       <td className="px-3 py-3 align-top text-slate-600">
@@ -575,16 +637,19 @@ export function BiddingRoomClient({
                       {tab === "sold" && <td className="px-3 py-3 align-top text-xs text-slate-600">—</td>}
                       {showBidCol && (
                         <td className="px-3 py-3 align-top">
-                          {lot.status === "sold" || lot.status === "unsold" || gate.biddingClosed ? (
-                            <span className="text-xs text-slate-500">—</span>
-                          ) : (
-                            <BidRowForm
-                              auctionId={auctionId}
-                              playerId={lot.player_id}
-                              minBid={minBid}
-                              disabledReason={disabledReason}
-                            />
-                          )}
+                          {/* Width lives on a div, not the cell: Safari ignores min-width on table cells. */}
+                          <div className="min-w-[12.5rem]">
+                            {lot.status === "sold" || lot.status === "unsold" || gate.biddingClosed ? (
+                              <span className="text-xs text-slate-500">—</span>
+                            ) : (
+                              <BidRowForm
+                                auctionId={auctionId}
+                                playerId={lot.player_id}
+                                minBid={minBid}
+                                disabledReason={disabledReason}
+                              />
+                            )}
+                          </div>
                         </td>
                       )}
                     </tr>

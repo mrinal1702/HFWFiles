@@ -4,9 +4,11 @@ import { useActionState, useEffect } from "react";
 
 import { submitAuctionBidAction, type AuctionBidState } from "@/app/auctions/actions";
 import { restoreScrollAfterBid, saveScrollForCurrentLocation } from "@/app/auctions/_components/scroll-restore";
+import { InfoTip } from "@/app/_components/InfoTip";
+import { SQUAD_LIMIT_HELP, SQUAD_LIMIT_REASON } from "@/lib/auction-state/squad-limit";
 
 const input =
-  "min-h-9 w-full min-w-0 flex-1 rounded-lg border border-slate-300 bg-white px-2.5 py-1.5 text-sm text-slate-900 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/25 sm:min-h-10 sm:px-3 sm:py-2 md:max-w-[9rem]";
+  "min-h-10 w-full min-w-[5.5rem] flex-1 rounded-xl border border-sky-200 bg-white px-3 py-2 font-mono text-base tabular-nums sm:text-sm text-slate-900 shadow-sm transition placeholder:font-sans focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/15 sm:min-h-10 sm:px-3 sm:py-2 md:max-w-[9rem]";
 
 export function BidRowForm({
   auctionId,
@@ -30,7 +32,12 @@ export function BidRowForm({
   }, [state, playerId]);
 
   if (disabledReason) {
-    return <span className="text-xs leading-snug text-amber-800 sm:text-sm">{disabledReason}</span>;
+    return (
+      <span className="inline-flex items-center gap-1 rounded-lg border border-slate-200 bg-white/80 py-1 pl-2.5 pr-1 text-xs font-medium leading-snug text-slate-600">
+        {disabledReason}
+        {disabledReason === SQUAD_LIMIT_REASON && <InfoTip text={SQUAD_LIMIT_HELP} label="About the squad limit" />}
+      </span>
+    );
   }
 
   return (
@@ -38,7 +45,7 @@ export function BidRowForm({
       <form
         action={formAction}
         onSubmitCapture={() => saveScrollForCurrentLocation()}
-        className="flex flex-col gap-1.5 sm:flex-row sm:flex-wrap sm:items-stretch sm:gap-2"
+        className="flex flex-col gap-1.5 sm:flex-row sm:items-stretch sm:gap-2"
       >
         <input type="hidden" name="auction_id" value={auctionId} />
         <input type="hidden" name="player_id" value={playerId} />
@@ -55,7 +62,7 @@ export function BidRowForm({
         <button
           type="submit"
           disabled={pending}
-          className="min-h-9 shrink-0 rounded-lg bg-sky-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-sky-700 disabled:opacity-50 sm:min-h-10 sm:min-w-[5rem] sm:px-4 sm:py-2"
+          className="min-h-9 shrink-0 rounded-xl bg-gradient-to-r from-sky-500 to-sky-700 px-3 py-1.5 text-sm font-semibold text-white shadow-sm shadow-sky-200 transition hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 disabled:opacity-50 disabled:hover:translate-y-0 sm:min-h-10 sm:min-w-[5rem] sm:px-4 sm:py-2"
         >
           {pending ? "…" : "Bid"}
         </button>

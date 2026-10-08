@@ -64,7 +64,7 @@ export default async function AuctionLayout({
                 )}
                 <Link
                   href="/dashboard"
-                  className="text-sm font-medium text-sky-700 underline hover:text-sky-900"
+                  className="inline-flex min-h-10 items-center rounded-xl px-3 py-2 text-sm font-medium text-sky-700 transition hover:bg-sky-50 hover:text-sky-900 sm:min-h-9 sm:py-1.5"
                 >
                   Dashboard
                 </Link>

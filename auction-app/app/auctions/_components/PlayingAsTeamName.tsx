@@ -50,7 +50,7 @@ export function PlayingAsTeamName({ auctionId, participantName, teamName }: Prop
   return (
     <>
       <p className="text-sm text-slate-600">
-        Playing as{" "}
+        Team Name:{" "}
         <span className="font-medium text-slate-900">{displayLabel}</span>
         <button
           type="button"

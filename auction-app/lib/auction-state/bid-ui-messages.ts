@@ -17,7 +17,7 @@ const MESSAGES: Record<PlaceBidErrorCode, string> = {
     "Your raise isn't large enough. After the raise deadline, every bid must go up by at least 5 (for example: if the high bid is 17, you must bid 22 or more).",
   bidder_not_in_auction: "You need to be in this auction as a manager to bid.",
   roster_full:
-    "Your roster is full (18 players, including anyone you're currently winning a bid on).",
+    "You are at the squad limit — you cannot bid on more players while the players you own plus the players you hold the highest bid on total 18.",
   goalkeeper_cap: "You can only roster one goalkeeper.",
   outfield_cap: "You've hit the outfield player limit for your roster.",
   insufficient_active_budget:

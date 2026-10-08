@@ -1,6 +1,6 @@
 import { isGoalkeeperPosition } from "@/lib/auction-state/bid-ui-messages";
 import type { BidGateContext, EnrichedLot } from "@/lib/auction-types";
-import { SQUAD_LIMIT } from "@/lib/auction-state/squad-limit";
+import { SQUAD_LIMIT, SQUAD_LIMIT_REASON } from "@/lib/auction-state/squad-limit";
 
 export function lotRaiseModeActive(lot: EnrichedLot, ctx: BidGateContext): boolean {
   if (ctx.nationRollingMode) return lot.nation_raise_mode_active;
@@ -39,7 +39,7 @@ export function getBidDisabledReason(lot: EnrichedLot, ctx: BidGateContext): str
       return "The window for starting bids on new players has closed — you can still raise on players that are already in play.";
     }
     if (ctx.meRosterSlots >= SQUAD_LIMIT) {
-      return `Your roster is full (${SQUAD_LIMIT} players, including anyone you're currently winning a bid on).`;
+      return SQUAD_LIMIT_REASON;
     }
     if (isGoalkeeperPosition(lot.position) && ctx.meGkCount >= 1) {
       return "You can only roster one goalkeeper.";
