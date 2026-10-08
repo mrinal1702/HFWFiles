@@ -1,8 +1,10 @@
-import Link from "next/link";
-
-import { loadAuctionDashboardForViewer } from "@/lib/auction-state/auction-dashboard";
-import { LocalTime } from "@/app/auctions/_components/LocalTime";
+import { InfoTip } from "@/app/_components/InfoTip";
+import { LeadingBidsList } from "@/app/auctions/_components/LeadingBidsList";
 import { RosterSlotCounts } from "@/app/auctions/_components/RosterSlotCounts";
+import { loadAuctionDashboardForViewer } from "@/lib/auction-state/auction-dashboard";
+
+const BIDS_HELD_HELP =
+  'These are the bids on players you are currently winning. The players you already purchased appear on the "My team" page';
 
 export const dynamic = "force-dynamic";
 
@@ -14,6 +16,8 @@ export default async function BidsHeldPage({
   const { auctionId: raw } = await params;
   const d = await loadAuctionDashboardForViewer(Number(raw));
   const returnTo = `/auctions/${Number(raw)}/bids-held`;
+  const playerHref = (id: string) =>
+    `/auctions/${Number(raw)}/players/${id}?returnTo=${encodeURIComponent(returnTo)}`;
 
   if (!d.me) {
     return (
@@ -33,106 +37,36 @@ export default async function BidsHeldPage({
 
   return (
     <section className="space-y-4 sm:space-y-5">
-      <div className="rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
-        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Bids held</h2>
-        <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          Players you&apos;re winning right now. Another manager can still outbid you until the timer runs
-          out — and every bid ends when the auction deadline hits, no matter what. For players you&apos;ve
-          actually won, check <span className="font-medium text-slate-800">My team</span>.
-        </p>
-      </div>
-
-      <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm sm:p-5">
-        {d.biddingClosed ? (
-          <p className="text-sm text-slate-600">Bidding is over — there are no active bids to show here.</p>
-        ) : held.length === 0 ? (
-          <p className="text-sm text-slate-600">You&apos;re not winning any bids at the moment.</p>
-        ) : (
-          <>
-            <ul className="space-y-3 md:hidden">
-              {held.map((l, i) => (
-                <li
-                  key={l.player_id}
-                  className={`rounded-xl border border-sky-100 px-4 py-4 shadow-sm ${
-                    i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
-                  }`}
-                >
-                  <h3 className="text-base font-medium text-slate-900">
-                    <Link
-                      href={`/auctions/${Number(raw)}/players/${l.player_id}?returnTo=${encodeURIComponent(
-                        returnTo,
-                      )}`}
-                      className="hover:underline"
-                    >
-                      {l.player_name ?? "—"}
-                    </Link>
-                  </h3>
-                  <p className="mt-1 text-sm text-slate-600">
-                    {(l.club ?? "—") + " · " + (l.position ?? "—")}
-                  </p>
-                  <dl className="mt-3 space-y-2 text-sm">
-                    <div className="flex justify-between gap-3">
-                      <dt className="text-slate-600">Your bid</dt>
-                      <dd className="font-mono font-medium text-slate-900">{l.high_amount ?? "—"}</dd>
-                    </div>
-                    <div className="flex justify-between gap-3">
-                      <dt className="text-slate-600">Timer</dt>
-                      <dd className="max-w-[70%] text-right text-xs text-slate-600">
-                        <LocalTime iso={l.expires_at} />
-                      </dd>
-                    </div>
-                  </dl>
-                </li>
-              ))}
-            </ul>
-            <div className="hidden overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm md:block">
-              <table className="w-full min-w-[36rem] border-collapse text-left text-sm">
-                <thead className="border-b border-slate-200 bg-sky-50 text-slate-700">
-                  <tr>
-                    <th className="px-3 py-3 font-semibold">Player</th>
-                    <th className="px-3 py-3 font-semibold">Club</th>
-                    <th className="px-3 py-3 font-semibold">Pos</th>
-                    <th className="px-3 py-3 font-semibold">Your bid</th>
-                    <th className="px-3 py-3 font-semibold">Timer (local)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {held.map((l, i) => (
-                    <tr
-                      key={l.player_id}
-                      className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
-                    >
-                      <td className="px-3 py-3 text-slate-900">
-                        <Link
-                          href={`/auctions/${Number(raw)}/players/${l.player_id}?returnTo=${encodeURIComponent(
-                            returnTo,
-                          )}`}
-                          className="hover:underline"
-                        >
-                          {l.player_name ?? "—"}
-                        </Link>
-                      </td>
-                      <td className="px-3 py-3 text-slate-600">{l.club ?? "—"}</td>
-                      <td className="px-3 py-3 text-slate-600">{l.position ?? "—"}</td>
-                      <td className="px-3 py-3 font-mono font-medium text-slate-900">{l.high_amount ?? "—"}</td>
-                      <td className="px-3 py-3 text-xs text-slate-600">
-                        <LocalTime iso={l.expires_at} />
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+      <div className="relative overflow-hidden rounded-2xl border border-sky-100 bg-gradient-to-br from-white via-white to-sky-50 py-4 pl-5 pr-4 shadow-sm sm:py-5 sm:pl-6 sm:pr-5">
+        <span aria-hidden className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-sky-400 to-sky-600" />
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <span
+              aria-hidden
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-100 text-sky-700 ring-1 ring-sky-200 sm:h-11 sm:w-11"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 2m6-2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+            </span>
+            <div className="flex items-center gap-1.5">
+              <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Bids held</h2>
+              <InfoTip text={BIDS_HELD_HELP} label="About bids held" />
             </div>
-          </>
-        )}
-        <div className="mt-4 border-t border-slate-200 pt-4">
-          <RosterSlotCounts
-            owned={owned}
-            bidsHeld={held.length}
-            hideRemaining={d.biddingClosed}
-          />
+          </div>
+          <RosterSlotCounts owned={owned} bidsHeld={held.length} hideRemaining={d.biddingClosed} />
         </div>
       </div>
+
+      {(d.biddingClosed || held.length > 0) && (
+        <div className="rounded-2xl border border-sky-100 bg-white/70 p-3 shadow-sm sm:p-5">
+          {d.biddingClosed ? (
+            <p className="text-sm text-slate-600">Bidding is over — there are no active bids to show here.</p>
+          ) : (
+            <LeadingBidsList lots={held} playerHref={playerHref} bidLabel="Your bid" />
+          )}
+        </div>
+      )}
     </section>
   );
 }

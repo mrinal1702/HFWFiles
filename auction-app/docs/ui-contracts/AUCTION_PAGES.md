@@ -59,9 +59,10 @@ Budget strip, then a header card with stat tiles **Players purchased** and **Win
 Release buttons per OPS_RELEASES. Current bids live under Bids held, not here.
 
 ### Bids held — `/auctions/[id]/bids-held`
-Intro line, then my current high bids — columns **Player · Club · Pos · Your bid · Timer (local)** —
-or the empty state "You're not winning any bids at the moment.", plus slot counts
-**Players owned (n/18) · Bids held · Can still bid on**.
+Header card: **Bids held** + info icon (no intro paragraph) and slot counts
+**Players owned (n/18) · Bids held · Can still bid on**; then my current high bids as position-tinted
+cards (`LeadingBidsList`, shared with Competitors detail) — columns **Player · Club · Pos · Your bid ·
+Timer (local)** — nothing listed below the header when there are none.
 
 ### Competitors – Bidding — `/auctions/[id]/competitors` and `/competitors/[auctionUserId]`
 - List: heading with an info icon (no intro paragraph), then managers as separated cards — columns
