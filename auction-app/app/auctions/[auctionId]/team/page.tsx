@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { createAdminClient } from "@/lib/supabase-server";
 import { loadAuctionDashboardForViewer } from "@/lib/auction-state/auction-dashboard";
+import { POSITION_THEME, PositionPill } from "@/app/auctions/_components/position-theme";
 import { ReleaseButton } from "./_components/ReleaseButton";
 
 export const dynamic = "force-dynamic";
@@ -16,6 +17,14 @@ const SECTION_ORDER: Array<{ id: SectionId; label: string }> = [
   { id: "fwd", label: "Forwards" },
   { id: "other", label: "Other" },
 ];
+
+const SECTION_THEME: Record<SectionId, (typeof POSITION_THEME)[number]> = {
+  gk: POSITION_THEME[0],
+  def: POSITION_THEME[1],
+  mid: POSITION_THEME[2],
+  fwd: POSITION_THEME[3],
+  other: POSITION_THEME[4],
+};
 
 function sectionForPosition(position: string | null | undefined): SectionId {
   const p = (position ?? "").trim().toLowerCase();
@@ -63,6 +72,10 @@ export default async function MyTeamPage({
   const isRelegated = Boolean(d.me.is_relegated);
 
   const byPlayer = new Map(d.lots.map((l) => [l.player_id, l]));
+  // Same rule as Bids held: leading bids while bidding is open.
+  const bidsHeld = d.biddingClosed
+    ? 0
+    : d.lots.filter((l) => l.status === "bidding" && l.high_bidder_id === d.me!.id).length;
   const rows = (data ?? []).map((row) => {
     const r = row as TeamRow;
     return {
@@ -98,47 +111,70 @@ export default async function MyTeamPage({
 
   return (
     <section className="space-y-4 sm:space-y-5">
-      <div className="rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
-        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">My team</h2>
-        {isRelegated ? (
-          <p className="mt-2 text-sm leading-relaxed text-slate-600">
+      <div className="relative overflow-hidden rounded-2xl border border-sky-100 bg-gradient-to-br from-white via-white to-sky-50 py-4 pl-5 pr-4 shadow-sm sm:py-5 sm:pl-6 sm:pr-5">
+        <span aria-hidden className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-sky-400 to-sky-600" />
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <span
+              aria-hidden
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-100 text-sky-700 ring-1 ring-sky-200 sm:h-11 sm:w-11"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 3 4 5.5 2.5 10l3 1.2V21h13v-9.8l3-1.2L20 5.5 15 3a3 3 0 0 1-6 0Z"
+                />
+              </svg>
+            </span>
+            <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">My team</h2>
+          </div>
+          <div className="grid w-full grid-cols-2 gap-2 sm:flex sm:w-auto sm:gap-3">
+            <div className="min-w-0 rounded-xl bg-gradient-to-br from-sky-500 to-sky-700 px-3 py-1.5 text-white shadow-sm shadow-sky-200 sm:min-w-[9rem]">
+              <div className="text-[11px] font-medium uppercase tracking-wide text-sky-100">Players purchased</div>
+              <div className="font-mono text-lg font-semibold leading-tight tabular-nums">{rows.length}</div>
+            </div>
+            <div className="min-w-0 rounded-xl border border-sky-200 bg-white px-3 py-1.5 sm:min-w-[9rem]">
+              <div className="text-[11px] font-medium uppercase tracking-wide text-slate-500">Winning bids held</div>
+              <div className="font-mono text-lg font-semibold leading-tight tabular-nums text-slate-900">
+                {bidsHeld}
+              </div>
+            </div>
+          </div>
+        </div>
+        {isRelegated && (
+          <p className="mt-3 text-sm leading-relaxed text-slate-600">
             You were relegated after the standings cut. Your squad has been returned to the player pool and
             you cannot make transfers or place bids.
           </p>
-        ) : (
-          <p className="mt-2 text-sm leading-relaxed text-slate-600">
-            Your squad for this auction — everyone here is yours to keep. Still fighting for someone? They&apos;ll
-            show up under <span className="font-medium text-slate-800">Bids held</span> until the auction
-            wraps up.
-          </p>
         )}
-        <p className="mt-3 text-sm font-medium text-slate-800">
-          Players purchased:{" "}
-          <span className="font-mono text-base tabular-nums text-slate-900">{rows.length}</span>
-        </p>
       </div>
 
-      <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm sm:p-5">
+      <div className="rounded-2xl border border-sky-100 bg-white/70 p-3 shadow-sm sm:p-5">
         {rows.length === 0 ? (
           <p className="text-sm text-slate-600">No players on your roster yet.</p>
         ) : (
           <>
             <div className="space-y-4 md:hidden">
-              {grouped.map((group, groupIdx) => (
-                <div key={group.id} className={groupIdx > 0 ? "pt-2" : ""}>
-                  <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-700">
+              {grouped.map((group) => (
+                <div key={group.id}>
+                  <h3
+                    className={`inline-flex rounded-lg px-2.5 py-1 text-xs font-semibold uppercase tracking-wide ring-1 ${SECTION_THEME[group.id].heading}`}
+                  >
                     {group.label} ({group.rows.length})
                   </h3>
-                  <ul className="mt-2 space-y-3">
-                    {group.rows.map((t, i) => (
+                  <ul className="mt-2 space-y-2">
+                    {group.rows.map((t) => (
                       <li
                         key={`${group.id}-${t.player_id}`}
-                        className={`rounded-xl border border-sky-100 px-4 py-4 shadow-sm ${
-                          i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
-                        }`}
+                        className={`relative overflow-hidden rounded-xl border py-3 pl-4 pr-3 shadow-sm ${SECTION_THEME[group.id].card}`}
                       >
+                        <span
+                          aria-hidden
+                          className={`absolute inset-y-0 left-0 w-1.5 ${SECTION_THEME[group.id].stripe}`}
+                        />
                         <div className="flex flex-wrap items-baseline justify-between gap-2">
-                          <h4 className="text-base font-medium text-slate-900">
+                          <h4 className="text-base font-semibold text-slate-900">
                             <Link
                               href={`/auctions/${auctionId}/players/${t.player_id}?returnTo=${encodeURIComponent(
                                 returnTo,
@@ -149,7 +185,7 @@ export default async function MyTeamPage({
                             </Link>
                           </h4>
                           <div className="flex items-center gap-2">
-                            <span className="font-mono text-sm font-medium text-slate-900">
+                            <span className="font-mono text-base font-semibold tabular-nums text-slate-900">
                               {t.purchase_price}
                             </span>
                             <ReleaseButton
@@ -164,8 +200,9 @@ export default async function MyTeamPage({
                             />
                           </div>
                         </div>
-                        <p className="mt-1 text-sm text-slate-600">
-                          {(t.meta?.club ?? "—") + " · " + (t.meta?.position ?? "—")}
+                        <p className="mt-1 flex flex-wrap items-center gap-1.5 text-sm text-slate-600">
+                          <span>{t.meta?.club ?? "—"}</span>
+                          <PositionPill position={t.meta?.position} />
                         </p>
                       </li>
                     ))}
@@ -173,25 +210,25 @@ export default async function MyTeamPage({
                 </div>
               ))}
             </div>
-            <div className="hidden overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm md:block">
-              <table className="w-full min-w-[28rem] border-collapse text-left text-sm">
-                <thead className="border-b border-slate-200 bg-sky-50 text-slate-700">
+            <div className="hidden overflow-x-auto md:block">
+              <table className="w-full min-w-[28rem] border-separate border-spacing-y-1.5 text-left text-sm">
+                <thead className="text-xs uppercase tracking-wide text-slate-500">
                   <tr>
-                    <th className="px-3 py-3 font-semibold">Player</th>
-                    <th className="px-3 py-3 font-semibold">Club</th>
-                    <th className="px-3 py-3 font-semibold">Pos</th>
-                    <th className="px-3 py-3 font-semibold">Price</th>
-                    <th className="px-3 py-3 font-semibold"></th>
+                    <th className="px-3 py-2 font-semibold">Player</th>
+                    <th className="px-3 py-2 font-semibold">Club</th>
+                    <th className="px-3 py-2 font-semibold">Pos</th>
+                    <th className="px-3 py-2 font-semibold">Price</th>
+                    <th className="px-3 py-2 font-semibold"></th>
                   </tr>
                 </thead>
                 <tbody>
                   {grouped.flatMap((group, groupIdx) => {
-                    const rowsForGroup = group.rows.map((t, i) => (
+                    const rowsForGroup = group.rows.map((t) => (
                       <tr
                         key={`${group.id}-${t.player_id}`}
-                        className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/50" : "bg-white"}`}
+                        className={`[&>td]:border-y [&>td:first-child]:rounded-l-xl [&>td:first-child]:border-l-[6px] [&>td:last-child]:rounded-r-xl [&>td:last-child]:border-r ${SECTION_THEME[group.id].row}`}
                       >
-                        <td className="px-3 py-3 text-slate-900">
+                        <td className="px-3 py-2.5 font-medium text-slate-900">
                           <Link
                             href={`/auctions/${auctionId}/players/${t.player_id}?returnTo=${encodeURIComponent(
                               returnTo,
@@ -201,10 +238,14 @@ export default async function MyTeamPage({
                             {t.meta?.player_name ?? "—"}
                           </Link>
                         </td>
-                        <td className="px-3 py-3 text-slate-600">{t.meta?.club ?? "—"}</td>
-                        <td className="px-3 py-3 text-slate-600">{t.meta?.position ?? "—"}</td>
-                        <td className="px-3 py-3 font-mono font-medium text-slate-900">{t.purchase_price}</td>
-                        <td className="px-3 py-3">
+                        <td className="px-3 py-2.5 text-slate-600">{t.meta?.club ?? "—"}</td>
+                        <td className="px-3 py-2.5">
+                          <PositionPill position={t.meta?.position} />
+                        </td>
+                        <td className="px-3 py-2.5 font-mono text-base font-semibold tabular-nums text-slate-900">
+                          {t.purchase_price}
+                        </td>
+                        <td className="px-3 py-2.5 text-right">
                           <ReleaseButton
                             auctionId={auctionId}
                             playerId={t.player_id}
@@ -219,12 +260,13 @@ export default async function MyTeamPage({
                       </tr>
                     ));
                     return [
-                      <tr
-                        key={`${group.id}-header`}
-                        className={groupIdx === 0 ? "bg-slate-100/70" : "border-t-2 border-slate-200 bg-slate-100/70"}
-                      >
-                        <td colSpan={5} className="px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-700">
-                          {group.label} ({group.rows.length})
+                      <tr key={`${group.id}-header`}>
+                        <td colSpan={5} className={`px-1 pb-0.5 ${groupIdx === 0 ? "pt-0" : "pt-3"}`}>
+                          <span
+                            className={`inline-flex rounded-lg px-2.5 py-1 text-xs font-semibold uppercase tracking-wide ring-1 ${SECTION_THEME[group.id].heading}`}
+                          >
+                            {group.label} ({group.rows.length})
+                          </span>
                         </td>
                       </tr>,
                       ...rowsForGroup,

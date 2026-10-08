@@ -11,6 +11,7 @@ import { nextMinimumBidAmount, positionSortRank } from "@/lib/auction-state/bid-
 import type { BidGateContext, EnrichedLot } from "@/lib/auction-types";
 
 import { BidRowForm } from "./BidRowForm";
+import { PositionPill, positionTheme } from "./position-theme";
 import { LocalTime } from "./LocalTime";
 
 type Tab = "all" | "ongoing" | "unsold" | "sold" | "search";
@@ -80,30 +81,6 @@ function StatusBadge({ status }: { status: string }) {
   );
 }
 
-/**
- * Position colour convention — change colours here only.
- * Index = positionSortRank: GK, DEF, MID, FWD, other.
- * row = desktop table row, card = phone card, stripe = phone card left edge, pill = position tag.
- */
-const POSITION_THEME = [
-  { row: "[&>td]:bg-amber-50 [&>td]:border-amber-200 [&>td:first-child]:border-l-amber-400", card: "bg-amber-50 border-amber-200", stripe: "bg-amber-400", pill: "bg-white text-amber-800 ring-amber-300" },
-  { row: "[&>td]:bg-sky-50 [&>td]:border-sky-200 [&>td:first-child]:border-l-sky-400", card: "bg-sky-50 border-sky-200", stripe: "bg-sky-400", pill: "bg-white text-sky-800 ring-sky-300" },
-  { row: "[&>td]:bg-emerald-50 [&>td]:border-emerald-200 [&>td:first-child]:border-l-emerald-400", card: "bg-emerald-50 border-emerald-200", stripe: "bg-emerald-400", pill: "bg-white text-emerald-800 ring-emerald-300" },
-  { row: "[&>td]:bg-violet-50 [&>td]:border-violet-200 [&>td:first-child]:border-l-violet-400", card: "bg-violet-50 border-violet-200", stripe: "bg-violet-400", pill: "bg-white text-violet-800 ring-violet-300" },
-  { row: "[&>td]:bg-slate-50 [&>td]:border-slate-200 [&>td:first-child]:border-l-slate-300", card: "bg-slate-50 border-slate-200", stripe: "bg-slate-300", pill: "bg-white text-slate-600 ring-slate-300" },
-];
-const positionTheme = (position: string | null) => POSITION_THEME[positionSortRank(position)];
-
-function PositionPill({ position }: { position: string | null }) {
-  if (!position) return <span className="text-slate-400">—</span>;
-  return (
-    <span
-      className={`inline-flex whitespace-nowrap rounded-md px-1.5 py-0.5 text-[11px] font-medium ring-1 sm:text-xs ${positionTheme(position).pill}`}
-    >
-      {position}
-    </span>
-  );
-}
 
 const TAB_DEFS = [
   ["all", "All players"],

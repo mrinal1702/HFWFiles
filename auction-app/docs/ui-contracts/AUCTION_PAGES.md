@@ -42,7 +42,7 @@ added here — see [OPS_UI_SURFACES.md](../OPS_UI_SURFACES.md).
   3. Sold: same secondary order as (2).
   Other sort options (deadline, bid high/low) override for manual analysis.
 - Player rows are separate cards tinted by position (GK / DEF / MID / FWD); the colour convention
-  lives in `POSITION_THEME` in `BiddingRoomClient.tsx`. Position tag and State pill stay.
+  lives in `POSITION_THEME` in `app/auctions/_components/position-theme.tsx` (shared with My team). Position tag and State pill stay.
 - Squad cap reached: Bid column reads **"You are at the squad limit"** + info icon
   (`SQUAD_LIMIT_REASON` / `SQUAD_LIMIT_HELP` in `lib/auction-state/squad-limit.ts`).
 - Bid amount box never narrower than ~5.5rem and 16px text on phones (no iOS zoom-on-focus).
@@ -52,8 +52,10 @@ added here — see [OPS_UI_SURFACES.md](../OPS_UI_SURFACES.md).
 - Bid error copy is centralised in `lib/auction-state/bid-ui-messages.ts` + `auction-bid-gates.ts`.
 
 ### My team — `/auctions/[id]/team`
-Budget strip, intro line, **Players purchased: N**, then the current owned squad grouped by
-position (Goalkeepers / Defenders / Midfielders / Forwards). Columns: **Player · Club · Pos · Price · Release**.
+Budget strip, then a header card with stat tiles **Players purchased** and **Winning bids held**
+(same rule as Bids held; no intro paragraph), then the current owned squad grouped by position
+(Goalkeepers / Defenders / Midfielders / Forwards, with counts) as separated cards tinted by position
+(shared `app/auctions/_components/position-theme.tsx`). Columns: **Player · Club · Pos · Price · Release**.
 Release buttons per OPS_RELEASES. Current bids live under Bids held, not here.
 
 ### Bids held — `/auctions/[id]/bids-held`
