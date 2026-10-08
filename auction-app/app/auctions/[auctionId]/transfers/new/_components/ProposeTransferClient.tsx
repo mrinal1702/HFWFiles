@@ -3,7 +3,9 @@
 import { useActionState, useState } from "react";
 import { useRouter } from "next/navigation";
 
+import { InfoTip } from "@/app/_components/InfoTip";
 import { proposeTransferAction, type TransferActionState } from "@/app/auctions/[auctionId]/transfers/actions";
+import { TRANSFER_HELP } from "@/lib/auction-state/transfer-messages";
 
 type SquadPlayer = {
   player_id: string;
@@ -95,7 +97,10 @@ export function ProposeTransferClient({
               ← Transfer Room
             </a>
           </div>
-          <h2 className="mt-3 text-lg font-semibold text-slate-900">Who do you want to deal with?</h2>
+          <div className="mt-3 flex items-center gap-1.5">
+            <h2 className="text-lg font-semibold text-slate-900">Who do you want to deal with?</h2>
+            <InfoTip text={TRANSFER_HELP} label="How transfers work" wide />
+          </div>
           <p className="mt-1 text-sm text-slate-500">
             Agree terms first, then formalise the deal here. Select a manager to continue.
           </p>
@@ -125,11 +130,11 @@ export function ProposeTransferClient({
                 </div>
                 <div className="mt-3 flex gap-5 border-t border-slate-100 pt-3">
                   <div>
-                    <p className="text-xs text-slate-400">Total budget</p>
+                    <p className="text-xs text-slate-400">Remaining</p>
                     <p className="text-sm font-bold text-slate-800">£{team.budget_remaining}m</p>
                   </div>
                   <div>
-                    <p className="text-xs text-slate-400">Available</p>
+                    <p className="text-xs text-slate-400">Disposable</p>
                     <p className="text-sm font-bold text-sky-600">£{team.active_budget}m</p>
                   </div>
                 </div>
@@ -165,10 +170,12 @@ export function ProposeTransferClient({
           </button>
           <span className="text-slate-400">/</span>
           <span className="font-medium text-slate-700">Deal with {selectedTeam.name}</span>
+          <InfoTip text={TRANSFER_HELP} label="How transfers work" wide />
         </div>
         <p className="mt-2 text-sm text-slate-500">
-          Select players from your squad and/or add cash to build your offer. The other manager
-          will respond with what they want in return.
+          Select the players and type in the cash amount <strong className="text-slate-700">YOU</strong> want
+          to offer. {selectedTeam.name ?? "The other manager"} will respond with their offer and both of you
+          will get a chance to confirm the deal.
         </p>
       </div>
 
@@ -344,7 +351,7 @@ export function ProposeTransferClient({
             </div>
           ) : (
             <p className="mb-4 text-sm italic text-slate-400">
-              Select players from your squad and/or add cash to build your offer.
+              Select the players and type in the cash amount you want to offer.
             </p>
           )}
 
@@ -390,11 +397,11 @@ function BudgetCard({
       <div className="flex gap-4">
         <div>
           <p className="text-base font-bold text-slate-800">£{total}m</p>
-          <p className="text-xs text-slate-400">total</p>
+          <p className="text-xs text-slate-400">Remaining</p>
         </div>
         <div>
           <p className="text-base font-bold text-sky-600">£{available}m</p>
-          <p className="text-xs text-slate-400">available</p>
+          <p className="text-xs text-slate-400">Disposable</p>
         </div>
       </div>
     </div>

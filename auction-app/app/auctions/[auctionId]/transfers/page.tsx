@@ -1,13 +1,14 @@
 import Link from "next/link";
 
 import { TransferCard } from "@/app/auctions/[auctionId]/transfers/_components/TransferCard";
-import { LocalTime } from "@/app/auctions/_components/LocalTime";
+import { InfoTip } from "@/app/_components/InfoTip";
+import { TransferHistoryCard } from "@/app/auctions/[auctionId]/transfers/_components/TransferHistoryCard";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadAuctionDashboardForViewer } from "@/lib/auction-state/auction-dashboard";
 import { createAdminClient } from "@/lib/supabase-server";
-import { transferStatusColor, transferStatusLabel } from "@/lib/auction-state/transfer-messages";
 import { resolveAuctionCompetitionId } from "@/lib/players-query";
 import { loadTransfersForAuction, voidExpiredTransfers } from "@/lib/auction-state/transfers";
+import { TRANSFER_HELP } from "@/lib/auction-state/transfer-messages";
 
 export const dynamic = "force-dynamic";
 
@@ -131,6 +132,7 @@ export default async function TransfersPage({
         <div>
           <div className="flex items-center gap-2">
             <h2 className="text-lg font-semibold text-slate-900">Transfer Room</h2>
+            <InfoTip text={TRANSFER_HELP} label="How transfers work" wide />
             <span className="inline-flex items-center rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-800">
               Window open
             </span>
@@ -203,35 +205,13 @@ export default async function TransfersPage({
             <p className="text-sm text-slate-500">No completed transfers yet.</p>
           </div>
         ) : (
-          <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
-            <ul className="divide-y divide-slate-100">
-              {visibleHistory.map((t) => (
-                <li key={t.id} className="px-4 py-3 sm:px-5">
-                  <div className="flex flex-wrap items-start justify-between gap-2">
-                    <div className="min-w-0 flex-1">
-                      {t.summary ? (
-                        <p className="text-sm text-slate-800">{t.summary}</p>
-                      ) : (
-                        <p className="text-sm text-slate-800">
-                          <span className="font-medium">{t.proposer_name ?? "—"}</span>
-                          {" ↔ "}
-                          <span className="font-medium">{t.recipient_name ?? "—"}</span>
-                        </p>
-                      )}
-                      <p className="mt-0.5 text-xs text-slate-400">
-                        <LocalTime iso={t.completed_at ?? t.created_at} />
-                      </p>
-                    </div>
-                    <span
-                      className={`inline-flex shrink-0 items-center rounded-full px-2 py-0.5 text-xs font-medium ${transferStatusColor(t.status)}`}
-                    >
-                      {transferStatusLabel(t.status)}
-                    </span>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="space-y-3">
+            {visibleHistory.map((t) => (
+              <li key={t.id}>
+                <TransferHistoryCard transfer={t} meId={meId} />
+              </li>
+            ))}
+          </ul>
         )}
       </div>
     </section>

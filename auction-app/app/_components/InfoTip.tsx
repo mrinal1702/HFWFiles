@@ -5,13 +5,24 @@ import { createPortal } from "react-dom";
 
 const MARGIN = 12;
 const WIDTH = 288;
+const WIDE = 384;
 
 /**
  * Small "i" icon with an explanation bubble.
  * Laptop/desktop: opens on hover (and click pins it). Phone/tablet: tap to open, tap anywhere to close.
  * The bubble is portalled to <body> so table scroll areas and the mobile zoom wrapper never clip it.
  */
-export function InfoTip({ text, label = "More info" }: { text: string; label?: string }) {
+export function InfoTip({
+  text,
+  label = "More info",
+  wide = false,
+}: {
+  text: string;
+  label?: string;
+  /** Wider bubble for long, multi-line help. */
+  wide?: boolean;
+}) {
+  const maxWidth = wide ? WIDE : WIDTH;
   const id = useId();
   const btnRef = useRef<HTMLButtonElement>(null);
   const [hovered, setHovered] = useState(false);
@@ -23,11 +34,12 @@ export function InfoTip({ text, label = "More info" }: { text: string; label?: s
     const b = btnRef.current?.getBoundingClientRect();
     if (!b) return;
     const vw = window.innerWidth;
-    const width = Math.min(WIDTH, vw - MARGIN * 2);
+    const width = Math.min(maxWidth, vw - MARGIN * 2);
     const left = Math.min(Math.max(b.left + b.width / 2 - width / 2, MARGIN), vw - width - MARGIN);
-    const above = b.bottom + 160 > window.innerHeight && b.top > 160;
+    const room = wide ? 320 : 160;
+    const above = b.bottom + room > window.innerHeight && b.top > room;
     setPos({ top: above ? b.top - 8 : b.bottom + 8, left, above });
-  }, []);
+  }, [maxWidth, wide]);
 
   useEffect(() => {
     if (!open) return;
@@ -89,7 +101,7 @@ export function InfoTip({ text, label = "More info" }: { text: string; label?: s
               position: "fixed",
               top: pos.top,
               left: pos.left,
-              width: Math.min(WIDTH, window.innerWidth - MARGIN * 2),
+              width: Math.min(maxWidth, window.innerWidth - MARGIN * 2),
               transform: pos.above ? "translateY(-100%)" : undefined,
             }}
             className="z-50 whitespace-pre-line rounded-xl border border-sky-100 bg-white px-3.5 py-2.5 text-[13px] font-normal normal-case leading-relaxed tracking-normal text-slate-700 shadow-lg shadow-sky-100"

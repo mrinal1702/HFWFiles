@@ -330,11 +330,11 @@ function BudgetCard({
       <div className="flex gap-4">
         <div>
           <p className="text-base font-bold text-slate-800">£{total}m</p>
-          <p className="text-xs text-slate-400">total</p>
+          <p className="text-xs text-slate-400">Remaining</p>
         </div>
         <div>
           <p className="text-base font-bold text-sky-600">£{available}m</p>
-          <p className="text-xs text-slate-400">available</p>
+          <p className="text-xs text-slate-400">Disposable</p>
         </div>
       </div>
     </div>

@@ -119,7 +119,7 @@ When the window is open, transfers are split into three sections:
    - Your outgoing proposals
    - Deals where you've confirmed but the other party hasn't
 
-3. **Transfer history** — completed, rejected, and cancelled transfers (your own; admin sees all)
+3. **Transfer history** — completed, rejected, and cancelled transfers (your own; admin sees all). Each card shows two legs built from the stored player ids + cash (viewer first: "Me → Them" then "Them → Me"); the DB `summary` text is not shown because it can omit players (`TransferHistoryCard.tsx`).
 
 ---
 

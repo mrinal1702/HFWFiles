@@ -84,3 +84,12 @@ export function transferStatusColor(status: string): string {
       return "bg-slate-100 text-slate-700";
   }
 }
+
+/** Transfer Room info icon (Transfer Room, manager picker, deal builder). */
+export const TRANSFER_HELP = `Transfers require the following conditions to be met:
+1) Click the propose a deal button and choose the manager to deal with. Offer your end of the bargain.
+2) The manager then offers their end of the bargain to you.
+3) You see the manager's offer, and if you like it, you sign the contract by confirming.
+4) The other manager signs the contract as well by confirming. The order of who signs the contract first does not matter.
+5) A quick check is run to make sure no squad or budget rules are violated when performing the contracted transfer. If a rule is violated, the transfer is canceled.
+6) Sometimes your admin might turn on admin permission for a transfer. In that case, the transfer will only go through when the admin approves.`;
