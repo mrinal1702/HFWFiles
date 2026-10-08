@@ -82,6 +82,15 @@ This index maps **every object that exists in the live database** to the **one f
 
 ---
 
+## Access control (Oct 2026)
+
+[`security-lockdown.sql`](./security-lockdown.sql) — RLS on (no policies) for every public table except
+`profiles`; score views `security_invoker`; EXECUTE on public functions for `service_role` only.
+The app reaches these only via the service-role key. Undo: [`security-lockdown-rollback.sql`](./security-lockdown-rollback.sql).
+New tables must `enable row level security` too.
+
+---
+
 ## Superseded copies (do not run)
 
 Each object below is **not** what's live; the live version is in the canonical file named.
