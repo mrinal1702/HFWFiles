@@ -53,7 +53,7 @@ Removed / parked: large Match Scores card; Meme Builds entry (routes may still e
 | Area | Notes |
 |------|--------|
 | Header | Auction name; deadlines (full width); Dashboard / Announcements / Refresh |
-| **Side menu** | Thin left rail (desktop) or floating menu button (mobile) + overlay drawer (`AuctionSideNav`): Bidding room (+ Fixtures modal when configured), My team, Announcements, Competitors – Bidding, Bids held, Transfer Room, Match scores, Leaderboard |
+| **Side menu** | Navy (`slate-900`) with white text so it reads as a menu (Oct 2026): thin left rail with "☰ MENU" (desktop) or a navy "☰ MENU" pill (mobile; content `pt-16` keeps the title clear) + navy overlay drawer (`AuctionSideNav`): Bidding room (+ Fixtures modal when configured), My team, Announcements, Competitors – Bidding, Bids held, Transfer Room, Match scores, Leaderboard |
 | **Bidding room** | Lot list, filters, deadlines, bid forms; sticky Team Name + Remaining / Disposable budgets (**Bidding room and My team only**) |
 | **My Team** | Squad + release buttons |
 | **Bids held** | Current high bids |

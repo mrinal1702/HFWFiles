@@ -48,7 +48,7 @@ export default async function AuctionLayout({
     <div className="flex min-h-0 flex-1">
       <AuctionSideNav auctionId={auctionId} />
       {/* Mobile: full-width + compact scale. sm+: leave room for the thin left rail. */}
-      <div className="auction-mobile-compact mx-auto min-w-0 max-w-6xl flex-1 px-3 pb-4 pt-12 sm:px-6 sm:py-6 sm:pl-[calc(3rem+1.5rem)]">
+      <div className="auction-mobile-compact mx-auto min-w-0 max-w-6xl flex-1 px-3 pb-4 pt-16 sm:px-6 sm:py-6 sm:pl-[calc(3rem+1.5rem)]">
         <header className="mb-5 space-y-4 sm:mb-6">
           <div className="flex flex-col gap-3">
             <div className="flex flex-wrap items-start justify-between gap-2">

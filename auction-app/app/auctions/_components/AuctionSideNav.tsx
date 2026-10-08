@@ -27,10 +27,11 @@ function isActive(pathname: string, href: string, match: "exact" | "prefix", auc
   return pathname === href;
 }
 
+// Navy menu (rail, phone button, drawer) with white text so the menu stands out.
 const navItemClass =
-  "flex w-full items-center rounded-md px-3 py-2.5 text-left text-sm font-medium leading-tight text-slate-700 hover:bg-sky-50 hover:text-sky-900";
+  "flex w-full items-center rounded-lg px-3 py-2.5 text-left text-sm font-medium leading-tight text-slate-200 transition hover:bg-white/10 hover:text-white";
 const navItemActiveClass =
-  "flex w-full items-center rounded-md bg-sky-600 px-3 py-2.5 text-left text-sm font-semibold leading-tight text-white shadow-sm";
+  "flex w-full items-center rounded-lg bg-gradient-to-r from-sky-500 to-sky-600 px-3 py-2.5 text-left text-sm font-semibold leading-tight text-white shadow-sm";
 
 export function AuctionSideNav({ auctionId }: { auctionId: number }) {
   const pathname = usePathname();
@@ -61,7 +62,7 @@ export function AuctionSideNav({ auctionId }: { auctionId: number }) {
   const menuButton = (
     <button
       type="button"
-      className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-700 hover:bg-sky-50 hover:text-sky-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
+      className="flex h-10 flex-row items-center justify-center gap-1.5 rounded-lg px-3 text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 sm:h-auto sm:flex-col sm:gap-0.5 sm:px-1.5 sm:py-1.5"
       aria-expanded={open}
       aria-controls={panelId}
       onClick={() => setOpen(true)}
@@ -74,6 +75,9 @@ export function AuctionSideNav({ auctionId }: { auctionId: number }) {
           clipRule="evenodd"
         />
       </svg>
+      <span aria-hidden className="text-[10px] font-semibold uppercase tracking-wide">
+        Menu
+      </span>
     </button>
   );
 
@@ -84,13 +88,13 @@ export function AuctionSideNav({ auctionId }: { auctionId: number }) {
         bidding room feel narrow / zoomed-in). sm+: thin left rail as before.
       */}
       <div
-        className="fixed left-2 top-[max(0.5rem,env(safe-area-inset-top))] z-30 rounded-lg border border-slate-200 bg-white/95 shadow-sm backdrop-blur-sm sm:hidden"
+        className="fixed left-2 top-[max(0.5rem,env(safe-area-inset-top))] z-30 rounded-xl bg-slate-900 shadow-lg shadow-slate-900/30 sm:hidden"
         aria-label="Auction menu"
       >
         {menuButton}
       </div>
       <aside
-        className="fixed inset-y-0 left-0 z-30 hidden w-12 flex-col border-r border-slate-200 bg-white pt-[max(0.75rem,env(safe-area-inset-top))] sm:flex"
+        className="fixed inset-y-0 left-0 z-30 hidden w-12 flex-col bg-slate-900 pt-[max(0.75rem,env(safe-area-inset-top))] shadow-lg shadow-slate-900/20 sm:flex"
         aria-label="Auction menu rail"
       >
         <div className="mx-auto">{menuButton}</div>
@@ -107,14 +111,14 @@ export function AuctionSideNav({ auctionId }: { auctionId: number }) {
           />
           <nav
             id={panelId}
-            className="absolute inset-y-0 left-0 flex w-[min(18rem,calc(100vw-2.5rem))] flex-col border-r border-slate-200 bg-white shadow-xl"
+            className="absolute inset-y-0 left-0 flex w-[min(18rem,calc(100vw-2.5rem))] flex-col bg-slate-900 shadow-xl"
             aria-label="Auction sections"
           >
-            <div className="flex items-center justify-between border-b border-slate-200 px-3 py-3">
-              <p className="text-sm font-semibold text-slate-900">Menu</p>
+            <div className="flex items-center justify-between border-b border-white/10 px-3 py-3">
+              <p className="text-sm font-semibold text-white">Menu</p>
               <button
                 type="button"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-lg text-xl leading-none text-slate-500 hover:bg-slate-100 hover:text-slate-900"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-lg text-xl leading-none text-slate-300 hover:bg-white/10 hover:text-white"
                 aria-label="Close menu"
                 onClick={() => setOpen(false)}
               >
