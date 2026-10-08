@@ -1,6 +1,6 @@
 "use client";
 
-import { ManagerChip } from "@/app/_components/entity/ManagerChip";
+import { PointsManagerChip } from "./PointsManagerChip";
 
 export type CompetitorListEntry = {
   userId: number;
@@ -27,32 +27,33 @@ export function CompetitorsPointsList({
     );
   }
 
-  const competitorHref = (userId: number) => {
-    const qs = gwQuery ? `?gw=${encodeURIComponent(gwQuery)}` : "";
-    return `/auctions/${auctionId}/leaderboard/competitors/${userId}${qs}`;
-  };
+  const chip = (p: CompetitorListEntry, labelClassName: string) => (
+    <PointsManagerChip
+      auctionId={auctionId}
+      userId={p.userId}
+      name={p.name}
+      teamName={p.teamName}
+      avatarUrl={p.avatarUrl}
+      labelClassName={labelClassName}
+      from="competitors"
+      gw={gwQuery}
+    />
+  );
 
   return (
     <div className="space-y-4">
-      <ul className="space-y-3 md:hidden">
-        {participants.map((p, i) => (
+      <ul className="space-y-2.5 md:hidden">
+        {participants.map((p) => (
           <li
             key={p.userId}
-            className={`rounded-xl border border-sky-100 px-4 py-4 shadow-sm ${
-              i % 2 === 0 ? "bg-white" : "bg-sky-50/80"
-            }`}
+            className="relative overflow-hidden rounded-xl border border-sky-200 bg-white py-3.5 pl-5 pr-4 shadow-sm"
           >
+            <span aria-hidden className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-sky-400 to-sky-600" />
             <div className="flex items-center justify-between gap-3">
-              <ManagerChip
-                auctionId={auctionId}
-                auctionUserId={p.userId}
-                name={p.name}
-                teamName={p.teamName}
-                avatarUrl={p.avatarUrl}
-                preferTeamLabel
-                labelClassName="text-base font-medium"
-                href={competitorHref(p.userId)}
-              />
+              <div className="min-w-0">
+                {chip(p, "text-base font-medium")}
+                {p.teamName?.trim() && <p className="mt-0.5 pl-6 text-xs text-slate-500">{p.name}</p>}
+              </div>
               <span className="shrink-0 font-mono text-lg font-bold tabular-nums text-slate-900">
                 {p.seasonTotal != null ? p.seasonTotal : "—"}
               </span>
@@ -61,36 +62,27 @@ export function CompetitorsPointsList({
         ))}
       </ul>
 
-      <div className="hidden overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm md:block">
-        <table className="w-full min-w-[20rem] border-collapse text-left text-sm">
-          <thead className="border-b border-slate-200 bg-sky-50 text-slate-700">
+      <div className="hidden overflow-x-auto md:block">
+        <table className="w-full min-w-[20rem] border-separate border-spacing-y-2 text-left text-sm">
+          <thead className="text-xs uppercase tracking-wide text-slate-500">
             <tr>
-              <th className="px-3 py-3 font-semibold">Manager</th>
-              <th className="px-3 py-3 text-right font-semibold">Season total</th>
+              <th className="px-3 py-2 font-semibold">Manager</th>
+              <th className="w-32 px-3 py-2 text-right font-semibold">Season total</th>
             </tr>
           </thead>
           <tbody>
-            {participants.map((p, i) => (
+            {participants.map((p) => (
               <tr
                 key={p.userId}
-                className={`border-b border-slate-100 ${i % 2 === 1 ? "bg-sky-50/40" : "bg-white"}`}
+                className="[&>td]:border-y [&>td]:border-sky-200 [&>td]:bg-white [&>td:first-child]:rounded-l-xl [&>td:first-child]:border-l-[6px] [&>td:first-child]:border-l-sky-400 [&>td:last-child]:rounded-r-xl [&>td:last-child]:border-r hover:[&>td]:bg-sky-50"
               >
                 <td className="px-3 py-3">
-                  <ManagerChip
-                    auctionId={auctionId}
-                    auctionUserId={p.userId}
-                    name={p.name}
-                    teamName={p.teamName}
-                    avatarUrl={p.avatarUrl}
-                    preferTeamLabel
-                    labelClassName="font-medium text-slate-900"
-                    href={competitorHref(p.userId)}
-                  />
+                  {chip(p, "font-medium text-slate-900")}
                   {p.teamName?.trim() && (
                     <div className="mt-0.5 pl-6 text-xs text-slate-500">{p.name}</div>
                   )}
                 </td>
-                <td className="px-3 py-3 text-right font-mono font-semibold tabular-nums text-slate-900">
+                <td className="px-3 py-3 text-right font-mono text-base font-semibold tabular-nums text-slate-900">
                   {p.seasonTotal != null ? p.seasonTotal : "—"}
                 </td>
               </tr>

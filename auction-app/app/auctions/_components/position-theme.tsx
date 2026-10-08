@@ -57,3 +57,24 @@ export function PositionPill({ position }: { position: string | null | undefined
     </span>
   );
 }
+
+/**
+ * Leaderboard extras (same shape as POSITION_THEME entries):
+ * FLEX_THEME = played a different position than listed (Listed Pos ≠ Match Pos);
+ * BENCH_THEME = not in the Best XI for that gameweek.
+ */
+export const FLEX_THEME = {
+  row: "[&>td]:bg-fuchsia-50 [&>td]:border-fuchsia-200 [&>td:first-child]:border-l-fuchsia-400",
+  card: "bg-fuchsia-50 border-fuchsia-200",
+  stripe: "bg-fuchsia-400",
+  pill: "bg-white text-fuchsia-800 ring-fuchsia-300",
+  heading: "bg-fuchsia-100 text-fuchsia-900 ring-fuchsia-200",
+};
+
+export const BENCH_THEME = {
+  row: "[&>td]:bg-slate-100 [&>td]:border-slate-300 [&>td:first-child]:border-l-slate-400",
+  card: "bg-slate-100 border-slate-300",
+  stripe: "bg-slate-400",
+  pill: "bg-white text-slate-700 ring-slate-300",
+  heading: "bg-slate-200 text-slate-800 ring-slate-300",
+};

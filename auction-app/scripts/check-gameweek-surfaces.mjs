@@ -63,6 +63,11 @@ const CODE_PATTERNS = [
   { re: /\b(gw|gwId|gameWeekId|game_week_id|selectedGwId)\s*[!=]==?\s*\d+\b/, why: "compares a gameweek to a literal number" },
   { re: /\b(auctionId|auction_id)\s*[!=]==?\s*\d+\b/, why: "special-cases an auction id" },
   { re: /["'`][^"'`]*\b(Premier League|Champions League|World Cup)\b[^"'`]*\bGW\s?\d/i, why: "hardcoded gameweek label" },
+  {
+    re: /<ManagerChip\b/,
+    why: "leaderboard manager links must use PointsManagerChip (ManagerChip defaults to Competitors – Bidding)",
+    skip: /leaderboard\/_components\/PointsManagerChip\.tsx$/,
+  },
 ];
 
 function walk(p, out = []) {
@@ -110,7 +115,9 @@ function scanCode() {
       .split(/\r?\n/)
       .forEach((line, i) => {
         if (line.trim().startsWith("//") || line.trim().startsWith("*")) return;
-        for (const { re, why } of CODE_PATTERNS) {
+        const relFile = path.relative(appRoot, file).split(path.sep).join("/");
+        for (const { re, why, skip } of CODE_PATTERNS) {
+          if (skip && skip.test(relFile)) continue;
           if (re.test(line)) hits.push(`${path.relative(appRoot, file)}:${i + 1}  ${why}: ${line.trim()}`);
         }
       });

@@ -16,10 +16,10 @@ export default async function LeaderboardCompetitorPointsPage({
   searchParams,
 }: {
   params: Promise<{ auctionId: string; auctionUserId: string }>;
-  searchParams: Promise<{ gw?: string }>;
+  searchParams: Promise<{ gw?: string; from?: string }>;
 }) {
   const { auctionId: aRaw, auctionUserId: uRaw } = await params;
-  const { gw: gwParam } = await searchParams;
+  const { gw: gwParam, from } = await searchParams;
   const auctionId = Number(aRaw);
   const competitorUserId = Number(uRaw);
   if (!Number.isFinite(auctionId) || auctionId <= 0 || !Number.isFinite(competitorUserId)) {
@@ -46,7 +46,10 @@ export default async function LeaderboardCompetitorPointsPage({
 
   const basePath = `/auctions/${auctionId}/leaderboard/competitors/${competitorUserId}`;
   const gwQs = gwParam ? `&gw=${encodeURIComponent(gwParam)}` : "";
-  const backHref = `/auctions/${auctionId}/leaderboard?tab=competitors${gwQs}`;
+  const fromStandings = from === "standings";
+  const backHref = fromStandings
+    ? `/auctions/${auctionId}/leaderboard`
+    : `/auctions/${auctionId}/leaderboard?tab=competitors${gwQs}`;
 
   return (
     <section className="space-y-4 sm:space-y-5">
@@ -58,7 +61,7 @@ export default async function LeaderboardCompetitorPointsPage({
         seasonTotal={seasonTotal}
         basePath={basePath}
         backHref={backHref}
-        backLabel="← Competitors – Points"
+        backLabel={fromStandings ? "← Standings" : "← Competitors – Points"}
       />
     </section>
   );

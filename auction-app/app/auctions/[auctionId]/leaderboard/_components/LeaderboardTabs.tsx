@@ -88,7 +88,7 @@ export function LeaderboardTabs({
 
   return (
     <div className="space-y-5">
-      <div className="flex gap-1 overflow-x-auto rounded-xl border border-slate-200 bg-slate-100 p-1">
+      <div className="flex gap-1 overflow-x-auto rounded-xl border border-sky-100 bg-sky-50/60 p-1">
         {TABS.map(({ id, label }) => {
           const isActive = activeTab === id;
           return (
@@ -96,10 +96,10 @@ export function LeaderboardTabs({
               key={id}
               type="button"
               onClick={() => setTab(id)}
-              className={`shrink-0 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+              className={`flex-1 shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-sm font-medium transition ${
                 isActive
-                  ? "bg-white text-slate-900 shadow-sm"
-                  : "text-slate-600 hover:text-slate-900"
+                  ? "bg-gradient-to-r from-sky-500 to-sky-700 font-semibold text-white shadow-sm shadow-sky-200"
+                  : "text-slate-700 hover:bg-white hover:text-sky-800"
               }`}
             >
               {label}

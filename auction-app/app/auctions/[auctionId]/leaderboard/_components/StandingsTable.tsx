@@ -2,9 +2,29 @@
 
 import { useMemo, useState } from "react";
 
-import { ManagerChip } from "@/app/_components/entity/ManagerChip";
 import type { StandingEntry, GwInfo } from "@/lib/scoring/leaderboard-data";
 import { fantasyTeamLabel } from "@/lib/team-name";
+
+import { PointsManagerChip } from "./PointsManagerChip";
+
+/**
+ * Row colour by table place (filtered points; ties share a place):
+ * 1st gold, 2nd–4th green, relegated red, everyone else white.
+ * (Relegation-zone shading is not pre-set — it depends on the auction.)
+ */
+const PLACE_TONE = {
+  gold: "[&>td]:bg-amber-50 [&>td]:border-amber-300 [&>td:first-child]:border-l-amber-400",
+  green: "[&>td]:bg-emerald-50 [&>td]:border-emerald-200 [&>td:first-child]:border-l-emerald-400",
+  relegated: "[&>td]:bg-red-50 [&>td]:border-red-200 [&>td:first-child]:border-l-red-400",
+  normal: "[&>td]:bg-white [&>td]:border-sky-200 [&>td:first-child]:border-l-sky-300",
+} as const;
+
+function placeTone(place: number, isRelegated: boolean): keyof typeof PLACE_TONE {
+  if (isRelegated) return "relegated";
+  if (place === 1) return "gold";
+  if (place >= 2 && place <= 4) return "green";
+  return "normal";
+}
 
 interface StandingsTableProps {
   auctionId: number;
@@ -38,7 +58,7 @@ export function StandingsTable({ auctionId, standings, gameWeeks }: StandingsTab
   const hasScores = gameWeeks.length > 0;
 
   const displayRows = useMemo(() => {
-    return standings
+    const sorted = standings
       .map((entry) => ({
         entry,
         filteredPoints: sumSelectedGws(entry, effectiveSelectedIds),
@@ -49,6 +69,14 @@ export function StandingsTable({ auctionId, standings, gameWeeks }: StandingsTab
         const nameB = fantasyTeamLabel(b.entry.teamName, b.entry.name);
         return nameA.localeCompare(nameB, undefined, { sensitivity: "base" });
       });
+    // Table place for colouring: competition ranking on the shown (filtered) points.
+    return sorted.map((row, i) => ({
+      ...row,
+      place:
+        i > 0 && sorted[i - 1].filteredPoints === row.filteredPoints
+          ? sorted.findIndex((r) => r.filteredPoints === row.filteredPoints) + 1
+          : i + 1,
+    }));
   }, [standings, effectiveSelectedIds]);
 
   const handleSelectAll = (checked: boolean) => {
@@ -84,7 +112,7 @@ export function StandingsTable({ auctionId, standings, gameWeeks }: StandingsTab
   return (
     <div className="space-y-4">
       {hasScores && (
-        <div className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3">
+        <div className="rounded-2xl border border-sky-100 bg-white px-4 py-3 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
             Gameweek filter
           </p>
@@ -120,18 +148,18 @@ export function StandingsTable({ auctionId, standings, gameWeeks }: StandingsTab
         </div>
       )}
 
-      <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm">
-        <table className="w-full min-w-[20rem] border-collapse text-left text-sm">
-          <thead className="border-b border-slate-200 bg-sky-50 text-slate-700">
+      <div className="overflow-x-auto">
+        <table className="w-full min-w-[20rem] border-separate border-spacing-y-2 text-left text-sm">
+          <thead className="text-xs uppercase tracking-wide text-slate-500">
             <tr>
-              <th className="w-8 px-2 py-3" aria-hidden="true" />
-              <th className="px-3 py-3 font-semibold">Position</th>
-              <th className="px-3 py-3 font-semibold">Team</th>
-              <th className="px-3 py-3 text-right font-semibold">Points</th>
+              <th className="w-8 px-2 py-2" aria-hidden="true" />
+              <th className="px-3 py-2 font-semibold">Position</th>
+              <th className="px-3 py-2 font-semibold">Team</th>
+              <th className="px-3 py-2 text-right font-semibold">Points</th>
             </tr>
           </thead>
           <tbody>
-            {displayRows.map(({ entry, filteredPoints }, idx) => {
+            {displayRows.map(({ entry, filteredPoints, place }, idx) => {
               const isLeader = entry.rank === 1;
               const showParticipant = Boolean(entry.teamName?.trim());
               const showPoints = hasScores && effectiveSelectedIds.size > 0;
@@ -141,24 +169,22 @@ export function StandingsTable({ auctionId, standings, gameWeeks }: StandingsTab
               return (
                 <tr
                   key={entry.userId}
-                  className={`border-b ${
-                    isRelegated ? "border-red-100 bg-red-100" : "border-slate-100"
-                  } ${
-                    !isRelegated && idx % 2 === 1 ? "bg-sky-50/40" : !isRelegated ? "bg-white" : ""
+                  className={`[&>td]:border-y [&>td:first-child]:rounded-l-xl [&>td:first-child]:border-l-[6px] [&>td:last-child]:rounded-r-xl [&>td:last-child]:border-r ${
+                    PLACE_TONE[showPoints ? placeTone(place, isRelegated) : isRelegated ? "relegated" : "normal"]
                   } ${isLeader && showPoints && !isRelegated ? "font-semibold" : ""}`}
                 >
                   <td className="w-8 px-2 py-3 tabular-nums text-slate-400">{rowIndex}</td>
                   <td className="px-3 py-3 tabular-nums text-slate-500">{entry.rank}</td>
                   <td className="px-3 py-3 text-slate-900">
                     <div className="flex flex-wrap items-center gap-2">
-                      <ManagerChip
+                      <PointsManagerChip
                         auctionId={auctionId}
-                        auctionUserId={entry.userId}
+                        userId={entry.userId}
                         name={entry.name}
                         teamName={entry.teamName}
                         avatarUrl={entry.avatarUrl}
-                        preferTeamLabel
                         labelClassName="font-medium text-slate-900"
+                        from="standings"
                       />
                       {isRelegated && (
                         <span className="rounded border border-red-200 bg-red-100 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-red-800">
@@ -170,7 +196,7 @@ export function StandingsTable({ auctionId, standings, gameWeeks }: StandingsTab
                       <div className="mt-0.5 pl-6 text-xs font-normal text-slate-500">{entry.name}</div>
                     )}
                   </td>
-                  <td className="px-3 py-3 text-right font-mono font-semibold tabular-nums text-slate-900">
+                  <td className="px-3 py-3 text-right font-mono text-base font-semibold tabular-nums text-slate-900">
                     {showPoints ? (
                       filteredPoints
                     ) : (
@@ -184,14 +210,14 @@ export function StandingsTable({ auctionId, standings, gameWeeks }: StandingsTab
         </table>
 
         {!hasScores && (
-          <p className="border-t border-slate-100 px-4 py-4 text-center text-sm text-slate-500">
+          <p className="px-4 py-4 text-center text-sm text-slate-500">
             No gameweek scores have been published yet. Standings will update once the first
             gameweek is scored.
           </p>
         )}
 
         {hasScores && effectiveSelectedIds.size === 0 && (
-          <p className="border-t border-slate-100 px-4 py-4 text-center text-sm text-slate-500">
+          <p className="px-4 py-4 text-center text-sm text-slate-500">
             Select at least one gameweek to see points.
           </p>
         )}

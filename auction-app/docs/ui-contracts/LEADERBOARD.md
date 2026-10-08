@@ -1,6 +1,6 @@
 # Leaderboard UI contract
 
-**Status:** Implemented 24 Aug 2026 (one-GW dropdown; default = latest GW with scores uploaded). Updated Oct 2026: tab renamed **Competitors – Points**; components moved under `app/auctions/[auctionId]/leaderboard/`.  
+**Status:** Implemented 24 Aug 2026 (one-GW dropdown; default = latest GW with scores uploaded). Updated Oct 2026: tab renamed **Competitors – Points**; components moved under `app/auctions/[auctionId]/leaderboard/`. Restyled 8 Oct 2026 on explicit request (colours, separated cards, manager-link rule — see **Colour & link rules**).  
 **Live reference:** https://hfwauction.vercel.app/auctions/10/leaderboard?tab=my-points  
 **Product owner rule:** Do not change layout, copy, columns, chrome, or interaction unless the user **explicitly** asks. Adding a gameweek is data, not a UI redesign.
 
@@ -39,8 +39,10 @@ Keep the existing auction-app light theme unless explicitly told otherwise:
 
 - Page shell: `max-w-5xl`, header “← Back to auction”, `{auction name} · Leaderboard`, `RefreshButton`
 - Top tabs (exactly three, pill switcher, URL `?tab=`): **Standings** | **My Points** | **Competitors – Points**
-- Palette: white cards, `border-slate-200`, sky header rows / active tab, slate body text, `font-mono` for numbers
-- Manager identity: `ManagerChip` (team name preferred) + manager name underneath when a team name exists
+- Palette: site-wide card style (white→sky gradient cards, coloured left stripe, separated rows), gradient active tab, `font-mono` for numbers
+- Manager identity: **`PointsManagerChip`** (team name preferred) + manager name underneath when a team name exists.
+  It always links to `/auctions/[id]/leaderboard/competitors/[auctionUserId]` — **never** `ManagerChip` directly
+  (its default link is Competitors – Bidding). `check-gameweek-surfaces.mjs` fails on `<ManagerChip` in this folder.
 - Mobile: card list; desktop: table — same pattern as today
 - **No extra top-level tabs** as gameweeks are added
 
@@ -59,7 +61,7 @@ What production showed on My Points (auction 9):
 
 **Why that is wrong:** squads change GW to GW. A sold GW1 player must not sit in the GW2 view. A bought GW2 player must not appear in the GW1 view.
 
-Standings tab (verified 7 Oct 2026): **GAMEWEEK FILTER** checkboxes (Select all + one per GW), caption "Showing: …", table **# · Position · Team · Points** (Team = ManagerChip; Position = overall season rank, ties share rank). Source: `auction_leaderboard`.
+Standings tab (verified 7 Oct 2026): **GAMEWEEK FILTER** checkboxes (Select all + one per GW), caption "Showing: …", table **# · Position · Team · Points** (Team = PointsManagerChip → that manager's points page with **← Standings** back link; Position = overall season rank, ties share rank). Source: `auction_leaderboard`.
 
 ---
 
@@ -104,7 +106,7 @@ Ownership for a row = locked `gameweek_squads` for that GW (live `auction_teams`
 Implemented in `GwPointsView` + `GwSquadTable` — reuse them; do not invent a new split:
 
 - **Starting XI** block with count and **formation** (e.g. `3-5-2`)
-- **Bench / substitutes** block with their scores (dimmed vs XI)
+- **Bench / substitutes** block with their scores (Bench colour — see Colour & link rules)
 - Selected-GW header uses **Best XI score** for that week (standings source: `auction_leaderboard.total_score` for that GW) plus the same **formation** chip
 - Before Best XI publish, flat squad list; optional “squad points so far” is the sum of uploaded player scores for **that GW’s locked squad**, not a season total
 
@@ -120,6 +122,17 @@ Best XI runs when that gameweek’s matches are complete and ops publish — the
 | Best XI / bench split | `gameweek_squads.is_best_xi` (+ `xi_role`) |
 
 Canonical ops checklist: [OPS_SCORING_AND_LEADERBOARD.md](../OPS_SCORING_AND_LEADERBOARD.md).
+
+---
+
+## Colour & link rules (8 Oct 2026)
+
+| Where | Rule |
+|-------|------|
+| Standings rows | Separated cards. Table place on the shown points (ties share a place): **1st gold**, **2nd–4th green**, relegated red, others white. No pre-set relegation-zone shading (auction-specific). |
+| My Points / Competitors – Points rows | Separated cards. **Bench** (not Best XI) = grey for every bench player. Otherwise **Flexible** (Listed Pos ≠ Match Pos) = pink; otherwise the listed-position colour (GK amber, DEF blue, MID green, FWD violet). Listed/Match Pos shown as coloured tags; a small colour key sits above the table. |
+| Colours | `app/auctions/_components/position-theme.tsx` (`POSITION_THEME`, `FLEX_THEME`, `BENCH_THEME`). |
+| Manager links | `PointsManagerChip` only. From Standings → `?from=standings` (back = **← Standings**); from Competitors – Points → back = **← Competitors – Points**. The points page header identity is not a link. |
 
 ---
 
@@ -149,7 +162,7 @@ As GWs are added: dropdown options increase; table width and tab count stay the 
 
 ## Explicitly out of scope unless the user asks
 
-- Changing Standings columns, GW checkbox filter, or relegated styling
+- Changing Standings columns or GW checkbox filter
 - Extra leaderboard tabs
 - Theme / spacing / typography rewrites
 - Showing all GWs in one wide table

@@ -7,6 +7,8 @@ Contract (read first): `auction-app/docs/ui-contracts/LEADERBOARD.md`.
   scores). Table columns: **Player · Club · Listed Pos · Match Pos · Score**; after Best XI publish:
   Starting XI (with formation chip) + Bench. Built from `_components/GwPointsView.tsx` +
   `GwSquadTable.tsx` — reuse them, never add another layout.
+- **Manager links: `PointsManagerChip` only** (→ Competitors – Points page). Never `<ManagerChip` here —
+  it defaults to Competitors – Bidding; the surfaces check fails on it.
 - Data: `lib/scoring/` only — scores via `readPlayerScores()` with this auction's locked gameweek ids (locked `gameweek_squads`, `Player_Scores`, `auction_leaderboard`,
   `data/best-xi` overlays, Match Pos from registered FinalPoints sheets). Never budgets, bids or
   live squads.

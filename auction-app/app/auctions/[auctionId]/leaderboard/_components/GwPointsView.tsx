@@ -2,13 +2,15 @@
 
 import Link from "next/link";
 
-import { ManagerChip } from "@/app/_components/entity/ManagerChip";
+import { Avatar } from "@/app/_components/entity/Avatar";
+import { fantasyTeamLabel } from "@/lib/team-name";
 import type { GwInfo, ParticipantGwSquad } from "@/lib/scoring/leaderboard-data";
 
 import { GwSelect } from "./GwSelect";
 import { GwSquadTable } from "./GwSquadTable";
 
 interface GwPointsViewProps {
+  /** Kept for callers; the header identity is not a link (this page IS the manager's points). */
   auctionId: number;
   squad: ParticipantGwSquad | null;
   gameWeeks: GwInfo[];
@@ -22,7 +24,6 @@ interface GwPointsViewProps {
 }
 
 export function GwPointsView({
-  auctionId,
   squad,
   gameWeeks,
   selectedGw,
@@ -44,35 +45,34 @@ export function GwPointsView({
       {backHref && (
         <Link
           href={backHref}
-          className="inline-block min-h-10 py-2 text-sm font-medium text-sky-700 underline hover:text-sky-900"
+          className="inline-flex min-h-10 items-center py-2 text-sm font-medium text-sky-700 hover:text-sky-900"
         >
           {backLabel ?? "← Back"}
         </Link>
       )}
 
-      <div className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-4">
-        {!compact && squad && (
-          <>
-            <ManagerChip
-              auctionId={auctionId}
-              auctionUserId={squad.userId}
-              name={squad.name}
-              teamName={squad.teamName}
-              avatarUrl={squad.avatarUrl}
-              preferTeamLabel
-              labelClassName="text-lg font-semibold text-slate-900"
-            />
-            {squad.teamName?.trim() && (
-              <p className="mt-0.5 pl-6 text-sm text-slate-600">{squad.name}</p>
-            )}
-          </>
-        )}
-
-        <div className={`flex flex-wrap items-baseline gap-x-2 gap-y-1 ${compact ? "" : "mt-3"}`}>
-          <span className="text-sm text-slate-600">Season total:</span>
-          <span className="font-mono text-lg font-semibold tabular-nums text-slate-900">
-            {seasonTotal != null ? seasonTotal : "—"}
-          </span>
+      <div className="relative overflow-hidden rounded-2xl border border-sky-100 bg-gradient-to-br from-white via-white to-sky-50 py-4 pl-5 pr-4 shadow-sm sm:pl-6 sm:pr-5">
+        <span aria-hidden className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-sky-400 to-sky-600" />
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          {!compact && squad ? (
+            <div className="flex min-w-0 items-center gap-3">
+              <Avatar name={squad.name} avatarUrl={squad.avatarUrl} size="md" />
+              <div className="min-w-0">
+                <p className="text-lg font-semibold text-slate-900">
+                  {fantasyTeamLabel(squad.teamName, squad.name)}
+                </p>
+                {squad.teamName?.trim() && <p className="text-sm text-slate-600">{squad.name}</p>}
+              </div>
+            </div>
+          ) : (
+            <span />
+          )}
+          <div className="rounded-xl bg-gradient-to-br from-sky-500 to-sky-700 px-3 py-1.5 text-white shadow-sm shadow-sky-200 sm:min-w-[8rem]">
+            <div className="text-[11px] font-medium uppercase tracking-wide text-sky-100">Season total</div>
+            <div className="font-mono text-lg font-semibold leading-tight tabular-nums">
+              {seasonTotal != null ? seasonTotal : "—"}
+            </div>
+          </div>
         </div>
       </div>
 
@@ -85,7 +85,7 @@ export function GwPointsView({
       )}
 
       {selectedGw && squad && (
-        <div className="rounded-lg border border-slate-100 bg-slate-50 px-4 py-3">
+        <div className="rounded-2xl border border-sky-100 bg-white px-4 py-3 shadow-sm">
           {hasBestXiData && bestXiTotal != null ? (
             <>
               <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
@@ -94,7 +94,7 @@ export function GwPointsView({
                   {bestXiTotal}
                 </span>
                 {squad.formation && (
-                  <span className="rounded border border-slate-200 bg-white px-2 py-0.5 text-xs font-bold tabular-nums text-slate-700">
+                  <span className="rounded-lg bg-sky-100 px-2 py-0.5 text-xs font-bold tabular-nums text-sky-900 ring-1 ring-sky-200">
                     {squad.formation}
                   </span>
                 )}
