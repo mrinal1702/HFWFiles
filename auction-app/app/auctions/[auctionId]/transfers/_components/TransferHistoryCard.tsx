@@ -60,13 +60,15 @@ const LEG_TONE = {
   neutral: { box: "border-slate-200 bg-white", arrow: "text-sky-400", stripe: "bg-sky-300" },
 } as const;
 
-function DealLeg({
+/** One direction of a deal: "From → To" with every player and any cash. Shared with TransferCard. */
+export function DealLeg({
   from,
   to,
   players,
   cash,
   verb,
   tone,
+  emptyText = "Nothing",
 }: {
   from: string;
   to: string;
@@ -74,6 +76,8 @@ function DealLeg({
   cash: number;
   verb: "sent" | "offered";
   tone: keyof typeof LEG_TONE;
+  /** Shown when this side has no players and no cash (e.g. "Awaiting their offer"). */
+  emptyText?: string;
 }) {
   const t = LEG_TONE[tone];
   const empty = players.length === 0 && cash <= 0;
@@ -93,7 +97,7 @@ function DealLeg({
         <span className="sr-only">{verb}</span>
       </p>
       {empty ? (
-        <p className="mt-2 text-sm italic text-slate-400">Nothing</p>
+        <p className="mt-2 text-sm italic text-slate-400">{emptyText}</p>
       ) : (
         <ul className="mt-2 flex flex-wrap gap-1.5">
           {players.map((p) => (

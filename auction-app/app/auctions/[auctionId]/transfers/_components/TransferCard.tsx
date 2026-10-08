@@ -14,44 +14,7 @@ import {
 import { transferStatusColor, transferStatusLabel } from "@/lib/auction-state/transfer-messages";
 import type { EnrichedTransfer } from "@/lib/auction-state/transfers";
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
-
-function DealSide({
-  players,
-  cash,
-  label,
-}: {
-  players: { player_id: string; player_name: string | null; position: string | null }[];
-  cash: number;
-  label: string;
-}) {
-  const hasPlayers = players.length > 0;
-  const hasCash = cash > 0;
-
-  return (
-    <div className="min-w-0">
-      <p className="text-xs font-medium uppercase tracking-wide text-slate-500">{label}</p>
-      <ul className="mt-1 space-y-0.5">
-        {hasPlayers &&
-          players.map((p) => (
-            <li key={p.player_id} className="text-sm font-medium text-slate-900">
-              {p.player_name ?? "—"}
-              {p.position ? (
-                <span className="ml-1 text-xs text-slate-500">({p.position})</span>
-              ) : null}
-            </li>
-          ))}
-        {hasCash && (
-          <li className="text-sm font-medium text-slate-900">
-            £{cash}m cash
-          </li>
-        )}
-        {!hasPlayers && !hasCash && (
-          <li className="text-sm italic text-slate-400">Nothing yet</li>
-        )}
-      </ul>
-    </div>
-  );
-}
+import { DealLeg } from "./TransferHistoryCard";
 
 function ActionButton({
   label,
@@ -62,11 +25,13 @@ function ActionButton({
   pending: boolean;
   variant: "primary" | "danger" | "ghost";
 }) {
-  const base = "min-h-9 rounded-lg px-3 py-1.5 text-sm font-medium disabled:opacity-50";
+  const base =
+    "min-h-10 rounded-xl px-4 py-2 text-sm font-medium transition hover:-translate-y-0.5 disabled:opacity-50 disabled:hover:translate-y-0";
   const variants = {
-    primary: "bg-sky-600 text-white hover:bg-sky-700",
-    danger: "bg-red-50 text-red-700 border border-red-200 hover:bg-red-100",
-    ghost: "bg-slate-100 text-slate-700 hover:bg-slate-200",
+    primary:
+      "bg-gradient-to-r from-sky-500 to-sky-700 font-semibold text-white shadow-sm shadow-sky-200 hover:shadow-md",
+    danger: "border border-red-200 bg-white text-red-700 hover:bg-red-50",
+    ghost: "border border-slate-200 bg-white text-slate-700 hover:border-slate-300",
   };
   return (
     <button type="submit" disabled={pending} className={`${base} ${variants[variant]}`}>
@@ -118,45 +83,64 @@ export function TransferCard({
   const [adminRejectState, adminRejectAction, adminRejectPending] =
     useActionState<TransferActionState, FormData>(adminRejectTransferAction, null);
 
-  const recipientHasResponded = transfer.recipient_player_ids.length > 0 || transfer.recipient_cash > 0;
+  // Viewer's side first (admins viewing others' deals: proposer first).
+  const proposerSide = {
+    name: transfer.proposer_name ?? "Proposer",
+    players: transfer.proposer_players,
+    cash: transfer.proposer_cash,
+  };
+  const recipientSide = {
+    name: transfer.recipient_name ?? "Recipient",
+    players: transfer.recipient_players,
+    cash: transfer.recipient_cash,
+  };
+  const [first, second] = isRecipient ? [recipientSide, proposerSide] : [proposerSide, recipientSide];
+  const involved = isProposer || isRecipient;
+  const awaitingOfferText = (side: typeof first) =>
+    transfer.status === "awaiting_response" && side === recipientSide
+      ? `Awaiting ${recipientSide.name}'s offer`
+      : "Nothing";
 
   return (
-    <div className="rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
+    <article className="relative overflow-hidden rounded-2xl border border-sky-100 bg-gradient-to-br from-white via-white to-sky-50 p-4 pl-5 shadow-sm sm:p-5 sm:pl-6">
+      <span aria-hidden className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-amber-300 to-amber-500" />
       {/* Header */}
-      <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-        <div className="text-sm text-slate-600">
-          <span className="font-medium text-slate-900">{transfer.proposer_name ?? "—"}</span>
-          {" → "}
-          <span className="font-medium text-slate-900">{transfer.recipient_name ?? "—"}</span>
-        </div>
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <p className="text-xs text-slate-500">
+          Proposed <LocalTime iso={transfer.created_at} />
+        </p>
         <span
-          className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${transferStatusColor(transfer.status)}`}
+          className={`inline-flex shrink-0 items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${transferStatusColor(transfer.status)}`}
         >
           {transferStatusLabel(transfer.status)}
         </span>
       </div>
 
-      {/* Deal sides */}
-      <div className="grid grid-cols-2 gap-3 rounded-lg bg-slate-50 p-3 sm:gap-4">
-        <DealSide
-          players={transfer.proposer_players}
-          cash={transfer.proposer_cash}
-          label={`${transfer.proposer_name ?? "Proposer"} offers`}
+      {/* Deal legs */}
+      <div className="mt-3 space-y-2.5">
+        <DealLeg
+          from={first.name}
+          to={second.name}
+          players={first.players}
+          cash={first.cash}
+          verb="offered"
+          tone={involved ? "out" : "neutral"}
+          emptyText={awaitingOfferText(first)}
         />
-        <DealSide
-          players={transfer.recipient_players}
-          cash={transfer.recipient_cash}
-          label={
-            recipientHasResponded
-              ? `${transfer.recipient_name ?? "Recipient"} offers`
-              : `${transfer.recipient_name ?? "Recipient"} — awaiting offer`
-          }
+        <DealLeg
+          from={second.name}
+          to={first.name}
+          players={second.players}
+          cash={second.cash}
+          verb="offered"
+          tone={involved ? "in" : "neutral"}
+          emptyText={awaitingOfferText(second)}
         />
       </div>
 
       {/* Confirmation status */}
       {transfer.status === "awaiting_confirmation" && (
-        <div className="mt-2 flex gap-4 text-xs text-slate-500">
+        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-500">
           <span>
             {transfer.proposer_name ?? "Proposer"}:{" "}
             {transfer.proposer_confirmed ? (
@@ -177,12 +161,12 @@ export function TransferCard({
       )}
 
       {/* Actions */}
-      <div className="mt-3 flex flex-wrap gap-2">
+      <div className="mt-4 flex flex-wrap gap-2">
         {/* Recipient: respond (awaiting_response) */}
         {isRecipient && transfer.status === "awaiting_response" && (
           <Link
             href={`/auctions/${auctionId}/transfers/${transfer.id}/respond`}
-            className="min-h-9 rounded-lg bg-sky-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-sky-700"
+            className="inline-flex min-h-10 items-center rounded-xl bg-gradient-to-r from-sky-500 to-sky-700 px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-sky-200 transition hover:-translate-y-0.5 hover:shadow-md"
           >
             Respond
           </Link>
@@ -240,10 +224,6 @@ export function TransferCard({
       <ActionMessage state={rejectState} />
       <ActionMessage state={adminApproveState} />
       <ActionMessage state={adminRejectState} />
-
-      <p className="mt-2 text-xs text-slate-400">
-        Proposed <LocalTime iso={transfer.created_at} />
-      </p>
-    </div>
+    </article>
   );
 }

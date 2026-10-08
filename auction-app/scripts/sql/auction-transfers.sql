@@ -320,6 +320,7 @@ declare
   v_proposer_name         text;
   v_recipient_name        text;
   v_summary               text;
+  v_competition_id        bigint;
 begin
   select * into v_transfer
   from public.auction_transfers where id = p_transfer_id
@@ -428,21 +429,38 @@ begin
   select au.name into v_recipient_name
   from public.auction_users au where au.id = v_transfer.recipient_id;
 
-  select string_agg(p.player_name, ', ' order by p.player_name) into v_proposer_player_names
-  from public.players p
-  where p.player_id::text = any(v_transfer.proposer_player_ids);
+  -- Player names: this auction's competition pool first (competition_players), then the
+  -- global players table (legacy auctions), then "player #<id>" — every id in the deal is listed.
+  -- (Oct 2026: previously read only public.players, so most UCL players were dropped and the
+  -- summary fell back to "£0m".)
+  select a.competition_id into v_competition_id
+  from public."Auctions" a where a.id = v_transfer.auction_id;
 
-  select string_agg(p.player_name, ', ' order by p.player_name) into v_recipient_player_names
-  from public.players p
-  where p.player_id::text = any(v_transfer.recipient_player_ids);
+  select string_agg(coalesce(cp.player_name, p.player_name, 'player #' || ids.pid), ', '
+                    order by coalesce(cp.player_name, p.player_name, ids.pid))
+  into v_proposer_player_names
+  from unnest(v_transfer.proposer_player_ids) as ids(pid)
+  left join public.competition_players cp
+    on cp.competition_id = v_competition_id and cp.player_id::text = ids.pid
+  left join public.players p on p.player_id::text = ids.pid;
+
+  select string_agg(coalesce(cp.player_name, p.player_name, 'player #' || ids.pid), ', '
+                    order by coalesce(cp.player_name, p.player_name, ids.pid))
+  into v_recipient_player_names
+  from unnest(v_transfer.recipient_player_ids) as ids(pid)
+  left join public.competition_players cp
+    on cp.competition_id = v_competition_id and cp.player_id::text = ids.pid
+  left join public.players p on p.player_id::text = ids.pid;
 
   v_summary := coalesce(v_proposer_name, 'Unknown') || ' sent ';
   if v_proposer_player_names is not null and v_transfer.proposer_cash > 0 then
     v_summary := v_summary || v_proposer_player_names || ' + £' || v_transfer.proposer_cash || 'm';
   elsif v_proposer_player_names is not null then
     v_summary := v_summary || v_proposer_player_names;
-  else
+  elsif v_transfer.proposer_cash > 0 then
     v_summary := v_summary || '£' || v_transfer.proposer_cash || 'm';
+  else
+    v_summary := v_summary || 'nothing';
   end if;
 
   v_summary := v_summary || ' to ' || coalesce(v_recipient_name, 'Unknown') || ' in exchange for ';
@@ -451,8 +469,10 @@ begin
     v_summary := v_summary || v_recipient_player_names || ' + £' || v_transfer.recipient_cash || 'm';
   elsif v_recipient_player_names is not null then
     v_summary := v_summary || v_recipient_player_names;
-  else
+  elsif v_transfer.recipient_cash > 0 then
     v_summary := v_summary || '£' || v_transfer.recipient_cash || 'm';
+  else
+    v_summary := v_summary || 'nothing';
   end if;
 
   update public.auction_transfers
