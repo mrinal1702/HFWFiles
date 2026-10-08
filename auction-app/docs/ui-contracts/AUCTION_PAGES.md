@@ -64,11 +64,13 @@ or the empty state "You're not winning any bids at the moment.", plus slot count
 **Players owned (n/18) · Bids held · Can still bid on**.
 
 ### Competitors – Bidding — `/auctions/[id]/competitors` and `/competitors/[auctionUserId]`
-- List: intro line, then columns **Manager · Remaining · Disposable · Players purchased · Bids held**.
+- List: heading with an info icon (no intro paragraph), then managers as separated cards — columns
+  **Manager · Remaining · Disposable · Players purchased · Bids held**.
 - Detail: back link "← Competitors – Bidding", manager identity + "View HFW profile", stats
   **Remaining · Disposable · Players owned (n/18) · Bids held · Can still bid on**; **View Team**
-  ("Players they've won in this auction") grouped by position — **Player · Club · Pos · Price**;
-  **Bids they're winning** — **Player · Club · Pos · Bid · Timer (local)**, or "None right now."
+  ("Players they've won in this auction") grouped by position — **Player · Club · Pos · Price** —
+  same layout as My team (`SquadByPosition`); **Bids Held by <competitor>** + info icon — **Player · Club ·
+  Pos · Bid · Timer (local)** as position-tinted cards like the Bidding room (nothing listed when none).
 - **No points, gameweeks or formations here.** Those are on Leaderboard → Competitors – Points.
 
 ### Transfer Room, Announcements
