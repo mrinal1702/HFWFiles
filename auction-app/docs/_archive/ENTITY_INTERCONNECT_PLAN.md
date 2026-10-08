@@ -1,5 +1,7 @@
 # Entity interconnect plan (pages & links)
 
+> **Archived Oct 2026.** Phases 1–3 shipped. Current linking rules live in `docs/OPS_UI_SURFACES.md` → **Linking rules**. Note: leaderboard manager links now go to **Competitors – Points**, not the competitor page described below.
+
 **Status:** Phase 1 done (deployed). Phase 2 implemented locally (rich player + in-auction scores). Phase 3 profiles started (`/u/[userId]` + competitor link).  
 **Audience:** Humans and agents working on auction-app UI.  
 **Related:** [OPS_UI_SURFACES.md](./OPS_UI_SURFACES.md), [ui-contracts/AUCTION_PAGES.md](./ui-contracts/AUCTION_PAGES.md), [AGENT_HANDOFF.md](./AGENT_HANDOFF.md)

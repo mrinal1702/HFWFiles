@@ -28,7 +28,7 @@ The page is **static on load** — data is fetched fresh every time the page is 
 ## URL and navigation
 
 - **Route:** `/auctions/[auctionId]/announcements`
-- **Button:** A dark "Announcements" button (with a newsreel icon) sits in the top-right of the auction header, alongside the Dashboard link and Refresh button. It is **not** a nav tab — it intentionally sits above the tab strip.
+- **Navigation:** an **Announcements** item in the side menu (`AuctionSideNav`).
 - **No Back button / intro text** (removed Oct 2026 — the side menu covers navigation). Header card shows just "Announcements".
 - **Manager names link** to their Competitors – Bidding page (`/auctions/[id]/competitors/[auctionUserId]`); announcement data carries `buyerId` / `ownerId` / `proposerId` / `recipientId`.
 - **Position tags** use the shared position colours (`app/auctions/_components/position-theme.tsx`).
@@ -47,7 +47,7 @@ Each announcement type has its own colour and icon to make the feed easy to scan
 | Elimination release | Rose/red | Warning triangle | *"Trive — Bruno Fernandes (Canada eliminated) — elimination release, £21m received back"* |
 | Transfer | Sky blue | Double arrows | Two-panel card: what each manager gave |
 
-Timestamps are shown on every card in the user's **local timezone**, formatted as `4 June 2026, 01:14 am` (en-GB locale, unambiguous month name).
+Cards use the site card style (white→tint gradient, coloured left stripe by type). Manager and player names use the display font. Timestamps are shown on every card in the viewer's **local timezone** (device), formatted like `6 October 2026 at 9:56 pm` (en-GB locale, unambiguous month name).
 
 ---
 
@@ -69,11 +69,11 @@ The `auction_releases` audit table records every release with a `created_at` tim
 
 ### Elimination release events — `auction_elimination_refunds`
 
-Commissioner-run knock-out refunds (see `WC_GROUP_STAGE_ELIMINATION_RO32.md`). Shown on the **Elimination Releases** tab only — not mixed into Activity. Fields shown: manager, player name, nation eliminated, position, original purchase price, refund amount. Ordered by `created_at` descending. Scoped to the current auction id.
+Commissioner-run knock-out refunds (see [OPS_ELIMINATIONS.md](./OPS_ELIMINATIONS.md)). Shown on the **Elimination Releases** tab only — not mixed into Activity. Fields shown: manager, player name, nation eliminated, position, original purchase price, refund amount. Ordered by `created_at` descending. Scoped to the current auction id.
 
 ### Transfer events — `auction_transfers`
 
-Only rows with `status = 'completed'` are shown. The `completed_at` column is used as the timestamp. Fields shown: both managers' names, players each side gave, cash each side gave, and the auto-generated `summary` text (as fallback for cash-only deals).
+Only rows with `status = 'completed'` are shown. The `completed_at` column is used as the timestamp. Fields shown: both managers' names (each direction as "From → To"), players each side gave (with position tags), cash each side gave. The stored `summary` text is only shown if neither side has players.
 
 ---
 

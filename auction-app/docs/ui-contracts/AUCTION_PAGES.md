@@ -22,6 +22,7 @@ If a request needs scores on an auction page, or budgets/bids on the leaderboard
 1. **Bidding room** · 2. **My team** · 3. **Announcements** · 4. **Competitors – Bidding** ·
 5. **Bids held** · 6. **Transfer Room** · 7. **Match scores** · 8. **Leaderboard**
 
+Shown in CAPITALS (styling only), and each page's main heading is capitalised to match.
 (Fixtures appears as a modal under Bidding room when configured.) New in-auction pages must be
 added here — see [OPS_UI_SURFACES.md](../OPS_UI_SURFACES.md).
 
@@ -91,6 +92,7 @@ The one deliberate cross-over. Sections: lot status (state, high bid, high bidde
 player's scores for **this auction's gameweeks only**, + Total); **Bid history**; **Ownership & releases**.
 It never shows a manager's squad points.
 
-## Chrome (unchanged)
-Light white + sky theme, `max-w` shell, header with auction name and full-width deadlines,
-mobile compact zoom 0.88 — see "Mobile auction chrome" in [OPS_UI_SURFACES.md](../OPS_UI_SURFACES.md).
+## Chrome
+Navy side menu; navy→blue gradient header banner with the auction name; full-width deadline tiles;
+mid-blue page backdrop with white cards; display font for titles and names; mobile compact zoom 0.88.
+Details: "Visual theme" and "Mobile auction chrome" in [OPS_UI_SURFACES.md](../OPS_UI_SURFACES.md).

@@ -86,7 +86,7 @@ Stage 4  EXECUTE        Transfer executes atomically:
 - Max squad size of 18 and max 1 goalkeeper per team are enforced at execution. The transfer is rejected if either party would breach these limits.
 
 ### Budget
-- Only `active_budget` (total budget minus live bid holds) is checked — not `budget_remaining`.
+- Only `active_budget` (shown to participants as **Disposable**: budget minus live bid holds) is checked — not `budget_remaining` (**Remaining**).
 - Cash holds are placed on **both parties** at the `respond_to_transfer` stage, reducing their `active_budget`. This prevents the held cash from being spent on bids while the deal is in flight.
 - A participant whose `active_budget < cash_they_are_sending` will fail at the respond stage (`proposer_insufficient_funds` / `recipient_insufficient_funds`). It is the participant's responsibility to ensure they have enough active budget — freeing up budget means withdrawing bids or completing other transfers first.
 - No participant can have a negative `budget_remaining` or `active_budget` at any point.
@@ -127,19 +127,22 @@ When the window is open, transfers are split into three sections:
 
 Two-step client-side UI, no extra page loads:
 
-1. **Manager picker** — grid of all other participants showing name, squad size, total budget, available budget
-2. **Deal builder** — side-by-side view:
+1. **Manager picker** — grid of all other participants showing name, squad size, **Remaining** and **Disposable** budget
+2. **Deal builder** — copy: "Select the players and type in the cash amount **YOU** want to offer. <Manager> will respond with their offer and both of you will get a chance to confirm the deal." Side-by-side view:
    - Left: your squad (checkable) + cash input
    - Right: their squad (reference only — they pick their side when they respond)
    - Live proposal summary before submit
 
 Only the proposer's side (player IDs + cash) is sent at this stage. The recipient's side is empty until they respond.
 
+A **"How transfers work"** info icon (6 steps; `TRANSFER_HELP` in `lib/auction-state/transfer-messages.ts`) sits on the Transfer Room heading, the manager picker and the deal builder. In-progress deal cards use the same two-leg layout as history ("Me → Them" / "Them → Me"; "Awaiting <name>'s offer" until they respond).
+
 ## Respond Flow (`/auctions/[id]/transfers/[id]/respond`)
 
 Side-by-side view:
 - Left: proposer's offer (read-only, highlighted)
 - Right: recipient's squad (checkable) + cash input + live deal summary
+- Budget cards show **Remaining** / **Disposable** (same as the propose flow)
 
 ---
 

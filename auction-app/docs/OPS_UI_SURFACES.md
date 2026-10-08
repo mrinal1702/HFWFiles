@@ -3,7 +3,7 @@
 **Canonical map of what participants see.**  
 Goal: **UI stays stable across competitions**; competition data changes, chrome does not.
 
-Related: [OPS_INDEX.md](./OPS_INDEX.md), [ENTITY_INTERCONNECT_PLAN.md](./ENTITY_INTERCONNECT_PLAN.md).
+Related: [OPS_INDEX.md](./OPS_INDEX.md), [UI_MAP.md](./UI_MAP.md) (route → file map for UI work).
 
 **Page-level specs (canonical):** [ui-contracts/AUCTION_PAGES.md](./ui-contracts/AUCTION_PAGES.md) — current state (squads, budgets, bids) · [ui-contracts/LEADERBOARD.md](./ui-contracts/LEADERBOARD.md) — everything scoring. The two surfaces never mix.
 
@@ -52,7 +52,7 @@ Removed / parked: large Match Scores card; Meme Builds entry (routes may still e
 
 | Area | Notes |
 |------|--------|
-| Header | Auction name; deadlines (full width); Dashboard / Announcements / Refresh |
+| Header | Navy gradient banner: auction name + Dashboard / Refresh; deadline tiles (full width) below |
 | **Side menu** | Navy (`slate-900`) with white text so it reads as a menu (Oct 2026): thin left rail with "☰ MENU" (desktop) or a navy "☰ MENU" pill (mobile; content `pt-16` keeps the title clear) + navy overlay drawer (`AuctionSideNav`): Bidding room (+ Fixtures modal when configured), My team, Announcements, Competitors – Bidding, Bids held, Transfer Room, Match scores, Leaderboard |
 | **Bidding room** | Lot list, filters, deadlines, bid forms; sticky Team Name + Remaining / Disposable budgets (**Bidding room and My team only**) |
 | **My Team** | Squad + release buttons |
@@ -60,7 +60,7 @@ Removed / parked: large Match Scores card; Meme Builds entry (routes may still e
 | **Competitors – Bidding** | Other managers’ **current** squads, budgets and bids. Not points — those are Leaderboard → **Competitors – Points** |
 | **Player page** | Ownership, GW points, bid/release history, bid form |
 | **Match scores** | In-auction sheets; player names → player page |
-| **Announcements** | Sales, releases, eliminations (header button for now) |
+| **Announcements** | Buys, releases, transfers, elimination releases (side menu item) |
 | **Transfers** | Propose / respond (when window open) |
 | **Leaderboard** | `/auctions/[id]/leaderboard` — Standings · My Points · Competitors – Points (locked GW squads, points, Best XI, formation). Legacy `/leaderboard/[id]` redirects here |
 
@@ -88,7 +88,7 @@ Any **new participant-facing page** inside an online auction must:
 2. Be added to the **left side menu** in [`AuctionSideNav.tsx`](../app/auctions/_components/AuctionSideNav.tsx) (label + href + active-match rules).
 3. Be listed in the table above and in the matching UI contract ([AUCTION_PAGES.md](./ui-contracts/AUCTION_PAGES.md) or [LEADERBOARD.md](./ui-contracts/LEADERBOARD.md)) when it becomes a standard surface.
 
-Do **not** add a parallel top/horizontal nav, a one-off header-only link, or a page that participants can only reach by URL. Header actions (Dashboard, Announcements, Refresh) are reserved for chrome utilities — new *sections* go in the side menu. Dev-only tools (e.g. Auction Lab) stay unlinked from participant nav.
+Do **not** add a parallel top/horizontal nav, a one-off header-only link, or a page that participants can only reach by URL. Header actions (Dashboard, Refresh) are reserved for chrome utilities — new *sections* go in the side menu. Dev-only tools (e.g. Auction Lab) stay unlinked from participant nav.
 
 ### Deadlines presentation
 
@@ -116,9 +116,9 @@ Live URL uses auction chrome (`/auctions/…/leaderboard`); `/leaderboard/[aucti
 
 | Tab / element | Behaviour |
 |---------------|-----------|
-| **Standings** | Season rank + points from `auction_leaderboard` sums. Relegated managers stay listed and flagged. |
+| **Standings** | Season rank + points from `auction_leaderboard` sums. Separated cards: 1st gold, 2nd–4th green, relegated red. Names → that manager's Competitors – Points page (← Standings back link). |
 | **My Points / Competitors** | One gameweek at a time via a **dropdown** (not a tab per GW). Default = latest GW with scores uploaded. Table: Player, Club, Listed Pos, Match Pos, Score. Season total is a small header box only. |
-| **Best XI** | After publish for that GW: Starting XI + **formation** + substitutes (`GwSquadTable` / `GameweekSquadView`). Formation requires committed `data/best-xi/auction-{id}-gw{legacyGwId}.json`. Match Pos requires competition FinalPoints sheets deployed. |
+| **Best XI** | After publish for that GW: Starting XI + **formation** + Bench (`GwSquadTable`). Formation requires committed `data/best-xi/auction-{id}-gw{legacyGwId}.json`. Match Pos requires competition FinalPoints sheets deployed. |
 
 Do not add per-GW score columns or endless tabs. World Cup GW **tabs** must not reappear on later auctions.
 
@@ -134,6 +134,34 @@ Do not add per-GW score columns or endless tabs. World Cup GW **tabs** must not 
 
 When a competition ends, **keep** its sheet file and CSVs registered — archived auctions’ match-score pages and Match Pos still read them. Keep the **routes** for the next season’s sheets.
 
+## Visual theme (Oct 2026 redesign — current standard)
+
+| Element | Standard | Where |
+|---------|----------|-------|
+| Page backdrop | Mid-blue base + blue / green / indigo corner glows + faint diagonal "pitch" stripes (fixed) | `app/globals.css` (`body`) |
+| Fonts | Geist for body text; **Barlow Semi Condensed** (`font-display`) for page titles and player / manager / team names | `app/layout.tsx`, `globals.css` |
+| Auction header | Navy→blue gradient banner with white auction name; Dashboard + Refresh on it; deadline tiles below | `app/auctions/[auctionId]/layout.tsx` |
+| Side menu | Navy (`slate-900`), white text, items and page headings in CAPITALS | `AuctionSideNav.tsx`, page `h2`s |
+| Cards | White→tint gradient cards with a coloured left stripe; lists are **separated cards**, not zebra tables | shared components below |
+| Position colours | GK amber · DEF sky · MID emerald · FWD violet; leaderboard adds **Flexible** pink (listed ≠ match pos) and **Bench** grey | `app/auctions/_components/position-theme.tsx` |
+| Explanations | No intro paragraphs — use an info icon (`InfoTip`: hover on desktop, tap on phone) | `app/_components/InfoTip.tsx` |
+| Budget labels | **Remaining** / **Disposable** (= DB `active_budget`) everywhere, incl. admin and transfers | `lib/auction-state/budget-copy.ts` |
+
+Shared building blocks (reuse, don't fork): `AuctionCard` (shell cards), `SquadByPosition` (My team +
+competitor team), `LeadingBidsList` (Bids held + competitor bids), `PointsManagerChip` (leaderboard
+manager links), `InfoTip`.
+
+## Linking rules (who links where)
+
+| Name clicked | Goes to |
+|--------------|---------|
+| Manager on auction pages (Bidding room high bidder, Competitors – Bidding, Announcements, player page) | `/auctions/[id]/competitors/[auctionUserId]` — **Competitors – Bidding** (`ManagerChip` default / `ManagerLink`) |
+| Manager anywhere on the **Leaderboard** (Standings, Competitors – Points) | `/auctions/[id]/leaderboard/competitors/[auctionUserId]` — **Competitors – Points** (`PointsManagerChip` only; enforced by `scripts/check-gameweek-surfaces.mjs`) |
+| Player name | `/auctions/[id]/players/[playerId]` with `?returnTo=` so Back returns to the page you came from |
+| "View HFW profile" (competitor page) | `/u/[userId]` |
+
+(History: the phased linking plan is archived at `_archive/ENTITY_INTERCONNECT_PLAN.md`.)
+
 ---
 
 ## WC-era / later UI decisions to keep as standard
@@ -147,7 +175,7 @@ These were validated in production and should be the default for future seasons 
 5. Nation-rolling deadlines as a **dedicated control**, not fake global columns  
 6. Leaderboard Best XI / bench split after publish  
 7. **Left side menu** for in-auction sections (not horizontal tab strip) — see [Mobile auction chrome](#mobile-auction-chrome-validated--keep)  
-8. Mobile: floating menu + `zoom: 0.88` compact chrome; deadlines full width (label above value)  
+8. Mobile: navy "☰ MENU" pill + `zoom: 0.88` compact chrome; deadlines full width (label left, date right)  
 
 ---
 

@@ -33,35 +33,27 @@ Run `node scripts/check-gameweek-surfaces.mjs` after any change here: it fails o
 
 ---
 
-## Frozen chrome (do not restyle)
+## Chrome (keep unless explicitly asked)
 
-Keep the existing auction-app light theme unless explicitly told otherwise:
-
-- Page shell: `max-w-5xl`, header “← Back to auction”, `{auction name} · Leaderboard`, `RefreshButton`
+- Lives inside the auction chrome (navy side menu, gradient header banner, deadline tiles) — no separate page header.
 - Top tabs (exactly three, pill switcher, URL `?tab=`): **Standings** | **My Points** | **Competitors – Points**
-- Palette: site-wide card style (white→sky gradient cards, coloured left stripe, separated rows), gradient active tab, `font-mono` for numbers
+- Site-wide card style (white→tint gradient cards, coloured left stripe, separated rows), gradient active tab, `font-mono` for numbers, display font for names
 - Manager identity: **`PointsManagerChip`** (team name preferred) + manager name underneath when a team name exists.
   It always links to `/auctions/[id]/leaderboard/competitors/[auctionUserId]` — **never** `ManagerChip` directly
   (its default link is Competitors – Bidding). `check-gameweek-surfaces.mjs` fails on `<ManagerChip` in this folder.
-- Mobile: card list; desktop: table — same pattern as today
+- Mobile: card list; desktop: table
 - **No extra top-level tabs** as gameweeks are added
 
 ---
 
-## Snapshot: layout at agreement time (pre-redesign)
+## Standings
 
-What production showed on My Points (auction 9):
+**GAMEWEEK FILTER** checkboxes (Select all + one per GW), caption "Showing: …", table **# · Position · Team · Points**
+(Team = PointsManagerChip → that manager's points page with **← Standings** back link; Position = overall season
+rank, ties share rank). Source: `auction_leaderboard`. Colours: see **Colour & link rules**.
 
-1. Three tabs; My Points active.
-2. Summary card: team crest, team name, manager name, **Total points so far** (large number), disclaimer that Best XI is not applied.
-3. Squad table of **current / aggregated ownership**, not a single locked GW:
-   - Columns observed: Player, Club, Pos, a named GW column (e.g. Premier League GW1), Total.
-   - With only one scored GW, GW and Total duplicated the same numbers.
-4. Repo at that time had started hiding per-GW columns in `OwnedPointsView`, but the product problem remained: one table mixing players across weeks.
-
-**Why that is wrong:** squads change GW to GW. A sold GW1 player must not sit in the GW2 view. A bought GW2 player must not appear in the GW1 view.
-
-Standings tab (verified 7 Oct 2026): **GAMEWEEK FILTER** checkboxes (Select all + one per GW), caption "Showing: …", table **# · Position · Team · Points** (Team = PointsManagerChip → that manager's points page with **← Standings** back link; Position = overall season rank, ties share rank). Source: `auction_leaderboard`.
+Why points are one gameweek at a time (below): squads change week to week — a sold GW1 player must not sit in the
+GW2 view, and a bought GW2 player must not appear in GW1. (An Aug 2026 version mixed players across weeks.)
 
 ---
 

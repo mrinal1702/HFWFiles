@@ -49,7 +49,7 @@ One manifest per gameweek (`round.json`) + standard commands (`scripts/gameweek.
 | [ui-contracts/AUCTION_PAGES.md](./ui-contracts/AUCTION_PAGES.md) | Frozen **current-state** pages (bidding room, My team, Bids held, Competitors – Bidding) — no scoring here |
 | [ui-contracts/LEADERBOARD.md](./ui-contracts/LEADERBOARD.md) | Frozen **scoring** surface (Standings / My Points / Competitors – Points) — do not improvise UI |
 | [OPS_OTHER_MODULES.md](./OPS_OTHER_MODULES.md) | Transfers, announcements, acting-as, archives/history, live auction |
-| [ENTITY_INTERCONNECT_PLAN.md](./ENTITY_INTERCONNECT_PLAN.md) | Planned manager/player/profile links, avatars, phased delivery |
+| [UI_MAP.md](./UI_MAP.md) | UI work entry point: route → file map, theme / colour files, local preview |
 
 ### Also useful (existing)
 

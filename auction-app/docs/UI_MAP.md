@@ -49,3 +49,18 @@ should not need to touch them.
   bids, releases, transfers or team-name changes locally writes to the live UCL auctions (10–13).
   Look, don't click actions.
 - Work on a branch (`ui/*`); Vercel builds a preview URL for pushed branches. Merging to `main` deploys production.
+- Don't run `npm run build` while relying on the dev preview — both write `.next` and the dev server can start
+  returning false 404s; restart the dev server if that happens.
+
+## Shared UI pieces (reuse — don't fork)
+| Piece | Used by |
+|---|---|
+| `app/_components/AuctionCard.tsx` | Active Auctions, Archives, Auction History cards |
+| `app/_components/InfoTip.tsx` | All "i" info icons (hover desktop / tap phone) |
+| `app/auctions/_components/position-theme.tsx` | Position / Flexible / Bench colours + `PositionPill` |
+| `app/auctions/_components/SquadByPosition.tsx` | My team, competitor team |
+| `app/auctions/_components/LeadingBidsList.tsx` | Bids held, competitor "Bids Held by …" |
+| `app/auctions/[auctionId]/leaderboard/_components/PointsManagerChip.tsx` | Every manager link on the Leaderboard |
+| `app/auctions/[auctionId]/transfers/_components/TransferHistoryCard.tsx` (`DealLeg`) | Transfer history + in-progress deal cards |
+
+Visual theme and linking rules: **Visual theme** / **Linking rules** in `docs/OPS_UI_SURFACES.md`.

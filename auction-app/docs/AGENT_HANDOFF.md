@@ -117,7 +117,7 @@ The `sb_publishable_*` / `sb_secret_*` keys work only via the `@supabase/supabas
 - `params` in Next.js 16 is a `Promise<{ … }>` — always `await params`.
 - Online-auction IDs are integers (`"Auctions".id`); live-auction IDs are UUIDs.
 - `players.player_id` = **FotMob player ID** — the external identifier linking players across systems.
-- Tailwind palette: `slate` (text/borders), `sky` (links/highlights), `red` (errors), `amber` (warnings), `green` (success). Card style: `rounded-xl border border-sky-100 bg-white p-5 shadow-sm`.
+- Visual theme (backdrop, fonts, card style, position colours, info icons): see **Visual theme** in [`OPS_UI_SURFACES.md`](./OPS_UI_SURFACES.md); UI file map in [`UI_MAP.md`](./UI_MAP.md). Reuse the shared components listed there.
 - **Do not change participant-facing UI** unless explicitly asked (see `ui-contracts/LEADERBOARD.md` and `OPS_UI_SURFACES.md`).
 - Commit to `main` — Vercel deploys automatically.
 

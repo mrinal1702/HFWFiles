@@ -32,11 +32,11 @@ Being admin and being a participant are independent: a seat in `auction_users` m
 **Model**
 - One admin per auction. Assigned manually in Supabase (`admin_user_id`) for now.
 - A user can be admin-only, participant-only, or both.
-- Dashboard "My Auctions" shows a second link `Admin - <Auction Name>` for the admin, opening the admin interface. Admin-only users see only the admin link.
+- Dashboard "Your auctions" shows a second card for the admin — red card with an **ADMIN** tag and the auction name — opening the admin interface. Admin-only users see only the admin card.
 
 **Admin powers**
 - Add / remove players to/from participant teams.
-- Add / remove budget. **Hard rules:** can never remove more than a participant's active budget; a participant can never go to negative budget.
+- Add / remove budget. **Hard rules:** can never remove more than a participant's Disposable budget (DB `active_budget`); a participant can never go to negative budget.
 - Cancel an ongoing bid — only while lot `status = bidding` (not after sold). Bid-history row can be dropped on cancel.
 - Re-open a sold player: set a sold lot back to `uninitiated` / biddable again.
 - Credit a player directly to a participant with an admin-set **"buy price"** (used for half-release refund / elimination value). On an admin credit, **budget is NOT deducted** — explicit admin override.
