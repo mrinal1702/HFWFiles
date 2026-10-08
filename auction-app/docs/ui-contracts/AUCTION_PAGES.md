@@ -78,10 +78,12 @@ Timer (local)** — nothing listed below the header when there are none.
 See [TRANSFER_ROOM.md](../TRANSFER_ROOM.md) and [ANNOUNCEMENTS.md](../ANNOUNCEMENTS.md).
 
 ### Match scores — `/auctions/[id]/match-scores`
-Per-match FinalPoints sheets for the auction's competition — **one tab per gameweek**, each listing
+Per-match FinalPoints sheets for the auction's competition — **one tab per gameweek**; a **match
+dropdown** (blank by default — no scores until a match is chosen; `?match=<slug>` preselects it) lists
 that gameweek's matches. A new gameweek appears as a new tab automatically when its matches are
-scored (`data/competitions/<slug>/sheets.json`). Match data, not manager scoring; player names
-link to the player page.
+scored (`data/competitions/<slug>/sheets.json`). Rows are separated cards tinted by **match position**
+(the FinalPoints `position`, i.e. where they played in that match — may differ from the listed
+position). Match data, not manager scoring; player names link to the player page.
 
 ### Player page — `/auctions/[id]/players/[playerId]`
 The one deliberate cross-over. Sections: lot status (state, high bid, high bidder, lot timer) with
