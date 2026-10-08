@@ -33,7 +33,7 @@ export function CompetitorsAuctionList({ auctionId, rows }: Props) {
                   labelClassName="text-base font-medium"
                 />
                 {row.user.team_name?.trim() && (
-                  <p className="mt-0.5 pl-6 text-xs text-slate-500">{row.user.name}</p>
+                  <p className="mt-0.5 pl-6 text-xs text-slate-500">{row.user.team_name}</p>
                 )}
                 {row.user.is_relegated && (
                   <span className="mt-1.5 ml-6 inline-block rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-800">
@@ -91,7 +91,7 @@ export function CompetitorsAuctionList({ auctionId, rows }: Props) {
                     labelClassName="font-medium text-slate-900"
                   />
                   {row.user.team_name?.trim() && (
-                    <div className="mt-0.5 pl-6 text-xs text-slate-500">{row.user.name}</div>
+                    <div className="mt-0.5 pl-6 text-xs text-slate-500">{row.user.team_name}</div>
                   )}
                   {row.user.is_relegated && (
                     <span className="mt-1 ml-6 inline-block rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-800">
