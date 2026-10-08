@@ -19,6 +19,7 @@ Underlying scripts (called by gameweek.mjs; use directly only for repairs):
 ## Other operations
 | Need | Script |
 |---|---|
+| Gameweek schedule (deadlines + first kickoff, whole season in advance) | `record-competition-schedule.mjs --competition <slug> [--apply]` ← `competitions/<tier>/<slug>/schedule.json` (Irish times with explicit offsets) → `competition_rounds` |
 | Real teams knocked out | `apply-elimination-refunds.mjs --auction-ids … [--dry-run] "Team"` (uses the competition pool) |
 | Cut managers | `apply-participant-relegations.mjs` |
 | Player pool | `import-competition-players.mjs`, `import-master-player-list.mjs`, `add-players-to-pool.mjs`, `seed-auction-lots.mjs` |

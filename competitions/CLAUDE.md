@@ -18,6 +18,9 @@ archive/<slug>/     read-only history (do not modify without explicit approval)
 ## Layout of a competition
 - `competition.json` — slug, DB ids, auction ids, legacy GW range, status. **Scripts must read ids
   from here, never infer them.**
+- `schedule.json` — every gameweek's bidding deadlines + first kickoff (Irish time, explicit UTC offset).
+  Recorded into Supabase `competition_rounds` by `auction-app/scripts/record-competition-schedule.mjs`;
+  self-created auctions use it to pick their first gameweek. Keep at least 2 future gameweeks recorded.
 - `player-pool/` — `master_player_list.csv` (listed positions) + `squads/*.json`
 - `rounds/mwNN/` — `round.json` (**the gameweek manifest**: legacy GW id, auctions, bidding window,
   fixtures, states — created by `gameweek.mjs init-round`, see `auction-app/docs/GAMEWEEK_RUNBOOK.md`) and

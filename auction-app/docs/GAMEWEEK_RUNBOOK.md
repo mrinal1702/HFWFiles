@@ -12,6 +12,17 @@ C=uefa-cl-2026-27   # competition slug
 R=mw02              # round slug
 ```
 
+## 0. Keep the season schedule recorded (whole season, ideally in advance)
+Edit `competitions/active/$C/schedule.json` (Irish times with an explicit offset, e.g.
+`2026-10-20T16:15:00+01:00`; the script rejects an offset that doesn't match Irish time on that date), then:
+```bash
+node scripts/record-competition-schedule.mjs --competition $C          # dry run
+node scripts/record-competition-schedule.mjs --competition $C --apply  # → competition_rounds
+```
+Self-created auctions read this to pick their first gameweek; they cannot be started unless at
+least 2 future gameweeks are recorded. The dry run also flags any round whose `round.json`
+bidding deadlines disagree with the schedule.
+
 ## 1. Create the round manifest (once per gameweek)
 ```bash
 node scripts/gameweek.mjs init-round --competition $C --round $R

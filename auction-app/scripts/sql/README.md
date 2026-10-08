@@ -72,6 +72,7 @@ This index maps **every object that exists in the live database** to the **one f
 | `auction_users.team_name` | `auction-team-names.sql` |
 | `auction_users.is_relegated`, `.relegated_at` | `participant-relegation-schema.sql` |
 | `"Player_Scores".competition_round_id`, `.competition_match_id`, `.fotmob_match_id` | `competition-isolation-migrate-all.sql` |
+| `competition_rounds.initiation_deadline_at`, `.raise_deadline_at`, `.hard_deadline_at`, `.first_kickoff_at` (+ ordering check, schedule index) | `competition-round-schedule.sql` — rows written by `scripts/record-competition-schedule.mjs` from `competitions/<tier>/<slug>/schedule.json` |
 
 **Data-only ops scripts (no schema change):**
 
