@@ -84,7 +84,7 @@ export function DealLeg({
   return (
     <div className={`relative overflow-hidden rounded-xl border py-3 pl-4 pr-3 ${t.box}`}>
       <span aria-hidden className={`absolute inset-y-0 left-0 w-1 ${t.stripe}`} />
-      <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-semibold text-slate-900">
+      <p className="flex flex-wrap items-center gap-x-2 gap-y-1 font-display text-base font-semibold tracking-[0.01em] text-slate-900">
         <span>{from}</span>
         <svg aria-hidden viewBox="0 0 20 20" fill="currentColor" className={`h-4 w-4 shrink-0 ${t.arrow}`}>
           <path
@@ -105,7 +105,7 @@ export function DealLeg({
               key={p.player_id}
               className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-2.5 py-1 text-sm text-slate-800"
             >
-              <span className="font-medium">{p.player_name ?? `Player #${p.player_id}`}</span>
+              <span className="font-display text-[15px] font-semibold tracking-[0.01em]">{p.player_name ?? `Player #${p.player_id}`}</span>
               {p.position && <span className="text-xs text-slate-500">{p.position}</span>}
             </li>
           ))}

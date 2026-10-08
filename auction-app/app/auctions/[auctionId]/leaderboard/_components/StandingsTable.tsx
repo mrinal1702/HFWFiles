@@ -150,7 +150,7 @@ export function StandingsTable({ auctionId, standings, gameWeeks }: StandingsTab
 
       <div className="overflow-x-auto">
         <table className="w-full min-w-[20rem] border-separate border-spacing-y-2 text-left text-sm">
-          <thead className="text-xs uppercase tracking-wide text-slate-500">
+          <thead className="text-xs uppercase tracking-wide text-slate-600">
             <tr>
               <th className="w-8 px-2 py-2" aria-hidden="true" />
               <th className="px-3 py-2 font-semibold">Position</th>

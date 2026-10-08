@@ -467,7 +467,7 @@ export function BiddingRoomClient({
                   />
                   <div className="flex flex-wrap items-start justify-between gap-1.5 gap-y-2">
                     <div className="min-w-0 flex-1">
-                      <h3 className="text-sm font-semibold leading-snug text-slate-900">
+                      <h3 className="font-display text-base font-semibold leading-snug tracking-[0.01em] text-slate-900">
                         <Link href={playerHref(lot.player_id)} prefetch={false} className="hover:underline">
                           {lot.player_name ?? `Player #${lot.player_id}`}
                         </Link>
@@ -539,7 +539,7 @@ export function BiddingRoomClient({
 
           <div className="hidden overflow-x-auto md:block">
             <table className="w-full min-w-[44rem] border-separate border-spacing-y-2 text-left text-sm lg:min-w-[56rem]">
-              <thead className="text-xs uppercase tracking-wide text-slate-500">
+              <thead className="text-xs uppercase tracking-wide text-slate-600">
                 <tr>
                   <th className="px-3 py-2 font-semibold">Player</th>
                   <th className="px-3 py-2 font-semibold">Club</th>
@@ -570,7 +570,7 @@ export function BiddingRoomClient({
                       id={lotRowAnchorId(lot.player_id)}
                       className={`scroll-mt-28 [&>td]:border-y [&>td:first-child]:rounded-l-xl [&>td:first-child]:border-l-[6px] [&>td:last-child]:rounded-r-xl [&>td:last-child]:border-r ${positionTheme(lot.position).row}`}
                     >
-                      <td className="px-3 py-3 align-top font-medium text-slate-900">
+                      <td className="px-3 py-3 align-top font-display text-[15px] font-semibold tracking-[0.01em] text-slate-900">
                         <Link
                           href={playerHref(lot.player_id)}
                           prefetch={false}

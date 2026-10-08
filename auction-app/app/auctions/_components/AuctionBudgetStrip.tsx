@@ -29,7 +29,7 @@ export function AuctionBudgetStrip({
   if (!showBudgetStrip) return null;
 
   return (
-    <div className="max-lg:-mx-4 max-lg:sticky max-lg:top-0 max-lg:z-20 max-lg:bg-slate-50/90 max-lg:px-4 max-lg:py-2 max-lg:backdrop-blur">
+    <div className="max-lg:-mx-4 max-lg:sticky max-lg:top-0 max-lg:z-20 max-lg:px-4 max-lg:py-2">
       <div className="relative flex flex-col gap-3 overflow-hidden rounded-2xl border border-sky-100 bg-gradient-to-br from-white via-white to-sky-50 py-3 pl-5 pr-3 shadow-sm sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:pl-6 sm:pr-4">
         <span aria-hidden className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-sky-400 to-sky-600" />
         <PlayingAsTeamName

@@ -14,7 +14,9 @@ Skip `competitions/`, `scoring-engine/`, `formation-engine/`, `positions/`, `dat
 ## Styling foundations (change these for app-wide look)
 | What | File |
 |---|---|
-| Tailwind v4 entry, colour tokens, mobile zoom | `app/globals.css` |
+| Tailwind v4 entry, colour tokens, page backdrop (mid-blue + glows + pitch stripes), display headings, mobile zoom | `app/globals.css` |
+| Fonts: Geist (body), **Barlow Semi Condensed** = `font-display` (titles, player / manager / team names) | `app/layout.tsx` |
+| Position colours (GK/DEF/MID/FWD, Flexible, Bench) | `app/auctions/_components/position-theme.tsx` |
 | Root shell, fonts (Geist), `<body>` classes | `app/layout.tsx` |
 | In-auction shell (side nav + header + budget strip) | `app/auctions/[auctionId]/layout.tsx` |
 | Side menu | `app/auctions/_components/AuctionSideNav.tsx` |

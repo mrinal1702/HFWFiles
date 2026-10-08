@@ -51,7 +51,7 @@ export function PlayingAsTeamName({ auctionId, participantName, teamName }: Prop
     <>
       <p className="text-sm text-slate-600">
         Team Name:{" "}
-        <span className="font-medium text-slate-900">{displayLabel}</span>
+        <span className="font-display text-base font-semibold tracking-[0.01em] text-slate-900">{displayLabel}</span>
         <button
           type="button"
           onClick={openModal}

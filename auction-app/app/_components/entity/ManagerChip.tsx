@@ -62,7 +62,7 @@ export function ManagerChip({
     <>
       {showAvatar && <Avatar name={avatarName} avatarUrl={avatarUrl} size="xs" />}
       <span
-        className={`min-w-0 truncate ${linked ? "underline-offset-2 hover:underline" : ""} ${labelClassName}`}
+        className={`min-w-0 truncate font-display tracking-[0.01em] ${linked ? "underline-offset-2 hover:underline" : ""} ${labelClassName}`}
       >
         {label}
       </span>

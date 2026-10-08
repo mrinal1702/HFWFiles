@@ -29,9 +29,9 @@ function isActive(pathname: string, href: string, match: "exact" | "prefix", auc
 
 // Navy menu (rail, phone button, drawer) with white text so the menu stands out.
 const navItemClass =
-  "flex w-full items-center rounded-lg px-3 py-2.5 text-left text-sm font-medium leading-tight text-slate-200 transition hover:bg-white/10 hover:text-white";
+  "flex w-full items-center rounded-lg px-3 py-2.5 text-left text-sm font-medium uppercase leading-tight tracking-wide text-slate-200 transition hover:bg-white/10 hover:text-white";
 const navItemActiveClass =
-  "flex w-full items-center rounded-lg bg-gradient-to-r from-sky-500 to-sky-600 px-3 py-2.5 text-left text-sm font-semibold leading-tight text-white shadow-sm";
+  "flex w-full items-center rounded-lg bg-gradient-to-r from-sky-500 to-sky-600 px-3 py-2.5 text-left text-sm font-semibold uppercase leading-tight tracking-wide text-white shadow-sm";
 
 export function AuctionSideNav({ auctionId }: { auctionId: number }) {
   const pathname = usePathname();
@@ -115,7 +115,7 @@ export function AuctionSideNav({ auctionId }: { auctionId: number }) {
             aria-label="Auction sections"
           >
             <div className="flex items-center justify-between border-b border-white/10 px-3 py-3">
-              <p className="text-sm font-semibold text-white">Menu</p>
+              <p className="text-sm font-semibold uppercase tracking-wide text-white">Menu</p>
               <button
                 type="button"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-lg text-xl leading-none text-slate-300 hover:bg-white/10 hover:text-white"

@@ -64,7 +64,7 @@ export function CompetitorsPointsList({
 
       <div className="hidden overflow-x-auto md:block">
         <table className="w-full min-w-[20rem] border-separate border-spacing-y-2 text-left text-sm">
-          <thead className="text-xs uppercase tracking-wide text-slate-500">
+          <thead className="text-xs uppercase tracking-wide text-slate-600">
             <tr>
               <th className="px-3 py-2 font-semibold">Manager</th>
               <th className="w-32 px-3 py-2 text-right font-semibold">Season total</th>

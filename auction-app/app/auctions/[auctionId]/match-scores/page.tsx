@@ -42,7 +42,7 @@ export default async function AuctionMatchScoresPage({
             />
           </svg>
         </span>
-        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Match scores</h2>
+        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl uppercase tracking-wide">Match scores</h2>
       </div>
 
       <div className="rounded-2xl border border-sky-100 bg-white/70 p-3 shadow-sm sm:p-5">

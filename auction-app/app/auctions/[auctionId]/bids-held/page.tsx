@@ -50,7 +50,7 @@ export default async function BidsHeldPage({
               </svg>
             </span>
             <div className="flex items-center gap-1.5">
-              <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Bids held</h2>
+              <h2 className="text-lg font-semibold text-slate-900 sm:text-xl uppercase tracking-wide">Bids held</h2>
               <InfoTip text={BIDS_HELD_HELP} label="About bids held" />
             </div>
           </div>

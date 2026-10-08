@@ -58,7 +58,7 @@ export function GwPointsView({
             <div className="flex min-w-0 items-center gap-3">
               <Avatar name={squad.name} avatarUrl={squad.avatarUrl} size="md" />
               <div className="min-w-0">
-                <p className="text-lg font-semibold text-slate-900">
+                <p className="font-display text-xl font-bold tracking-[0.01em] text-slate-900">
                   {fantasyTeamLabel(squad.teamName, squad.name)}
                 </p>
                 {squad.teamName?.trim() && <p className="text-sm text-slate-600">{squad.name}</p>}

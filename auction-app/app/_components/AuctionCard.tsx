@@ -54,7 +54,7 @@ export function AuctionCard({
       </span>
       <span className="min-w-0 flex-1">
         <span className="flex flex-wrap items-center gap-2">
-          <span className="font-semibold text-slate-900">{title}</span>
+          <span className="font-display text-lg font-semibold tracking-[0.01em] text-slate-900">{title}</span>
           {tone === "admin" && (
             <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-rose-700">
               Admin

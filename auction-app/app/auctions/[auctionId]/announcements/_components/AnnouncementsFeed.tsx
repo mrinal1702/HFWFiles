@@ -115,7 +115,7 @@ function BuyCard({ a, auctionId }: { a: BuyAnnouncement; auctionId: number }) {
         <p className="text-sm font-semibold text-slate-900">
           <ManagerLink auctionId={auctionId} managerId={a.buyerId} name={a.buyerName} className="text-emerald-700" />
           {" signed "}
-          <span className="font-semibold text-slate-900">{a.playerName ?? a.playerId}</span>
+          <span className="font-display text-[15px] font-semibold tracking-[0.01em] text-slate-900">{a.playerName ?? a.playerId}</span>
           {" for "}
           <span className="font-mono text-emerald-700">£{a.price}m</span>
         </p>
@@ -138,7 +138,7 @@ function ReleaseCard({ a, auctionId }: { a: ReleaseAnnouncement; auctionId: numb
         <p className="text-sm font-semibold text-slate-900">
           <ManagerLink auctionId={auctionId} managerId={a.ownerId} name={a.ownerName} className="text-amber-700" />
           {" released "}
-          <span className="font-semibold text-slate-900">{a.playerName ?? a.playerId}</span>
+          <span className="font-display text-[15px] font-semibold tracking-[0.01em] text-slate-900">{a.playerName ?? a.playerId}</span>
           {isPaid ? (
             <>
               {" — "}
@@ -238,7 +238,7 @@ function TransferSide({
             key={p.player_id}
             className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-2 py-1 text-sm text-slate-800"
           >
-            <span className="font-medium">{p.player_name ?? p.player_id}</span>
+            <span className="font-display text-[15px] font-semibold tracking-[0.01em]">{p.player_name ?? p.player_id}</span>
             {p.position && <PositionPill position={p.position} />}
           </li>
         ))}

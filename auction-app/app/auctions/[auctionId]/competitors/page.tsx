@@ -32,7 +32,7 @@ export default async function CompetitorsPage({
           </svg>
         </span>
         <div className="flex min-w-0 items-center gap-1.5">
-          <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Competitors – Bidding</h2>
+          <h2 className="text-lg font-semibold text-slate-900 sm:text-xl uppercase tracking-wide">Competitors – Bidding</h2>
           <InfoTip
             text="Click on a competitor to see their team and the bids they currently hold"
             label="About Competitors – Bidding"

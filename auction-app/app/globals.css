@@ -19,12 +19,32 @@ html {
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-barlow), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
+/*
+  Page backdrop: pale sky base, soft blue / green corner glows and faint "mown pitch" stripes.
+  Content sits on white cards, so text contrast is unchanged. Fixed so it doesn't scroll.
+*/
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  background-color: #c7dcf0;
+  background-image:
+    radial-gradient(1000px 600px at 108% -10%, rgb(14 165 233 / 0.42), transparent 62%),
+    radial-gradient(900px 560px at -10% 110%, rgb(16 185 129 / 0.30), transparent 60%),
+    radial-gradient(800px 500px at -5% -5%, rgb(79 70 229 / 0.20), transparent 60%),
+    linear-gradient(160deg, #d9e8f6 0%, #c3d9ef 55%, #b9d3ec 100%),
+    repeating-linear-gradient(115deg, rgb(2 132 199 / 0.07) 0 64px, transparent 64px 128px);
+  background-blend-mode: normal, normal, normal, multiply, normal;
+  background-attachment: fixed;
+}
+
+/* Titles use the display face. */
+h1,
+h2 {
+  font-family: var(--font-display);
+  letter-spacing: 0.005em;
 }
 
 /* Auction pages: show more content on phones (users can pinch-zoom if needed). */

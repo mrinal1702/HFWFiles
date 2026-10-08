@@ -84,7 +84,7 @@ export default async function MyTeamPage({
                 />
               </svg>
             </span>
-            <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">My team</h2>
+            <h2 className="text-lg font-semibold text-slate-900 sm:text-xl uppercase tracking-wide">My team</h2>
           </div>
           <div className="grid w-full grid-cols-2 gap-2 sm:flex sm:w-auto sm:gap-3">
             <div className="min-w-0 rounded-xl bg-gradient-to-br from-sky-500 to-sky-700 px-3 py-1.5 text-white shadow-sm shadow-sky-200 sm:min-w-[9rem]">

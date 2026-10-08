@@ -30,7 +30,7 @@ export function LeadingBidsList({
             >
               <span aria-hidden className={`absolute inset-y-0 left-0 w-1.5 ${t.stripe}`} />
               <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <h4 className="text-base font-semibold text-slate-900">
+                <h4 className="font-display text-base font-semibold tracking-[0.01em] text-slate-900">
                   <Link href={playerHref(l.player_id)} className="hover:underline">
                     {l.player_name ?? "—"}
                   </Link>
@@ -56,7 +56,7 @@ export function LeadingBidsList({
       </ul>
       <div className="hidden overflow-x-auto md:block">
         <table className="w-full min-w-[36rem] border-separate border-spacing-y-1.5 text-left text-sm">
-          <thead className="text-xs uppercase tracking-wide text-slate-500">
+          <thead className="text-xs uppercase tracking-wide text-slate-600">
             <tr>
               <th className="px-3 py-2 font-semibold">Player</th>
               <th className="px-3 py-2 font-semibold">Club</th>
@@ -71,7 +71,7 @@ export function LeadingBidsList({
                 key={l.player_id}
                 className={`[&>td]:border-y [&>td:first-child]:rounded-l-xl [&>td:first-child]:border-l-[6px] [&>td:last-child]:rounded-r-xl [&>td:last-child]:border-r ${positionTheme(l.position).row}`}
               >
-                <td className="px-3 py-2.5 font-medium text-slate-900">
+                <td className="px-3 py-2.5 font-display text-[15px] font-semibold tracking-[0.01em] text-slate-900">
                   <Link href={playerHref(l.player_id)} className="hover:underline">
                     {l.player_name ?? "—"}
                   </Link>

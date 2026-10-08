@@ -83,7 +83,7 @@ export function SquadByPosition({
                 >
                   <span aria-hidden className={`absolute inset-y-0 left-0 w-1.5 ${g.theme.stripe}`} />
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
-                    <h4 className="text-base font-semibold text-slate-900">
+                    <h4 className="font-display text-base font-semibold tracking-[0.01em] text-slate-900">
                       <Link href={playerHref(p.player_id)} className="hover:underline">
                         {p.player_name ?? "—"}
                       </Link>
@@ -109,7 +109,7 @@ export function SquadByPosition({
       {/* Desktop: one table, separated position-tinted rows */}
       <div className="hidden overflow-x-auto md:block">
         <table className="w-full min-w-[28rem] border-separate border-spacing-y-1.5 text-left text-sm">
-          <thead className="text-xs uppercase tracking-wide text-slate-500">
+          <thead className="text-xs uppercase tracking-wide text-slate-600">
             <tr>
               <th className="px-3 py-2 font-semibold">Player</th>
               <th className="px-3 py-2 font-semibold">Club</th>
@@ -130,7 +130,7 @@ export function SquadByPosition({
                   key={p.player_id}
                   className={`[&>td]:border-y [&>td:first-child]:rounded-l-xl [&>td:first-child]:border-l-[6px] [&>td:last-child]:rounded-r-xl [&>td:last-child]:border-r ${g.theme.row}`}
                 >
-                  <td className="px-3 py-2.5 font-medium text-slate-900">
+                  <td className="px-3 py-2.5 font-display text-[15px] font-semibold tracking-[0.01em] text-slate-900">
                     <Link href={playerHref(p.player_id)} className="hover:underline">
                       {p.player_name ?? "—"}
                     </Link>

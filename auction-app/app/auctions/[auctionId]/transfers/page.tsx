@@ -131,7 +131,7 @@ export default async function TransfersPage({
       <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-sky-100 bg-white p-4 shadow-sm sm:p-5">
         <div>
           <div className="flex items-center gap-2">
-            <h2 className="text-lg font-semibold text-slate-900">Transfer Room</h2>
+            <h2 className="text-lg font-semibold text-slate-900 uppercase tracking-wide">Transfer Room</h2>
             <InfoTip text={TRANSFER_HELP} label="How transfers work" wide />
             <span className="inline-flex items-center rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-800">
               Window open

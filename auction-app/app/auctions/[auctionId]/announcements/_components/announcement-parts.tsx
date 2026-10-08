@@ -14,11 +14,11 @@ export function ManagerLink({
   className?: string;
 }) {
   const label = name ?? "Unknown";
-  if (managerId == null) return <span className={className}>{label}</span>;
+  if (managerId == null) return <span className={`font-display tracking-[0.01em] ${className}`}>{label}</span>;
   return (
     <Link
       href={`/auctions/${auctionId}/competitors/${managerId}`}
-      className={`underline decoration-current/30 underline-offset-2 hover:decoration-current ${className}`}
+      className={`font-display tracking-[0.01em] underline decoration-current/30 underline-offset-2 hover:decoration-current ${className}`}
     >
       {label}
     </Link>

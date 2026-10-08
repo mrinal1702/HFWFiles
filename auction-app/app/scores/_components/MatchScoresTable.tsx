@@ -80,7 +80,7 @@ export function MatchScoresTable({
               <span aria-hidden className={`absolute inset-y-0 left-0 w-1.5 ${t.stripe}`} />
               <span className="w-6 shrink-0 font-mono text-xs text-slate-400">{idx + 1}</span>
               <div className="min-w-0 flex-1">
-                <p className="text-sm font-semibold text-slate-900">{name(row)}</p>
+                <p className="font-display text-base font-semibold tracking-[0.01em] text-slate-900">{name(row)}</p>
                 <p className="mt-0.5 flex flex-wrap items-center gap-1.5 text-xs text-slate-600">
                   <span>{row.teamName}</span>
                   {pill(row)}
@@ -95,7 +95,7 @@ export function MatchScoresTable({
       {/* Desktop: separated rows */}
       <div className="hidden overflow-x-auto md:block">
         <table className="w-full min-w-[32rem] border-separate border-spacing-y-1.5 text-left text-sm">
-          <thead className="text-xs uppercase tracking-wide text-slate-500">
+          <thead className="text-xs uppercase tracking-wide text-slate-600">
             <tr>
               <th className="w-10 px-3 py-2 font-semibold">#</th>
               <th className="px-3 py-2 font-semibold">Player</th>
@@ -111,7 +111,7 @@ export function MatchScoresTable({
                 className={`[&>td]:border-y [&>td:first-child]:rounded-l-xl [&>td:first-child]:border-l-[6px] [&>td:last-child]:rounded-r-xl [&>td:last-child]:border-r ${positionTheme(row.position).row}`}
               >
                 <td className="px-3 py-2.5 font-mono text-xs text-slate-400">{idx + 1}</td>
-                <td className="px-3 py-2.5 font-medium text-slate-900">{name(row)}</td>
+                <td className="px-3 py-2.5 font-display text-[15px] font-semibold tracking-[0.01em] text-slate-900">{name(row)}</td>
                 <td className="px-3 py-2.5 text-slate-600">{row.teamName}</td>
                 <td className="px-3 py-2.5">{pill(row)}</td>
                 <td className="px-3 py-2.5 text-right">{score(row)}</td>

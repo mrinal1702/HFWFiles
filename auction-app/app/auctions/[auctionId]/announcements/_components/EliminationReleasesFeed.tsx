@@ -49,7 +49,7 @@ function EliminationReleaseCard({ release: r, auctionId }: { release: Eliminatio
         <p className="text-sm font-semibold text-slate-900">
           <ManagerLink auctionId={auctionId} managerId={r.ownerId} name={r.ownerName} className="text-rose-700" />
           {" — "}
-          <span className="font-semibold text-slate-900">{r.playerName ?? r.playerId}</span>
+          <span className="font-display text-[15px] font-semibold tracking-[0.01em] text-slate-900">{r.playerName ?? r.playerId}</span>
           <span className="font-normal text-slate-600"> ({r.teamName} eliminated)</span>
           {" — "}
           <span className="font-normal text-slate-600">elimination release, </span>

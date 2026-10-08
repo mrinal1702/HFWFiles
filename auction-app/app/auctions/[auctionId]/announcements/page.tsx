@@ -31,7 +31,7 @@ export default async function AnnouncementsPage({
             />
           </svg>
         </span>
-        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Announcements</h2>
+        <h2 className="text-lg font-semibold text-slate-900 sm:text-xl uppercase tracking-wide">Announcements</h2>
       </div>
 
       <AnnouncementsPageTabs

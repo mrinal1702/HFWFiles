@@ -34,7 +34,7 @@ export default async function BiddingRoomPage({
           </svg>
         </span>
         <div className="flex min-w-0 items-center gap-1.5">
-          <h2 className="text-base font-semibold text-slate-900 sm:text-xl">Bidding room</h2>
+          <h2 className="text-base font-semibold text-slate-900 sm:text-xl uppercase tracking-wide">Bidding room</h2>
           <InfoTip text={BIDDING_ROOM_HELP} label="About the bidding room" />
         </div>
       </div>
