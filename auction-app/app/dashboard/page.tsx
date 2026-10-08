@@ -4,6 +4,8 @@ import { redirect } from "next/navigation";
 import { AuctionCard } from "@/app/_components/AuctionCard";
 import { ParticipantNav } from "@/app/_components/ParticipantNav";
 import { getAuthUser } from "@/lib/auth/get-user";
+import { CREATE_AUCTION_COMPETITION } from "@/lib/auction-create";
+import { loadStartGameweekPreview } from "@/lib/auction-state/start-gameweek";
 import { loadMyActiveAuctionsForUser } from "@/lib/auction-state/auction-dashboard";
 import { loadMyAdminAuctionsForUser } from "@/lib/online-auction-admin";
 import { loadMyLiveAuctionsForDashboard } from "@/lib/live-auction-data";
@@ -53,6 +55,15 @@ export default async function DashboardPage({
     ]);
   } catch (e) {
     loadError = e instanceof Error ? e.message : String(e);
+  }
+
+  // Create auction is offered only while enough upcoming gameweeks are on record.
+  let createBlockedMessage: string | null = null;
+  try {
+    const { outcome } = await loadStartGameweekPreview(CREATE_AUCTION_COMPETITION.id);
+    if (!outcome.ok) createBlockedMessage = outcome.message;
+  } catch {
+    createBlockedMessage = "Creating auctions is unavailable right now. Please try again later.";
   }
 
   return (
@@ -178,16 +189,25 @@ export default async function DashboardPage({
 
       <section className="mt-8">
         <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">Start a new auction</h2>
-        <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          Commissioners will be able to create leagues here in a future update.
-        </p>
-        <button
-          type="button"
-          disabled
-          className="mt-4 min-h-12 w-full cursor-not-allowed rounded-lg border border-slate-200 bg-slate-100 px-4 py-3 text-sm text-slate-500 sm:w-auto sm:px-6"
-        >
-          Create auction (coming soon)
-        </button>
+        {createBlockedMessage ? (
+          <>
+            <p className="mt-2 text-sm leading-relaxed text-slate-600">{createBlockedMessage}</p>
+            <button
+              type="button"
+              disabled
+              className="mt-4 min-h-12 w-full cursor-not-allowed rounded-lg border border-slate-200 bg-slate-100 px-4 py-3 text-sm text-slate-500 sm:w-auto sm:px-6"
+            >
+              Create auction
+            </button>
+          </>
+        ) : (
+          <Link
+            href="/create-auction"
+            className="mt-4 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-sky-700 px-4 py-3 text-base font-medium text-white shadow-md shadow-sky-200 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-200 sm:w-auto sm:px-6"
+          >
+            Create auction
+          </Link>
+        )}
       </section>
 
       <p className="mt-12 text-center text-sm sm:text-left">

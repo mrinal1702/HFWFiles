@@ -38,6 +38,7 @@ export async function middleware(request: NextRequest) {
     path === "/archives" ||
     path === "/auction-history" ||
     path === "/meme-builds" ||
+    path === "/create-auction" ||
     path === "/auctions" ||
     /^\/auctions\/[^/]+/.test(path) ||
     /^\/auction-admin\/[^/]+/.test(path) ||
@@ -61,6 +62,7 @@ export const config = {
     "/archives",
     "/auction-history",
     "/meme-builds",
+    "/create-auction",
     "/auctions",
     "/auctions/:path*",
     "/auction-admin/:path*",
