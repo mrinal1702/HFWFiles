@@ -39,7 +39,7 @@ All under `app/auctions/[auctionId]/` unless noted. Shared pieces live in `app/a
 | Player detail | `/players/[playerId]` | `players/[playerId]/page.tsx` | — |
 | Landing page | `/` | `app/page.tsx` (hero, step copy in `STEPS`, Sign up / Log in card) | `app/_components/HowItWorksCarousel.tsx` (one card at a time on all screens, auto-slides every 10s, arrows on `sm+`) |
 | Dashboard (post-login) | `/dashboard` | `app/dashboard/page.tsx` | `JoinAuctionForm.tsx`, `ProfileAvatar.tsx`, `app/_components/TrophyCabinet.tsx` |
-| Login / signup | `/login`, `/signup` | `app/login/page.tsx`, `app/signup/page.tsx` | — |
+| Login / signup / password reset | `/login`, `/signup`, `/forgot-password`, `/reset-password` | `app/login/page.tsx`, `app/signup/page.tsx`, `app/forgot-password/page.tsx`, `app/reset-password/page.tsx` | `app/_components/AuthShell.tsx` (navy header card + logo, `AuthField` with optional InfoTip, `AuthError`, footer pills) |
 
 Data loaders (`lib/auction-state/`, `lib/scoring/`) feed these pages — a purely visual change
 should not need to touch them.

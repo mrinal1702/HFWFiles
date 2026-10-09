@@ -26,6 +26,7 @@ Top nav ([`ParticipantNav`](../app/_components/ParticipantNav.tsx)):
 | Tab | Route | Purpose |
 |-----|-------|---------|
 | **Landing page** | `/` | Navy hero (logo, title, tagline) · "how it works" carousel (Bid → Construct a team → Score; one card at a time, auto-slides every 10s, pauses on hover/interaction) · "Get in the game – it's completely free" Sign up / Log in card (signed in: Go to Active Auctions) · Read the rules |
+| **Log in / Sign up / password reset** | `/login`, `/signup`, `/forgot-password`, `/reset-password` | Shared `AuthShell` card: navy header (logo → home, eyebrow, title), white form body with sky stripe, gradient submit, footer links + "← Back to home" pill. Sign up asks for **Name** (real name, not a handle — InfoTip; stored as `display_name`), Email, Password |
 | **Active Auctions** | `/dashboard` | Current leagues + join code |
 | **Archives** | `/archives` | Completed leagues → Leaderboard / Match scores / Open auction |
 | **Auction History** | `/auction-history` | Tabs: **Past Finishes** (rank + year; podium medals 🏆🥈🥉) and **Trophy Cabinet** (1st-place only — large trophy image + auction name; empty state if none) |

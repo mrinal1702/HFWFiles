@@ -4,10 +4,16 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+import {
+  AuthError,
+  AuthField,
+  AuthFooterPill,
+  AuthShell,
+  authField as field,
+  authPrimaryButton,
+} from "@/app/_components/AuthShell";
 import { createSupabaseBrowserClient } from "@/lib/supabase/browser";
 
-const field =
-  "min-h-11 rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-base text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/25 sm:text-sm";
 
 export default function SignupPage() {
   const [error, setError] = useState<string | null>(null);
@@ -30,7 +36,7 @@ export default function SignupPage() {
     }
     if (!displayName) {
       setPending(false);
-      setError("Display name is required.");
+      setError("Name is required.");
       return;
     }
 
@@ -52,67 +58,51 @@ export default function SignupPage() {
   }
 
   return (
-    <main className="mx-auto flex max-w-md flex-1 flex-col px-4 py-8 sm:px-6 sm:py-10">
-      <p className="text-center text-sm font-medium text-sky-700">First time here?</p>
-      <h1 className="mt-2 text-center text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-        Create your account
-      </h1>
-      <p className="mt-3 text-center text-sm leading-relaxed text-slate-600">
-        Pick a display name your league will see. Use an email you can access for login.
-      </p>
-
-      <form onSubmit={onSubmit} className="mt-8 flex flex-col gap-5">
-        <label className="flex flex-col gap-2 text-sm">
-          <span className="text-slate-700">Display name</span>
+    <AuthShell
+      eyebrow="It's completely free"
+      title="Create your account"
+      footer={
+        <>
+          <p className="text-slate-700">
+            Already have an account?{" "}
+            <Link href="/login" className="font-semibold text-sky-800 underline-offset-2 hover:underline">
+              Log in
+            </Link>
+          </p>
+          <AuthFooterPill href="/">← Back to home</AuthFooterPill>
+        </>
+      }
+    >
+      <form onSubmit={onSubmit} className="flex flex-col gap-4">
+        <AuthField label="Name" info="Your real name, please — not a nickname or online handle. This is what your league will see.">
           <input
             name="display_name"
             type="text"
-            autoComplete="nickname"
+            autoComplete="name"
             required
             maxLength={80}
             className={field}
           />
-        </label>
-        <label className="flex flex-col gap-2 text-sm">
-          <span className="text-slate-700">Email</span>
+        </AuthField>
+        <AuthField label="Email" info="Use an email you can access — you'll log in with it, and password resets go here.">
           <input name="email" type="email" autoComplete="email" required className={field} />
-        </label>
-        <label className="flex flex-col gap-2 text-sm">
-          <span className="text-slate-700">Password (at least 6 characters)</span>
+        </AuthField>
+        <AuthField label="Password">
           <input
             name="password"
             type="password"
             autoComplete="new-password"
             required
             minLength={6}
+            placeholder="At least 6 characters"
             className={field}
           />
-        </label>
-        {error && (
-          <p className="text-sm text-red-700" role="alert">
-            {error}
-          </p>
-        )}
-        <button
-          type="submit"
-          disabled={pending}
-          className="mt-1 min-h-12 rounded-lg bg-sky-600 px-4 py-3 text-base font-medium text-white hover:bg-sky-700 disabled:opacity-50"
-        >
+        </AuthField>
+        {error && <AuthError>{error}</AuthError>}
+        <button type="submit" disabled={pending} className={`mt-1 ${authPrimaryButton}`}>
           {pending ? "Creating account…" : "Sign up"}
         </button>
       </form>
-
-      <p className="mt-8 text-center text-sm text-slate-600">
-        Already have an account?{" "}
-        <Link href="/login" className="font-medium text-sky-700 underline hover:text-sky-900">
-          Log in
-        </Link>
-      </p>
-      <p className="mt-6 text-center text-sm">
-        <Link href="/" className="text-slate-600 underline hover:text-slate-900">
-          ← Back to home
-        </Link>
-      </p>
-    </main>
+    </AuthShell>
   );
 }
