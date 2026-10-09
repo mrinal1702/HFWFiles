@@ -5,6 +5,8 @@ import { useEffect } from "react";
 
 import { InfoTip } from "@/app/_components/InfoTip";
 
+import { LocalTime } from "./LocalTime";
+
 const DEADLINE_HELP = {
   initiation: "After this deadline, no NEW players can be bid for. Only existing bids can be raised",
   raise: "After this deadline, all raises on players being bid for must be by 5 or more",
@@ -16,21 +18,6 @@ type Props = {
   raiseDeadlineAt: string | null;
   hardDeadlineAt: string | null;
 };
-
-function formatDeadline(iso: string | null): string {
-  if (!iso) return "not set";
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return iso;
-  // en-GB gives unambiguous "4 June 2026, 10:00 pm" regardless of the viewer's locale
-  return d.toLocaleString("en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    hour: "numeric",
-    minute: "2-digit",
-    hour12: true,
-  });
-}
 
 function isPast(iso: string | null): boolean {
   if (!iso) return false;
@@ -74,7 +61,10 @@ function DeadlineRow({
         </span>
       </dt>
       <dd className={`text-right text-slate-800 sm:mt-0.5 sm:text-left ${past ? "text-amber-800" : ""}`}>
-        <span className={next ? "font-semibold" : "font-medium"}>{formatDeadline(iso)}</span>
+        {/* LocalTime formats after mount, so the server (UTC) and browser render the same text. */}
+        <span className={next ? "font-semibold" : "font-medium"}>
+          {iso ? <LocalTime iso={iso} /> : "not set"}
+        </span>
         {past && <span className="ml-1 text-xs">(passed)</span>}
       </dd>
     </div>
