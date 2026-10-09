@@ -5,6 +5,8 @@ import { LocalTime } from "@/app/auctions/_components/LocalTime";
 import type { AuctionLobby } from "@/lib/auction-lobby";
 import { formatLeadTime, type StartGameweekPreview } from "@/lib/auction-state/start-gameweek";
 
+import { StartBiddingButton } from "./StartBiddingButton";
+
 const START_HELP =
   "Your first scoring gameweek is the earliest one at least 5 days away when you press Start Bidding, " +
   "so everyone has time to build a squad. Squads, bids and the admin tools unlock once bidding starts.";
@@ -60,14 +62,13 @@ export function AdminLobby({
         ) : (
           <p className="mt-3 text-sm text-amber-900">{outcome.message}</p>
         )}
-        <button
-          type="button"
-          disabled
-          className="mt-4 inline-flex min-h-12 w-full cursor-not-allowed items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-sky-700 px-4 py-3 text-base font-semibold text-white opacity-50 sm:w-auto sm:px-6"
-        >
-          Start Bidding
-        </button>
-        <p className="mt-2 text-xs text-slate-500">Start Bidding is the next build step.</p>
+        {outcome.ok && (
+          <StartBiddingButton
+            auctionId={lobby.auctionId}
+            roundId={outcome.target.id}
+            roundName={outcome.target.displayName}
+          />
+        )}
       </section>
 
       <LobbyMembers members={lobby.members} maxParticipants={lobby.maxParticipants} />

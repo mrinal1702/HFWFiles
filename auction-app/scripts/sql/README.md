@@ -35,6 +35,7 @@ This index maps **every object that exists in the live database** to the **one f
 | `trg_auction_bids_block_relegated`, `_participant_is_relegated` | `participant-relegation-rpc.sql` |
 | `handle_new_user` (auth trigger) | `auth-and-join.sql` |
 | `create_self_serve_auction` | `self-serve-auctions.sql` |
+| `start_auction_bidding` (lobby → bidding: seeds lots, copies first-gameweek deadlines, opens transfers) | `start-auction-bidding.sql` |
 
 ---
 
