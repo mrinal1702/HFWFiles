@@ -6,6 +6,8 @@ offered. Write scripts refuse archived competitions unless `--allow-archived` (a
 ## Gameweek pipeline — use `gameweek.mjs` (runbook: `docs/GAMEWEEK_RUNBOOK.md`)
 `node scripts/gameweek.mjs <init-round|status|open|lock|upload-scores|best-xi|verify> --competition <slug> --round mwNN [--apply]`
 reads the round manifest and calls the scripts below. Never write a per-gameweek script.
+Auctions are discovered from Supabase (`lib/gameweek-auctions.mjs`): started auctions of the competition whose first
+gameweek ≤ the round (pre-self-serve auctions count as MW1). The +100 first-gameweek boost is automatic.
 
 Underlying scripts (called by gameweek.mjs; use directly only for repairs):
 | Step | Script |

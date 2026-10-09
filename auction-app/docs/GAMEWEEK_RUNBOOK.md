@@ -28,15 +28,23 @@ bidding deadlines disagree with the schedule.
 node scripts/gameweek.mjs init-round --competition $C --round $R
 ```
 Creates `round.json` from the previous round: `round_number`, `legacy_game_week_id`
-(= competition start + n − 1; UCL 2026/27 MW2 = 301), `gw_name`, `auction_ids`,
-`expected_match_count`. Then edit its **`bidding`** block:
+(= competition start + n − 1; UCL 2026/27 MW2 = 301), `gw_name`, `expected_match_count`, and the
+**`bidding`** block — deadlines are **copied from the recorded schedule** (step 0); if the round
+isn't recorded yet they say `FILL-ME`. Check the block:
 
 | Field | Meaning |
 |---|---|
-| `initiation_deadline_at`, `raise_deadline_at`, `hard_deadline_at` | ISO UTC (e.g. `2026-10-13T15:15:00.000Z`); initiation ≤ raise ≤ hard |
-| `budget_boost` | Added to every manager's budgets when the window opens (0 = none) |
+| `initiation_deadline_at`, `raise_deadline_at`, `hard_deadline_at` | ISO UTC; initiation ≤ raise ≤ hard. `open` refuses if they differ from the recorded schedule |
 | `reset_paid_release`, `reopen_unsold`, `transfer_window_open` | Usually `true` |
 | `requires_locked_game_week_id` | Previous round's legacy id — opening is refused until it is locked |
+
+**Which auctions:** every step acts on the auctions found in Supabase — every started auction of
+the competition whose first gameweek is this round or earlier (self-created auctions record it at
+Start Bidding; older auctions such as UCL 10–13 count as starting at MW1). Lobby auctions are
+ignored. Any `auction_ids` in `round.json` / `competition.json` are informational only.
+
+**Budget boost is automatic:** when round N opens, auctions whose first gameweek was N−1 get +100
+(once). `budget_boost` in older manifests is ignored.
 
 Fixtures fill in automatically as matches are scored; set `expected_match_count` if known.
 
@@ -46,7 +54,8 @@ node scripts/gameweek.mjs open --competition $C --round $R          # dry run
 node scripts/gameweek.mjs open --competition $C --round $R --apply
 ```
 Refuses if the previous gameweek isn't locked or lots are still `bidding`. Re-running is safe:
-auctions already on this round's hard deadline are skipped (no double budget boost). Proves
+auctions already on this round's hard deadline are skipped (no double budget boost), and an auction
+whose first gameweek is this round is skipped (Start Bidding already opened its window). Proves
 other auctions were untouched.
 
 ## 3. After the hard deadline — lock squads

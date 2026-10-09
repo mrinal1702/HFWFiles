@@ -16,6 +16,10 @@
  *
  * Writes to Supabase happen ONLY with --apply. Without it every step is a dry run.
  * Match scoring itself is Python: python ../scoring-engine/score_match.py --competition … --round … --url …
+ *
+ * Auctions are discovered from Supabase (scripts/lib/gameweek-auctions.mjs): every started auction in the
+ * competition whose first gameweek is this round or earlier. round.json / competition.json auction_ids are
+ * informational only. The +100 first-gameweek boost is automatic (round.json budget_boost is not used).
  */
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
@@ -23,6 +27,13 @@ import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createClient } from "@supabase/supabase-js";
+
+import {
+  auctionsPlayingRound,
+  FIRST_GAMEWEEK_BOOST,
+  loadCompetitionAuctions,
+  openPlanFor,
+} from "./lib/gameweek-auctions.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(__dirname, "..");
@@ -91,8 +102,9 @@ function loadContext(opts, { needRound = true } = {}) {
   }
   const sheetsPath = path.join(appRoot, "data", "competitions", opts.competition, "sheets.json");
   const sheets = fs.existsSync(sheetsPath) ? readJson(sheetsPath) : null;
-  const auctionIds = round?.auction_ids?.length ? round.auction_ids : competition.auction_ids;
-  return { compDir, competition, roundDir, roundPath, round, sheets, auctionIds };
+  // Informational only — the auctions a step acts on come from Supabase (assertAuctions).
+  const listedAuctionIds = round?.auction_ids?.length ? round.auction_ids : competition.auction_ids;
+  return { compDir, competition, roundDir, roundPath, round, sheets, listedAuctionIds, auctionIds: [] };
 }
 
 function supabase() {
@@ -103,17 +115,40 @@ function supabase() {
   return createClient(url, key, { auth: { persistSession: false } });
 }
 
-/** Every auction must exist and belong to this competition. */
+/**
+ * Auctions playing this round, discovered from Supabase: started auctions of this competition whose
+ * first gameweek is this round or earlier. Sets ctx.auctionIds. Notes any difference from the
+ * (informational) auction_ids listed in round.json / competition.json.
+ */
 async function assertAuctions(sb, ctx) {
-  const { data, error } = await sb.from("Auctions").select("*").in("id", ctx.auctionIds).order("id");
-  if (error) fail(`Auctions: ${error.message}`);
-  const missing = ctx.auctionIds.filter((id) => !data.some((a) => a.id === id));
-  if (missing.length) fail(`Auction(s) not found: ${missing.join(", ")}`);
-  const wrong = data.filter((a) => Number(a.competition_id) !== Number(ctx.competition.database_competition_id));
-  if (wrong.length) {
-    fail(`Auction(s) ${wrong.map((a) => `${a.id}→competition ${a.competition_id}`).join(", ")} are not in ${ctx.competition.slug} (id ${ctx.competition.database_competition_id})`);
+  let all;
+  try {
+    all = await loadCompetitionAuctions(sb, ctx.competition.database_competition_id);
+  } catch (e) {
+    fail(e.message);
   }
-  return data;
+  const playing = auctionsPlayingRound(all, ctx.round.round_number);
+  ctx.auctionIds = playing.map((a) => a.id);
+  const describe = (a) => `${a.id}${a.start_round_id == null ? "" : ` (from MW${a.start_round_number})`}`;
+  console.log(`  auctions playing ${ctx.round.round_slug}: ${playing.map(describe).join(", ") || "none"}`);
+  const listed = [...new Set((ctx.listedAuctionIds ?? []).map(Number))].sort((x, y) => x - y);
+  if (listed.join(",") !== ctx.auctionIds.join(",")) {
+    console.log(`  note: round.json/competition.json list [${listed.join(", ")}] — informational; Supabase is used`);
+  }
+  if (!playing.length) fail(`no started auctions play ${ctx.round.round_slug}`);
+  return playing;
+}
+
+/** The recorded schedule for this round (competition_rounds), or null when not recorded. */
+async function scheduledRound(sb, ctx) {
+  const { data, error } = await sb
+    .from("competition_rounds")
+    .select("initiation_deadline_at, raise_deadline_at, hard_deadline_at")
+    .eq("competition_id", ctx.competition.database_competition_id)
+    .eq("round_slug", ctx.round?.round_slug ?? ctx.roundSlug)
+    .maybeSingle();
+  if (error) fail(`competition_rounds: ${error.message}`);
+  return data?.hard_deadline_at ? data : null;
 }
 
 async function count(sb, table, filters) {
@@ -141,8 +176,10 @@ function scoredFixtures(ctx) {
 }
 
 // ── steps ────────────────────────────────────────────────────────────────────
-function initRound(opts) {
+async function initRound(opts) {
   const ctx = loadContext(opts, { needRound: false });
+  ctx.roundSlug = opts.round;
+  const sched = await scheduledRound(supabase(), ctx);
   if (fs.existsSync(ctx.roundPath)) fail(`${path.relative(repoRoot, ctx.roundPath)} already exists`);
   const n = Number(opts.round.slice(2));
   const prevPath = path.join(ctx.compDir, "rounds", roundSlug(n - 1), "round.json");
@@ -160,13 +197,12 @@ function initRound(opts) {
     legacy_game_week_id: start + n - 1,
     gw_name: opts.gwName ?? label ?? `Matchweek ${n}`,
     expected_match_count: prev?.expected_match_count ?? null,
-    auction_ids: prev?.auction_ids ?? ctx.competition.auction_ids,
     bidding: {
       bidding_deadline_mode: "global",
-      initiation_deadline_at: "FILL-ME ISO UTC e.g. 2026-10-20T13:15:00.000Z",
-      raise_deadline_at: "FILL-ME",
-      hard_deadline_at: "FILL-ME",
-      budget_boost: 0,
+      // Prefilled from the recorded schedule (record-competition-schedule.mjs) when available.
+      initiation_deadline_at: sched ? new Date(sched.initiation_deadline_at).toISOString() : "FILL-ME ISO UTC e.g. 2026-10-20T13:15:00.000Z",
+      raise_deadline_at: sched ? new Date(sched.raise_deadline_at).toISOString() : "FILL-ME",
+      hard_deadline_at: sched ? new Date(sched.hard_deadline_at).toISOString() : "FILL-ME",
       reset_paid_release: true,
       reopen_unsold: true,
       transfer_window_open: true,
@@ -181,7 +217,11 @@ function initRound(opts) {
   fs.mkdirSync(ctx.roundDir, { recursive: true });
   writeJson(ctx.roundPath, round);
   console.log(`✅ Created ${path.relative(repoRoot, ctx.roundPath)} (legacy GW ${round.legacy_game_week_id}, "${round.gw_name}").`);
-  console.log("   Fill in bidding deadlines (and budget_boost if any), then: node scripts/gameweek.mjs open … (dry run) → --apply");
+  console.log(
+    sched
+      ? "   Bidding deadlines copied from the recorded schedule. Next: node scripts/gameweek.mjs open … (dry run) → --apply"
+      : "   No recorded schedule for this round — fill in bidding deadlines (or record schedule.json first), then: open … (dry run) → --apply",
+  );
 }
 
 async function status(opts) {
@@ -218,9 +258,16 @@ async function openWindow(opts) {
   if (!(Date.parse(b.initiation_deadline_at) <= Date.parse(b.raise_deadline_at) && Date.parse(b.raise_deadline_at) <= Date.parse(b.hard_deadline_at))) {
     fail("deadlines must be initiation ≤ raise ≤ hard");
   }
-  const boost = Number(b.budget_boost ?? 0);
   const sb = supabase();
   const auctions = await assertAuctions(sb, ctx);
+  if (b.budget_boost != null && Number(b.budget_boost) !== 0) {
+    console.log(`  note: round.json budget_boost (${b.budget_boost}) is not used — the +${FIRST_GAMEWEEK_BOOST} first-gameweek boost is automatic`);
+  }
+  const sched = await scheduledRound(sb, ctx);
+  if (sched) {
+    const off = ["initiation_deadline_at", "raise_deadline_at", "hard_deadline_at"].filter((k) => Date.parse(sched[k]) !== Date.parse(b[k]));
+    if (off.length) fail(`round.json bidding ${off.join(", ")} differ from the recorded schedule (competition_rounds) — fix one of them first`);
+  }
   const hardIso = new Date(b.hard_deadline_at).toISOString();
   const othersBefore = JSON.stringify(
     (await sb.from("Auctions").select("id,is_active,hard_deadline_at,initiation_deadline_at,raise_deadline_at,transfer_window_open").not("id", "in", `(${ctx.auctionIds.join(",")})`).order("id")).data,
@@ -228,9 +275,15 @@ async function openWindow(opts) {
 
   console.log(`\nOPEN ${opts.competition} ${opts.round} for auctions ${ctx.auctionIds.join(", ")}${opts.apply ? "" : "  (DRY RUN — add --apply to write)"}`);
   console.log(`  initiation ${b.initiation_deadline_at} · raise ${b.raise_deadline_at} · hard ${b.hard_deadline_at}`);
-  console.log(`  budget boost +${boost} · reset paid releases ${!!b.reset_paid_release} · reopen unsold ${!!b.reopen_unsold} · transfers ${!!b.transfer_window_open}`);
+  console.log(`  first-gameweek boost +${FIRST_GAMEWEEK_BOOST} for auctions whose first gameweek was MW${ctx.round.round_number - 1} · reset paid releases ${!!b.reset_paid_release} · reopen unsold ${!!b.reopen_unsold} · transfers ${!!b.transfer_window_open}`);
 
   for (const a of auctions) {
+    const plan = openPlanFor(a, ctx.round.round_number);
+    if (plan.action !== "open") {
+      console.log(`  auction ${a.id}: first gameweek is ${opts.round} — its window was opened by Start Bidding — skipped`);
+      continue;
+    }
+    const boost = plan.boost;
     if (a.hard_deadline_at && new Date(a.hard_deadline_at).toISOString() === hardIso) {
       console.log(`  auction ${a.id}: already open for this round (hard deadline matches) — skipped (prevents a second budget boost)`);
       continue;
@@ -394,8 +447,9 @@ async function bestXi(opts) {
   }
 }
 
-function verify(opts) {
+async function verify(opts) {
   const ctx = loadContext(opts);
+  await assertAuctions(supabase(), ctx);
   run("node", ["scripts/check-gameweek-surfaces.mjs", "--auction-ids", ctx.auctionIds.join(",")]);
 }
 
