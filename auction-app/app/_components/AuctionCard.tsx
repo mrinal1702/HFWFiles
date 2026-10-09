@@ -2,7 +2,8 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 /** Shared card look for the participant shell (Active Auctions, Archives, Auction History). */
-type CardChip = { label?: string; value: string; mono?: boolean };
+/** `value` may be a component, e.g. <LocalTime> so times render in the viewer's timezone. */
+type CardChip = { label?: string; value: ReactNode; mono?: boolean };
 
 export const CARD_TONES = {
   participant: {

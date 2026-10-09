@@ -2,6 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { AuctionCard } from "@/app/_components/AuctionCard";
+import { LocalTime } from "@/app/auctions/_components/LocalTime";
 import { ParticipantNav } from "@/app/_components/ParticipantNav";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { CREATE_AUCTION_COMPETITION } from "@/lib/auction-create";
@@ -150,7 +151,7 @@ export default async function DashboardPage({
                         { label: "Code", value: a.join_code ?? "—", mono: true },
                         ...(a.is_active === false ? [{ value: "inactive" }] : []),
                         ...(a.hard_deadline_at
-                          ? [{ label: "Deadline", value: `${new Date(a.hard_deadline_at).toLocaleString()} (local)` }]
+                          ? [{ label: "Deadline", value: <LocalTime iso={a.hard_deadline_at} /> }]
                           : []),
                       ]
                 }
