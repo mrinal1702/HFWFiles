@@ -50,7 +50,13 @@ export async function requireAuctionAdmin(
   return null;
 }
 
-export type AdminAuctionRow = { id: number; name: string | null };
+export type AdminAuctionRow = {
+  id: number;
+  name: string | null;
+  join_code: string | null;
+  /** 'setup' = lobby (bidding not started yet); 'bidding' = live auction. */
+  status: "setup" | "bidding";
+};
 
 /**
  * Active (non-archived) online auctions where this user is the configured admin.
@@ -62,7 +68,7 @@ export async function loadMyAdminAuctionsForUser(authUserId: string): Promise<Ad
   const admin = createAdminClient();
   const { data, error } = await admin
     .from("Auctions")
-    .select("id, name, admin_user_id, competition_id")
+    .select("id, name, admin_user_id, competition_id, join_code, status")
     .eq("admin_user_id", authUserId)
     .order("id", { ascending: false });
 
@@ -72,9 +78,10 @@ export async function loadMyAdminAuctionsForUser(authUserId: string): Promise<Ad
   }
 
   const archivedCompetitionIds = await loadArchivedCompetitionIds();
-  return ((data ?? []) as { id: number; name: string | null; competition_id: number | null }[])
+  type Row = AdminAuctionRow & { competition_id: number | null };
+  return ((data ?? []) as Row[])
     .filter((r) => !isArchivedCompetition(r.competition_id, archivedCompetitionIds))
-    .map((r) => ({ id: r.id, name: r.name }));
+    .map((r) => ({ id: r.id, name: r.name, join_code: r.join_code, status: r.status }));
 }
 
 /** Display name for the admin, from profiles.display_name (falls back to "Admin"). */

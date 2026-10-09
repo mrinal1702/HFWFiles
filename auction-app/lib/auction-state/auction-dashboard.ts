@@ -474,6 +474,8 @@ export type MyAuctionRow = {
   join_code: string | null;
   max_participants: number | null;
   competition_id: number | null;
+  /** 'setup' = lobby (bidding not started yet); 'bidding' = live auction. */
+  status: "setup" | "bidding";
   /** True when the auction's competition is archived (see lib/archived-auctions.ts). */
   archived: boolean;
 };
@@ -490,7 +492,7 @@ export const loadMyAuctionsForUser = cache(async (authUserId: string): Promise<M
 
   const { data: auctions, error: aErr } = await admin
     .from("Auctions")
-    .select("id,name,is_active,hard_deadline_at,join_code,max_participants,competition_id")
+    .select("id,name,is_active,hard_deadline_at,join_code,max_participants,competition_id,status")
     .in("id", ids)
     .order("id", { ascending: false });
   if (aErr) throw new Error(aErr.message);

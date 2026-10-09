@@ -73,24 +73,6 @@ export function CreateAuctionForm({
       ? "border-emerald-300 focus:border-emerald-500 focus:ring-emerald-500/15"
       : "border-red-300 focus:border-red-500 focus:ring-red-500/15";
 
-  if (state?.ok) {
-    const p = state.preview;
-    return (
-      <section className={`${card} mt-6`}>
-        <span aria-hidden className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-amber-400 to-amber-600" />
-        <p className="text-xs font-semibold uppercase tracking-wide text-amber-700">Preview — nothing saved yet</p>
-        <h2 className="font-display mt-1 text-xl font-semibold text-slate-900">{p.name}</h2>
-        <ul className="mt-3 space-y-1.5 text-sm text-slate-700">
-          <li>Competition: {p.competition}</li>
-          <li>You: {p.role === "play_and_admin" ? "admin + manager seat" : "admin only"}</li>
-          <li>Next: a participant code is created and the auction appears on your dashboard.</li>
-          {p.role === "admin_only" && <li>You can always join as a participant using the participant code.</li>}
-        </ul>
-        <p className="mt-4 text-xs text-slate-500">Saving the auction is the next build step.</p>
-      </section>
-    );
-  }
-
   return (
     <form action={formAction} className="mt-6 space-y-5">
       <section className={card}>
@@ -174,7 +156,7 @@ export function CreateAuctionForm({
         disabled={pending || nameBlocked}
         className="inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-sky-700 px-4 py-3 text-base font-semibold text-white shadow-md shadow-sky-200 transition hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 sm:max-w-xs"
       >
-        {pending ? "Checking…" : "Create auction"}
+        {pending ? "Creating…" : "Create auction"}
       </button>
     </form>
   );

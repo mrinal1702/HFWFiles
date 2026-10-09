@@ -34,6 +34,7 @@ This index maps **every object that exists in the live database** to the **one f
 | `reset_testing_environment` | `reset-testing-environment.sql` |
 | `trg_auction_bids_block_relegated`, `_participant_is_relegated` | `participant-relegation-rpc.sql` |
 | `handle_new_user` (auth trigger) | `auth-and-join.sql` |
+| `create_self_serve_auction` | `self-serve-auctions.sql` |
 
 ---
 
@@ -68,6 +69,7 @@ This index maps **every object that exists in the live database** to the **one f
 | `"Auctions".competition_id` | `competition-isolation-migrate-all.sql` |
 | `"Auctions".join_code`, `.max_participants` | `auth-and-join.sql` |
 | `"Auctions".admin_user_id` (+ non-unique admin lookup index) | `auction-admin-column.sql` |
+| `"Auctions".status` (`setup`/`bidding`), `.start_round_id`, `.created_by`, `.created_at`, `.bidding_started_at`; unique name index `idx_auctions_name_key`; `Auctions_id_seq` re-synced | `self-serve-auctions.sql` |
 | `auction_users.paid_release_used` | `auction-releases.sql` |
 | `auction_users.team_name` | `auction-team-names.sql` |
 | `auction_users.is_relegated`, `.relegated_at` | `participant-relegation-schema.sql` |

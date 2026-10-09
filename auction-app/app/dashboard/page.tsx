@@ -21,7 +21,7 @@ export const dynamic = "force-dynamic";
 export default async function DashboardPage({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; created?: string }>;
 }) {
   const user = await getAuthUser();
   if (!user) {
@@ -57,6 +57,11 @@ export default async function DashboardPage({
     loadError = e instanceof Error ? e.message : String(e);
   }
 
+  // Banner after creating an auction (only for auctions this user admins).
+  const createdId = Number(sp.created);
+  const createdAuction = Number.isFinite(createdId) ? adminAuctions.find((a) => a.id === createdId) ?? null : null;
+  const createdAsPlayer = createdAuction != null && auctions.some((a) => a.id === createdAuction.id);
+
   // Create auction is offered only while enough upcoming gameweeks are on record.
   let createBlockedMessage: string | null = null;
   try {
@@ -89,6 +94,27 @@ export default async function DashboardPage({
         Signed in as <span className="font-medium text-slate-900">{user.email}</span>
       </p>
 
+      {createdAuction && (
+        <div
+          className="relative mt-5 overflow-hidden rounded-2xl border border-emerald-200 bg-gradient-to-br from-white to-emerald-50 p-4 pl-5 shadow-sm"
+          role="status"
+        >
+          <span aria-hidden className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-emerald-400 to-emerald-600" />
+          <p className="font-display text-lg font-semibold text-slate-900">{createdAuction.name} is ready</p>
+          <p className="mt-1 text-sm text-slate-700">
+            Share the participant code with your friends:{" "}
+            <span className="rounded-md border border-emerald-200 bg-white px-2 py-0.5 font-mono font-semibold text-slate-900">
+              {createdAuction.join_code}
+            </span>
+          </p>
+          {!createdAsPlayer && (
+            <p className="mt-2 text-sm text-slate-700">
+              You can always join as a participant using the participant code.
+            </p>
+          )}
+        </div>
+      )}
+
       {sp.error === "not_member" && (
         <p className="mt-5 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-950">
           You aren&apos;t in that auction yet. Enter your join code below, or pick an auction you already
@@ -117,13 +143,17 @@ export default async function DashboardPage({
                 href={`/auctions/${a.id}/bidding-room`}
                 tone="participant"
                 title={a.name ?? `Auction #${a.id}`}
-                chips={[
-                  { label: "Code", value: a.join_code ?? "—", mono: true },
-                  ...(a.is_active === false ? [{ value: "inactive" }] : []),
-                  ...(a.hard_deadline_at
-                    ? [{ label: "Deadline", value: `${new Date(a.hard_deadline_at).toLocaleString()} (local)` }]
-                    : []),
-                ]}
+                chips={
+                  a.status === "setup"
+                    ? [{ label: "Code", value: a.join_code ?? "—", mono: true }, { value: "Lobby — bidding not started" }]
+                    : [
+                        { label: "Code", value: a.join_code ?? "—", mono: true },
+                        ...(a.is_active === false ? [{ value: "inactive" }] : []),
+                        ...(a.hard_deadline_at
+                          ? [{ label: "Deadline", value: `${new Date(a.hard_deadline_at).toLocaleString()} (local)` }]
+                          : []),
+                      ]
+                }
               />
             </li>
           ))}
@@ -133,7 +163,12 @@ export default async function DashboardPage({
                 href={`/auction-admin/${a.id}`}
                 tone="admin"
                 title={a.name ?? `Auction #${a.id}`}
-                subtitle="Admin controls — manage squads, budgets, and bids"
+                subtitle={
+                  a.status === "setup"
+                    ? "Lobby — share the participant code, then start bidding"
+                    : "Admin controls — manage squads, budgets, and bids"
+                }
+                chips={a.status === "setup" ? [{ label: "Participant code", value: a.join_code ?? "—", mono: true }] : []}
               />
             </li>
           ))}
