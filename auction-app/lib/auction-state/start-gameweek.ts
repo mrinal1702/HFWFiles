@@ -60,6 +60,16 @@ export type StartGameweekPreview = {
   ifStartedAfterCutoff: StartGameweekOutcome | null;
 };
 
+/** "11 days 16 hours" / "4 hours 20 minutes" — coarse, for lobby copy. */
+export function formatLeadTime(hours: number): string {
+  const totalMin = Math.max(0, Math.floor(hours * 60));
+  const d = Math.floor(totalMin / (24 * 60));
+  const h = Math.floor((totalMin % (24 * 60)) / 60);
+  const m = totalMin % 60;
+  const unit = (n: number, s: string) => `${n} ${s}${n === 1 ? "" : "s"}`;
+  return d > 0 ? `${unit(d, "day")} ${unit(h, "hour")}` : `${unit(h, "hour")} ${unit(m, "minute")}`;
+}
+
 /** Pure decision: no I/O, so any date can be tested. `rounds` must have full schedules. */
 export function decideStartGameweek(rounds: ScheduledRound[], nowMs: number): StartGameweekOutcome {
   const future = rounds

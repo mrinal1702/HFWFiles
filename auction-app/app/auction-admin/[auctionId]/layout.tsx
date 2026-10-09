@@ -3,7 +3,10 @@ import { notFound, redirect } from "next/navigation";
 
 import { getAuthUser } from "@/lib/auth/get-user";
 import { createAdminClient } from "@/lib/supabase-server";
+import { loadAuctionLobby } from "@/lib/auction-lobby";
+import { loadStartGameweekPreview } from "@/lib/auction-state/start-gameweek";
 import { getAdminDisplayName, getAuctionAdminUserId } from "@/lib/online-auction-admin";
+import { AdminLobby } from "./_components/AdminLobby";
 import { AdminSideNav } from "./_components/AdminSideNav";
 
 export const dynamic = "force-dynamic";
@@ -45,9 +48,14 @@ export default async function AuctionAdminLayout({
   const auctionName = (auctionRow as { name: string | null }).name ?? `Auction #${auctionId}`;
   const adminName = await getAdminDisplayName(user.id);
 
+  // Lobby: no admin tools until Start Bidding — show the lobby in place of every admin page.
+  const lobby = await loadAuctionLobby(auctionId);
+  const lobbyPreview =
+    lobby && lobby.competitionId != null ? await loadStartGameweekPreview(lobby.competitionId) : null;
+
   return (
     <div className="flex min-h-0 flex-1">
-      <AdminSideNav auctionId={auctionId} />
+      {!lobby && <AdminSideNav auctionId={auctionId} />}
       <div className="mx-auto min-w-0 max-w-6xl flex-1 px-3 pb-4 pt-12 sm:px-6 sm:py-6 sm:pl-[calc(3rem+1.5rem)]">
         <header className="mb-5 space-y-2 sm:mb-6">
           <div className="flex flex-wrap items-start justify-between gap-2">
@@ -68,7 +76,15 @@ export default async function AuctionAdminLayout({
             </Link>
           </div>
         </header>
-        {children}
+        {lobby && lobbyPreview ? (
+          <AdminLobby
+            lobby={lobby}
+            adminIsSeated={lobby.members.some((m) => m.user_id === user.id)}
+            preview={lobbyPreview}
+          />
+        ) : (
+          children
+        )}
       </div>
     </div>
   );

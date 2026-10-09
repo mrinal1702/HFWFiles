@@ -5,8 +5,10 @@ import { AuctionBudgetStrip } from "@/app/auctions/_components/AuctionBudgetStri
 import { AuctionDeadlines } from "@/app/auctions/_components/AuctionDeadlines";
 import { AuctionSideNav } from "@/app/auctions/_components/AuctionSideNav";
 import { NationRollingDeadlinesButton } from "@/app/auctions/_components/NationRollingDeadlinesButton";
+import { ParticipantLobby } from "@/app/auctions/_components/ParticipantLobby";
 import { RefreshButton } from "@/app/auctions/_components/RefreshButton";
 import { getAuthUser } from "@/lib/auth/get-user";
+import { loadAuctionLobby } from "@/lib/auction-lobby";
 import { loadAuctionDashboard } from "@/lib/auction-state/auction-dashboard";
 import { isAuctionSpectator } from "@/lib/auction-spectators";
 import { loadNationDeadlinesForAuction } from "@/lib/auction-state/nation-deadlines-data";
@@ -29,6 +31,15 @@ export default async function AuctionLayout({
   const user = await getAuthUser();
   if (!user) {
     redirect(`/login?next=${encodeURIComponent(`/auctions/${auctionId}`)}`);
+  }
+
+  // Lobby (Start Bidding not pressed yet): every in-auction page shows the waiting room instead.
+  const lobby = await loadAuctionLobby(auctionId);
+  if (lobby) {
+    if (!lobby.members.some((m) => m.user_id === user.id)) {
+      redirect(lobby.adminUserId === user.id ? `/auction-admin/${auctionId}` : "/dashboard?error=not_member");
+    }
+    return <ParticipantLobby lobby={lobby} viewerUserId={user.id} />;
   }
 
   const d = await loadAuctionDashboard(auctionId, user.id);

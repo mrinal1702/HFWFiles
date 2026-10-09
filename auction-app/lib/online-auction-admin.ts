@@ -3,6 +3,7 @@ import "server-only";
 import { createAdminClient } from "@/lib/supabase-server";
 import { isGoalkeeperPosition, positionSortRank } from "@/lib/auction-state/bid-ui-messages";
 import { isArchivedCompetition, loadArchivedCompetitionIds } from "@/lib/archived-auctions";
+import { isAuctionInLobby } from "@/lib/auction-lobby";
 
 /**
  * Online-auction admin (commissioner) helpers.
@@ -40,13 +41,18 @@ export async function userIsAuctionAdmin(
   return adminUserId != null && adminUserId === authUserId;
 }
 
-/** Returns an error string when the user is not the admin, or null when authorized. */
+/**
+ * Gate for the admin tools (squads, budgets, bids, transfers). Returns an error string when the
+ * user is not the admin, or when the auction is still in the lobby (tools unlock at Start Bidding);
+ * null when authorized.
+ */
 export async function requireAuctionAdmin(
   auctionId: number,
   authUserId: string | null,
 ): Promise<string | null> {
   const ok = await userIsAuctionAdmin(auctionId, authUserId);
   if (!ok) return "Not authorized — you are not the admin for this auction.";
+  if (await isAuctionInLobby(auctionId)) return "Bidding hasn't started yet — admin tools unlock after Start Bidding.";
   return null;
 }
 

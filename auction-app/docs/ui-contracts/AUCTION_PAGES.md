@@ -92,6 +92,17 @@ The one deliberate cross-over. Sections: lot status (state, high bid, high bidde
 player's scores for **this auction's gameweeks only**, + Total); **Bid history**; **Ownership & releases**.
 It never shows a manager's squad points.
 
+## Lobby (self-serve auctions before Start Bidding)
+
+While `"Auctions".status = 'setup'`, the in-auction layout (`app/auctions/[auctionId]/layout.tsx`)
+renders `ParticipantLobby` (`app/auctions/_components/ParticipantLobby.tsx`) **in place of every
+page** — no side menu, deadlines or budget strip. It shows: auction name + Dashboard link, a
+"Waiting for <commissioner> to start bidding" card (info icon + Rules link), the participant code
+with Copy, and the joined managers (`app/_components/lobby/LobbyMembers.tsx`). A commissioner
+without a seat is redirected to their admin lobby. Once Start Bidding is pressed the normal pages
+appear at the same URLs. The admin side (`/auction-admin/[id]`) likewise shows `AdminLobby` instead
+of the admin menu and tools, and `requireAuctionAdmin` refuses admin tool actions in the lobby.
+
 ## Chrome
 Navy side menu; navy→blue gradient header banner with the auction name; full-width deadline tiles;
 mid-blue page backdrop with white cards; display font for titles and names; mobile compact zoom 0.88.
