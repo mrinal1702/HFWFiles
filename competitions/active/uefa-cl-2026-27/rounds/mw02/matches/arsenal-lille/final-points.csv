@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Jurriën Timber,942381,Arsenal,defender,45.155,10.0,0.0,55
+Bruno Guimarães,850354,Arsenal,midfielder,39.048,11.0,0.0,50
+Eberechi Eze,818975,Arsenal,midfielder,37.90133333333333,11.0,0.0,49
+Bukayo Saka,961995,Arsenal,forward,34.77333333333333,6.0,0.0,41
+Declan Rice,654096,Arsenal,midfielder,29.414,11.0,0.0,40
+Ezri Konsa,710159,Arsenal,defender,24.615,10.0,0.0,35
+Myles Lewis-Skelly,1406436,Arsenal,defender,24.425,10.0,0.0,34
+Kai Havertz,749736,Arsenal,forward,25.683333333333334,6.0,0.0,32
+Alexsandro Ribeiro,1186553,Lille,defender,33.88,-5.0,0.0,29
+Noni Madueke,1084981,Arsenal,midfielder,20.92066666666667,7.0,0.0,28
+Gabriel,795179,Arsenal,defender,16.815,10.0,0.0,27
+Ayase Ueda,942393,Lille,forward,24.940000000000005,0.0,0.0,25
+Nabil Bentaleb,500520,Lille,midfielder,22.584,-1.0,0.0,22
+Hákon Arnar Haraldsson,1044470,Lille,forward,20.78,0.0,0.0,21
+Benjamin André,148830,Lille,midfielder,21.346000000000004,-1.0,0.0,20
+Mikel Merino,574645,Arsenal,midfielder,10.530666666666669,7.0,0.0,18
+Martin Ødegaard,534670,Arsenal,midfielder,9.825333333333337,6.5,0.0,16
+Calvin Verdonk,622137,Lille,defender,11.250000000000002,5.0,0.0,16
+Nathan Ngoy,1252070,Lille,defender,19.895000000000003,-5.0,0.0,15
+Ngal Ayel Mukau,1428153,Lille,midfielder,15.51,-1.0,0.0,15
+Romain Perraud,815465,Lille,defender,18.015,-5.0,0.0,13
+Viktor Gyökeres,664500,Arsenal,forward,9.926666666666666,3.0,0.0,13
+Maxima Goffi,1793784,Lille,defender,17.785000000000004,-5.0,0.0,13
+Osame Sahraoui,988160,Lille,forward,11.429999999999998,0.0,0.0,11
+Dilane Bakwa,1079539,Lille,forward,11.403333333333332,0.0,0.0,11
+Max Dowman,1635773,Arsenal,midfielder,6.092666666666667,2.5,0.0,9
+Maurits Kjærgaard,1070404,Lille,midfielder,5.308,2.5,0.0,8
+Olivier Giroud,46469,Lille,forward,7.08,0.0,0.0,7
+Ben White,776151,Arsenal,defender,0.915,5.0,0.0,6
+Soriba Diaoune,1684579,Lille,forward,5.086666666666667,0.0,0.0,5
+Tanguy Nianzou,1070617,Lille,defender,0.0,0.0,0.0,0
+Riccardo Calafiori,1105912,Arsenal,defender,0.0,0.0,0.0,0
+Cristhian Mosquera,1298907,Arsenal,defender,0.0,0.0,0.0,0
+Loun Srdanovic,1660370,Lille,defender,0.0,0.0,0.0,0
+Isaac Cossier,1680590,Lille,defender,0.0,0.0,0.0,0
+Marli Salmon,1787525,Arsenal,defender,0.0,0.0,0.0,0
+Başar Önal,1347229,Lille,midfielder,0.0,0.0,0.0,0
+Maalik Hashi,1800575,Arsenal,midfielder,0.0,0.0,0.0,0
+Gaëtan Perrin,708435,Lille,forward,0.0,0.0,0.0,0
+Ceadach O'Neill,1669872,Arsenal,forward,0.0,0.0,0.0,0
+Lille Keepers,8639,Lille,goalkeeper,26.72,0.0,0.0,27
+Arsenal Keepers,9825,Arsenal,goalkeeper,7.140000000000001,18.0,0.0,25

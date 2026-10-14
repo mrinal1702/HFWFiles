@@ -39,6 +39,13 @@
       "home_team": "Sabah FK",
       "away_team": "Slavia Prague",
       "status": "scored"
+    },
+    {
+      "match_slug": "arsenal-lille",
+      "fotmob_match_id": 6106260,
+      "home_team": "Arsenal",
+      "away_team": "Lille",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

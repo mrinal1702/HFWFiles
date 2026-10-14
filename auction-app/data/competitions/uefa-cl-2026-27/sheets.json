@@ -166,6 +166,14 @@
       "gw": 2,
       "fotmob_match_id": 6106424,
       "file": "SabahFK_SlaviaPrague_FinalPoints.csv"
+    },
+    {
+      "slug": "arsenal-lille",
+      "title": "Arsenal vs Lille",
+      "subtitle": "UEFA Champions League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 6106260,
+      "file": "Arsenal_Lille_FinalPoints.csv"
     }
   ]
 }

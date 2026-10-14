@@ -1,0 +1,15 @@
+{
+  "match_id": 6106260,
+  "home_team": "Arsenal",
+  "away_team": "Lille",
+  "source_url": "https://www.fotmob.com/en-GB/matches/lille-vs-arsenal/2thy7l#6106260:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw02/matches/arsenal-lille/intermediates/Arsenal_Vs_Lille.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/lille-vs-arsenal/2thy7l",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/lille-vs-arsenal/2thy7l#6106260:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/lille-vs-arsenal/2thy7l#6106260:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/lille-vs-arsenal/2thy7l#6106260:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106260"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

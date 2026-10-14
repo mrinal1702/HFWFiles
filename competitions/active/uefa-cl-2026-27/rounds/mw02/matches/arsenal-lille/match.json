@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "arsenal-lille",
+  "fotmob_match_id": 6106260,
+  "source_url": "https://www.fotmob.com/en-GB/matches/lille-vs-arsenal/2thy7l#6106260:tab=stats",
+  "home_team": "Arsenal",
+  "away_team": "Lille",
+  "raw_json_path": "intermediates/Arsenal_Vs_Lille.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}
