@@ -190,6 +190,14 @@
       "gw": 2,
       "fotmob_match_id": 6106338,
       "file": "Galatasaray_Barcelona_FinalPoints.csv"
+    },
+    {
+      "slug": "inter-club-brugge",
+      "title": "Inter vs Club Brugge",
+      "subtitle": "UEFA Champions League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 6106251,
+      "file": "Inter_ClubBrugge_FinalPoints.csv"
     }
   ]
 }

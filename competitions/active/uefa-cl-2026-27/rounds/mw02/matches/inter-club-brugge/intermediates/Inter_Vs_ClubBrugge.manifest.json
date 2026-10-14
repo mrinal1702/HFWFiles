@@ -1,0 +1,15 @@
+{
+  "match_id": 6106251,
+  "home_team": "Inter",
+  "away_team": "Club Brugge",
+  "source_url": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-inter/2dthqf#6106251:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw02/matches/inter-club-brugge/intermediates/Inter_Vs_ClubBrugge.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-inter/2dthqf",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-inter/2dthqf#6106251:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-inter/2dthqf#6106251:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-inter/2dthqf#6106251:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106251"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

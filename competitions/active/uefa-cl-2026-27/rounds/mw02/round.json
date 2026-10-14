@@ -60,6 +60,13 @@
       "home_team": "Galatasaray",
       "away_team": "Barcelona",
       "status": "scored"
+    },
+    {
+      "match_slug": "inter-club-brugge",
+      "fotmob_match_id": 6106251,
+      "home_team": "Inter",
+      "away_team": "Club Brugge",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "inter-club-brugge",
+  "fotmob_match_id": 6106251,
+  "source_url": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-inter/2dthqf#6106251:tab=stats",
+  "home_team": "Inter",
+  "away_team": "Club Brugge",
+  "raw_json_path": "intermediates/Inter_Vs_ClubBrugge.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}
