@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "rb-leipzig-psv-eindhoven",
+  "fotmob_match_id": 6106323,
+  "source_url": "https://www.fotmob.com/en-GB/matches/psv-eindhoven-vs-rb-leipzig/81iorv6#6106323:tab=stats",
+  "home_team": "RB Leipzig",
+  "away_team": "PSV Eindhoven",
+  "raw_json_path": "intermediates/RBLeipzig_Vs_PSVEindhoven.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

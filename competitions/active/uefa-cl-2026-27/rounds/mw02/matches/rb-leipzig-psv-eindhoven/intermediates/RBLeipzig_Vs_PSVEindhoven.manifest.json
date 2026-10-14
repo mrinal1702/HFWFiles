@@ -1,0 +1,15 @@
+{
+  "match_id": 6106323,
+  "home_team": "RB Leipzig",
+  "away_team": "PSV Eindhoven",
+  "source_url": "https://www.fotmob.com/en-GB/matches/psv-eindhoven-vs-rb-leipzig/81iorv6#6106323:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw02/matches/rb-leipzig-psv-eindhoven/intermediates/RBLeipzig_Vs_PSVEindhoven.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/psv-eindhoven-vs-rb-leipzig/81iorv6",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/psv-eindhoven-vs-rb-leipzig/81iorv6#6106323:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/psv-eindhoven-vs-rb-leipzig/81iorv6#6106323:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/psv-eindhoven-vs-rb-leipzig/81iorv6#6106323:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106323"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

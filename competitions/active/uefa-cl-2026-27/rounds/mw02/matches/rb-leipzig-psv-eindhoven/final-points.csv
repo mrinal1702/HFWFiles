@@ -1,0 +1,42 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Brajan Gruda,1430151,RB Leipzig,midfielder,42.15533333333333,7.0,0.0,49
+Willi Orbán,278856,RB Leipzig,defender,32.39,10.0,0.0,42
+Ivan Perišić,163670,PSV,midfielder,37.91000000000001,3.0,0.0,41
+Kodai Sano,1337282,PSV,midfielder,36.498000000000005,3.0,0.0,39
+Ridle Baku,883087,RB Leipzig,defender,28.306666666666665,10.0,0.0,38
+David Raum,806669,RB Leipzig,defender,27.28,10.0,0.0,37
+Armando Obispo,794244,PSV,defender,27.34,5.0,0.0,32
+Mauro Júnior,873556,PSV,midfielder,28.422000000000004,3.0,0.0,31
+Sergiño Dest,892816,PSV,defender,26.115,5.0,0.0,31
+Filip Kostić,281012,PSV,defender,25.446666666666665,5.0,0.0,30
+Castello Lukeba,1253852,RB Leipzig,defender,19.83,10.0,0.0,30
+Ruben van Bommel,1359970,PSV,midfielder,26.454,3.0,0.0,29
+Sven Mijnans,1035643,PSV,forward,27.31,0.0,0.0,27
+Lutsharel Geertruida,881640,PSV,defender,21.786666666666665,5.0,0.0,27
+Antonio Nusa,1248482,RB Leipzig,midfielder,19.604000000000003,7.0,0.0,27
+Ezechiel Banzuzi,1310001,RB Leipzig,midfielder,16.172666666666668,7.0,0.0,23
+Neil El Aynaoui,1274060,RB Leipzig,midfielder,15.35,7.0,0.0,22
+Tidiam Gomis,1482733,RB Leipzig,forward,12.976666666666668,3.0,0.0,16
+Ryan Flamingo,1386551,PSV,defender,10.723333333333333,5.0,0.0,16
+Guus Til,774947,PSV,midfielder,12.228000000000002,3.0,0.0,15
+Rômulo,1314412,RB Leipzig,forward,12.413333333333334,0.0,0.0,12
+Yarek Gąsiorowski,1506480,PSV,defender,6.9783333333333335,5.0,0.0,12
+Ayoni Santos,1678727,PSV,midfielder,7.898000000000001,2.5,0.0,10
+Christopher Nkunku,704523,RB Leipzig,midfielder,1.0239999999999991,7.0,0.0,8
+Lukas Klostermann,526657,RB Leipzig,defender,2.933333333333333,5.0,0.0,8
+Rocco Reitz,1174726,RB Leipzig,midfielder,3.448666666666667,2.5,0.0,6
+Nicolas Seiwald,1024672,RB Leipzig,midfielder,3.1333333333333333,2.5,0.0,6
+Mikkel Bro,1695316,PSV,forward,5.2,0.0,0.0,5
+Benjamin Henrichs,681383,RB Leipzig,defender,0.0,0.0,0.0,0
+Maxime Estève,1250443,RB Leipzig,defender,0.0,0.0,0.0,0
+Max Finkgräfe,1529161,RB Leipzig,defender,0.0,0.0,0.0,0
+Abdoul Koné,1643776,RB Leipzig,defender,0.0,0.0,0.0,0
+Andrija Maksimović,1482209,RB Leipzig,midfielder,0.0,0.0,0.0,0
+Noah Fernandez,1699551,PSV,midfielder,0.0,0.0,0.0,0
+Shuryjano Cornecion,1874113,PSV,midfielder,0.0,0.0,0.0,0
+Dennis Man,805767,PSV,forward,0.0,0.0,0.0,0
+Johan Bakayoko,1203194,RB Leipzig,forward,0.0,0.0,0.0,0
+Esmir Bajraktarević,1346860,PSV,forward,0.0,0.0,0.0,0
+Amir Bouhamdi,1834912,PSV,forward,0.0,0.0,0.0,0
+RB Leipzig Keepers,178475,RB Leipzig,goalkeeper,35.58,18.0,0.0,54
+PSV Keepers,8640,PSV,goalkeeper,33.56,12.0,0.0,46

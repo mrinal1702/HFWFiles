@@ -67,6 +67,13 @@
       "home_team": "Inter",
       "away_team": "Club Brugge",
       "status": "scored"
+    },
+    {
+      "match_slug": "rb-leipzig-psv-eindhoven",
+      "fotmob_match_id": 6106323,
+      "home_team": "RB Leipzig",
+      "away_team": "PSV Eindhoven",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
