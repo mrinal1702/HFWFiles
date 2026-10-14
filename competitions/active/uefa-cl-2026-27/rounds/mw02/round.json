@@ -32,6 +32,13 @@
       "home_team": "Lens",
       "away_team": "Sporting CP",
       "status": "scored"
+    },
+    {
+      "match_slug": "sabah-fk-slavia-prague",
+      "fotmob_match_id": 6106424,
+      "home_team": "Sabah FK",
+      "away_team": "Slavia Prague",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

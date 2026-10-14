@@ -158,6 +158,14 @@
       "gw": 2,
       "fotmob_match_id": 6106414,
       "file": "Lens_SportingCP_FinalPoints.csv"
+    },
+    {
+      "slug": "sabah-fk-slavia-prague",
+      "title": "Sabah FK vs Slavia Prague",
+      "subtitle": "UEFA Champions League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 6106424,
+      "file": "SabahFK_SlaviaPrague_FinalPoints.csv"
     }
   ]
 }
