@@ -1,0 +1,38 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+544693,Amir Rrahmani,9875,Napoli,1,defender,49.745,3.0,3.0,55.745,90.0,1,3,-5.0,50.745
+1395964,Carlos Romero,10205,Villarreal,1,defender,34.56,3.0,3.0,40.56,90.0,3,1,5.0,45.56
+1407468,Santiago Mouriño,10205,Villarreal,1,defender,33.48,1.8,3.0,38.279999999999994,90.0,3,1,5.0,43.279999999999994
+671865,Santi Comesaña,10205,Villarreal,2,midfielder,28.587999999999997,1.9,2.7666666666666666,33.254666666666665,83.0,2,1,7.0,40.254666666666665
+1216798,Nathan Saliba,10205,Villarreal,2,midfielder,19.146,3.0,3.0,25.146,90.0,3,1,9.0,34.146
+844544,Pape Gueye,10205,Villarreal,2,midfielder,18.62,3.0,2.8,24.42,83.0,2,1,7.0,31.42
+246438,Gerard Moreno,10205,Villarreal,3,forward,17.549999999999997,5.0,2.1,24.65,66.0,2,1,6.0,30.65
+1199272,Rasmus Højlund,9875,Napoli,3,forward,19.1,5.0,3.0,27.1,90.0,1,3,3.0,30.1
+1343750,Renato Veiga,10205,Villarreal,1,defender,16.61,3.0,3.0,22.61,90.0,3,1,5.0,27.61
+1338740,Tani Oluwaseyi,10205,Villarreal,3,forward,18.73,4.1,0.9,23.729999999999997,24.0,1,0,3.0,26.729999999999997
+942549,Billy Gilmour,9875,Napoli,2,midfielder,18.182,3.0,2.4,23.581999999999997,72.0,1,2,3.0,26.581999999999997
+1117069,Georges Mikautadze,10205,Villarreal,3,forward,14.31,2.3,2.1,18.71,66.0,2,1,6.0,24.71
+414906,Giovanni Di Lorenzo,9875,Napoli,2,midfielder,17.561999999999998,3.0,3.0,23.561999999999998,90.0,1,3,1.0,24.561999999999998
+1184694,Alberto Moleiro,10205,Villarreal,2,midfielder,12.18,3.0,2.2666666666666666,17.446666666666665,68.0,2,1,7.0,24.446666666666665
+1313884,Rafa Marín,9875,Napoli,1,defender,19.025000000000002,1.8,2.4,23.225,72.0,1,2,0.0,23.225
+1531887,Pau Navarro,10205,Villarreal,1,defender,9.545000000000003,3.0,3.0,15.545000000000003,90.0,3,1,5.0,20.545
+415539,Matteo Politano,9875,Napoli,2,midfielder,12.299999999999999,3.0,2.033333333333333,17.333333333333332,60.0,1,2,3.0,20.333333333333332
+479020,Ayoze Pérez,10205,Villarreal,3,forward,11.77,5.0,0.23333333333333334,17.003333333333334,7.0,1,0,3.0,20.003333333333334
+169200,Kevin De Bruyne,9875,Napoli,2,midfielder,10.104,3.0,3.0,16.104,90.0,1,3,1.0,17.104
+843099,Scott McTominay,9875,Napoli,2,midfielder,9.072000000000001,3.0,2.0,14.072000000000001,60.0,1,2,3.0,17.072000000000003
+955376,Benoît Badiashile,9875,Napoli,1,defender,13.129999999999999,3.0,3.0,19.13,90.0,1,3,-5.0,14.129999999999999
+1355574,Giovane Nascimento,9875,Napoli,2,midfielder,4.8500000000000005,3.0,2.0,9.850000000000001,60.0,1,2,3.0,12.850000000000001
+1338696,Alex Freeman,10205,Villarreal,1,defender,4.81,1.8,0.9,7.51,24.0,1,0,5.0,12.51
+833219,Juan Foyth,10205,Villarreal,1,defender,3.4650000000000003,3.0,0.7333333333333333,7.198333333333333,22.0,1,0,5.0,12.198333333333334
+1212630,Lorenzo Lucca,9875,Napoli,3,forward,4.32,5.0,0.6,9.92,18.0,0,1,0.0,9.92
+793066,David Neres,9875,Napoli,2,midfielder,4.952,3.0,0.9666666666666667,8.918666666666667,30.0,0,1,0.5,9.418666666666667
+1059657,Sergi Cardona,10205,Villarreal,1,defender,1.555,1.8,0.2,3.555,7.0,1,0,5.0,8.555
+837341,Noa Lang,9875,Napoli,3,forward,0.8300000000000001,4.1,1.0,5.93,30.0,0,1,0.0,5.93
+215242,Leonardo Spinazzola,9875,Napoli,2,midfielder,-0.02599999999999969,3.0,1.0,3.974,30.0,0,1,0.5,4.474
+308517,Stanislav Lobotka,9875,Napoli,2,midfielder,-0.17799999999999988,3.0,0.6,3.422,18.0,0,1,0.5,3.922
+873573,Sam Beukema,9875,Napoli,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+922877,Logan Costa,10205,Villarreal,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1695966,Alassane Diatta,10205,Villarreal,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1841906,Carlos Maciá,10205,Villarreal,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1311915,Ilias Akhomach,10205,Villarreal,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1834473,Joselillo Gaitán,10205,Villarreal,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1897470,Nizar El Jmili,10205,Villarreal,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

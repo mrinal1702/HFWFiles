@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "villarreal-napoli",
+  "fotmob_match_id": 6106328,
+  "source_url": "https://www.fotmob.com/en-GB/matches/napoli-vs-villarreal/3c1he3#6106328:tab=stats",
+  "home_team": "Villarreal",
+  "away_team": "Napoli",
+  "raw_json_path": "intermediates/Villarreal_Vs_Napoli.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

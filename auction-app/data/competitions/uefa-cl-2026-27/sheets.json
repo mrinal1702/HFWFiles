@@ -214,6 +214,14 @@
       "gw": 2,
       "fotmob_match_id": 6106417,
       "file": "Viking_BayernMnchen_FinalPoints.csv"
+    },
+    {
+      "slug": "villarreal-napoli",
+      "title": "Villarreal vs Napoli",
+      "subtitle": "UEFA Champions League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 6106328,
+      "file": "Villarreal_Napoli_FinalPoints.csv"
     }
   ]
 }
