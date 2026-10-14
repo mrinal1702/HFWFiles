@@ -46,6 +46,13 @@
       "home_team": "Arsenal",
       "away_team": "Lille",
       "status": "scored"
+    },
+    {
+      "match_slug": "atletico-madrid-manchester-united",
+      "fotmob_match_id": 6106267,
+      "home_team": "Atlético Madrid",
+      "away_team": "Manchester United",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

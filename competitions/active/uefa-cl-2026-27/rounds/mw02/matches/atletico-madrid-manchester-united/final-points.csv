@@ -1,0 +1,44 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Pablo Barrios,1338192,Atlético de Madrid,midfielder,37.17,7.0,0.0,44
+Cristian Romero,789066,Atlético de Madrid,defender,32.785,10.0,0.0,43
+Marcos Llorente,602563,Atlético de Madrid,defender,31.384999999999994,10.0,0.0,41
+Álex Baena,942372,Atlético de Madrid,midfielder,27.736666666666668,7.0,0.0,35
+Alejandro Grimaldo,288406,Atlético de Madrid,defender,19.41,10.0,0.0,29
+Lisandro Martínez,847983,Manchester United,defender,28.6,0.0,0.0,29
+Bruno Fernandes,422685,Manchester United,midfielder,27.218666666666667,1.0,0.0,28
+Johnny Cardoso,1173678,Atlético de Madrid,midfielder,18.598000000000003,9.0,0.0,28
+Andrey Santos,1372921,Manchester United,midfielder,26.228,1.0,0.0,27
+Dávid Hancko,727897,Atlético de Madrid,defender,17.14,10.0,0.0,27
+Carlos Baleba,1352713,Manchester United,midfielder,23.272,3.0,0.0,26
+Ayden Heaven,1559639,Manchester United,defender,24.551666666666662,0.0,0.0,25
+Bryan Mbeumo,923312,Manchester United,forward,23.93,0.0,0.0,24
+Diogo Dalot,751550,Manchester United,defender,21.535,0.0,0.0,22
+Leny Yoro,1358581,Manchester United,defender,20.671666666666667,0.0,0.0,21
+Ademola Lookman,690516,Atlético de Madrid,midfielder,15.695333333333334,4.5,0.0,20
+Mason Mount,750032,Manchester United,midfielder,18.526,0.5,0.0,19
+Youri Tielemans,465960,Manchester United,midfielder,15.278000000000002,3.0,0.0,18
+Giuliano Simeone,1226147,Atlético de Madrid,midfielder,7.615333333333334,9.0,0.0,17
+Amad Diallo,1070052,Manchester United,forward,15.73,0.0,0.0,16
+Kang-In Lee,940976,Atlético de Madrid,forward,12.163333333333332,3.0,0.0,15
+Matheus Cunha,863098,Manchester United,forward,13.743333333333334,0.0,0.0,14
+Julián Álvarez,974753,Atlético de Madrid,forward,10.516666666666667,3.0,0.0,14
+Harry Maguire,255610,Manchester United,defender,5.323333333333333,5.0,0.0,10
+Morten Hjulmand,950199,Atlético de Madrid,midfielder,5.2653333333333325,4.5,0.0,10
+Marc Pubill,1323897,Atlético de Madrid,defender,4.745,5.0,0.0,10
+Joshua Zirkzee,950830,Manchester United,forward,8.72,0.0,0.0,9
+Robin Le Normand,609516,Atlético de Madrid,defender,3.486666666666667,5.0,0.0,8
+Jonathan David,939569,Atlético de Madrid,forward,3.606666666666667,3.0,0.0,7
+Marcus Rashford,696365,Manchester United,midfielder,3.46,3.0,0.0,6
+Matthijs de Ligt,769895,Manchester United,defender,0.0,0.0,0.0,0
+Dani Martínez,1531100,Atlético de Madrid,defender,0.0,0.0,0.0,0
+Daniel Armer,1726964,Manchester United,defender,0.0,0.0,0.0,0
+Jorge Domínguez,1842329,Atlético de Madrid,defender,0.0,0.0,0.0,0
+Rodrigo Mendoza,1419969,Atlético de Madrid,midfielder,0.0,0.0,0.0,0
+Harry Amass,1430832,Manchester United,midfielder,0.0,0.0,0.0,0
+Tyler Fletcher,1676985,Manchester United,midfielder,0.0,0.0,0.0,0
+Jorge Castillo,1692877,Atlético de Madrid,midfielder,0.0,0.0,0.0,0
+Alexander Sørloth,440330,Atlético de Madrid,forward,0.0,0.0,0.0,0
+Arnau Ortiz,1297989,Atlético de Madrid,forward,0.0,0.0,0.0,0
+Shea Lacey,1436260,Manchester United,forward,0.0,0.0,0.0,0
+Atlético de Madrid Keepers,9906,Atlético de Madrid,goalkeeper,25.38,18.0,0.0,43
+Manchester United Keepers,10260,Manchester United,goalkeeper,19.6,6.0,0.0,26

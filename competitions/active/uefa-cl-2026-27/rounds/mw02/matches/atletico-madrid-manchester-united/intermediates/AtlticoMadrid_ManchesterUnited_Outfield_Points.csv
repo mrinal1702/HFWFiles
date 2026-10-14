@@ -1,0 +1,42 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+1338192,Pablo Barrios,9906,Atlético de Madrid,2,midfielder,32.17,3.0,2.0,37.17,61.0,1,0,7.0,44.17
+789066,Cristian Romero,9906,Atlético de Madrid,1,defender,26.785,3.0,3.0,32.785,90.0,2,0,10.0,42.785
+602563,Marcos Llorente,9906,Atlético de Madrid,1,defender,25.384999999999994,3.0,3.0,31.384999999999994,90.0,2,0,10.0,41.38499999999999
+942372,Álex Baena,9906,Atlético de Madrid,2,midfielder,22.37,3.0,2.3666666666666667,27.736666666666668,71.0,1,0,7.0,34.736666666666665
+288406,Alejandro Grimaldo,9906,Atlético de Madrid,1,defender,14.61,1.8,3.0,19.41,90.0,2,0,10.0,29.41
+847983,Lisandro Martínez,10260,Manchester United,1,defender,22.599999999999998,3.0,3.0,28.599999999999998,90.0,0,2,0.0,28.599999999999998
+422685,Bruno Fernandes,10260,Manchester United,2,midfielder,21.552,3.0,2.6666666666666665,27.218666666666667,80.0,0,2,1.0,28.218666666666667
+1173678,Johnny Cardoso,9906,Atlético de Madrid,2,midfielder,14.798000000000002,0.7999999999999998,3.0,18.598000000000003,90.0,2,0,9.0,27.598000000000003
+1372921,Andrey Santos,10260,Manchester United,2,midfielder,20.227999999999998,3.0,3.0,26.227999999999998,90.0,0,2,1.0,27.227999999999998
+727897,Dávid Hancko,9906,Atlético de Madrid,1,defender,11.14,3.0,3.0,17.14,90.0,2,0,10.0,27.14
+1352713,Carlos Baleba,10260,Manchester United,2,midfielder,18.072000000000003,3.0,2.2,23.272000000000002,66.0,0,1,3.0,26.272000000000002
+1559639,Ayden Heaven,10260,Manchester United,1,defender,18.884999999999998,3.0,2.6666666666666665,24.551666666666666,80.0,0,2,0.0,24.551666666666666
+923312,Bryan Mbeumo,10260,Manchester United,3,forward,15.93,5.0,3.0,23.93,90.0,0,2,0.0,23.93
+751550,Diogo Dalot,10260,Manchester United,1,defender,15.535,3.0,3.0,21.535,90.0,0,2,0.0,21.535
+1358581,Leny Yoro,10260,Manchester United,1,defender,15.205000000000002,3.0,2.466666666666667,20.671666666666667,90.0,0,2,0.0,20.671666666666667
+690516,Ademola Lookman,9906,Atlético de Madrid,2,midfielder,12.062000000000001,3.0,0.6333333333333333,15.695333333333334,19.0,1,0,4.5,20.195333333333334
+750032,Mason Mount,10260,Manchester United,2,midfielder,14.726,3.0,0.8,18.526,24.0,0,1,0.5,19.026
+465960,Youri Tielemans,10260,Manchester United,2,midfielder,10.078000000000001,3.0,2.2,15.278000000000002,66.0,0,1,3.0,18.278000000000002
+1226147,Giuliano Simeone,9906,Atlético de Madrid,2,midfielder,2.782,1.9,2.933333333333333,7.615333333333334,88.0,2,0,9.0,16.615333333333332
+1070052,Amad Diallo,10260,Manchester United,3,forward,9.93,5.0,0.8,15.73,24.0,0,1,0.0,15.73
+940976,Kang-In Lee,9906,Atlético de Madrid,3,forward,6.03,4.1,2.033333333333333,12.163333333333332,61.0,1,0,3.0,15.163333333333332
+863098,Matheus Cunha,10260,Manchester United,3,forward,8.41,5.0,0.3333333333333333,13.743333333333334,10.0,0,0,0.0,13.743333333333334
+974753,Julián Álvarez,9906,Atlético de Madrid,3,forward,4.95,3.2,2.3666666666666667,10.516666666666667,71.0,1,0,3.0,13.516666666666667
+255610,Harry Maguire,10260,Manchester United,1,defender,1.9900000000000002,3.0,0.3333333333333333,5.323333333333333,10.0,0,0,5.0,10.323333333333334
+950199,Morten Hjulmand,9906,Atlético de Madrid,2,midfielder,1.6320000000000001,3.0,0.6333333333333333,5.2653333333333325,19.0,1,0,4.5,9.765333333333333
+1323897,Marc Pubill,9906,Atlético de Madrid,1,defender,0.7449999999999999,3.0,1.0,4.745,29.0,1,0,5.0,9.745000000000001
+950830,Joshua Zirkzee,10260,Manchester United,3,forward,2.92,5.0,0.8,8.72,24.0,0,1,0.0,8.72
+609516,Robin Le Normand,9906,Atlético de Madrid,1,defender,0.42000000000000004,3.0,0.06666666666666667,3.486666666666667,2.0,0,0,5.0,8.486666666666666
+939569,Jonathan David,9906,Atlético de Madrid,3,forward,1.2400000000000002,1.4,0.9666666666666667,3.606666666666667,29.0,1,0,3.0,6.606666666666667
+696365,Marcus Rashford,10260,Manchester United,2,midfielder,-1.7400000000000002,3.0,2.2,3.46,66.0,0,1,3.0,6.46
+769895,Matthijs de Ligt,10260,Manchester United,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1531100,Dani Martínez,9906,Atlético de Madrid,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1726964,Daniel Armer,10260,Manchester United,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1842329,Jorge Domínguez,9906,Atlético de Madrid,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1419969,Rodrigo Mendoza,9906,Atlético de Madrid,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1430832,Harry Amass,10260,Manchester United,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1676985,Tyler Fletcher,10260,Manchester United,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1692877,Jorge Castillo,9906,Atlético de Madrid,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+440330,Alexander Sørloth,9906,Atlético de Madrid,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1297989,Arnau Ortiz,9906,Atlético de Madrid,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1436260,Shea Lacey,10260,Manchester United,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

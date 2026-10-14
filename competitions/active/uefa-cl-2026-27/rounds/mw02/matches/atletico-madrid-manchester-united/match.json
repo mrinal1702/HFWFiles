@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "atletico-madrid-manchester-united",
+  "fotmob_match_id": 6106267,
+  "source_url": "https://www.fotmob.com/en-GB/matches/atletico-madrid-vs-manchester-united/3d2krr#6106267:tab=stats",
+  "home_team": "Atlético Madrid",
+  "away_team": "Manchester United",
+  "raw_json_path": "intermediates/AtlticoMadrid_Vs_ManchesterUnited.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}
