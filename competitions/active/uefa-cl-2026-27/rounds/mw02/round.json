@@ -25,9 +25,17 @@
     "transfer_window_open": true,
     "requires_locked_game_week_id": 300
   },
-  "fixtures": [],
-  "squad_lock_state": "open",
-  "scoring_state": "not_started",
+  "fixtures": [
+    {
+      "match_slug": "lens-sporting-cp",
+      "fotmob_match_id": 6106414,
+      "home_team": "Lens",
+      "away_team": "Sporting CP",
+      "status": "scored"
+    }
+  ],
+  "squad_lock_state": "locked",
+  "scoring_state": "in_progress",
   "publication_state": "unpublished",
   "algorithm_version": "1.0",
   "_bidding_note": "GW2 window opened 7 Oct 2026 by scripts/open-ucl-gw2-all.mjs (same values); recorded here as data."

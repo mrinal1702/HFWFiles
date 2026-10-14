@@ -89,6 +89,12 @@ def visual_urls(match_id: int, page_url: str | None = None) -> dict[str, str]:
     }
 
 
+def _repo_relative(path: Path) -> str:
+    """Repo-relative path when inside the repo (score_match.py fetches into a temp dir first)."""
+    p = path.resolve()
+    return str(p.relative_to(_REPO) if p.is_relative_to(_REPO) else p).replace("\\", "/")
+
+
 def write_manifest(path: Path, *, source_url: str, match_id: int, json_path: Path, urls: dict[str, str]) -> Path:
     g = json.loads(json_path.read_text(encoding="utf-8")).get("general") or {}
     home = (g.get("homeTeam") or {}).get("name")
@@ -98,7 +104,7 @@ def write_manifest(path: Path, *, source_url: str, match_id: int, json_path: Pat
         "home_team": home,
         "away_team": away,
         "source_url": source_url,
-        "json_path": str(json_path.relative_to(_REPO)).replace("\\", "/"),
+        "json_path": _repo_relative(json_path),
         "visual_links": urls,
         "note": "visual_links are for browser viewing only; scoring uses the saved JSON file.",
     }

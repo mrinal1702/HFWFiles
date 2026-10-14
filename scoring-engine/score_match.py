@@ -133,7 +133,9 @@ def main() -> None:
     json_path = inter / f"{label_part(home)}_Vs_{label_part(away)}.json"
     shutil.copyfile(tmp_json, json_path)
     if (tmp / "_fetch.manifest.json").exists():
-        shutil.copyfile(tmp / "_fetch.manifest.json", json_path.with_suffix(".manifest.json"))
+        man = read_json(tmp / "_fetch.manifest.json")
+        man["json_path"] = str(json_path.resolve().relative_to(REPO.resolve())).replace("\\", "/")
+        json_path.with_suffix(".manifest.json").write_text(json.dumps(man, ensure_ascii=False, indent=2), encoding="utf-8")
 
     for script, suffix in (("point_simulator.py", "_Points.csv"), ("calculate_keeper_points.py", "_KeeperPoints.csv")):
         out = inter / f"{label}{suffix}"
