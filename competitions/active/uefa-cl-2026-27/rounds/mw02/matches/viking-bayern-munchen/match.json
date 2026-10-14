@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "viking-bayern-munchen",
+  "fotmob_match_id": 6106417,
+  "source_url": "https://www.fotmob.com/en-GB/matches/viking-vs-bayern-munchen/2rpq5e#6106417:tab=stats",
+  "home_team": "Viking",
+  "away_team": "Bayern München",
+  "raw_json_path": "intermediates/Viking_Vs_BayernMnchen.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

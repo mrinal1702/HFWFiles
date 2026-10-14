@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Harry Kane,194165,FC Bayern München,forward,65.18,9.0,0.0,74
+Zlatko Tripić,279191,Viking FK,forward,50.74,9.0,0.0,60
+Joshua Kimmich,460632,FC Bayern München,midfielder,46.2,5.0,0.0,51
+Peter Christiansen,955759,Viking FK,forward,40.66,9.0,0.0,50
+Kristoffer Askildsen,964535,Viking FK,midfielder,35.330000000000005,5.0,0.0,40
+Kristoffer Haugen,313128,Viking FK,defender,33.74666666666666,5.0,0.0,39
+Tom Bischof,1286183,FC Bayern München,midfielder,33.686,5.0,0.0,39
+Michael Olise,1029063,FC Bayern München,midfielder,28.60533333333333,5.0,0.0,34
+Luis Díaz,860914,FC Bayern München,midfielder,25.729333333333336,7.0,0.0,33
+Gianni Stensness,1029026,Viking FK,defender,37.16,-5.0,0.0,32
+Herman Haugen,1019527,Viking FK,forward,28.39,3.0,0.0,31
+Erik Botheim,741561,Viking FK,forward,19.98333333333333,6.0,0.0,26
+Konrad Laimer,526827,FC Bayern München,defender,30.5,-5.0,0.0,26
+Joe Bell,848345,Viking FK,midfielder,20.08933333333333,3.0,0.0,23
+Henrik Falchener,1110550,Viking FK,defender,26.99,-5.0,0.0,22
+Henrik Heggheim,1163230,Viking FK,defender,23.343333333333337,-5.0,0.0,18
+Alphonso Davies,751202,FC Bayern München,defender,16.71,0.0,0.0,17
+Min-Jae Kim,828159,FC Bayern München,defender,19.395,-5.0,0.0,14
+Ismael Saibari,1180288,FC Bayern München,midfielder,5.088666666666667,8.5,0.0,14
+Jesper Daland,633094,Viking FK,defender,18.45833333333333,-5.0,0.0,13
+Jonathan Tah,469700,FC Bayern München,defender,12.835,0.0,0.0,13
+Dayot Upamecano,658554,FC Bayern München,defender,12.640000000000002,0.0,0.0,13
+Henrik Rørvik Bjørdal,440313,Viking FK,midfielder,8.476,3.0,0.0,11
+Viljar Vevatne,444253,Viking FK,defender,6.166666666666667,5.0,0.0,11
+Tobias Moi,1636182,Viking FK,midfielder,6.514666666666667,4.5,0.0,11
+Simen Kvia-Egeskog,1267374,Viking FK,midfielder,6.094666666666667,4.5,0.0,11
+Nathaniel Brown,1395447,FC Bayern München,defender,9.28,0.0,0.0,9
+Josip Stanišić,950824,FC Bayern München,defender,8.261666666666665,0.0,0.0,8
+Lennart Karl,1737700,FC Bayern München,midfielder,5.122,1.0,0.0,6
+Hiroki Ito,851626,FC Bayern München,defender,6.118333333333333,0.0,0.0,6
+Sacha Boey,1034808,FC Bayern München,defender,0.0,0.0,0.0,0
+Vetle Auklend,1585827,Viking FK,defender,0.0,0.0,0.0,0
+Essien Bassey,1697028,Viking FK,defender,0.0,0.0,0.0,0
+Serge Gnabry,385437,FC Bayern München,midfielder,0.0,0.0,0.0,0
+Jakob Segadal Hansen,1376699,Viking FK,midfielder,0.0,0.0,0.0,0
+Aleksandar Pavlović,1473580,FC Bayern München,midfielder,0.0,0.0,0.0,0
+Bara Ndiaye,1798782,FC Bayern München,midfielder,0.0,0.0,0.0,0
+Romano Postema,1069826,Viking FK,forward,0.0,0.0,0.0,0
+Niklas Fuglestad,1636186,Viking FK,forward,0.0,0.0,0.0,0
+Amin Cosic,1751162,Viking FK,forward,0.0,0.0,0.0,0
+Viking FK Keepers,8478,Viking FK,goalkeeper,25.58,0.0,0.0,26
+FC Bayern München Keepers,9823,FC Bayern München,goalkeeper,14.6,0.0,0.0,15

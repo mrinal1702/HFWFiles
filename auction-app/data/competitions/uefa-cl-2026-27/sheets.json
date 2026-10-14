@@ -206,6 +206,14 @@
       "gw": 2,
       "fotmob_match_id": 6106323,
       "file": "RBLeipzig_PSVEindhoven_FinalPoints.csv"
+    },
+    {
+      "slug": "viking-bayern-munchen",
+      "title": "Viking vs Bayern München",
+      "subtitle": "UEFA Champions League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 6106417,
+      "file": "Viking_BayernMnchen_FinalPoints.csv"
     }
   ]
 }

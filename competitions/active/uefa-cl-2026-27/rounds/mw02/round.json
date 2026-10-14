@@ -74,6 +74,13 @@
       "home_team": "RB Leipzig",
       "away_team": "PSV Eindhoven",
       "status": "scored"
+    },
+    {
+      "match_slug": "viking-bayern-munchen",
+      "fotmob_match_id": 6106417,
+      "home_team": "Viking",
+      "away_team": "Bayern München",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
