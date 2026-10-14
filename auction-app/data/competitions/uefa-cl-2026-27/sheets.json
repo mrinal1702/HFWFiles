@@ -182,6 +182,14 @@
       "gw": 2,
       "fotmob_match_id": 6106267,
       "file": "AtlticoMadrid_ManchesterUnited_FinalPoints.csv"
+    },
+    {
+      "slug": "galatasaray-barcelona",
+      "title": "Galatasaray vs Barcelona",
+      "subtitle": "UEFA Champions League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 6106338,
+      "file": "Galatasaray_Barcelona_FinalPoints.csv"
     }
   ]
 }

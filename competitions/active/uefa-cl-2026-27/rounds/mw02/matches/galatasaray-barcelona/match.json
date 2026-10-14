@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "galatasaray-barcelona",
+  "fotmob_match_id": 6106338,
+  "source_url": "https://www.fotmob.com/en-GB/matches/barcelona-vs-galatasaray/2gt1cx#6106338:tab=stats",
+  "home_team": "Galatasaray",
+  "away_team": "Barcelona",
+  "raw_json_path": "intermediates/Galatasaray_Vs_Barcelona.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

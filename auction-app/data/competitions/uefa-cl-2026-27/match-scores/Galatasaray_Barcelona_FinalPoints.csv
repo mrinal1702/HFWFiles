@@ -1,0 +1,42 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Lamine Yamal,1467236,Barcelona,midfielder,46.548,11.0,0.0,58
+João Cancelo,361757,Barcelona,defender,44.385,5.0,0.0,49
+Fermín López,1404415,Barcelona,midfielder,33.01933333333333,11.0,0.0,44
+Dani Olmo,614834,Barcelona,forward,31.773333333333333,9.0,0.0,41
+Anthony Gordon,906937,Barcelona,midfielder,31.556666666666665,9.0,0.0,41
+Rodri,675088,Barcelona,midfielder,27.404000000000003,11.0,0.0,38
+Pedri,1083323,Barcelona,midfielder,25.79133333333333,11.0,0.0,37
+Eric García,940573,Barcelona,defender,27.51833333333333,5.0,0.0,33
+Gerard Martín,1598982,Barcelona,defender,25.225,5.0,0.0,30
+Karim Adeyemi,959594,Barcelona,forward,25.263333333333332,3.0,0.0,28
+Pau Cubarsí,1532137,Barcelona,defender,23.155,5.0,0.0,28
+Gabriel Jesus,576165,Barcelona,forward,23.676666666666662,3.0,0.0,27
+Aleksey Batrakov,1504343,Galatasaray,midfielder,24.545333333333332,1.0,0.0,26
+Davinson Sánchez,643533,Galatasaray,defender,32.015,-10.0,0.0,22
+Rafael Leão,848844,Galatasaray,midfielder,21.132,-1.0,0.0,20
+Eren Elmalı,1041660,Galatasaray,defender,29.32,-10.0,0.0,19
+Mario Lemina,421786,Galatasaray,midfielder,13.899333333333336,1.0,0.0,15
+Ismail Jakobs,906945,Galatasaray,defender,24.01,-10.0,0.0,14
+Marc Bernal,1573126,Barcelona,midfielder,11.128666666666668,2.5,0.0,14
+Renato Nhaga,1741323,Galatasaray,midfielder,9.672,2.5,0.0,12
+Victor Osimhen,687681,Galatasaray,forward,8.55,3.0,0.0,12
+Jules Koundé,705450,Barcelona,defender,6.486666666666666,5.0,0.0,11
+Leroy Sané,530859,Galatasaray,forward,11.106666666666666,0.0,0.0,11
+Roland Sallai,583601,Galatasaray,defender,5.891666666666667,5.0,0.0,11
+Lesley Ugochukwu,1200631,Galatasaray,midfielder,9.442666666666668,0.5,0.0,10
+Gabriel Sara,902710,Galatasaray,midfielder,9.216666666666663,0.5,0.0,10
+Yunus Akgün,845991,Galatasaray,midfielder,7.717333333333334,1.0,0.0,9
+Gavi,1279040,Barcelona,midfielder,4.976666666666667,2.5,0.0,7
+Lucas Torreira,592909,Galatasaray,midfielder,6.5280000000000005,-1.0,0.0,6
+Barış Alper Yılmaz,890232,Galatasaray,defender,8.383333333333333,-10.0,0.0,0
+Abdülkerim Bardakci,291399,Galatasaray,defender,0.0,0.0,0.0,0
+El Chadaille Bitshiabu,1173788,Galatasaray,defender,0.0,0.0,0.0,0
+Alejandro Balde,1254166,Barcelona,defender,0.0,0.0,0.0,0
+Xavi Espart,1815149,Barcelona,defender,0.0,0.0,0.0,0
+Ilkay Gündogan,178818,Galatasaray,midfielder,0.0,0.0,0.0,0
+Brian Fariñas,1821727,Barcelona,midfielder,0.0,0.0,0.0,0
+Deniz Gül,1406300,Galatasaray,forward,0.0,0.0,0.0,0
+Berat Luş,1682656,Galatasaray,forward,0.0,0.0,0.0,0
+Hamza Abdelkarim,1708842,Barcelona,forward,0.0,0.0,0.0,0
+Barcelona Keepers,8634,Barcelona,goalkeeper,17.300000000000004,12.0,0.0,29
+Galatasaray Keepers,8637,Galatasaray,goalkeeper,29.300000000000004,-6.0,0.0,23

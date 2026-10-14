@@ -53,6 +53,13 @@
       "home_team": "Atlético Madrid",
       "away_team": "Manchester United",
       "status": "scored"
+    },
+    {
+      "match_slug": "galatasaray-barcelona",
+      "fotmob_match_id": 6106338,
+      "home_team": "Galatasaray",
+      "away_team": "Barcelona",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

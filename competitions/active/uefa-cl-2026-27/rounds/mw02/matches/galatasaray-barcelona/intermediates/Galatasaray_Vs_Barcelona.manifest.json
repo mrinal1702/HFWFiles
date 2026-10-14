@@ -1,0 +1,15 @@
+{
+  "match_id": 6106338,
+  "home_team": "Galatasaray",
+  "away_team": "Barcelona",
+  "source_url": "https://www.fotmob.com/en-GB/matches/barcelona-vs-galatasaray/2gt1cx#6106338:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw02/matches/galatasaray-barcelona/intermediates/Galatasaray_Vs_Barcelona.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/barcelona-vs-galatasaray/2gt1cx",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/barcelona-vs-galatasaray/2gt1cx#6106338:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/barcelona-vs-galatasaray/2gt1cx#6106338:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/barcelona-vs-galatasaray/2gt1cx#6106338:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106338"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
