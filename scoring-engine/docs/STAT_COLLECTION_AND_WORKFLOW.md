@@ -43,7 +43,14 @@ Handoff reference for how FotMob-style match JSON becomes per-player stat tables
 6. Flattens **`playerStats`** sections into metrics (first occurrence of each `stat` key wins if duplicated).
 7. **Derived fields**: inaccurate passes = total − accurate; **ground-duel lost** = total − won on `ground_duels_won` (column `ground_duels_lost` — audit only, **not** scored as tackles lost); same for aerial duels; **dribbles failed** = attempts − successes on `dribbles_succeeded`; **`tackles_lost`** = FotMob **`dribbled_past`** (times beaten by an opponent dribble when defending).
 8. **Defaults**: cross/long-ball, `missed_penalty`, and `penalties_won` use **0** when the stat block is absent.
-9. **Red cards** and **own goals** from timeline events (not playerStats keys).
+9. **Red cards** and **own goals** from timeline events (not playerStats keys). A red card is any
+   sending-off: `card` = `Red` (straight) or `YellowRed` (second yellow) — both score the same −4.
+   A single yellow carries no penalty.
+
+**Source rule (commissioner, Oct 2026):** goals, assists and every other counted stat come from
+FotMob's official `playerStats` only. Timeline/commentary text (e.g. "assist by X" on a goal event)
+is never used to add or remove points. Only red cards and own goals, which have no playerStats key,
+are read from timeline events.
 10. Writes three CSVs: `stat_collection_defenders.csv`, `stat_collection_midfielders.csv`, `stat_collection_forwards.csv` (or `scoring-engine/export_run/` if locked).
 
 ### Running
@@ -131,10 +138,11 @@ Each outfield config provides `weights`, `formulas` (minutes + dispossessed), an
 
 ### Scoring rule changelog
 
-Rule changes apply to **matches scored after the change** unless a gameweek is explicitly re-run and re-published. Do not amend published GW scores retroactively without commissioner sign-off.
+Rule changes apply to **matches scored after the change** (and the current, unpublished gameweek). **Past gameweeks are never re-scored or amended** (commissioner rule, Oct 2026).
 
 | Date | Rule | Code / docs |
 |------|------|-------------|
+| **2026-10-14** | **Second yellow = red card.** Timeline `card: "YellowRed"` now counts in `red_cards` (−4), same as a straight red. Applied from UCL 2026/27 MW2 (only Viking vs Bayern changed: Michael Olise 34 → 30). Past gameweeks are never re-scored. | `stat_collection.py` (`SENDING_OFF_CARDS`) |
 | **2026-06** | **`penalties_won`: +5** per penalty won (defender, midfielder, forward). Does not require conversion; same player can win and score without extra assist logic. | `stat_collection.py` (`penalties_won` column); `scoring/*_points.py` (`penalties_won: 5.0`) |
 | **2026-06** | **Forward `aerial_duels_lost`: weight 0** (was erroneously +0.4). No points or penalty for lost aerials for forwards only. | `scoring/forward_points.py` |
 | **2026-06** | **`tackles_lost`**: use FotMob **`dribbled_past`** (times beaten by a dribble), **not** ground duels lost. Remove separate `dribbled_past` scoring weight (avoids double penalty). Failed take-ons still use `dribbles_failed` → weight `dribbles_lost`. GW1 World Cup matches re-scored and re-published. | `stat_collection.py` (`tackles_lost` column); `scoring/*_points.py` |

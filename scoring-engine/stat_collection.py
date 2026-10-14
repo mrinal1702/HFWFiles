@@ -72,6 +72,8 @@ KEY_WOODWORK = "shots_woodwork"
 KEY_ACCURATE_CROSSES = "accurate_crosses"
 KEY_LONG_BALLS_ACCURATE = "long_balls_accurate"
 KEY_MISSED_PENALTY = "missed_penalty"
+# Timeline card values that mean a sending-off: straight red and second yellow score the same.
+SENDING_OFF_CARDS = frozenset({"Red", "YellowRed"})
 KEY_PENALTIES_WON = "penalties_won"
 KEY_DRIBBLES_SUCCEEDED = "dribbles_succeeded"
 
@@ -131,7 +133,8 @@ def _input_path() -> Path:
 def red_card_count_by_player(data: dict) -> dict[int, int]:
     """
     Red cards from the main match timeline: content.matchFacts.events.events
-    (type == Card, card == Red). Yellow cards are ignored.
+    (type == Card, card in SENDING_OFF_CARDS). A second yellow ("YellowRed") counts
+    as a red card; a single yellow is ignored.
     """
     out: dict[int, int] = {}
     evs = (
@@ -147,7 +150,7 @@ def red_card_count_by_player(data: dict) -> dict[int, int]:
             continue
         if e.get("type") != "Card":
             continue
-        if e.get("card") != "Red":
+        if e.get("card") not in SENDING_OFF_CARDS:
             continue
         pid = e.get("playerId")
         if pid is None and isinstance(e.get("player"), dict):

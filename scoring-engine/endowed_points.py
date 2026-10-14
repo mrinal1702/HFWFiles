@@ -68,7 +68,7 @@ def _read_json(path: Path) -> dict[str, Any]:
 def red_card_count_by_player_from_timeline(data: dict[str, Any]) -> dict[int, int]:
     """
     Not used in the endowed points formula, but handy for debugging.
-    Counts type=Card & card=Red only.
+    Counts sending-offs: type=Card & card in Red / YellowRed (second yellow).
     """
     out: dict[int, int] = {}
     evs = (
@@ -84,7 +84,7 @@ def red_card_count_by_player_from_timeline(data: dict[str, Any]) -> dict[int, in
             continue
         if e.get("type") != "Card":
             continue
-        if e.get("card") != "Red":
+        if e.get("card") not in ("Red", "YellowRed"):
             continue
         pid = e.get("playerId")
         if pid is None and isinstance(e.get("player"), dict):
