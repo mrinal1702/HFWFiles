@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "roma-real-madrid",
+  "fotmob_match_id": 6106274,
+  "source_url": "https://www.fotmob.com/en-GB/matches/real-madrid-vs-roma/2hatyy#6106274:tab=stats",
+  "home_team": "Roma",
+  "away_team": "Real Madrid",
+  "raw_json_path": "intermediates/Roma_Vs_RealMadrid.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

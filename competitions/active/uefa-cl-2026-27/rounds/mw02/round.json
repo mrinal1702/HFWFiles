@@ -130,6 +130,13 @@
       "home_team": "Real Betis",
       "away_team": "FC Porto",
       "status": "scored"
+    },
+    {
+      "match_slug": "roma-real-madrid",
+      "fotmob_match_id": 6106274,
+      "home_team": "Roma",
+      "away_team": "Real Madrid",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

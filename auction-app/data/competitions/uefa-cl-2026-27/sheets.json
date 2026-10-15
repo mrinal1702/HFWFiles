@@ -270,6 +270,14 @@
       "gw": 2,
       "fotmob_match_id": 6106299,
       "file": "RealBetis_FCPorto_FinalPoints.csv"
+    },
+    {
+      "slug": "roma-real-madrid",
+      "title": "Roma vs Real Madrid",
+      "subtitle": "UEFA Champions League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 6106274,
+      "file": "Roma_RealMadrid_FinalPoints.csv"
     }
   ]
 }

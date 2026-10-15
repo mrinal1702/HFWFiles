@@ -1,0 +1,15 @@
+{
+  "match_id": 6106274,
+  "home_team": "Roma",
+  "away_team": "Real Madrid",
+  "source_url": "https://www.fotmob.com/en-GB/matches/real-madrid-vs-roma/2hatyy#6106274:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw02/matches/roma-real-madrid/intermediates/Roma_Vs_RealMadrid.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/real-madrid-vs-roma/2hatyy",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/real-madrid-vs-roma/2hatyy#6106274:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/real-madrid-vs-roma/2hatyy#6106274:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/real-madrid-vs-roma/2hatyy#6106274:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106274"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

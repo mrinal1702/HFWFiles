@@ -1,0 +1,42 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Donyell Malen,660301,Roma,forward,45.47,9.0,0.0,54
+Yan Diomande,1735453,Real Madrid,midfielder,52.25,1.0,0.0,53
+Kylian Mbappé,701154,Real Madrid,forward,41.24,12.0,0.0,53
+Matias Soulé,1280082,Roma,midfielder,42.192,9.0,0.0,51
+Wesley,1320176,Roma,midfielder,41.02799999999999,3.0,0.0,44
+Arda Güler,1253890,Real Madrid,midfielder,33.025333333333336,8.5,0.0,42
+Mario Hermoso,671203,Roma,defender,34.895,5.0,0.0,40
+Endrick,1406729,Real Madrid,forward,28.14333333333333,9.0,0.0,37
+Marten de Roon,198559,Roma,midfielder,30.468,3.0,0.0,33
+Federico Valverde,743533,Real Madrid,midfielder,25.078,7.0,0.0,32
+Carlos Espí,1610744,Real Madrid,forward,22.27,9.0,0.0,31
+Nahuel Molina,726345,Roma,midfielder,27.026,3.0,0.0,30
+Antonio Rüdiger,276738,Real Madrid,defender,34.295,-5.0,0.0,29
+Jude Bellingham,1077894,Real Madrid,midfielder,17.796,7.0,0.0,25
+Rodrigo Mora,1525065,Roma,midfielder,21.726,0.5,0.0,22
+Aurélien Tchouaméni,914458,Real Madrid,midfielder,19.69733333333333,1.0,0.0,21
+Marc Cucurella,873289,Real Madrid,defender,24.94,-5.0,0.0,20
+Paulo Dybala,325916,Roma,forward,15.48,3.0,0.0,18
+Bernardo Silva,488139,Real Madrid,midfielder,9.700666666666669,8.5,0.0,18
+Niccolò Pisilli,1451196,Roma,midfielder,14.057333333333336,3.0,0.0,17
+Ibrahima Konaté,820140,Real Madrid,defender,19.895000000000003,-5.0,0.0,15
+Gianluca Mancini,588687,Roma,defender,8.78,5.0,0.0,14
+Alvaro Carreras,1190025,Real Madrid,defender,7.94,5.0,0.0,13
+Manu Koné,1016132,Roma,midfielder,9.570666666666668,2.5,0.0,12
+Evan N'Dicka,787242,Roma,defender,22.065,-10.0,0.0,12
+Denzel Dumfries,593118,Real Madrid,defender,12.371666666666666,-5.0,0.0,7
+Lorenzo Pellegrini,540307,Roma,midfielder,8.44,-3.5,0.0,5
+Vinícius Júnior,846033,Real Madrid,midfielder,1.9806666666666672,1.0,0.0,3
+Leonardo Balerdi,958464,Roma,defender,4.5,-10.0,0.0,0
+Konstantinos Koulierakis,1337884,Roma,defender,4.19,-10.0,0.0,0
+Trent Alexander-Arnold,760712,Real Madrid,defender,0.0,0.0,0.0,0
+Dean Huijsen,1367619,Real Madrid,defender,0.0,0.0,0.0,0
+Daniele Ghilardi,1386006,Roma,defender,0.0,0.0,0.0,0
+Eduardo Camavinga,1015185,Real Madrid,midfielder,0.0,0.0,0.0,0
+Devyne Rensch,1180321,Roma,midfielder,0.0,0.0,0.0,0
+Thiago Pitarch,1796908,Real Madrid,midfielder,0.0,0.0,0.0,0
+Emanuele Lulli,1800491,Roma,midfielder,0.0,0.0,0.0,0
+Brahim Díaz,750027,Real Madrid,forward,0.0,0.0,0.0,0
+Santiago Castro,1282008,Roma,forward,0.0,0.0,0.0,0
+Real Madrid Keepers,8633,Real Madrid,goalkeeper,22.46,0.0,0.0,22
+Roma Keepers,8686,Roma,goalkeeper,25.48,-6.0,0.0,19
