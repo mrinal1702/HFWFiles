@@ -144,10 +144,17 @@
       "home_team": "Shakhtar Donetsk",
       "away_team": "AEK Athens",
       "status": "scored"
+    },
+    {
+      "match_slug": "slovan-bratislava-vfb-stuttgart",
+      "fotmob_match_id": 6106396,
+      "home_team": "Slovan Bratislava",
+      "away_team": "VfB Stuttgart",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
-  "scoring_state": "in_progress",
+  "scoring_state": "complete",
   "publication_state": "unpublished",
   "algorithm_version": "1.0",
   "_bidding_note": "GW2 window opened 7 Oct 2026 by scripts/open-ucl-gw2-all.mjs (same values); recorded here as data."

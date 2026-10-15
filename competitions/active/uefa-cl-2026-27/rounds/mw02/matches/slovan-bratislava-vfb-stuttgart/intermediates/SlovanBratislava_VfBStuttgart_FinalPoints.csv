@@ -1,0 +1,41 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Jeff Chabot,867080,VfB Stuttgart,defender,52.23000000000001,10.0,0.0,62
+Angelo Stiller,1071186,VfB Stuttgart,midfielder,37.19866666666666,9.0,0.0,46
+Deniz Undav,661519,VfB Stuttgart,midfielder,33.446,11.0,0.0,44
+Grischa Prömel,625175,VfB Stuttgart,midfielder,28.226000000000003,11.0,0.0,39
+César Blackman,888966,Slovan Bratislava,defender,42.225,-5.0,0.0,37
+Ramon Hendriks,1125187,VfB Stuttgart,defender,26.79,10.0,0.0,37
+Finn Jeltsch,1487877,VfB Stuttgart,defender,26.525,10.0,0.0,37
+Josha Vagnoman,928454,VfB Stuttgart,defender,18.876666666666665,10.0,0.0,29
+Ermedin Demirović,840241,VfB Stuttgart,forward,22.44,3.0,0.0,25
+Tigran Barseghyan,552700,Slovan Bratislava,midfielder,23.88,1.0,0.0,25
+Bilal El Khannouss,1340895,VfB Stuttgart,midfielder,14.893999999999998,9.0,0.0,24
+Lorenz Assignon,1192406,VfB Stuttgart,defender,16.303333333333335,5.0,0.0,21
+Chris Führich,892679,VfB Stuttgart,midfielder,12.17666666666667,9.0,0.0,21
+Sandro Cruz,1045565,Slovan Bratislava,defender,21.01,0.0,0.0,21
+Jamie Leweling,1074968,VfB Stuttgart,forward,17.653333333333336,3.0,0.0,21
+Alen Mustafić,949092,Slovan Bratislava,midfielder,21.076,-1.0,0.0,20
+Andraž Šporar,338136,Slovan Bratislava,forward,18.31,0.0,0.0,18
+Kenan Bajrič,315814,Slovan Bratislava,defender,22.105,-5.0,0.0,17
+Suleiman Camara,1206542,Slovan Bratislava,midfielder,15.95,1.0,0.0,17
+Peter Pokorný,951951,Slovan Bratislava,midfielder,17.938000000000002,-1.0,0.0,17
+Cristian Martínez,727101,Slovan Bratislava,midfielder,15.810000000000002,1.0,0.0,17
+Svetozar Marković,922722,Slovan Bratislava,defender,20.78,-5.0,0.0,16
+Dženan Pejčinović,1366602,VfB Stuttgart,forward,9.576666666666666,6.0,0.0,16
+Leo Sauer,1425998,VfB Stuttgart,forward,11.983333333333333,3.0,0.0,15
+Atakan Karazor,684983,VfB Stuttgart,midfielder,5.505333333333334,4.5,0.0,10
+Roman Čerepkai,1338948,Slovan Bratislava,forward,7.76,0.0,0.0,8
+Kevin Wimmer,264221,Slovan Bratislava,defender,5.995,0.0,0.0,6
+Nino Marcelli,1449716,Slovan Bratislava,forward,4.85,0.0,0.0,5
+Alasana Yirajang,1614857,Slovan Bratislava,forward,4.069999999999999,0.0,0.0,4
+Artur Gajdoš,1201843,Slovan Bratislava,midfielder,3.56,0.5,0.0,4
+Samuel Kozlovský,949877,Slovan Bratislava,defender,0.0,0.0,0.0,0
+Luca Jaquez,1270002,VfB Stuttgart,defender,0.0,0.0,0.0,0
+Sahmkou Camara,1513367,Slovan Bratislava,defender,0.0,0.0,0.0,0
+Danylo Ignatenko,630472,Slovan Bratislava,midfielder,0.0,0.0,0.0,0
+Daiki Matsuoka,1023982,Slovan Bratislava,midfielder,0.0,0.0,0.0,0
+Rahim Ibrahim,1239580,Slovan Bratislava,midfielder,0.0,0.0,0.0,0
+Yanik Spalt,1793638,VfB Stuttgart,midfielder,0.0,0.0,0.0,0
+Alexej Maroš,1557209,Slovan Bratislava,forward,0.0,0.0,0.0,0
+VfB Stuttgart Keepers,10269,VfB Stuttgart,goalkeeper,11.94,18.0,0.0,30
+Slovan Bratislava Keepers,6019,Slovan Bratislava,goalkeeper,29.68,0.0,0.0,30

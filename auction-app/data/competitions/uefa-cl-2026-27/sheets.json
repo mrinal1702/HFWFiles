@@ -286,6 +286,14 @@
       "gw": 2,
       "fotmob_match_id": 6106337,
       "file": "ShakhtarDonetsk_AEKAthens_FinalPoints.csv"
+    },
+    {
+      "slug": "slovan-bratislava-vfb-stuttgart",
+      "title": "Slovan Bratislava vs VfB Stuttgart",
+      "subtitle": "UEFA Champions League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 6106396,
+      "file": "SlovanBratislava_VfBStuttgart_FinalPoints.csv"
     }
   ]
 }

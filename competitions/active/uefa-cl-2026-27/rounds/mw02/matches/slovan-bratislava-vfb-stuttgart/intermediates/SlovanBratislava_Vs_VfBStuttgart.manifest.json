@@ -1,0 +1,15 @@
+{
+  "match_id": 6106396,
+  "home_team": "Slovan Bratislava",
+  "away_team": "VfB Stuttgart",
+  "source_url": "https://www.fotmob.com/en-GB/matches/slovan-bratislava-vs-vfb-stuttgart/26zfwz#6106396:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw02/matches/slovan-bratislava-vfb-stuttgart/intermediates/SlovanBratislava_Vs_VfBStuttgart.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/slovan-bratislava-vs-vfb-stuttgart/26zfwz",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/slovan-bratislava-vs-vfb-stuttgart/26zfwz#6106396:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/slovan-bratislava-vs-vfb-stuttgart/26zfwz#6106396:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/slovan-bratislava-vs-vfb-stuttgart/26zfwz#6106396:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106396"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
