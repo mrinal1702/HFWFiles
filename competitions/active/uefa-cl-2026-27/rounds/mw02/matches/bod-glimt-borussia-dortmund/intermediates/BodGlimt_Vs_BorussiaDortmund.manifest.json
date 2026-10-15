@@ -1,0 +1,15 @@
+{
+  "match_id": 6106315,
+  "home_team": "Bodø/Glimt",
+  "away_team": "Borussia Dortmund",
+  "source_url": "https://www.fotmob.com/en-GB/matches/bodoglimt-vs-borussia-dortmund/2qipf9#6106315:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw02/matches/bod-glimt-borussia-dortmund/intermediates/BodGlimt_Vs_BorussiaDortmund.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/bodoglimt-vs-borussia-dortmund/2qipf9",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/bodoglimt-vs-borussia-dortmund/2qipf9#6106315:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/bodoglimt-vs-borussia-dortmund/2qipf9#6106315:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/bodoglimt-vs-borussia-dortmund/2qipf9#6106315:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106315"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

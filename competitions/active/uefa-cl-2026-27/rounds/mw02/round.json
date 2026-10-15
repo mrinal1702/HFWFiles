@@ -109,6 +109,13 @@
       "home_team": "Aston Villa",
       "away_team": "Fenerbahçe",
       "status": "scored"
+    },
+    {
+      "match_slug": "bod-glimt-borussia-dortmund",
+      "fotmob_match_id": 6106315,
+      "home_team": "Bodø/Glimt",
+      "away_team": "Borussia Dortmund",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

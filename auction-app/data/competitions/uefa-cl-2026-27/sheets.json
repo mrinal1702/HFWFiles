@@ -246,6 +246,14 @@
       "gw": 2,
       "fotmob_match_id": 6106284,
       "file": "AstonVilla_Fenerbahe_FinalPoints.csv"
+    },
+    {
+      "slug": "bod-glimt-borussia-dortmund",
+      "title": "Bodø/Glimt vs Borussia Dortmund",
+      "subtitle": "UEFA Champions League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 6106315,
+      "file": "BodGlimt_BorussiaDortmund_FinalPoints.csv"
     }
   ]
 }

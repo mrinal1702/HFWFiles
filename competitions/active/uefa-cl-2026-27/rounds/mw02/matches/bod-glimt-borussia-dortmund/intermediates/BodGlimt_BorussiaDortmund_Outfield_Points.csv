@@ -1,0 +1,38 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+540929,Jostein Gundersen,8402,Bodø/Glimt,1,defender,40.945,3.0,3.0,46.945,90.0,1,0,10.0,56.945
+1281021,Fredrik Sjøvold,8402,Bodø/Glimt,1,defender,39.21,3.0,3.0,45.21,90.0,1,0,10.0,55.21
+664970,Waldemar Anton,9789,Borussia Dortmund,1,defender,43.29,3.0,3.0,49.29,90.0,0,1,5.0,54.29
+1160076,Sondre Auklend,8402,Bodø/Glimt,2,midfielder,39.56200000000001,0.7999999999999998,3.0,43.36200000000001,90.0,1,0,7.0,50.36200000000001
+741397,Jens Petter Hauge,8402,Bodø/Glimt,3,forward,28.03,5.0,2.6,35.63,78.0,1,0,3.0,38.63
+1287373,Jobe Bellingham,9789,Borussia Dortmund,2,midfielder,30.200000000000003,1.9,3.0,35.1,90.0,0,1,3.0,38.1
+215158,Haitam Aleesami,8402,Bodø/Glimt,1,defender,21.289999999999996,3.0,3.0,27.289999999999996,90.0,1,0,10.0,37.28999999999999
+630228,Fredrik André Bjørkan,8402,Bodø/Glimt,1,defender,18.63,3.0,3.0,24.63,90.0,1,0,10.0,34.629999999999995
+615292,Andreas Helmersen,8402,Bodø/Glimt,3,forward,21.83,4.1,3.0,28.93,90.0,1,0,3.0,31.93
+530635,Patrick Berg,8402,Bodø/Glimt,2,midfielder,18.381999999999998,1.9,3.0,23.281999999999996,90.0,1,0,7.0,30.281999999999996
+559065,Ramy Bensebaini,9789,Borussia Dortmund,1,defender,18.125,3.0,3.0,24.125,90.0,0,1,5.0,29.125
+1479742,Joane Gadou,9789,Borussia Dortmund,1,defender,16.445000000000004,1.8,3.0,21.245000000000005,90.0,0,1,5.0,26.245000000000005
+1086551,Ole Blomberg,8402,Bodø/Glimt,3,forward,13.75,5.0,3.0,21.75,90.0,1,0,3.0,24.75
+966019,Felix Nmecha,9789,Borussia Dortmund,2,midfielder,15.636,3.0,1.0,19.636,30.0,0,0,2.5,22.136
+792429,Joey Veerman,9789,Borussia Dortmund,2,midfielder,9.825999999999999,3.0,2.0,14.825999999999999,60.0,0,1,3.0,17.826
+1047667,Maximilian Beier,9789,Borussia Dortmund,2,midfielder,11.382,-0.30000000000000027,2.5666666666666664,13.648666666666665,77.0,0,1,3.0,16.648666666666664
+1254234,Ethan Nwaneri,9789,Borussia Dortmund,2,midfielder,10.004000000000001,3.0,1.0,14.004000000000001,30.0,0,0,2.5,16.504
+540975,Sondre Brunstad Fet,8402,Bodø/Glimt,2,midfielder,4.892,0.7999999999999998,3.0,8.692,90.0,1,0,7.0,15.692
+1536436,Konstantinos Karetsas,9789,Borussia Dortmund,2,midfielder,6.664,3.0,2.0,11.664,60.0,0,1,3.0,14.664
+1050158,Fábio Silva,9789,Borussia Dortmund,3,forward,7.62,3.2,2.0,12.82,60.0,0,1,0.0,12.82
+837066,Ola Brynhildsen,8402,Bodø/Glimt,3,forward,7.090000000000002,5.0,0.4,12.490000000000002,12.0,0,0,0.0,12.490000000000002
+1209228,Daniel Svensson,9789,Borussia Dortmund,2,midfielder,3.41,3.0,3.0,9.41,90.0,0,1,3.0,12.41
+659272,Julian Ryerson,9789,Borussia Dortmund,2,midfielder,4.18,3.0,1.0,8.18,30.0,0,0,2.5,10.68
+448540,Serhou Guirassy,9789,Borussia Dortmund,3,forward,3.9599999999999995,5.0,1.0,9.959999999999999,30.0,0,0,0.0,9.959999999999999
+1089685,Carney Chukwuemeka,9789,Borussia Dortmund,2,midfielder,4.646,1.9,0.43333333333333335,6.979333333333333,13.0,0,0,2.5,9.479333333333333
+1761151,Samuele Inácio,9789,Borussia Dortmund,2,midfielder,-2.386,1.9,2.0,1.5139999999999998,60.0,0,1,3.0,4.513999999999999
+1037037,Isak Dybvik Määttä,8402,Bodø/Glimt,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1436937,Villads Nielsen,8402,Bodø/Glimt,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1641114,Kasper Johansen Solhaug,8402,Bodø/Glimt,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1663094,Filippo Mane,9789,Borussia Dortmund,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1750565,Kauã Prates,9789,Borussia Dortmund,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1845173,Luca Reggiani,9789,Borussia Dortmund,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+215151,Marcel Sabitzer,9789,Borussia Dortmund,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+310763,Ulrik Saltnes,8402,Bodø/Glimt,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1049665,Joel Mvuka,8402,Bodø/Glimt,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+2189218,Assan Sanyang,8402,Bodø/Glimt,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1692797,Mathis Albert,9789,Borussia Dortmund,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
