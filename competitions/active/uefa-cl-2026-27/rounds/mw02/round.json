@@ -155,7 +155,7 @@
   ],
   "squad_lock_state": "locked",
   "scoring_state": "complete",
-  "publication_state": "unpublished",
+  "publication_state": "published",
   "algorithm_version": "1.0",
   "_bidding_note": "GW2 window opened 7 Oct 2026 by scripts/open-ucl-gw2-all.mjs (same values); recorded here as data."
 }
