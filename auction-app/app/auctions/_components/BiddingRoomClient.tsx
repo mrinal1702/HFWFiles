@@ -52,6 +52,19 @@ function defaultSortTier(lot: EnrichedLot, biddingClosed: boolean): 0 | 1 | 2 {
   return 1;
 }
 
+const FOLD_MAP: Record<string, string> = {
+  æ: "ae", ø: "o", å: "a", ß: "ss", đ: "d", ł: "l", ı: "i", œ: "oe",
+};
+
+/** Lowercase + strip accents so "kjaergaard" matches "Kjærgaard", "gul" matches "Gül". */
+function foldForSearch(s: string): string {
+  return s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[æøåßđłıœ]/g, (c) => FOLD_MAP[c] ?? c);
+}
+
 const selectClass =
   "min-h-9 w-full rounded-xl border border-sky-100 bg-white px-2.5 py-1.5 text-sm text-slate-900 shadow-sm transition focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/15 sm:min-h-10 sm:px-3 sm:py-2";
 
@@ -277,7 +290,7 @@ export function BiddingRoomClient({
   );
 
   const searchParts = useMemo(() => {
-    const q = searchQuery.trim().toLowerCase();
+    const q = foldForSearch(searchQuery.trim());
     if (!q) return [];
     return q.split(/\s+/).filter(Boolean);
   }, [searchQuery]);
@@ -289,7 +302,7 @@ export function BiddingRoomClient({
     const results = lots.filter((l) => {
       const name = (l.player_name ?? "").trim();
       if (!name) return false;
-      const tokens = name.split(/\s+/).map((t) => t.toLowerCase());
+      const tokens = name.split(/\s+/).map(foldForSearch);
       return searchParts.every((qPart) => tokens.some((t) => t.startsWith(qPart)));
     });
 
