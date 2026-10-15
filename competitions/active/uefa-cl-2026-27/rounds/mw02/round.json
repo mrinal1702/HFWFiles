@@ -137,6 +137,13 @@
       "home_team": "Roma",
       "away_team": "Real Madrid",
       "status": "scored"
+    },
+    {
+      "match_slug": "shakhtar-donetsk-aek-athens",
+      "fotmob_match_id": 6106337,
+      "home_team": "Shakhtar Donetsk",
+      "away_team": "AEK Athens",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

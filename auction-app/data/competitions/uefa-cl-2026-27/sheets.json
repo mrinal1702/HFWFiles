@@ -278,6 +278,14 @@
       "gw": 2,
       "fotmob_match_id": 6106274,
       "file": "Roma_RealMadrid_FinalPoints.csv"
+    },
+    {
+      "slug": "shakhtar-donetsk-aek-athens",
+      "title": "Shakhtar Donetsk vs AEK Athens",
+      "subtitle": "UEFA Champions League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 6106337,
+      "file": "ShakhtarDonetsk_AEKAthens_FinalPoints.csv"
     }
   ]
 }

@@ -1,0 +1,41 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+1314657,Vinícius Tobias,9728,Shakhtar Donetsk,1,defender,44.61000000000001,1.8,3.0,49.410000000000004,90.0,3,1,5.0,54.410000000000004
+762721,Lovro Majer,8563,AEK Athens,2,midfielder,32.44,1.9,2.3666666666666667,36.70666666666666,71.0,1,1,5.0,41.70666666666666
+1503318,Alisson Santana,9728,Shakhtar Donetsk,2,midfielder,27.614,0.7999999999999998,2.9,31.314,88.0,3,1,9.0,40.314
+1259576,Pedro Henrique,9728,Shakhtar Donetsk,1,defender,28.355,3.0,3.0,34.355000000000004,90.0,3,1,5.0,39.355000000000004
+1396465,Marlon Gomes,9728,Shakhtar Donetsk,2,midfielder,20.054000000000002,1.9,2.7,24.654,81.0,2,1,7.0,31.654
+1192419,Oleg Ocheretko,9728,Shakhtar Donetsk,2,midfielder,18.646,0.7999999999999998,3.0,22.446,90.0,3,1,9.0,31.446
+844186,Pedrinho,9728,Shakhtar Donetsk,2,midfielder,21.772000000000002,1.9,2.1,25.772000000000002,63.0,1,1,5.0,30.772000000000002
+1460572,Gleiker Mendoza,9728,Shakhtar Donetsk,3,forward,18.380000000000003,5.0,0.9,24.28,27.0,2,0,6.0,30.28
+574844,Răzvan Marin,8563,AEK Athens,2,midfielder,23.679999999999996,0.7999999999999998,2.7666666666666666,27.246666666666663,83.0,1,2,3.0,30.246666666666663
+725695,Aboubakary Koïta,8563,AEK Athens,2,midfielder,22.636000000000003,0.7999999999999998,3.0,26.436000000000003,90.0,1,3,1.0,27.436000000000003
+1015750,Stavros Pilios,8563,AEK Athens,1,defender,27.789999999999996,0.6000000000000001,3.0,31.389999999999997,90.0,1,3,-5.0,26.389999999999997
+1106943,Zine,8563,AEK Athens,3,forward,16.45,4.1,2.3666666666666667,22.916666666666664,70.0,1,1,3.0,25.916666666666664
+463291,Luka Jović,8563,AEK Athens,3,forward,15.299999999999997,3.2,2.6333333333333333,21.13333333333333,79.0,1,1,3.0,24.13333333333333
+1697412,Isaque,9728,Shakhtar Donetsk,2,midfielder,13.622,1.9,0.9,16.422,27.0,2,0,6.5,22.922
+1024427,Valeriy Bondar,9728,Shakhtar Donetsk,1,defender,12.42,1.8,3.0,17.22,90.0,3,1,5.0,22.22
+1197823,Milán Vitális,8563,AEK Athens,2,midfielder,10.998,3.0,2.6,16.598,79.0,1,1,5.0,21.598
+1483508,Kauã Elias,9728,Shakhtar Donetsk,3,forward,1.7800000000000002,4.1,2.9,8.78,88.0,3,1,9.0,17.78
+637737,Harold Moukoudi,8563,AEK Athens,1,defender,16.47,3.0,3.0,22.47,90.0,1,3,-5.0,17.47
+1285815,Filipe Relvas,8563,AEK Athens,1,defender,15.08,3.0,3.0,21.08,90.0,1,3,-5.0,16.08
+656667,Mykola Matviyenko,9728,Shakhtar Donetsk,1,defender,6.1899999999999995,0.6000000000000001,3.0,9.79,90.0,3,1,5.0,14.79
+949866,Lazaros Rota,8563,AEK Athens,1,defender,14.950000000000001,1.8,3.0,19.75,90.0,1,3,-5.0,14.75
+1516203,Newerton,9728,Shakhtar Donetsk,2,midfielder,3.7220000000000004,1.9,2.1,7.7219999999999995,63.0,1,1,5.0,12.722
+728941,Yegor Nazaryna,9728,Shakhtar Donetsk,2,midfielder,1.1600000000000001,1.9,0.3,3.36,9.0,1,0,4.5,7.859999999999999
+655636,Oleksandr Zubkov,8563,AEK Athens,3,forward,2.39,5.0,0.23333333333333334,7.623333333333334,7.0,0,1,0.0,7.623333333333334
+1699018,Lucas Ferreira,9728,Shakhtar Donetsk,3,forward,0.30000000000000004,5.0,0.1,5.3999999999999995,2.0,0,0,0.0,5.3999999999999995
+1694887,Luca Meirelles,9728,Shakhtar Donetsk,3,forward,0.0,5.0,0.1,5.1,2.0,0,0,0.0,5.1
+796504,Barnabás Varga,8563,AEK Athens,3,forward,-0.55,5.0,0.36666666666666664,4.816666666666666,11.0,0,2,0.0,4.816666666666666
+448859,Mijat Gaćinović,8563,AEK Athens,2,midfielder,0.642,3.0,0.6333333333333333,4.275333333333333,20.0,0,2,-1.5,2.775333333333333
+547454,Kaan Kairinen,8563,AEK Athens,2,midfielder,0.8500000000000001,3.0,0.4,4.25,11.0,0,2,-1.5,2.75
+300916,Joao Mário,8563,AEK Athens,2,midfielder,0.5860000000000001,3.0,0.6333333333333333,4.219333333333333,19.0,0,2,-1.5,2.719333333333333
+115180,Domagoj Vida,8563,AEK Athens,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+395914,Charalambos Lykogiannis,8563,AEK Athens,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+510843,Oleksandr Karavaev,9728,Shakhtar Donetsk,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+184639,Petros Mantalos,8563,AEK Athens,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+839750,Kervin Arriaga,8563,AEK Athens,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1189791,Dmytro Kryskiv,9728,Shakhtar Donetsk,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1612225,Viktor Tsukanov,9728,Shakhtar Donetsk,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1903980,Bruninho,9728,Shakhtar Donetsk,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+850858,Lassina Traoré,9728,Shakhtar Donetsk,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1637478,Gabriel Carvalho,9728,Shakhtar Donetsk,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
