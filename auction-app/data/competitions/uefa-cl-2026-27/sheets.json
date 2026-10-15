@@ -222,6 +222,14 @@
       "gw": 2,
       "fotmob_match_id": 6106328,
       "file": "Villarreal_Napoli_FinalPoints.csv"
+    },
+    {
+      "slug": "feyenoord-como",
+      "title": "Feyenoord vs Como",
+      "subtitle": "UEFA Champions League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 6106309,
+      "file": "Feyenoord_Como_FinalPoints.csv"
     }
   ]
 }

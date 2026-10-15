@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw02",
+  "match_slug": "feyenoord-como",
+  "fotmob_match_id": 6106309,
+  "source_url": "https://www.fotmob.com/en-GB/matches/como-vs-feyenoord/3fyxs8#6106309:tab=stats",
+  "home_team": "Feyenoord",
+  "away_team": "Como",
+  "raw_json_path": "intermediates/Feyenoord_Vs_Como.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}
