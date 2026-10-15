@@ -1,0 +1,15 @@
+{
+  "match_id": 6106284,
+  "home_team": "Aston Villa",
+  "away_team": "Fenerbahçe",
+  "source_url": "https://www.fotmob.com/en-GB/matches/fenerbahce-vs-aston-villa/2yvksd#6106284:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw02/matches/aston-villa-fenerbahce/intermediates/AstonVilla_Vs_Fenerbahe.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/fenerbahce-vs-aston-villa/2yvksd",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/fenerbahce-vs-aston-villa/2yvksd#6106284:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/fenerbahce-vs-aston-villa/2yvksd#6106284:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/fenerbahce-vs-aston-villa/2yvksd#6106284:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106284"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

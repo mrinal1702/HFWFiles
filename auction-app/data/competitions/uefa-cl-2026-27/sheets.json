@@ -238,6 +238,14 @@
       "gw": 2,
       "fotmob_match_id": 6106405,
       "file": "LASK_Liverpool_FinalPoints.csv"
+    },
+    {
+      "slug": "aston-villa-fenerbahce",
+      "title": "Aston Villa vs Fenerbahçe",
+      "subtitle": "UEFA Champions League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 6106284,
+      "file": "AstonVilla_Fenerbahe_FinalPoints.csv"
     }
   ]
 }
