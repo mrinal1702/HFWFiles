@@ -95,6 +95,13 @@
       "home_team": "Feyenoord",
       "away_team": "Como",
       "status": "scored"
+    },
+    {
+      "match_slug": "lask-liverpool",
+      "fotmob_match_id": 6106405,
+      "home_team": "LASK",
+      "away_team": "Liverpool",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

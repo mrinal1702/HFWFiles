@@ -230,6 +230,14 @@
       "gw": 2,
       "fotmob_match_id": 6106309,
       "file": "Feyenoord_Como_FinalPoints.csv"
+    },
+    {
+      "slug": "lask-liverpool",
+      "title": "LASK vs Liverpool",
+      "subtitle": "UEFA Champions League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 6106405,
+      "file": "LASK_Liverpool_FinalPoints.csv"
     }
   ]
 }

@@ -1,0 +1,40 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Bradley Barcola,1297165,Liverpool,midfielder,62.17533333333333,15.0,0.0,77
+Jeremie Frimpong,966018,Liverpool,defender,66.815,-5.0,0.0,62
+Konstantinos Tsimikas,671529,Liverpool,defender,66.45500000000001,-5.0,0.0,61
+Lewis Koumas,1364042,Liverpool,forward,37.25,18.0,0.0,55
+Florian Wirtz,1152455,Liverpool,midfielder,41.92,11.0,0.0,53
+Ronald Araujo,921253,Liverpool,defender,39.40166666666667,10.0,0.0,49
+Trey Nyoni,1436258,Liverpool,midfielder,33.409333333333336,11.0,0.0,44
+Ryan Gravenberch,956683,Liverpool,midfielder,28.856,11.0,0.0,40
+Florian Flecker,619687,LASK,midfielder,36.698,2.5,0.0,39
+Rio Ngumoha,1597668,Liverpool,midfielder,27.11133333333333,11.0,0.0,38
+Yvan Dibango,1254266,LASK,defender,57.43,-20.0,0.0,37
+Jérémy Jacquet,1473534,Liverpool,defender,16.781666666666666,10.0,0.0,27
+Kryštof Daněk,1118147,LASK,midfielder,27.55,-1.0,0.0,27
+Alemão,1437941,LASK,defender,46.525000000000006,-20.0,0.0,27
+Robert Ljubičić,939430,LASK,midfielder,17.695333333333334,4.5,0.0,22
+Saša Kalajdžić,858198,LASK,forward,9.653333333333332,6.0,0.0,16
+Alessandro Schöpf,461357,LASK,midfielder,16.966666666666665,-3.0,0.0,14
+Samuel Adeniran,1188855,LASK,forward,10.926666666666668,3.0,0.0,14
+Kasper Jørgensen,1029360,LASK,midfielder,12.678,-1.0,0.0,12
+Melayro Bogarde,1108604,LASK,midfielder,13.412666666666668,-3.0,0.0,10
+Víctor Muñoz,1553105,Liverpool,forward,8.836666666666666,0.0,0.0,9
+Christoph Lang,1232205,LASK,midfielder,9.295333333333332,-1.0,0.0,8
+Alexis Mac Allister,831489,Liverpool,midfielder,4.516666666666667,2.5,0.0,7
+Naël Kane,1756283,LASK,forward,5.456666666666667,0.0,0.0,5
+Luke Chambers,1249634,Liverpool,midfielder,2.1086666666666667,2.5,0.0,5
+Daniel Elfadli,1383070,LASK,defender,3.058333333333333,0.0,0.0,3
+Andrés Andrade,688449,LASK,defender,17.035,-20.0,0.0,0
+Xavier Mbuyamba,979963,LASK,defender,14.009999999999998,-20.0,0.0,0
+Virgil van Dijk,209405,Liverpool,defender,6.723333333333334,-10.0,0.0,0
+Joseph Gomez,568571,Liverpool,defender,5.878333333333334,-10.0,0.0,0
+Miloš Kerkez,1195281,Liverpool,defender,0.0,0.0,0.0,0
+Miguel Freckleton,1420822,LASK,defender,0.0,0.0,0.0,0
+Wellity Lucky,1553711,Liverpool,defender,0.0,0.0,0.0,0
+Manoël Verhaeghe,1863042,LASK,defender,0.0,0.0,0.0,0
+James McConnell,1231075,Liverpool,midfielder,0.0,0.0,0.0,0
+Jayden Danns,1416696,Liverpool,midfielder,0.0,0.0,0.0,0
+Joshua Sonni-Lambie,1644308,Liverpool,midfielder,0.0,0.0,0.0,0
+Liverpool Keepers,8650,Liverpool,goalkeeper,12.2,0.0,0.0,12
+LASK Keepers,9977,LASK,goalkeeper,18.92,-18.0,0.0,1
