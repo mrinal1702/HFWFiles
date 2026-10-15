@@ -1,0 +1,41 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+737066,Erling Haaland,8456,Manchester City,3,forward,49.58,4.1,3.0,56.68,90.0,2,4,6.0,62.68
+1339208,Désiré Doué,9847,Paris Saint-Germain,3,forward,42.5,4.1,2.2,48.800000000000004,66.0,4,1,12.0,60.800000000000004
+1061249,Vítinha,9847,Paris Saint-Germain,2,midfielder,42.802,1.9,3.0,47.702,90.0,4,2,9.0,56.702
+692984,Ousmane Dembélé,9847,Paris Saint-Germain,3,forward,35.15,3.2,2.533333333333333,40.88333333333333,76.0,4,2,12.0,52.88333333333333
+1070712,Joško Gvardiol,8456,Manchester City,1,defender,49.98,3.0,3.0,55.98,90.0,2,4,-10.0,45.98
+965764,Iliman Ndiaye,8456,Manchester City,3,forward,32.53,5.0,1.5,39.03,44.0,2,1,6.0,45.03
+605654,Fabián Ruiz,9847,Paris Saint-Germain,2,midfielder,29.020000000000003,3.0,2.8,34.82,84.0,4,2,9.0,43.82
+1137705,Enzo Fernández,8456,Manchester City,2,midfielder,36.414,3.0,2.966666666666667,42.38066666666667,90.0,2,4,1.0,43.38066666666667
+1305618,Maghnes Akliouche,9847,Paris Saint-Germain,3,forward,25.939999999999998,2.3,2.533333333333333,30.773333333333333,76.0,4,2,12.0,42.77333333333333
+770881,Achraf Hakimi,9847,Paris Saint-Germain,1,defender,30.685,3.0,3.0,36.685,90.0,4,2,0.0,36.685
+1367615,Warren Zaïre-Emery,9847,Paris Saint-Germain,2,midfielder,24.402,-0.30000000000000027,2.8,26.902,84.0,4,2,9.0,35.902
+267365,Marquinhos,9847,Paris Saint-Germain,1,defender,26.005000000000003,3.0,3.0,32.005,90.0,4,2,0.0,32.005
+1561552,Ayyoub Bouaddi,8456,Manchester City,2,midfielder,21.614,3.0,1.5,26.114,44.0,2,1,4.5,30.614
+1089691,Elliot Anderson,8456,Manchester City,2,midfielder,25.256,-0.30000000000000027,3.0,27.956,90.0,2,4,1.0,28.956
+1158945,Nuno Mendes,9847,Paris Saint-Germain,1,defender,22.825000000000003,1.8,3.0,27.625000000000004,90.0,4,2,0.0,27.625000000000004
+933576,Antoine Semenyo,8456,Manchester City,2,midfielder,17.174,3.0,3.0,23.174,90.0,2,4,1.0,24.174
+1137670,Willian Pacho,9847,Paris Saint-Germain,1,defender,17.5,3.0,3.0,23.5,90.0,4,2,0.0,23.5
+1342757,João Neves,9847,Paris Saint-Germain,2,midfielder,11.524000000000001,3.0,0.4666666666666667,14.990666666666668,14.0,0,0,2.5,17.49066666666667
+955529,Matheus Nunes,8456,Manchester City,1,defender,11.72,3.0,1.5,16.22,44.0,2,1,0.0,16.22
+942368,Jérémy Doku,8456,Manchester City,2,midfielder,11.71,3.0,1.5,16.21,46.0,0,3,-1.0,15.21
+1362998,Abdukodir Khusanov,8456,Manchester City,1,defender,18.419999999999998,3.0,3.0,24.419999999999998,90.0,2,4,-10.0,14.419999999999998
+844425,Marc Guéhi,8456,Manchester City,1,defender,17.150000000000002,3.0,3.0,23.150000000000002,90.0,2,4,-10.0,13.150000000000002
+614006,Rúben Dias,8456,Manchester City,1,defender,13.404999999999998,3.0,1.5,17.904999999999998,46.0,0,3,-5.0,12.904999999999998
+504606,Lucas Hernández,9847,Paris Saint-Germain,1,defender,4.279999999999999,3.0,0.2,7.4799999999999995,6.0,0,0,5.0,12.48
+900433,Khvicha Kvaratskhelia,9847,Paris Saint-Germain,3,forward,5.83,4.1,0.8,10.73,24.0,0,1,0.0,10.73
+1104053,Rayan Cherki,8456,Manchester City,2,midfielder,9.29,0.7999999999999998,1.5,11.59,46.0,0,3,-1.0,10.59
+1255209,Lucas Beraldo,9847,Paris Saint-Germain,2,midfielder,5.514,1.9,0.2,7.614,6.0,0,0,2.5,10.114
+881771,Ferrán Torres,9847,Paris Saint-Germain,3,forward,-1.54,5.0,0.4666666666666667,3.9266666666666667,14.0,0,0,0.0,3.9266666666666667
+210111,Lucas Digne,9847,Paris Saint-Germain,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+933845,Rayan Aït-Nouri,8456,Manchester City,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1140003,Ilya Zabarnyi,9847,Paris Saint-Germain,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1288450,Rico Lewis,8456,Manchester City,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1300526,Nico O'Reilly,8456,Manchester City,1,defender,0.0,3.0,0.03333333333333333,0.0,0.0,0,0,0.0,0.0
+1580952,Vitor Reis,8456,Manchester City,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+239219,Mateo Kovačić,8456,Manchester City,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+815006,Phil Foden,8456,Manchester City,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1682313,Dro Fernández,9847,Paris Saint-Germain,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1699549,Quentin Ndjantou,9847,Paris Saint-Germain,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1396372,Mika Godts,9847,Paris Saint-Germain,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1721789,Allan,8456,Manchester City,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

@@ -1,0 +1,15 @@
+{
+  "match_id": 6106254,
+  "home_team": "Manchester City",
+  "away_team": "Paris Saint-Germain",
+  "source_url": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-paris-saint-germain/2rqiev#6106254:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw02/matches/manchester-city-paris-saint-germain/intermediates/ManchesterCity_Vs_ParisSaintGermain.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-paris-saint-germain/2rqiev",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-paris-saint-germain/2rqiev#6106254:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-paris-saint-germain/2rqiev#6106254:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-paris-saint-germain/2rqiev#6106254:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106254"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

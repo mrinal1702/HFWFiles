@@ -116,6 +116,13 @@
       "home_team": "Bodø/Glimt",
       "away_team": "Borussia Dortmund",
       "status": "scored"
+    },
+    {
+      "match_slug": "manchester-city-paris-saint-germain",
+      "fotmob_match_id": 6106254,
+      "home_team": "Manchester City",
+      "away_team": "Paris Saint-Germain",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

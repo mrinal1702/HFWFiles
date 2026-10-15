@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Erling Haaland,737066,Manchester City,forward,56.68,6.0,0.0,63
+Désiré Doué,1339208,Paris Saint-Germain,forward,48.8,12.0,0.0,61
+Vítinha,1061249,Paris Saint-Germain,midfielder,47.702,9.0,0.0,57
+Ousmane Dembélé,692984,Paris Saint-Germain,forward,40.88333333333333,12.0,0.0,53
+Joško Gvardiol,1070712,Manchester City,defender,55.98,-10.0,0.0,46
+Iliman Ndiaye,965764,Manchester City,forward,39.03,6.0,0.0,45
+Fabián Ruiz,605654,Paris Saint-Germain,midfielder,34.82,9.0,0.0,44
+Enzo Fernández,1137705,Manchester City,midfielder,42.38066666666667,1.0,0.0,43
+Maghnes Akliouche,1305618,Paris Saint-Germain,forward,30.773333333333333,12.0,0.0,43
+Achraf Hakimi,770881,Paris Saint-Germain,defender,36.685,0.0,0.0,37
+Warren Zaïre-Emery,1367615,Paris Saint-Germain,midfielder,26.902,9.0,0.0,36
+Marquinhos,267365,Paris Saint-Germain,defender,32.005,0.0,0.0,32
+Ayyoub Bouaddi,1561552,Manchester City,midfielder,26.114,4.5,0.0,31
+Elliot Anderson,1089691,Manchester City,midfielder,27.956,1.0,0.0,29
+Nuno Mendes,1158945,Paris Saint-Germain,defender,27.625000000000004,0.0,0.0,28
+Antoine Semenyo,933576,Manchester City,midfielder,23.174,1.0,0.0,24
+Willian Pacho,1137670,Paris Saint-Germain,defender,23.5,0.0,0.0,24
+João Neves,1342757,Paris Saint-Germain,midfielder,14.990666666666668,2.5,0.0,17
+Matheus Nunes,955529,Manchester City,defender,16.22,0.0,0.0,16
+Jérémy Doku,942368,Manchester City,midfielder,16.21,-1.0,0.0,15
+Abdukodir Khusanov,1362998,Manchester City,defender,24.42,-10.0,0.0,14
+Marc Guéhi,844425,Manchester City,defender,23.15,-10.0,0.0,13
+Rúben Dias,614006,Manchester City,defender,17.904999999999998,-5.0,0.0,13
+Lucas Hernández,504606,Paris Saint-Germain,defender,7.479999999999999,5.0,0.0,12
+Khvicha Kvaratskhelia,900433,Paris Saint-Germain,forward,10.73,0.0,0.0,11
+Rayan Cherki,1104053,Manchester City,midfielder,11.59,-1.0,0.0,11
+Lucas Beraldo,1255209,Paris Saint-Germain,midfielder,7.614,2.5,0.0,10
+Ferrán Torres,881771,Paris Saint-Germain,forward,3.9266666666666663,0.0,0.0,4
+Lucas Digne,210111,Paris Saint-Germain,defender,0.0,0.0,0.0,0
+Rayan Aït-Nouri,933845,Manchester City,defender,0.0,0.0,0.0,0
+Ilya Zabarnyi,1140003,Paris Saint-Germain,defender,0.0,0.0,0.0,0
+Rico Lewis,1288450,Manchester City,defender,0.0,0.0,0.0,0
+Nico O'Reilly,1300526,Manchester City,defender,0.0,0.0,0.0,0
+Vitor Reis,1580952,Manchester City,defender,0.0,0.0,0.0,0
+Mateo Kovačić,239219,Manchester City,midfielder,0.0,0.0,0.0,0
+Phil Foden,815006,Manchester City,midfielder,0.0,0.0,0.0,0
+Dro Fernández,1682313,Paris Saint-Germain,midfielder,0.0,0.0,0.0,0
+Quentin Ndjantou,1699549,Paris Saint-Germain,midfielder,0.0,0.0,0.0,0
+Mika Godts,1396372,Paris Saint-Germain,forward,0.0,0.0,0.0,0
+Allan,1721789,Manchester City,forward,0.0,0.0,0.0,0
+Paris Saint-Germain Keepers,9847,Paris Saint-Germain,goalkeeper,24.58,6.0,0.0,31
+Manchester City Keepers,8456,Manchester City,goalkeeper,33.84,-6.0,0.0,28
