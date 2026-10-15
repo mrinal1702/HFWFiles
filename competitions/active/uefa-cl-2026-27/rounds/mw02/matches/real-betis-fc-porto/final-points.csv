@@ -1,0 +1,45 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Fran García,750028,Real Betis,defender,50.13,0.0,0.0,50
+Isco,191315,Real Betis,midfielder,42.636,7.0,0.0,50
+Antony,967622,Real Betis,midfielder,38.95866666666666,7.0,0.0,46
+Abdessamad Ezzalzouli,1209399,Real Betis,midfielder,33.214,7.0,0.0,40
+Pepê,850356,FC Porto,forward,33.013333333333335,6.0,0.0,39
+Gabriel Veiga,1116734,FC Porto,midfielder,28.93266666666667,7.0,0.0,36
+Juan Hernández,852071,Real Betis,forward,29.12333333333333,6.0,0.0,35
+Marc Roca,640220,Real Betis,midfielder,27.132,7.0,0.0,34
+Marc Bartra,195305,Real Betis,defender,31.92,0.0,0.0,32
+Martim Fernandes,1404949,FC Porto,defender,25.09166666666666,5.0,0.0,30
+Ángel Ortiz,1580522,Real Betis,defender,29.635,0.0,0.0,30
+Samuel Aghehowa,1414859,FC Porto,forward,21.53333333333333,3.0,0.0,25
+Jakub Kiwior,1021834,FC Porto,defender,27.64,-5.0,0.0,23
+Santiago Giménez,954092,FC Porto,forward,20.096666666666668,0.0,0.0,20
+Alan Varela,1186684,FC Porto,midfielder,16.742,3.0,0.0,20
+Dani Ceballos,531629,Real Betis,midfielder,12.901333333333334,6.5,0.0,19
+Oskar Pietuszewski,1647807,FC Porto,forward,14.973333333333333,3.0,0.0,18
+Troy Parrott,942365,Real Betis,forward,14.506666666666666,3.0,0.0,18
+Victor Froholdt,1436856,FC Porto,midfielder,14.246,3.0,0.0,17
+Pablo Rosario,664226,FC Porto,defender,22.18,-5.0,0.0,17
+André Silva,388523,FC Porto,forward,13.836666666666668,3.0,0.0,17
+Nelson Deossa,1315711,Real Betis,midfielder,13.832666666666665,3.0,0.0,17
+In-Beom Hwang,623698,FC Porto,midfielder,14.755333333333336,-1.5,0.0,13
+Francisco Moura,919374,FC Porto,defender,17.07,-5.0,0.0,12
+Natan,1188375,Real Betis,defender,11.64,0.0,0.0,12
+Borja Sainz,1083204,FC Porto,forward,7.846666666666667,3.0,0.0,11
+Facundo Bernal,1436133,Real Betis,midfielder,2.214,2.5,0.0,5
+Pablo Fornals,683450,Real Betis,midfielder,0.35,2.5,0.0,3
+Alberto Costa,1387439,FC Porto,defender,5.508333333333333,-5.0,0.0,1
+Diego Llorente,420568,Real Betis,defender,0.0,0.0,0.0,0
+Héctor Bellerín,427438,Real Betis,defender,0.0,0.0,0.0,0
+Nehuén Pérez,902383,FC Porto,defender,0.0,0.0,0.0,0
+Zaidu Sanusi,1079056,FC Porto,defender,0.0,0.0,0.0,0
+Valentín Gómez,1338016,Real Betis,defender,0.0,0.0,0.0,0
+Luis Gomes,1559903,FC Porto,defender,0.0,0.0,0.0,0
+Souza,1636513,FC Porto,defender,0.0,0.0,0.0,0
+Seko Fofana,602211,FC Porto,midfielder,0.0,0.0,0.0,0
+Giovani Lo Celso,604126,Real Betis,midfielder,0.0,0.0,0.0,0
+Álvaro Fidalgo,895954,Real Betis,midfielder,0.0,0.0,0.0,0
+João Teixeira,1623135,FC Porto,midfielder,0.0,0.0,0.0,0
+Rodrigo Riquelme,1072200,Real Betis,forward,0.0,0.0,0.0,0
+José Antonio Morante,1793845,Real Betis,forward,0.0,0.0,0.0,0
+Real Betis Keepers,8603,Real Betis,goalkeeper,20.700000000000003,6.0,0.0,27
+FC Porto Keepers,9773,FC Porto,goalkeeper,26.200000000000003,0.0,0.0,26

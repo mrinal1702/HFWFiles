@@ -262,6 +262,14 @@
       "gw": 2,
       "fotmob_match_id": 6106254,
       "file": "ManchesterCity_ParisSaintGermain_FinalPoints.csv"
+    },
+    {
+      "slug": "real-betis-fc-porto",
+      "title": "Real Betis vs FC Porto",
+      "subtitle": "UEFA Champions League · Matchweek 2",
+      "gw": 2,
+      "fotmob_match_id": 6106299,
+      "file": "RealBetis_FCPorto_FinalPoints.csv"
     }
   ]
 }

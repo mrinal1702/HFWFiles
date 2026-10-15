@@ -123,6 +123,13 @@
       "home_team": "Manchester City",
       "away_team": "Paris Saint-Germain",
       "status": "scored"
+    },
+    {
+      "match_slug": "real-betis-fc-porto",
+      "fotmob_match_id": 6106299,
+      "home_team": "Real Betis",
+      "away_team": "FC Porto",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
