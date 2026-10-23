@@ -53,6 +53,13 @@
       "home_team": "Manchester City",
       "away_team": "AEK Athens",
       "status": "scored"
+    },
+    {
+      "match_slug": "paris-saint-germain-barcelona",
+      "fotmob_match_id": 6106234,
+      "home_team": "Paris Saint-Germain",
+      "away_team": "Barcelona",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

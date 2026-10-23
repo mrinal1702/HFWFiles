@@ -1,0 +1,41 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+1339208,Désiré Doué,9847,Paris Saint-Germain,3,forward,47.46,5.0,2.6,55.06,78.0,2,1,6.0,61.06
+1342757,João Neves,9847,Paris Saint-Germain,2,midfielder,42.994,3.0,3.0,48.994,90.0,4,2,9.0,57.994
+605654,Fabián Ruiz,9847,Paris Saint-Germain,2,midfielder,42.373999999999995,3.0,3.0,48.373999999999995,90.0,4,2,9.0,57.373999999999995
+1467236,Lamine Yamal,8634,Barcelona,2,midfielder,36.346,0.7999999999999998,3.0,40.145999999999994,90.0,2,4,1.0,41.145999999999994
+1061249,Vítinha,9847,Paris Saint-Germain,2,midfielder,21.882,3.0,3.0,27.882,90.0,4,2,9.0,36.882000000000005
+504606,Lucas Hernández,9847,Paris Saint-Germain,1,defender,27.47,1.8,2.6,31.87,78.0,2,1,5.0,36.870000000000005
+1815149,Xavi Espart,8634,Barcelona,1,defender,31.834999999999997,1.8,2.466666666666667,36.10166666666667,74.0,1,2,0.0,36.10166666666667
+770881,Achraf Hakimi,9847,Paris Saint-Germain,1,defender,28.245,1.8,3.0,33.045,90.0,4,2,0.0,33.045
+900433,Khvicha Kvaratskhelia,9847,Paris Saint-Germain,3,forward,24.59,3.2,1.9666666666666666,29.756666666666664,59.0,1,1,3.0,32.75666666666666
+696679,Raphinha,8634,Barcelona,3,forward,21.13,5.0,2.0,28.13,60.0,1,1,3.0,31.13
+881771,Ferrán Torres,9847,Paris Saint-Germain,3,forward,10.18,5.0,2.3333333333333335,17.513333333333332,70.0,4,2,12.0,29.513333333333332
+1083323,Pedri,8634,Barcelona,2,midfielder,15.862,1.9,2.0,19.762,60.0,1,1,5.0,24.762
+1305618,Maghnes Akliouche,9847,Paris Saint-Germain,3,forward,8.94,5.0,1.0333333333333332,14.973333333333333,31.0,3,1,9.0,23.973333333333333
+1137670,Willian Pacho,9847,Paris Saint-Germain,1,defender,14.010000000000002,3.0,3.0,20.01,90.0,4,2,0.0,20.01
+1573126,Marc Bernal,8634,Barcelona,2,midfielder,9.472000000000001,3.0,2.0,14.472000000000001,60.0,1,1,5.0,19.472
+1404415,Fermín López,8634,Barcelona,2,midfielder,15.248000000000001,0.7999999999999998,2.1,18.148000000000003,63.0,2,4,1.0,19.148000000000003
+267365,Marquinhos,9847,Paris Saint-Germain,1,defender,7.464999999999999,3.0,1.9666666666666666,12.431666666666667,59.0,1,1,5.0,17.431666666666665
+361757,João Cancelo,8634,Barcelona,1,defender,19.130000000000003,3.0,3.0,25.130000000000003,90.0,2,4,-10.0,15.130000000000003
+614834,Dani Olmo,8634,Barcelona,2,midfielder,7.626000000000001,3.0,0.9,11.526000000000002,27.0,0,0,2.5,14.026000000000002
+675088,Rodri,8634,Barcelona,2,midfielder,10.474,3.0,1.0,14.474,30.0,1,3,-1.5,12.974
+1598982,Gerard Martín,8634,Barcelona,1,defender,15.230000000000002,3.0,3.0,21.230000000000004,90.0,2,4,-10.0,11.230000000000004
+692984,Ousmane Dembélé,9847,Paris Saint-Germain,3,forward,4.74,5.0,0.6666666666666666,10.406666666666666,20.0,0,0,0.0,10.406666666666666
+1140003,Ilya Zabarnyi,9847,Paris Saint-Germain,1,defender,5.785,3.0,1.0333333333333332,9.818333333333333,31.0,3,1,0.0,9.818333333333333
+1574189,Senny Mayulu,9847,Paris Saint-Germain,2,midfielder,1.8259999999999998,3.0,0.4,5.226,12.0,2,1,4.5,9.725999999999999
+959594,Karim Adeyemi,8634,Barcelona,2,midfielder,7.096,1.9,1.0,9.996,30.0,1,3,-1.5,8.496
+1532137,Pau Cubarsí,8634,Barcelona,1,defender,12.085,3.0,3.0,18.085,90.0,2,4,-10.0,8.085
+1279040,Gavi,8634,Barcelona,2,midfielder,5.554,3.0,1.0,9.554,30.0,1,3,-1.5,8.054
+1254166,Alejandro Balde,8634,Barcelona,1,defender,9.245000000000001,3.0,0.5333333333333333,12.778333333333334,16.0,1,2,-5.0,7.778333333333334
+906937,Anthony Gordon,8634,Barcelona,2,midfielder,3.1219999999999994,-0.30000000000000027,3.0,5.821999999999999,90.0,2,4,1.0,6.821999999999999
+1367615,Warren Zaïre-Emery,9847,Paris Saint-Germain,2,midfielder,-1.4259999999999997,3.0,0.4,1.9740000000000002,12.0,2,1,4.5,6.474
+210111,Lucas Digne,9847,Paris Saint-Germain,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1820574,Álex Campos,8634,Barcelona,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+638622,Frenkie de Jong,8634,Barcelona,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1255209,Lucas Beraldo,9847,Paris Saint-Germain,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1682313,Dro Fernández,9847,Paris Saint-Germain,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1699549,Quentin Ndjantou,9847,Paris Saint-Germain,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1821727,Brian Fariñas,8634,Barcelona,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+576165,Gabriel Jesus,8634,Barcelona,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1396372,Mika Godts,9847,Paris Saint-Germain,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1708842,Hamza Abdelkarim,8634,Barcelona,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

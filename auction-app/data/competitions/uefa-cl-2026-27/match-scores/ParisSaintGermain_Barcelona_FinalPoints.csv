@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Désiré Doué,1339208,Paris Saint-Germain,forward,55.06,6.0,0.0,61
+João Neves,1342757,Paris Saint-Germain,midfielder,48.994,9.0,0.0,58
+Fabián Ruiz,605654,Paris Saint-Germain,midfielder,48.374,9.0,0.0,57
+Lamine Yamal,1467236,Barcelona,midfielder,40.146,1.0,0.0,41
+Vítinha,1061249,Paris Saint-Germain,midfielder,27.882,9.0,0.0,37
+Lucas Hernández,504606,Paris Saint-Germain,defender,31.87,5.0,0.0,37
+Xavi Espart,1815149,Barcelona,defender,36.10166666666667,0.0,0.0,36
+Achraf Hakimi,770881,Paris Saint-Germain,defender,33.045,0.0,0.0,33
+Khvicha Kvaratskhelia,900433,Paris Saint-Germain,forward,29.756666666666664,3.0,0.0,33
+Raphinha,696679,Barcelona,forward,28.13,3.0,0.0,31
+Ferrán Torres,881771,Paris Saint-Germain,forward,17.513333333333332,12.0,0.0,30
+Pedri,1083323,Barcelona,midfielder,19.762,5.0,0.0,25
+Maghnes Akliouche,1305618,Paris Saint-Germain,forward,14.973333333333333,9.0,0.0,24
+Willian Pacho,1137670,Paris Saint-Germain,defender,20.01,0.0,0.0,20
+Marc Bernal,1573126,Barcelona,midfielder,14.472,5.0,0.0,19
+Fermín López,1404415,Barcelona,midfielder,18.148000000000003,1.0,0.0,19
+Marquinhos,267365,Paris Saint-Germain,defender,12.431666666666668,5.0,0.0,17
+João Cancelo,361757,Barcelona,defender,25.130000000000003,-10.0,0.0,15
+Dani Olmo,614834,Barcelona,midfielder,11.526000000000002,2.5,0.0,14
+Rodri,675088,Barcelona,midfielder,14.474,-1.5,0.0,13
+Gerard Martín,1598982,Barcelona,defender,21.230000000000004,-10.0,0.0,11
+Ousmane Dembélé,692984,Paris Saint-Germain,forward,10.406666666666666,0.0,0.0,10
+Ilya Zabarnyi,1140003,Paris Saint-Germain,defender,9.818333333333332,0.0,0.0,10
+Senny Mayulu,1574189,Paris Saint-Germain,midfielder,5.226,4.5,0.0,10
+Karim Adeyemi,959594,Barcelona,midfielder,9.996,-1.5,0.0,8
+Pau Cubarsí,1532137,Barcelona,defender,18.085,-10.0,0.0,8
+Gavi,1279040,Barcelona,midfielder,9.554,-1.5,0.0,8
+Alejandro Balde,1254166,Barcelona,defender,12.778333333333334,-5.0,0.0,8
+Anthony Gordon,906937,Barcelona,midfielder,5.821999999999999,1.0,0.0,7
+Warren Zaïre-Emery,1367615,Paris Saint-Germain,midfielder,1.974,4.5,0.0,6
+Lucas Digne,210111,Paris Saint-Germain,defender,0.0,0.0,0.0,0
+Álex Campos,1820574,Barcelona,defender,0.0,0.0,0.0,0
+Frenkie de Jong,638622,Barcelona,midfielder,0.0,0.0,0.0,0
+Lucas Beraldo,1255209,Paris Saint-Germain,midfielder,0.0,0.0,0.0,0
+Dro Fernández,1682313,Paris Saint-Germain,midfielder,0.0,0.0,0.0,0
+Quentin Ndjantou,1699549,Paris Saint-Germain,midfielder,0.0,0.0,0.0,0
+Brian Fariñas,1821727,Barcelona,midfielder,0.0,0.0,0.0,0
+Gabriel Jesus,576165,Barcelona,forward,0.0,0.0,0.0,0
+Mika Godts,1396372,Paris Saint-Germain,forward,0.0,0.0,0.0,0
+Hamza Abdelkarim,1708842,Barcelona,forward,0.0,0.0,0.0,0
+Barcelona Keepers,8634,Barcelona,goalkeeper,39.98,-6.0,0.0,34
+Paris Saint-Germain Keepers,9847,Paris Saint-Germain,goalkeeper,16.88,6.0,0.0,23
