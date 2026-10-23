@@ -1,0 +1,44 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Manuel Akanji,521318,Internazionale,defender,31.845,10.0,0.0,42
+Alisson Santana,1503318,Shakhtar Donetsk,midfielder,37.78266666666666,3.0,0.0,41
+Pedro Henrique,1259576,Shakhtar Donetsk,defender,34.375,5.0,0.0,39
+Carlos Augusto,940829,Internazionale,defender,27.23,10.0,0.0,37
+Alessandro Bastoni,805451,Internazionale,defender,24.726666666666667,10.0,0.0,35
+Marcus Thuram,621562,Internazionale,forward,31.15,3.0,0.0,34
+Nicolò Barella,541820,Internazionale,midfielder,27.004,7.0,0.0,34
+Valeriy Bondar,1024427,Shakhtar Donetsk,defender,28.570000000000004,5.0,0.0,34
+Vinícius Tobias,1314657,Shakhtar Donetsk,defender,28.21,5.0,0.0,33
+Mykola Matviyenko,656667,Shakhtar Donetsk,defender,26.515,5.0,0.0,32
+Yegor Nazaryna,728941,Shakhtar Donetsk,midfielder,28.27133333333333,3.0,0.0,31
+Marlon Gomes,1396465,Shakhtar Donetsk,midfielder,27.758000000000003,3.0,0.0,31
+Petar Sučić,1382000,Internazionale,midfielder,24.793333333333337,5.0,0.0,30
+Hakan Çalhanoglu,304733,Internazionale,midfielder,24.78466666666667,5.0,0.0,30
+Henrikh Mkhitaryan,73167,Internazionale,midfielder,23.458,4.5,0.0,28
+Ange-Yoan Bonny,1199383,Internazionale,forward,21.83,0.0,0.0,22
+Djed Spence,894803,Internazionale,midfielder,15.500666666666667,5.0,0.0,21
+Oleg Ocheretko,1192419,Shakhtar Donetsk,midfielder,14.162000000000004,5.0,0.0,19
+Federico Dimarco,605224,Internazionale,midfielder,10.142666666666669,5.0,0.0,15
+Pedrinho,844186,Shakhtar Donetsk,midfielder,12.252666666666666,2.5,0.0,15
+Luis Henrique,1114635,Internazionale,midfielder,9.628666666666668,4.5,0.0,14
+Gleiker Mendoza,1460572,Shakhtar Donetsk,midfielder,8.154,5.0,0.0,13
+Isaque,1697412,Shakhtar Donetsk,midfielder,11.874,0.5,0.0,12
+Newerton,1516203,Shakhtar Donetsk,forward,11.35,0.0,0.0,11
+Piotr Zieliński,362212,Internazionale,midfielder,5.631333333333333,4.5,0.0,10
+Lassina Traoré,850858,Shakhtar Donetsk,forward,9.37,0.0,0.0,9
+Yann Aurel Bisseck,889535,Internazionale,defender,4.123333333333333,5.0,0.0,9
+Andy Diouf,1254297,Internazionale,midfielder,3.867333333333333,4.5,0.0,8
+Kauã Elias,1483508,Shakhtar Donetsk,forward,7.330000000000002,0.0,0.0,7
+Bruninho,1903980,Shakhtar Donetsk,midfielder,3.541333333333333,2.5,0.0,6
+Oleksandr Karavaev,510843,Shakhtar Donetsk,defender,0.0,0.0,0.0,0
+Alaa Ghram,1173774,Shakhtar Donetsk,defender,0.0,0.0,0.0,0
+Francesco Stante,1413923,Internazionale,defender,0.0,0.0,0.0,0
+Leonardo Bovio,1830575,Internazionale,defender,0.0,0.0,0.0,0
+Dmytro Kryskiv,1189791,Shakhtar Donetsk,midfielder,0.0,0.0,0.0,0
+Aleksandar Stanković,1410437,Internazionale,midfielder,0.0,0.0,0.0,0
+Francesco Pio Esposito,1367618,Internazionale,forward,0.0,0.0,0.0,0
+Gabriel Carvalho,1637478,Shakhtar Donetsk,forward,0.0,0.0,0.0,0
+Mattia Mosconi,1646520,Internazionale,forward,0.0,0.0,0.0,0
+Luca Meirelles,1694887,Shakhtar Donetsk,forward,0.0,0.0,0.0,0
+Lucas Ferreira,1699018,Shakhtar Donetsk,forward,0.0,0.0,0.0,0
+Internazionale Keepers,8636,Internazionale,goalkeeper,19.58,18.0,0.0,38
+Shakhtar Donetsk Keepers,9728,Shakhtar Donetsk,goalkeeper,21.36,12.0,0.0,33

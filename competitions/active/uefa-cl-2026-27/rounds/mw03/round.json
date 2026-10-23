@@ -116,6 +116,13 @@
       "home_team": "Club Brugge",
       "away_team": "Lens",
       "status": "scored"
+    },
+    {
+      "match_slug": "inter-shakhtar-donetsk",
+      "fotmob_match_id": 6106252,
+      "home_team": "Inter",
+      "away_team": "Shakhtar Donetsk",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

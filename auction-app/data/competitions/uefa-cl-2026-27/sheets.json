@@ -406,6 +406,14 @@
       "gw": 3,
       "fotmob_match_id": 6106297,
       "file": "ClubBrugge_Lens_FinalPoints.csv"
+    },
+    {
+      "slug": "inter-shakhtar-donetsk",
+      "title": "Inter vs Shakhtar Donetsk",
+      "subtitle": "UEFA Champions League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 6106252,
+      "file": "Inter_ShakhtarDonetsk_FinalPoints.csv"
     }
   ]
 }
