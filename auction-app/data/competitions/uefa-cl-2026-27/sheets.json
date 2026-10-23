@@ -398,6 +398,14 @@
       "gw": 3,
       "fotmob_match_id": 6106238,
       "file": "BayernMnchen_Arsenal_FinalPoints.csv"
+    },
+    {
+      "slug": "club-brugge-lens",
+      "title": "Club Brugge vs Lens",
+      "subtitle": "UEFA Champions League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 6106297,
+      "file": "ClubBrugge_Lens_FinalPoints.csv"
     }
   ]
 }

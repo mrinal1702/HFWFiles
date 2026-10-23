@@ -1,0 +1,15 @@
+{
+  "match_id": 6106297,
+  "home_team": "Club Brugge",
+  "away_team": "Lens",
+  "source_url": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-lens/2dc1r3#6106297:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw03/matches/club-brugge-lens/intermediates/ClubBrugge_Vs_Lens.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-lens/2dc1r3",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-lens/2dc1r3#6106297:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-lens/2dc1r3#6106297:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-lens/2dc1r3#6106297:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106297"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

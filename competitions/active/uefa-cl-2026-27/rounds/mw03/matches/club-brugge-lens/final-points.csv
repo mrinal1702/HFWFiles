@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Hans Vanaken,203666,Club Brugge,midfielder,49.866,11.0,0.0,61
+Joaquin Seys,1489449,Club Brugge,defender,48.24999999999999,10.0,0.0,58
+Brandon Mechele,445873,Club Brugge,defender,39.41,10.0,0.0,49
+Carlos Forbs,1186529,Club Brugge,forward,37.39333333333333,9.0,0.0,46
+Jorne Spileers,1233418,Club Brugge,defender,36.315,10.0,0.0,46
+Michał Skóras,954190,Lens,midfielder,41.074,-1.0,0.0,40
+Michaël Cuisance,861445,Lens,midfielder,38.03999999999999,-1.0,0.0,37
+Matthieu Udol,660326,Lens,defender,38.53,-5.0,0.0,34
+Freddie Potts,1206287,Club Brugge,midfielder,22.354,11.0,0.0,33
+Kyriani Sabbe,1227590,Club Brugge,defender,19.87333333333333,10.0,0.0,30
+Hugo Vetlesen,837064,Club Brugge,midfielder,24.918666666666667,4.5,0.0,29
+Nicolò Tresoldi,1334552,Club Brugge,forward,16.563333333333333,9.0,0.0,26
+Amadou Haidara,688830,Lens,midfielder,21.72533333333333,1.0,0.0,23
+Jan Virgili,1690093,Club Brugge,forward,13.113333333333332,9.0,0.0,22
+Saud Abdulhamid,1002617,Lens,midfielder,22.642,-1.0,0.0,22
+Félix Lemaréchal,1284071,Club Brugge,midfielder,11.543333333333331,9.0,0.0,21
+Samson Baidoo,1276626,Lens,defender,13.645,5.0,0.0,19
+Thorgan Hazard,264190,Lens,midfielder,17.569333333333336,1.0,0.0,19
+Ruben Aguilar,561046,Lens,defender,22.36833333333333,-5.0,0.0,17
+Franjo Ivanović,1406419,Lens,forward,16.163333333333334,0.0,0.0,16
+Florian Thauvin,254308,Lens,midfielder,15.182666666666666,0.5,0.0,16
+Mamadou Diakhon,1484998,Club Brugge,forward,14.406666666666665,0.0,0.0,14
+Junior Kadile,1334534,Lens,midfielder,14.542000000000002,-1.0,0.0,14
+Yacine Titraoui,1288907,Lens,midfielder,12.124666666666666,0.5,0.0,13
+Hugo Siquet,1202888,Club Brugge,defender,6.721666666666667,5.0,0.0,12
+Odsonne Édouard,637746,Lens,forward,10.546666666666669,0.0,0.0,11
+Jean-Clair Todibo,955214,Lens,defender,14.485,-5.0,0.0,9
+Kyllian Antonio,1685514,Lens,defender,1.9266666666666667,5.0,0.0,7
+Romeo Vermant,1178453,Club Brugge,forward,6.586666666666666,0.0,0.0,7
+Milan Robberechts,1355523,Club Brugge,midfielder,3.5926666666666667,2.5,0.0,6
+Han-Beom Lee,1232253,Club Brugge,defender,0.0,0.0,0.0,0
+Matteo Dams,1315821,Club Brugge,defender,0.0,0.0,0.0,0
+Nidal Čelik,1657810,Lens,defender,0.0,0.0,0.0,0
+Souleymane Sagnan,1727044,Lens,defender,0.0,0.0,0.0,0
+Florian Sotoca,612699,Lens,midfielder,0.0,0.0,0.0,0
+Cheveyo Tsawa,1612843,Club Brugge,midfielder,0.0,0.0,0.0,0
+Andrija Bulatović,1634789,Lens,midfielder,0.0,0.0,0.0,0
+Mezian Mesloub Soares,1980586,Lens,midfielder,0.0,0.0,0.0,0
+Andrej Vasović,1691828,Club Brugge,forward,0.0,0.0,0.0,0
+Tian Nai Koren,1692880,Club Brugge,forward,0.0,0.0,0.0,0
+Club Brugge Keepers,8342,Club Brugge,goalkeeper,26.500000000000004,18.0,0.0,44
+Lens Keepers,8588,Lens,goalkeeper,16.060000000000002,0.0,0.0,16

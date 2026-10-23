@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw03",
+  "match_slug": "club-brugge-lens",
+  "fotmob_match_id": 6106297,
+  "source_url": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-lens/2dc1r3#6106297:tab=stats",
+  "home_team": "Club Brugge",
+  "away_team": "Lens",
+  "raw_json_path": "intermediates/ClubBrugge_Vs_Lens.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

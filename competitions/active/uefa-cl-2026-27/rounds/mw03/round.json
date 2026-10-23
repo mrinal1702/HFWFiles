@@ -109,6 +109,13 @@
       "home_team": "Bayern München",
       "away_team": "Arsenal",
       "status": "scored"
+    },
+    {
+      "match_slug": "club-brugge-lens",
+      "fotmob_match_id": 6106297,
+      "home_team": "Club Brugge",
+      "away_team": "Lens",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
