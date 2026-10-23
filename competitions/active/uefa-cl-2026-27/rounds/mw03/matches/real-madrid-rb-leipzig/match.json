@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw03",
+  "match_slug": "real-madrid-rb-leipzig",
+  "fotmob_match_id": 6106244,
+  "source_url": "https://www.fotmob.com/en-GB/matches/real-madrid-vs-rb-leipzig/81hwp83#6106244:tab=stats",
+  "home_team": "Real Madrid",
+  "away_team": "RB Leipzig",
+  "raw_json_path": "intermediates/RealMadrid_Vs_RBLeipzig.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

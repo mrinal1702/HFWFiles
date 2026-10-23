@@ -130,6 +130,13 @@
       "home_team": "Real Betis",
       "away_team": "Feyenoord",
       "status": "scored"
+    },
+    {
+      "match_slug": "real-madrid-rb-leipzig",
+      "fotmob_match_id": 6106244,
+      "home_team": "Real Madrid",
+      "away_team": "RB Leipzig",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

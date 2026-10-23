@@ -1,0 +1,45 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Arda Güler,1253890,Real Madrid,midfielder,46.008,9.0,0.0,55
+Kylian Mbappé,701154,Real Madrid,forward,40.97333333333333,12.0,0.0,53
+Eduardo Camavinga,1015185,Real Madrid,midfielder,38.370000000000005,11.0,0.0,49
+Federico Valverde,743533,Real Madrid,defender,42.545,5.0,0.0,48
+Dean Huijsen,1367619,Real Madrid,defender,42.345000000000006,5.0,0.0,47
+Bernardo Silva,488139,Real Madrid,midfielder,33.762,11.0,0.0,45
+Jude Bellingham,1077894,Real Madrid,midfielder,28.81733333333333,11.0,0.0,40
+Yan Diomande,1735453,Real Madrid,forward,31.606666666666666,6.0,0.0,38
+Alvaro Carreras,1190025,Real Madrid,defender,22.12333333333333,10.0,0.0,32
+David Raum,806669,RB Leipzig,defender,26.813333333333336,0.0,0.0,27
+Vinícius Júnior,846033,Real Madrid,midfielder,15.821333333333335,9.0,0.0,25
+Tidiam Gomis,1482733,RB Leipzig,forward,20.786666666666665,3.0,0.0,24
+Antonio Nusa,1248482,RB Leipzig,midfielder,22.74533333333333,1.0,0.0,24
+Brahim Díaz,750027,Real Madrid,forward,17.479999999999997,6.0,0.0,23
+Antonio Rüdiger,276738,Real Madrid,defender,18.36,5.0,0.0,23
+Rômulo,1314412,RB Leipzig,forward,19.78,3.0,0.0,23
+Nicolas Seiwald,1024672,RB Leipzig,midfielder,22.306,-1.0,0.0,21
+Ridle Baku,883087,RB Leipzig,defender,30.894999999999992,-10.0,0.0,21
+Willi Orbán,278856,RB Leipzig,defender,30.675,-10.0,0.0,21
+Castello Lukeba,1253852,RB Leipzig,defender,29.2,-10.0,0.0,19
+Christoph Baumgartner,747718,RB Leipzig,midfielder,15.272,0.5,0.0,16
+Brajan Gruda,1430151,RB Leipzig,midfielder,13.568,1.0,0.0,15
+Neil El Aynaoui,1274060,RB Leipzig,midfielder,10.722,1.0,0.0,12
+Christopher Nkunku,704523,RB Leipzig,midfielder,10.434,1.0,0.0,11
+Max Finkgräfe,1529161,RB Leipzig,defender,14.651666666666667,-5.0,0.0,10
+Carlos Espí,1610744,Real Madrid,forward,7.656666666666666,0.0,0.0,8
+Andrija Maksimović,1482209,RB Leipzig,midfielder,7.0200000000000005,0.5,0.0,8
+Marc Cucurella,873289,Real Madrid,defender,5.591666666666667,0.0,0.0,6
+Endrick,1406729,Real Madrid,forward,5.576666666666666,0.0,0.0,6
+Rocco Reitz,1174726,RB Leipzig,midfielder,4.44,0.5,0.0,5
+Lukas Klostermann,526657,RB Leipzig,defender,0.0,0.0,0.0,0
+Denzel Dumfries,593118,Real Madrid,defender,0.0,0.0,0.0,0
+Benjamin Henrichs,681383,RB Leipzig,defender,0.0,0.0,0.0,0
+Trent Alexander-Arnold,760712,Real Madrid,defender,0.0,0.0,0.0,0
+Ibrahima Konaté,820140,Real Madrid,defender,0.0,0.0,0.0,0
+Éder Militao,844415,Real Madrid,defender,0.0,0.0,0.0,0
+Maxime Estève,1250443,RB Leipzig,defender,0.0,0.0,0.0,0
+Abdoul Koné,1643776,RB Leipzig,defender,0.0,0.0,0.0,0
+Aurélien Tchouaméni,914458,Real Madrid,midfielder,0.0,0.0,0.0,0
+Ezechiel Banzuzi,1310001,RB Leipzig,midfielder,0.0,0.0,0.0,0
+Thiago Pitarch,1796908,Real Madrid,midfielder,0.0,0.0,0.0,0
+Johan Bakayoko,1203194,RB Leipzig,forward,0.0,0.0,0.0,0
+Real Madrid Keepers,8633,Real Madrid,goalkeeper,25.78,12.0,0.0,38
+RB Leipzig Keepers,178475,RB Leipzig,goalkeeper,33.900000000000006,-6.0,0.0,28
