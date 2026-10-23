@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Alysson Edward,1656860,Aston Villa,midfielder,33.794,11.0,0.0,45
+John McGinn,356406,Aston Villa,midfielder,32.966,9.0,0.0,42
+Ibrahim Mbaye,1593857,Aston Villa,midfielder,29.832,11.0,0.0,41
+Nicolas Jackson,1197347,Aston Villa,forward,30.453333333333333,9.0,0.0,39
+Ross Barkley,215384,Aston Villa,midfielder,28.16933333333333,11.0,0.0,39
+Pau Torres,792645,Aston Villa,defender,33.615,5.0,0.0,39
+Victor Nilsson Lindelöf,258269,Aston Villa,defender,32.425,5.0,0.0,37
+Emiliano Buendía,610184,Aston Villa,midfielder,27.192,9.0,0.0,36
+João Gomes,1174672,Aston Villa,midfielder,23.52933333333333,11.0,0.0,35
+Kristoffer Askildsen,964535,Viking FK,midfielder,32.252,1.0,0.0,33
+Zlatko Tripić,279191,Viking FK,forward,32.52,0.0,0.0,33
+Peter Christiansen,955759,Viking FK,forward,25.54,3.0,0.0,29
+Herman Haugen,1019527,Viking FK,defender,31.43166666666667,-5.0,0.0,26
+Joe Bell,848345,Viking FK,midfielder,19.642000000000003,1.0,0.0,21
+Tobias Moi,1636182,Viking FK,midfielder,21.482000000000003,-1.0,0.0,20
+Gianni Stensness,1029026,Viking FK,defender,25.295,-5.0,0.0,20
+Tyrone Mings,419664,Aston Villa,defender,13.78,5.0,0.0,19
+Henrik Rørvik Bjørdal,440313,Viking FK,midfielder,11.088000000000005,4.5,0.0,16
+Jesper Daland,633094,Viking FK,defender,19.78,-5.0,0.0,15
+Erik Botheim,741561,Viking FK,forward,14.19,0.0,0.0,14
+Leon Goretzka,343748,Aston Villa,midfielder,13.110666666666669,0.5,0.0,14
+Simen Kvia-Egeskog,1267374,Viking FK,midfielder,8.474,4.5,0.0,13
+Vetle Auklend,1585827,Viking FK,defender,6.415,5.0,0.0,11
+Amin Cosic,1751162,Viking FK,forward,8.0,3.0,0.0,11
+Tammy Abraham,749661,Aston Villa,forward,9.096666666666666,0.0,0.0,9
+Essien Bassey,1697028,Viking FK,defender,3.2533333333333334,5.0,0.0,8
+Alejandro Garnacho,1203665,Aston Villa,forward,7.8,0.0,0.0,8
+Henrik Heggheim,1163230,Viking FK,defender,11.315,-5.0,0.0,6
+George Hemmings,1607333,Aston Villa,midfielder,3.414,0.5,0.0,4
+Matty Cash,729731,Aston Villa,defender,2.7066666666666666,0.0,0.0,3
+Kristoffer Haugen,313128,Viking FK,defender,0.0,0.0,0.0,0
+Viljar Vevatne,444253,Viking FK,defender,0.0,0.0,0.0,0
+Taylor Harwood-Bellis,966021,Aston Villa,defender,0.0,0.0,0.0,0
+Ian Maatsen,966026,Aston Villa,defender,0.0,0.0,0.0,0
+Henrik Falchener,1110550,Viking FK,defender,0.0,0.0,0.0,0
+Boubacar Kamara,816325,Aston Villa,midfielder,0.0,0.0,0.0,0
+Lamare Bogarde,1190033,Aston Villa,midfielder,0.0,0.0,0.0,0
+Jakob Segadal Hansen,1376699,Viking FK,midfielder,0.0,0.0,0.0,0
+Romano Postema,1069826,Viking FK,forward,0.0,0.0,0.0,0
+Niklas Fuglestad,1636186,Viking FK,forward,0.0,0.0,0.0,0
+Viking FK Keepers,8478,Viking FK,goalkeeper,32.120000000000005,0.0,0.0,32
+Aston Villa Keepers,10252,Aston Villa,goalkeeper,14.72,12.0,0.0,27

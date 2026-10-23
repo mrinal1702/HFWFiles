@@ -1,0 +1,15 @@
+{
+  "match_id": 6106285,
+  "home_team": "Aston Villa",
+  "away_team": "Viking",
+  "source_url": "https://www.fotmob.com/en-GB/matches/viking-vs-aston-villa/2wfy91#6106285:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw03/matches/aston-villa-viking/intermediates/AstonVilla_Vs_Viking.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/viking-vs-aston-villa/2wfy91",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/viking-vs-aston-villa/2wfy91#6106285:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/viking-vs-aston-villa/2wfy91#6106285:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/viking-vs-aston-villa/2wfy91#6106285:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106285"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

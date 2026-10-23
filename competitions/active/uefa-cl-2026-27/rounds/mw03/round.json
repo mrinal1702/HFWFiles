@@ -95,6 +95,13 @@
       "home_team": "Lille",
       "away_team": "Galatasaray",
       "status": "scored"
+    },
+    {
+      "match_slug": "aston-villa-viking",
+      "fotmob_match_id": 6106285,
+      "home_team": "Aston Villa",
+      "away_team": "Viking",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
