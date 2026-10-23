@@ -342,6 +342,14 @@
       "gw": 3,
       "fotmob_match_id": 6106234,
       "file": "ParisSaintGermain_Barcelona_FinalPoints.csv"
+    },
+    {
+      "slug": "roma-slovan-bratislava",
+      "title": "Roma vs Slovan Bratislava",
+      "subtitle": "UEFA Champions League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 6106277,
+      "file": "Roma_SlovanBratislava_FinalPoints.csv"
     }
   ]
 }

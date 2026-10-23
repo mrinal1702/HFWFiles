@@ -60,6 +60,13 @@
       "home_team": "Paris Saint-Germain",
       "away_team": "Barcelona",
       "status": "scored"
+    },
+    {
+      "match_slug": "roma-slovan-bratislava",
+      "fotmob_match_id": 6106277,
+      "home_team": "Roma",
+      "away_team": "Slovan Bratislava",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Niccolò Pisilli,1451196,Roma,midfielder,56.554,13.0,0.0,70
+Donyell Malen,660301,Roma,forward,43.85666666666667,12.0,0.0,56
+Leonardo Balerdi,958464,Roma,defender,45.76500000000001,10.0,0.0,56
+Mario Hermoso,671203,Roma,defender,44.58666666666666,10.0,0.0,55
+Daniele Ghilardi,1386006,Roma,defender,43.52,10.0,0.0,54
+Nahuel Molina,726345,Roma,midfielder,31.360000000000003,13.0,0.0,44
+Marten de Roon,198559,Roma,midfielder,22.876666666666665,13.0,0.0,36
+Kenan Bajrič,315814,Slovan Bratislava,defender,43.13,-10.0,0.0,33
+Wesley,1320176,Roma,midfielder,19.682666666666663,13.0,0.0,33
+Lorenzo Pellegrini,540307,Roma,midfielder,22.73,9.0,0.0,32
+Rodrigo Mora,1525065,Roma,midfielder,15.951999999999998,13.0,0.0,29
+Matias Soulé,1280082,Roma,midfielder,22.258,6.5,0.0,29
+Peter Pokorný,951951,Slovan Bratislava,midfielder,20.328000000000003,-3.0,0.0,17
+Alasana Yirajang,1614857,Slovan Bratislava,forward,16.706666666666667,0.0,0.0,17
+Devyne Rensch,1180321,Roma,midfielder,12.777333333333331,2.5,0.0,15
+Kevin Wimmer,264221,Slovan Bratislava,defender,9.691666666666668,5.0,0.0,15
+Konstantinos Koulierakis,1337884,Roma,defender,9.668333333333331,5.0,0.0,15
+Gianluca Mancini,588687,Roma,defender,7.993333333333333,5.0,0.0,13
+Nino Marcelli,1449716,Slovan Bratislava,forward,10.45,0.0,0.0,10
+Alen Mustafić,949092,Slovan Bratislava,midfielder,6.932,2.5,0.0,9
+Suleiman Camara,1206542,Slovan Bratislava,midfielder,12.131999999999998,-3.0,0.0,9
+César Blackman,888966,Slovan Bratislava,defender,18.845,-10.0,0.0,9
+Cristian Martínez,727101,Slovan Bratislava,midfielder,5.36,2.5,0.0,8
+Sandro Cruz,1045565,Slovan Bratislava,defender,17.59333333333333,-10.0,0.0,8
+Alexej Maroš,1557209,Slovan Bratislava,forward,6.39,0.0,0.0,6
+Tigran Barseghyan,552700,Slovan Bratislava,midfielder,6.399333333333334,-1.0,0.0,5
+Santiago Castro,1282008,Roma,forward,5.173333333333333,0.0,0.0,5
+Artur Gajdoš,1201843,Slovan Bratislava,midfielder,6.894,-3.0,0.0,4
+Svetozar Marković,922722,Slovan Bratislava,defender,12.58,-10.0,0.0,3
+Rahim Ibrahim,1239580,Slovan Bratislava,midfielder,1.7519999999999991,-3.0,0.0,0
+Evan N'Dicka,787242,Roma,defender,0.0,0.0,0.0,0
+Samuel Kozlovský,949877,Slovan Bratislava,defender,0.0,0.0,0.0,0
+Sahmkou Camara,1513367,Slovan Bratislava,defender,0.0,0.0,0.0,0
+Róbert Tománek,1699700,Slovan Bratislava,defender,0.0,0.0,0.0,0
+Bryan Cristante,299799,Roma,midfielder,0.0,0.0,0.0,0
+Danylo Ignatenko,630472,Slovan Bratislava,midfielder,0.0,0.0,0.0,0
+Daiki Matsuoka,1023982,Slovan Bratislava,midfielder,0.0,0.0,0.0,0
+Emanuele Lulli,1800491,Roma,midfielder,0.0,0.0,0.0,0
+Alessandro Di Nunzio,2026491,Roma,midfielder,0.0,0.0,0.0,0
+Leo Hofstädter,2093218,Slovan Bratislava,midfielder,0.0,0.0,0.0,0
+Roma Keepers,8686,Roma,goalkeeper,7.779999999999999,18.0,0.0,26
+Slovan Bratislava Keepers,6019,Slovan Bratislava,goalkeeper,27.860000000000003,-6.0,0.0,22
