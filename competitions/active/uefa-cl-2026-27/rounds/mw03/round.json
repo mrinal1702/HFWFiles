@@ -67,6 +67,13 @@
       "home_team": "Roma",
       "away_team": "Slovan Bratislava",
       "status": "scored"
+    },
+    {
+      "match_slug": "napoli-bod-glimt",
+      "fotmob_match_id": 6106320,
+      "home_team": "Napoli",
+      "away_team": "Bodø/Glimt",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

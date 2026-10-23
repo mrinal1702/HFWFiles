@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw03",
+  "match_slug": "napoli-bod-glimt",
+  "fotmob_match_id": 6106320,
+  "source_url": "https://www.fotmob.com/en-GB/matches/bodoglimt-vs-napoli/2rgbhu#6106320:tab=stats",
+  "home_team": "Napoli",
+  "away_team": "Bodø/Glimt",
+  "raw_json_path": "intermediates/Napoli_Vs_BodGlimt.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}
