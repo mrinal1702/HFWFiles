@@ -326,6 +326,14 @@
       "gw": 3,
       "fotmob_match_id": 6106248,
       "file": "Liverpool_Villarreal_FinalPoints.csv"
+    },
+    {
+      "slug": "manchester-city-aek-athens",
+      "title": "Manchester City vs AEK Athens",
+      "subtitle": "UEFA Champions League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 6106257,
+      "file": "ManchesterCity_AEKAthens_FinalPoints.csv"
     }
   ]
 }

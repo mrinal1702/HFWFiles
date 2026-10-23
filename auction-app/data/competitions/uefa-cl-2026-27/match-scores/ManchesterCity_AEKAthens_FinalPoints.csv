@@ -1,0 +1,41 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Phil Foden,815006,Manchester City,midfielder,74.878,13.0,0.0,88
+Rayan Cherki,1104053,Manchester City,midfielder,38.666,13.0,0.0,52
+Elliot Anderson,1089691,Manchester City,midfielder,35.91199999999999,13.0,0.0,49
+Rico Lewis,1288450,Manchester City,defender,42.64,5.0,0.0,48
+Allan,1721789,Manchester City,midfielder,26.598,13.0,0.0,40
+Abdukodir Khusanov,1362998,Manchester City,defender,31.090000000000003,5.0,0.0,36
+Rúben Dias,614006,Manchester City,defender,26.366666666666664,5.0,0.0,31
+Enzo Fernández,1137705,Manchester City,midfielder,19.996,11.0,0.0,31
+Zine,1106943,AEK Athens,forward,26.17,3.0,0.0,29
+Kervin Arriaga,839750,AEK Athens,midfielder,29.260666666666665,-3.0,0.0,26
+Joško Gvardiol,1070712,Manchester City,defender,20.69,5.0,0.0,26
+Ryan McAidoo,1680328,Manchester City,forward,18.743333333333336,6.0,0.0,25
+Lovro Majer,762721,AEK Athens,midfielder,26.206000000000003,-3.0,0.0,23
+Luka Jović,463291,AEK Athens,forward,15.806666666666668,3.0,0.0,19
+Stavros Pilios,1015750,AEK Athens,defender,32.465,-15.0,0.0,17
+Floyd Samba,1726962,Manchester City,forward,8.326666666666666,9.0,0.0,17
+Harold Moukoudi,637737,AEK Athens,defender,31.25,-15.0,0.0,16
+Vitor Reis,1580952,Manchester City,defender,10.124999999999998,5.0,0.0,15
+Joao Mário,300916,AEK Athens,midfielder,13.256,1.0,0.0,14
+Răzvan Marin,574844,AEK Athens,midfielder,12.618,1.0,0.0,14
+Aboubakary Koïta,725695,AEK Athens,midfielder,14.55,-1.5,0.0,13
+Rayan Aït-Nouri,933845,Manchester City,defender,6.065,5.0,0.0,11
+Oleksandr Zubkov,655636,AEK Athens,forward,10.16,0.0,0.0,10
+Barnabás Varga,796504,AEK Athens,forward,9.93,0.0,0.0,10
+Kaden Braithwaite,1682403,Manchester City,defender,4.508333333333334,5.0,0.0,10
+Filipe Relvas,1285815,AEK Athens,defender,24.035,-15.0,0.0,9
+Mijat Gaćinović,448859,AEK Athens,midfielder,6.307333333333333,2.5,0.0,9
+Milán Vitális,1197823,AEK Athens,midfielder,3.733333333333333,2.5,0.0,6
+Lazaros Rota,949866,AEK Athens,defender,17.090000000000003,-15.0,0.0,2
+Domagoj Vida,115180,AEK Athens,defender,0.0,0.0,0.0,0
+Charalambos Lykogiannis,395914,AEK Athens,defender,0.0,0.0,0.0,0
+Marc Guéhi,844425,Manchester City,defender,0.0,0.0,0.0,0
+Petros Mantalos,184639,AEK Athens,midfielder,0.0,0.0,0.0,0
+Kaan Kairinen,547454,AEK Athens,midfielder,0.0,0.0,0.0,0
+Ayyoub Bouaddi,1561552,Manchester City,midfielder,0.0,0.0,0.0,0
+Erling Haaland,737066,Manchester City,forward,0.0,0.0,0.0,0
+Jérémy Doku,942368,Manchester City,forward,0.0,0.0,0.0,0
+Iliman Ndiaye,965764,Manchester City,forward,0.0,0.0,0.0,0
+Manchester City Keepers,8456,Manchester City,goalkeeper,17.839999999999996,12.0,0.0,30
+AEK Athens Keepers,8563,AEK Athens,goalkeeper,15.86,-12.0,0.0,4

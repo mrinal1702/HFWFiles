@@ -46,6 +46,13 @@
       "home_team": "Liverpool",
       "away_team": "Villarreal",
       "status": "scored"
+    },
+    {
+      "match_slug": "manchester-city-aek-athens",
+      "fotmob_match_id": 6106257,
+      "home_team": "Manchester City",
+      "away_team": "AEK Athens",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
