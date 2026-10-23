@@ -18,9 +18,38 @@
     "transfer_window_open": true,
     "requires_locked_game_week_id": 301
   },
-  "fixtures": [],
-  "squad_lock_state": "open",
-  "scoring_state": "not_started",
+  "fixtures": [
+    {
+      "match_slug": "fenerbahce-slavia-prague",
+      "fotmob_match_id": 6106333,
+      "home_team": "Fenerbahçe",
+      "away_team": "Slavia Prague",
+      "status": "scored"
+    },
+    {
+      "match_slug": "sabah-fk-borussia-dortmund",
+      "fotmob_match_id": 6106422,
+      "home_team": "Sabah FK",
+      "away_team": "Borussia Dortmund",
+      "status": "scored"
+    },
+    {
+      "match_slug": "fc-porto-psv-eindhoven",
+      "fotmob_match_id": 6106287,
+      "home_team": "FC Porto",
+      "away_team": "PSV Eindhoven",
+      "status": "scored"
+    },
+    {
+      "match_slug": "liverpool-villarreal",
+      "fotmob_match_id": 6106248,
+      "home_team": "Liverpool",
+      "away_team": "Villarreal",
+      "status": "scored"
+    }
+  ],
+  "squad_lock_state": "locked",
+  "scoring_state": "in_progress",
   "publication_state": "unpublished",
   "algorithm_version": "1.0"
 }

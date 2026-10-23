@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Alexis Mac Allister,831489,Liverpool,midfielder,60.866,7.0,0.0,68
+Rio Ngumoha,1597668,Liverpool,midfielder,58.25266666666667,9.0,0.0,67
+Florian Wirtz,1152455,Liverpool,forward,49.56,6.0,0.0,56
+Konstantinos Tsimikas,671529,Liverpool,defender,59.025,-5.0,0.0,54
+Cody Gakpo,806552,Liverpool,midfielder,45.43,7.0,0.0,52
+Trey Nyoni,1436258,Liverpool,midfielder,35.196,9.0,0.0,44
+Ayoze Pérez,479020,Villarreal,forward,31.44,3.0,0.0,34
+Pape Gueye,844544,Villarreal,midfielder,31.146,3.0,0.0,34
+Tani Oluwaseyi,1338740,Villarreal,forward,30.040000000000003,3.0,0.0,33
+Georges Mikautadze,1117069,Villarreal,forward,24.29,6.0,0.0,30
+Santiago Mouriño,1407468,Villarreal,defender,39.485,-10.0,0.0,29
+Ronald Araujo,921253,Liverpool,defender,24.495,0.0,0.0,24
+Ryan Gravenberch,956683,Liverpool,midfielder,15.826,7.0,0.0,23
+Nathan Saliba,1216798,Villarreal,midfielder,15.704,5.0,0.0,21
+Sergi Cardona,1059657,Villarreal,defender,28.425,-10.0,0.0,18
+Virgil van Dijk,209405,Liverpool,defender,23.12,-5.0,0.0,18
+Joseph Gomez,568571,Liverpool,defender,18.118333333333336,0.0,0.0,18
+Jérémy Jacquet,1473534,Liverpool,defender,17.666666666666664,0.0,0.0,18
+Renato Veiga,1343750,Villarreal,defender,27.17,-10.0,0.0,17
+Lewis Koumas,1364042,Liverpool,forward,8.059999999999999,9.0,0.0,17
+Pau Navarro,1531887,Villarreal,defender,25.15,-10.0,0.0,15
+Tajon Buchanan,1026135,Villarreal,midfielder,10.028,5.0,0.0,15
+Santi Comesaña,671865,Villarreal,midfielder,11.23,1.0,0.0,12
+Alberto Moleiro,1184694,Villarreal,midfielder,5.154,5.0,0.0,10
+Alexander Isak,690107,Liverpool,forward,6.23,3.0,0.0,9
+Bradley Barcola,1297165,Liverpool,forward,8.653333333333334,0.0,0.0,9
+Gerard Moreno,246438,Villarreal,forward,4.96,3.0,0.0,8
+James McConnell,1231075,Liverpool,midfielder,5.473999999999999,0.5,0.0,6
+Alex Freeman,1338696,Villarreal,defender,7.995000000000001,-5.0,0.0,3
+Juan Foyth,833219,Villarreal,defender,7.155,-5.0,0.0,2
+Logan Costa,922877,Villarreal,defender,0.0,0.0,0.0,0
+Miloš Kerkez,1195281,Liverpool,defender,0.0,0.0,0.0,0
+Luke Chambers,1249634,Liverpool,midfielder,0.0,0.0,0.0,0
+Jayden Danns,1416696,Liverpool,midfielder,0.0,0.0,0.0,0
+Michael Laffey,1603811,Liverpool,midfielder,0.0,0.0,0.0,0
+Alassane Diatta,1695966,Villarreal,midfielder,0.0,0.0,0.0,0
+Carlos Maciá,1841906,Villarreal,midfielder,0.0,0.0,0.0,0
+Ilias Akhomach,1311915,Villarreal,forward,0.0,0.0,0.0,0
+Joselillo Gaitán,1834473,Villarreal,forward,0.0,0.0,0.0,0
+Nizar El Jmili,1897470,Villarreal,forward,0.0,0.0,0.0,0
+Liverpool Keepers,8650,Liverpool,goalkeeper,15.500000000000002,0.0,0.0,16
+Villarreal Keepers,10205,Villarreal,goalkeeper,18.5,-6.0,0.0,12

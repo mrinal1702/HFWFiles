@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw03",
+  "match_slug": "liverpool-villarreal",
+  "fotmob_match_id": 6106248,
+  "source_url": "https://www.fotmob.com/en-GB/matches/liverpool-vs-villarreal/2xuaza#6106248:tab=stats",
+  "home_team": "Liverpool",
+  "away_team": "Villarreal",
+  "raw_json_path": "intermediates/Liverpool_Vs_Villarreal.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

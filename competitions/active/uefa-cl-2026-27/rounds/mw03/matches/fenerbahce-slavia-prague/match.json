@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw03",
+  "match_slug": "fenerbahce-slavia-prague",
+  "fotmob_match_id": 6106333,
+  "source_url": "https://www.fotmob.com/en-GB/matches/slavia-prague-vs-fenerbahce/28vmqy#6106333:tab=stats",
+  "home_team": "Fenerbahçe",
+  "away_team": "Slavia Prague",
+  "raw_json_path": "intermediates/Fenerbahe_Vs_SlaviaPrague.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw03",
+  "match_slug": "sabah-fk-borussia-dortmund",
+  "fotmob_match_id": 6106422,
+  "source_url": "https://www.fotmob.com/en-GB/matches/borussia-dortmund-vs-sabah-fk/5wfix3jc#6106422:tab=stats",
+  "home_team": "Sabah FK",
+  "away_team": "Borussia Dortmund",
+  "raw_json_path": "intermediates/SabahFK_Vs_BorussiaDortmund.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

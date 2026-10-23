@@ -1,0 +1,42 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Milan Škriniar,309328,Fenerbahçe,defender,46.66,0.0,0.0,47
+N'Golo Kanté,319300,Fenerbahçe,midfielder,39.982,5.0,0.0,45
+Oskar Kubiak,1782189,Slavia Prague,midfielder,37.376,3.0,0.0,40
+Mattéo Guendouzi,800609,Fenerbahçe,midfielder,34.946,5.0,0.0,40
+Archie Brown,1113704,Fenerbahçe,defender,37.84,0.0,0.0,38
+Mason Greenwood,950473,Fenerbahçe,midfielder,30.429333333333336,7.0,0.0,37
+Lukás Provod,791682,Slavia Prague,forward,30.41333333333333,3.0,0.0,33
+Emmanuel Ayaosi,1327747,Slavia Prague,midfielder,27.678,5.0,0.0,33
+Nélson Semedo,470834,Fenerbahçe,defender,32.114999999999995,0.0,0.0,32
+Mubarak Suleiman,1840847,Slavia Prague,midfielder,29.10533333333333,3.0,0.0,32
+Ange N'Guessan,1421040,Slavia Prague,defender,30.24000000000001,0.0,0.0,30
+Oğuz Aydın,1092015,Fenerbahçe,midfielder,22.482,7.0,0.0,29
+David Moses,1509423,Slavia Prague,midfielder,23.57,5.0,0.0,29
+Dorgeles Nene,1230287,Fenerbahçe,forward,28.55,0.0,0.0,29
+Vedat Muriqi,517052,Fenerbahçe,forward,22.200000000000003,6.0,0.0,28
+Kojo Peprah Oppong,1429607,Fenerbahçe,defender,23.155,5.0,0.0,28
+Pavel Kačor,1585595,Slavia Prague,midfielder,17.490666666666666,4.5,0.0,22
+David Zima,1085401,Slavia Prague,defender,20.19,0.0,0.0,20
+Wiktor Nowak,1395322,Slavia Prague,midfielder,13.012,5.0,0.0,18
+Kerem Aktürkoglu,1117570,Fenerbahçe,midfielder,10.985333333333331,7.0,0.0,18
+İrfan Kahveci,316544,Fenerbahçe,forward,17.126666666666665,0.0,0.0,17
+Romelu Lukaku,181276,Fenerbahçe,forward,16.14,0.0,0.0,16
+Samuel Isife,1744791,Slavia Prague,midfielder,11.381333333333334,4.5,0.0,16
+Mojmír Chytil,988769,Slavia Prague,forward,8.743333333333332,3.0,0.0,12
+Tomás Vlček,979540,Slavia Prague,defender,11.496666666666666,0.0,0.0,11
+Danijel Šturm,1270718,Slavia Prague,midfielder,8.282666666666666,3.0,0.0,11
+Michal Sadílek,806551,Slavia Prague,midfielder,6.540666666666668,4.5,0.0,11
+Toumani Diakité,1781770,Slavia Prague,midfielder,3.974,4.5,0.0,8
+Nathan Aké,417068,Fenerbahçe,defender,4.91,0.0,0.0,5
+Ismail Yüksek,1183589,Fenerbahçe,midfielder,3.5266666666666664,0.5,0.0,4
+Tomás Holeš,306168,Slavia Prague,defender,0.0,0.0,0.0,0
+Levent Mercan,1080172,Fenerbahçe,defender,0.0,0.0,0.0,0
+Mikulás Konečný,1405567,Slavia Prague,defender,0.0,0.0,0.0,0
+Yiğit Efe Demir,1414040,Fenerbahçe,defender,0.0,0.0,0.0,0
+Ognjen Mimović,1666975,Fenerbahçe,defender,0.0,0.0,0.0,0
+David Barčot,1840592,Slavia Prague,defender,0.0,0.0,0.0,0
+Bartuğ Elmaz,1216728,Fenerbahçe,midfielder,0.0,0.0,0.0,0
+Petr Potměšil,1814509,Slavia Prague,forward,0.0,0.0,0.0,0
+Matěj Kotrba,1840591,Slavia Prague,forward,0.0,0.0,0.0,0
+Slavia Prague Keepers,7787,Slavia Prague,goalkeeper,17.259999999999998,6.0,0.0,23
+Fenerbahçe Keepers,8695,Fenerbahçe,goalkeeper,13.92,6.0,0.0,20

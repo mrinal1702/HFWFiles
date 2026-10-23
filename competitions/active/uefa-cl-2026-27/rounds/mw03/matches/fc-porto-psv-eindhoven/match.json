@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw03",
+  "match_slug": "fc-porto-psv-eindhoven",
+  "fotmob_match_id": 6106287,
+  "source_url": "https://www.fotmob.com/en-GB/matches/psv-eindhoven-vs-fc-porto/2sxsk8#6106287:tab=stats",
+  "home_team": "FC Porto",
+  "away_team": "PSV Eindhoven",
+  "raw_json_path": "intermediates/FCPorto_Vs_PSVEindhoven.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

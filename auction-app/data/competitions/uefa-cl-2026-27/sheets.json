@@ -294,6 +294,38 @@
       "gw": 2,
       "fotmob_match_id": 6106396,
       "file": "SlovanBratislava_VfBStuttgart_FinalPoints.csv"
+    },
+    {
+      "slug": "fenerbahce-slavia-prague",
+      "title": "Fenerbahçe vs Slavia Prague",
+      "subtitle": "UEFA Champions League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 6106333,
+      "file": "Fenerbahe_SlaviaPrague_FinalPoints.csv"
+    },
+    {
+      "slug": "sabah-fk-borussia-dortmund",
+      "title": "Sabah FK vs Borussia Dortmund",
+      "subtitle": "UEFA Champions League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 6106422,
+      "file": "SabahFK_BorussiaDortmund_FinalPoints.csv"
+    },
+    {
+      "slug": "fc-porto-psv-eindhoven",
+      "title": "FC Porto vs PSV Eindhoven",
+      "subtitle": "UEFA Champions League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 6106287,
+      "file": "FCPorto_PSVEindhoven_FinalPoints.csv"
+    },
+    {
+      "slug": "liverpool-villarreal",
+      "title": "Liverpool vs Villarreal",
+      "subtitle": "UEFA Champions League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 6106248,
+      "file": "Liverpool_Villarreal_FinalPoints.csv"
     }
   ]
 }

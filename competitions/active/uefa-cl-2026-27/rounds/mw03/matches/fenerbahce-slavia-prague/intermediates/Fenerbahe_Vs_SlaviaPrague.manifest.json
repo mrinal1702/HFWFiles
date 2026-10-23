@@ -1,0 +1,15 @@
+{
+  "match_id": 6106333,
+  "home_team": "Fenerbahçe",
+  "away_team": "Slavia Prague",
+  "source_url": "https://www.fotmob.com/en-GB/matches/slavia-prague-vs-fenerbahce/28vmqy#6106333:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw03/matches/fenerbahce-slavia-prague/intermediates/Fenerbahe_Vs_SlaviaPrague.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/slavia-prague-vs-fenerbahce/28vmqy",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/slavia-prague-vs-fenerbahce/28vmqy#6106333:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/slavia-prague-vs-fenerbahce/28vmqy#6106333:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/slavia-prague-vs-fenerbahce/28vmqy#6106333:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106333"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
