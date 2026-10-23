@@ -1,0 +1,26 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "database_competition_id": 4,
+  "database_round_id": null,
+  "round_slug": "mw04",
+  "display_name": "Matchweek 4",
+  "round_number": 4,
+  "legacy_game_week_id": 303,
+  "gw_name": "UEFA Champions League GW4",
+  "expected_match_count": 18,
+  "bidding": {
+    "bidding_deadline_mode": "global",
+    "initiation_deadline_at": "2026-11-03T14:15:00.000Z",
+    "raise_deadline_at": "2026-11-03T15:15:00.000Z",
+    "hard_deadline_at": "2026-11-03T16:15:00.000Z",
+    "reset_paid_release": true,
+    "reopen_unsold": true,
+    "transfer_window_open": true,
+    "requires_locked_game_week_id": 302
+  },
+  "fixtures": [],
+  "squad_lock_state": "open",
+  "scoring_state": "not_started",
+  "publication_state": "unpublished",
+  "algorithm_version": "1.0"
+}
