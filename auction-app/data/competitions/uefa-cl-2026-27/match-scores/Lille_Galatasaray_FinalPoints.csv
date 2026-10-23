@@ -1,0 +1,41 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Soriba Diaoune,1684579,Lille,forward,51.59,6.0,0.0,58
+Yunus Akgün,845991,Galatasaray,midfielder,38.54733333333333,9.0,0.0,48
+Roland Sallai,583601,Galatasaray,defender,41.260000000000005,0.0,0.0,41
+Victor Osimhen,687681,Galatasaray,forward,28.77,12.0,0.0,41
+Alexsandro Ribeiro,1186553,Lille,defender,48.73,-10.0,0.0,39
+Barış Alper Yılmaz,890232,Galatasaray,midfielder,29.002,9.0,0.0,38
+Ismail Jakobs,906945,Galatasaray,defender,35.349999999999994,0.0,0.0,35
+Aleksey Batrakov,1504343,Galatasaray,midfielder,25.69333333333333,9.0,0.0,35
+Davinson Sánchez,643533,Galatasaray,defender,34.455,0.0,0.0,34
+Hákon Arnar Haraldsson,1044470,Lille,forward,25.22,6.0,0.0,31
+Lucas Torreira,592909,Galatasaray,midfielder,20.038,9.0,0.0,29
+Dilane Bakwa,1079539,Lille,forward,22.15,6.0,0.0,28
+Nabil Bentaleb,500520,Lille,midfielder,25.602,1.0,0.0,27
+Gabriel Sara,902710,Galatasaray,midfielder,17.412666666666667,9.0,0.0,26
+Nathan Ngoy,1252070,Lille,defender,35.265,-10.0,0.0,25
+Abdülkerim Bardakci,291399,Galatasaray,defender,24.16,0.0,0.0,24
+Calvin Verdonk,622137,Lille,defender,33.685,-10.0,0.0,24
+Maurits Kjærgaard,1070404,Lille,midfielder,16.303333333333335,2.5,0.0,19
+Ngal Ayel Mukau,1428153,Lille,midfielder,15.396,1.0,0.0,16
+Mario Lemina,421786,Galatasaray,midfielder,13.193333333333335,2.5,0.0,16
+Benjamin André,148830,Lille,midfielder,13.994666666666664,1.0,0.0,15
+Olivier Giroud,46469,Lille,forward,10.74,0.0,0.0,11
+Eren Elmalı,1041660,Galatasaray,defender,4.65,5.0,0.0,10
+Tanguy Nianzou,1070617,Lille,defender,4.03,5.0,0.0,9
+Başar Önal,1347229,Lille,midfielder,5.57,2.5,0.0,8
+Gaëtan Perrin,708435,Lille,forward,5.709999999999999,0.0,0.0,6
+Leroy Sané,530859,Galatasaray,forward,5.216666666666667,0.0,0.0,5
+Ilkay Gündogan,178818,Galatasaray,midfielder,2.1786666666666665,2.5,0.0,5
+Deniz Gül,1406300,Galatasaray,forward,4.3,0.0,0.0,4
+Maxima Goffi,1793784,Lille,defender,11.325,-10.0,0.0,1
+Romain Perraud,815465,Lille,defender,0.0,0.0,0.0,0
+Wilfried Singo,1027472,Galatasaray,defender,0.0,0.0,0.0,0
+El Chadaille Bitshiabu,1173788,Galatasaray,defender,0.0,0.0,0.0,0
+Loun Srdanovic,1660370,Lille,defender,0.0,0.0,0.0,0
+Isaac Cossier,1680590,Lille,defender,0.0,0.0,0.0,0
+Lesley Ugochukwu,1200631,Galatasaray,midfielder,0.0,0.0,0.0,0
+Renato Nhaga,1741323,Galatasaray,midfielder,0.0,0.0,0.0,0
+Berat Luş,1682656,Galatasaray,forward,0.0,0.0,0.0,0
+Galatasaray Keepers,8637,Galatasaray,goalkeeper,29.52,6.0,0.0,36
+Lille Keepers,8639,Lille,goalkeeper,10.16,-6.0,0.0,4

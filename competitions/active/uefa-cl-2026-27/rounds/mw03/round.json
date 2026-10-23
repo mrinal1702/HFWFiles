@@ -88,6 +88,13 @@
       "home_team": "Como",
       "away_team": "Manchester United",
       "status": "scored"
+    },
+    {
+      "match_slug": "lille-galatasaray",
+      "fotmob_match_id": 6106312,
+      "home_team": "Lille",
+      "away_team": "Galatasaray",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

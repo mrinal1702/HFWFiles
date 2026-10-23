@@ -1,0 +1,15 @@
+{
+  "match_id": 6106312,
+  "home_team": "Lille",
+  "away_team": "Galatasaray",
+  "source_url": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-lille/2guw05#6106312:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw03/matches/lille-galatasaray/intermediates/Lille_Vs_Galatasaray.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-lille/2guw05",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-lille/2guw05#6106312:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-lille/2guw05#6106312:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-lille/2guw05#6106312:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106312"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

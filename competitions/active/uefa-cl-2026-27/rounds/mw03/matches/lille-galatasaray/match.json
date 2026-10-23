@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw03",
+  "match_slug": "lille-galatasaray",
+  "fotmob_match_id": 6106312,
+  "source_url": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-lille/2guw05#6106312:tab=stats",
+  "home_team": "Lille",
+  "away_team": "Galatasaray",
+  "raw_json_path": "intermediates/Lille_Vs_Galatasaray.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}
