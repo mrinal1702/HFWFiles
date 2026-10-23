@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw03",
+  "match_slug": "como-manchester-united",
+  "fotmob_match_id": 6106410,
+  "source_url": "https://www.fotmob.com/en-GB/matches/como-vs-manchester-united/3g9vos#6106410:tab=stats",
+  "home_team": "Como",
+  "away_team": "Manchester United",
+  "raw_json_path": "intermediates/Como_Vs_ManchesterUnited.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

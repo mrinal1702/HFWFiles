@@ -81,6 +81,13 @@
       "home_team": "VfB Stuttgart",
       "away_team": "Atlético Madrid",
       "status": "scored"
+    },
+    {
+      "match_slug": "como-manchester-united",
+      "fotmob_match_id": 6106410,
+      "home_team": "Como",
+      "away_team": "Manchester United",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

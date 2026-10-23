@@ -1,0 +1,15 @@
+{
+  "match_id": 6106410,
+  "home_team": "Como",
+  "away_team": "Manchester United",
+  "source_url": "https://www.fotmob.com/en-GB/matches/como-vs-manchester-united/3g9vos#6106410:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw03/matches/como-manchester-united/intermediates/Como_Vs_ManchesterUnited.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/como-vs-manchester-united/3g9vos",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/como-vs-manchester-united/3g9vos#6106410:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/como-vs-manchester-united/3g9vos#6106410:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/como-vs-manchester-united/3g9vos#6106410:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106410"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

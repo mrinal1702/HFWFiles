@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Nico Paz,1347574,Como,midfielder,62.12466666666666,13.0,0.0,75
+Amad Diallo,1070052,Manchester United,forward,46.64,3.0,0.0,50
+Jacobo Ramón,1413963,Como,defender,44.24000000000001,5.0,0.0,49
+Anastasios Douvikas,873270,Como,forward,29.8,12.0,0.0,42
+Luis Milla,638090,Como,midfielder,30.09,11.0,0.0,41
+Lucas Da Cunha,1076647,Como,midfielder,27.602,11.0,0.0,39
+Martin Baturina,1215064,Como,midfielder,24.24533333333333,11.0,0.0,35
+Máximo Perrone,1336582,Como,midfielder,21.198666666666664,13.0,0.0,34
+Harry Maguire,255610,Manchester United,defender,39.35,-10.0,0.0,29
+Álex Valle,1384881,Como,defender,23.47000000000001,5.0,0.0,28
+Yan Couto,1109171,Como,defender,16.52166666666667,10.0,0.0,27
+Marc-Oliver Kempf,355356,Como,defender,20.380000000000003,5.0,0.0,25
+Youri Tielemans,465960,Manchester United,midfielder,24.326,-1.0,0.0,23
+Diogo Dalot,751550,Manchester United,defender,32.03,-10.0,0.0,22
+Andrey Santos,1372921,Manchester United,midfielder,18.702,3.0,0.0,22
+Bruno Fernandes,422685,Manchester United,forward,21.023333333333333,0.0,0.0,21
+Joshua Zirkzee,950830,Manchester United,forward,16.996666666666663,3.0,0.0,20
+Kaiki,1459564,Como,defender,18.92,0.0,0.0,19
+Mason Mount,750032,Manchester United,midfielder,19.088,-1.0,0.0,18
+Carlos Baleba,1352713,Manchester United,midfielder,15.86,-1.5,0.0,14
+Matheus Cunha,863098,Manchester United,midfielder,10.28,3.0,0.0,13
+Shea Lacey,1436260,Manchester United,forward,7.113333333333334,3.0,0.0,10
+Maxence Caqueret,846000,Como,midfielder,6.958666666666668,2.5,0.0,9
+Bryan Mbeumo,923312,Manchester United,midfielder,11.904666666666667,-3.0,0.0,9
+Harry Amass,1430832,Manchester United,midfielder,4.002666666666666,4.5,0.0,9
+Alberto Dossena,822789,Como,defender,6.623333333333332,0.0,0.0,7
+Samuele Ricci,941656,Como,midfielder,3.3433333333333333,0.5,0.0,4
+Noussair Mazraoui,775539,Manchester United,defender,12.605000000000002,-10.0,0.0,3
+Matthijs de Ligt,769895,Manchester United,defender,12.378333333333334,-10.0,0.0,2
+Ivan Smolčić,1353289,Como,defender,2.1983333333333333,0.0,0.0,2
+Jaydan Kamason,1473693,Manchester United,defender,0.0,0.0,0.0,0
+Daniel Armer,1726964,Manchester United,defender,0.0,0.0,0.0,0
+Jack Fletcher,1575707,Manchester United,midfielder,0.0,0.0,0.0,0
+Mattia Liberali,1593861,Como,midfielder,0.0,0.0,0.0,0
+Tyler Fletcher,1676985,Manchester United,midfielder,0.0,0.0,0.0,0
+Tynan Thompson,1681978,Manchester United,forward,0.0,0.0,0.0,0
+Como Keepers,10171,Como,goalkeeper,23.480000000000004,12.0,0.0,35
+Manchester United Keepers,10260,Manchester United,goalkeeper,20.96,-6.0,0.0,15
