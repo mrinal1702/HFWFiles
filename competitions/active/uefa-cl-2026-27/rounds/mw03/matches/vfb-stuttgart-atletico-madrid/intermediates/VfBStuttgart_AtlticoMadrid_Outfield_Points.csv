@@ -1,0 +1,41 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+614384,Maximilian Mittelstädt,10269,VfB Stuttgart,1,defender,54.404999999999994,3.0,3.0,60.404999999999994,90.0,1,1,5.0,65.405
+288406,Alejandro Grimaldo,9906,Atlético de Madrid,1,defender,31.544999999999998,3.0,3.0,37.545,90.0,1,1,5.0,42.545
+974753,Julián Álvarez,9906,Atlético de Madrid,3,forward,31.21,4.1,2.6,37.910000000000004,78.0,1,1,3.0,40.910000000000004
+1323897,Marc Pubill,9906,Atlético de Madrid,1,defender,32.01500000000001,0.6000000000000001,3.0,35.61500000000001,90.0,1,1,5.0,40.61500000000001
+1071186,Angelo Stiller,10269,VfB Stuttgart,2,midfielder,23.606,3.0,3.0,29.606,90.0,1,1,5.0,34.606
+727897,Dávid Hancko,9906,Atlético de Madrid,1,defender,20.485,3.0,3.0,26.485,90.0,1,1,5.0,31.485
+1125187,Ramon Hendriks,10269,VfB Stuttgart,1,defender,18.99,3.0,3.0,24.99,90.0,1,1,5.0,29.99
+1074968,Jamie Leweling,10269,VfB Stuttgart,2,midfielder,19.404,3.0,2.4,24.804,72.0,1,1,5.0,29.804
+867080,Jeff Chabot,10269,VfB Stuttgart,1,defender,16.84,3.0,3.0,22.84,90.0,1,1,5.0,27.84
+1340895,Bilal El Khannouss,10269,VfB Stuttgart,2,midfielder,19.304,-0.30000000000000027,3.0,22.003999999999998,90.0,1,1,5.0,27.003999999999998
+1338192,Pablo Barrios,9906,Atlético de Madrid,2,midfielder,17.212,1.9,2.6,21.712,78.0,1,1,5.0,26.712
+1226147,Giuliano Simeone,9906,Atlético de Madrid,2,midfielder,15.126,3.0,2.9,21.025999999999996,87.0,1,1,5.0,26.025999999999996
+950199,Morten Hjulmand,9906,Atlético de Madrid,2,midfielder,14.168000000000003,3.0,2.1333333333333333,19.301333333333336,90.0,1,1,5.0,24.301333333333336
+661519,Deniz Undav,10269,VfB Stuttgart,3,forward,13.290000000000001,5.0,2.9,21.189999999999998,87.0,1,1,3.0,24.189999999999998
+690516,Ademola Lookman,9906,Atlético de Madrid,2,midfielder,14.290000000000001,3.0,1.5,18.79,44.0,1,0,4.5,23.29
+602563,Marcos Llorente,9906,Atlético de Madrid,1,defender,11.760000000000002,3.0,3.0,17.76,90.0,1,1,5.0,22.76
+1192406,Lorenz Assignon,10269,VfB Stuttgart,1,defender,12.879999999999999,3.0,1.2666666666666666,17.146666666666665,38.0,0,0,5.0,22.146666666666665
+928454,Josha Vagnoman,10269,VfB Stuttgart,1,defender,11.72,3.0,1.7333333333333334,16.453333333333333,52.0,1,1,5.0,21.453333333333333
+625175,Grischa Prömel,10269,VfB Stuttgart,2,midfielder,10.752000000000002,1.9,3.0,15.652000000000003,90.0,1,1,5.0,20.652
+892679,Chris Führich,10269,VfB Stuttgart,2,midfielder,11.558,0.7999999999999998,2.9,15.258000000000001,87.0,1,1,5.0,20.258000000000003
+609516,Robin Le Normand,9906,Atlético de Madrid,1,defender,1.33,3.0,0.4,4.73,12.0,0,0,5.0,9.73
+939569,Jonathan David,9906,Atlético de Madrid,3,forward,4.06,4.1,1.5,9.66,46.0,0,1,0.0,9.66
+942372,Álex Baena,9906,Atlético de Madrid,2,midfielder,-0.8420000000000002,3.0,2.3,4.458,69.0,1,1,5.0,9.458
+1173678,Johnny Cardoso,9906,Atlético de Madrid,2,midfielder,2.062,3.0,0.7,5.762,21.0,0,0,2.5,8.262
+1254394,Obed Vargas,9906,Atlético de Madrid,2,midfielder,1.514,3.0,0.4,4.914000000000001,12.0,0,0,2.5,7.414000000000001
+840241,Ermedin Demirović,10269,VfB Stuttgart,3,forward,2.5300000000000002,4.1,0.6,7.2299999999999995,18.0,0,0,0.0,7.2299999999999995
+440330,Alexander Sørloth,9906,Atlético de Madrid,3,forward,0.9199999999999998,5.0,0.1,6.02,3.0,0,0,0.0,6.02
+1366602,Dženan Pejčinović,10269,VfB Stuttgart,3,forward,-0.16999999999999998,5.0,0.1,4.93,3.0,0,0,0.0,4.93
+1425998,Leo Sauer,10269,VfB Stuttgart,3,forward,-0.74,5.0,0.1,4.359999999999999,3.0,0,0,0.0,4.359999999999999
+1270002,Luca Jaquez,10269,VfB Stuttgart,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1279764,Ameen Al Dakhil,10269,VfB Stuttgart,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1487877,Finn Jeltsch,10269,VfB Stuttgart,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1531100,Dani Martínez,9906,Atlético de Madrid,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1842329,Jorge Domínguez,9906,Atlético de Madrid,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+684983,Atakan Karazor,10269,VfB Stuttgart,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+869298,Nikolas Nartey,10269,VfB Stuttgart,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1419969,Rodrigo Mendoza,9906,Atlético de Madrid,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1692877,Jorge Castillo,9906,Atlético de Madrid,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+940976,Kang-In Lee,9906,Atlético de Madrid,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1297989,Arnau Ortiz,9906,Atlético de Madrid,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

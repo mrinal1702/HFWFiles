@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw03",
+  "match_slug": "vfb-stuttgart-atletico-madrid",
+  "fotmob_match_id": 6106397,
+  "source_url": "https://www.fotmob.com/en-GB/matches/atletico-madrid-vs-vfb-stuttgart/3d6gui#6106397:tab=stats",
+  "home_team": "VfB Stuttgart",
+  "away_team": "Atlético Madrid",
+  "raw_json_path": "intermediates/VfBStuttgart_Vs_AtlticoMadrid.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

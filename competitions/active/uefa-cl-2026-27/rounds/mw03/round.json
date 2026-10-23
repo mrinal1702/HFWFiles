@@ -74,6 +74,13 @@
       "home_team": "Napoli",
       "away_team": "Bodø/Glimt",
       "status": "scored"
+    },
+    {
+      "match_slug": "vfb-stuttgart-atletico-madrid",
+      "fotmob_match_id": 6106397,
+      "home_team": "VfB Stuttgart",
+      "away_team": "Atlético Madrid",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
