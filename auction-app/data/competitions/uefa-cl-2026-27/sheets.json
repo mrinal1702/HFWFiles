@@ -390,6 +390,14 @@
       "gw": 3,
       "fotmob_match_id": 6106285,
       "file": "AstonVilla_Viking_FinalPoints.csv"
+    },
+    {
+      "slug": "bayern-munchen-arsenal",
+      "title": "Bayern München vs Arsenal",
+      "subtitle": "UEFA Champions League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 6106238,
+      "file": "BayernMnchen_Arsenal_FinalPoints.csv"
     }
   ]
 }

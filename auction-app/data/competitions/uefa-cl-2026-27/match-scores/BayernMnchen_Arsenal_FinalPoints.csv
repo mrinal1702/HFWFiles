@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Declan Rice,654096,Arsenal,midfielder,56.048,5.0,0.0,61
+Harry Kane,194165,FC Bayern München,forward,44.55,6.0,0.0,51
+Dayot Upamecano,658554,FC Bayern München,defender,42.68000000000001,0.0,0.0,43
+Martin Ødegaard,534670,Arsenal,midfielder,37.61933333333332,5.0,0.0,43
+Alphonso Davies,751202,FC Bayern München,midfielder,32.89533333333333,5.0,0.0,38
+Eberechi Eze,818975,Arsenal,midfielder,32.76466666666666,5.0,0.0,38
+Tom Bischof,1286183,FC Bayern München,midfielder,27.854000000000003,5.0,0.0,33
+Gabriel,795179,Arsenal,defender,30.55,0.0,0.0,31
+Noni Madueke,1084981,Arsenal,midfielder,25.038,5.0,0.0,30
+Aleksandar Pavlović,1473580,FC Bayern München,midfielder,23.591999999999995,5.0,0.0,29
+Riccardo Calafiori,1105912,Arsenal,defender,27.655,0.0,0.0,28
+Bruno Guimarães,850354,Arsenal,midfielder,23.306,3.0,0.0,26
+Kai Havertz,749736,Arsenal,forward,18.926666666666662,3.0,0.0,22
+Ismael Saibari,1180288,FC Bayern München,midfielder,14.570666666666664,7.0,0.0,22
+Jurriën Timber,942381,Arsenal,defender,20.645,0.0,0.0,21
+Viktor Gyökeres,664500,Arsenal,forward,16.10333333333333,3.0,0.0,19
+Ezri Konsa,710159,Arsenal,defender,17.384999999999998,0.0,0.0,17
+Serge Gnabry,385437,FC Bayern München,midfielder,9.826666666666668,7.0,0.0,17
+Jonathan Tah,469700,FC Bayern München,defender,16.25,0.0,0.0,16
+Josip Stanišić,950824,FC Bayern München,defender,14.820000000000002,0.0,0.0,15
+Min-Jae Kim,828159,FC Bayern München,defender,8.97,5.0,0.0,14
+Bukayo Saka,961995,Arsenal,midfielder,8.871333333333334,2.5,0.0,11
+Konrad Laimer,526827,FC Bayern München,defender,9.195,0.0,0.0,9
+Luis Díaz,860914,FC Bayern München,forward,8.29,0.0,0.0,8
+Nathaniel Brown,1395447,FC Bayern München,defender,2.9466666666666663,5.0,0.0,8
+Myles Lewis-Skelly,1406436,Arsenal,midfielder,3.186,4.5,0.0,8
+Mikel Merino,574645,Arsenal,midfielder,4.028666666666667,2.5,0.0,7
+Lennart Karl,1737700,FC Bayern München,midfielder,0.5573333333333336,0.5,0.0,1
+Ben White,776151,Arsenal,defender,0.0,0.0,0.0,0
+Hiroki Ito,851626,FC Bayern München,defender,0.0,0.0,0.0,0
+Sacha Boey,1034808,FC Bayern München,defender,0.0,0.0,0.0,0
+Cristhian Mosquera,1298907,Arsenal,defender,0.0,0.0,0.0,0
+Martín Zubimendi,1031325,Arsenal,midfielder,0.0,0.0,0.0,0
+Bara Ndiaye,1798782,FC Bayern München,midfielder,0.0,0.0,0.0,0
+Max Dowman,1635773,Arsenal,forward,0.0,0.0,0.0,0
+Tim Binder,1740666,FC Bayern München,forward,0.0,0.0,0.0,0
+Arsenal Keepers,9825,Arsenal,goalkeeper,18.04,6.0,0.0,24
+FC Bayern München Keepers,9823,FC Bayern München,goalkeeper,15.900000000000002,6.0,0.0,22

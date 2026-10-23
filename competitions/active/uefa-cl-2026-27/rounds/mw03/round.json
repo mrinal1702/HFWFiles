@@ -102,6 +102,13 @@
       "home_team": "Aston Villa",
       "away_team": "Viking",
       "status": "scored"
+    },
+    {
+      "match_slug": "bayern-munchen-arsenal",
+      "fotmob_match_id": 6106238,
+      "home_team": "Bayern München",
+      "away_team": "Arsenal",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
