@@ -137,10 +137,17 @@
       "home_team": "Real Madrid",
       "away_team": "RB Leipzig",
       "status": "scored"
+    },
+    {
+      "match_slug": "sporting-cp-lask",
+      "fotmob_match_id": 6106281,
+      "home_team": "Sporting CP",
+      "away_team": "LASK",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
-  "scoring_state": "in_progress",
-  "publication_state": "unpublished",
+  "scoring_state": "complete",
+  "publication_state": "published",
   "algorithm_version": "1.0"
 }
