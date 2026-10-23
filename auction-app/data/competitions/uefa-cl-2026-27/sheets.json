@@ -414,6 +414,14 @@
       "gw": 3,
       "fotmob_match_id": 6106252,
       "file": "Inter_ShakhtarDonetsk_FinalPoints.csv"
+    },
+    {
+      "slug": "real-betis-feyenoord",
+      "title": "Real Betis vs Feyenoord",
+      "subtitle": "UEFA Champions League · Matchweek 3",
+      "gw": 3,
+      "fotmob_match_id": 6106300,
+      "file": "RealBetis_Feyenoord_FinalPoints.csv"
     }
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "match_id": 6106300,
+  "home_team": "Real Betis",
+  "away_team": "Feyenoord",
+  "source_url": "https://www.fotmob.com/en-GB/matches/real-betis-vs-feyenoord/2xnfq0#6106300:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw03/matches/real-betis-feyenoord/intermediates/RealBetis_Vs_Feyenoord.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/real-betis-vs-feyenoord/2xnfq0",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/real-betis-vs-feyenoord/2xnfq0#6106300:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/real-betis-vs-feyenoord/2xnfq0#6106300:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/real-betis-vs-feyenoord/2xnfq0#6106300:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106300"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

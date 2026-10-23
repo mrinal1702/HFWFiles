@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw03",
+  "match_slug": "real-betis-feyenoord",
+  "fotmob_match_id": 6106300,
+  "source_url": "https://www.fotmob.com/en-GB/matches/real-betis-vs-feyenoord/2xnfq0#6106300:tab=stats",
+  "home_team": "Real Betis",
+  "away_team": "Feyenoord",
+  "raw_json_path": "intermediates/RealBetis_Vs_Feyenoord.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

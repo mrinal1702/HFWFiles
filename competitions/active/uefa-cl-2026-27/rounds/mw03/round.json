@@ -123,6 +123,13 @@
       "home_team": "Inter",
       "away_team": "Shakhtar Donetsk",
       "status": "scored"
+    },
+    {
+      "match_slug": "real-betis-feyenoord",
+      "fotmob_match_id": 6106300,
+      "home_team": "Real Betis",
+      "away_team": "Feyenoord",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
