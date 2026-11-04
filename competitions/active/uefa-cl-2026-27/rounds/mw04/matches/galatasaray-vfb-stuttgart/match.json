@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw04",
+  "match_slug": "galatasaray-vfb-stuttgart",
+  "fotmob_match_id": 6106341,
+  "source_url": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-vfb-stuttgart/2yexz0#6106341:tab=stats",
+  "home_team": "Galatasaray",
+  "away_team": "VfB Stuttgart",
+  "raw_json_path": "intermediates/Galatasaray_Vs_VfBStuttgart.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

@@ -18,9 +18,17 @@
     "transfer_window_open": true,
     "requires_locked_game_week_id": 302
   },
-  "fixtures": [],
-  "squad_lock_state": "open",
-  "scoring_state": "not_started",
+  "fixtures": [
+    {
+      "match_slug": "galatasaray-vfb-stuttgart",
+      "fotmob_match_id": 6106341,
+      "home_team": "Galatasaray",
+      "away_team": "VfB Stuttgart",
+      "status": "scored"
+    }
+  ],
+  "squad_lock_state": "locked",
+  "scoring_state": "in_progress",
   "publication_state": "unpublished",
   "algorithm_version": "1.0"
 }

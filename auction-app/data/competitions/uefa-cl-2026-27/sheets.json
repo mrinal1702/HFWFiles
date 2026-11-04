@@ -438,6 +438,14 @@
       "gw": 3,
       "fotmob_match_id": 6106281,
       "file": "SportingCP_LASK_FinalPoints.csv"
+    },
+    {
+      "slug": "galatasaray-vfb-stuttgart",
+      "title": "Galatasaray vs VfB Stuttgart",
+      "subtitle": "UEFA Champions League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 6106341,
+      "file": "Galatasaray_VfBStuttgart_FinalPoints.csv"
     }
   ]
 }

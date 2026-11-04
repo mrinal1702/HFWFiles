@@ -1,0 +1,15 @@
+{
+  "match_id": 6106341,
+  "home_team": "Galatasaray",
+  "away_team": "VfB Stuttgart",
+  "source_url": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-vfb-stuttgart/2yexz0#6106341:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw04/matches/galatasaray-vfb-stuttgart/intermediates/Galatasaray_Vs_VfBStuttgart.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-vfb-stuttgart/2yexz0",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-vfb-stuttgart/2yexz0#6106341:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-vfb-stuttgart/2yexz0#6106341:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-vfb-stuttgart/2yexz0#6106341:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106341"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
