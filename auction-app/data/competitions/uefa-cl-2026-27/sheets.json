@@ -478,6 +478,14 @@
       "gw": 4,
       "fotmob_match_id": 6106316,
       "file": "BodGlimt_Lille_FinalPoints.csv"
+    },
+    {
+      "slug": "feyenoord-inter",
+      "title": "Feyenoord vs Inter",
+      "subtitle": "UEFA Champions League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 6106306,
+      "file": "Feyenoord_Inter_FinalPoints.csv"
     }
   ]
 }

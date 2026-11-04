@@ -1,0 +1,41 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+894803,Djed Spence,8636,Internazionale,2,midfielder,35.566,1.9,3.0,40.466,90.0,3,0,11.0,51.466
+541820,Nicolò Barella,8636,Internazionale,2,midfielder,28.782,3.0,2.6,34.382,78.0,3,0,11.0,45.382
+521318,Manuel Akanji,8636,Internazionale,1,defender,28.175000000000004,3.0,2.8333333333333335,34.00833333333334,85.0,3,0,10.0,44.00833333333334
+940829,Carlos Augusto,8636,Internazionale,1,defender,27.764999999999997,3.0,3.0,33.765,90.0,3,0,10.0,43.765
+362212,Piotr Zieliński,8636,Internazionale,2,midfielder,25.638,1.9,2.6,30.138,78.0,3,0,11.0,41.138000000000005
+889535,Yann Aurel Bisseck,8636,Internazionale,1,defender,20.34,1.8,3.0,25.14,90.0,3,0,10.0,35.14
+1576876,Anis Hadj Moussa,10235,Feyenoord,3,forward,27.069999999999997,5.0,3.0,35.06999999999999,90.0,0,3,0.0,35.06999999999999
+304733,Hakan Çalhanoglu,8636,Internazionale,2,midfielder,20.086000000000002,1.9,1.9,23.886,57.0,3,0,11.0,34.885999999999996
+1256180,Luciano Valente,10235,Feyenoord,3,forward,26.02,5.0,3.0,34.019999999999996,90.0,0,3,0.0,34.019999999999996
+1367618,Francesco Pio Esposito,8636,Internazionale,3,forward,16.85,5.0,3.0,24.85,90.0,3,0,9.0,33.85
+621562,Marcus Thuram,8636,Internazionale,3,forward,17.74,4.1,1.9,23.739999999999995,57.0,3,0,9.0,32.739999999999995
+1228273,Oussama Targhalline,10235,Feyenoord,2,midfielder,24.732,-0.30000000000000027,3.0,27.432,90.0,0,3,-1.0,26.432
+1225450,Mika Mármol,10235,Feyenoord,1,defender,24.075,3.0,3.0,30.075,90.0,0,3,-5.0,25.075
+1523822,Gjivai Zechiël,10235,Feyenoord,2,midfielder,19.503999999999998,3.0,3.0,25.503999999999998,90.0,0,3,-1.0,24.503999999999998
+1351133,Givairo Read,10235,Feyenoord,1,defender,22.789999999999996,3.0,2.0666666666666664,27.856666666666662,62.0,0,3,-5.0,22.856666666666662
+605224,Federico Dimarco,8636,Internazionale,2,midfielder,5.264000000000001,3.0,3.0,11.264000000000001,90.0,3,0,11.0,22.264000000000003
+1553376,Thijs Kraaijeveld,10235,Feyenoord,1,defender,18.404999999999998,3.0,2.6,24.005,78.0,0,3,-5.0,19.005
+73167,Henrikh Mkhitaryan,8636,Internazionale,2,midfielder,11.299999999999999,3.0,1.1,15.399999999999999,33.0,0,0,2.5,17.9
+1199383,Ange-Yoan Bonny,8636,Internazionale,3,forward,13.21,3.2,1.1,17.51,33.0,0,0,0.0,17.51
+1159181,Javi López,10235,Feyenoord,1,defender,18.08,1.8,2.0666666666666664,21.946666666666665,62.0,0,3,-5.0,16.946666666666665
+1023887,Tsuyoshi Watanabe,10235,Feyenoord,1,defender,5.265000000000001,3.0,0.9333333333333333,9.198333333333334,28.0,0,0,5.0,14.198333333333334
+611223,Benjamin Pavard,8636,Internazionale,1,defender,5.45,3.0,0.16666666666666666,8.616666666666665,5.0,0,0,5.0,13.616666666666665
+1382019,Nacho Ferri,10235,Feyenoord,3,forward,8.25,3.2,2.0666666666666664,13.516666666666666,62.0,0,3,0.0,13.516666666666666
+1876640,Jerayno Schaken,10235,Feyenoord,3,forward,5.890000000000001,5.0,0.9333333333333333,11.823333333333334,28.0,0,0,0.0,11.823333333333334
+952057,Charles Vanhoutte,10235,Feyenoord,2,midfielder,6.872,1.9,1.5,10.272,46.0,0,2,1.0,11.272
+1382000,Petar Sučić,8636,Internazionale,2,midfielder,4.17,3.0,0.4,7.57,12.0,0,0,2.5,10.07
+1410437,Aleksandar Stanković,8636,Internazionale,2,midfielder,3.8459999999999996,3.0,0.4,7.246,12.0,0,0,2.5,9.746
+630494,Mats Deijl,10235,Feyenoord,1,defender,1.1500000000000001,3.0,0.4,4.550000000000001,12.0,0,0,5.0,9.55
+1692856,Tobias van den Elshout,10235,Feyenoord,3,forward,0.6100000000000001,5.0,1.5,7.11,44.0,0,1,0.0,7.11
+947898,Sem Steijn,10235,Feyenoord,2,midfielder,-0.23799999999999993,3.0,0.9333333333333333,3.695333333333333,28.0,0,0,2.5,6.195333333333333
+1413923,Francesco Stante,8636,Internazionale,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1830575,Leonardo Bovio,8636,Internazionale,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+2356991,Dani Slory,10235,Feyenoord,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1254297,Andy Diouf,8636,Internazionale,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+748382,Reiss Nelson,10235,Feyenoord,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1080520,Gonçalo Borges,10235,Feyenoord,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1553365,Shaqueel van Persie,10235,Feyenoord,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1646520,Mattia Mosconi,8636,Internazionale,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1675966,Gaoussou Diarra,10235,Feyenoord,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1682320,Matteo Lavelli,8636,Internazionale,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

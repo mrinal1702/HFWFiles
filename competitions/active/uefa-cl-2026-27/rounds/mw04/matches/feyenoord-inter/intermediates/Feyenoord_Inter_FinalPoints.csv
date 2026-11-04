@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Djed Spence,894803,Internazionale,midfielder,40.466,11.0,0.0,51
+Nicolò Barella,541820,Internazionale,midfielder,34.382,11.0,0.0,45
+Manuel Akanji,521318,Internazionale,defender,34.00833333333334,10.0,0.0,44
+Carlos Augusto,940829,Internazionale,defender,33.765,10.0,0.0,44
+Piotr Zieliński,362212,Internazionale,midfielder,30.138,11.0,0.0,41
+Yann Aurel Bisseck,889535,Internazionale,defender,25.14,10.0,0.0,35
+Anis Hadj Moussa,1576876,Feyenoord,forward,35.06999999999999,0.0,0.0,35
+Hakan Çalhanoglu,304733,Internazionale,midfielder,23.886,11.0,0.0,35
+Luciano Valente,1256180,Feyenoord,forward,34.02,0.0,0.0,34
+Francesco Pio Esposito,1367618,Internazionale,forward,24.85,9.0,0.0,34
+Marcus Thuram,621562,Internazionale,forward,23.739999999999995,9.0,0.0,33
+Oussama Targhalline,1228273,Feyenoord,midfielder,27.432,-1.0,0.0,26
+Mika Mármol,1225450,Feyenoord,defender,30.075,-5.0,0.0,25
+Gjivai Zechiël,1523822,Feyenoord,midfielder,25.504,-1.0,0.0,25
+Givairo Read,1351133,Feyenoord,defender,27.856666666666666,-5.0,0.0,23
+Federico Dimarco,605224,Internazionale,midfielder,11.264,11.0,0.0,22
+Thijs Kraaijeveld,1553376,Feyenoord,defender,24.005,-5.0,0.0,19
+Henrikh Mkhitaryan,73167,Internazionale,midfielder,15.4,2.5,0.0,18
+Ange-Yoan Bonny,1199383,Internazionale,forward,17.51,0.0,0.0,18
+Javi López,1159181,Feyenoord,defender,21.946666666666665,-5.0,0.0,17
+Tsuyoshi Watanabe,1023887,Feyenoord,defender,9.198333333333334,5.0,0.0,14
+Benjamin Pavard,611223,Internazionale,defender,8.616666666666665,5.0,0.0,14
+Nacho Ferri,1382019,Feyenoord,forward,13.516666666666666,0.0,0.0,14
+Jerayno Schaken,1876640,Feyenoord,forward,11.823333333333334,0.0,0.0,12
+Charles Vanhoutte,952057,Feyenoord,midfielder,10.272,1.0,0.0,11
+Petar Sučić,1382000,Internazionale,midfielder,7.57,2.5,0.0,10
+Aleksandar Stanković,1410437,Internazionale,midfielder,7.246,2.5,0.0,10
+Mats Deijl,630494,Feyenoord,defender,4.550000000000001,5.0,0.0,10
+Tobias van den Elshout,1692856,Feyenoord,forward,7.11,0.0,0.0,7
+Sem Steijn,947898,Feyenoord,midfielder,3.695333333333333,2.5,0.0,6
+Francesco Stante,1413923,Internazionale,defender,0.0,0.0,0.0,0
+Leonardo Bovio,1830575,Internazionale,defender,0.0,0.0,0.0,0
+Dani Slory,2356991,Feyenoord,defender,0.0,0.0,0.0,0
+Andy Diouf,1254297,Internazionale,midfielder,0.0,0.0,0.0,0
+Reiss Nelson,748382,Feyenoord,forward,0.0,0.0,0.0,0
+Gonçalo Borges,1080520,Feyenoord,forward,0.0,0.0,0.0,0
+Shaqueel van Persie,1553365,Feyenoord,forward,0.0,0.0,0.0,0
+Mattia Mosconi,1646520,Internazionale,forward,0.0,0.0,0.0,0
+Gaoussou Diarra,1675966,Feyenoord,forward,0.0,0.0,0.0,0
+Matteo Lavelli,1682320,Internazionale,forward,0.0,0.0,0.0,0
+Internazionale Keepers,8636,Internazionale,goalkeeper,23.4,18.0,0.0,41
+Feyenoord Keepers,10235,Feyenoord,goalkeeper,18.36,0.0,0.0,18

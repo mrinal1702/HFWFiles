@@ -53,6 +53,13 @@
       "home_team": "Bodø/Glimt",
       "away_team": "Lille",
       "status": "scored"
+    },
+    {
+      "match_slug": "feyenoord-inter",
+      "fotmob_match_id": 6106306,
+      "home_team": "Feyenoord",
+      "away_team": "Inter",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
