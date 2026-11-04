@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw04",
+  "match_slug": "barcelona-aston-villa",
+  "fotmob_match_id": 6106263,
+  "source_url": "https://www.fotmob.com/en-GB/matches/barcelona-vs-aston-villa/2y6ucv#6106263:tab=stats",
+  "home_team": "Barcelona",
+  "away_team": "Aston Villa",
+  "raw_json_path": "intermediates/Barcelona_Vs_AstonVilla.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

@@ -1,0 +1,42 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Raphinha,696679,Barcelona,forward,41.693333333333335,9.0,0.0,51
+João Cancelo,361757,Barcelona,defender,40.095,10.0,0.0,50
+Lamine Yamal,1467236,Barcelona,midfielder,36.488,11.0,0.0,47
+Anthony Gordon,906937,Barcelona,midfielder,35.14,11.0,0.0,46
+Gerard Martín,1598982,Barcelona,defender,34.760000000000005,10.0,0.0,45
+Fermín López,1404415,Barcelona,midfielder,33.24933333333333,11.0,0.0,44
+Pau Cubarsí,1532137,Barcelona,defender,27.58,10.0,0.0,38
+Boubacar Kamara,816325,Aston Villa,midfielder,30.396,-1.0,0.0,29
+Brian Fariñas,1821727,Barcelona,defender,19.078333333333337,10.0,0.0,29
+Pedri,1083323,Barcelona,midfielder,15.404,11.0,0.0,26
+Emiliano Buendía,610184,Aston Villa,midfielder,23.520666666666667,1.0,0.0,25
+Gabriel Jesus,576165,Barcelona,forward,24.276666666666667,0.0,0.0,24
+Rodri,675088,Barcelona,midfielder,14.612,7.0,0.0,22
+Ibrahim Mbaye,1593857,Aston Villa,forward,19.133333333333333,0.0,0.0,19
+Ian Maatsen,966026,Aston Villa,defender,21.965,-5.0,0.0,17
+Marc Bernal,1573126,Barcelona,midfielder,10.19,6.5,0.0,17
+Nicolas Jackson,1197347,Aston Villa,forward,15.566666666666666,0.0,0.0,16
+Pau Torres,792645,Aston Villa,defender,20.055,-5.0,0.0,15
+João Gomes,1174672,Aston Villa,midfielder,13.202666666666666,1.0,0.0,14
+Victor Nilsson Lindelöf,258269,Aston Villa,defender,19.135,-5.0,0.0,14
+Johan Manzambi,1520063,Aston Villa,midfielder,12.530666666666663,1.0,0.0,14
+Gavi,1279040,Barcelona,midfielder,10.774666666666668,2.5,0.0,13
+Leon Goretzka,343748,Aston Villa,midfielder,11.281333333333334,0.5,0.0,12
+Alysson Edward,1656860,Aston Villa,forward,11.753333333333334,0.0,0.0,12
+Alejandro Balde,1254166,Barcelona,defender,6.471666666666667,5.0,0.0,11
+Frenkie de Jong,638622,Barcelona,midfielder,7.782,2.5,0.0,10
+Matty Cash,729731,Aston Villa,defender,14.705,-5.0,0.0,10
+Tammy Abraham,749661,Aston Villa,forward,6.3133333333333335,0.0,0.0,6
+John McGinn,356406,Aston Villa,midfielder,5.868666666666666,-1.0,0.0,5
+Ross Barkley,215384,Aston Villa,midfielder,4.003333333333334,0.5,0.0,5
+Tyrone Mings,419664,Aston Villa,defender,0.0,0.0,0.0,0
+Taylor Harwood-Bellis,966021,Aston Villa,defender,0.0,0.0,0.0,0
+Álex Campos,1820574,Barcelona,defender,0.0,0.0,0.0,0
+Guillem Víctor,1830291,Barcelona,defender,0.0,0.0,0.0,0
+George Hemmings,1607333,Aston Villa,midfielder,0.0,0.0,0.0,0
+Orian Goren,1834445,Barcelona,midfielder,0.0,0.0,0.0,0
+Karim Adeyemi,959594,Barcelona,forward,0.0,0.0,0.0,0
+Alejandro Garnacho,1203665,Aston Villa,forward,0.0,0.0,0.0,0
+Hamza Abdelkarim,1708842,Barcelona,forward,0.0,0.0,0.0,0
+Barcelona Keepers,8634,Barcelona,goalkeeper,13.54,18.0,0.0,32
+Aston Villa Keepers,10252,Aston Villa,goalkeeper,27.32,0.0,0.0,27

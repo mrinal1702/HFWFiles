@@ -1,0 +1,15 @@
+{
+  "match_id": 6106263,
+  "home_team": "Barcelona",
+  "away_team": "Aston Villa",
+  "source_url": "https://www.fotmob.com/en-GB/matches/barcelona-vs-aston-villa/2y6ucv#6106263:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw04/matches/barcelona-aston-villa/intermediates/Barcelona_Vs_AstonVilla.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/barcelona-vs-aston-villa/2y6ucv",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/barcelona-vs-aston-villa/2y6ucv#6106263:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/barcelona-vs-aston-villa/2y6ucv#6106263:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/barcelona-vs-aston-villa/2y6ucv#6106263:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106263"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
