@@ -1,0 +1,39 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Désiré Doué,1339208,Paris Saint-Germain,forward,61.75666666666668,15.0,0.0,77
+João Neves,1342757,Paris Saint-Germain,midfielder,57.488,17.0,0.0,74
+Fabián Ruiz,605654,Paris Saint-Germain,midfielder,55.286,17.0,0.0,72
+Maghnes Akliouche,1305618,Paris Saint-Germain,forward,40.21,15.0,0.0,55
+Vítinha,1061249,Paris Saint-Germain,midfielder,39.07866666666668,15.0,0.0,54
+Senny Mayulu,1574189,Paris Saint-Germain,forward,30.05,15.0,0.0,45
+Achraf Hakimi,770881,Paris Saint-Germain,defender,30.01166666666668,10.0,0.0,40
+Lucas Hernández,504606,Paris Saint-Germain,defender,23.81,10.0,0.0,34
+Ilya Zabarnyi,1140003,Paris Saint-Germain,defender,19.36,10.0,0.0,29
+Willian Pacho,1137670,Paris Saint-Germain,defender,19.195,10.0,0.0,29
+Sergi Cardona,1059657,Villarreal,defender,32.14,-5.0,0.0,27
+Tajon Buchanan,1026135,Villarreal,midfielder,28.95,-7.0,0.0,22
+David Boly,1830689,Paris Saint-Germain,defender,16.903333333333336,5.0,0.0,22
+Ayoze Pérez,479020,Villarreal,forward,13.98,0.0,0.0,14
+Georges Mikautadze,1117069,Villarreal,forward,11.34,0.0,0.0,11
+Lucas Beraldo,1255209,Paris Saint-Germain,midfielder,6.741333333333333,4.5,0.0,11
+Pape Gueye,844544,Villarreal,midfielder,17.356,-7.0,0.0,10
+Ferrán Torres,881771,Paris Saint-Germain,forward,7.06,3.0,0.0,10
+Nicolas Pépé,575735,Villarreal,forward,10.0,0.0,0.0,10
+Mika Godts,1396372,Paris Saint-Germain,forward,6.67,3.0,0.0,10
+Tani Oluwaseyi,1338740,Villarreal,forward,8.82,0.0,0.0,9
+Pau Navarro,1531887,Villarreal,defender,3.606666666666667,5.0,0.0,9
+Quentin Ndjantou,1699549,Paris Saint-Germain,forward,5.563333333333333,3.0,0.0,9
+Alberto Moleiro,1184694,Villarreal,midfielder,5.918,0.5,0.0,6
+Alex Freeman,1338696,Villarreal,defender,25.53333333333333,-20.0,0.0,6
+Carlos Maciá,1841906,Villarreal,midfielder,12.175999999999998,-7.0,0.0,5
+Santi Comesaña,671865,Villarreal,midfielder,8.863999999999999,-5.0,0.0,4
+Santiago Mouriño,1407468,Villarreal,defender,23.015,-20.0,0.0,3
+Renato Veiga,1343750,Villarreal,defender,22.195,-20.0,0.0,2
+Carlos Romero,1395964,Villarreal,defender,8.34,-15.0,0.0,0
+Lucas Digne,210111,Paris Saint-Germain,defender,0.0,0.0,0.0,0
+Logan Costa,922877,Villarreal,defender,0.0,0.0,0.0,0
+Warren Zaïre-Emery,1367615,Paris Saint-Germain,midfielder,0.0,0.0,0.0,0
+Dro Fernández,1682313,Paris Saint-Germain,midfielder,0.0,0.0,0.0,0
+Nizar El Jmili,1897470,Villarreal,midfielder,0.0,0.0,0.0,0
+Joselillo Gaitán,1834473,Villarreal,forward,0.0,0.0,0.0,0
+Paris Saint-Germain Keepers,9847,Paris Saint-Germain,goalkeeper,20.92,18.0,0.0,39
+Villarreal Keepers,10205,Villarreal,goalkeeper,26.66,-18.0,0.0,9
