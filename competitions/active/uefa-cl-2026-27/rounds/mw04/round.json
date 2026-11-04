@@ -46,6 +46,13 @@
       "home_team": "Barcelona",
       "away_team": "Aston Villa",
       "status": "scored"
+    },
+    {
+      "match_slug": "bod-glimt-lille",
+      "fotmob_match_id": 6106316,
+      "home_team": "Bodø/Glimt",
+      "away_team": "Lille",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

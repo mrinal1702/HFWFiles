@@ -470,6 +470,14 @@
       "gw": 4,
       "fotmob_match_id": 6106263,
       "file": "Barcelona_AstonVilla_FinalPoints.csv"
+    },
+    {
+      "slug": "bod-glimt-lille",
+      "title": "Bodø/Glimt vs Lille",
+      "subtitle": "UEFA Champions League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 6106316,
+      "file": "BodGlimt_Lille_FinalPoints.csv"
     }
   ]
 }
