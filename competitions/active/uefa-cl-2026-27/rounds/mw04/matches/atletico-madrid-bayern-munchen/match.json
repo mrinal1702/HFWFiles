@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw04",
+  "match_slug": "atletico-madrid-bayern-munchen",
+  "fotmob_match_id": 6106266,
+  "source_url": "https://www.fotmob.com/en-GB/matches/bayern-munchen-vs-atletico-madrid/37vqh7#6106266:tab=stats",
+  "home_team": "Atlético Madrid",
+  "away_team": "Bayern München",
+  "raw_json_path": "intermediates/AtlticoMadrid_Vs_BayernMnchen.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

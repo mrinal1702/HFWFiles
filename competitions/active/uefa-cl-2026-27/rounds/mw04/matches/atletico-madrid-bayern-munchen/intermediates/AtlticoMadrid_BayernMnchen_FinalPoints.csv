@@ -1,0 +1,41 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Konrad Laimer,526827,FC Bayern München,defender,53.19166666666667,10.0,0.0,63
+Tom Bischof,1286183,FC Bayern München,midfielder,42.766000000000005,9.0,0.0,52
+Joshua Kimmich,460632,FC Bayern München,midfielder,37.454,9.0,0.0,46
+Michael Olise,1029063,FC Bayern München,midfielder,36.336,9.0,0.0,45
+Jonathan Tah,469700,FC Bayern München,defender,34.23500000000001,10.0,0.0,44
+Lennart Karl,1737700,FC Bayern München,midfielder,35.76266666666667,7.0,0.0,43
+Dayot Upamecano,658554,FC Bayern München,defender,32.745000000000005,10.0,0.0,43
+Dávid Hancko,727897,Atlético de Madrid,defender,42.13500000000001,0.0,0.0,42
+Alejandro Grimaldo,288406,Atlético de Madrid,defender,35.2,0.0,0.0,35
+Alphonso Davies,751202,FC Bayern München,midfielder,25.72333333333333,9.0,0.0,35
+Harry Kane,194165,FC Bayern München,forward,28.22,6.0,0.0,34
+Marcos Llorente,602563,Atlético de Madrid,midfielder,28.394,1.0,0.0,29
+Josip Stanišić,950824,FC Bayern München,defender,17.235,10.0,0.0,27
+Marc Pubill,1323897,Atlético de Madrid,defender,26.39,0.0,0.0,26
+Pablo Barrios,1338192,Atlético de Madrid,midfielder,23.182,1.0,0.0,24
+Nathaniel Brown,1395447,FC Bayern München,defender,16.283333333333335,5.0,0.0,21
+Alexander Sørloth,440330,Atlético de Madrid,forward,20.136666666666667,0.0,0.0,20
+Giuliano Simeone,1226147,Atlético de Madrid,midfielder,17.984,1.0,0.0,19
+Álex Baena,942372,Atlético de Madrid,midfielder,10.480666666666666,3.0,0.0,13
+Min-Jae Kim,828159,FC Bayern München,defender,6.556666666666666,5.0,0.0,12
+Rodrigo Mendoza,1419969,Atlético de Madrid,midfielder,7.998,2.5,0.0,10
+Kang-In Lee,940976,Atlético de Madrid,forward,9.693333333333332,0.0,0.0,10
+Ademola Lookman,690516,Atlético de Madrid,midfielder,8.689333333333334,0.5,0.0,9
+Koke,184533,Atlético de Madrid,midfielder,8.579333333333334,0.5,0.0,9
+Jonathan David,939569,Atlético de Madrid,forward,8.46,0.0,0.0,8
+Sacha Boey,1034808,FC Bayern München,defender,3.033333333333333,5.0,0.0,8
+Robin Le Normand,609516,Atlético de Madrid,defender,2.7266666666666666,5.0,0.0,8
+Julián Álvarez,974753,Atlético de Madrid,forward,7.02,0.0,0.0,7
+Hiroki Ito,851626,FC Bayern München,defender,0.0,0.0,0.0,0
+Dani Martínez,1531100,Atlético de Madrid,defender,0.0,0.0,0.0,0
+Romeo Hueso,1682315,Atlético de Madrid,defender,0.0,0.0,0.0,0
+Jorge Domínguez,1842329,Atlético de Madrid,defender,0.0,0.0,0.0,0
+Obed Vargas,1254394,Atlético de Madrid,midfielder,0.0,0.0,0.0,0
+Aleksandar Pavlović,1473580,FC Bayern München,midfielder,0.0,0.0,0.0,0
+Jorge Castillo,1692877,Atlético de Madrid,midfielder,0.0,0.0,0.0,0
+David Santos Daiber,1771197,FC Bayern München,midfielder,0.0,0.0,0.0,0
+Arnau Ortiz,1297989,Atlético de Madrid,forward,0.0,0.0,0.0,0
+Tim Binder,1740666,FC Bayern München,forward,0.0,0.0,0.0,0
+FC Bayern München Keepers,9823,FC Bayern München,goalkeeper,17.04,18.0,0.0,35
+Atlético de Madrid Keepers,9906,Atlético de Madrid,goalkeeper,22.86,6.0,0.0,29

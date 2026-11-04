@@ -1,0 +1,15 @@
+{
+  "match_id": 6106266,
+  "home_team": "Atlético Madrid",
+  "away_team": "Bayern München",
+  "source_url": "https://www.fotmob.com/en-GB/matches/bayern-munchen-vs-atletico-madrid/37vqh7#6106266:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw04/matches/atletico-madrid-bayern-munchen/intermediates/AtlticoMadrid_Vs_BayernMnchen.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/bayern-munchen-vs-atletico-madrid/37vqh7",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/bayern-munchen-vs-atletico-madrid/37vqh7#6106266:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/bayern-munchen-vs-atletico-madrid/37vqh7#6106266:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/bayern-munchen-vs-atletico-madrid/37vqh7#6106266:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106266"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

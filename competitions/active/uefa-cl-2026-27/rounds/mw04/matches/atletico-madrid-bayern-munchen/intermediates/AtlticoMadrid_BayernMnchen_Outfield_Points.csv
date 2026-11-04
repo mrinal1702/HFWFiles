@@ -1,0 +1,39 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+526827,Konrad Laimer,9823,FC Bayern München,1,defender,52.025,-1.7999999999999998,2.966666666666667,53.19166666666667,89.0,2,0,10.0,63.19166666666667
+1286183,Tom Bischof,9823,FC Bayern München,2,midfielder,37.86600000000001,1.9,3.0,42.766000000000005,90.0,2,0,9.0,51.766000000000005
+460632,Joshua Kimmich,9823,FC Bayern München,2,midfielder,32.554,1.9,3.0,37.454,90.0,2,0,9.0,46.454
+1029063,Michael Olise,9823,FC Bayern München,2,midfielder,31.436,1.9,3.0,36.336,90.0,2,0,9.0,45.336
+469700,Jonathan Tah,9823,FC Bayern München,1,defender,28.235000000000007,3.0,3.0,34.23500000000001,90.0,2,0,10.0,44.23500000000001
+1737700,Lennart Karl,9823,FC Bayern München,2,midfielder,30.496000000000002,3.0,2.2666666666666666,35.76266666666667,68.0,1,0,7.0,42.76266666666667
+658554,Dayot Upamecano,9823,FC Bayern München,1,defender,27.945,1.8,3.0,32.745000000000005,90.0,2,0,10.0,42.745000000000005
+727897,Dávid Hancko,9906,Atlético de Madrid,1,defender,38.53500000000001,0.6000000000000001,3.0,42.13500000000001,90.0,0,2,0.0,42.13500000000001
+288406,Alejandro Grimaldo,9906,Atlético de Madrid,1,defender,29.2,3.0,3.0,35.2,90.0,0,2,0.0,35.2
+751202,Alphonso Davies,9823,FC Bayern München,2,midfielder,20.089999999999996,3.0,2.6333333333333333,25.72333333333333,79.0,2,0,9.0,34.72333333333333
+194165,Harry Kane,9823,FC Bayern München,3,forward,22.02,3.2,3.0,28.22,90.0,2,0,6.0,34.22
+602563,Marcos Llorente,9906,Atlético de Madrid,2,midfielder,22.394,3.0,3.0,28.394,90.0,0,2,1.0,29.394
+950824,Josip Stanišić,9823,FC Bayern München,1,defender,12.434999999999999,1.8,3.0,17.235,90.0,2,0,10.0,27.235
+1323897,Marc Pubill,9906,Atlético de Madrid,1,defender,20.39,3.0,3.0,26.39,90.0,0,2,0.0,26.39
+1338192,Pablo Barrios,9906,Atlético de Madrid,2,midfielder,19.882,0.7999999999999998,2.5,23.182000000000002,75.0,0,2,1.0,24.182000000000002
+1395447,Nathaniel Brown,9823,FC Bayern München,1,defender,12.55,3.0,0.7333333333333333,16.283333333333335,22.0,1,0,5.0,21.283333333333335
+440330,Alexander Sørloth,9906,Atlético de Madrid,3,forward,14.07,4.1,1.9666666666666666,20.136666666666667,59.0,0,1,0.0,20.136666666666667
+1226147,Giuliano Simeone,9906,Atlético de Madrid,2,midfielder,13.084,1.9,3.0,17.984,90.0,0,2,1.0,18.984
+942372,Álex Baena,9906,Atlético de Madrid,2,midfielder,8.814,-0.30000000000000027,1.9666666666666666,10.480666666666666,59.0,0,1,3.0,13.480666666666666
+828159,Min-Jae Kim,9823,FC Bayern München,1,defender,3.19,3.0,0.36666666666666664,6.556666666666666,11.0,0,0,5.0,11.556666666666665
+1419969,Rodrigo Mendoza,9906,Atlético de Madrid,2,midfielder,4.498,3.0,0.5,7.998,15.0,0,0,2.5,10.498000000000001
+940976,Kang-In Lee,9906,Atlético de Madrid,3,forward,3.6599999999999993,5.0,1.0333333333333332,9.693333333333333,31.0,0,1,0.0,9.693333333333333
+690516,Ademola Lookman,9906,Atlético de Madrid,2,midfielder,5.756,1.9,1.0333333333333332,8.689333333333334,31.0,0,1,0.5,9.189333333333334
+184533,Koke,9906,Atlético de Madrid,2,midfielder,4.546000000000001,3.0,1.0333333333333332,8.579333333333334,31.0,0,1,0.5,9.079333333333334
+939569,Jonathan David,9906,Atlético de Madrid,3,forward,4.76,3.2,0.5,8.46,15.0,0,0,0.0,8.46
+1034808,Sacha Boey,9823,FC Bayern München,1,defender,0.0,3.0,0.03333333333333333,3.033333333333333,1.0,0,0,5.0,8.033333333333333
+609516,Robin Le Normand,9906,Atlético de Madrid,1,defender,-1.0399999999999998,1.8,1.9666666666666666,2.7266666666666666,59.0,0,1,5.0,7.726666666666667
+974753,Julián Álvarez,9906,Atlético de Madrid,3,forward,3.1199999999999997,1.4,2.5,7.02,75.0,0,2,0.0,7.02
+851626,Hiroki Ito,9823,FC Bayern München,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1531100,Dani Martínez,9906,Atlético de Madrid,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1682315,Romeo Hueso,9906,Atlético de Madrid,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1842329,Jorge Domínguez,9906,Atlético de Madrid,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1254394,Obed Vargas,9906,Atlético de Madrid,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1473580,Aleksandar Pavlović,9823,FC Bayern München,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1692877,Jorge Castillo,9906,Atlético de Madrid,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1771197,David Santos Daiber,9823,FC Bayern München,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1297989,Arnau Ortiz,9906,Atlético de Madrid,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1740666,Tim Binder,9823,FC Bayern München,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
