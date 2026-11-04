@@ -1,0 +1,39 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+863098,Matheus Cunha,10260,Manchester United,2,midfielder,49.22,0.7999999999999998,3.0,53.019999999999996,90.0,3,2,7.0,60.019999999999996
+422685,Bruno Fernandes,10260,Manchester United,2,midfielder,41.682,1.9,2.933333333333333,46.51533333333333,88.0,3,2,7.0,53.51533333333333
+1292810,Kobbie Mainoo,10260,Manchester United,2,midfielder,31.546,3.0,3.0,37.546,90.0,3,2,7.0,44.546
+751550,Diogo Dalot,10260,Manchester United,1,defender,33.7,1.8,3.0,38.5,90.0,3,2,0.0,38.5
+1525065,Rodrigo Mora,8686,Roma,2,midfielder,22.596,1.9,1.5,25.996,46.0,2,0,9.0,34.995999999999995
+1436260,Shea Lacey,10260,Manchester United,3,forward,22.759999999999998,5.0,0.5,28.259999999999998,15.0,2,0,6.0,34.26
+660301,Donyell Malen,8686,Roma,3,forward,19.08,5.0,2.6,26.68,78.0,2,1,6.0,32.68
+1358581,Leny Yoro,10260,Manchester United,1,defender,30.41,-1.7999999999999998,3.0,31.61,90.0,3,2,0.0,31.61
+923312,Bryan Mbeumo,10260,Manchester United,3,forward,15.069999999999999,4.1,3.0,22.169999999999998,90.0,3,2,9.0,31.169999999999998
+299799,Bryan Cristante,8686,Roma,2,midfielder,22.654,1.9,3.0,27.554,90.0,2,3,3.0,30.554
+198559,Marten de Roon,8686,Roma,2,midfielder,21.94,1.9,3.0,26.84,90.0,2,3,3.0,29.84
+958464,Leonardo Balerdi,8686,Roma,1,defender,28.464999999999996,3.0,3.0,34.464999999999996,90.0,2,3,-5.0,29.464999999999996
+1320176,Wesley,8686,Roma,2,midfielder,22.594,0.7999999999999998,3.0,26.394000000000002,90.0,2,3,3.0,29.394000000000002
+1280082,Matias Soulé,8686,Roma,2,midfielder,20.25,1.9,3.0,25.15,90.0,2,3,3.0,28.15
+671203,Mario Hermoso,8686,Roma,1,defender,14.27,3.0,2.533333333333333,19.803333333333335,76.0,2,1,5.0,24.803333333333335
+1559639,Ayden Heaven,10260,Manchester United,1,defender,17.649999999999995,3.0,2.5,23.149999999999995,75.0,1,2,0.0,23.149999999999995
+255610,Harry Maguire,10260,Manchester United,1,defender,17.14,1.8,2.933333333333333,21.873333333333335,88.0,3,2,0.0,21.873333333333335
+465960,Youri Tielemans,10260,Manchester United,2,midfielder,8.240000000000002,3.0,1.3,12.540000000000003,39.0,3,0,8.5,21.040000000000003
+1352713,Carlos Baleba,10260,Manchester United,2,midfielder,16.202,1.9,1.7,19.802,51.0,0,2,1.0,20.802
+588687,Gianluca Mancini,8686,Roma,1,defender,11.39,1.8,2.5,15.690000000000001,75.0,2,1,5.0,20.69
+1070052,Amad Diallo,10260,Manchester United,2,midfielder,11.145999999999999,1.9,2.5,15.546,75.0,1,2,3.0,18.546
+1180321,Devyne Rensch,8686,Roma,2,midfielder,5.024,3.0,0.7,8.724,21.0,2,0,6.5,15.224
+1800491,Emanuele Lulli,8686,Roma,2,midfielder,10.346,3.0,2.3,15.646,69.0,0,3,-1.0,14.646
+847983,Lisandro Martínez,10260,Manchester United,1,defender,6.0600000000000005,3.0,0.5,9.56,15.0,2,0,5.0,14.56
+750032,Mason Mount,10260,Manchester United,2,midfielder,5.49,3.0,0.06666666666666667,8.556666666666667,2.0,0,0,2.5,11.056666666666667
+769895,Matthijs de Ligt,10260,Manchester United,1,defender,2.065,3.0,0.06666666666666667,5.131666666666666,2.0,0,0,5.0,10.131666666666666
+1282008,Santiago Castro,8686,Roma,3,forward,3.24,4.1,0.4,7.74,12.0,0,2,0.0,7.74
+1451196,Niccolò Pisilli,8686,Roma,2,midfielder,6.494000000000001,3.0,1.5,10.994,44.0,0,3,-3.5,7.494
+1386006,Daniele Ghilardi,8686,Roma,1,defender,8.565000000000001,3.0,0.5,12.065000000000001,15.0,0,2,-5.0,7.065000000000001
+787242,Evan N'Dicka,8686,Roma,1,defender,0.15500000000000008,3.0,0.4666666666666667,3.621666666666667,14.0,0,2,-5.0,0.0
+726345,Nahuel Molina,8686,Roma,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+775539,Noussair Mazraoui,10260,Manchester United,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1337884,Konstantinos Koulierakis,8686,Roma,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1372921,Andrey Santos,10260,Manchester United,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1430832,Harry Amass,10260,Manchester United,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1676985,Tyler Fletcher,10260,Manchester United,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+2026491,Alessandro Di Nunzio,8686,Roma,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+950830,Joshua Zirkzee,10260,Manchester United,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

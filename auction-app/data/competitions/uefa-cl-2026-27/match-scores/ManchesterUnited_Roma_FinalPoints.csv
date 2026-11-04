@@ -1,0 +1,41 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Matheus Cunha,863098,Manchester United,midfielder,53.02,7.0,0.0,60
+Bruno Fernandes,422685,Manchester United,midfielder,46.51533333333333,7.0,0.0,54
+Kobbie Mainoo,1292810,Manchester United,midfielder,37.546,7.0,0.0,45
+Diogo Dalot,751550,Manchester United,defender,38.5,0.0,0.0,38
+Rodrigo Mora,1525065,Roma,midfielder,25.996,9.0,0.0,35
+Shea Lacey,1436260,Manchester United,forward,28.26,6.0,0.0,34
+Donyell Malen,660301,Roma,forward,26.68,6.0,0.0,33
+Leny Yoro,1358581,Manchester United,defender,31.61,0.0,0.0,32
+Bryan Mbeumo,923312,Manchester United,forward,22.17,9.0,0.0,31
+Bryan Cristante,299799,Roma,midfielder,27.554,3.0,0.0,31
+Marten de Roon,198559,Roma,midfielder,26.84,3.0,0.0,30
+Leonardo Balerdi,958464,Roma,defender,34.465,-5.0,0.0,29
+Wesley,1320176,Roma,midfielder,26.394,3.0,0.0,29
+Matias Soulé,1280082,Roma,midfielder,25.15,3.0,0.0,28
+Mario Hermoso,671203,Roma,defender,19.80333333333333,5.0,0.0,25
+Ayden Heaven,1559639,Manchester United,defender,23.149999999999995,0.0,0.0,23
+Harry Maguire,255610,Manchester United,defender,21.87333333333333,0.0,0.0,22
+Youri Tielemans,465960,Manchester United,midfielder,12.540000000000004,8.5,0.0,21
+Carlos Baleba,1352713,Manchester United,midfielder,19.802,1.0,0.0,21
+Gianluca Mancini,588687,Roma,defender,15.69,5.0,0.0,21
+Amad Diallo,1070052,Manchester United,midfielder,15.546,3.0,0.0,19
+Devyne Rensch,1180321,Roma,midfielder,8.724,6.5,0.0,15
+Emanuele Lulli,1800491,Roma,midfielder,15.646,-1.0,0.0,15
+Lisandro Martínez,847983,Manchester United,defender,9.56,5.0,0.0,15
+Mason Mount,750032,Manchester United,midfielder,8.556666666666667,2.5,0.0,11
+Matthijs de Ligt,769895,Manchester United,defender,5.131666666666666,5.0,0.0,10
+Santiago Castro,1282008,Roma,forward,7.74,0.0,0.0,8
+Niccolò Pisilli,1451196,Roma,midfielder,10.994,-3.5,0.0,7
+Daniele Ghilardi,1386006,Roma,defender,12.065,-5.0,0.0,7
+Evan N'Dicka,787242,Roma,defender,3.621666666666667,-5.0,0.0,0
+Nahuel Molina,726345,Roma,defender,0.0,0.0,0.0,0
+Noussair Mazraoui,775539,Manchester United,defender,0.0,0.0,0.0,0
+Konstantinos Koulierakis,1337884,Roma,defender,0.0,0.0,0.0,0
+Andrey Santos,1372921,Manchester United,midfielder,0.0,0.0,0.0,0
+Harry Amass,1430832,Manchester United,midfielder,0.0,0.0,0.0,0
+Tyler Fletcher,1676985,Manchester United,midfielder,0.0,0.0,0.0,0
+Alessandro Di Nunzio,2026491,Roma,midfielder,0.0,0.0,0.0,0
+Joshua Zirkzee,950830,Manchester United,forward,0.0,0.0,0.0,0
+Manchester United Keepers,10260,Manchester United,goalkeeper,9.68,6.0,0.0,16
+Roma Keepers,8686,Roma,goalkeeper,9.94,0.0,0.0,10

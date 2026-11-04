@@ -67,6 +67,13 @@
       "home_team": "LASK",
       "away_team": "Slovan Bratislava",
       "status": "scored"
+    },
+    {
+      "match_slug": "manchester-united-roma",
+      "fotmob_match_id": 6106291,
+      "home_team": "Manchester United",
+      "away_team": "Roma",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
