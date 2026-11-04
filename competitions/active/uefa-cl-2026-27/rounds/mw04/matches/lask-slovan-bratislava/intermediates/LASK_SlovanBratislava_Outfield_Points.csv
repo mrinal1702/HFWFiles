@@ -1,0 +1,40 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+426726,Sascha Horvath,9977,LASK,2,midfielder,43.968,1.9,2.7,48.568000000000005,81.0,4,0,13.0,61.568000000000005
+1029360,Kasper Jørgensen,9977,LASK,2,midfielder,40.828,3.0,3.0,46.828,90.0,4,0,13.0,59.828
+1108604,Melayro Bogarde,9977,LASK,2,midfielder,37.778,0.7999999999999998,3.0,41.577999999999996,90.0,4,0,13.0,54.577999999999996
+688449,Andrés Andrade,9977,LASK,1,defender,31.375000000000004,3.0,3.0,37.375,90.0,4,0,10.0,47.375
+1366348,Moses Usor,9977,LASK,3,forward,27.82,3.2,2.5,33.519999999999996,75.0,4,0,12.0,45.519999999999996
+1188855,Samuel Adeniran,9977,LASK,3,forward,20.310000000000002,5.0,2.1,27.410000000000004,63.0,4,0,12.0,39.410000000000004
+939430,Robert Ljubičić,9977,LASK,2,midfielder,21.500000000000004,1.9,2.1,25.500000000000004,63.0,4,0,13.0,38.5
+1437941,Alemão,9977,LASK,1,defender,20.82,3.0,3.0,26.82,90.0,4,0,10.0,36.82
+979963,Xavier Mbuyamba,9977,LASK,1,defender,20.9,3.0,2.1,26.0,63.0,4,0,10.0,36.0
+1254266,Yvan Dibango,9977,LASK,2,midfielder,10.148,1.9,3.0,15.048,90.0,4,0,13.0,28.048000000000002
+888966,César Blackman,6019,Slovan Bratislava,2,midfielder,23.153999999999996,3.0,3.0,29.153999999999996,90.0,0,4,-3.0,26.153999999999996
+949877,Samuel Kozlovský,6019,Slovan Bratislava,2,midfielder,23.035999999999998,1.9,3.0,27.935999999999996,90.0,0,4,-3.0,24.935999999999996
+922722,Svetozar Marković,6019,Slovan Bratislava,1,defender,28.435000000000002,3.0,3.0,34.435,90.0,0,4,-10.0,24.435000000000002
+858198,Saša Kalajdžić,9977,LASK,3,forward,16.240000000000002,5.0,0.9,22.14,27.0,0,0,0.0,22.14
+1513367,Sahmkou Camara,6019,Slovan Bratislava,1,defender,29.159999999999997,-1.7999999999999998,3.0,30.359999999999996,90.0,0,4,-10.0,20.359999999999996
+552700,Tigran Barseghyan,6019,Slovan Bratislava,3,forward,12.870000000000001,4.1,0.5,17.47,15.0,0,0,0.0,17.47
+264221,Kevin Wimmer,6019,Slovan Bratislava,1,defender,17.325000000000003,3.0,1.5,21.825000000000003,46.0,0,3,-5.0,16.825000000000003
+1557209,Alexej Maroš,6019,Slovan Bratislava,3,forward,12.209999999999997,2.3,2.1,16.61,63.0,0,4,0.0,16.61
+1045565,Sandro Cruz,6019,Slovan Bratislava,1,defender,11.775,3.0,1.5,16.275,44.0,0,1,0.0,16.275
+949092,Alen Mustafić,6019,Slovan Bratislava,2,midfielder,14.260000000000002,1.9,3.0,19.16,90.0,0,4,-3.0,16.16
+1383070,Daniel Elfadli,9977,LASK,1,defender,6.4,3.0,0.9,10.3,27.0,0,0,5.0,15.3
+951951,Peter Pokorný,6019,Slovan Bratislava,2,midfielder,7.41,3.0,0.5,10.91,15.0,0,0,2.5,13.41
+1449716,Nino Marcelli,6019,Slovan Bratislava,3,forward,6.5200000000000005,5.0,1.8,13.32,54.0,0,3,0.0,13.32
+338136,Andraž Šporar,6019,Slovan Bratislava,3,forward,5.039999999999999,5.0,2.5,12.54,75.0,0,4,0.0,12.54
+461357,Alessandro Schöpf,9977,LASK,2,midfielder,6.355999999999999,3.0,0.3,9.655999999999999,9.0,0,0,2.5,12.155999999999999
+1232205,Christoph Lang,9977,LASK,3,forward,7.430000000000001,4.1,0.5,12.030000000000001,15.0,0,0,0.0,12.030000000000001
+1118147,Kryštof Daněk,9977,LASK,2,midfielder,5.452,3.0,0.9,9.352,27.0,0,0,2.5,11.852
+727101,Cristian Martínez,6019,Slovan Bratislava,2,midfielder,9.86,1.9,2.5,14.26,75.0,0,4,-3.0,11.26
+2093218,Leo Hofstädter,6019,Slovan Bratislava,2,midfielder,3.716,-0.30000000000000027,0.9,4.316,27.0,0,0,2.5,6.816
+1206542,Suleiman Camara,6019,Slovan Bratislava,3,forward,-0.31,4.1,1.2,4.989999999999999,36.0,0,1,0.0,4.989999999999999
+315814,Kenan Bajrič,6019,Slovan Bratislava,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1420822,Miguel Freckleton,9977,LASK,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1699700,Róbert Tománek,6019,Slovan Bratislava,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1863042,Manoël Verhaeghe,9977,LASK,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+619687,Florian Flecker,9977,LASK,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1023982,Daiki Matsuoka,6019,Slovan Bratislava,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1201843,Artur Gajdoš,6019,Slovan Bratislava,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1239580,Rahim Ibrahim,6019,Slovan Bratislava,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1756283,Naël Kane,9977,LASK,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0

@@ -1,0 +1,42 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Sascha Horvath,426726,LASK,midfielder,48.568000000000005,13.0,0.0,62
+Kasper Jørgensen,1029360,LASK,midfielder,46.828,13.0,0.0,60
+Melayro Bogarde,1108604,LASK,midfielder,41.578,13.0,0.0,55
+Andrés Andrade,688449,LASK,defender,37.375,10.0,0.0,47
+Moses Usor,1366348,LASK,forward,33.52,12.0,0.0,46
+Samuel Adeniran,1188855,LASK,forward,27.410000000000004,12.0,0.0,39
+Robert Ljubičić,939430,LASK,midfielder,25.500000000000004,13.0,0.0,38
+Alemão,1437941,LASK,defender,26.82,10.0,0.0,37
+Xavier Mbuyamba,979963,LASK,defender,26.0,10.0,0.0,36
+Yvan Dibango,1254266,LASK,midfielder,15.048,13.0,0.0,28
+César Blackman,888966,Slovan Bratislava,midfielder,29.154,-3.0,0.0,26
+Samuel Kozlovský,949877,Slovan Bratislava,midfielder,27.936,-3.0,0.0,25
+Svetozar Marković,922722,Slovan Bratislava,defender,34.435,-10.0,0.0,24
+Saša Kalajdžić,858198,LASK,forward,22.14,0.0,0.0,22
+Sahmkou Camara,1513367,Slovan Bratislava,defender,30.36,-10.0,0.0,20
+Tigran Barseghyan,552700,Slovan Bratislava,forward,17.47,0.0,0.0,17
+Kevin Wimmer,264221,Slovan Bratislava,defender,21.825000000000003,-5.0,0.0,17
+Alexej Maroš,1557209,Slovan Bratislava,forward,16.61,0.0,0.0,17
+Sandro Cruz,1045565,Slovan Bratislava,defender,16.275,0.0,0.0,16
+Alen Mustafić,949092,Slovan Bratislava,midfielder,19.16,-3.0,0.0,16
+Daniel Elfadli,1383070,LASK,defender,10.3,5.0,0.0,15
+Peter Pokorný,951951,Slovan Bratislava,midfielder,10.91,2.5,0.0,13
+Nino Marcelli,1449716,Slovan Bratislava,forward,13.32,0.0,0.0,13
+Andraž Šporar,338136,Slovan Bratislava,forward,12.54,0.0,0.0,13
+Alessandro Schöpf,461357,LASK,midfielder,9.656,2.5,0.0,12
+Christoph Lang,1232205,LASK,forward,12.03,0.0,0.0,12
+Kryštof Daněk,1118147,LASK,midfielder,9.352,2.5,0.0,12
+Cristian Martínez,727101,Slovan Bratislava,midfielder,14.26,-3.0,0.0,11
+Leo Hofstädter,2093218,Slovan Bratislava,midfielder,4.316,2.5,0.0,7
+Suleiman Camara,1206542,Slovan Bratislava,forward,4.989999999999999,0.0,0.0,5
+Kenan Bajrič,315814,Slovan Bratislava,defender,0.0,0.0,0.0,0
+Miguel Freckleton,1420822,LASK,defender,0.0,0.0,0.0,0
+Róbert Tománek,1699700,Slovan Bratislava,defender,0.0,0.0,0.0,0
+Manoël Verhaeghe,1863042,LASK,defender,0.0,0.0,0.0,0
+Florian Flecker,619687,LASK,midfielder,0.0,0.0,0.0,0
+Daiki Matsuoka,1023982,Slovan Bratislava,midfielder,0.0,0.0,0.0,0
+Artur Gajdoš,1201843,Slovan Bratislava,midfielder,0.0,0.0,0.0,0
+Rahim Ibrahim,1239580,Slovan Bratislava,midfielder,0.0,0.0,0.0,0
+Naël Kane,1756283,LASK,forward,0.0,0.0,0.0,0
+LASK Keepers,9977,LASK,goalkeeper,27.66,18.0,0.0,46
+Slovan Bratislava Keepers,6019,Slovan Bratislava,goalkeeper,30.48,-6.0,0.0,24

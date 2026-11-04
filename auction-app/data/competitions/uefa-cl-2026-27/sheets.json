@@ -486,6 +486,14 @@
       "gw": 4,
       "fotmob_match_id": 6106306,
       "file": "Feyenoord_Inter_FinalPoints.csv"
+    },
+    {
+      "slug": "lask-slovan-bratislava",
+      "title": "LASK vs Slovan Bratislava",
+      "subtitle": "UEFA Champions League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 6106408,
+      "file": "LASK_SlovanBratislava_FinalPoints.csv"
     }
   ]
 }

@@ -60,6 +60,13 @@
       "home_team": "Feyenoord",
       "away_team": "Inter",
       "status": "scored"
+    },
+    {
+      "match_slug": "lask-slovan-bratislava",
+      "fotmob_match_id": 6106408,
+      "home_team": "LASK",
+      "away_team": "Slovan Bratislava",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
