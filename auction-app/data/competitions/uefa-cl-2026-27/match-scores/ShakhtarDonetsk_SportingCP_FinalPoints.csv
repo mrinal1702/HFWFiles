@@ -1,0 +1,45 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Eduardo Felicíssimo,1648470,Sporting Lisbon,defender,38.565000000000005,10.0,0.0,49
+Eduardo Quaresma,1156380,Sporting Lisbon,defender,35.64,10.0,0.0,46
+Gonçalo Inácio,1165710,Sporting Lisbon,defender,29.940000000000005,10.0,0.0,40
+Pedro Henrique,1259576,Shakhtar Donetsk,defender,31.31500000000001,5.0,0.0,36
+Sergi Altimira,1310480,Sporting Lisbon,midfielder,29.276,7.0,0.0,36
+Silas Andersen,1425101,Sporting Lisbon,midfielder,27.502,7.0,0.0,35
+Maxi Araújo,1031656,Sporting Lisbon,midfielder,26.87933333333333,7.0,0.0,34
+Alisson Santana,1503318,Shakhtar Donetsk,midfielder,29.40866666666666,3.0,0.0,32
+Vinícius Tobias,1314657,Shakhtar Donetsk,defender,26.5,5.0,0.0,32
+Issa Doumbia,1339345,Sporting Lisbon,midfielder,24.12933333333333,7.0,0.0,31
+Oleg Ocheretko,1192419,Shakhtar Donetsk,midfielder,27.280000000000005,3.0,0.0,30
+Yegor Nazaryna,728941,Shakhtar Donetsk,midfielder,26.561333333333334,3.0,0.0,30
+Fotis Ioannidis,899701,Sporting Lisbon,forward,26.21333333333333,3.0,0.0,29
+Marlon Gomes,1396465,Shakhtar Donetsk,midfielder,25.114666666666665,3.0,0.0,28
+Geny Catamo,1088753,Sporting Lisbon,midfielder,18.784666666666663,7.0,0.0,26
+Kauã Elias,1483508,Shakhtar Donetsk,forward,22.47,0.0,0.0,22
+Luis Suárez,792303,Sporting Lisbon,forward,18.89,3.0,0.0,22
+Mykola Matviyenko,656667,Shakhtar Donetsk,defender,16.791666666666664,5.0,0.0,22
+Valeriy Bondar,1024427,Shakhtar Donetsk,defender,14.925,5.0,0.0,20
+Gleiker Mendoza,1460572,Shakhtar Donetsk,midfielder,12.32933333333333,3.0,0.0,15
+Newerton,1516203,Shakhtar Donetsk,forward,10.626666666666663,0.0,0.0,11
+Iván Fresneda,1325998,Sporting Lisbon,defender,4.883333333333334,5.0,0.0,10
+Rodrigo Zalazar,1070776,Sporting Lisbon,forward,8.196666666666667,0.0,0.0,8
+Salvador Blopa,1712326,Sporting Lisbon,defender,3.151666666666667,5.0,0.0,8
+Isaque,1697412,Shakhtar Donetsk,midfielder,3.0286666666666666,2.5,0.0,6
+Lassina Traoré,850858,Shakhtar Donetsk,forward,5.233333333333333,0.0,0.0,5
+João Simões,1663855,Sporting Lisbon,midfielder,2.3786666666666667,2.5,0.0,5
+Oleksandr Karavaev,510843,Shakhtar Donetsk,defender,0.0,0.0,0.0,0
+Irakli Azarovi,1067263,Shakhtar Donetsk,defender,0.0,0.0,0.0,0
+Alaa Ghram,1173774,Shakhtar Donetsk,defender,0.0,0.0,0.0,0
+Ibrahima Ba,1609327,Sporting Lisbon,defender,0.0,0.0,0.0,0
+Dmytro Kryskiv,1189791,Shakhtar Donetsk,midfielder,0.0,0.0,0.0,0
+Nestory Irankunda,1327214,Sporting Lisbon,midfielder,0.0,0.0,0.0,0
+Pedro Lima,1459257,Sporting Lisbon,midfielder,0.0,0.0,0.0,0
+Luís Guilherme,1458757,Sporting Lisbon,forward,0.0,0.0,0.0,0
+Rafael Nel,1525416,Sporting Lisbon,forward,0.0,0.0,0.0,0
+Jesse Derry,1526704,Sporting Lisbon,forward,0.0,0.0,0.0,0
+Prosper Obah,1530313,Shakhtar Donetsk,forward,0.0,0.0,0.0,0
+Gabriel Carvalho,1637478,Shakhtar Donetsk,forward,0.0,0.0,0.0,0
+Flávio Gonçalves,1691190,Sporting Lisbon,forward,0.0,0.0,0.0,0
+Luca Meirelles,1694887,Shakhtar Donetsk,forward,0.0,0.0,0.0,0
+Lucas Ferreira,1699018,Shakhtar Donetsk,forward,0.0,0.0,0.0,0
+Sporting Lisbon Keepers,9768,Sporting Lisbon,goalkeeper,14.18,18.0,0.0,32
+Shakhtar Donetsk Keepers,9728,Shakhtar Donetsk,goalkeeper,12.9,12.0,0.0,25

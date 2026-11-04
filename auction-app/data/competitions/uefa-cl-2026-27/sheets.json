@@ -446,6 +446,14 @@
       "gw": 4,
       "fotmob_match_id": 6106341,
       "file": "Galatasaray_VfBStuttgart_FinalPoints.csv"
+    },
+    {
+      "slug": "shakhtar-donetsk-sporting-cp",
+      "title": "Shakhtar Donetsk vs Sporting CP",
+      "subtitle": "UEFA Champions League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 6106335,
+      "file": "ShakhtarDonetsk_SportingCP_FinalPoints.csv"
     }
   ]
 }

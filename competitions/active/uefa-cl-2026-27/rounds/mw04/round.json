@@ -25,6 +25,13 @@
       "home_team": "Galatasaray",
       "away_team": "VfB Stuttgart",
       "status": "scored"
+    },
+    {
+      "match_slug": "shakhtar-donetsk-sporting-cp",
+      "fotmob_match_id": 6106335,
+      "home_team": "Shakhtar Donetsk",
+      "away_team": "Sporting CP",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
