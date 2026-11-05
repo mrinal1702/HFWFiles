@@ -1,0 +1,41 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Anastasios Douvikas,873270,Como,forward,66.67333333333333,18.0,0.0,85
+Nico Paz,1347574,Como,midfielder,55.34333333333333,17.0,0.0,72
+Luis Milla,638090,Como,midfielder,43.18533333333333,17.0,0.0,60
+Lucas Da Cunha,1076647,Como,midfielder,39.16333333333333,17.0,0.0,56
+Máximo Perrone,1336582,Como,midfielder,32.902,21.0,0.0,54
+Jacobo Ramón,1413963,Como,defender,48.48,5.0,0.0,53
+Mattia Liberali,1593861,Como,midfielder,46.55866666666667,6.5,0.0,53
+Maxence Caqueret,846000,Como,midfielder,22.264,21.0,0.0,43
+Martin Baturina,1215064,Como,forward,32.71666666666667,9.0,0.0,42
+Marc-Oliver Kempf,355356,Como,defender,36.65999999999999,5.0,0.0,42
+Álex Valle,1384881,Como,defender,29.73,5.0,0.0,35
+Yan Couto,1109171,Como,defender,21.585,5.0,0.0,27
+Matteo Papaccioli,1817857,Como,midfielder,15.392666666666669,6.5,0.0,22
+Samuele Ricci,941656,Como,midfielder,14.596666666666668,6.5,0.0,21
+Ruben Aguilar,561046,Lens,defender,54.400000000000006,-35.0,0.0,19
+Michaël Cuisance,861445,Lens,midfielder,24.522,-11.0,0.0,14
+Florian Thauvin,254308,Lens,midfielder,22.40533333333333,-9.0,0.0,13
+Thorgan Hazard,264190,Lens,midfielder,23.95,-11.0,0.0,13
+Amadou Haidara,688830,Lens,midfielder,21.16733333333333,-9.0,0.0,12
+Michał Skóras,954190,Lens,midfielder,12.146,-1.0,0.0,11
+Ivan Smolčić,1353289,Como,defender,5.26,5.0,0.0,10
+Franjo Ivanović,1406419,Lens,forward,9.44,0.0,0.0,9
+Mezian Mesloub Soares,1980586,Lens,midfielder,15.696000000000002,-7.5,0.0,8
+Junior Kadile,1334534,Lens,forward,7.956666666666667,0.0,0.0,8
+Andrija Bulatović,1634789,Lens,midfielder,7.138666666666667,0.5,0.0,8
+Saud Abdulhamid,1002617,Lens,midfielder,14.162,-7.5,0.0,7
+Kyllian Antonio,1685514,Lens,defender,26.785000000000004,-35.0,0.0,0
+Samson Baidoo,1276626,Lens,defender,19.275,-35.0,0.0,0
+Matthieu Udol,660326,Lens,midfielder,9.584,-11.0,0.0,0
+Jonathan Gradit,513072,Lens,defender,0.0,0.0,0.0,0
+Alberto Dossena,822789,Como,defender,0.0,0.0,0.0,0
+Jean-Clair Todibo,955214,Lens,defender,0.0,0.0,0.0,0
+Kaiki,1459564,Como,defender,0.0,0.0,0.0,0
+Nidal Čelik,1657810,Lens,defender,0.0,0.0,0.0,0
+Souleymane Sagnan,1727044,Lens,defender,0.0,0.0,0.0,0
+Federico Grilli,2424419,Como,defender,0.0,0.0,0.0,0
+Florian Sotoca,612699,Lens,midfielder,0.0,0.0,0.0,0
+Yacine Titraoui,1288907,Lens,midfielder,0.0,0.0,0.0,0
+Como Keepers,10171,Como,goalkeeper,15.96,12.0,0.0,28
+Lens Keepers,8588,Lens,goalkeeper,19.16,-36.0,0.0,0

@@ -534,6 +534,14 @@
       "gw": 4,
       "fotmob_match_id": 6106271,
       "file": "BorussiaDortmund_RealBetis_FinalPoints.csv"
+    },
+    {
+      "slug": "lens-como",
+      "title": "Lens vs Como",
+      "subtitle": "UEFA Champions League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 6106416,
+      "file": "Lens_Como_FinalPoints.csv"
     }
   ]
 }

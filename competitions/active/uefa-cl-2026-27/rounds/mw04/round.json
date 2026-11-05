@@ -102,6 +102,13 @@
       "home_team": "Borussia Dortmund",
       "away_team": "Real Betis",
       "status": "scored"
+    },
+    {
+      "match_slug": "lens-como",
+      "fotmob_match_id": 6106416,
+      "home_team": "Lens",
+      "away_team": "Como",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

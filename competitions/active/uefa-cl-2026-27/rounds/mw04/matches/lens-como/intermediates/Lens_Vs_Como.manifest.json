@@ -1,0 +1,15 @@
+{
+  "match_id": 6106416,
+  "home_team": "Lens",
+  "away_team": "Como",
+  "source_url": "https://www.fotmob.com/en-GB/matches/lens-vs-como/2wrls8#6106416:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw04/matches/lens-como/intermediates/Lens_Vs_Como.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/lens-vs-como/2wrls8",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/lens-vs-como/2wrls8#6106416:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/lens-vs-como/2wrls8#6106416:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/lens-vs-como/2wrls8#6106416:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106416"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
