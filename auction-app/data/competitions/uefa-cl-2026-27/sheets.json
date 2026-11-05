@@ -542,6 +542,14 @@
       "gw": 4,
       "fotmob_match_id": 6106416,
       "file": "Lens_Como_FinalPoints.csv"
+    },
+    {
+      "slug": "psv-eindhoven-club-brugge",
+      "title": "PSV Eindhoven vs Club Brugge",
+      "subtitle": "UEFA Champions League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 6106303,
+      "file": "PSVEindhoven_ClubBrugge_FinalPoints.csv"
     }
   ]
 }

@@ -109,6 +109,13 @@
       "home_team": "Lens",
       "away_team": "Como",
       "status": "scored"
+    },
+    {
+      "match_slug": "psv-eindhoven-club-brugge",
+      "fotmob_match_id": 6106303,
+      "home_team": "PSV Eindhoven",
+      "away_team": "Club Brugge",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
