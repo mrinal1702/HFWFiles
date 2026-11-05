@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw04",
+  "match_slug": "aek-athens-real-madrid",
+  "fotmob_match_id": 6106401,
+  "source_url": "https://www.fotmob.com/en-GB/matches/aek-athens-vs-real-madrid/2g1c0n#6106401:tab=stats",
+  "home_team": "AEK Athens",
+  "away_team": "Real Madrid",
+  "raw_json_path": "intermediates/AEKAthens_Vs_RealMadrid.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

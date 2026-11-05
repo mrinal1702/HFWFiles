@@ -510,6 +510,14 @@
       "gw": 4,
       "fotmob_match_id": 6106326,
       "file": "Villarreal_ParisSaintGermain_FinalPoints.csv"
+    },
+    {
+      "slug": "aek-athens-real-madrid",
+      "title": "AEK Athens vs Real Madrid",
+      "subtitle": "UEFA Champions League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 6106401,
+      "file": "AEKAthens_RealMadrid_FinalPoints.csv"
     }
   ]
 }

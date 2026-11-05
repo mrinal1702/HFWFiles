@@ -1,0 +1,15 @@
+{
+  "match_id": 6106401,
+  "home_team": "AEK Athens",
+  "away_team": "Real Madrid",
+  "source_url": "https://www.fotmob.com/en-GB/matches/aek-athens-vs-real-madrid/2g1c0n#6106401:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw04/matches/aek-athens-real-madrid/intermediates/AEKAthens_Vs_RealMadrid.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/aek-athens-vs-real-madrid/2g1c0n",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/aek-athens-vs-real-madrid/2g1c0n#6106401:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/aek-athens-vs-real-madrid/2g1c0n#6106401:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/aek-athens-vs-real-madrid/2g1c0n#6106401:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106401"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

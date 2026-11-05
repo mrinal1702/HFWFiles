@@ -81,6 +81,13 @@
       "home_team": "Villarreal",
       "away_team": "Paris Saint-Germain",
       "status": "scored"
+    },
+    {
+      "match_slug": "aek-athens-real-madrid",
+      "fotmob_match_id": 6106401,
+      "home_team": "AEK Athens",
+      "away_team": "Real Madrid",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

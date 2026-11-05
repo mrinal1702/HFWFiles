@@ -1,0 +1,41 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Kylian Mbappé,701154,Real Madrid,forward,41.52,9.0,0.0,51
+Eduardo Camavinga,1015185,Real Madrid,midfielder,42.80800000000001,7.0,0.0,50
+Marc Cucurella,873289,Real Madrid,defender,49.675,0.0,0.0,50
+Jude Bellingham,1077894,Real Madrid,midfielder,38.510666666666665,5.0,0.0,44
+Luka Jović,463291,AEK Athens,forward,36.29333333333333,6.0,0.0,42
+Aboubakary Koïta,725695,AEK Athens,midfielder,35.932,3.0,0.0,39
+Éder Militao,844415,Real Madrid,defender,36.49,0.0,0.0,36
+Lovro Majer,762721,AEK Athens,midfielder,29.488666666666663,5.0,0.0,34
+Federico Valverde,743533,Real Madrid,midfielder,29.562666666666665,4.5,0.0,34
+Bernardo Silva,488139,Real Madrid,midfielder,28.66133333333334,5.0,0.0,34
+Yan Diomande,1735453,Real Madrid,midfielder,25.41133333333333,5.0,0.0,30
+Kervin Arriaga,839750,AEK Athens,midfielder,27.276000000000003,3.0,0.0,30
+Denzel Dumfries,593118,Real Madrid,defender,29.1,0.0,0.0,29
+Mijat Gaćinović,448859,AEK Athens,forward,24.36,3.0,0.0,27
+Stavros Pilios,1015750,AEK Athens,defender,32.29,-5.0,0.0,27
+Zine,1106943,AEK Athens,forward,20.863333333333337,3.0,0.0,24
+Antonio Rüdiger,276738,Real Madrid,defender,23.520000000000003,0.0,0.0,24
+Lazaros Rota,949866,AEK Athens,defender,27.81,-5.0,0.0,23
+Brahim Díaz,750027,Real Madrid,forward,17.98,3.0,0.0,21
+Harold Moukoudi,637737,AEK Athens,defender,25.640000000000004,-5.0,0.0,21
+Endrick,1406729,Real Madrid,forward,14.586666666666666,6.0,0.0,21
+Barnabás Varga,796504,AEK Athens,forward,12.83,3.0,0.0,16
+Filipe Relvas,1285815,AEK Athens,defender,19.610000000000003,-5.0,0.0,15
+Vinícius Júnior,846033,Real Madrid,midfielder,9.312,5.0,0.0,14
+Alvaro Carreras,1190025,Real Madrid,defender,7.495,5.0,0.0,12
+Kaan Kairinen,547454,AEK Athens,midfielder,7.26,5.0,0.0,12
+Carlos Espí,1610744,Real Madrid,forward,5.453333333333334,3.0,0.0,8
+Răzvan Marin,574844,AEK Athens,midfielder,7.662,0.5,0.0,8
+Oleksandr Zubkov,655636,AEK Athens,forward,4.956666666666666,0.0,0.0,5
+Domagoj Vida,115180,AEK Athens,defender,0.0,0.0,0.0,0
+Charalambos Lykogiannis,395914,AEK Athens,defender,0.0,0.0,0.0,0
+Trent Alexander-Arnold,760712,Real Madrid,defender,0.0,0.0,0.0,0
+Ibrahima Konaté,820140,Real Madrid,defender,0.0,0.0,0.0,0
+Dean Huijsen,1367619,Real Madrid,defender,0.0,0.0,0.0,0
+Petros Mantalos,184639,AEK Athens,midfielder,0.0,0.0,0.0,0
+Milán Vitális,1197823,AEK Athens,midfielder,0.0,0.0,0.0,0
+Thiago Pitarch,1796908,Real Madrid,midfielder,0.0,0.0,0.0,0
+Sergio Martínez,1791769,Real Madrid,forward,0.0,0.0,0.0,0
+AEK Athens Keepers,8563,AEK Athens,goalkeeper,32.2,0.0,0.0,32
+Real Madrid Keepers,8633,Real Madrid,goalkeeper,15.580000000000002,6.0,0.0,22
