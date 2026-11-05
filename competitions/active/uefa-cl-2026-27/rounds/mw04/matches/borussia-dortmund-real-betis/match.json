@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw04",
+  "match_slug": "borussia-dortmund-real-betis",
+  "fotmob_match_id": 6106271,
+  "source_url": "https://www.fotmob.com/en-GB/matches/real-betis-vs-borussia-dortmund/2spidl#6106271:tab=stats",
+  "home_team": "Borussia Dortmund",
+  "away_team": "Real Betis",
+  "raw_json_path": "intermediates/BorussiaDortmund_Vs_RealBetis.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

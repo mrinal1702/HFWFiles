@@ -95,6 +95,13 @@
       "home_team": "Fenerbahçe",
       "away_team": "Liverpool",
       "status": "scored"
+    },
+    {
+      "match_slug": "borussia-dortmund-real-betis",
+      "fotmob_match_id": 6106271,
+      "home_team": "Borussia Dortmund",
+      "away_team": "Real Betis",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

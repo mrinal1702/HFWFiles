@@ -1,0 +1,42 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Konstantinos Karetsas,1536436,Borussia Dortmund,forward,43.41666666666666,6.0,0.0,49
+Waldemar Anton,664970,Borussia Dortmund,defender,38.88,5.0,0.0,44
+Julian Ryerson,659272,Borussia Dortmund,midfielder,33.89266666666666,7.0,0.0,41
+Nico Schlotterbeck,1002058,Borussia Dortmund,defender,33.715,5.0,0.0,39
+Fábio Silva,1050158,Borussia Dortmund,midfielder,31.384666666666668,7.0,0.0,38
+Valentín Gómez,1338016,Real Betis,defender,32.00333333333334,5.0,0.0,37
+Jobe Bellingham,1287373,Borussia Dortmund,midfielder,27.978,7.0,0.0,35
+Felix Nmecha,966019,Borussia Dortmund,midfielder,26.912,7.0,0.0,34
+Natan,1188375,Real Betis,defender,33.165,0.0,0.0,33
+Joey Veerman,792429,Borussia Dortmund,midfielder,24.582,7.0,0.0,32
+Ángel Ortiz,1580522,Real Betis,defender,31.51,0.0,0.0,32
+Daniel Svensson,1209228,Borussia Dortmund,midfielder,20.996,7.0,0.0,28
+Abdessamad Ezzalzouli,1209399,Real Betis,midfielder,20.218,3.0,0.0,23
+Isco,191315,Real Betis,midfielder,20.22133333333333,2.5,0.0,23
+Dani Ceballos,531629,Real Betis,midfielder,19.708666666666662,3.0,0.0,23
+Facundo Bernal,1436133,Real Betis,midfielder,17.934,3.0,0.0,21
+Aitor Ruibal,676533,Real Betis,defender,20.20833333333333,0.0,0.0,20
+Ramy Bensebaini,559065,Borussia Dortmund,defender,15.035,5.0,0.0,20
+Nelson Deossa,1315711,Real Betis,midfielder,15.215999999999998,3.0,0.0,18
+Diego Llorente,420568,Real Betis,defender,15.86,0.0,0.0,16
+Joane Gadou,1479742,Borussia Dortmund,defender,7.72,5.0,0.0,13
+Troy Parrott,942365,Real Betis,forward,8.290000000000001,3.0,0.0,11
+Serhou Guirassy,448540,Borussia Dortmund,forward,10.953333333333331,0.0,0.0,11
+Antony,967622,Real Betis,midfielder,4.594666666666666,3.0,0.0,8
+Fran García,750028,Real Betis,defender,7.576666666666667,0.0,0.0,8
+Marc Roca,640220,Real Betis,midfielder,4.948,2.5,0.0,7
+Maximilian Beier,1047667,Borussia Dortmund,midfielder,3.681333333333333,2.5,0.0,6
+Carney Chukwuemeka,1089685,Borussia Dortmund,midfielder,1.926,2.5,0.0,4
+José Antonio Morante,1793845,Real Betis,forward,2.94,0.0,0.0,3
+Marc Bartra,195305,Real Betis,defender,0.0,0.0,0.0,0
+Héctor Bellerín,427438,Real Betis,defender,0.0,0.0,0.0,0
+Filippo Mane,1663094,Borussia Dortmund,defender,0.0,0.0,0.0,0
+Giovani Lo Celso,604126,Real Betis,midfielder,0.0,0.0,0.0,0
+Pablo Fornals,683450,Real Betis,midfielder,0.0,0.0,0.0,0
+Ethan Nwaneri,1254234,Borussia Dortmund,midfielder,0.0,0.0,0.0,0
+Enzo Duarte,1729839,Borussia Dortmund,midfielder,0.0,0.0,0.0,0
+Samuele Inácio,1761151,Borussia Dortmund,midfielder,0.0,0.0,0.0,0
+Rodrigo Riquelme,1072200,Real Betis,forward,0.0,0.0,0.0,0
+Mathis Albert,1692797,Borussia Dortmund,forward,0.0,0.0,0.0,0
+Real Betis Keepers,8603,Real Betis,goalkeeper,22.12,6.0,0.0,28
+Borussia Dortmund Keepers,9789,Borussia Dortmund,goalkeeper,15.820000000000002,12.0,0.0,28

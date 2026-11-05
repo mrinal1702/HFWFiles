@@ -526,6 +526,14 @@
       "gw": 4,
       "fotmob_match_id": 6106330,
       "file": "Fenerbahe_Liverpool_FinalPoints.csv"
+    },
+    {
+      "slug": "borussia-dortmund-real-betis",
+      "title": "Borussia Dortmund vs Real Betis",
+      "subtitle": "UEFA Champions League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 6106271,
+      "file": "BorussiaDortmund_RealBetis_FinalPoints.csv"
     }
   ]
 }
