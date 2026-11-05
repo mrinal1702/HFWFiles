@@ -88,6 +88,13 @@
       "home_team": "AEK Athens",
       "away_team": "Real Madrid",
       "status": "scored"
+    },
+    {
+      "match_slug": "fenerbahce-liverpool",
+      "fotmob_match_id": 6106330,
+      "home_team": "Fenerbahçe",
+      "away_team": "Liverpool",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

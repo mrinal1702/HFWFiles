@@ -518,6 +518,14 @@
       "gw": 4,
       "fotmob_match_id": 6106401,
       "file": "AEKAthens_RealMadrid_FinalPoints.csv"
+    },
+    {
+      "slug": "fenerbahce-liverpool",
+      "title": "Fenerbahçe vs Liverpool",
+      "subtitle": "UEFA Champions League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 6106330,
+      "file": "Fenerbahe_Liverpool_FinalPoints.csv"
     }
   ]
 }
