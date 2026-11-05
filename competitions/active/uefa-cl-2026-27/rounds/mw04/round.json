@@ -148,6 +148,6 @@
   ],
   "squad_lock_state": "locked",
   "scoring_state": "complete",
-  "publication_state": "unpublished",
+  "publication_state": "published",
   "algorithm_version": "1.0"
 }
