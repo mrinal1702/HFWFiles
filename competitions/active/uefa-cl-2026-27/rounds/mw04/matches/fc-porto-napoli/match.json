@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw04",
+  "match_slug": "fc-porto-napoli",
+  "fotmob_match_id": 6106288,
+  "source_url": "https://www.fotmob.com/en-GB/matches/fc-porto-vs-napoli/36xjw3#6106288:tab=stats",
+  "home_team": "FC Porto",
+  "away_team": "Napoli",
+  "raw_json_path": "intermediates/FCPorto_Vs_Napoli.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

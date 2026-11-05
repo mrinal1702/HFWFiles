@@ -1,0 +1,15 @@
+{
+  "match_id": 6106288,
+  "home_team": "FC Porto",
+  "away_team": "Napoli",
+  "source_url": "https://www.fotmob.com/en-GB/matches/fc-porto-vs-napoli/36xjw3#6106288:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw04/matches/fc-porto-napoli/intermediates/FCPorto_Vs_Napoli.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/fc-porto-vs-napoli/36xjw3",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/fc-porto-vs-napoli/36xjw3#6106288:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/fc-porto-vs-napoli/36xjw3#6106288:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/fc-porto-vs-napoli/36xjw3#6106288:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106288"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

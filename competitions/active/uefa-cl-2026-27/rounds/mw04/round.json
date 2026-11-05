@@ -137,10 +137,17 @@
       "home_team": "Viking",
       "away_team": "Sabah FK",
       "status": "scored"
+    },
+    {
+      "match_slug": "fc-porto-napoli",
+      "fotmob_match_id": 6106288,
+      "home_team": "FC Porto",
+      "away_team": "Napoli",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
-  "scoring_state": "in_progress",
+  "scoring_state": "complete",
   "publication_state": "unpublished",
   "algorithm_version": "1.0"
 }

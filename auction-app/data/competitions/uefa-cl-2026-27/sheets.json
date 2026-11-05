@@ -574,6 +574,14 @@
       "gw": 4,
       "fotmob_match_id": 6106420,
       "file": "Viking_SabahFK_FinalPoints.csv"
+    },
+    {
+      "slug": "fc-porto-napoli",
+      "title": "FC Porto vs Napoli",
+      "subtitle": "UEFA Champions League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 6106288,
+      "file": "FCPorto_Napoli_FinalPoints.csv"
     }
   ]
 }

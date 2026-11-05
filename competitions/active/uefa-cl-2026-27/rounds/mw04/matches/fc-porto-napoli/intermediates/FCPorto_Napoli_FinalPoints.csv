@@ -1,0 +1,37 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Gabriel Veiga,1116734,FC Porto,midfielder,59.468,7.0,0.0,66
+Jan Bednarek,490868,FC Porto,defender,60.735000000000014,5.0,0.0,66
+Jakub Kiwior,1021834,FC Porto,defender,42.755,5.0,0.0,48
+Pablo Rosario,664226,FC Porto,midfielder,34.864000000000004,11.0,0.0,46
+Samuel Aghehowa,1414859,FC Porto,forward,31.723333333333333,9.0,0.0,41
+Victor Froholdt,1436856,FC Porto,midfielder,21.722,11.0,0.0,33
+Santiago Giménez,954092,FC Porto,forward,23.406666666666663,9.0,0.0,32
+Scott McTominay,843099,Napoli,midfielder,33.358000000000004,-1.0,0.0,32
+In-Beom Hwang,623698,FC Porto,midfielder,20.984,6.5,0.0,27
+Alberto Costa,1387439,FC Porto,defender,20.64,5.0,0.0,26
+Martim Fernandes,1404949,FC Porto,defender,16.93333333333333,5.0,0.0,22
+Matteo Politano,415539,Napoli,midfielder,20.448,1.0,0.0,21
+Rasmus Højlund,1199272,Napoli,forward,18.0,3.0,0.0,21
+Antonio Vergara,1320863,Napoli,midfielder,17.628000000000004,3.0,0.0,21
+Rafa Marín,1313884,Napoli,defender,29.69333333333333,-10.0,0.0,20
+Pepê,850356,FC Porto,forward,12.51,6.0,0.0,19
+Frank Anguissa,612863,Napoli,midfielder,15.182,3.0,0.0,18
+Amir Rrahmani,544693,Napoli,defender,27.265,-10.0,0.0,17
+Billy Gilmour,942549,Napoli,midfielder,17.832,-1.0,0.0,17
+Kevin De Bruyne,169200,Napoli,midfielder,16.618000000000002,-1.0,0.0,16
+Zaidu Sanusi,1079056,FC Porto,defender,8.781666666666666,5.0,0.0,14
+André Silva,388523,FC Porto,forward,10.076666666666668,3.0,0.0,13
+Noa Lang,837341,Napoli,forward,12.29,0.0,0.0,12
+Seko Fofana,602211,FC Porto,midfielder,5.622,6.5,0.0,12
+Borja Sainz,1083204,FC Porto,forward,6.693333333333333,3.0,0.0,10
+Sam Beukema,873573,Napoli,defender,19.615,-10.0,0.0,10
+Giovane Nascimento,1355574,Napoli,forward,8.44,0.0,0.0,8
+Lorenzo Lucca,1212630,Napoli,forward,5.43,0.0,0.0,5
+Nehuén Pérez,902383,FC Porto,defender,0.0,0.0,0.0,0
+Francisco Moura,919374,FC Porto,defender,0.0,0.0,0.0,0
+Souza,1636513,FC Porto,defender,0.0,0.0,0.0,0
+Alan Varela,1186684,FC Porto,midfielder,0.0,0.0,0.0,0
+Andrea Chiummariello,1844653,Napoli,midfielder,0.0,0.0,0.0,0
+Oskar Pietuszewski,1647807,FC Porto,forward,0.0,0.0,0.0,0
+FC Porto Keepers,9773,FC Porto,goalkeeper,27.36,12.0,0.0,39
+Napoli Keepers,9875,Napoli,goalkeeper,21.88,-6.0,0.0,16
