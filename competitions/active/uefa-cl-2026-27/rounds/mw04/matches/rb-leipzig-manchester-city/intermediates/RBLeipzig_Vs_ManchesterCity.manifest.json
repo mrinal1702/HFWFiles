@@ -1,0 +1,15 @@
+{
+  "match_id": 6106322,
+  "home_team": "RB Leipzig",
+  "away_team": "Manchester City",
+  "source_url": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-rb-leipzig/80y7706#6106322:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw04/matches/rb-leipzig-manchester-city/intermediates/RBLeipzig_Vs_ManchesterCity.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-rb-leipzig/80y7706",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-rb-leipzig/80y7706#6106322:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-rb-leipzig/80y7706#6106322:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-rb-leipzig/80y7706#6106322:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106322"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

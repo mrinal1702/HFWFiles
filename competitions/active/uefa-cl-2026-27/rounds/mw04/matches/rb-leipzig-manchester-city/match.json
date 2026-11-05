@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw04",
+  "match_slug": "rb-leipzig-manchester-city",
+  "fotmob_match_id": 6106322,
+  "source_url": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-rb-leipzig/80y7706#6106322:tab=stats",
+  "home_team": "RB Leipzig",
+  "away_team": "Manchester City",
+  "raw_json_path": "intermediates/RBLeipzig_Vs_ManchesterCity.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

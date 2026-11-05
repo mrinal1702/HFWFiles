@@ -116,6 +116,13 @@
       "home_team": "PSV Eindhoven",
       "away_team": "Club Brugge",
       "status": "scored"
+    },
+    {
+      "match_slug": "rb-leipzig-manchester-city",
+      "fotmob_match_id": 6106322,
+      "home_team": "RB Leipzig",
+      "away_team": "Manchester City",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

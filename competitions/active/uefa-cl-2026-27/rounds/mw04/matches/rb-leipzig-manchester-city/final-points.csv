@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Elliot Anderson,1089691,Manchester City,midfielder,52.62466666666666,7.0,0.0,60
+Antonio Nusa,1248482,RB Leipzig,forward,45.26333333333333,6.0,0.0,51
+David Raum,806669,RB Leipzig,defender,53.475,-5.0,0.0,48
+Erling Haaland,737066,Manchester City,forward,37.98,9.0,0.0,47
+Enzo Fernández,1137705,Manchester City,midfielder,31.548666666666666,7.0,0.0,39
+Iliman Ndiaye,965764,Manchester City,midfielder,30.420666666666666,7.0,0.0,37
+Brajan Gruda,1430151,RB Leipzig,forward,29.52,6.0,0.0,36
+Abdukodir Khusanov,1362998,Manchester City,defender,34.13000000000001,0.0,0.0,34
+Nico O'Reilly,1300526,Manchester City,defender,32.85499999999999,0.0,0.0,33
+Rayan Cherki,1104053,Manchester City,midfielder,21.734,7.0,0.0,29
+Ridle Baku,883087,RB Leipzig,defender,27.53666666666667,0.0,0.0,28
+Ezechiel Banzuzi,1310001,RB Leipzig,midfielder,22.376,3.0,0.0,25
+Neil El Aynaoui,1274060,RB Leipzig,midfielder,19.64666666666667,5.0,0.0,25
+Jérémy Doku,942368,Manchester City,forward,20.006666666666668,3.0,0.0,23
+Christopher Nkunku,704523,RB Leipzig,forward,17.28,3.0,0.0,20
+Matheus Nunes,955529,Manchester City,defender,20.08833333333333,0.0,0.0,20
+Christoph Baumgartner,747718,RB Leipzig,midfielder,14.816000000000004,5.0,0.0,20
+Marc Guéhi,844425,Manchester City,defender,17.884999999999998,0.0,0.0,18
+Rômulo,1314412,RB Leipzig,forward,11.003333333333334,6.0,0.0,17
+Mateo Kovačić,239219,Manchester City,midfielder,11.783333333333331,2.5,0.0,14
+Phil Foden,815006,Manchester City,midfielder,7.317333333333332,5.0,0.0,12
+Castello Lukeba,1253852,RB Leipzig,defender,15.985,-5.0,0.0,11
+Rúben Dias,614006,Manchester City,defender,4.191666666666666,5.0,0.0,9
+Willi Orbán,278856,RB Leipzig,defender,13.005,-5.0,0.0,8
+Tidiam Gomis,1482733,RB Leipzig,forward,6.976666666666667,0.0,0.0,7
+Ayyoub Bouaddi,1561552,Manchester City,midfielder,3.559333333333333,2.5,0.0,6
+Rocco Reitz,1174726,RB Leipzig,midfielder,4.508666666666667,0.5,0.0,5
+Allan,1721789,Manchester City,forward,4.363333333333333,0.0,0.0,4
+Benjamin Henrichs,681383,RB Leipzig,defender,4.178333333333334,0.0,0.0,4
+Nicolas Seiwald,1024672,RB Leipzig,midfielder,2.2233333333333336,0.5,0.0,3
+Lukas Klostermann,526657,RB Leipzig,defender,0.0,0.0,0.0,0
+Rayan Aït-Nouri,933845,Manchester City,defender,0.0,0.0,0.0,0
+Joško Gvardiol,1070712,Manchester City,defender,0.0,0.0,0.0,0
+Maxime Estève,1250443,RB Leipzig,defender,0.0,0.0,0.0,0
+Rico Lewis,1288450,Manchester City,defender,0.0,0.0,0.0,0
+Vitor Reis,1580952,Manchester City,defender,0.0,0.0,0.0,0
+Abdoul Koné,1643776,RB Leipzig,defender,0.0,0.0,0.0,0
+Andrija Maksimović,1482209,RB Leipzig,midfielder,0.0,0.0,0.0,0
+Floyd Samba,1726962,Manchester City,midfielder,0.0,0.0,0.0,0
+Johan Bakayoko,1203194,RB Leipzig,forward,0.0,0.0,0.0,0
+Manchester City Keepers,8456,Manchester City,goalkeeper,24.76,6.0,0.0,31
+RB Leipzig Keepers,178475,RB Leipzig,goalkeeper,17.8,0.0,0.0,18

@@ -550,6 +550,14 @@
       "gw": 4,
       "fotmob_match_id": 6106303,
       "file": "PSVEindhoven_ClubBrugge_FinalPoints.csv"
+    },
+    {
+      "slug": "rb-leipzig-manchester-city",
+      "title": "RB Leipzig vs Manchester City",
+      "subtitle": "UEFA Champions League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 6106322,
+      "file": "RBLeipzig_ManchesterCity_FinalPoints.csv"
     }
   ]
 }
