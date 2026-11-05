@@ -130,6 +130,13 @@
       "home_team": "Slavia Prague",
       "away_team": "Arsenal",
       "status": "scored"
+    },
+    {
+      "match_slug": "viking-sabah-fk",
+      "fotmob_match_id": 6106420,
+      "home_team": "Viking",
+      "away_team": "Sabah FK",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

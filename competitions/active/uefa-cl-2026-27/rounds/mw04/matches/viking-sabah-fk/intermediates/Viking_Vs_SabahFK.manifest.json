@@ -1,0 +1,15 @@
+{
+  "match_id": 6106420,
+  "home_team": "Viking",
+  "away_team": "Sabah FK",
+  "source_url": "https://www.fotmob.com/en-GB/matches/viking-vs-sabah-fk/5vupd4gz#6106420:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw04/matches/viking-sabah-fk/intermediates/Viking_Vs_SabahFK.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/viking-vs-sabah-fk/5vupd4gz",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/viking-vs-sabah-fk/5vupd4gz#6106420:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/viking-vs-sabah-fk/5vupd4gz#6106420:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/viking-vs-sabah-fk/5vupd4gz#6106420:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106420"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
