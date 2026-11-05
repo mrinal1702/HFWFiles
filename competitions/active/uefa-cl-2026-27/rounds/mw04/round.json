@@ -123,6 +123,13 @@
       "home_team": "RB Leipzig",
       "away_team": "Manchester City",
       "status": "scored"
+    },
+    {
+      "match_slug": "slavia-prague-arsenal",
+      "fotmob_match_id": 6106389,
+      "home_team": "Slavia Prague",
+      "away_team": "Arsenal",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

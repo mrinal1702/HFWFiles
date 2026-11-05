@@ -558,6 +558,14 @@
       "gw": 4,
       "fotmob_match_id": 6106322,
       "file": "RBLeipzig_ManchesterCity_FinalPoints.csv"
+    },
+    {
+      "slug": "slavia-prague-arsenal",
+      "title": "Slavia Prague vs Arsenal",
+      "subtitle": "UEFA Champions League · Matchweek 4",
+      "gw": 4,
+      "fotmob_match_id": 6106389,
+      "file": "SlaviaPrague_Arsenal_FinalPoints.csv"
     }
   ]
 }
