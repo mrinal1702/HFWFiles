@@ -9,6 +9,8 @@ import type { AuctionStatsData, StatsPlayer, StatsPos } from "@/lib/stats/auctio
 
 /** Minimum minutes (over the selected gameweeks) to appear in Points per 90. */
 const MIN_MINUTES_PER_90 = 180;
+/** Minimum minutes played while owned by the manager to appear in Worst buys. */
+const MIN_MINUTES_WORST_BUYS = 180;
 
 type Totals = { player: StatsPlayer; pts: number; min: number; apps: number };
 
@@ -62,18 +64,30 @@ export function AuctionStatsClient({ auctionId, data }: { auctionId: number; dat
       .sort((a, b) => b.p90 - a.p90 || a.player.name.localeCompare(b.player.name))
       .slice(0, 10);
 
-    // Value: only points scored in gameweeks the manager held the player at lock.
-    const value = data.stints
+    // Value: only points (and minutes) from gameweeks the manager held the player at lock.
+    const stintValues = data.stints
       .map((s) => {
         const p = byId.get(s.player);
         if (!p || s.price <= 0) return null;
         const gws = s.gws.filter((g) => sel.has(g));
         if (!gws.length) return null;
-        const pts = gws.reduce((sum, g) => sum + (p.player.gw[String(g)]?.[0] ?? 0), 0);
-        return { stint: s, player: p.player, gws: gws.length, pts, ratio: pts / s.price };
+        let pts = 0;
+        let min = 0;
+        for (const g of gws) {
+          const [gp, gm] = p.player.gw[String(g)] ?? [0, 0];
+          pts += gp;
+          min += gm;
+        }
+        return { stint: s, player: p.player, gws: gws.length, pts, min, ratio: pts / s.price };
       })
-      .filter((v): v is NonNullable<typeof v> => v !== null)
-      .sort((a, b) => b.ratio - a.ratio || b.pts - a.pts)
+      .filter((v): v is NonNullable<typeof v> => v !== null);
+
+    const value = [...stintValues].sort((a, b) => b.ratio - a.ratio || b.pts - a.pts).slice(0, 10);
+
+    // Worst buys: lowest points per 1m, only players who played enough for that manager.
+    const worst = stintValues
+      .filter((v) => v.min >= MIN_MINUTES_WORST_BUYS)
+      .sort((a, b) => a.ratio - b.ratio || b.stint.price - a.stint.price)
       .slice(0, 10);
 
     const owned = new Set(data.ownedNow);
@@ -83,6 +97,7 @@ export function AuctionStatsClient({ auctionId, data }: { auctionId: number; dat
       top: top(),
       per90,
       value,
+      worst,
       freeAgents,
       gk: top("GK", 5),
       def: top("DEF"),
@@ -126,6 +141,29 @@ export function AuctionStatsClient({ auctionId, data }: { auctionId: number; dat
           )}
           <td className="px-3 py-2 text-right tabular-nums text-slate-600">{t.apps}</td>
           <td className="px-3 py-2 text-right font-semibold tabular-nums text-slate-900">{fmt(t.pts)}</td>
+        </tr>
+      ))}
+    </StatsTable>
+  );
+
+  type StintValue = (typeof stats.value)[number];
+  const valueTable = (rows: StintValue[], extra: "gws" | "mins") => (
+    <StatsTable
+      head={["#", "Player", "Manager", "Price", extra === "gws" ? "GWs" : "Mins", "Pts", "Pts/m"]}
+      hideOnPhone={[4]}
+      empty={rows.length === 0}
+    >
+      {rows.map((v, i) => (
+        <tr key={`${v.stint.manager}-${v.stint.player}-${v.stint.price}`} className="border-t border-slate-100">
+          <td className="px-3 py-2 tabular-nums text-slate-400">{i + 1}</td>
+          <PlayerCell p={v.player} />
+          <td className="px-3 py-2 text-slate-700">{data.managers[v.stint.manager] ?? "—"}</td>
+          <td className="px-3 py-2 text-right tabular-nums text-slate-600">{fmt(v.stint.price)}</td>
+          <td className="hidden px-3 py-2 text-right tabular-nums text-slate-600 sm:table-cell">
+            {extra === "gws" ? v.gws : fmt(v.min)}
+          </td>
+          <td className="px-3 py-2 text-right tabular-nums text-slate-600">{fmt(v.pts)}</td>
+          <td className="px-3 py-2 text-right font-semibold tabular-nums text-slate-900">{fmt(v.ratio, 2)}</td>
         </tr>
       ))}
     </StatsTable>
@@ -180,19 +218,14 @@ export function AuctionStatsClient({ auctionId, data }: { auctionId: number; dat
         title="Best value signings"
         help="Points per 1m of purchase price, for players bought in this auction. Only counts the gameweeks the manager owned the player (in their squad when the gameweek locked)."
       >
-        <StatsTable head={["#", "Player", "Manager", "Price", "GWs", "Pts", "Pts/m"]} hideOnPhone={[4]} empty={stats.value.length === 0}>
-          {stats.value.map((v, i) => (
-            <tr key={`${v.stint.manager}-${v.stint.player}-${v.stint.price}`} className="border-t border-slate-100">
-              <td className="px-3 py-2 tabular-nums text-slate-400">{i + 1}</td>
-              <PlayerCell p={v.player} />
-              <td className="px-3 py-2 text-slate-700">{data.managers[v.stint.manager] ?? "—"}</td>
-              <td className="px-3 py-2 text-right tabular-nums text-slate-600">{fmt(v.stint.price)}</td>
-              <td className="hidden px-3 py-2 text-right tabular-nums text-slate-600 sm:table-cell">{v.gws}</td>
-              <td className="px-3 py-2 text-right tabular-nums text-slate-600">{fmt(v.pts)}</td>
-              <td className="px-3 py-2 text-right font-semibold tabular-nums text-slate-900">{fmt(v.ratio, 2)}</td>
-            </tr>
-          ))}
-        </StatsTable>
+        {valueTable(stats.value, "gws")}
+      </StatsCard>
+
+      <StatsCard
+        title="Worst buys"
+        help={`Lowest points per 1m of purchase price, for players bought in this auction. Only counts the gameweeks the manager owned the player, and only players who played at least ${MIN_MINUTES_WORST_BUYS} minutes for that manager.`}
+      >
+        {valueTable(stats.worst, "mins")}
       </StatsCard>
 
       <StatsCard
