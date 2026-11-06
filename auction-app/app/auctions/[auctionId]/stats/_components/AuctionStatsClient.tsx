@@ -9,8 +9,8 @@ import type { AuctionStatsData, StatsPlayer, StatsPos } from "@/lib/stats/auctio
 
 /** Minimum minutes (over the selected gameweeks) to appear in Points per 90. */
 const MIN_MINUTES_PER_90 = 180;
-/** Minimum minutes played while owned by the manager to appear in Worst buys. */
-const MIN_MINUTES_WORST_BUYS = 180;
+/** Minimum minutes played for the manager to appear in Worst value signings. */
+const MIN_MINUTES_WORST_VALUE = 45;
 
 type Totals = { player: StatsPlayer; pts: number; min: number; apps: number };
 
@@ -84,9 +84,9 @@ export function AuctionStatsClient({ auctionId, data }: { auctionId: number; dat
 
     const value = [...stintValues].sort((a, b) => b.ratio - a.ratio || b.pts - a.pts).slice(0, 10);
 
-    // Worst buys: lowest points per 1m, only players who played enough for that manager.
+    // Worst value: lowest points per 1m. Price is the original purchase price (transfers keep it).
     const worst = stintValues
-      .filter((v) => v.min >= MIN_MINUTES_WORST_BUYS)
+      .filter((v) => v.ratio > 0 && v.min >= MIN_MINUTES_WORST_VALUE)
       .sort((a, b) => a.ratio - b.ratio || b.stint.price - a.stint.price)
       .slice(0, 10);
 
@@ -222,8 +222,8 @@ export function AuctionStatsClient({ auctionId, data }: { auctionId: number; dat
       </StatsCard>
 
       <StatsCard
-        title="Worst buys"
-        help={`Lowest points per 1m of purchase price, for players bought in this auction. Only counts the gameweeks the manager owned the player, and only players who played at least ${MIN_MINUTES_WORST_BUYS} minutes for that manager.`}
+        title="Worst value signings"
+        help={`Lowest points per 1m, using the price the player was first bought for (a transfer does not change it). Only counts the gameweeks the manager owned the player, and only players with at least ${MIN_MINUTES_WORST_VALUE} minutes and some points for that manager.`}
       >
         {valueTable(stats.worst, "mins")}
       </StatsCard>

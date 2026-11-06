@@ -83,8 +83,9 @@ when a gameweek is published (`gameweek.mjs best-xi --apply`); the page never qu
 - Heading **Stats** + info icon. **Gameweeks** filter: **All** or any combination of gameweeks; applies to every table.
 - Tables: **Top points** (top 10) · **Points per 90 minutes** (min 180 minutes in the selection) ·
   **Best value signings** (points per 1m, only gameweeks the manager held the player at lock; one row
-  per manager + player + price) · **Worst buys** (lowest points per 1m, same ownership rule, only
-  stints with ≥ 180 minutes played for that manager — columns Mins instead of GWs) · **Top free agents** (not in any squad in this auction right now) ·
+  per manager + player + price) · **Worst value signings** (lowest points per 1m, same ownership rule,
+  price = original purchase price (transfers keep it); only stints with ≥ 45 minutes and more than 0
+  points for that manager — columns Mins instead of GWs) · **Top free agents** (not in any squad in this auction right now) ·
   **Top goalkeepers** (5) · **Top defenders / midfielders / forwards** (10 each).
 - Positions are **listed** positions (`competition_players`), never match positions. Players outside the
   auction pool are excluded.
