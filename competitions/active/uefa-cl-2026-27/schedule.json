@@ -37,6 +37,15 @@
       "raise_deadline_at": "2026-11-24T15:15:00+00:00",
       "hard_deadline_at": "2026-11-24T16:15:00+00:00",
       "first_kickoff_at": "2026-11-24T17:45:00+00:00"
+    },
+    {
+      "round_slug": "mw06",
+      "round_number": 6,
+      "display_name": "Matchweek 6",
+      "initiation_deadline_at": "2026-12-08T14:15:00+00:00",
+      "raise_deadline_at": "2026-12-08T15:15:00+00:00",
+      "hard_deadline_at": "2026-12-08T16:15:00+00:00",
+      "first_kickoff_at": "2026-12-08T17:45:00+00:00"
     }
   ]
 }
