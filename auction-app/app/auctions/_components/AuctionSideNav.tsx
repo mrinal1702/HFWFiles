@@ -17,6 +17,7 @@ const links = (auctionId: number) =>
     { href: `/auctions/${auctionId}/transfers`, label: "Transfer Room", match: "prefix" as const },
     { href: `/auctions/${auctionId}/match-scores`, label: "Match scores", match: "prefix" as const },
     { href: `/auctions/${auctionId}/leaderboard`, label: "Leaderboard", match: "prefix" as const },
+    { href: `/auctions/${auctionId}/stats`, label: "Stats", match: "exact" as const },
   ] as const;
 
 function isActive(pathname: string, href: string, match: "exact" | "prefix", auctionId: number) {

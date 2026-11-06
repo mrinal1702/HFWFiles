@@ -36,6 +36,7 @@ All under `app/auctions/[auctionId]/` unless noted. Shared pieces live in `app/a
 | Transfer Room | `/transfers` | `transfers/page.tsx`, `new/`, `[transferId]/respond/` | `transfers/_components/TransferCard.tsx` |
 | Match scores | `/match-scores` | `match-scores/page.tsx` | `app/scores/_components/MatchScoresTable.tsx`, `ScoresTabs.tsx` |
 | Leaderboard | `/leaderboard` | `leaderboard/page.tsx` | `leaderboard/_components/*` (StandingsTable, GwPointsView, GwSquadTable…) |
+| Stats | `/stats` | `stats/page.tsx` | `stats/_components/AuctionStatsClient.tsx`; data `lib/stats/auction-stats.ts` (precomputed files) |
 | Player detail | `/players/[playerId]` | `players/[playerId]/page.tsx` | — |
 | Landing page | `/` | `app/page.tsx` (hero, step copy in `STEPS`, Sign up / Log in card) | `app/_components/HowItWorksCarousel.tsx` (one card at a time on all screens, auto-slides every 10s, arrows on `sm+`) |
 | Dashboard (post-login) | `/dashboard` | `app/dashboard/page.tsx` | `JoinAuctionForm.tsx`, `ProfileAvatar.tsx`, `app/_components/TrophyCabinet.tsx` |

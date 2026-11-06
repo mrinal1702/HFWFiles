@@ -84,8 +84,10 @@ Refuses if fewer than `expected_match_count` matches are scored (`--allow-partia
 ## 6. Best XI + standings
 ```bash
 node scripts/gameweek.mjs best-xi --competition $C --round $R          # computes, compares with any published standings
-node scripts/gameweek.mjs best-xi --competition $C --round $R --apply  # publishes standings + formation overlays
+node scripts/gameweek.mjs best-xi --competition $C --round $R --apply  # publishes standings + formation overlays, then rebuilds Stats files
 ```
+`--apply` also runs `scripts/build-auction-stats.mjs --through $R`, which writes
+`auction-app/data/competitions/<slug>/stats/*.json` for the in-auction **Stats** page (read-only on Supabase).
 
 ## 7. Verify, then commit + push (Vercel deploys)
 ```bash
@@ -93,7 +95,7 @@ node scripts/gameweek.mjs verify --competition $C --round $R
 node scripts/gameweek.mjs status --competition $C --round $R   # any time: what's done / missing
 ```
 Commit: `round.json`, the match folders, `auction-app/data/competitions/<slug>/` (CSVs +
-`sheets.json`), `auction-app/data/best-xi/auction-*-gw<id>.json`, `auction-outputs/`.
+`sheets.json` + `stats/*.json`), `auction-app/data/best-xi/auction-*-gw<id>.json`, `auction-outputs/`.
 
 ## What participants then see (automatically, no UI work)
 | Surface | New gameweek shows up as |

@@ -16,6 +16,7 @@ Underlying scripts (called by gameweek.mjs; use directly only for repairs):
 | Lock squads | `lock-gameweek-squads.mjs --gw-id <legacy id> --auction-ids …` (flips global `Game_Weeks.Is_Active` — check first) |
 | Load scores | `upsert-player-scores-from-finalpoints.mjs <legacy gw id> <FinalPoints.csv …>` |
 | Best XI | compute in `../formation-engine/compute_auction_best_xi.py`, then `publish-best-xi-from-json.mjs` |
+| Stats page files | `build-auction-stats.mjs --competition <slug> --through <mwNN> [--dry-run]` — read-only on Supabase; writes `data/competitions/<slug>/stats/*.json` (run by `best-xi --apply`) |
 | **Verify** | `check-gameweek-surfaces.mjs [--auction-ids …]` — read-only; confirms every published GW has squads, scores, standings rows, Best XI flags, formation overlay and match sheets |
 
 ## Other operations

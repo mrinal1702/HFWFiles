@@ -20,7 +20,7 @@ If a request needs scores on an auction page, or budgets/bids on the leaderboard
 ## Side menu (`app/auctions/_components/AuctionSideNav.tsx`) — fixed order and labels
 
 1. **Bidding room** · 2. **My team** · 3. **Announcements** · 4. **Competitors – Bidding** ·
-5. **Bids held** · 6. **Transfer Room** · 7. **Match scores** · 8. **Leaderboard**
+5. **Bids held** · 6. **Transfer Room** · 7. **Match scores** · 8. **Leaderboard** · 9. **Stats**
 
 Shown in CAPITALS (styling only), and each page's main heading is capitalised to match.
 (Fixtures appears as a modal under Bidding room when configured.) New in-auction pages must be
@@ -74,6 +74,19 @@ Timer (local)** — nothing listed below the header when there are none.
   same layout as My team (`SquadByPosition`); **Bids Held by <competitor>** + info icon — **Player · Club ·
   Pos · Bid · Timer (local)** as position-tinted cards like the Bidding room (nothing listed when none).
 - **No points, gameweeks or formations here.** Those are on Leaderboard → Competitors – Points.
+
+### Stats — `/auctions/[id]/stats` (added Nov 2026, design under review)
+Its own surface: precomputed player stats, not live state and not standings. Data comes from
+`data/competitions/<slug>/stats/{players,auction-<id>}.json`, built by `scripts/build-auction-stats.mjs`
+when a gameweek is published (`gameweek.mjs best-xi --apply`); the page never queries scores
+(loader `lib/stats/auction-stats.ts`; only manager names + current owners are read live).
+- Heading **Stats** + info icon. **Gameweeks** filter: **All** or any combination of gameweeks; applies to every table.
+- Tables: **Top points** (top 10) · **Points per 90 minutes** (min 180 minutes in the selection) ·
+  **Best value signings** (points per 1m, only gameweeks the manager held the player at lock; one row
+  per manager + player + price) · **Top free agents** (not in any squad in this auction right now) ·
+  **Top goalkeepers** (5) · **Top defenders / midfielders / forwards** (10 each).
+- Positions are **listed** positions (`competition_players`), never match positions. Players outside the
+  auction pool are excluded.
 
 ### Transfer Room, Announcements
 See [TRANSFER_ROOM.md](../TRANSFER_ROOM.md) and [ANNOUNCEMENTS.md](../ANNOUNCEMENTS.md).

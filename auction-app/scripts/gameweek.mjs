@@ -441,7 +441,9 @@ async function bestXi(opts) {
   if (opts.apply) {
     ctx.round.publication_state = "published";
     writeJson(ctx.roundPath, ctx.round);
-    console.log("\n✅ Published. Commit + push: data/best-xi overlays, match-score CSVs, sheets.json, round.json, auction-outputs → Vercel deploys.");
+    // Stats page files (read-only on Supabase; writes data/competitions/<slug>/stats/*.json).
+    run("node", ["scripts/build-auction-stats.mjs", "--competition", opts.competition, "--through", opts.round]);
+    console.log("\n✅ Published. Commit + push: data/best-xi overlays, match-score CSVs, sheets.json, stats/*.json, round.json, auction-outputs → Vercel deploys.");
   } else {
     console.log("\n(DRY RUN — computed only; add --apply to publish standings + overlays)");
   }
