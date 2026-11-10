@@ -48,7 +48,7 @@ One manifest per gameweek (`round.json`) + standard commands (`scripts/gameweek.
 | [OPS_UI_SURFACES.md](./OPS_UI_SURFACES.md) | Participant UI map; mobile chrome (zoom / side menu / deadlines); what may change vs must stay stable |
 | [ui-contracts/AUCTION_PAGES.md](./ui-contracts/AUCTION_PAGES.md) | Frozen **current-state** pages (bidding room, My team, Bids held, Competitors – Bidding) — no scoring here |
 | [ui-contracts/LEADERBOARD.md](./ui-contracts/LEADERBOARD.md) | Frozen **scoring** surface (Standings / My Points / Competitors – Points) — do not improvise UI |
-| [OPS_OTHER_MODULES.md](./OPS_OTHER_MODULES.md) | Transfers, announcements, acting-as, archives/history, live auction |
+| [OPS_OTHER_MODULES.md](./OPS_OTHER_MODULES.md) | Transfers, announcements, seat resolution, archives/history, live auction |
 | [UI_MAP.md](./UI_MAP.md) | UI work entry point: route → file map, theme / colour files, local preview |
 
 ### Also useful (existing)

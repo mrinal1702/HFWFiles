@@ -62,7 +62,7 @@ Message constant: `RELEGATION_ACTION_MESSAGE` in `lib/relegated-participants.ts`
 
 - Auction layout shows a clear **relegated / view-only** state.
 - Standings keep relegated managers listed (`isRelegated` on `StandingEntry`).
-- Prefer **Acting as → View only** patterns for commissioners observing; relegation is a permanent seat state for that auction.
+- Commissioners observe without a seat via spectator (view-only) access; relegation is a permanent seat state for that auction.
 
 ---
 

@@ -30,15 +30,12 @@ Peer-to-peer player swaps with cash.
 
 ---
 
-## 3) Acting-as / multi-seat
+## 3) Who is acting (seat resolution)
 
-Managers may have multiple `auction_users` rows (rare) or commissioners need to inspect seats.
-
-- UI: `ActingAsPicker.tsx`
-- Cookie: `lib/auction-actor-cookie.ts`
-- Resolution in `loadAuctionDashboard`
-
-**Standard:** keep view-only mode for safe browsing.
+Every in-auction action acts as the **signed-in user's own seat** (`auction_users.user_id`).
+There is no "acting as" picker and no fallback to another manager (removed Nov 2026, Project
+Socialize V-6): a visitor without a login or without a seat is view-only and cannot bid,
+release or transfer. Resolution lives in `loadAuctionDashboard` and in each server action.
 
 ---
 

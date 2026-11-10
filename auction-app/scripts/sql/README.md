@@ -54,6 +54,7 @@ This index maps **every object that exists in the live database** to the **one f
 | `competitions`, `competition_rounds`, `competition_matches`, `competition_players` | `competition-isolation-migrate-all.sql` | |
 | `player_scores` (view) | `player-scores.sql` | lowercase alias of `"Player_Scores"` — exposes `"Score"` as `score` |
 | `player_scores_scoped` (view) | `competition-isolation-migrate-all.sql` | `"Player_Scores"` joined to competition/round/match |
+| `auction_spectators` | `auction-visibility.sql` | view-only grants on private auctions; read only via `lib/auction-access.ts` |
 | `profiles` | `auth-and-join.sql` | `avatar_url` col + storage policies in `profile-avatars.sql` |
 | `live_auctions`, `live_auction_participants`, `live_auction_players`, `live_auction_sales` | `live-auction-schema.sql` | |
 | `live_auction_admin_grants` (+ `join_code`/`admin_code`/`max_participants`) | `live-auction-dashboard-codes.sql` | |
@@ -71,6 +72,7 @@ This index maps **every object that exists in the live database** to the **one f
 | `"Auctions".join_code`, `.max_participants` | `auth-and-join.sql` |
 | `"Auctions".admin_user_id` (+ non-unique admin lookup index) | `auction-admin-column.sql` |
 | `"Auctions".status` (`setup`/`bidding`), `.start_round_id`, `.created_by`, `.created_at`, `.bidding_started_at`; unique name index `idx_auctions_name_key`; `Auctions_id_seq` re-synced | `self-serve-auctions.sql` |
+| `"Auctions".visibility` (`private` default / `public`) | `auction-visibility.sql` — read only via `lib/auction-access.ts` |
 | `auction_users.paid_release_used` | `auction-releases.sql` |
 | `auction_users.team_name` | `auction-team-names.sql` |
 | `auction_users.is_relegated`, `.relegated_at` | `participant-relegation-schema.sql` |
@@ -92,6 +94,14 @@ This index maps **every object that exists in the live database** to the **one f
 `profiles`; score views `security_invoker`; EXECUTE on public functions for `service_role` only.
 The app reaches these only via the service-role key. Undo: [`security-lockdown-rollback.sql`](./security-lockdown-rollback.sql).
 New tables must `enable row level security` too.
+
+[`default-table-grants-service-role-only.sql`](./default-table-grants-service-role-only.sql) — new tables
+created by `postgres` in `public` are granted to `service_role` only (Supabase stopped auto-granting on
+2026-10-30). A new table the browser reads directly needs an explicit `grant … to anon, authenticated`.
+
+**Who may open an auction** is decided in one place, `lib/auction-access.ts` (`getAuctionAccess` /
+`canViewAuction`): seat → participant; `admin_user_id` → admin (view only); `auction_spectators` row or
+`visibility = 'public'` → spectator (view only). Schema: [`auction-visibility.sql`](./auction-visibility.sql).
 
 ---
 

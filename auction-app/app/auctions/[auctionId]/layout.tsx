@@ -8,9 +8,9 @@ import { NationRollingDeadlinesButton } from "@/app/auctions/_components/NationR
 import { ParticipantLobby } from "@/app/auctions/_components/ParticipantLobby";
 import { RefreshButton } from "@/app/auctions/_components/RefreshButton";
 import { getAuthUser } from "@/lib/auth/get-user";
+import { getAuctionAccess } from "@/lib/auction-access";
 import { loadAuctionLobby } from "@/lib/auction-lobby";
 import { loadAuctionDashboard } from "@/lib/auction-state/auction-dashboard";
-import { isAuctionSpectator } from "@/lib/auction-spectators";
 import { loadNationDeadlinesForAuction } from "@/lib/auction-state/nation-deadlines-data";
 
 export const dynamic = "force-dynamic";
@@ -42,14 +42,17 @@ export default async function AuctionLayout({
     return <ParticipantLobby lobby={lobby} viewerUserId={user.id} />;
   }
 
+  // One gate (lib/auction-access.ts): participants act; admin / spectators view only.
+  const access = await getAuctionAccess(auctionId, user.id);
+  if (access.kind === "none") {
+    redirect("/dashboard?error=not_member");
+  }
+
   const d = await loadAuctionDashboard(auctionId, user.id);
   if (!d.auction) {
     notFound();
   }
-  const spectator = !d.me && isAuctionSpectator(auctionId, user.id);
-  if (!d.me && !spectator) {
-    redirect("/dashboard?error=not_member");
-  }
+  const spectator = !d.me;
 
   const nationDeadlines = d.nationRollingMode
     ? await loadNationDeadlinesForAuction(auctionId)

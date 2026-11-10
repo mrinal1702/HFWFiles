@@ -1,11 +1,5 @@
 import { cache } from "react";
-import { cookies } from "next/headers";
 
-import {
-  AUCTION_ACTOR_COOKIE,
-  parseActorCookie,
-  resolveActorFromIds,
-} from "@/lib/auction-actor-cookie";
 import { isArchivedCompetition, loadArchivedCompetitionIds } from "@/lib/archived-auctions";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { isGoalkeeperPosition } from "@/lib/auction-state/bid-ui-messages";
@@ -102,8 +96,6 @@ export function toBidGateContext(d: AuctionDashboard): BidGateContext {
 export const loadAuctionDashboard = cache(
   async (auctionId: number, authUserId: string | null): Promise<AuctionDashboard> => {
   const admin = createAdminClient();
-  const cookieStore = await cookies();
-  const actorMap = parseActorCookie(cookieStore.get(AUCTION_ACTOR_COOKIE)?.value);
 
   const [auctionRes, usersRes, lotsRes] = await Promise.all([
     admin
@@ -229,31 +221,12 @@ export const loadAuctionDashboard = cache(
 
   const userById = new Map(users.map((u) => [u.id, u]));
 
-  let actorUserId: number | null = null;
-  let viewerMode = false;
-  let me: AuctionUserRow | null = null;
-
-  if (authUserId) {
-    const memberRow = users.find((u) => u.user_id === authUserId) ?? null;
-    if (memberRow) {
-      me = memberRow;
-      actorUserId = memberRow.id;
-      viewerMode = false;
-    } else {
-      me = null;
-      actorUserId = null;
-      viewerMode = true;
-    }
-  } else {
-    const resolved = resolveActorFromIds(
-      auctionId,
-      users.map((u) => u.id),
-      actorMap,
-    );
-    actorUserId = resolved.actorUserId;
-    viewerMode = resolved.viewerMode;
-    me = actorUserId != null ? userById.get(actorUserId) ?? null : null;
-  }
+  // The viewer is the signed-in user's own seat, or nobody (view only). There is no
+  // fallback to another manager for visitors without a login or without a seat.
+  const memberRow = authUserId ? users.find((u) => u.user_id === authUserId) ?? null : null;
+  const me: AuctionUserRow | null = memberRow;
+  const actorUserId: number | null = memberRow ? memberRow.id : null;
+  const viewerMode = memberRow == null;
 
   const biddingClosed = auction?.is_active === false || pastHard;
   let biddingClosedReason: string | null = null;
