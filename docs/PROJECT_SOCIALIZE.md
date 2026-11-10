@@ -43,7 +43,7 @@ Socialize gets its foundations in; its open items are held, not dropped.
 |---|---|
 | 6 Nov 2026 | **No usernames for now.** People keep their real display names; search is by display name. Names aren't unique, so results show avatar + auctions played to tell people apart. |
 | 6 Nov 2026 | **Spectators see everything a participant sees**, including live bids, bids held and budgets — nothing in an auction is secret from its participants, so nothing is hidden from spectators. |
-| 6 Nov 2026 | **New auctions default to private.** |
+| 6 Nov 2026 | ~~New auctions default to private.~~ Superseded 10 Nov 2026 ↓ |
 | 6 Nov 2026 | **One-way follows (Instagram-style)**, not friend requests. No approval needed to follow. |
 | 6 Nov 2026 | **Profiles are public**, including to logged-out guests. |
 | 6 Nov 2026 | **Pre-website winners (2015 onwards) will be imported** into trophy cabinets — later; it's long data entry. The trophy data model must allow it. |
@@ -51,6 +51,8 @@ Socialize gets its foundations in; its open items are held, not dropped.
 | 6 Nov 2026 | **Self-Sufficiency items stay on hold** (incl. T1 `/auction-lab`, S1 privacy/terms); revisit soon. |
 | 10 Nov 2026 | **Build order reworked: base first, then cheapest high-value wins** (see "Build order"). Tier 0 = the access base (V-6, V-1 + V-2). |
 | 10 Nov 2026 | **Visibility starts as `private` / `public` only.** Both Q1 options share these two ends, so Q1 no longer blocks V-1; a middle level can be added later by widening the check constraint. |
+| 10 Nov 2026 | **All auctions public for now (view only), new ones default public.** Anyone with the link — incl. logged-out guests — can view any started auction; only seat holders in *that* auction can act. Lobbies stay members-only. Pages are `noindex`. Private comes back later via the same column. Auction mechanics unchanged (proved with before/after fingerprints of auctions 10–13). |
+| 10 Nov 2026 | **Sharing:** sharing your own bid, or someone else's, is fine (sharer's choice; bids are already visible in-auction). |
 | 10 Nov 2026 | **An auction's admin without a seat can view it** (view only), via `canViewAuction()`. |
 | 6 Nov 2026 | Chat / messaging deferred (Phase 5); public chat never ships without moderation, blocking and reporting. |
 
@@ -99,12 +101,12 @@ permissions are correct and nothing existing breaks.
 |---|---|---|---|---|
 | V-1 | Auction visibility | `Auctions.visibility` (`private` / `public`), default `private` — `scripts/sql/auction-visibility.sql`. Existing auctions stay `private`. **Admin toggle in `/auction-admin` still open** (comes with V-8). | — | 🟡 |
 | V-2 | `canViewAuction()` | `lib/auction-access.ts` (`getAuctionAccess` / `canViewAuction`): seat → participant; admin → view only; `auction_spectators` row or public → spectator; else none. Used by the auction layout. Hard-coded map migrated. | V-1 | ✅ |
-| V-3 | Spectator view | Existing auction pages, read-only: hide bid inputs, release, transfer controls; keep the banner. Server-side rejection stays. | V-2 | ⬜ |
+| V-3 | Spectator view | Existing auction pages, read-only: no bid inputs / release / transfer controls for non-seat viewers; banner (+ Join HFW / Log in for guests). Server-side rejection stays. | V-2 | ✅ |
 | V-4 | Dashboard split | My Auctions = seats (and admin cards) only. Watched auctions are reached via profiles, Following and Discover. | V-2 | ⬜ |
 | V-5 | Discover | Simple list of public auctions (name, competition, managers, leader). | V-1 | ⬜ |
 | V-6 | Remove acting-as fallback | Bid action never falls back to another manager without a login (audit I4). Picker + `auction_actor` cookie deleted. **Prerequisite for V-7.** | — | ✅ |
-| V-7 | Guest access | Middleware lets logged-out visitors open public auctions and profiles read-only; "Join HFW" prompt. | V-2, V-3, V-6 | ⬜ |
-| V-8 | Demo auction | Set one real auction public. | Q2, V-7 | ⬜ |
+| V-7 | Guest access | Middleware lets logged-out visitors open public auctions and profiles read-only; "Join HFW" prompt. | V-2, V-3, V-6 | ✅ |
+| V-8 | Demo auction | Superseded: every auction is public for now. | — | ✅ |
 
 ### M3 — Sharing and achievements
 
@@ -151,7 +153,7 @@ most progress. Fine-tuning comes later.
 5. H-1 share button
 6. S-1 follows + S-2 people search + light S-3 profile stats
 
-**Tier 2 — Opening auctions up**
+**Tier 2 — Opening auctions up** ✅ (10 Nov 2026: all auctions public, pulled forward)
 7. V-3 read-only spectator view (hide controls)
 8. V-7 guest access to public auctions
 9. V-8 demo auction (Q2) + admin visibility toggle

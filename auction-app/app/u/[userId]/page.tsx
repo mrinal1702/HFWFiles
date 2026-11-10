@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -9,6 +10,12 @@ import { loadPublicProfile } from "@/lib/public-profile";
 import { buildTrophyCabinet } from "@/lib/scoring/trophy-cabinet-awards";
 
 export const dynamic = "force-dynamic";
+
+// Public = anyone with the link, not searchable: keep profiles out of search engines.
+// (Does not affect WhatsApp / social link previews.)
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 function safeReturnTo(raw: string | undefined): string | null {
   if (typeof raw !== "string") return null;

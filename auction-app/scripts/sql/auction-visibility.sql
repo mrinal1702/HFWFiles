@@ -2,9 +2,11 @@
 -- Apply by hand in the Supabase SQL Editor. Additive only: safe to run while auctions are live.
 --
 -- 1. "Auctions".visibility — who may open an auction without a seat.
---      private (default) = participants, the auction's admin and listed spectators only
---      public            = anyone (guest access is a later step; today it still needs a login)
---    Every existing auction becomes 'private', so nothing changes for anyone.
+--      private = participants, the auction's admin and listed spectators only
+--      public  = anyone with the link, including logged-out guests — VIEW ONLY
+--    Owner decision (10 Nov 2026): every auction is public for now, and new auctions default to
+--    public. Viewing never grants acting: bids, releases and transfers still need your own seat.
+--    Auctions still in the lobby (not started) stay members-only regardless (app/auctions layout).
 --    A middle level (e.g. signed-in / friends, open decision Q1) can be added later by widening
 --    the check constraint — no data migration needed.
 --
@@ -17,11 +19,19 @@
 --   drop table if exists public.auction_spectators;
 --   alter table public."Auctions" drop constraint if exists auctions_visibility_check;
 --   alter table public."Auctions" drop column if exists visibility;
+-- Make everything private again instead (keeps the column):
+--   update public."Auctions" set visibility = 'private';
+--   alter table public."Auctions" alter column visibility set default 'private';
+
+-- Pre-check (expect 0 rows): no user triggers on "Auctions", so setting visibility cannot fire
+-- anything that touches bids, budgets or squads.
+select tgname from pg_trigger where tgrelid = 'public."Auctions"'::regclass and not tgisinternal;
 
 begin;
 
 alter table public."Auctions"
-  add column if not exists visibility text not null default 'private';
+  add column if not exists visibility text not null default 'public';
+alter table public."Auctions" alter column visibility set default 'public';
 
 alter table public."Auctions" drop constraint if exists auctions_visibility_check;
 alter table public."Auctions"
@@ -40,6 +50,9 @@ alter table public.auction_spectators enable row level security;
 revoke all on public.auction_spectators from anon, authenticated;
 grant all on public.auction_spectators to service_role;
 
+-- Every existing auction public (view only for non-participants).
+update public."Auctions" set visibility = 'public' where visibility <> 'public';
+
 -- Carry over the spectators from lib/auction-spectators.ts (auction 11, UCL 2026/27).
 insert into public.auction_spectators (auction_id, user_id) values
   (11, 'b23b15cc-e103-4248-ba55-d1bd6d0608c3'),
@@ -48,6 +61,6 @@ on conflict do nothing;
 
 commit;
 
--- Checks (expect: every auction 'private'; 2 spectator rows on auction 11).
+-- Checks (expect: every auction 'public'; 2 spectator rows on auction 11).
 select visibility, count(*) from public."Auctions" group by visibility;
 select auction_id, user_id from public.auction_spectators order by auction_id, user_id;

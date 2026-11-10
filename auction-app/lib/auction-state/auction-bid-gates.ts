@@ -19,7 +19,7 @@ export function getBidDisabledReason(lot: EnrichedLot, ctx: BidGateContext): str
     return `Bidding for ${nation} players has ended — those players are locked in your squad.`;
   }
   if (ctx.viewerMode || !ctx.me) {
-    return "Join this auction (or pick your manager seat) to place bids.";
+    return "View only — you need a seat in this auction to place bids.";
   }
   if (lot.status === "sold") return "This player has already been sold.";
   if (lot.status === "unsold") return "This player is no longer available to bid on.";

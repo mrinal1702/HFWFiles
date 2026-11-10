@@ -40,11 +40,11 @@ export async function middleware(request: NextRequest) {
     path === "/meme-builds" ||
     path === "/create-auction" ||
     path === "/auctions" ||
-    /^\/auctions\/[^/]+/.test(path) ||
     /^\/auction-admin\/[^/]+/.test(path) ||
     path === "/live-auction" ||
     /^\/live-auction\/[^/]+\/admin/.test(path);
-  // /u/* (profiles) is public, including to logged-out guests (Project Socialize).
+  // Public to logged-out guests (Project Socialize): /u/* profiles, and /auctions/<id>/* — the
+  // auction layout's gate (lib/auction-access.ts) decides who may view; only seat holders can act.
 
   if (!user && needsAuth && !isLiveAuctionPublic) {
     const redirectUrl = request.nextUrl.clone();

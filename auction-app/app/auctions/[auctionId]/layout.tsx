@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 
@@ -15,6 +16,12 @@ import { loadNationDeadlinesForAuction } from "@/lib/auction-state/nation-deadli
 
 export const dynamic = "force-dynamic";
 
+// Public = anyone with the link, not searchable: keep auction pages out of search engines.
+// (Does not affect WhatsApp / social link previews.)
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
+
 export default async function AuctionLayout({
   children,
   params,
@@ -28,14 +35,17 @@ export default async function AuctionLayout({
     notFound();
   }
 
+  // May be null: public auctions are viewable by logged-out guests (view only).
   const user = await getAuthUser();
-  if (!user) {
-    redirect(`/login?next=${encodeURIComponent(`/auctions/${auctionId}`)}`);
-  }
+  const loginHref = `/login?next=${encodeURIComponent(`/auctions/${auctionId}`)}`;
 
   // Lobby (Start Bidding not pressed yet): every in-auction page shows the waiting room instead.
+  // The lobby is always members-only, whatever the auction's visibility.
   const lobby = await loadAuctionLobby(auctionId);
   if (lobby) {
+    if (!user) {
+      redirect(loginHref);
+    }
     if (!lobby.members.some((m) => m.user_id === user.id)) {
       redirect(lobby.adminUserId === user.id ? `/auction-admin/${auctionId}` : "/dashboard?error=not_member");
     }
@@ -43,16 +53,19 @@ export default async function AuctionLayout({
   }
 
   // One gate (lib/auction-access.ts): participants act; admin / spectators view only.
-  const access = await getAuctionAccess(auctionId, user.id);
+  // Participants act; admin, spectators and guests view only. Acting (bid, release, transfer)
+  // is checked again server-side against the caller's own seat in THIS auction.
+  const access = await getAuctionAccess(auctionId, user?.id ?? null);
   if (access.kind === "none") {
-    redirect("/dashboard?error=not_member");
+    redirect(user ? "/dashboard?error=not_member" : loginHref);
   }
 
-  const d = await loadAuctionDashboard(auctionId, user.id);
+  const d = await loadAuctionDashboard(auctionId, user?.id ?? null);
   if (!d.auction) {
     notFound();
   }
   const spectator = !d.me;
+  const isGuest = !user;
 
   const nationDeadlines = d.nationRollingMode
     ? await loadNationDeadlinesForAuction(auctionId)
@@ -81,10 +94,10 @@ export default async function AuctionLayout({
                   />
                 )}
                 <Link
-                  href="/dashboard"
+                  href={isGuest ? loginHref : "/dashboard"}
                   className="inline-flex min-h-10 items-center rounded-xl px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/10 hover:text-white sm:min-h-9 sm:py-1.5"
                 >
-                  Dashboard
+                  {isGuest ? "Log in" : "Dashboard"}
                 </Link>
                 <RefreshButton />
               </div>
@@ -124,6 +137,16 @@ export default async function AuctionLayout({
                 You don&apos;t hold a seat in this auction. You can follow bids, budgets and squads,
                 but you cannot bid, release, or transfer.
               </p>
+              {isGuest && (
+                <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+                  <Link href="/signup" className="font-medium text-sky-700 underline hover:text-sky-900">
+                    Join HFW
+                  </Link>
+                  <Link href={loginHref} className="font-medium text-sky-700 underline hover:text-sky-900">
+                    Log in
+                  </Link>
+                </p>
+              )}
             </div>
           )}
 

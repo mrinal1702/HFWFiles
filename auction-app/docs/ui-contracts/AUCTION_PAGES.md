@@ -118,6 +118,23 @@ without a seat is redirected to their admin lobby. Once Start Bidding is pressed
 appear at the same URLs. The admin side (`/auction-admin/[id]`) likewise shows `AdminLobby` instead
 of the admin menu and tools, and `requireAuctionAdmin` refuses admin tool actions in the lobby.
 
+## Who can view: participants, spectators, guests (Project Socialize, Nov 2026)
+
+Who may open an auction is decided only by `getAuctionAccess` (`lib/auction-access.ts`), called by
+the in-auction layout. Seat in **this** auction → participant (acts, exactly as before). The auction's
+admin without a seat, an `auction_spectators` row, or `"Auctions".visibility = 'public'` → **view only**.
+All auctions are `public` for now (owner decision 10 Nov 2026), so anyone with the link can view —
+including logged-out guests. The lobby stays members-only.
+
+- View-only viewers see the same pages and data as participants, plus the **"Spectator — view only"**
+  banner under the deadlines; guests also get **Join HFW** / **Log in** links in that banner, and the
+  header's **Dashboard** link reads **Log in** for them.
+- No acting for view-only viewers: bid rows show *"View only — you need a seat in this auction to
+  place bids."*, My team / Bids held / Transfer Room show their no-seat state, and every server action
+  (bid, release, transfer, team name) re-resolves the caller's seat in this auction and refuses anyone
+  without one. A seat in another auction never counts.
+- Auction pages and profiles are `noindex` (anyone with the link, not searchable).
+
 ## Chrome
 Navy side menu; navy→blue gradient header banner with the auction name; full-width deadline tiles;
 mid-blue page backdrop with white cards; display font for titles and names; mobile compact zoom 0.88.
