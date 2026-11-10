@@ -1,9 +1,8 @@
 import "server-only";
 
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
-
 import { ImageResponse } from "next/og";
+
+import { HFW_LOGO_DATA_URL } from "@/lib/og/logo-data";
 
 /**
  * Link-preview cards (WhatsApp / iMessage / social) — Project Socialize H-2.
@@ -14,14 +13,6 @@ import { ImageResponse } from "next/og";
 export const OG_SIZE = { width: 1200, height: 630 };
 export const OG_CONTENT_TYPE = "image/png";
 export const OG_SITE_HOST = "hfwauction.vercel.app";
-
-let logoPromise: Promise<string> | null = null;
-function logoDataUrl(): Promise<string> {
-  logoPromise ??= readFile(join(process.cwd(), "assets/og/hfw-logo.png")).then(
-    (buf) => `data:image/png;base64,${buf.toString("base64")}`,
-  );
-  return logoPromise;
-}
 
 export function clip(text: string | null | undefined, max: number): string {
   const t = (text ?? "").trim();
@@ -61,7 +52,7 @@ export type OgCardInput = {
 };
 
 export async function ogCard(input: OgCardInput): Promise<ImageResponse> {
-  const logo = await logoDataUrl();
+  const logo = HFW_LOGO_DATA_URL;
   const rows = input.rows ?? [];
   const hasAvatar = Boolean(input.avatarDataUrl || input.avatarInitials);
 
