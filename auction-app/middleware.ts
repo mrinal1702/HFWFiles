@@ -43,8 +43,8 @@ export async function middleware(request: NextRequest) {
     /^\/auctions\/[^/]+/.test(path) ||
     /^\/auction-admin\/[^/]+/.test(path) ||
     path === "/live-auction" ||
-    /^\/live-auction\/[^/]+\/admin/.test(path) ||
-    path.startsWith("/u/");
+    /^\/live-auction\/[^/]+\/admin/.test(path);
+  // /u/* (profiles) is public, including to logged-out guests (Project Socialize).
 
   if (!user && needsAuth && !isLiveAuctionPublic) {
     const redirectUrl = request.nextUrl.clone();
@@ -68,6 +68,6 @@ export const config = {
     "/auction-admin/:path*",
     "/live-auction",
     "/live-auction/:path*",
-    "/u/:path*",
+    "/u/:path*", // session refresh only — profiles are public
   ],
 };

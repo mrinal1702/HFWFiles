@@ -68,7 +68,7 @@ Socialize gets its foundations in; its open items are held, not dropped.
 
 | Area | Today |
 |---|---|
-| Profiles | `profiles` (`id`, `display_name`, `avatar_url`). `/u/[userId]` shows avatar, past finishes and a Trophy Cabinet, via `lib/public-profile.ts` (service role + field allowlist). Login required. |
+| Profiles | `profiles` (`id`, `display_name`, `avatar_url`). `/u/[userId]` shows avatar, past finishes and a Trophy Cabinet, via `lib/public-profile.ts` (service role + field allowlist). **Public since 10 Nov 2026** — guests see finishes as plain text plus a Join HFW / Log in prompt. |
 | Spectators | ~~`lib/auction-spectators.ts` hard-coded map~~ → `lib/auction-access.ts` + `auction_spectators` table (10 Nov 2026). `app/auctions/[auctionId]/layout.tsx` shows a "Spectator — view only" banner. Actions reject users without a seat. |
 | History / trophies | `lib/scoring/auction-history.ts`, `lib/scoring/trophy-cabinet-awards.ts`; driven by code constants `AUCTION_HISTORY_YEARS` (`lib/archived-auctions.ts`) and `MANUAL_TROPHY_AWARDS` (same as audit F12). |
 | Sharing | None — no share buttons, no Open Graph metadata. |
@@ -146,7 +146,7 @@ most progress. Fine-tuning comes later.
 2. V-1 + V-2 `visibility` column (private/public) + `canViewAuction()` 🟡 (SQL to apply)
 
 **Tier 1 — Quick wins**
-3. Public profiles (drop the login redirect on `/u/*`)
+3. Public profiles (drop the login redirect on `/u/*`) ✅
 4. H-2 link previews, static first
 5. H-1 share button
 6. S-1 follows + S-2 people search + light S-3 profile stats
