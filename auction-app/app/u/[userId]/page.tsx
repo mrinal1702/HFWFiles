@@ -12,10 +12,25 @@ import { buildTrophyCabinet } from "@/lib/scoring/trophy-cabinet-awards";
 export const dynamic = "force-dynamic";
 
 // Public = anyone with the link, not searchable: keep profiles out of search engines.
-// (Does not affect WhatsApp / social link previews.)
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-};
+// (robots does not affect WhatsApp / social link previews; the image is ./opengraph-image.tsx.)
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ userId: string }>;
+}): Promise<Metadata> {
+  const { userId } = await params;
+  const robots = { index: false, follow: false };
+  const profile = await loadPublicProfile(userId).catch(() => null);
+  if (!profile) return { robots };
+  const title = `${profile.displayName} · HFW profile`;
+  const description = "Past finishes and trophy cabinet on HFW.";
+  return {
+    title,
+    description,
+    robots,
+    openGraph: { siteName: "HFW Fantasy Auction", type: "profile", title, description },
+  };
+}
 
 function safeReturnTo(raw: string | undefined): string | null {
   if (typeof raw !== "string") return null;

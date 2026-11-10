@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 
 import { LeaderboardTabs, type LeaderboardTabId } from "@/app/auctions/[auctionId]/leaderboard/_components/LeaderboardTabs";
@@ -9,8 +10,34 @@ import {
   parseGwSearchParam,
 } from "@/lib/scoring/leaderboard-data";
 import { createAdminClient } from "@/lib/supabase-server";
+import { shortGwName } from "@/lib/og/card";
+import { loadOgAuctionSummary } from "@/lib/og/auction-summary";
 
 export const dynamic = "force-dynamic";
+
+/** Link-preview text for the standings (the image is ./opengraph-image.tsx). */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ auctionId: string }>;
+}): Promise<Metadata> {
+  const { auctionId } = await params;
+  const s = await loadOgAuctionSummary(Number(auctionId));
+  if (!s?.publicView) return {};
+  const lb = await getLeaderboardData(s.id);
+  const lastGw = lb.gameWeeks.at(-1);
+  const leader = lb.standings[0];
+  const title = `Standings · ${s.name}`;
+  const description =
+    lastGw && leader
+      ? `${leader.name} leads on ${leader.total} pts after ${shortGwName(lastGw.name)}.`
+      : "Standings appear after the first gameweek.";
+  return {
+    title,
+    description,
+    openGraph: { siteName: "HFW Fantasy Auction", type: "website", title, description },
+  };
+}
 
 function parseTab(value: string | undefined): LeaderboardTabId {
   if (value === "my-points" || value === "competitors" || value === "standings") return value;

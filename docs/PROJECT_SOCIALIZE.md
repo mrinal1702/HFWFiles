@@ -113,7 +113,7 @@ permissions are correct and nothing existing breaks.
 | # | Item | Simplest useful version | Status |
 |---|---|---|---|
 | H-1 | Share button | One component: native share sheet (`navigator.share`), WhatsApp link fallback, prepared message + link. On standings, gameweek results, team, profile, public auction. | ⬜ |
-| H-2 | Link previews | Open Graph metadata + dynamic cards via `next/og` ("GW4: X leads on 412 pts"). May move earlier — cheap and high-value. | ⬜ |
+| H-2 | Link previews | Open Graph metadata + dynamic cards via `next/og` (`lib/og/`). **Done (10 Nov 2026):** site default card, auction card (top 3), leaderboard standings card (top 5, "X leads on N pts after GW4"), profile card (photo, finishes). Read-only; auction data only when a guest could view it. **Next:** a manager's squad card (competitors/[id]) and a player / bid card. | 🟡 |
 | H-3 | Trophies from the DB | Wins / podiums derived from archived final standings; special cups as rows in a table; retire `MANUAL_TROPHY_AWARDS` / `AUCTION_HISTORY_YEARS` (closes audit F12). Model allows pre-website seasons. | ⬜ |
 | H-4 | Shareable achievements | A trophy / result has its own shareable URL + preview. | ⬜ |
 
@@ -149,7 +149,7 @@ most progress. Fine-tuning comes later.
 
 **Tier 1 — Quick wins**
 3. Public profiles (drop the login redirect on `/u/*`) ✅
-4. H-2 link previews, static first
+4. H-2 link previews 🟡 (auction, standings, profile done)
 5. H-1 share button
 6. S-1 follows + S-2 people search + light S-3 profile stats
 

@@ -22,8 +22,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  // Absolute base for link-preview image URLs (WhatsApp etc. need absolute og:image URLs).
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://hfwauction.vercel.app"),
   title: "HFW Fantasy Auction",
   description: "Join auctions, place bids, and build your fantasy team.",
+  openGraph: {
+    siteName: "HFW Fantasy Auction",
+    type: "website",
+    title: "HFW Fantasy Auction",
+    description: "Bid on real footballers, score from real matches, and battle your friends.",
+  },
 };
 
 export default function RootLayout({

@@ -11,16 +11,35 @@ import { RefreshButton } from "@/app/auctions/_components/RefreshButton";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { getAuctionAccess } from "@/lib/auction-access";
 import { loadAuctionLobby } from "@/lib/auction-lobby";
+import { loadOgAuctionSummary } from "@/lib/og/auction-summary";
 import { loadAuctionDashboard } from "@/lib/auction-state/auction-dashboard";
 import { loadNationDeadlinesForAuction } from "@/lib/auction-state/nation-deadlines-data";
 
 export const dynamic = "force-dynamic";
 
-// Public = anyone with the link, not searchable: keep auction pages out of search engines.
-// (Does not affect WhatsApp / social link previews.)
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-};
+// Public = anyone with the link, not searchable: keep auction pages out of search engines
+// (robots does not affect WhatsApp / social link previews). Preview text only names the auction
+// when a logged-out visitor could open it anyway.
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ auctionId: string }>;
+}): Promise<Metadata> {
+  const { auctionId } = await params;
+  const s = await loadOgAuctionSummary(Number(auctionId));
+  const robots = { index: false, follow: false };
+  if (!s?.publicView) return { robots };
+  const title = `${s.name} · HFW`;
+  const description = [s.competitionName, `${s.managerCount} managers`, "Follow the auction on HFW."]
+    .filter(Boolean)
+    .join(" · ");
+  return {
+    title,
+    description,
+    robots,
+    openGraph: { siteName: "HFW Fantasy Auction", type: "website", title, description },
+  };
+}
 
 export default async function AuctionLayout({
   children,
