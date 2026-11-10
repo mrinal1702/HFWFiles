@@ -51,6 +51,9 @@ Run `node scripts/check-gameweek-surfaces.mjs` after any change here: it fails o
 **GAMEWEEK FILTER** checkboxes (Select all + one per GW), caption "Showing: …", table **# · Position · Team · Points**
 (Team = PointsManagerChip → that manager's points page with **← Standings** back link; Position = overall season
 rank, ties share rank). Source: `auction_leaderboard`. Colours: see **Colour & link rules**.
+Under the table, right-aligned: a small **Share** button (`app/_components/ShareButton.tsx`, Nov 2026) — phone
+share sheet, else WhatsApp with the message pre-filled; shares `/auctions/<id>/leaderboard` (overall standings,
+not the current filter), whose link preview is the standings card (`leaderboard/opengraph-image.tsx`).
 
 Why points are one gameweek at a time (below): squads change week to week — a sold GW1 player must not sit in the
 GW2 view, and a bought GW2 player must not appear in GW1. (An Aug 2026 version mixed players across weeks.)

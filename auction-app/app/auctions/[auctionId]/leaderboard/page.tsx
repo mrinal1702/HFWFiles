@@ -69,7 +69,10 @@ export default async function AuctionLeaderboardPage({
     getPointsGwContext(auctionId, parseGwSearchParam(gwParam)),
   ]);
 
-  const myUserId = await resolveMyAuctionUserId(auctionId, authUser?.id);
+  const [myUserId, summary] = await Promise.all([
+    resolveMyAuctionUserId(auctionId, authUser?.id),
+    loadOgAuctionSummary(auctionId),
+  ]);
   const initialTab = parseTab(tabParam);
 
   return (
@@ -84,6 +87,7 @@ export default async function AuctionLeaderboardPage({
         squads={pointsContext.squads}
         myUserId={myUserId}
         initialTab={initialTab}
+        auctionName={summary?.name ?? `Auction #${auctionId}`}
       />
     </Suspense>
   );

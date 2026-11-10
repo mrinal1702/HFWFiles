@@ -3,6 +3,7 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useMemo } from "react";
 
+import { ShareButton } from "@/app/_components/ShareButton";
 import type { GwInfo, ParticipantGwSquad, StandingEntry } from "@/lib/scoring/leaderboard-data";
 
 import { CompetitorsPointsList, type CompetitorListEntry } from "./CompetitorsPointsList";
@@ -41,6 +42,8 @@ interface LeaderboardTabsProps {
   squads: ParticipantGwSquad[] | null;
   myUserId: number | null;
   initialTab: LeaderboardTabId;
+  /** Auction name for the Share message under Standings. */
+  auctionName: string;
 }
 
 export function LeaderboardTabs({
@@ -53,6 +56,7 @@ export function LeaderboardTabs({
   squads,
   myUserId,
   initialTab,
+  auctionName,
 }: LeaderboardTabsProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -109,7 +113,16 @@ export function LeaderboardTabs({
       </div>
 
       {activeTab === "standings" && (
-        <StandingsTable auctionId={auctionId} standings={standings} gameWeeks={standingsGameWeeks} />
+        <>
+          <StandingsTable auctionId={auctionId} standings={standings} gameWeeks={standingsGameWeeks} />
+          <div className="flex justify-end">
+            <ShareButton
+              path={basePath}
+              title={`Standings · ${auctionName}`}
+              text={`HFW standings: ${auctionName}`}
+            />
+          </div>
+        </>
       )}
 
       {activeTab === "my-points" && (
