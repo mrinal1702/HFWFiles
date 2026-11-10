@@ -3,6 +3,7 @@
 import Link from "next/link";
 
 import { Avatar } from "@/app/_components/entity/Avatar";
+import { ShareButton } from "@/app/_components/ShareButton";
 import { fantasyTeamLabel } from "@/lib/team-name";
 import type { GwInfo, ParticipantGwSquad } from "@/lib/scoring/leaderboard-data";
 
@@ -21,6 +22,8 @@ interface GwPointsViewProps {
   backLabel?: string;
   /** Hide manager summary when the parent already shows identity. */
   compact?: boolean;
+  /** Share button under the points table (path = that manager's points page). */
+  share?: { path: string; title: string; text: string };
 }
 
 export function GwPointsView({
@@ -32,6 +35,7 @@ export function GwPointsView({
   backHref,
   backLabel,
   compact = false,
+  share,
 }: GwPointsViewProps) {
   const hasBestXiData = squad?.players.some((p) => p.isBestXi !== null) ?? false;
   const scoresUploaded = squad?.players.some((p) => p.score != null) ?? false;
@@ -116,6 +120,12 @@ export function GwPointsView({
       )}
 
       {selectedGw && squad && <GwSquadTable players={squad.players} formation={squad.formation} />}
+
+      {selectedGw && squad && share && (
+        <div className="flex justify-end">
+          <ShareButton path={share.path} title={share.title} text={share.text} />
+        </div>
+      )}
 
       {selectedGw && !squad && (
         <p className="py-8 text-center text-sm text-slate-500">

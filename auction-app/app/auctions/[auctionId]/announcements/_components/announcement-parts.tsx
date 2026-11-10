@@ -37,10 +37,13 @@ export function EventCard({
   tone,
   icon,
   children,
+  action,
 }: {
   tone: keyof typeof TONES;
   icon: ReactNode;
   children: ReactNode;
+  /** Optional control at the card's right edge (e.g. a Share icon). */
+  action?: ReactNode;
 }) {
   const t = TONES[tone];
   return (
@@ -54,6 +57,7 @@ export function EventCard({
         {icon}
       </div>
       <div className="min-w-0 flex-1">{children}</div>
+      {action ? <div className="shrink-0">{action}</div> : null}
     </div>
   );
 }

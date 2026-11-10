@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 
+import { ShareButton } from "@/app/_components/ShareButton";
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
 import { PositionPill } from "@/app/auctions/_components/position-theme";
 import type {
@@ -25,9 +26,11 @@ const FILTERS: { id: AnnouncementFilter; label: string }[] = [
 export function AnnouncementsFeed({
   announcements,
   auctionId,
+  auctionName,
 }: {
   announcements: Announcement[];
   auctionId: number;
+  auctionName: string;
 }) {
   const [filter, setFilter] = useState<AnnouncementFilter>("all");
 
@@ -84,7 +87,7 @@ export function AnnouncementsFeed({
         <ol className="space-y-3">
           {filtered.map((a) => (
             <li key={announcementKey(a)}>
-              <AnnouncementCard announcement={a} auctionId={auctionId} />
+              <AnnouncementCard announcement={a} auctionId={auctionId} auctionName={auctionName} />
             </li>
           ))}
         </ol>
@@ -103,15 +106,50 @@ function announcementKey(a: Announcement): string {
   return `transfer:${a.timestamp}:${a.proposerName}:${a.recipientName}:${a.summary ?? ""}`;
 }
 
-function AnnouncementCard({ announcement: a, auctionId }: { announcement: Announcement; auctionId: number }) {
-  if (a.type === "buy") return <BuyCard a={a} auctionId={auctionId} />;
-  if (a.type === "release") return <ReleaseCard a={a} auctionId={auctionId} />;
-  return <TransferCard a={a} auctionId={auctionId} />;
+/** Plain-text WhatsApp message for one announcement (the link adds the auction card). */
+function announcementShareText(a: Announcement, auctionName: string): string {
+  if (a.type === "buy") {
+    return `${a.buyerName ?? "A manager"} signed ${a.playerName ?? a.playerId} for £${a.price}m · ${auctionName}`;
+  }
+  if (a.type === "release") {
+    const how = a.releaseType === "paid" ? `paid release, £${a.refundAmount}m back` : "free release";
+    return `${a.ownerName ?? "A manager"} released ${a.playerName ?? a.playerId} (${how}) · ${auctionName}`;
+  }
+  const side = (players: PlayerMeta[], cash: number) =>
+    [...players.map((p) => p.player_name ?? p.player_id), cash > 0 ? `£${cash}m` : null]
+      .filter(Boolean)
+      .join(" + ") || "nothing";
+  return `Transfer: ${a.proposerName ?? "?"} sends ${side(a.proposerPlayers, a.proposerCash)} to ${
+    a.recipientName ?? "?"
+  } for ${side(a.recipientPlayers, a.recipientCash)} · ${auctionName}`;
 }
 
-function BuyCard({ a, auctionId }: { a: BuyAnnouncement; auctionId: number }) {
+function AnnouncementCard({
+  announcement: a,
+  auctionId,
+  auctionName,
+}: {
+  announcement: Announcement;
+  auctionId: number;
+  auctionName: string;
+}) {
+  const share = (
+    <ShareButton
+      iconOnly
+      label="Share announcement"
+      path={`/auctions/${auctionId}/announcements`}
+      title={`HFW · ${auctionName}`}
+      text={announcementShareText(a, auctionName)}
+    />
+  );
+  if (a.type === "buy") return <BuyCard a={a} auctionId={auctionId} action={share} />;
+  if (a.type === "release") return <ReleaseCard a={a} auctionId={auctionId} action={share} />;
+  return <TransferCard a={a} auctionId={auctionId} action={share} />;
+}
+
+function BuyCard({ a, auctionId, action }: { a: BuyAnnouncement; auctionId: number; action?: ReactNode }) {
   return (
-    <EventCard tone="buy" icon={<BuyIcon />}>
+    <EventCard tone="buy" icon={<BuyIcon />} action={action}>
         <p className="text-sm font-semibold text-slate-900">
           <ManagerLink auctionId={auctionId} managerId={a.buyerId} name={a.buyerName} className="text-emerald-700" />
           {" signed "}
@@ -131,10 +169,10 @@ function BuyCard({ a, auctionId }: { a: BuyAnnouncement; auctionId: number }) {
   );
 }
 
-function ReleaseCard({ a, auctionId }: { a: ReleaseAnnouncement; auctionId: number }) {
+function ReleaseCard({ a, auctionId, action }: { a: ReleaseAnnouncement; auctionId: number; action?: ReactNode }) {
   const isPaid = a.releaseType === "paid";
   return (
-    <EventCard tone="release" icon={<ReleaseIcon />}>
+    <EventCard tone="release" icon={<ReleaseIcon />} action={action}>
         <p className="text-sm font-semibold text-slate-900">
           <ManagerLink auctionId={auctionId} managerId={a.ownerId} name={a.ownerName} className="text-amber-700" />
           {" released "}
@@ -163,12 +201,12 @@ function ReleaseCard({ a, auctionId }: { a: ReleaseAnnouncement; auctionId: numb
   );
 }
 
-function TransferCard({ a, auctionId }: { a: TransferAnnouncement; auctionId: number }) {
+function TransferCard({ a, auctionId, action }: { a: TransferAnnouncement; auctionId: number; action?: ReactNode }) {
   const hasProposerPlayers = a.proposerPlayers.length > 0;
   const hasRecipientPlayers = a.recipientPlayers.length > 0;
 
   return (
-    <EventCard tone="transfer" icon={<TransferIcon />}>
+    <EventCard tone="transfer" icon={<TransferIcon />} action={action}>
         <p className="text-sm font-semibold text-slate-900">Transfer completed</p>
 
         <div className="mt-2 grid grid-cols-1 gap-2.5 sm:grid-cols-2">

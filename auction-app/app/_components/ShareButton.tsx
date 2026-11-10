@@ -12,6 +12,7 @@ export function ShareButton({
   title,
   text,
   label = "Share",
+  iconOnly = false,
   className = "",
 }: {
   /** Site-relative path to share, e.g. `/auctions/11/leaderboard`. */
@@ -20,6 +21,8 @@ export function ShareButton({
   /** Message placed before the link. */
   text: string;
   label?: string;
+  /** Small round icon button (for lists, e.g. announcement cards). */
+  iconOnly?: boolean;
   className?: string;
 }) {
   const [copied, setCopied] = useState(false);
@@ -49,27 +52,45 @@ export function ShareButton({
     }
   }
 
+  const icon = (
+    <svg
+      aria-hidden
+      viewBox="0 0 24 24"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="18" cy="5" r="3" />
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="19" r="3" />
+      <path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4" />
+    </svg>
+  );
+
+  if (iconOnly) {
+    return (
+      <button
+        type="button"
+        onClick={onShare}
+        aria-label={copied ? "Link copied" : label}
+        title={copied ? "Link copied" : label}
+        className={`inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-sky-200 bg-white text-sky-700 shadow-sm transition hover:border-sky-300 hover:bg-sky-50 active:scale-95 ${className}`}
+      >
+        {icon}
+      </button>
+    );
+  }
+
   return (
     <button
       type="button"
       onClick={onShare}
       className={`inline-flex min-h-9 items-center gap-1.5 rounded-lg border border-sky-200 bg-white px-3 py-1.5 text-sm font-medium text-sky-800 shadow-sm transition hover:border-sky-300 hover:bg-sky-50 active:scale-[0.98] ${className}`}
     >
-      <svg
-        aria-hidden
-        viewBox="0 0 24 24"
-        className="h-4 w-4"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="18" cy="5" r="3" />
-        <circle cx="6" cy="12" r="3" />
-        <circle cx="18" cy="19" r="3" />
-        <path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4" />
-      </svg>
+      {icon}
       {copied ? "Link copied" : label}
     </button>
   );

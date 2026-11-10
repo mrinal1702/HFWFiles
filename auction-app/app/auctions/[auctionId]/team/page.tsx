@@ -1,6 +1,8 @@
 import { createAdminClient } from "@/lib/supabase-server";
 import { loadAuctionDashboardForViewer } from "@/lib/auction-state/auction-dashboard";
+import { ShareButton } from "@/app/_components/ShareButton";
 import { SquadByPosition } from "@/app/auctions/_components/SquadByPosition";
+import { fantasyTeamLabel } from "@/lib/team-name";
 import { ReleaseButton } from "./_components/ReleaseButton";
 
 export const dynamic = "force-dynamic";
@@ -129,6 +131,17 @@ export default async function MyTeamPage({
           />
         )}
       </div>
+
+      {rows.length > 0 && (
+        <div className="flex justify-end">
+          {/* My team is per-viewer, so share this manager's public squad page instead. */}
+          <ShareButton
+            path={`/auctions/${auctionId}/competitors/${d.me.id}`}
+            title={`${fantasyTeamLabel(d.me.team_name, d.me.name)} · squad`}
+            text={`My HFW squad: ${d.auction?.name ?? `Auction #${auctionId}`}`}
+          />
+        </div>
+      )}
     </section>
   );
 }

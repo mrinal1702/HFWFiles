@@ -16,6 +16,7 @@ export type OgAuctionSummary = {
   id: number;
   name: string;
   competitionName: string | null;
+  competitionId: number | null;
   managerCount: number;
   /** True when a logged-out visitor may view this auction (public and started). */
   publicView: boolean;
@@ -56,6 +57,7 @@ export const loadOgAuctionSummary = cache(
       name: (row.name ?? "").trim() || `Auction #${auctionId}`,
       competitionName:
         ((competitionRes.data as { name?: string | null } | null)?.name ?? null) || null,
+      competitionId: row.competition_id ?? null,
       managerCount: "count" in countRes && typeof countRes.count === "number" ? countRes.count : 0,
       publicView: access.kind !== "none" && !inLobby,
     };

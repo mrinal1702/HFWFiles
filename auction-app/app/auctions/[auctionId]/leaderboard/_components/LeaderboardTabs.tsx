@@ -4,6 +4,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useMemo } from "react";
 
 import { ShareButton } from "@/app/_components/ShareButton";
+import { shortGwName } from "@/lib/og/gw-name";
 import type { GwInfo, ParticipantGwSquad, StandingEntry } from "@/lib/scoring/leaderboard-data";
 
 import { CompetitorsPointsList, type CompetitorListEntry } from "./CompetitorsPointsList";
@@ -139,6 +140,16 @@ export function LeaderboardTabs({
               selectedGw={selectedGw}
               seasonTotal={seasonTotalForUser(standings, myUserId)}
               basePath={basePath}
+              share={
+                mySquad && selectedGw
+                  ? {
+                      // My Points shows each viewer their own squad, so share this manager's points page.
+                      path: `/auctions/${auctionId}/leaderboard/competitors/${myUserId}?gw=${selectedGw.id}`,
+                      title: `${mySquad.teamName?.trim() || mySquad.name} · ${shortGwName(selectedGw.name)}`,
+                      text: `My ${shortGwName(selectedGw.name)} points: ${auctionName}`,
+                    }
+                  : undefined
+              }
             />
           )}
         </>

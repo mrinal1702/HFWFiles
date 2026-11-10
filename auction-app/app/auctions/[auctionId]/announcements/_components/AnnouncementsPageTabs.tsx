@@ -18,10 +18,12 @@ export function AnnouncementsPageTabs({
   announcements,
   eliminationReleases,
   auctionId,
+  auctionName,
 }: {
   announcements: Announcement[];
   eliminationReleases: EliminationRelease[];
   auctionId: number;
+  auctionName: string;
 }) {
   const [tab, setTab] = useState<PageTab>("activity");
 
@@ -57,11 +59,11 @@ export function AnnouncementsPageTabs({
 
       {tab === "activity" ? (
         <div role="tabpanel">
-          <AnnouncementsFeed announcements={announcements} auctionId={auctionId} />
+          <AnnouncementsFeed announcements={announcements} auctionId={auctionId} auctionName={auctionName} />
         </div>
       ) : (
         <div role="tabpanel">
-          <EliminationReleasesFeed releases={eliminationReleases} auctionId={auctionId} />
+          <EliminationReleasesFeed releases={eliminationReleases} auctionId={auctionId} auctionName={auctionName} />
         </div>
       )}
     </div>

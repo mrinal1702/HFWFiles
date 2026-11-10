@@ -1,3 +1,4 @@
+import { ShareButton } from "@/app/_components/ShareButton";
 import { LocalTime } from "@/app/auctions/_components/LocalTime";
 import { PositionPill } from "@/app/auctions/_components/position-theme";
 import type { EliminationRelease } from "@/lib/announcements";
@@ -7,9 +8,11 @@ import { EventCard, ManagerLink } from "./announcement-parts";
 export function EliminationReleasesFeed({
   releases,
   auctionId,
+  auctionName,
 }: {
   releases: EliminationRelease[];
   auctionId: number;
+  auctionName: string;
 }) {
   if (releases.length === 0) {
     return (
@@ -35,7 +38,7 @@ export function EliminationReleasesFeed({
       <ol className="space-y-3">
         {releases.map((r) => (
           <li key={`${r.playerId}:${r.timestamp}:${r.ownerName}`}>
-            <EliminationReleaseCard release={r} auctionId={auctionId} />
+            <EliminationReleaseCard release={r} auctionId={auctionId} auctionName={auctionName} />
           </li>
         ))}
       </ol>
@@ -43,9 +46,29 @@ export function EliminationReleasesFeed({
   );
 }
 
-function EliminationReleaseCard({ release: r, auctionId }: { release: EliminationRelease; auctionId: number }) {
+function EliminationReleaseCard({
+  release: r,
+  auctionId,
+  auctionName,
+}: {
+  release: EliminationRelease;
+  auctionId: number;
+  auctionName: string;
+}) {
   return (
-    <EventCard tone="elimination" icon={<EliminationIcon />}>
+    <EventCard
+      tone="elimination"
+      icon={<EliminationIcon />}
+      action={
+        <ShareButton
+          iconOnly
+          label="Share announcement"
+          path={`/auctions/${auctionId}/announcements`}
+          title={`HFW · ${auctionName}`}
+          text={`${r.ownerName ?? "A manager"}: ${r.playerName ?? r.playerId} released (${r.teamName} eliminated), £${r.refundAmount}m back · ${auctionName}`}
+        />
+      }
+    >
         <p className="text-sm font-semibold text-slate-900">
           <ManagerLink auctionId={auctionId} managerId={r.ownerId} name={r.ownerName} className="text-rose-700" />
           {" — "}

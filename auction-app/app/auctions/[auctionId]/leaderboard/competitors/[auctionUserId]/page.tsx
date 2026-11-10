@@ -8,6 +8,9 @@ import {
   parseGwSearchParam,
 } from "@/lib/scoring/leaderboard-data";
 import { createAdminClient } from "@/lib/supabase-server";
+import { loadOgAuctionSummary } from "@/lib/og/auction-summary";
+import { shortGwName } from "@/lib/og/gw-name";
+import { fantasyTeamLabel } from "@/lib/team-name";
 
 export const dynamic = "force-dynamic";
 
@@ -32,9 +35,10 @@ export default async function LeaderboardCompetitorPointsPage({
     notFound();
   }
 
-  const [leaderboardData, pointsContext] = await Promise.all([
+  const [leaderboardData, pointsContext, summary] = await Promise.all([
     getLeaderboardData(auctionId),
     getPointsGwContext(auctionId, parseGwSearchParam(gwParam)),
+    loadOgAuctionSummary(auctionId),
   ]);
 
   const squad = pointsContext.squads?.find((p) => p.userId === competitorUserId) ?? null;
@@ -62,6 +66,15 @@ export default async function LeaderboardCompetitorPointsPage({
         basePath={basePath}
         backHref={backHref}
         backLabel={fromStandings ? "← Standings" : "← Competitors – Points"}
+        share={
+          squad && pointsContext.selectedGw
+            ? {
+                path: `${basePath}?gw=${pointsContext.selectedGw.id}`,
+                title: `${fantasyTeamLabel(squad.teamName, squad.name)} · ${shortGwName(pointsContext.selectedGw.name)}`,
+                text: `${fantasyTeamLabel(squad.teamName, squad.name)}: ${shortGwName(pointsContext.selectedGw.name)} points · ${summary?.name ?? `Auction #${auctionId}`}`,
+              }
+            : undefined
+        }
       />
     </section>
   );

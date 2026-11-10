@@ -135,6 +135,20 @@ including logged-out guests. The lobby stays members-only.
   without one. A seat in another auction never counts.
 - Auction pages and profiles are `noindex` (anyone with the link, not searchable).
 
+## Share buttons (Project Socialize, Nov 2026)
+
+One component, `app/_components/ShareButton.tsx` (phone share sheet, else WhatsApp with the message
+pre-filled). Each shared link has its own preview card (`opengraph-image.tsx` beside the page).
+
+- **My team:** small **Share** pill, right-aligned under the squad (only when the squad has players).
+  My team is per-viewer, so it shares that manager's **Competitors – Bidding** page
+  (`/competitors/<seat id>`) — preview = the squad card (top signings, players, budget left).
+- **Competitors – Bidding detail:** **Share** pill right-aligned at the bottom of the **View Team** card
+  (same link and card). Bids are not shared.
+- **Announcements:** small round share icon at the right edge of every card (buys, releases,
+  transfers, elimination releases). Message = the announcement in words + auction name; link = the
+  Announcements page (preview = the auction card).
+
 ## Chrome
 Navy side menu; navy→blue gradient header banner with the auction name; full-width deadline tiles;
 mid-blue page backdrop with white cards; display font for titles and names; mobile compact zoom 0.88.

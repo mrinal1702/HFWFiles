@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { Avatar } from "@/app/_components/entity/Avatar";
 import { InfoTip } from "@/app/_components/InfoTip";
+import { ShareButton } from "@/app/_components/ShareButton";
 import { getAuthUser } from "@/lib/auth/get-user";
 import { loadCompetitorView } from "@/lib/auction-state/auction-dashboard";
 import { RosterSlotCounts } from "@/app/auctions/_components/RosterSlotCounts";
@@ -124,6 +125,15 @@ export default async function CompetitorDetailPage({
                 price: l.high_amount,
               }))}
               playerHref={playerHref}
+            />
+          </div>
+        )}
+        {v.sold.length > 0 && (
+          <div className="mt-3 flex justify-end">
+            <ShareButton
+              path={`/auctions/${auctionId}/competitors/${competitorUserId}`}
+              title={`${competitorLabel} · squad`}
+              text={`${competitorLabel} on HFW: squad`}
             />
           </div>
         )}

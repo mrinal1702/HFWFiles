@@ -120,6 +120,14 @@ Canonical ops checklist: [OPS_SCORING_AND_LEADERBOARD.md](../OPS_SCORING_AND_LEA
 
 ---
 
+### Share (Nov 2026)
+
+A small **Share** pill, right-aligned under the points table, on **My Points** and on a manager's
+Competitors – Points page. Both share that manager's points page
+(`/leaderboard/competitors/<seat id>?gw=<selected GW>`); My Points is per-viewer, so it shares your own
+page. Preview card = latest scored GW points, top Best XI scorers, season total and rank
+(`leaderboard/competitors/[auctionUserId]/opengraph-image.tsx`; preview images can't read `?gw=`).
+
 ## Colour & link rules (8 Oct 2026)
 
 | Where | Rule |

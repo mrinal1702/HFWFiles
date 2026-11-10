@@ -19,11 +19,7 @@ export function clip(text: string | null | undefined, max: number): string {
   return t.length > max ? `${t.slice(0, max - 1).trimEnd()}…` : t;
 }
 
-/** "UEFA Champions League GW4" → "GW4" (falls back to the full name). */
-export function shortGwName(name: string): string {
-  const m = name.match(/(GW|MW|Matchday|Gameweek)\s*\d+/i);
-  return m ? m[0] : name;
-}
+export { shortGwName } from "@/lib/og/gw-name";
 
 export type OgRow = {
   /** Left column, e.g. rank "1" or a position "FW". */

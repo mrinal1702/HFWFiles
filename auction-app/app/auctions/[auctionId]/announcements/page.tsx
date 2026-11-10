@@ -1,5 +1,6 @@
 import { AnnouncementsPageTabs } from "./_components/AnnouncementsPageTabs";
 import { loadAnnouncements, loadEliminationReleases } from "@/lib/announcements";
+import { loadOgAuctionSummary } from "@/lib/og/auction-summary";
 
 export const dynamic = "force-dynamic";
 
@@ -10,9 +11,10 @@ export default async function AnnouncementsPage({
 }) {
   const { auctionId: raw } = await params;
   const auctionId = Number(raw);
-  const [announcements, eliminationReleases] = await Promise.all([
+  const [announcements, eliminationReleases, summary] = await Promise.all([
     loadAnnouncements(auctionId),
     loadEliminationReleases(auctionId),
+    loadOgAuctionSummary(auctionId),
   ]);
 
   return (
@@ -38,6 +40,7 @@ export default async function AnnouncementsPage({
         announcements={announcements}
         eliminationReleases={eliminationReleases}
         auctionId={auctionId}
+        auctionName={summary?.name ?? `Auction #${auctionId}`}
       />
     </section>
   );
