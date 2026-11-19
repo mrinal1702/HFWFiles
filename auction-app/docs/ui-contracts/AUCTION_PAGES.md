@@ -153,3 +153,11 @@ pre-filled). Each shared link has its own preview card (`opengraph-image.tsx` be
 Navy side menu; navy→blue gradient header banner with the auction name; full-width deadline tiles;
 mid-blue page backdrop with white cards; display font for titles and names; mobile compact zoom 0.88.
 Details: "Visual theme" and "Mobile auction chrome" in [OPS_UI_SURFACES.md](../OPS_UI_SURFACES.md).
+
+**Loading placeholder (Nov 2026).** Every page folder under `app/auctions/[auctionId]/` (leaderboard
+included) has a `loading.tsx` rendering `AuctionContentSkeleton` (`app/_components/PageSkeleton.tsx`):
+on a click the header, deadlines, budget strip and side menu stay put and grey cards fill the content
+area until the data arrives. A `loading.tsx` only shows when its **own** folder is entered, so a new
+page folder needs its own copy. Do **not** add one at `app/auctions/` or `app/auctions/[auctionId]/`
+itself: that would start the response before the auction gate / root redirect runs, turning those
+307 redirects into in-page redirects.

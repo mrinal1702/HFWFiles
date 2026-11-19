@@ -25,9 +25,10 @@ export async function middleware(request: NextRequest) {
     },
   });
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  // getClaims verifies the token locally (ES256 signing key) and refreshes an expired session,
+  // without a round trip to Supabase Auth on every request.
+  const { data: claimsData } = await supabase.auth.getClaims();
+  const user = claimsData?.claims?.sub ? { id: claimsData.claims.sub } : null;
 
   const path = request.nextUrl.pathname;
   const isLiveAuctionPublic =

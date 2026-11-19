@@ -43,6 +43,7 @@ Run `node scripts/check-gameweek-surfaces.mjs` after any change here: it fails o
   (its default link is Competitors – Bidding). `check-gameweek-surfaces.mjs` fails on `<ManagerChip` in this folder.
 - Mobile: card list; desktop: table
 - **No extra top-level tabs** as gameweeks are added
+- While data loads after a click, the shared grey placeholder shows (see "Loading placeholder" in `AUCTION_PAGES.md`)
 
 ---
 
