@@ -3,13 +3,12 @@ import { Suspense } from "react";
 
 import { LeaderboardTabs, type LeaderboardTabId } from "@/app/auctions/[auctionId]/leaderboard/_components/LeaderboardTabs";
 import { getAuthUser } from "@/lib/auth/get-user";
-import { fetchAuctionUserNames } from "@/lib/auction-users-query";
 import {
+  getAuctionUserNamesForRequest,
   getLeaderboardData,
   getPointsGwContext,
   parseGwSearchParam,
 } from "@/lib/scoring/leaderboard-data";
-import { createAdminClient } from "@/lib/supabase-server";
 import { shortGwName } from "@/lib/og/card";
 import { loadOgAuctionSummary } from "@/lib/og/auction-summary";
 
@@ -44,11 +43,11 @@ function parseTab(value: string | undefined): LeaderboardTabId {
   return "standings";
 }
 
-async function resolveMyAuctionUserId(auctionId: number, authUserId: string | undefined) {
-  if (!authUserId) return null;
-  const admin = createAdminClient();
-  const users = await fetchAuctionUserNames(admin, auctionId);
-  return users.find((u) => u.user_id === authUserId)?.id ?? null;
+async function resolveMyAuctionUserId(auctionId: number) {
+  const authUser = await getAuthUser();
+  if (!authUser) return null;
+  const users = await getAuctionUserNamesForRequest(auctionId);
+  return users.find((u) => u.user_id === authUser.id)?.id ?? null;
 }
 
 export default async function AuctionLeaderboardPage({
@@ -63,14 +62,11 @@ export default async function AuctionLeaderboardPage({
   const auctionId = Number(raw);
   const basePath = `/auctions/${auctionId}/leaderboard`;
 
-  const [authUser, leaderboardData, pointsContext] = await Promise.all([
-    getAuthUser(),
+  // All independent: run side by side (each piece is shared within this page view).
+  const [myUserId, leaderboardData, pointsContext, summary] = await Promise.all([
+    resolveMyAuctionUserId(auctionId),
     getLeaderboardData(auctionId),
     getPointsGwContext(auctionId, parseGwSearchParam(gwParam)),
-  ]);
-
-  const [myUserId, summary] = await Promise.all([
-    resolveMyAuctionUserId(auctionId, authUser?.id),
     loadOgAuctionSummary(auctionId),
   ]);
   const initialTab = parseTab(tabParam);

@@ -1,3 +1,5 @@
+import { cache } from "react";
+
 import { createAdminClient } from "@/lib/supabase-server";
 import type { XiRole } from "@/lib/scoring/best-xi-display";
 import { parseXiRole } from "@/lib/scoring/best-xi-display";
@@ -79,18 +81,28 @@ type SquadPlayerMeta = {
   team_name: string | null;
 };
 
-async function fetchAuctionCompetitionId(
-  admin: ReturnType<typeof createAdminClient>,
-  auctionId: number,
-): Promise<number | null> {
-  const auctionRes = await admin
+// ─── Per-request sharing ──────────────────────────────────────────────────────
+// React `cache()` lets one page view (metadata + page + helpers) read the same thing once.
+// It lasts for a single request only — nothing is kept between page views, so data is
+// never stale. Keyed by plain numbers so repeat calls actually match.
+
+const fetchAuctionCompetitionId = cache(async (auctionId: number): Promise<number | null> => {
+  const auctionRes = await createAdminClient()
     .from("Auctions")
     .select("competition_id")
     .eq("id", auctionId)
     .maybeSingle();
   if (auctionRes.error) throw new Error(`Auctions: ${auctionRes.error.message}`);
   return resolveAuctionCompetitionId(auctionRes.data);
-}
+});
+
+/** Seat names/avatars for one auction, shared within the current page view. */
+export const getAuctionUserNamesForRequest = cache((auctionId: number) =>
+  fetchAuctionUserNames(createAdminClient(), auctionId),
+);
+
+/** Same batch size as lib/players-query.ts; batches are fetched side by side here. */
+const PLAYER_META_BATCH = 200;
 
 /** Competition-scoped auctions → competition_players; legacy → public.players. */
 async function loadSquadPlayerMetaByIds(
@@ -101,14 +113,22 @@ async function loadSquadPlayerMetaByIds(
   const map = new Map<string, SquadPlayerMeta>();
   if (!playerIds.length) return map;
 
-  const competitionId = await fetchAuctionCompetitionId(admin, auctionId);
-  const metaById = await fetchPlayerMetaByIds(admin, playerIds, competitionId);
-  for (const [id, meta] of Object.entries(metaById)) {
-    map.set(id, {
-      player_name: meta.player_name,
-      position: meta.position,
-      team_name: meta.club,
-    });
+  const competitionId = await fetchAuctionCompetitionId(auctionId);
+  const batches: string[][] = [];
+  for (let i = 0; i < playerIds.length; i += PLAYER_META_BATCH) {
+    batches.push(playerIds.slice(i, i + PLAYER_META_BATCH));
+  }
+  const results = await Promise.all(
+    batches.map((batch) => fetchPlayerMetaByIds(admin, batch, competitionId)),
+  );
+  for (const metaById of results) {
+    for (const [id, meta] of Object.entries(metaById)) {
+      map.set(id, {
+        player_name: meta.player_name,
+        position: meta.position,
+        team_name: meta.club,
+      });
+    }
   }
   return map;
 }
@@ -123,12 +143,14 @@ async function fetchPlayerGameweekScores(
   return byGw.get(gameWeekId) ?? new Map<string, number>();
 }
 
-/** All-GW standings for the Standings tab. */
-export async function getLeaderboardData(auctionId: number): Promise<LeaderboardData> {
+/** All-GW standings for the Standings tab (shared within one page view). */
+export const getLeaderboardData = cache(loadLeaderboardData);
+
+async function loadLeaderboardData(auctionId: number): Promise<LeaderboardData> {
   const admin = createAdminClient();
 
   const [users, lbRes] = await Promise.all([
-    fetchAuctionUserNames(admin, auctionId),
+    getAuctionUserNamesForRequest(auctionId),
     admin
       .from("auction_leaderboard")
       .select("auction_user_id, game_week_id, total_score")
@@ -216,11 +238,13 @@ export async function getCurrentSquads(
   const admin = createAdminClient();
 
   const [users, teamsRes] = await Promise.all([
-    fetchAuctionUserNames(admin, auctionId),
+    getAuctionUserNamesForRequest(auctionId),
     admin
       .from("auction_teams")
       .select("auction_user_id, player_id, purchase_price")
       .eq("auction_id", auctionId),
+    // Warm the shared competition-id lookup now so player names don't wait for it later.
+    fetchAuctionCompetitionId(auctionId),
   ]);
 
   if (teamsRes.error) throw new Error(`auction_teams: ${teamsRes.error.message}`);
@@ -232,9 +256,12 @@ export async function getCurrentSquads(
   }>;
 
   const playerIds = [...new Set(teams.map((t) => String(t.player_id)))];
-  const [playerById, competitionId] = await Promise.all([
+  const [playerById, competitionId, scoreMap] = await Promise.all([
     loadSquadPlayerMetaByIds(admin, auctionId, playerIds),
-    fetchAuctionCompetitionId(admin, auctionId),
+    fetchAuctionCompetitionId(auctionId),
+    gameWeekId != null
+      ? fetchPlayerGameweekScores(admin, gameWeekId, playerIds)
+      : Promise.resolve(new Map<string, number>()),
   ]);
 
   const byUser = new Map<number, typeof teams>();
@@ -243,10 +270,6 @@ export async function getCurrentSquads(
     byUser.get(row.auction_user_id)!.push(row);
   }
 
-  const scoreMap =
-    gameWeekId != null
-      ? await fetchPlayerGameweekScores(admin, gameWeekId, playerIds)
-      : new Map<string, number>();
   const matchPosMap =
     gameWeekId != null
       ? loadMatchPositionsForGameweek(gameWeekId, competitionId)
@@ -278,8 +301,10 @@ export async function getCurrentSquads(
     }));
 }
 
-/** Gameweeks with a locked squad snapshot for this auction, in chronological order. */
-export async function getLockedGameWeeksForAuction(auctionId: number): Promise<GwInfo[]> {
+/** Gameweeks with a locked squad snapshot for this auction, in chronological order (shared within one page view). */
+export const getLockedGameWeeksForAuction = cache(loadLockedGameWeeksForAuction);
+
+async function loadLockedGameWeeksForAuction(auctionId: number): Promise<GwInfo[]> {
   const admin = createAdminClient();
 
   // Paginate: gameweek_squads holds one row per squad member, so a single auction
@@ -343,7 +368,9 @@ export async function resolveGameweekPanel(
 }
 
 /** Current gameweek for an auction with no locked squads yet: nation-rolling auctions use rolling_game_week_id; otherwise none. */
-export async function getActiveGameWeekForAuction(auctionId: number): Promise<GwInfo | null> {
+export const getActiveGameWeekForAuction = cache(loadActiveGameWeekForAuction);
+
+async function loadActiveGameWeekForAuction(auctionId: number): Promise<GwInfo | null> {
   const admin = createAdminClient();
 
   const auctionRes = await admin
@@ -420,13 +447,15 @@ export async function getGameweekSquadData(
   const admin = createAdminClient();
 
   const [users, squads, lbRes] = await Promise.all([
-    fetchAuctionUserNames(admin, auctionId),
+    getAuctionUserNamesForRequest(auctionId),
     fetchGameweekSquadRows(admin, auctionId, gameWeekId),
     admin
       .from("auction_leaderboard")
       .select("auction_user_id, total_score")
       .eq("auction_id", auctionId)
       .eq("game_week_id", gameWeekId),
+    // Warm the shared competition-id lookup now so player names don't wait for it later.
+    fetchAuctionCompetitionId(auctionId),
   ]);
 
   if (lbRes.error) throw new Error(`auction_leaderboard: ${lbRes.error.message}`);
@@ -436,12 +465,11 @@ export async function getGameweekSquadData(
 
   // Fetch player metadata (competition_players when auction is competition-scoped)
   const playerIds = [...new Set(squads.map((s) => String(s.player_id)))];
-  const [playerById, competitionId] = await Promise.all([
+  const [playerById, competitionId, scoreMap] = await Promise.all([
     loadSquadPlayerMetaByIds(admin, auctionId, playerIds),
-    fetchAuctionCompetitionId(admin, auctionId),
+    fetchAuctionCompetitionId(auctionId),
+    fetchPlayerGameweekScores(admin, gameWeekId, playerIds),
   ]);
-
-  const scoreMap = await fetchPlayerGameweekScores(admin, gameWeekId, playerIds);
   const matchPosMap = loadMatchPositionsForGameweek(gameWeekId, competitionId);
 
   // Build total GW score lookup
@@ -542,16 +570,20 @@ export type ParticipantsOwnedPointsData = {
 export async function getParticipantsOwnedPoints(
   auctionId: number,
 ): Promise<ParticipantsOwnedPointsData> {
-  const admin = createAdminClient();
-  const users = await fetchAuctionUserNames(admin, auctionId);
-  const lockedGws = await getLockedGameWeeksForAuction(auctionId);
+  const [users, lockedGws] = await Promise.all([
+    getAuctionUserNamesForRequest(auctionId),
+    getLockedGameWeeksForAuction(auctionId),
+  ]);
 
   let gameWeeks = lockedGws;
   let squadsByGw: Array<{ gw: GwInfo; squads: ParticipantGwSquad[] }> = [];
 
   if (lockedGws.length > 0) {
-    for (const gw of lockedGws) {
-      const squads = await getGameweekSquadData(auctionId, gw.id);
+    // Every locked GW loads side by side; results keep gameweek order.
+    const perGw = await Promise.all(
+      lockedGws.map(async (gw) => ({ gw, squads: await getGameweekSquadData(auctionId, gw.id) })),
+    );
+    for (const { gw, squads } of perGw) {
       if (squads?.length) squadsByGw.push({ gw, squads });
     }
   } else {

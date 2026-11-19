@@ -1,13 +1,12 @@
 import { notFound } from "next/navigation";
 
 import { GwPointsView } from "@/app/auctions/[auctionId]/leaderboard/_components/GwPointsView";
-import { fetchAuctionUserNames } from "@/lib/auction-users-query";
 import {
+  getAuctionUserNamesForRequest,
   getLeaderboardData,
   getPointsGwContext,
   parseGwSearchParam,
 } from "@/lib/scoring/leaderboard-data";
-import { createAdminClient } from "@/lib/supabase-server";
 import { loadOgAuctionSummary } from "@/lib/og/auction-summary";
 import { shortGwName } from "@/lib/og/gw-name";
 import { fantasyTeamLabel } from "@/lib/team-name";
@@ -29,17 +28,16 @@ export default async function LeaderboardCompetitorPointsPage({
     notFound();
   }
 
-  const admin = createAdminClient();
-  const users = await fetchAuctionUserNames(admin, auctionId);
-  if (!users.some((u) => u.id === competitorUserId)) {
-    notFound();
-  }
-
-  const [leaderboardData, pointsContext, summary] = await Promise.all([
+  // All independent: run side by side (each piece is shared within this page view).
+  const [users, leaderboardData, pointsContext, summary] = await Promise.all([
+    getAuctionUserNamesForRequest(auctionId),
     getLeaderboardData(auctionId),
     getPointsGwContext(auctionId, parseGwSearchParam(gwParam)),
     loadOgAuctionSummary(auctionId),
   ]);
+  if (!users.some((u) => u.id === competitorUserId)) {
+    notFound();
+  }
 
   const squad = pointsContext.squads?.find((p) => p.userId === competitorUserId) ?? null;
   const seasonEntry = leaderboardData.standings.find((s) => s.userId === competitorUserId);

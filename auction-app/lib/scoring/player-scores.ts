@@ -28,42 +28,52 @@ export async function readPlayerScores(
   if (!gwIds.length || !ids.length) return result;
 
   const batchSize = 300;
-  for (const gw of gwIds) {
-    const byPlayer = result.get(gw)!;
-    for (let i = 0; i < ids.length; i += batchSize) {
-      const batch = ids.slice(i, i + batchSize);
-      const viewRes = await admin
-        .from("player_scores")
-        .select("player_id, score")
-        .eq("game_week_id", gw)
-        .in("player_id", batch);
-      if (!viewRes.error) {
-        for (const row of viewRes.data ?? []) byPlayer.set(String(row.player_id), Number(row.score));
-        continue;
-      }
-      const tableRes = await admin
-        .from("Player_Scores")
-        .select("player_id, Score")
-        .eq("game_week_id", gw)
-        .in("player_id", batch);
-      if (tableRes.error) throw new Error(`Player_Scores: ${tableRes.error.message}`);
-      for (const row of tableRes.data ?? []) byPlayer.set(String(row.player_id), Number(row.Score));
-    }
-  }
+  const batches: number[][] = [];
+  for (let i = 0; i < ids.length; i += batchSize) batches.push(ids.slice(i, i + batchSize));
+
+  // Every (gameweek, batch) read is independent, so they run side by side. Each one fills
+  // only its own gameweek's map with distinct player ids, so the result is the same as
+  // reading them one after another.
+  await Promise.all(
+    gwIds.flatMap((gw) =>
+      batches.map(async (batch) => {
+        const byPlayer = result.get(gw)!;
+        const viewRes = await admin
+          .from("player_scores")
+          .select("player_id, score")
+          .eq("game_week_id", gw)
+          .in("player_id", batch);
+        if (!viewRes.error) {
+          for (const row of viewRes.data ?? []) byPlayer.set(String(row.player_id), Number(row.score));
+          return;
+        }
+        const tableRes = await admin
+          .from("Player_Scores")
+          .select("player_id, Score")
+          .eq("game_week_id", gw)
+          .in("player_id", batch);
+        if (tableRes.error) throw new Error(`Player_Scores: ${tableRes.error.message}`);
+        for (const row of tableRes.data ?? []) byPlayer.set(String(row.player_id), Number(row.Score));
+      }),
+    ),
+  );
   return result;
 }
 
 /** The subset of the given (auction) gameweek ids that have at least one uploaded score. */
 export async function gameWeeksWithScores(admin: Admin, gameWeekIds: number[]): Promise<Set<number>> {
+  // One small existence check per gameweek, all side by side.
+  const hasScores = await Promise.all(
+    gameWeekIds.map(async (gw) => {
+      const viewRes = await admin.from("player_scores").select("player_id").eq("game_week_id", gw).limit(1);
+      if (!viewRes.error && (viewRes.data?.length ?? 0) > 0) return true;
+      const tableRes = await admin.from("Player_Scores").select("player_id").eq("game_week_id", gw).limit(1);
+      return !tableRes.error && (tableRes.data?.length ?? 0) > 0;
+    }),
+  );
   const scored = new Set<number>();
-  for (const gw of gameWeekIds) {
-    const viewRes = await admin.from("player_scores").select("player_id").eq("game_week_id", gw).limit(1);
-    if (!viewRes.error && (viewRes.data?.length ?? 0) > 0) {
-      scored.add(gw);
-      continue;
-    }
-    const tableRes = await admin.from("Player_Scores").select("player_id").eq("game_week_id", gw).limit(1);
-    if (!tableRes.error && (tableRes.data?.length ?? 0) > 0) scored.add(gw);
-  }
+  gameWeekIds.forEach((gw, i) => {
+    if (hasScores[i]) scored.add(gw);
+  });
   return scored;
 }
