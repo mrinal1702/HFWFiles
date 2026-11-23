@@ -34,6 +34,16 @@ export function ParticipantNav({ active }: ParticipantNavProps) {
       >
         Rules
       </Link>
+      {/* Public HFW Stats dashboard (static page, opens outside the app shell). */}
+      <a
+        href="/stats"
+        className="ml-auto inline-flex min-h-10 items-center gap-1.5 rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-sm font-semibold text-sky-800 transition-colors hover:border-sky-400 hover:bg-sky-100"
+      >
+        <svg aria-hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 20V10m6 10V4m6 16v-7m4 7H2" />
+        </svg>
+        Stats
+      </a>
     </nav>
   );
 }

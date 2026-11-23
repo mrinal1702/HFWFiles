@@ -17,6 +17,7 @@ Underlying scripts (called by gameweek.mjs; use directly only for repairs):
 | Load scores | `upsert-player-scores-from-finalpoints.mjs <legacy gw id> <FinalPoints.csv …>` |
 | Best XI | compute in `../formation-engine/compute_auction_best_xi.py`, then `publish-best-xi-from-json.mjs` |
 | Stats page files | `build-auction-stats.mjs --competition <slug> --through <mwNN> [--dry-run]` — read-only on Supabase; writes `data/competitions/<slug>/stats/*.json` (run by `best-xi --apply`) |
+| Public stats dashboard | `build-public-stats.mjs --competition <slug> --through <mwNN> [--dry-run]` — reads raw FotMob match files only (no DB); writes `public/hfw-stats/<slug>/data.js` for `/stats`. **Manual** — not run by gameweek.mjs |
 | **Verify** | `check-gameweek-surfaces.mjs [--auction-ids …]` — read-only; confirms every published GW has squads, scores, standings rows, Best XI flags, formation overlay and match sheets |
 
 ## Other operations

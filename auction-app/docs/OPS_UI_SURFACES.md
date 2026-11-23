@@ -25,7 +25,8 @@ Top nav ([`ParticipantNav`](../app/_components/ParticipantNav.tsx)):
 
 | Tab | Route | Purpose |
 |-----|-------|---------|
-| **Landing page** | `/` | Navy hero (logo, title, tagline) · "how it works" carousel (Bid → Construct a team → Score; one card at a time, auto-slides every 10s, pauses on hover/interaction) · "Get in the game – it's completely free" Sign up / Log in card (signed in: Go to Active Auctions) · Read the rules |
+| **Landing page** | `/` | Navy hero (logo, title, tagline) · "how it works" carousel (Bid → Construct a team → Score; one card at a time, auto-slides every 10s, pauses on hover/interaction) · "Get in the game – it's completely free" Sign up / Log in card (signed in: Go to Active Auctions) · **Champions League stats** card → `/stats` (everyone, logged in or not) · Read the rules |
+| **HFW Stats** (public) | `/stats` | Static dashboard `public/hfw-stats/<slug>/index.html`, no login: tabs Raw stats · Per 90 · Compare (scatter) · Goalkeepers. Football stats only — never points, prices or managers. Updated only when `scripts/build-public-stats.mjs` is run and committed. Linked from the landing page and the **Stats** button at the right of `ParticipantNav` |
 | **Log in / Sign up / password reset** | `/login`, `/signup`, `/forgot-password`, `/reset-password` | Shared `AuthShell` card: navy header (logo → home, eyebrow, title), white form body with sky stripe, gradient submit, footer links + "← Back to home" pill. Sign up asks for **Name** (real name, not a handle — InfoTip; stored as `display_name`), Email, Password |
 | **Active Auctions** | `/dashboard` | Current leagues + join code |
 | **Archives** | `/archives` | Completed leagues → Leaderboard / Match scores / Open auction |

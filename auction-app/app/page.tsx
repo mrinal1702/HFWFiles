@@ -106,6 +106,33 @@ export default async function Home() {
         )}
       </section>
 
+      <a
+        href="/stats"
+        className="group relative mt-6 flex items-center gap-4 overflow-hidden rounded-2xl border border-sky-100 bg-white p-5 pl-6 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md sm:p-6 sm:pl-7"
+      >
+        <span aria-hidden className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-emerald-400 to-sky-600" />
+        <span
+          aria-hidden
+          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sky-100 text-sky-700 ring-1 ring-sky-200"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-6 w-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 20V10m6 10V4m6 16v-7m4 7H2" />
+          </svg>
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block font-display text-xl font-semibold uppercase tracking-wide text-slate-900">
+            Champions League stats
+          </span>
+          <span className="mt-0.5 block text-sm text-slate-600">
+            Tackles, key passes, dribbles, aerials and more: totals, per 90 and head-to-head charts. Free, no
+            account needed.
+          </span>
+        </span>
+        <span aria-hidden className="text-2xl text-sky-600 transition group-hover:translate-x-1">
+          →
+        </span>
+      </a>
+
       <p className="mt-6 text-center">
         <Link
           href="/rules"

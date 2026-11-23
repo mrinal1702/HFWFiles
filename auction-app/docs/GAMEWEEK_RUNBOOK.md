@@ -89,6 +89,14 @@ node scripts/gameweek.mjs best-xi --competition $C --round $R --apply  # publish
 `--apply` also runs `scripts/build-auction-stats.mjs --through $R`, which writes
 `auction-app/data/competitions/<slug>/stats/*.json` for the in-auction **Stats** page (read-only on Supabase).
 
+### Optional: public HFW Stats dashboard (`/stats`)
+Not run by `gameweek.mjs` — update it when you choose (normally once the gameweek is fully scored):
+```bash
+node scripts/build-public-stats.mjs --competition $C --through $R --dry-run
+node scripts/build-public-stats.mjs --competition $C --through $R
+```
+Writes `auction-app/public/hfw-stats/<slug>/data.js` (reads the raw FotMob files in the match folders; no database). Commit it to publish.
+
 ## 7. Verify, then commit + push (Vercel deploys)
 ```bash
 node scripts/gameweek.mjs verify --competition $C --round $R

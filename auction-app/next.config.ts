@@ -15,6 +15,11 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/**": ["./data/**/*"],
   },
+  // Public HFW Stats dashboard (static page in public/hfw-stats/, built by scripts/build-public-stats.mjs).
+  // Not permanent, so /stats can point at a new competition later.
+  async redirects() {
+    return [{ source: "/stats", destination: "/hfw-stats/uefa-cl-2026-27/index.html", permanent: false }];
+  },
   images: {
     remotePatterns: [
       {

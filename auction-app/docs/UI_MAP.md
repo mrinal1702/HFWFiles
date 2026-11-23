@@ -38,7 +38,8 @@ All under `app/auctions/[auctionId]/` unless noted. Shared pieces live in `app/a
 | Leaderboard | `/leaderboard` | `leaderboard/page.tsx` | `leaderboard/_components/*` (StandingsTable, GwPointsView, GwSquadTable…) |
 | Stats | `/stats` | `stats/page.tsx` | `stats/_components/AuctionStatsClient.tsx`; data `lib/stats/auction-stats.ts` (precomputed files) |
 | Player detail | `/players/[playerId]` | `players/[playerId]/page.tsx` | — |
-| Landing page | `/` | `app/page.tsx` (hero, step copy in `STEPS`, Sign up / Log in card) | `app/_components/HowItWorksCarousel.tsx` (one card at a time on all screens, auto-slides every 10s, arrows on `sm+`) |
+| Public HFW Stats (no login) | `/stats` → redirect (`next.config.ts`) to `/hfw-stats/uefa-cl-2026-27/index.html` | `public/hfw-stats/<slug>/index.html` (static, self-contained HTML/JS — not a Next page) | data `public/hfw-stats/<slug>/data.js`, built by `scripts/build-public-stats.mjs`; football stats only, no auction data |
+| Landing page | `/` | `app/page.tsx` (hero, step copy in `STEPS`, Sign up / Log in card, Champions League stats card → `/stats`) | `app/_components/HowItWorksCarousel.tsx` (one card at a time on all screens, auto-slides every 10s, arrows on `sm+`) |
 | Dashboard (post-login) | `/dashboard` | `app/dashboard/page.tsx` | `JoinAuctionForm.tsx`, `ProfileAvatar.tsx`, `app/_components/TrophyCabinet.tsx` |
 | Login / signup / password reset | `/login`, `/signup`, `/forgot-password`, `/reset-password` | `app/login/page.tsx`, `app/signup/page.tsx`, `app/forgot-password/page.tsx`, `app/reset-password/page.tsx` | `app/_components/AuthShell.tsx` (navy header card + logo, `AuthField` with optional InfoTip, `AuthError`, footer pills) |
 
