@@ -1,0 +1,24 @@
+{
+  "fotmob_match_id": 5795431,
+  "home_team": "Liverpool",
+  "home_team_id": 8650,
+  "away_team": "Nottingham Forest",
+  "away_team_id": 10203,
+  "kickoff_utc": "2026-08-29T11:30:00Z",
+  "status": "scored",
+  "players": {
+    "Liverpool": 27,
+    "Nottingham Forest": 29
+  },
+  "player_list_sources": [
+    "master_player_list.csv"
+  ],
+  "built_at": "2026-11-23T16:54:40Z",
+  "scored_at": "2026-11-23T16:54:44Z",
+  "score_summary": {
+    "final_points_rows": 38,
+    "pool_players": 56,
+    "pool_players_who_played": 35,
+    "scored_but_not_in_pool": 3
+  }
+}

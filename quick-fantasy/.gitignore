@@ -1,0 +1,3 @@
+# Raw FotMob JSON + intermediate CSVs: large and re-creatable from the match id
+data/fixtures/*/raw/
+__pycache__/

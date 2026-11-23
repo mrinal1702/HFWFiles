@@ -15,6 +15,7 @@ inputs, outputs and rules. Do not edit outside the folder you were asked to work
 | Raw match data, FinalPoints, player pools, per-competition records | `competitions/` | `competitions/CLAUDE.md` |
 | Website UI, Supabase reads/writes, commissioner ops scripts | `auction-app/` | `auction-app/CLAUDE.md` |
 | Deploy, architecture context | `docs/` | `docs/context/` |
+| Quick Fantasy (separate 20-min mini auction game; same site + login, own `quick` DB schema — never touches main-game tables) | `quick-fantasy/` | `quick-fantasy/CLAUDE.md` |
 
 ## How the pieces connect (fixed handoffs — keep these formats stable)
 
