@@ -622,6 +622,14 @@
       "gw": 5,
       "fotmob_match_id": 6106307,
       "file": "Feyenoord_FCPorto_FinalPoints.csv"
+    },
+    {
+      "slug": "manchester-city-napoli",
+      "title": "Manchester City vs Napoli",
+      "subtitle": "UEFA Champions League · Matchweek 5",
+      "gw": 5,
+      "fotmob_match_id": 6106256,
+      "file": "ManchesterCity_Napoli_FinalPoints.csv"
     }
   ]
 }

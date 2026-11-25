@@ -53,6 +53,13 @@
       "home_team": "Feyenoord",
       "away_team": "FC Porto",
       "status": "scored"
+    },
+    {
+      "match_slug": "manchester-city-napoli",
+      "fotmob_match_id": 6106256,
+      "home_team": "Manchester City",
+      "away_team": "Napoli",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

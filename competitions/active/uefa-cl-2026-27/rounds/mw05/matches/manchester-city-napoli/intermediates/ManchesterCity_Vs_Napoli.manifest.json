@@ -1,0 +1,15 @@
+{
+  "match_id": 6106256,
+  "home_team": "Manchester City",
+  "away_team": "Napoli",
+  "source_url": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-napoli/2s1i6l#6106256:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw05/matches/manchester-city-napoli/intermediates/ManchesterCity_Vs_Napoli.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-napoli/2s1i6l",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-napoli/2s1i6l#6106256:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-napoli/2s1i6l#6106256:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/manchester-city-vs-napoli/2s1i6l#6106256:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106256"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

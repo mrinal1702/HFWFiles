@@ -1,0 +1,37 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+942368,Jérémy Doku,8456,Manchester City,3,forward,45.96,5.0,1.1666666666666667,52.126666666666665,35.0,2,2,6.0,58.126666666666665
+1561552,Ayyoub Bouaddi,8456,Manchester City,2,midfielder,41.41,1.9,3.0,46.309999999999995,90.0,2,2,5.0,51.309999999999995
+942549,Billy Gilmour,9875,Napoli,2,midfielder,38.12599999999999,3.0,3.0,44.12599999999999,90.0,2,2,5.0,49.12599999999999
+1104053,Rayan Cherki,8456,Manchester City,2,midfielder,30.662,1.9,3.0,35.562,90.0,2,2,5.0,40.562
+1070712,Joško Gvardiol,8456,Manchester City,1,defender,32.125,3.0,3.0,38.125,90.0,2,2,0.0,38.125
+843099,Scott McTominay,9875,Napoli,2,midfielder,27.014,1.9,3.0,31.913999999999998,90.0,2,2,5.0,36.914
+729093,Mathías Olivera,9875,Napoli,1,defender,26.355000000000004,3.0,3.0,32.355000000000004,90.0,2,2,0.0,32.355000000000004
+965764,Iliman Ndiaye,8456,Manchester City,3,forward,19.34,5.0,0.9,25.24,27.0,2,1,6.0,31.24
+1199272,Rasmus Højlund,9875,Napoli,3,forward,21.83,3.2,2.5,27.529999999999998,75.0,1,1,3.0,30.529999999999998
+1089691,Elliot Anderson,8456,Manchester City,2,midfielder,23.642000000000003,-1.4000000000000004,3.0,25.242000000000004,90.0,2,2,5.0,30.242000000000004
+837341,Noa Lang,9875,Napoli,2,midfielder,17.894000000000002,3.0,3.0,23.894000000000002,90.0,2,2,5.0,28.894000000000002
+873573,Sam Beukema,9875,Napoli,1,defender,21.135,3.0,3.0,27.135,90.0,2,2,0.0,27.135
+169200,Kevin De Bruyne,9875,Napoli,2,midfielder,15.476000000000003,3.0,2.5,20.976000000000003,75.0,1,1,5.0,25.976000000000003
+415539,Matteo Politano,9875,Napoli,2,midfielder,15.388,1.9,3.0,20.288,90.0,2,2,5.0,25.288
+844425,Marc Guéhi,8456,Manchester City,1,defender,19.15,3.0,3.0,25.15,90.0,2,2,0.0,25.15
+955529,Matheus Nunes,8456,Manchester City,1,defender,18.25,3.0,3.0,24.25,90.0,2,2,0.0,24.25
+215242,Leonardo Spinazzola,9875,Napoli,1,defender,20.63,0.6000000000000001,3.0,24.23,90.0,2,2,0.0,24.23
+1300526,Nico O'Reilly,8456,Manchester City,1,defender,16.189999999999998,3.0,3.0,22.189999999999998,90.0,2,2,0.0,22.189999999999998
+544693,Amir Rrahmani,9875,Napoli,1,defender,13.170000000000002,3.0,3.0,19.17,90.0,2,2,0.0,19.17
+737066,Erling Haaland,8456,Manchester City,3,forward,4.63,5.0,3.0,12.629999999999999,90.0,2,2,6.0,18.63
+1137705,Enzo Fernández,8456,Manchester City,2,midfielder,9.062000000000001,3.0,2.1,14.162,63.0,0,1,3.0,17.162
+1721789,Allan,8456,Manchester City,2,midfielder,6.0440000000000005,1.9,1.8333333333333333,9.777333333333335,55.0,0,0,5.0,14.777333333333335
+612863,Frank Anguissa,9875,Napoli,2,midfielder,6.158,3.0,0.5,9.658000000000001,15.0,1,1,2.5,12.158000000000001
+1355574,Giovane Nascimento,9875,Napoli,3,forward,2.93,4.1,0.5,7.529999999999999,15.0,1,1,3.0,10.53
+614006,Rúben Dias,8456,Manchester City,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+933845,Rayan Aït-Nouri,8456,Manchester City,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1288450,Rico Lewis,8456,Manchester City,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1362998,Abdukodir Khusanov,8456,Manchester City,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1580952,Vitor Reis,8456,Manchester City,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+239219,Mateo Kovačić,8456,Manchester City,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+793066,David Neres,9875,Napoli,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1726962,Floyd Samba,8456,Manchester City,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1844653,Andrea Chiummariello,9875,Napoli,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+815006,Phil Foden,8456,Manchester City,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1212630,Lorenzo Lucca,9875,Napoli,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1680328,Ryan McAidoo,8456,Manchester City,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
