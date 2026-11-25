@@ -1,0 +1,44 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Pablo Rosario,664226,FC Porto,midfielder,53.312000000000005,7.0,0.0,60
+Anis Hadj Moussa,1576876,Feyenoord,forward,44.940000000000005,0.0,0.0,45
+Jan Bednarek,490868,FC Porto,defender,30.895,10.0,0.0,41
+Givairo Read,1351133,Feyenoord,defender,34.425,5.0,0.0,39
+Gjivai Zechiël,1523822,Feyenoord,midfielder,34.79,3.0,0.0,38
+Oussama Targhalline,1228273,Feyenoord,midfielder,34.612,3.0,0.0,38
+Luciano Valente,1256180,Feyenoord,forward,37.14333333333333,0.0,0.0,37
+Jakub Kiwior,1021834,FC Porto,defender,26.295,10.0,0.0,36
+Gabriel Veiga,1116734,FC Porto,midfielder,25.19533333333333,7.0,0.0,32
+Thijs Kraaijeveld,1553376,Feyenoord,defender,26.57,5.0,0.0,32
+Zaidu Sanusi,1079056,FC Porto,defender,19.44,10.0,0.0,29
+Mika Mármol,1225450,Feyenoord,defender,22.52,5.0,0.0,28
+Oskar Pietuszewski,1647807,FC Porto,forward,22.556666666666665,3.0,0.0,26
+Pepê,850356,FC Porto,forward,21.32,3.0,0.0,24
+Victor Froholdt,1436856,FC Porto,midfielder,16.364,7.0,0.0,23
+Alberto Costa,1387439,FC Porto,defender,12.238333333333332,10.0,0.0,22
+Samuel Aghehowa,1414859,FC Porto,forward,19.156666666666663,0.0,0.0,19
+Santiago Giménez,954092,FC Porto,forward,15.123333333333331,3.0,0.0,18
+Javi López,1159181,Feyenoord,defender,11.310000000000002,5.0,0.0,16
+Shaqueel van Persie,1553365,Feyenoord,forward,16.27,0.0,0.0,16
+Charles Vanhoutte,952057,Feyenoord,midfielder,13.023333333333332,3.0,0.0,16
+Gonçalo Borges,1080520,Feyenoord,forward,15.706666666666663,0.0,0.0,16
+Nacho Ferri,1382019,Feyenoord,forward,14.82,0.0,0.0,15
+Seko Fofana,602211,FC Porto,midfielder,7.914666666666666,2.5,0.0,10
+William Gomes,1580427,FC Porto,forward,9.953333333333331,0.0,0.0,10
+In-Beom Hwang,623698,FC Porto,midfielder,5.962,2.5,0.0,8
+Martim Fernandes,1404949,FC Porto,defender,3.231666666666667,5.0,0.0,8
+Tobias van den Elshout,1692856,Feyenoord,forward,7.436666666666666,0.0,0.0,7
+Sem Steijn,947898,Feyenoord,midfielder,3.3160000000000003,2.5,0.0,6
+Mats Deijl,630494,Feyenoord,defender,0.0,0.0,0.0,0
+Gijs Smal,883503,Feyenoord,defender,0.0,0.0,0.0,0
+Nehuén Pérez,902383,FC Porto,defender,0.0,0.0,0.0,0
+Francisco Moura,919374,FC Porto,defender,0.0,0.0,0.0,0
+Tsuyoshi Watanabe,1023887,Feyenoord,defender,0.0,0.0,0.0,0
+Souza,1636513,FC Porto,defender,0.0,0.0,0.0,0
+Alan Varela,1186684,FC Porto,midfielder,0.0,0.0,0.0,0
+André Silva,388523,FC Porto,forward,0.0,0.0,0.0,0
+Reiss Nelson,748382,Feyenoord,forward,0.0,0.0,0.0,0
+Borja Sainz,1083204,FC Porto,forward,0.0,0.0,0.0,0
+Gaoussou Diarra,1675966,Feyenoord,forward,0.0,0.0,0.0,0
+Jerayno Schaken,1876640,Feyenoord,forward,0.0,0.0,0.0,0
+FC Porto Keepers,9773,FC Porto,goalkeeper,30.040000000000003,18.0,0.0,48
+Feyenoord Keepers,10235,Feyenoord,goalkeeper,18.32,12.0,0.0,30

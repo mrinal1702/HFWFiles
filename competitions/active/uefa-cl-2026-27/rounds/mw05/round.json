@@ -46,6 +46,13 @@
       "home_team": "Como",
       "away_team": "AEK Athens",
       "status": "scored"
+    },
+    {
+      "match_slug": "feyenoord-fc-porto",
+      "fotmob_match_id": 6106307,
+      "home_team": "Feyenoord",
+      "away_team": "FC Porto",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

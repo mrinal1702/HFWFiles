@@ -614,6 +614,14 @@
       "gw": 5,
       "fotmob_match_id": 6106412,
       "file": "Como_AEKAthens_FinalPoints.csv"
+    },
+    {
+      "slug": "feyenoord-fc-porto",
+      "title": "Feyenoord vs FC Porto",
+      "subtitle": "UEFA Champions League · Matchweek 5",
+      "gw": 5,
+      "fotmob_match_id": 6106307,
+      "file": "Feyenoord_FCPorto_FinalPoints.csv"
     }
   ]
 }

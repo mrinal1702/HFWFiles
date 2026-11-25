@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw05",
+  "match_slug": "feyenoord-fc-porto",
+  "fotmob_match_id": 6106307,
+  "source_url": "https://www.fotmob.com/en-GB/matches/fc-porto-vs-feyenoord/3b6jq9#6106307:tab=stats",
+  "home_team": "Feyenoord",
+  "away_team": "FC Porto",
+  "raw_json_path": "intermediates/Feyenoord_Vs_FCPorto.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

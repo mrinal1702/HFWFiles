@@ -1,0 +1,15 @@
+{
+  "match_id": 6106307,
+  "home_team": "Feyenoord",
+  "away_team": "FC Porto",
+  "source_url": "https://www.fotmob.com/en-GB/matches/fc-porto-vs-feyenoord/3b6jq9#6106307:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw05/matches/feyenoord-fc-porto/intermediates/Feyenoord_Vs_FCPorto.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/fc-porto-vs-feyenoord/3b6jq9",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/fc-porto-vs-feyenoord/3b6jq9#6106307:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/fc-porto-vs-feyenoord/3b6jq9#6106307:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/fc-porto-vs-feyenoord/3b6jq9#6106307:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106307"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}
