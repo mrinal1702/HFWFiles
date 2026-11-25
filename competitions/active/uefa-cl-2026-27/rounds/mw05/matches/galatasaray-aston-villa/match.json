@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw05",
+  "match_slug": "galatasaray-aston-villa",
+  "fotmob_match_id": 6106339,
+  "source_url": "https://www.fotmob.com/en-GB/matches/galatasaray-vs-aston-villa/2y822y#6106339:tab=stats",
+  "home_team": "Galatasaray",
+  "away_team": "Aston Villa",
+  "raw_json_path": "intermediates/Galatasaray_Vs_AstonVilla.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

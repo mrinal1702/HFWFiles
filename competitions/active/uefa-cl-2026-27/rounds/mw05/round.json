@@ -25,6 +25,13 @@
       "home_team": "Bodø/Glimt",
       "away_team": "LASK",
       "status": "scored"
+    },
+    {
+      "match_slug": "galatasaray-aston-villa",
+      "fotmob_match_id": 6106339,
+      "home_team": "Galatasaray",
+      "away_team": "Aston Villa",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

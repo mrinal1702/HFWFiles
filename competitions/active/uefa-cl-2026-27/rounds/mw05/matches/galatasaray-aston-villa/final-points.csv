@@ -1,0 +1,40 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Wilfried Singo,1027472,Galatasaray,defender,30.605,10.0,0.0,41
+Davinson Sánchez,643533,Galatasaray,defender,26.76,10.0,0.0,37
+Ismail Jakobs,906945,Galatasaray,defender,25.13,10.0,0.0,35
+Lucas Torreira,592909,Galatasaray,midfielder,28.10066666666667,7.0,0.0,35
+Tyrone Mings,419664,Aston Villa,defender,26.355,5.0,0.0,31
+Yunus Akgün,845991,Galatasaray,midfielder,23.142,7.0,0.0,30
+Victor Nilsson Lindelöf,258269,Aston Villa,defender,22.72,5.0,0.0,28
+Mario Lemina,421786,Galatasaray,midfielder,21.332666666666668,5.0,0.0,26
+Johan Manzambi,1520063,Aston Villa,midfielder,19.190666666666665,5.0,0.0,24
+Abdülkerim Bardakci,291399,Galatasaray,defender,13.585,10.0,0.0,24
+Taylor Harwood-Bellis,966021,Aston Villa,defender,16.854999999999997,5.0,0.0,22
+Deniz Gül,1406300,Galatasaray,forward,18.82333333333333,3.0,0.0,22
+John McGinn,356406,Aston Villa,midfielder,15.784666666666666,5.0,0.0,21
+Boubacar Kamara,816325,Aston Villa,midfielder,17.439333333333334,3.0,0.0,20
+Barış Alper Yılmaz,890232,Galatasaray,forward,17.01,3.0,0.0,20
+Gabriel Sara,902710,Galatasaray,midfielder,15.447333333333331,4.5,0.0,20
+Ian Maatsen,966026,Aston Villa,defender,14.655,5.0,0.0,20
+Aleksey Batrakov,1504343,Galatasaray,midfielder,13.694666666666668,5.0,0.0,19
+João Gomes,1174672,Aston Villa,midfielder,11.822000000000005,5.0,0.0,17
+Eren Elmalı,1041660,Galatasaray,midfielder,10.840666666666667,5.0,0.0,16
+Nicolas Jackson,1197347,Aston Villa,forward,15.21,0.0,0.0,15
+Lesley Ugochukwu,1200631,Galatasaray,midfielder,10.393333333333333,4.5,0.0,15
+Leon Goretzka,343748,Aston Villa,midfielder,13.322,0.5,0.0,14
+Alysson Edward,1656860,Aston Villa,midfielder,4.892,5.0,0.0,10
+George Hemmings,1607333,Aston Villa,midfielder,8.637333333333334,0.5,0.0,9
+Ibrahim Mbaye,1593857,Aston Villa,forward,8.22,0.0,0.0,8
+Emiliano Buendía,610184,Aston Villa,forward,6.296666666666667,0.0,0.0,6
+Ross Barkley,215384,Aston Villa,midfielder,2.571333333333333,0.5,0.0,3
+Aaron Wan-Bissaka,760320,Aston Villa,defender,0.0,0.0,0.0,0
+Pau Torres,792645,Aston Villa,defender,0.0,0.0,0.0,0
+El Chadaille Bitshiabu,1173788,Galatasaray,defender,0.0,0.0,0.0,0
+Lamare Bogarde,1190033,Aston Villa,defender,0.0,0.0,0.0,0
+İlkay Gündoğan,178818,Galatasaray,midfielder,0.0,0.0,0.0,0
+Renato Nhaga,1741323,Galatasaray,midfielder,0.0,0.0,0.0,0
+Leroy Sané,530859,Galatasaray,forward,0.0,0.0,0.0,0
+Tammy Abraham,749661,Aston Villa,forward,0.0,0.0,0.0,0
+Berat Luş,1682656,Galatasaray,forward,0.0,0.0,0.0,0
+Aston Villa Keepers,10252,Aston Villa,goalkeeper,18.92,12.0,0.0,31
+Galatasaray Keepers,8637,Galatasaray,goalkeeper,7.8,18.0,0.0,26
