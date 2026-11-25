@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw05",
+  "match_slug": "slovan-bratislava-real-betis",
+  "fotmob_match_id": 6106394,
+  "source_url": "https://www.fotmob.com/en-GB/matches/slovan-bratislava-vs-real-betis/1rnlyk#6106394:tab=stats",
+  "home_team": "Slovan Bratislava",
+  "away_team": "Real Betis",
+  "raw_json_path": "intermediates/SlovanBratislava_Vs_RealBetis.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

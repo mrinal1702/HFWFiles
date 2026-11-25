@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Ángel Ortiz,1580522,Real Betis,defender,47.43,10.0,0.0,57
+Juan Hernández,852071,Real Betis,forward,45.75,6.0,0.0,52
+Diego Llorente,420568,Real Betis,defender,37.34,10.0,0.0,47
+Isco,191315,Real Betis,midfielder,37.008,9.0,0.0,46
+Nelson Deossa,1315711,Real Betis,midfielder,33.948,9.0,0.0,43
+Fran García,750028,Real Betis,defender,25.985,10.0,0.0,36
+Valentín Gómez,1338016,Real Betis,defender,25.97,10.0,0.0,36
+Abdessamad Ezzalzouli,1209399,Real Betis,midfielder,25.38,9.0,0.0,34
+Svetozar Marković,922722,Slovan Bratislava,defender,27.3,0.0,0.0,27
+Nino Marcelli,1449716,Slovan Bratislava,midfielder,25.877333333333333,1.0,0.0,27
+Marc Roca,640220,Real Betis,midfielder,21.914,4.5,0.0,26
+Antony,967622,Real Betis,midfielder,17.009999999999998,9.0,0.0,26
+Sandro Cruz,1045565,Slovan Bratislava,defender,24.114999999999995,0.0,0.0,24
+Peter Pokorný,951951,Slovan Bratislava,midfielder,17.756,1.0,0.0,19
+Kenan Bajrič,315814,Slovan Bratislava,defender,17.82,0.0,0.0,18
+Andraž Šporar,338136,Slovan Bratislava,forward,17.240000000000002,0.0,0.0,17
+Facundo Bernal,1436133,Real Betis,midfielder,9.826,7.0,0.0,17
+César Blackman,888966,Slovan Bratislava,defender,13.97,0.0,0.0,14
+Rahim Ibrahim,1239580,Slovan Bratislava,midfielder,12.743333333333334,1.0,0.0,14
+Álvaro Fidalgo,895954,Real Betis,midfielder,10.812,2.5,0.0,13
+Daiki Matsuoka,1023982,Slovan Bratislava,midfielder,11.004,1.0,0.0,12
+Aitor Ruibal,676533,Real Betis,defender,6.415,5.0,0.0,11
+Adam Griger,1174724,Slovan Bratislava,forward,10.38,0.0,0.0,10
+Tigran Barseghyan,552700,Slovan Bratislava,midfielder,8.059333333333335,1.0,0.0,9
+Cristian Martínez,727101,Slovan Bratislava,midfielder,6.554666666666667,2.5,0.0,9
+Rodrigo Riquelme,1072200,Real Betis,forward,9.0,0.0,0.0,9
+Alasana Yirajang,1614857,Slovan Bratislava,forward,8.356666666666666,0.0,0.0,8
+Troy Parrott,942365,Real Betis,forward,5.7700000000000005,0.0,0.0,6
+Alexej Maroš,1557209,Slovan Bratislava,forward,5.166666666666667,0.0,0.0,5
+Marc Bartra,195305,Real Betis,defender,0.0,0.0,0.0,0
+Héctor Bellerín,427438,Real Betis,defender,0.0,0.0,0.0,0
+Júnior Firpo,743192,Real Betis,defender,0.0,0.0,0.0,0
+Samuel Kozlovský,949877,Slovan Bratislava,defender,0.0,0.0,0.0,0
+Natan,1188375,Real Betis,defender,0.0,0.0,0.0,0
+Sahmkou Camara,1513367,Slovan Bratislava,defender,0.0,0.0,0.0,0
+Róbert Tománek,1699700,Slovan Bratislava,defender,0.0,0.0,0.0,0
+Pablo Fornals,683450,Real Betis,midfielder,0.0,0.0,0.0,0
+Maximilian Marko,1620242,Slovan Bratislava,midfielder,0.0,0.0,0.0,0
+Leo Hofstädter,2093218,Slovan Bratislava,midfielder,0.0,0.0,0.0,0
+Roman Čerepkai,1338948,Slovan Bratislava,forward,0.0,0.0,0.0,0
+Real Betis Keepers,8603,Real Betis,goalkeeper,14.88,18.0,0.0,33
+Slovan Bratislava Keepers,6019,Slovan Bratislava,goalkeeper,19.12,6.0,0.0,25

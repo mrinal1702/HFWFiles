@@ -74,6 +74,13 @@
       "home_team": "Real Madrid",
       "away_team": "PSV Eindhoven",
       "status": "scored"
+    },
+    {
+      "match_slug": "slovan-bratislava-real-betis",
+      "fotmob_match_id": 6106394,
+      "home_team": "Slovan Bratislava",
+      "away_team": "Real Betis",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

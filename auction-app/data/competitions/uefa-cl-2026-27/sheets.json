@@ -646,6 +646,14 @@
       "gw": 5,
       "fotmob_match_id": 6106243,
       "file": "RealMadrid_PSVEindhoven_FinalPoints.csv"
+    },
+    {
+      "slug": "slovan-bratislava-real-betis",
+      "title": "Slovan Bratislava vs Real Betis",
+      "subtitle": "UEFA Champions League · Matchweek 5",
+      "gw": 5,
+      "fotmob_match_id": 6106394,
+      "file": "SlovanBratislava_RealBetis_FinalPoints.csv"
     }
   ]
 }

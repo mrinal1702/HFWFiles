@@ -1,0 +1,41 @@
+player_id,player_name,team_id,team_name,usual_playing_position_id,role,stat_points_weighted,stat_points_dispossessed_formula,stat_points_minutes,stat_points_total,minutes_played_derived,goals_for_while_on_field,goals_against_while_on_field,endowed_points,total_points
+1580522,Ángel Ortiz,8603,Real Betis,1,defender,41.43,3.0,3.0,47.43,90.0,2,0,10.0,57.43
+852071,Juan Hernández,8603,Real Betis,3,forward,38.65,5.0,2.1,45.75,63.0,2,0,6.0,51.75
+420568,Diego Llorente,8603,Real Betis,1,defender,31.340000000000003,3.0,3.0,37.34,90.0,2,0,10.0,47.34
+191315,Isco,8603,Real Betis,2,midfielder,33.008,1.9,2.1,37.008,63.0,2,0,9.0,46.008
+1315711,Nelson Deossa,8603,Real Betis,2,midfielder,27.948,3.0,3.0,33.948,90.0,2,0,9.0,42.948
+750028,Fran García,8603,Real Betis,1,defender,19.985,3.0,3.0,25.985,90.0,2,0,10.0,35.985
+1338016,Valentín Gómez,8603,Real Betis,1,defender,19.97,3.0,3.0,25.97,90.0,2,0,10.0,35.97
+1209399,Abdessamad Ezzalzouli,8603,Real Betis,2,midfielder,21.68,0.7999999999999998,2.9,25.38,87.0,2,0,9.0,34.379999999999995
+922722,Svetozar Marković,6019,Slovan Bratislava,1,defender,21.3,3.0,3.0,27.3,90.0,0,2,0.0,27.3
+1449716,Nino Marcelli,6019,Slovan Bratislava,2,midfielder,22.744,0.7999999999999998,2.3333333333333335,25.877333333333333,70.0,0,2,1.0,26.877333333333333
+640220,Marc Roca,8603,Real Betis,2,midfielder,17.413999999999998,3.0,1.5,21.913999999999998,44.0,1,0,4.5,26.413999999999998
+967622,Antony,8603,Real Betis,2,midfielder,14.809999999999999,-0.30000000000000027,2.5,17.009999999999998,76.0,2,0,9.0,26.009999999999998
+1045565,Sandro Cruz,6019,Slovan Bratislava,1,defender,18.114999999999995,3.0,3.0,24.114999999999995,90.0,0,2,0.0,24.114999999999995
+951951,Peter Pokorný,6019,Slovan Bratislava,2,midfielder,13.956000000000001,0.7999999999999998,3.0,17.756,90.0,0,2,1.0,18.756
+315814,Kenan Bajrič,6019,Slovan Bratislava,1,defender,11.819999999999999,3.0,3.0,17.82,90.0,0,2,0.0,17.82
+338136,Andraž Šporar,6019,Slovan Bratislava,3,forward,9.74,5.0,2.5,17.240000000000002,76.0,0,2,0.0,17.240000000000002
+1436133,Facundo Bernal,8603,Real Betis,2,midfielder,5.3260000000000005,3.0,1.5,9.826,46.0,1,0,7.0,16.826
+888966,César Blackman,6019,Slovan Bratislava,1,defender,9.17,1.8,3.0,13.97,90.0,0,2,0.0,13.97
+1239580,Rahim Ibrahim,6019,Slovan Bratislava,2,midfielder,9.61,0.7999999999999998,2.3333333333333335,12.743333333333334,70.0,0,2,1.0,13.743333333333334
+895954,Álvaro Fidalgo,8603,Real Betis,2,midfielder,6.912,3.0,0.9,10.812,27.0,0,0,2.5,13.312
+1023982,Daiki Matsuoka,6019,Slovan Bratislava,2,midfielder,6.103999999999999,1.9,3.0,11.004,90.0,0,2,1.0,12.004
+676533,Aitor Ruibal,8603,Real Betis,1,defender,2.915,3.0,0.5,6.415,14.0,0,0,5.0,11.415
+1174724,Adam Griger,6019,Slovan Bratislava,3,forward,4.88,5.0,0.5,10.379999999999999,14.0,0,0,0.0,10.379999999999999
+552700,Tigran Barseghyan,6019,Slovan Bratislava,2,midfielder,2.2260000000000004,3.0,2.8333333333333335,8.059333333333335,85.0,0,2,1.0,9.059333333333335
+727101,Cristian Martínez,6019,Slovan Bratislava,2,midfielder,2.8880000000000003,3.0,0.6666666666666666,6.554666666666667,20.0,0,0,2.5,9.054666666666666
+1072200,Rodrigo Riquelme,8603,Real Betis,3,forward,3.9,5.0,0.1,9.0,3.0,0,0,0.0,9.0
+1614857,Alasana Yirajang,6019,Slovan Bratislava,3,forward,2.69,5.0,0.6666666666666666,8.356666666666666,20.0,0,0,0.0,8.356666666666666
+942365,Troy Parrott,8603,Real Betis,3,forward,-0.13,5.0,0.9,5.7700000000000005,27.0,0,0,0.0,5.7700000000000005
+1557209,Alexej Maroš,6019,Slovan Bratislava,3,forward,0.0,5.0,0.16666666666666666,5.166666666666667,5.0,0,0,0.0,5.166666666666667
+195305,Marc Bartra,8603,Real Betis,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+427438,Héctor Bellerín,8603,Real Betis,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+743192,Júnior Firpo,8603,Real Betis,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+949877,Samuel Kozlovský,6019,Slovan Bratislava,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1188375,Natan,8603,Real Betis,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1513367,Sahmkou Camara,6019,Slovan Bratislava,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1699700,Róbert Tománek,6019,Slovan Bratislava,1,defender,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+683450,Pablo Fornals,8603,Real Betis,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1620242,Maximilian Marko,6019,Slovan Bratislava,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+2093218,Leo Hofstädter,6019,Slovan Bratislava,2,midfielder,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
+1338948,Roman Čerepkai,6019,Slovan Bratislava,3,forward,0.0,0.0,0.0,0.0,0.0,0,0,0.0,0.0
