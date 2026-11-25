@@ -60,6 +60,13 @@
       "home_team": "Manchester City",
       "away_team": "Napoli",
       "status": "scored"
+    },
+    {
+      "match_slug": "rb-leipzig-lens",
+      "fotmob_match_id": 6106325,
+      "home_team": "RB Leipzig",
+      "away_team": "Lens",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

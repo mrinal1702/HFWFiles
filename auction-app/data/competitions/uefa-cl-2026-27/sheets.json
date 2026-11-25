@@ -630,6 +630,14 @@
       "gw": 5,
       "fotmob_match_id": 6106256,
       "file": "ManchesterCity_Napoli_FinalPoints.csv"
+    },
+    {
+      "slug": "rb-leipzig-lens",
+      "title": "RB Leipzig vs Lens",
+      "subtitle": "UEFA Champions League · Matchweek 5",
+      "gw": 5,
+      "fotmob_match_id": 6106325,
+      "file": "RBLeipzig_Lens_FinalPoints.csv"
     }
   ]
 }
