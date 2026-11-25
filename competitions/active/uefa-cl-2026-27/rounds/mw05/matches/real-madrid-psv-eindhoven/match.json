@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw05",
+  "match_slug": "real-madrid-psv-eindhoven",
+  "fotmob_match_id": 6106243,
+  "source_url": "https://www.fotmob.com/en-GB/matches/real-madrid-vs-psv-eindhoven/2gts0l#6106243:tab=stats",
+  "home_team": "Real Madrid",
+  "away_team": "PSV Eindhoven",
+  "raw_json_path": "intermediates/RealMadrid_Vs_PSVEindhoven.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

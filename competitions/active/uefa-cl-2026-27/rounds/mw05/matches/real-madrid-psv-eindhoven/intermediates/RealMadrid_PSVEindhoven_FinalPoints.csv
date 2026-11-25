@@ -1,0 +1,42 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Kylian Mbappé,701154,Real Madrid,forward,70.13,15.0,0.0,85
+Jude Bellingham,1077894,Real Madrid,midfielder,49.234,12.5,0.0,62
+Arda Güler,1253890,Real Madrid,midfielder,45.24733333333334,9.0,0.0,54
+Yan Diomande,1735453,Real Madrid,midfielder,44.57666666666666,9.0,0.0,54
+Federico Valverde,743533,Real Madrid,defender,47.715,5.0,0.0,53
+Vinícius Júnior,846033,Real Madrid,midfielder,33.8,13.0,0.0,47
+Marc Cucurella,873289,Real Madrid,defender,30.185,5.0,0.0,35
+Ivan Perišić,163670,PSV,midfielder,26.088,7.0,0.0,33
+Sven Mijnans,1035643,PSV,forward,29.709999999999997,3.0,0.0,33
+Bernardo Silva,488139,Real Madrid,midfielder,18.922,13.0,0.0,32
+Guus Til,774947,PSV,forward,25.82,3.0,0.0,29
+Aurélien Tchouaméni,914458,Real Madrid,midfielder,20.39,3.0,0.0,23
+Brahim Díaz,750027,Real Madrid,forward,16.763333333333332,6.0,0.0,23
+Éder Militão,844415,Real Madrid,defender,16.155,5.0,0.0,21
+Antonio Rüdiger,276738,Real Madrid,defender,12.195,5.0,0.0,17
+Paul Wanner,1327149,PSV,midfielder,15.613333333333337,1.0,0.0,17
+Dean Huijsen,1367619,Real Madrid,defender,11.37,5.0,0.0,16
+Ibrahima Konaté,820140,Real Madrid,defender,10.845,5.0,0.0,16
+Kodai Sano,1337282,PSV,midfielder,13.842,1.0,0.0,15
+Filip Kostić,281012,PSV,defender,18.96833333333333,-5.0,0.0,14
+Eduardo Camavinga,1015185,Real Madrid,midfielder,5.794666666666667,6.5,0.0,12
+Esmir Bajraktarević,1346860,PSV,forward,11.51,0.0,0.0,12
+Ruben van Bommel,1359970,PSV,midfielder,8.284666666666666,1.0,0.0,9
+Noah Fernandez,1699551,PSV,midfielder,10.122666666666666,-1.5,0.0,9
+Lutsharel Geertruida,881640,PSV,defender,21.815000000000005,-15.0,0.0,7
+Sergiño Dest,892816,PSV,defender,19.66,-15.0,0.0,5
+Ayoni Santos,1678727,PSV,midfielder,6.081333333333333,-1.5,0.0,5
+Armando Obispo,794244,PSV,defender,19.44,-15.0,0.0,4
+Yarek Gąsiorowski,1506480,PSV,defender,7.976666666666667,-5.0,0.0,3
+Ryan Flamingo,1386551,PSV,defender,4.21,-5.0,0.0,0
+Denzel Dumfries,593118,Real Madrid,defender,0.0,0.0,0.0,0
+Trent Alexander-Arnold,760712,Real Madrid,defender,0.0,0.0,0.0,0
+Kilian Sildillia,1124533,PSV,defender,0.0,0.0,0.0,0
+Álvaro Carreras,1190025,Real Madrid,defender,0.0,0.0,0.0,0
+Thiago Pitarch,1796908,Real Madrid,midfielder,0.0,0.0,0.0,0
+Sam Lammers,665164,PSV,forward,0.0,0.0,0.0,0
+Dennis Man,805767,PSV,forward,0.0,0.0,0.0,0
+Ricardo Pepi,1036401,PSV,forward,0.0,0.0,0.0,0
+Carlos Espí,1610744,Real Madrid,forward,0.0,0.0,0.0,0
+Real Madrid Keepers,8633,Real Madrid,goalkeeper,9.54,12.0,0.0,22
+PSV Keepers,8640,PSV,goalkeeper,21.4,-12.0,0.0,9

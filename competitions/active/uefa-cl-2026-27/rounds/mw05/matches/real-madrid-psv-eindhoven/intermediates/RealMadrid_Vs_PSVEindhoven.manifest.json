@@ -1,0 +1,15 @@
+{
+  "match_id": 6106243,
+  "home_team": "Real Madrid",
+  "away_team": "PSV Eindhoven",
+  "source_url": "https://www.fotmob.com/en-GB/matches/real-madrid-vs-psv-eindhoven/2gts0l#6106243:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw05/matches/real-madrid-psv-eindhoven/intermediates/RealMadrid_Vs_PSVEindhoven.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/real-madrid-vs-psv-eindhoven/2gts0l",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/real-madrid-vs-psv-eindhoven/2gts0l#6106243:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/real-madrid-vs-psv-eindhoven/2gts0l#6106243:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/real-madrid-vs-psv-eindhoven/2gts0l#6106243:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106243"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

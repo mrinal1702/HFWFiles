@@ -67,6 +67,13 @@
       "home_team": "RB Leipzig",
       "away_team": "Lens",
       "status": "scored"
+    },
+    {
+      "match_slug": "real-madrid-psv-eindhoven",
+      "fotmob_match_id": 6106243,
+      "home_team": "Real Madrid",
+      "away_team": "PSV Eindhoven",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

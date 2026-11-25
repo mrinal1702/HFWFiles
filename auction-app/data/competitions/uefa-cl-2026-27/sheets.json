@@ -638,6 +638,14 @@
       "gw": 5,
       "fotmob_match_id": 6106325,
       "file": "RBLeipzig_Lens_FinalPoints.csv"
+    },
+    {
+      "slug": "real-madrid-psv-eindhoven",
+      "title": "Real Madrid vs PSV Eindhoven",
+      "subtitle": "UEFA Champions League · Matchweek 5",
+      "gw": 5,
+      "fotmob_match_id": 6106243,
+      "file": "RealMadrid_PSVEindhoven_FinalPoints.csv"
     }
   ]
 }
