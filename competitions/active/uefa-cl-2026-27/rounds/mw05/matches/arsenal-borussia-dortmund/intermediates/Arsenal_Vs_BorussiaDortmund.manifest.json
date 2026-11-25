@@ -1,0 +1,15 @@
+{
+  "match_id": 6106259,
+  "home_team": "Arsenal",
+  "away_team": "Borussia Dortmund",
+  "source_url": "https://www.fotmob.com/en-GB/matches/borussia-dortmund-vs-arsenal/36j8tu#6106259:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw05/matches/arsenal-borussia-dortmund/intermediates/Arsenal_Vs_BorussiaDortmund.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/borussia-dortmund-vs-arsenal/36j8tu",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/borussia-dortmund-vs-arsenal/36j8tu#6106259:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/borussia-dortmund-vs-arsenal/36j8tu#6106259:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/borussia-dortmund-vs-arsenal/36j8tu#6106259:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106259"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

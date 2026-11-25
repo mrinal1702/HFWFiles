@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw05",
+  "match_slug": "arsenal-borussia-dortmund",
+  "fotmob_match_id": 6106259,
+  "source_url": "https://www.fotmob.com/en-GB/matches/borussia-dortmund-vs-arsenal/36j8tu#6106259:tab=stats",
+  "home_team": "Arsenal",
+  "away_team": "Borussia Dortmund",
+  "raw_json_path": "intermediates/Arsenal_Vs_BorussiaDortmund.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

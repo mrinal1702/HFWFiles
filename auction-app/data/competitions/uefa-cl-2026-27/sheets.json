@@ -598,6 +598,14 @@
       "gw": 5,
       "fotmob_match_id": 6106339,
       "file": "Galatasaray_AstonVilla_FinalPoints.csv"
+    },
+    {
+      "slug": "arsenal-borussia-dortmund",
+      "title": "Arsenal vs Borussia Dortmund",
+      "subtitle": "UEFA Champions League · Matchweek 5",
+      "gw": 5,
+      "fotmob_match_id": 6106259,
+      "file": "Arsenal_BorussiaDortmund_FinalPoints.csv"
     }
   ]
 }
