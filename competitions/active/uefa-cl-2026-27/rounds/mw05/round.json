@@ -18,9 +18,17 @@
     "transfer_window_open": true,
     "requires_locked_game_week_id": 303
   },
-  "fixtures": [],
-  "squad_lock_state": "open",
-  "scoring_state": "not_started",
+  "fixtures": [
+    {
+      "match_slug": "bod-glimt-lask",
+      "fotmob_match_id": 6106317,
+      "home_team": "Bodø/Glimt",
+      "away_team": "LASK",
+      "status": "scored"
+    }
+  ],
+  "squad_lock_state": "locked",
+  "scoring_state": "in_progress",
   "publication_state": "unpublished",
   "algorithm_version": "1.0"
 }

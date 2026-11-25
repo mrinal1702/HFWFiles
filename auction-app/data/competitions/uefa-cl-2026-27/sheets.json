@@ -582,6 +582,14 @@
       "gw": 4,
       "fotmob_match_id": 6106288,
       "file": "FCPorto_Napoli_FinalPoints.csv"
+    },
+    {
+      "slug": "bod-glimt-lask",
+      "title": "Bodø/Glimt vs LASK",
+      "subtitle": "UEFA Champions League · Matchweek 5",
+      "gw": 5,
+      "fotmob_match_id": 6106317,
+      "file": "BodGlimt_LASK_FinalPoints.csv"
     }
   ]
 }
