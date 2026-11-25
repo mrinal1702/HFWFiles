@@ -39,6 +39,13 @@
       "home_team": "Arsenal",
       "away_team": "Borussia Dortmund",
       "status": "scored"
+    },
+    {
+      "match_slug": "como-aek-athens",
+      "fotmob_match_id": 6106412,
+      "home_team": "Como",
+      "away_team": "AEK Athens",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

@@ -1,0 +1,38 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Luis Milla,638090,Como,midfielder,51.75200000000001,7.0,0.0,59
+Jacobo Ramón,1413963,Como,defender,47.65,10.0,0.0,58
+Lazaros Rota,949866,AEK Athens,defender,45.04,5.0,0.0,50
+Álex Valle,1384881,Como,defender,37.505,10.0,0.0,48
+Filipe Relvas,1285815,AEK Athens,defender,40.045,5.0,0.0,45
+Nico Paz,1347574,Como,midfielder,30.34,7.0,0.0,37
+Trevoh Chalobah,793907,Como,defender,25.22,10.0,0.0,35
+Máximo Perrone,1336582,Como,midfielder,23.07,7.0,0.0,30
+Martin Baturina,1215064,Como,midfielder,19.000666666666667,7.0,0.0,26
+Yan Couto,1109171,Como,defender,15.131666666666666,10.0,0.0,25
+Mijat Gaćinović,448859,AEK Athens,midfielder,19.634666666666668,3.0,0.0,23
+Lucas Da Cunha,1076647,Como,midfielder,15.417333333333334,7.0,0.0,22
+Răzvan Marin,574844,AEK Athens,midfielder,18.46,3.0,0.0,21
+Harold Moukoudi,637737,AEK Athens,defender,16.1,5.0,0.0,21
+Ivan Smolčić,1353289,Como,defender,14.153333333333334,5.0,0.0,19
+Lovro Majer,762721,AEK Athens,midfielder,11.841333333333331,3.0,0.0,15
+Milán Vitális,1197823,AEK Athens,midfielder,11.565333333333331,3.0,0.0,15
+Stavros Pilios,1015750,AEK Athens,defender,9.48,5.0,0.0,14
+Kaiki,1459564,Como,defender,8.198333333333334,5.0,0.0,13
+Luka Jović,463291,AEK Athens,forward,10.886666666666668,0.0,0.0,11
+Marc-Oliver Kempf,355356,Como,defender,5.67,5.0,0.0,11
+Anastasios Douvikas,873270,Como,forward,7.439999999999999,3.0,0.0,10
+Samuele Ricci,941656,Como,midfielder,7.590666666666666,2.5,0.0,10
+João Mário,300916,AEK Athens,forward,7.216666666666666,0.0,0.0,7
+Kaan Kairinen,547454,AEK Athens,midfielder,4.540666666666666,2.5,0.0,7
+Zine,1106943,AEK Athens,forward,6.783333333333333,0.0,0.0,7
+Petros Mantalos,184639,AEK Athens,midfielder,3.559333333333333,2.5,0.0,6
+Dereck Kutesa,617396,AEK Athens,forward,4.696666666666667,0.0,0.0,5
+Barnabás Varga,796504,AEK Athens,forward,3.3233333333333333,0.0,0.0,3
+Domagoj Vida,115180,AEK Athens,defender,0.0,0.0,0.0,0
+Charalambos Lykogiannis,395914,AEK Athens,defender,0.0,0.0,0.0,0
+Alberto Dossena,822789,Como,defender,0.0,0.0,0.0,0
+Mattia Liberali,1593861,Como,midfielder,0.0,0.0,0.0,0
+Matteo Papaccioli,1817857,Como,midfielder,0.0,0.0,0.0,0
+Cristian Mazzara,2209533,Como,midfielder,0.0,0.0,0.0,0
+Como Keepers,10171,Como,goalkeeper,22.04,18.0,0.0,40
+AEK Athens Keepers,8563,AEK Athens,goalkeeper,14.820000000000002,12.0,0.0,27

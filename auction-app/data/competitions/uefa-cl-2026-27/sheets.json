@@ -606,6 +606,14 @@
       "gw": 5,
       "fotmob_match_id": 6106259,
       "file": "Arsenal_BorussiaDortmund_FinalPoints.csv"
+    },
+    {
+      "slug": "como-aek-athens",
+      "title": "Como vs AEK Athens",
+      "subtitle": "UEFA Champions League · Matchweek 5",
+      "gw": 5,
+      "fotmob_match_id": 6106412,
+      "file": "Como_AEKAthens_FinalPoints.csv"
     }
   ]
 }
