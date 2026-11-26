@@ -81,6 +81,13 @@
       "home_team": "Slovan Bratislava",
       "away_team": "Real Betis",
       "status": "scored"
+    },
+    {
+      "match_slug": "sabah-fk-barcelona",
+      "fotmob_match_id": 6106421,
+      "home_team": "Sabah FK",
+      "away_team": "Barcelona",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

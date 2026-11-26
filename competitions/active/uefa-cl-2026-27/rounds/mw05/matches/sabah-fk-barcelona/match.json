@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw05",
+  "match_slug": "sabah-fk-barcelona",
+  "fotmob_match_id": 6106421,
+  "source_url": "https://www.fotmob.com/en-GB/matches/barcelona-vs-sabah-fk/5vx6ki4t#6106421:tab=stats",
+  "home_team": "Sabah FK",
+  "away_team": "Barcelona",
+  "raw_json_path": "intermediates/SabahFK_Vs_Barcelona.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

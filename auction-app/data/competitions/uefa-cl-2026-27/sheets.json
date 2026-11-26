@@ -654,6 +654,14 @@
       "gw": 5,
       "fotmob_match_id": 6106394,
       "file": "SlovanBratislava_RealBetis_FinalPoints.csv"
+    },
+    {
+      "slug": "sabah-fk-barcelona",
+      "title": "Sabah FK vs Barcelona",
+      "subtitle": "UEFA Champions League · Matchweek 5",
+      "gw": 5,
+      "fotmob_match_id": 6106421,
+      "file": "SabahFK_Barcelona_FinalPoints.csv"
     }
   ]
 }

@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Anthony Gordon,906937,Barcelona,midfielder,42.46733333333333,11.0,0.0,53
+Gabriel Jesus,576165,Barcelona,forward,36.48,12.0,0.0,48
+Jules Koundé,705450,Barcelona,defender,38.82,5.0,0.0,44
+Fermín López,1404415,Barcelona,midfielder,30.578,11.0,0.0,42
+Karim Adeyemi,959594,Barcelona,midfielder,30.49,11.0,0.0,41
+Alejandro Balde,1254166,Barcelona,defender,25.92833333333333,5.0,0.0,31
+Pedri,1083323,Barcelona,midfielder,23.582,7.0,0.0,31
+Gavi,1279040,Barcelona,midfielder,18.08866666666667,11.0,0.0,29
+Frenkie de Jong,638622,Barcelona,defender,21.52833333333333,5.0,0.0,27
+Christian Nwachukwu,1624072,Sabah,forward,22.25,3.0,0.0,25
+Joy-Lance Mickels,617465,Sabah,forward,20.12,3.0,0.0,23
+Gerard Martín,1598982,Barcelona,defender,17.695,5.0,0.0,23
+Ivan Lepinjica,906920,Sabah,midfielder,20.666000000000007,-1.0,0.0,20
+Dani Olmo,614834,Barcelona,midfielder,11.336000000000002,6.5,0.0,18
+João Cancelo,361757,Barcelona,defender,12.321666666666667,5.0,0.0,17
+Umarali Rakhmonaliev,1429286,Sabah,midfielder,17.234,-1.0,0.0,16
+Tellur Mütallimov,763300,Sabah,midfielder,11.242666666666668,2.5,0.0,14
+Xander Severina,1239800,Sabah,forward,13.663333333333332,0.0,0.0,14
+Akim Zedadka,542777,Sabah,defender,23.49833333333333,-10.0,0.0,13
+Raphinha,696679,Barcelona,forward,13.406666666666666,0.0,0.0,13
+Aleksey Isaev,688887,Sabah,midfielder,8.686666666666666,4.5,0.0,13
+Álex Campos,1820574,Barcelona,defender,7.226666666666667,5.0,0.0,12
+Kaheem Parris,876149,Sabah,forward,7.866666666666667,3.0,0.0,11
+Steve Solvet,764834,Sabah,defender,20.475,-10.0,0.0,10
+Rəhman Daşdəmirov,1441450,Sabah,defender,4.216666666666667,5.0,0.0,9
+Xayal Əliyev,1661503,Sabah,forward,9.13,0.0,0.0,9
+Tymoteusz Puchacz,823121,Sabah,defender,18.49,-10.0,0.0,8
+Brian Fariñas,1821727,Barcelona,defender,3.3383333333333334,5.0,0.0,8
+Almeida,1489096,Sabah,defender,18.03333333333333,-10.0,0.0,8
+Du Queiroz,1271367,Sabah,midfielder,9.593333333333334,-3.0,0.0,7
+Eric García,940573,Barcelona,defender,0.0,0.0,0.0,0
+Pau Cubarsí,1532137,Barcelona,defender,0.0,0.0,0.0,0
+Rodrigo Fernandes,1106946,Sabah,midfielder,0.0,0.0,0.0,0
+Abdulakh Khaybulaev,1351085,Sabah,midfielder,0.0,0.0,0.0,0
+Rauf Rüstamli,1384982,Sabah,midfielder,0.0,0.0,0.0,0
+Marc Bernal,1573126,Barcelona,midfielder,0.0,0.0,0.0,0
+Veljko Simić,458807,Sabah,forward,0.0,0.0,0.0,0
+Orphé Mbina,1197093,Sabah,forward,0.0,0.0,0.0,0
+Jesse Bisiwu,1656591,Barcelona,forward,0.0,0.0,0.0,0
+Óscar Gistau,1684428,Barcelona,forward,0.0,0.0,0.0,0
+Barcelona Keepers,8634,Barcelona,goalkeeper,24.0,12.0,0.0,36
+Sabah Keepers,951893,Sabah,goalkeeper,41.6,-6.0,0.0,36
