@@ -116,6 +116,13 @@
       "home_team": "Inter",
       "away_team": "VfB Stuttgart",
       "status": "scored"
+    },
+    {
+      "match_slug": "lille-bayern-munchen",
+      "fotmob_match_id": 6106310,
+      "home_team": "Lille",
+      "away_team": "Bayern München",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

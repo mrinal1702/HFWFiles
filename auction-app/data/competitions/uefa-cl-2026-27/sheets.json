@@ -694,6 +694,14 @@
       "gw": 5,
       "fotmob_match_id": 6106253,
       "file": "Inter_VfBStuttgart_FinalPoints.csv"
+    },
+    {
+      "slug": "lille-bayern-munchen",
+      "title": "Lille vs Bayern München",
+      "subtitle": "UEFA Champions League · Matchweek 5",
+      "gw": 5,
+      "fotmob_match_id": 6106310,
+      "file": "Lille_BayernMnchen_FinalPoints.csv"
     }
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "match_id": 6106310,
+  "home_team": "Lille",
+  "away_team": "Bayern München",
+  "source_url": "https://www.fotmob.com/en-GB/matches/lille-vs-bayern-munchen/2th5ps#6106310:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw05/matches/lille-bayern-munchen/intermediates/Lille_Vs_BayernMnchen.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/lille-vs-bayern-munchen/2th5ps",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/lille-vs-bayern-munchen/2th5ps#6106310:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/lille-vs-bayern-munchen/2th5ps#6106310:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/lille-vs-bayern-munchen/2th5ps#6106310:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106310"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

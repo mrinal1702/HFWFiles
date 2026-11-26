@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw05",
+  "match_slug": "lille-bayern-munchen",
+  "fotmob_match_id": 6106310,
+  "source_url": "https://www.fotmob.com/en-GB/matches/lille-vs-bayern-munchen/2th5ps#6106310:tab=stats",
+  "home_team": "Lille",
+  "away_team": "Bayern München",
+  "raw_json_path": "intermediates/Lille_Vs_BayernMnchen.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}
