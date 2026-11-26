@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw05",
+  "match_slug": "inter-vfb-stuttgart",
+  "fotmob_match_id": 6106253,
+  "source_url": "https://www.fotmob.com/en-GB/matches/inter-vs-vfb-stuttgart/2yejdt#6106253:tab=stats",
+  "home_team": "Inter",
+  "away_team": "VfB Stuttgart",
+  "raw_json_path": "intermediates/Inter_Vs_VfBStuttgart.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

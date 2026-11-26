@@ -1,0 +1,44 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Federico Dimarco,605224,Internazionale,midfielder,39.23933333333333,9.0,0.0,48
+Nicolò Barella,541820,Internazionale,midfielder,39.06466666666667,9.0,0.0,48
+Petar Sučić,1382000,Internazionale,midfielder,37.96,9.0,0.0,47
+Yann Aurel Bisseck,889535,Internazionale,defender,28.200000000000003,10.0,0.0,38
+Jeff Chabot,867080,VfB Stuttgart,defender,37.06999999999999,0.0,0.0,37
+Maximilian Mittelstädt,614384,VfB Stuttgart,midfielder,35.754,1.0,0.0,37
+Carlos Augusto,940829,Internazionale,midfielder,27.492000000000004,9.0,0.0,36
+Nikolas Nartey,869298,VfB Stuttgart,midfielder,31.930666666666667,3.0,0.0,35
+Manuel Akanji,521318,Internazionale,defender,23.625,10.0,0.0,34
+Djed Spence,894803,Internazionale,midfielder,23.388,9.0,0.0,32
+Francesco Pio Esposito,1367618,Internazionale,forward,22.596666666666668,6.0,0.0,29
+Josha Vagnoman,928454,VfB Stuttgart,midfielder,21.314,3.0,0.0,24
+Finn Jeltsch,1487877,VfB Stuttgart,defender,18.656666666666663,5.0,0.0,24
+Alessandro Bastoni,805451,Internazionale,defender,17.476666666666667,5.0,0.0,22
+Lautaro Martínez,690230,Internazionale,forward,17.09,3.0,0.0,20
+Yanik Spalt,1793638,VfB Stuttgart,midfielder,19.038,1.0,0.0,20
+Ramon Hendriks,1125187,VfB Stuttgart,defender,19.635,0.0,0.0,20
+Chris Führich,892679,VfB Stuttgart,midfielder,15.939333333333332,3.0,0.0,19
+Henrikh Mkhitaryan,73167,Internazionale,midfielder,10.728000000000002,7.0,0.0,18
+Bilal El Khannouss,1340895,VfB Stuttgart,midfielder,16.432000000000002,1.0,0.0,17
+Curtis Jones,933768,Internazionale,midfielder,10.983999999999998,4.5,0.0,15
+Ermedin Demirović,840241,VfB Stuttgart,forward,14.75,0.0,0.0,15
+Luca Jaquez,1270002,VfB Stuttgart,defender,14.513333333333334,0.0,0.0,15
+Jamie Leweling,1074968,VfB Stuttgart,forward,12.46,0.0,0.0,12
+Andy Diouf,1254297,Internazionale,midfielder,9.457333333333334,2.5,0.0,12
+Angelo Stiller,1071186,VfB Stuttgart,midfielder,10.197333333333331,0.5,0.0,11
+Deniz Undav,661519,VfB Stuttgart,forward,9.826666666666668,0.0,0.0,10
+Aleksandar Stanković,1410437,Internazionale,midfielder,4.783333333333334,2.5,0.0,7
+Tiago Tomás,1164506,VfB Stuttgart,forward,5.8500000000000005,0.0,0.0,6
+Marcus Thuram,621562,Internazionale,forward,2.589999999999999,3.0,0.0,6
+John Stones,263653,Internazionale,defender,0.0,0.0,0.0,0
+Benjamin Pavard,611223,Internazionale,defender,0.0,0.0,0.0,0
+Lorenz Assignon,1192406,VfB Stuttgart,defender,0.0,0.0,0.0,0
+Ameen Al Dakhil,1279764,VfB Stuttgart,defender,0.0,0.0,0.0,0
+Grischa Prömel,625175,VfB Stuttgart,midfielder,0.0,0.0,0.0,0
+Atakan Karazor,684983,VfB Stuttgart,midfielder,0.0,0.0,0.0,0
+Luis Henrique,1114635,Internazionale,midfielder,0.0,0.0,0.0,0
+Leonardo Bovo,1661191,Internazionale,midfielder,0.0,0.0,0.0,0
+Dženan Pejčinović,1366602,VfB Stuttgart,forward,0.0,0.0,0.0,0
+Leo Sauer,1425998,VfB Stuttgart,forward,0.0,0.0,0.0,0
+Matteo Lavelli,1682320,Internazionale,forward,0.0,0.0,0.0,0
+Internazionale Keepers,8636,Internazionale,goalkeeper,16.740000000000002,18.0,0.0,35
+VfB Stuttgart Keepers,10269,VfB Stuttgart,goalkeeper,14.12,6.0,0.0,20

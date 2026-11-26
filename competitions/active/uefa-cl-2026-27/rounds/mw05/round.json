@@ -109,6 +109,13 @@
       "home_team": "Club Brugge",
       "away_team": "Liverpool",
       "status": "scored"
+    },
+    {
+      "match_slug": "inter-vfb-stuttgart",
+      "fotmob_match_id": 6106253,
+      "home_team": "Inter",
+      "away_team": "VfB Stuttgart",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

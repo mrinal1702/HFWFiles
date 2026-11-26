@@ -1,0 +1,15 @@
+{
+  "match_id": 6106253,
+  "home_team": "Inter",
+  "away_team": "VfB Stuttgart",
+  "source_url": "https://www.fotmob.com/en-GB/matches/inter-vs-vfb-stuttgart/2yejdt#6106253:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw05/matches/inter-vfb-stuttgart/intermediates/Inter_Vs_VfBStuttgart.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/inter-vs-vfb-stuttgart/2yejdt",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/inter-vs-vfb-stuttgart/2yejdt#6106253:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/inter-vs-vfb-stuttgart/2yejdt#6106253:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/inter-vs-vfb-stuttgart/2yejdt#6106253:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106253"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

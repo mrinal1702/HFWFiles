@@ -686,6 +686,14 @@
       "gw": 5,
       "fotmob_match_id": 6106294,
       "file": "ClubBrugge_Liverpool_FinalPoints.csv"
+    },
+    {
+      "slug": "inter-vfb-stuttgart",
+      "title": "Inter vs VfB Stuttgart",
+      "subtitle": "UEFA Champions League · Matchweek 5",
+      "gw": 5,
+      "fotmob_match_id": 6106253,
+      "file": "Inter_VfBStuttgart_FinalPoints.csv"
     }
   ]
 }
