@@ -123,6 +123,13 @@
       "home_team": "Lille",
       "away_team": "Bayern München",
       "status": "scored"
+    },
+    {
+      "match_slug": "paris-saint-germain-roma",
+      "fotmob_match_id": 6106235,
+      "home_team": "Paris Saint-Germain",
+      "away_team": "Roma",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
