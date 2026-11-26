@@ -1,0 +1,43 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Pedro Henrique,1259576,Shakhtar Donetsk,defender,37.785,5.0,0.0,43
+İsmail Yüksek,1183589,Fenerbahçe,midfielder,33.098,7.0,0.0,40
+Vedat Muriqi,517052,Fenerbahçe,forward,34.50666666666667,3.0,0.0,38
+N'Golo Kanté,319300,Fenerbahçe,midfielder,26.886,7.0,0.0,34
+Mykola Matviyenko,656667,Shakhtar Donetsk,defender,26.085,5.0,0.0,31
+Oğuz Aydın,1092015,Fenerbahçe,midfielder,24.048,7.0,0.0,31
+Kerem Aktürkoglu,1117570,Fenerbahçe,midfielder,23.938,7.0,0.0,31
+Kojo Peprah Oppong,1429607,Fenerbahçe,defender,19.845,10.0,0.0,30
+Valeriy Bondar,1024427,Shakhtar Donetsk,defender,24.365,5.0,0.0,29
+Mason Greenwood,950473,Fenerbahçe,midfielder,21.36,7.0,0.0,28
+Archie Brown,1113704,Fenerbahçe,defender,18.23,10.0,0.0,28
+Vinícius Tobias,1314657,Shakhtar Donetsk,defender,21.398333333333333,5.0,0.0,26
+Yegor Nazaryna,728941,Shakhtar Donetsk,midfielder,21.226666666666667,3.0,0.0,24
+İrfan Kahveci,316544,Fenerbahçe,forward,23.21,0.0,0.0,23
+Marlon Gomes,1396465,Shakhtar Donetsk,midfielder,17.085333333333335,5.0,0.0,22
+Newerton,1516203,Shakhtar Donetsk,midfielder,18.544,3.0,0.0,22
+Milan Škriniar,309328,Fenerbahçe,defender,9.704999999999998,10.0,0.0,20
+Alisson Santana,1503318,Shakhtar Donetsk,midfielder,16.168000000000003,3.0,0.0,19
+Lassina Traoré,850858,Shakhtar Donetsk,forward,18.973333333333336,0.0,0.0,19
+Oleg Ocheretko,1192419,Shakhtar Donetsk,midfielder,15.466000000000005,3.0,0.0,18
+Nélson Semedo,470834,Fenerbahçe,defender,8.385000000000002,10.0,0.0,18
+Romelu Lukaku,181276,Fenerbahçe,forward,11.933333333333334,0.0,0.0,12
+Mattéo Guendouzi,800609,Fenerbahçe,midfielder,9.36,2.5,0.0,12
+Isaque,1697412,Shakhtar Donetsk,midfielder,8.614666666666666,0.5,0.0,9
+Prosper Obah,1530313,Shakhtar Donetsk,forward,8.883333333333333,0.0,0.0,9
+Luca Meirelles,1694887,Shakhtar Donetsk,forward,8.186666666666667,0.0,0.0,8
+Irakli Azarovi,1067263,Shakhtar Donetsk,defender,2.816666666666666,5.0,0.0,8
+Oleksandr Karavaev,510843,Shakhtar Donetsk,defender,0.0,0.0,0.0,0
+Marlon Santos,540113,Shakhtar Donetsk,defender,0.0,0.0,0.0,0
+Mert Müldür,904098,Fenerbahçe,defender,0.0,0.0,0.0,0
+Levent Mercan,1080172,Fenerbahçe,defender,0.0,0.0,0.0,0
+Alaa Ghram,1173774,Shakhtar Donetsk,defender,0.0,0.0,0.0,0
+Yiğit Efe Demir,1414040,Fenerbahçe,defender,0.0,0.0,0.0,0
+Ognjen Mimović,1666975,Fenerbahçe,defender,0.0,0.0,0.0,0
+Dmytro Kryskiv,1189791,Shakhtar Donetsk,midfielder,0.0,0.0,0.0,0
+Bartuğ Elmaz,1216728,Fenerbahçe,midfielder,0.0,0.0,0.0,0
+Viktor Tsukanov,1612225,Shakhtar Donetsk,midfielder,0.0,0.0,0.0,0
+Gabriel Carvalho,1637478,Shakhtar Donetsk,midfielder,0.0,0.0,0.0,0
+Dorgeles Nene,1230287,Fenerbahçe,forward,0.0,0.0,0.0,0
+Bruninho,1903980,Shakhtar Donetsk,forward,0.0,0.0,0.0,0
+Shakhtar Donetsk Keepers,9728,Shakhtar Donetsk,goalkeeper,28.96,12.0,0.0,41
+Fenerbahçe Keepers,8695,Fenerbahçe,goalkeeper,18.880000000000003,18.0,0.0,37

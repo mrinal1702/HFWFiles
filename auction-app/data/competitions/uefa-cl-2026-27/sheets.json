@@ -710,6 +710,14 @@
       "gw": 5,
       "fotmob_match_id": 6106235,
       "file": "ParisSaintGermain_Roma_FinalPoints.csv"
+    },
+    {
+      "slug": "shakhtar-donetsk-fenerbahce",
+      "title": "Shakhtar Donetsk vs Fenerbahçe",
+      "subtitle": "UEFA Champions League · Matchweek 5",
+      "gw": 5,
+      "fotmob_match_id": 6106336,
+      "file": "ShakhtarDonetsk_Fenerbahe_FinalPoints.csv"
     }
   ]
 }
