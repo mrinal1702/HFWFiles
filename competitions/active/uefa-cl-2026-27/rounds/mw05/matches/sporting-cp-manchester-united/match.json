@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw05",
+  "match_slug": "sporting-cp-manchester-united",
+  "fotmob_match_id": 6106279,
+  "source_url": "https://www.fotmob.com/en-GB/matches/sporting-cp-vs-manchester-united/3bf4ni#6106279:tab=stats",
+  "home_team": "Sporting CP",
+  "away_team": "Manchester United",
+  "raw_json_path": "intermediates/SportingCP_Vs_ManchesterUnited.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

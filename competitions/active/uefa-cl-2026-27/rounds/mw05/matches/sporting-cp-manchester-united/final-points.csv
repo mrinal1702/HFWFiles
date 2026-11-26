@@ -1,0 +1,42 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Bruno Fernandes,422685,Manchester United,midfielder,37.44066666666667,5.0,0.0,42
+Luis Suárez,792303,Sporting Lisbon,forward,35.17666666666667,6.0,0.0,41
+Lisandro Martínez,847983,Manchester United,defender,36.04,0.0,0.0,36
+Maxi Araújo,1031656,Sporting Lisbon,midfielder,30.545999999999992,5.0,0.0,36
+Leny Yoro,1358581,Manchester United,defender,34.035000000000004,0.0,0.0,34
+Sergi Altimira,1310480,Sporting Lisbon,midfielder,28.32,5.0,0.0,33
+Amad Diallo,1070052,Manchester United,midfielder,25.124666666666663,7.0,0.0,32
+Harry Maguire,255610,Manchester United,defender,28.295000000000005,0.0,0.0,28
+Silas Andersen,1425101,Sporting Lisbon,midfielder,22.438,5.0,0.0,27
+Luís Guilherme,1458757,Sporting Lisbon,forward,21.41,6.0,0.0,27
+Iván Fresneda,1325998,Sporting Lisbon,defender,25.86,0.0,0.0,26
+Eduardo Quaresma,1156380,Sporting Lisbon,defender,25.513333333333332,0.0,0.0,26
+Noussair Mazraoui,775539,Manchester United,defender,18.99833333333333,5.0,0.0,24
+Youri Tielemans,465960,Manchester United,midfielder,17.514000000000003,5.0,0.0,23
+Kobbie Mainoo,1292810,Manchester United,midfielder,17.316,5.0,0.0,22
+Rodrigo Zalazar,1070776,Sporting Lisbon,forward,16.983333333333334,3.0,0.0,20
+Gonçalo Inácio,1165710,Sporting Lisbon,defender,19.825000000000003,0.0,0.0,20
+Geny Catamo,1088753,Sporting Lisbon,midfielder,13.680666666666667,3.0,0.0,17
+Bryan Mbeumo,923312,Manchester United,midfielder,8.372666666666667,5.0,0.0,13
+Ibrahima Ba,1609327,Sporting Lisbon,defender,6.651666666666667,5.0,0.0,12
+Joshua Zirkzee,950830,Manchester United,forward,5.493333333333332,6.0,0.0,11
+Diogo Dalot,751550,Manchester United,defender,10.271666666666668,0.0,0.0,10
+Nestory Irankunda,1327214,Sporting Lisbon,midfielder,3.416666666666667,4.5,0.0,8
+Patrick Dorgu,1526560,Manchester United,forward,6.666666666666666,0.0,0.0,7
+Fotis Ioannidis,899701,Sporting Lisbon,forward,6.463333333333334,0.0,0.0,6
+Issa Doumbia,1339345,Sporting Lisbon,midfielder,3.2333333333333325,3.0,0.0,6
+Shea Lacey,1436260,Manchester United,forward,5.253333333333334,0.0,0.0,5
+Luke Shaw,362694,Manchester United,defender,0.0,0.0,0.0,0
+Matthijs de Ligt,769895,Manchester United,defender,0.0,0.0,0.0,0
+Georgios Vagiannidis,1119687,Sporting Lisbon,defender,0.0,0.0,0.0,0
+Ayden Heaven,1559639,Manchester United,defender,0.0,0.0,0.0,0
+Mason Mount,750032,Manchester United,midfielder,0.0,0.0,0.0,0
+Andrey Santos,1372921,Manchester United,midfielder,0.0,0.0,0.0,0
+Harry Amass,1430832,Manchester United,midfielder,0.0,0.0,0.0,0
+Pedro Lima,1459257,Sporting Lisbon,midfielder,0.0,0.0,0.0,0
+Eduardo Felicíssimo,1648470,Sporting Lisbon,midfielder,0.0,0.0,0.0,0
+João Simões,1663855,Sporting Lisbon,midfielder,0.0,0.0,0.0,0
+Jesse Derry,1526704,Sporting Lisbon,forward,0.0,0.0,0.0,0
+Flávio Gonçalves,1691190,Sporting Lisbon,forward,0.0,0.0,0.0,0
+Manchester United Keepers,10260,Manchester United,goalkeeper,23.440000000000005,6.0,0.0,29
+Sporting Lisbon Keepers,9768,Sporting Lisbon,goalkeeper,8.5,6.0,0.0,14

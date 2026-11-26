@@ -137,10 +137,17 @@
       "home_team": "Shakhtar Donetsk",
       "away_team": "Fenerbahçe",
       "status": "scored"
+    },
+    {
+      "match_slug": "sporting-cp-manchester-united",
+      "fotmob_match_id": 6106279,
+      "home_team": "Sporting CP",
+      "away_team": "Manchester United",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",
-  "scoring_state": "in_progress",
-  "publication_state": "unpublished",
+  "scoring_state": "complete",
+  "publication_state": "published",
   "algorithm_version": "1.0"
 }

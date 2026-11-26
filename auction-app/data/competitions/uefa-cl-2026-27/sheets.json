@@ -718,6 +718,14 @@
       "gw": 5,
       "fotmob_match_id": 6106336,
       "file": "ShakhtarDonetsk_Fenerbahe_FinalPoints.csv"
+    },
+    {
+      "slug": "sporting-cp-manchester-united",
+      "title": "Sporting CP vs Manchester United",
+      "subtitle": "UEFA Champions League · Matchweek 5",
+      "gw": 5,
+      "fotmob_match_id": 6106279,
+      "file": "SportingCP_ManchesterUnited_FinalPoints.csv"
     }
   ]
 }
