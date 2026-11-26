@@ -95,6 +95,13 @@
       "home_team": "Slavia Prague",
       "away_team": "Villarreal",
       "status": "scored"
+    },
+    {
+      "match_slug": "atletico-madrid-viking",
+      "fotmob_match_id": 6106269,
+      "home_team": "Atlético Madrid",
+      "away_team": "Viking",
+      "status": "scored"
     }
   ],
   "squad_lock_state": "locked",

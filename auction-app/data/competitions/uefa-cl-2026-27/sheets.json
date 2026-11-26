@@ -670,6 +670,14 @@
       "gw": 5,
       "fotmob_match_id": 6106391,
       "file": "SlaviaPrague_Villarreal_FinalPoints.csv"
+    },
+    {
+      "slug": "atletico-madrid-viking",
+      "title": "Atlético Madrid vs Viking",
+      "subtitle": "UEFA Champions League · Matchweek 5",
+      "gw": 5,
+      "fotmob_match_id": 6106269,
+      "file": "AtlticoMadrid_Viking_FinalPoints.csv"
     }
   ]
 }

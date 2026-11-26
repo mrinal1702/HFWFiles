@@ -1,0 +1,45 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Alejandro Grimaldo,288406,Atlético de Madrid,defender,39.425,10.0,0.0,49
+Julián Álvarez,974753,Atlético de Madrid,forward,40.83,6.0,0.0,47
+Dávid Hancko,727897,Atlético de Madrid,defender,32.745,10.0,0.0,43
+Gianni Stensness,1029026,Viking FK,defender,41.45,0.0,0.0,41
+Johnny Cardoso,1173678,Atlético de Madrid,midfielder,30.354,9.0,0.0,39
+Robin Le Normand,609516,Atlético de Madrid,defender,29.055,10.0,0.0,39
+Alexander Sørloth,440330,Atlético de Madrid,forward,30.756666666666668,6.0,0.0,37
+Marcos Llorente,602563,Atlético de Madrid,defender,26.525,10.0,0.0,37
+Koke,184533,Atlético de Madrid,midfielder,25.43466666666667,9.0,0.0,34
+Kristoffer Askildsen,964535,Viking FK,midfielder,28.351333333333333,1.0,0.0,29
+Henrik Rørvik Bjørdal,440313,Viking FK,forward,24.52,0.0,0.0,25
+Henrik Falchener,1110550,Viking FK,defender,24.475,0.0,0.0,24
+Kang-In Lee,940976,Atlético de Madrid,midfielder,15.334,9.0,0.0,24
+Zlatko Tripić,279191,Viking FK,forward,22.790000000000003,0.0,0.0,23
+Álex Baena,942372,Atlético de Madrid,midfielder,12.27,9.0,0.0,21
+Rodrigo Mendoza,1419969,Atlético de Madrid,midfielder,16.795333333333332,2.5,0.0,19
+Tobias Moi,1636182,Viking FK,midfielder,17.20133333333333,1.0,0.0,18
+Erik Botheim,741561,Viking FK,forward,17.240000000000002,0.0,0.0,17
+Pablo Barrios,1338192,Atlético de Madrid,midfielder,14.688,2.5,0.0,17
+Herman Haugen,1019527,Viking FK,defender,15.738333333333332,0.0,0.0,16
+Henrik Heggheim,1163230,Viking FK,defender,15.515,0.0,0.0,16
+Jonathan David,939569,Atlético de Madrid,forward,15.239999999999998,0.0,0.0,15
+Niklas Fuglestad,1636186,Viking FK,forward,13.406666666666668,0.0,0.0,13
+Vetle Auklend,1585827,Viking FK,defender,7.285,5.0,0.0,12
+Morten Hjulmand,950199,Atlético de Madrid,midfielder,7.801333333333333,2.5,0.0,10
+Giuliano Simeone,1226147,Atlético de Madrid,midfielder,7.033999999999999,2.5,0.0,10
+Amin Ćosić,1751162,Viking FK,midfielder,6.744666666666666,2.5,0.0,9
+Simen Kvia-Egeskog,1267374,Viking FK,midfielder,6.438000000000001,1.0,0.0,7
+Joe Bell,848345,Viking FK,midfielder,3.1386666666666665,2.5,0.0,6
+Peter Christiansen,955759,Viking FK,forward,5.619999999999999,0.0,0.0,6
+Viljar Vevatne,444253,Viking FK,defender,0.0,0.0,0.0,0
+Jesper Daland,633094,Viking FK,defender,0.0,0.0,0.0,0
+Anders Bærtelsen,935392,Viking FK,defender,0.0,0.0,0.0,0
+Marc Pubill,1323897,Atlético de Madrid,defender,0.0,0.0,0.0,0
+Dani Martínez,1531100,Atlético de Madrid,defender,0.0,0.0,0.0,0
+Romeo Hueso,1682315,Atlético de Madrid,defender,0.0,0.0,0.0,0
+Obed Vargas,1254394,Atlético de Madrid,midfielder,0.0,0.0,0.0,0
+Jakob Segadal Hansen,1376699,Viking FK,midfielder,0.0,0.0,0.0,0
+Jorge Castillo,1692877,Atlético de Madrid,midfielder,0.0,0.0,0.0,0
+Veton Berisha,255626,Viking FK,forward,0.0,0.0,0.0,0
+Romano Postema,1069826,Viking FK,forward,0.0,0.0,0.0,0
+Arnau Ortiz,1297989,Atlético de Madrid,forward,0.0,0.0,0.0,0
+Viking FK Keepers,8478,Viking FK,goalkeeper,34.64,6.0,0.0,41
+Atlético de Madrid Keepers,9906,Atlético de Madrid,goalkeeper,12.18,18.0,0.0,30
