@@ -1,0 +1,14 @@
+{
+  "competition_slug": "uefa-cl-2026-27",
+  "round_slug": "mw05",
+  "match_slug": "club-brugge-liverpool",
+  "fotmob_match_id": 6106294,
+  "source_url": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-liverpool/2dyl8a#6106294:tab=stats",
+  "home_team": "Club Brugge",
+  "away_team": "Liverpool",
+  "raw_json_path": "intermediates/ClubBrugge_Vs_Liverpool.json",
+  "final_points_path": "final-points.csv",
+  "validation_status": "validated",
+  "scoring_policy_version": "1.0",
+  "file_hashes": {}
+}

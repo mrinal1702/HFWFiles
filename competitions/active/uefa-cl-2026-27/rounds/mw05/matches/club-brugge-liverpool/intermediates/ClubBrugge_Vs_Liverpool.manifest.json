@@ -1,0 +1,15 @@
+{
+  "match_id": 6106294,
+  "home_team": "Club Brugge",
+  "away_team": "Liverpool",
+  "source_url": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-liverpool/2dyl8a#6106294:tab=stats",
+  "json_path": "competitions/active/uefa-cl-2026-27/rounds/mw05/matches/club-brugge-liverpool/intermediates/ClubBrugge_Vs_Liverpool.json",
+  "visual_links": {
+    "match_page": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-liverpool/2dyl8a",
+    "stats_tab": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-liverpool/2dyl8a#6106294:tab=stats",
+    "lineup_tab": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-liverpool/2dyl8a#6106294:tab=lineups",
+    "commentary_tab": "https://www.fotmob.com/en-GB/matches/club-brugge-vs-liverpool/2dyl8a#6106294:tab=commentary",
+    "api_match_details": "https://www.fotmob.com/api/data/matchDetails?matchId=6106294"
+  },
+  "note": "visual_links are for browser viewing only; scoring uses the saved JSON file."
+}

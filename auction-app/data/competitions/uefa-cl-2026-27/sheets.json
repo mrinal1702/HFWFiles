@@ -678,6 +678,14 @@
       "gw": 5,
       "fotmob_match_id": 6106269,
       "file": "AtlticoMadrid_Viking_FinalPoints.csv"
+    },
+    {
+      "slug": "club-brugge-liverpool",
+      "title": "Club Brugge vs Liverpool",
+      "subtitle": "UEFA Champions League · Matchweek 5",
+      "gw": 5,
+      "fotmob_match_id": 6106294,
+      "file": "ClubBrugge_Liverpool_FinalPoints.csv"
     }
   ]
 }

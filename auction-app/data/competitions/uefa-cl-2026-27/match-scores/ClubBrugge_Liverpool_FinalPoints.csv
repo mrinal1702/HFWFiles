@@ -1,0 +1,42 @@
+player_name,player_id,team_name,position,stats_score,endowment_score,shootout_score,final_score
+Alexander Isak,690107,Liverpool,forward,53.76666666666667,9.0,0.0,63
+Miloš Kerkez,1195281,Liverpool,defender,43.595000000000006,10.0,0.0,54
+Dominik Szoboszlai,846005,Liverpool,midfielder,39.128,11.0,0.0,50
+Bradley Barcola,1297165,Liverpool,midfielder,38.68066666666666,11.0,0.0,50
+Jérémy Jacquet,1473534,Liverpool,defender,35.0,10.0,0.0,45
+Rio Ngumoha,1597668,Liverpool,forward,33.07,6.0,0.0,39
+Hans Vanaken,203666,Club Brugge,midfielder,34.355999999999995,-1.0,0.0,33
+Florian Wirtz,1152455,Liverpool,midfielder,22.05,11.0,0.0,33
+Ronald Araujo,921253,Liverpool,defender,19.735,10.0,0.0,30
+Brandon Mechele,445873,Club Brugge,defender,33.99,-5.0,0.0,29
+Trey Nyoni,1436258,Liverpool,midfielder,21.831333333333333,7.0,0.0,29
+Jorne Spileers,1233418,Club Brugge,defender,33.69,-5.0,0.0,29
+Félix Lemaréchal,1284071,Club Brugge,midfielder,24.198,3.0,0.0,27
+Carlos Forbs,1186529,Club Brugge,midfielder,26.106,-1.0,0.0,25
+Jeremie Frimpong,966018,Liverpool,defender,12.093333333333334,10.0,0.0,22
+Nicolò Tresoldi,1334552,Club Brugge,forward,20.36,0.0,0.0,20
+Joaquin Seys,1489449,Club Brugge,defender,24.39666666666667,-5.0,0.0,19
+Freddie Potts,1206287,Club Brugge,midfielder,18.914666666666665,-1.0,0.0,18
+Mamadou Diakhon,1484998,Club Brugge,forward,15.0,0.0,0.0,15
+Virgil van Dijk,209405,Liverpool,defender,9.991666666666667,5.0,0.0,15
+Kyriani Sabbe,1227590,Club Brugge,defender,19.986666666666665,-5.0,0.0,15
+Hugo Siquet,1202888,Club Brugge,defender,9.653333333333332,5.0,0.0,15
+Hugo Vetlesen,837064,Club Brugge,midfielder,9.63,3.0,0.0,13
+Alexis Mac Allister,831489,Liverpool,midfielder,3.078666666666667,6.5,0.0,10
+Víctor Muñoz,1553105,Liverpool,midfielder,4.405999999999999,4.5,0.0,9
+Cheveyo Tsawa,1612843,Club Brugge,midfielder,6.3933333333333335,2.5,0.0,9
+Romeo Vermant,1178453,Club Brugge,forward,8.64,0.0,0.0,9
+Matteo Dams,1315821,Club Brugge,defender,3.203333333333333,5.0,0.0,8
+Lewis Koumas,1364042,Liverpool,forward,5.283333333333334,0.0,0.0,5
+Luke Chambers,1249634,Liverpool,midfielder,2.557333333333333,2.5,0.0,5
+Joseph Gomez,568571,Liverpool,defender,0.0,0.0,0.0,0
+Konstantinos Tsimikas,671529,Liverpool,defender,0.0,0.0,0.0,0
+Han-Beom Lee,1232253,Club Brugge,defender,0.0,0.0,0.0,0
+Lynnt Audoor,1178442,Club Brugge,midfielder,0.0,0.0,0.0,0
+James McConnell,1231075,Liverpool,midfielder,0.0,0.0,0.0,0
+Milan Robberechts,1355523,Club Brugge,midfielder,0.0,0.0,0.0,0
+Jayden Danns,1416696,Liverpool,forward,0.0,0.0,0.0,0
+Jan Virgili,1690093,Club Brugge,forward,0.0,0.0,0.0,0
+Andrej Vasović,1691828,Club Brugge,forward,0.0,0.0,0.0,0
+Liverpool Keepers,8650,Liverpool,goalkeeper,22.02,18.0,0.0,40
+Club Brugge Keepers,8342,Club Brugge,goalkeeper,10.32,0.0,0.0,10
